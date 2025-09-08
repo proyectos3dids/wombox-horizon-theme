@@ -27,9 +27,12 @@ if (!customElements.get('cajas-selector')) {
     }
 
     handleSelectionChange(event) {
-      const selectedValue = event.target.value;
-      const selectedLabel = event.target.closest('.cajas-option').querySelector('.cajas-option-label');
-      const selectedRadio = event.target;
+      const target = event.target;
+      if (!target || !(target instanceof HTMLInputElement)) return;
+      
+      const selectedValue = target.value;
+      const selectedLabel = target.closest('.cajas-option')?.querySelector('.cajas-option-label');
+      const selectedRadio = target;
       
       // Remover clase 'selected' de todas las opciones y resetear estados de click
       this.querySelectorAll('.cajas-option-label').forEach(label => {
@@ -37,21 +40,21 @@ if (!customElements.get('cajas-selector')) {
         // Resetear opacity: mostrar título, ocultar hint
         const title = label.querySelector('.cajas-option-title');
         const hint = label.querySelector('.cajas-expand-hint');
-        if (title && hint) {
+        if (title && hint && title instanceof HTMLElement && hint instanceof HTMLElement) {
           title.style.opacity = '1';
           hint.style.opacity = '0';
         }
       });
       
       // Resetear todos los estados de click excepto el seleccionado
-      this.clickStates.clear();
-      
-      // Agregar clase 'selected' a la opción seleccionada
-      if (selectedLabel) {
-        selectedLabel.classList.add('selected');
-        // Mantener el estado del radio seleccionado como 'unclicked' para que funcione el primer click
-        this.clickStates.set(selectedRadio.id, 'unclicked');
-      }
+        this.clickStates.clear();
+        
+        // Agregar clase 'selected' a la opción seleccionada
+        if (selectedLabel) {
+          selectedLabel.classList.add('selected');
+          // Mantener el estado del radio seleccionado como 'unclicked' para que funcione el primer click
+          this.clickStates.set(selectedRadio.id, 'unclicked');
+        }
       
       // Disparar evento personalizado para notificar la selección
       this.dispatchEvent(new CustomEvent('cajaSelected', {
@@ -69,7 +72,9 @@ if (!customElements.get('cajas-selector')) {
     handleLabelClick(event) {
       event.preventDefault();
       const label = event.currentTarget;
-      const radio = label.closest('.cajas-option').querySelector('input[type="radio"]');
+      const radio = label.closest('.cajas-option')?.querySelector('input[type="radio"]');
+      if (!radio || !(radio instanceof HTMLInputElement)) return;
+      
       const optionId = radio.id;
       const expandHint = label.querySelector('.cajas-expand-hint');
       const image = label.querySelector('.cajas-option-image img');
@@ -79,14 +84,14 @@ if (!customElements.get('cajas-selector')) {
       
       if (currentState === 'unclicked') {
         // First click: select the option and show hint
-        if (!radio.checked) {
+        if (radio instanceof HTMLInputElement && !radio.checked) {
           radio.checked = true;
           radio.dispatchEvent(new Event('change'));
         }
         
         // Intercambiar opacity entre título y hint
         const title = label.querySelector('.cajas-option-title');
-        if (title && expandHint) {
+        if (title instanceof HTMLElement && expandHint instanceof HTMLElement) {
           title.style.opacity = '0';
           expandHint.style.opacity = '1';
         }
@@ -112,7 +117,7 @@ if (!customElements.get('cajas-selector')) {
       const checkedRadio = this.querySelector('input[type="radio"]:checked');
       if (!checkedRadio) {
         const firstRadio = this.querySelector('input[type="radio"]');
-        if (firstRadio) {
+        if (firstRadio && firstRadio instanceof HTMLInputElement) {
           firstRadio.checked = true;
           firstRadio.dispatchEvent(new Event('change'));
         }
@@ -129,14 +134,14 @@ if (!customElements.get('cajas-selector')) {
 
     // Método público para obtener la selección actual
     getSelectedValue() {
-      const checkedRadio = this.querySelector('input[type="radio"]:checked');
-      return checkedRadio ? checkedRadio.value : null;
+      const selectedRadio = this.querySelector('input[type="radio"]:checked');
+      return (selectedRadio instanceof HTMLInputElement) ? selectedRadio.value : null;
     }
 
     // Método público para establecer una selección programáticamente
     setSelection(value) {
       const radio = this.querySelector(`input[type="radio"][value="${value}"]`);
-      if (radio) {
+      if (radio && radio instanceof HTMLInputElement) {
         radio.checked = true;
         radio.dispatchEvent(new Event('change'));
       }
@@ -160,15 +165,19 @@ if (!customElements.get('cajas-selector')) {
         
         // Add event listeners for modal
         const modal = document.getElementById('cajas-image-modal');
-        const closeBtn = modal.querySelector('.cajas-modal-close');
-        const backdrop = modal.querySelector('.cajas-modal-backdrop');
+        const closeBtn = modal?.querySelector('.cajas-modal-close');
+        const backdrop = modal?.querySelector('.cajas-modal-backdrop');
         
-        closeBtn.addEventListener('click', () => this.closeImageModal());
-        backdrop.addEventListener('click', () => this.closeImageModal());
+        if (closeBtn) {
+          closeBtn.addEventListener('click', () => this.closeImageModal());
+        }
+        if (backdrop) {
+          backdrop.addEventListener('click', () => this.closeImageModal());
+        }
         
         // Close on Escape key
         document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && modal.style.display === 'block') {
+          if (e.key === 'Escape' && modal && modal instanceof HTMLElement && modal.style.display === 'block') {
             this.closeImageModal();
           }
         });
@@ -176,8 +185,13 @@ if (!customElements.get('cajas-selector')) {
     }
 
     enlargeImage(imgElement) {
+      if (!(imgElement instanceof HTMLImageElement)) return;
+      
       const modal = document.getElementById('cajas-image-modal');
+      if (!modal || !(modal instanceof HTMLElement)) return;
+      
       const modalImage = modal.querySelector('.cajas-modal-image');
+      if (!modalImage || !(modalImage instanceof HTMLImageElement)) return;
       
       // Get larger version of the image
       const originalSrc = imgElement.src;
@@ -191,7 +205,9 @@ if (!customElements.get('cajas-selector')) {
 
     closeImageModal() {
       const modal = document.getElementById('cajas-image-modal');
-      modal.style.display = 'none';
+      if (modal && modal instanceof HTMLElement) {
+        modal.style.display = 'none';
+      }
       document.body.style.overflow = '';
     }
   }
@@ -202,33 +218,47 @@ if (!customElements.get('cajas-selector')) {
 // Funcionalidad adicional para integración con el formulario del producto
 document.addEventListener('DOMContentLoaded', function() {
   const cajasSelector = document.querySelector('cajas-selector');
-  const productForm = document.querySelector('.js-product-form');
+  const productForm = document.querySelector('product-form-component form[data-type="add-to-cart-form"]');
   
   if (cajasSelector && productForm) {
+    // Obtener el texto personalizable desde el bloque
+    const cajasBlock = cajasSelector.closest('.product-form__cajas');
+    const selectedBoxText = (cajasBlock && cajasBlock instanceof HTMLElement && cajasBlock.dataset && cajasBlock.dataset.selectedBoxText) ? cajasBlock.dataset.selectedBoxText : 'Selected Box';
+    
     // Función para actualizar la propiedad del producto
     function updateProductProperty(selectedValue) {
-      let hiddenInput = productForm.querySelector('input[name="properties[Caja seleccionada]"]');
+      if (!productForm) return;
+      
+      let hiddenInput = productForm.querySelector(`input[name="properties[${selectedBoxText}]"]`);
       if (!hiddenInput) {
         hiddenInput = document.createElement('input');
-        hiddenInput.type = 'hidden';
-        hiddenInput.name = 'properties[Caja seleccionada]';
+        if (hiddenInput instanceof HTMLInputElement) {
+          hiddenInput.type = 'hidden';
+          hiddenInput.name = `properties[${selectedBoxText}]`;
+        }
         productForm.appendChild(hiddenInput);
       }
-      hiddenInput.value = selectedValue;
+      if (hiddenInput instanceof HTMLInputElement) {
+        hiddenInput.value = selectedValue;
+      }
       console.log('Propiedad del producto actualizada:', selectedValue);
     }
     
     // Escuchar selecciones de caja
     cajasSelector.addEventListener('cajaSelected', function(event) {
-      const selectedValue = event.detail.value;
-      updateProductProperty(selectedValue);
+      if ('detail' in event && event.detail && typeof event.detail === 'object' && 'value' in event.detail) {
+        const selectedValue = event.detail.value;
+        updateProductProperty(selectedValue);
+      }
     });
     
     // Establecer la propiedad inicial si ya hay una caja seleccionada
     setTimeout(() => {
-      const initialValue = cajasSelector.getSelectedValue();
-      if (initialValue) {
-        updateProductProperty(initialValue);
+      if ('getSelectedValue' in cajasSelector && typeof cajasSelector.getSelectedValue === 'function') {
+        const initialValue = cajasSelector.getSelectedValue();
+        if (initialValue) {
+          updateProductProperty(initialValue);
+        }
       }
     }, 100);
   }

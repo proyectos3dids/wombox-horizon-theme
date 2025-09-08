@@ -183,7 +183,26 @@
               },
               "blocks": {}
             },
-            "buy_buttons_eYQEYi": {
+            "custom_boxes_selector": {
+              "type": "custom-boxes",
+              "settings": {
+                "title": "Selecciona tu caja personalizada",
+                "description": "Elige el diseño de caja que más te guste para tu pedido.",
+                "max_products": 6,
+                "min_products": 3,
+                "show_product_images": true,
+                "show_product_prices": true,
+                "layout_style": "grid",
+                "background_color": "#ffffff",
+                "text_color": "#000000",
+                "padding-block-start": 16,
+                "padding-block-end": 16,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+               "blocks": {}
+             },
+             "buy_buttons_eYQEYi": {
               "type": "buy-buttons",
               "settings": {
                 "stacking": true,
@@ -249,6 +268,7 @@
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
+            "custom_boxes_selector",
             "buy_buttons_eYQEYi",
             "text_aEtTtq"
           ]
