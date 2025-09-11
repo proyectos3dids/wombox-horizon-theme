@@ -85,18 +85,95 @@
 
 
 
-  {% assign lc = localization.language.iso_code | downcase %}
+ {% assign cc = localization.country.iso_code | downcase %}
 
-  <!-- Icono izquierdo -->
-  <span class="locpill__flag">
-    {% if lc == 'es' or lc contains 'es-' %}
-      <img class="locpill__flag-img"
-           src="https://cdn.shopify.com/s/files/1/0908/5973/3339/files/7a50cfa9897df6c2e5e814f4f02ab01d00a9323d.png?v=1757594960"
-           alt="Bandera de España" loading="lazy" decoding="async">
+<span class="locpill__flag">
+  {% case cc %}
+    {% when 'es' %} {# España #}
+      <img class="locpill__flag-img" src="URL_ES" alt="Bandera de España" loading="lazy" decoding="async">
+
+    {% when 'de' %} {# Alemania #}
+      <img class="locpill__flag-img" src="URL_DE" alt="Bandera de Alemania" loading="lazy" decoding="async">
+
+    {% when 'be' %} {# Bélgica #}
+      <img class="locpill__flag-img" src="URL_BE" alt="Bandera de Bélgica" loading="lazy" decoding="async">
+
+    {% when 'cz' %} {# Chequia #}
+      <img class="locpill__flag-img" src="URL_CZ" alt="Bandera de Chequia" loading="lazy" decoding="async">
+
+    {% when 'hr' %} {# Croacia #}
+      <img class="locpill__flag-img" src="URL_HR" alt="Bandera de Croacia" loading="lazy" decoding="async">
+
+    {% when 'sk' %} {# Eslovaquia #}
+      <img class="locpill__flag-img" src="URL_SK" alt="Bandera de Eslovaquia" loading="lazy" decoding="async">
+
+    {% when 'fi' %} {# Finlandia #}
+      <img class="locpill__flag-img" src="URL_FI" alt="Bandera de Finlandia" loading="lazy" decoding="async">
+
+    {% when 'gr' %} {# Grecia #}
+      <img class="locpill__flag-img" src="URL_GR" alt="Bandera de Grecia" loading="lazy" decoding="async">
+
+    {% when 'ie' %} {# Irlanda #}
+      <img class="locpill__flag-img" src="URL_IE" alt="Bandera de Irlanda" loading="lazy" decoding="async">
+
+    {% when 'lt' %} {# Lituania #}
+      <img class="locpill__flag-img" src="URL_LT" alt="Bandera de Lituania" loading="lazy" decoding="async">
+
+    {% when 'mt' %} {# Malta #}
+      <img class="locpill__flag-img" src="URL_MT" alt="Bandera de Malta" loading="lazy" decoding="async">
+
+    {% when 'pl' %} {# Polonia #}
+      <img class="locpill__flag-img" src="URL_PL" alt="Bandera de Polonia" loading="lazy" decoding="async">
+
+    {% when 'gb' %} {# Reino Unido #}
+      <img class="locpill__flag-img" src="URL_GB" alt="Bandera del Reino Unido" loading="lazy" decoding="async">
+
+    {% when 'ch' %} {# Suiza #}
+      <img class="locpill__flag-img" src="URL_CH" alt="Bandera de Suiza" loading="lazy" decoding="async">
+
+    {% when 'at' %} {# Austria #}
+      <img class="locpill__flag-img" src="URL_AT" alt="Bandera de Austria" loading="lazy" decoding="async">
+
+    {% when 'bg' %} {# Bulgaria #}
+      <img class="locpill__flag-img" src="URL_BG" alt="Bandera de Bulgaria" loading="lazy" decoding="async">
+
+    {% when 'va' %} {# Ciudad del Vaticano #}
+      <img class="locpill__flag-img" src="URL_VA" alt="Bandera de Ciudad del Vaticano" loading="lazy" decoding="async">
+
+    {% when 'dk' %} {# Dinamarca #}
+      <img class="locpill__flag-img" src="URL_DK" alt="Bandera de Dinamarca" loading="lazy" decoding="async">
+
+    {% when 'si' %} {# Eslovenia #}
+      <img class="locpill__flag-img" src="URL_SI" alt="Bandera de Eslovenia" loading="lazy" decoding="async">
+
+    {% when 'ee' %} {# Estonia #}
+      <img class="locpill__flag-img" src="URL_EE" alt="Bandera de Estonia" loading="lazy" decoding="async">
+
+    {% when 'fr' %} {# Francia #}
+      <img class="locpill__flag-img" src="URL_FR" alt="Bandera de Francia" loading="lazy" decoding="async">
+
+    {% when 'hu' %} {# Hungría #}
+      <img class="locpill__flag-img" src="URL_HU" alt="Bandera de Hungría" loading="lazy" decoding="async">
+
+    {% when 'it' %} {# Italia #}
+      <img class="locpill__flag-img" src="URL_IT" alt="Bandera de Italia" loading="lazy" decoding="async">
+
+    {% when 'lu' %} {# Luxemburgo #}
+      <img class="locpill__flag-img" src="URL_LU" alt="Bandera de Luxemburgo" loading="lazy" decoding="async">
+
+    {% when 'nl' %} {# Países Bajos #}
+      <img class="locpill__flag-img" src="URL_NL" alt="Bandera de Países Bajos" loading="lazy" decoding="async">
+
+    {% when 'pt' %} {# Portugal #}
+      <img class="locpill__flag-img" src="URL_PT" alt="Bandera de Portugal" loading="lazy" decoding="async">
+
+    {% when 'ro' %} {# Rumanía #}
+      <img class="locpill__flag-img" src="URL_RO" alt="Bandera de Rumanía" loading="lazy" decoding="async">
+
     {% else %}
       <span class="locpill__emoji">🌐</span>
-    {% endif %}
-  </span>
+  {% endcase %}
+</span>
 
 
 
