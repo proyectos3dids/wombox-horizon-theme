@@ -5,7 +5,7 @@
   font-family:Inter,system-ui,Arial,sans-serif;
 }
 
-/* Grid principal: 3 columnas de menús + 1 columna CTA */
+/* Grid principal */
 .wbf__inner{
   max-width:1200px;
   margin:0 auto;
@@ -16,7 +16,7 @@
   align-items:start;
 }
 
-/* Contenedor que agrupa los 3 menús (bloques) y ocupa las 3 primeras columnas */
+/* 3 menús en bloque */
 .wbf__menus{
   grid-column:1 / span 3;
   display:grid;
@@ -26,23 +26,20 @@
 
 .wbf__col{text-align:left;}
 .wbf__list{list-style:none;margin:0;padding:0;}
-.wbf__item{margin:18px 0;} /* espacio vertical entre enlaces */
+.wbf__item{margin:18px 0;}
 
-/* —— Estilos exactos de los menús —— */
 .wbf__link{
   font-family:'Archivo',Inter,system-ui,Arial,sans-serif;
-  font-weight:400;      /* Regular */
-  font-size:14px;       /* Figma */
-  line-height:1;        /* 100% */
-  letter-spacing:0;     /* 0% */
+  font-weight:400;
+  font-size:14px;
+  line-height:1;
   color:#FFFFFF;
   text-decoration:none;
   opacity:1;
 }
-.wbf__link:hover,
-.wbf__link:focus{ text-decoration:underline; outline:none; }
+.wbf__link:hover{text-decoration:underline;}
 
-/* —— Columna derecha: CTA + (espacio para idioma/moneda) + redes —— */
+/* Columna CTA + redes */
 .wbf__cta-col{
   grid-column:4 / span 1;
   display:flex;
@@ -51,7 +48,6 @@
   gap:18px;
 }
 
-/* CTA (puedes fijar width/height si quieres) */
 .wbf__cta{
   display:inline-block;
   padding:16px 28px;
@@ -64,32 +60,28 @@
   text-decoration:none;
   text-transform:uppercase;
   letter-spacing:.5px;
-  text-align:center;
   box-shadow:0 1px 0 rgba(0,0,0,.06);
-  transition:opacity .2s ease-in-out;
 }
-.wbf__cta:hover,
-.wbf__cta:focus{ opacity:.9; outline:none; }
+.wbf__cta:hover{opacity:.9;}
 
 .wbf__social{display:flex;gap:16px;}
-.wbf__social a{ color:#fff; text-decoration:none; opacity:.95; font-weight:700; }
+.wbf__social a{color:#fff;text-decoration:none;opacity:.95;font-weight:700;}
 
-/* ====== FRANJA INFERIOR ====== */
+/* Bottom strip */
 .wbf__bottom{
   position:relative;
   overflow:hidden;
   text-align:center;
-  padding:12px 0 5px; /* poco margen inferior; el copy queda pegado */
+  padding:12px 0 5px;
 }
 
-/* Métodos de pago en esquina inferior izquierda */
+/* Métodos de pago */
 .wbf__payments{
   position:absolute;
   left:24px;
   bottom:10px;
   display:flex;
   gap:8px;
-  z-index:2;
 }
 .wbf__pay-pill{
   display:inline-flex;
@@ -108,35 +100,32 @@
   color:#111;
 }
 
-/* Slider de imágenes con separación real */
-.wbf__marquee{ width:100%; overflow:hidden; }
+/* slider infinito */
+.wbf__marquee{width:100%;overflow:hidden;}
 .wbf__track{
   display:flex;
   align-items:center;
-  gap:var(--marquee-gap, 140px);  /* ← separación entre imagen e imagen */
+  gap:var(--marquee-gap, 140px);
   animation:wbf-track var(--marquee-speed, 25s) linear infinite;
-  will-change:transform;
   width:max-content;
 }
 .wbf__item-img{
   height:var(--marquee-h, 120px);
   width:auto;
-  flex:0 0 auto;
   display:block;
 }
 @keyframes wbf-track{
-  from{ transform:translateX(0); }
-  to{ transform:translateX(-50%); } /* doble set = loop perfecto */
+  from{ transform:translateX(0);}
+  to{ transform:translateX(-50%);}
 }
 
-/* Copy */
+/* copy */
 .wbf__copy{
   padding:10px 0;
   font-family:'Archivo',Inter,system-ui,Arial,sans-serif;
   font-weight:400;
   font-size:12px;
   line-height:1.29;
-  letter-spacing:0;
   color:#FFFFFF;
   text-align:center;
   display:block;
