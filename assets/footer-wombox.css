@@ -82,7 +82,7 @@
   .wbf__inner--mobile{display:block;max-width:1200px;margin:0 auto;padding:28px 16px 0}
 
   /* Ajustes franja y slider */
-  .wbf__bottom{padding:16px 16px 0px; --pay-size:16px;}
+  .wbf__bottom{padding:0px 0px 12px; --pay-size:16px;}
 
   /* Oculta pagos dentro de franja; usa los móviles */
   .wbf__payments{display:none !important}
