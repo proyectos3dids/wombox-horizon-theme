@@ -64,7 +64,7 @@
 .wbf__payments-mobile{
   display:none;              /* oculto en desktop */
 }
-.wbf__payments-mobile .wbf__pay-pill{background:#fff;border-radius:16px}
+.wbf__payments-mobile .wbf__pay-pill{border-radius:16px}
 
 /* ====== Mobile ====== */
 @media (max-width: 768px){
