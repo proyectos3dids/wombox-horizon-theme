@@ -14,6 +14,66 @@
     "footer_wombox_LkkGtE": {
       "type": "footer-wombox",
       "blocks": {
+        "social_link_3MeEmi": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/Facebook_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_FAxqLQ": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/Facebook_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_tgUFcy": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/Facebook_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_qij3t8": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/Facebook_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_d3DR6M": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/Facebook_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_zGQgLe": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/Facebook_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
         "payment_icon_KjCpXL": {
           "type": "payment_icon",
           "settings": {
@@ -79,6 +139,12 @@
         }
       },
       "block_order": [
+        "social_link_3MeEmi",
+        "social_link_FAxqLQ",
+        "social_link_tgUFcy",
+        "social_link_qij3t8",
+        "social_link_d3DR6M",
+        "social_link_zGQgLe",
         "payment_icon_KjCpXL",
         "payment_icon_X7LMdH",
         "payment_icon_AEiMnj",
