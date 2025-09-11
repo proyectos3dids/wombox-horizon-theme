@@ -91,4 +91,20 @@
   /* Copy: sólo móvil */
   .wbf__copy--desktop{display:none}
   .wbf__copy--mobile{display:block}
+
+
+  .wbfm__social{
+    display:flex;               /* activa flex */
+    justify-content:center;     /* centra horizontal */
+    align-items:center;         /* centra vertical */
+    gap:12px;                   /* separa iconos */
+    flex-wrap:wrap;             /* por si saltan de línea */
+    margin:8px auto 0;          /* centrado del contenedor */
+    float:none !important;      /* anula float inline si lo hubiera */
+    width:100%;
+  }
+  .wbf__soc-a{ display:inline-flex; } /* asegúrate de que cada enlace ocupa su contenido */
+
 }
+
+
