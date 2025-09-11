@@ -1,3 +1,5 @@
+
+
 /* ====== FOOTER DESKTOP (no mobile) ====== */
 .wombox-footer{background:#F24343;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}
 
@@ -26,8 +28,21 @@
   letter-spacing:.5px;text-decoration:none;box-shadow:0 1px 0 rgba(0,0,0,.06);transition:opacity .2s
 }
 .wbf__cta:hover{opacity:.9}
-.wbf__social{display:flex;gap:16px}
+
+/* === NUEVO: social + pills en LÍNEA (desktop) === */
+.wbf__social{
+  display:flex;               /* en línea */
+  align-items:center;         /* centrados vertical */
+  gap:28px;                   /* espacio entre grupos */
+  flex-wrap:nowrap;           /* sin saltos en desktop */
+}
 .wbf__social a{color:#fff;text-decoration:none;opacity:.95;font-weight:700}
+
+/* Si usas el snippet de localización, estas clases ya vendrán en su HTML */
+.wbf__social .locpill-wrap{display:flex;align-items:center;gap:28px}
+.wbf__social .soc-inline{display:flex;align-items:center;gap:16px}
+.wbf__social .wbf__soc-a{display:inline-grid;place-items:center}
+.wbf__social .wbf__soc-img{width:24px;height:24px;display:block}
 
 /* ====== FRANJA INFERIOR (slider) ====== */
 .wbf__bottom{position:relative;overflow:hidden;text-align:center;padding:12px 0 5px}
@@ -59,7 +74,7 @@
 
 /* ====== BLOQUE SÓLO MÓVIL (acordeones) ====== */
 .wbf__inner--mobile{display:none}
-.wbfm__acc{border-bottom:1px solid rgba(255,255,255,.6);}
+.wbfm__acc{border-bottom:1px solid rgba(255,255,255,.6)}
 .wbfm__sum{list-style:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
 .wbfm__title{font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:800;font-size:20px;letter-spacing:.5px;text-transform:uppercase;color:#fff}
 .wbfm__icon{font-size:24px;line-height:1;transition:transform .2s ease}
@@ -82,7 +97,7 @@
   .wbf__inner--mobile{display:block;max-width:1200px;margin:0 auto;padding:28px 16px 0}
 
   /* Ajustes franja y slider */
-  .wbf__bottom{padding:0px 0px 12px; --pay-size:16px;}
+  .wbf__bottom{padding:0 0 12px; --pay-size:16px;}
 
   /* Oculta pagos dentro de franja; usa los móviles */
   .wbf__payments{display:none !important}
@@ -92,24 +107,23 @@
   .wbf__copy--desktop{display:none}
   .wbf__copy--mobile{display:block}
 
+  /* === NUEVO: social + pills centrados en móvil === */
+  .wbf__social{
+    flex-wrap:wrap;            /* permitir salto */
+    justify-content:center;    /* centrar */
+    align-items:center;
+    gap:16px;
+    width:100%;
+  }
+  .wbf__social .locpill-wrap{gap:14px}
+  .wbf__social .soc-inline{gap:12px}
 
   .wbfm__social{
-    display:flex;               /* activa flex */
-    justify-content:center;     /* centra horizontal */
-    align-items:center;         /* centra vertical */
-    gap:12px;                   /* separa iconos */
-    flex-wrap:wrap;             /* por si saltan de línea */
-    margin:8px auto 0;          /* centrado del contenedor */
-    float:none !important;      /* anula float inline si lo hubiera */
-    width:100%;
-    margin-bottom:12px;
+    display:flex;justify-content:center;align-items:center;gap:12px;
+    flex-wrap:wrap;margin:8px auto 12px;width:100%;float:none !important
   }
-  .wbf__soc-a{ display:inline-flex; } /* asegúrate de que cada enlace ocupa su contenido */
-
+  .wbf__soc-a{display:inline-flex}
 }
-
-
-
 
 
 
