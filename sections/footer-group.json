@@ -14,6 +14,48 @@
     "footer_wombox_LkkGtE": {
       "type": "footer-wombox",
       "blocks": {
+        "payment_icon_KjCpXL": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_url": "",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_X7LMdH": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_url": "",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_AEiMnj": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_url": "",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_WU3c3J": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_url": "",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_DwpJJ6": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_url": "",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_PWWh83": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_url": "",
+            "icon_alt": ""
+          }
+        },
         "menu_column_kGNgiU": {
           "type": "menu_column",
           "settings": {
@@ -34,6 +76,12 @@
         }
       },
       "block_order": [
+        "payment_icon_KjCpXL",
+        "payment_icon_X7LMdH",
+        "payment_icon_AEiMnj",
+        "payment_icon_WU3c3J",
+        "payment_icon_DwpJJ6",
+        "payment_icon_PWWh83",
         "menu_column_kGNgiU",
         "menu_column_PKLqEa",
         "menu_column_m98qmq"
