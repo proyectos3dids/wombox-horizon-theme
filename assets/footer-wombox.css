@@ -67,10 +67,17 @@
 /* Visibilidad por dispositivo para los copy */
 .wbf__copy1{ display:block; }   /* Desktop por defecto */
 .wbf__copy2{ display:none; }    /* Oculto por defecto */
+.wbf1{ display:block; }   /* Desktop por defecto */
+.wbf2{ display:none; }    /* Oculto por defecto */
+
 
 @media (max-width: 768px){
   .wbf__copy1{ display:none; }  /* Oculta en móvil */
   .wbf__copy2{ display:block; } /* Muestra en móvil */
+  .wbf1{ display:none; }  /* Oculta en móvil */
+  .wbf2{ display:block; } /* Muestra en móvil */
 }
+
+
 <style>
 

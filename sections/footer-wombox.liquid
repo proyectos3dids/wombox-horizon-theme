@@ -35,7 +35,7 @@
     <div class="wbf__bottom" style="--pay-size: {{ section.settings.payments_size }}px;">
 
       <!-- Métodos de pago: personalizados (CDN) o automáticos -->
-      <div class="wbf__payments" aria-label="Métodos de pago">
+      <div class="wf1 wbf__payments" aria-label="Métodos de pago">
         {% if section.settings.use_custom_payment_icons %}
           {% for block in section.blocks %}
             {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
@@ -65,6 +65,23 @@
 
    
   {% endif %}
+       
+       <!-- Métodos de pago: personalizados (CDN) o automáticos -->
+      <div class="wbf__payments wf2" aria-label="Métodos de pago">
+        {% if section.settings.use_custom_payment_icons %}
+          {% for block in section.blocks %}
+            {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
+            <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
+              <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
+            </span>
+          {% endif %}
+          {% endfor %}
+        {% elsif section.settings.show_payments %}
+          {% for type in shop.enabled_payment_types %}
+            <span class="wbf__pay-pill">{{ type | payment_type_svg_tag }}</span>
+          {% endfor %}
+        {% endif %}
+      </div>
 
        <p class="wbf__copy wbf__copy2">© {{ 'now' | date: "%Y" }} WOMBOX</p>
 </footer>
