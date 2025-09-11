@@ -27,6 +27,9 @@
       <details class="locpill__details">
         <summary class="locpill__summary" aria-label="Cambiar país y moneda">
           <span class="locpill__flag">
+
+
+
             {% assign cc = localization.country.iso_code | upcase %}
                   <span class="locpill__flag">
                     {% if cc == 'ES' %}
@@ -37,6 +40,9 @@
                       <span class="locpill__emoji" data-cc="{{ cc }}"></span>
                     {% endif %}
                   </span>
+
+
+
           </span>
           <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
           <span class="locpill__chev" aria-hidden="true">▾</span>
@@ -75,9 +81,10 @@
   {%- if _show_language -%}
     {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--xxs' %}
       <details class="locpill__details">
-
-
 <summary class="locpill__summary" aria-label="Cambiar idioma">
+
+
+
   {% assign lc = localization.language.iso_code | downcase %}
 
   <!-- Icono izquierdo -->
@@ -90,6 +97,9 @@
       <span class="locpill__emoji">🌐</span>
     {% endif %}
   </span>
+
+
+
 
   <!-- Texto con bandera inline cuando ES -->
   <span class="locpill__label">
