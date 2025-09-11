@@ -8,23 +8,17 @@
 {% liquid
   assign _show_country  = show_country
   assign _show_language = show_language
-
-  if _show_country == nil or _show_country == ''
-    if localization.available_countries.size > 1
-      assign _show_country = true
-    else
-      assign _show_country = false
-    endif
-  endif
-
-  if _show_language == nil or _show_language == ''
-    if localization.available_languages.size > 1
-      assign _show_language = true
-    else
-      assign _show_language = false
-    endif
-  endif
 %}
+
+{% assign _show_country = false %}
+{% if localization.available_countries.size > 1 %}
+  {% assign _show_country = true %}
+{% endif %}
+
+{% assign _show_language = false %}
+{% if localization.available_languages.size > 1 %}
+  {% assign _show_language = true %}
+{% endif %}
 
 <div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
   {%- if _show_country -%}
