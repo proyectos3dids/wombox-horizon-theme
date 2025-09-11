@@ -8,7 +8,7 @@
 {% liquid
   assign _show_country  = show_country
   assign _show_language = show_language
-  
+
 %}
 
 {% assign _show_country = false %}
@@ -28,7 +28,15 @@
         <summary class="locpill__summary" aria-label="Cambiar país y moneda">
           <span class="locpill__flag">
             {% assign cc = localization.country.iso_code | upcase %}
-            <span class="locpill__emoji">{{ cc }}</span>
+                  <span class="locpill__flag">
+                    {% if cc == 'ES' %}
+                      <img class="locpill__flag-img"
+                          src="https://cdn.shopify.com/s/files/1/0908/5973/3339/files/7a50cfa9897df6c2e5e814f4f02ab01d00a9323d.png?v=1757594960"
+                          alt="Bandera de España" loading="lazy" decoding="async">
+                    {% else %}
+                      <span class="locpill__emoji" data-cc="{{ cc }}"></span>
+                    {% endif %}
+                  </span>
           </span>
           <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
           <span class="locpill__chev" aria-hidden="true">▾</span>
