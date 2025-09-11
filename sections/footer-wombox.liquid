@@ -1,97 +1,117 @@
- {{ 'footer-wombox.css' | asset_url | stylesheet_tag }}
+ {% comment %} {{ 'footer-wombox.css' | asset_url | stylesheet_tag }} {% endcomment %}
+<!-- sections/footer-wombox.liquid -->
+<style>
+  /* ====== FOOTER DESKTOP (no mobile) ====== */
+  .wombox-footer{background:#F24343;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}
+  .wbf__inner{max-width:1200px;margin:0 auto;padding:56px 24px 28px;display:grid;grid-template-columns:1fr 1fr 1fr 1.25fr;gap:32px;align-items:start}
+  .wbf__col{ text-align:left; }
+  .wbf__list{ list-style:none;margin:0;padding:0 }
+  .wbf__item{ margin:14px 0; }
+  .wbf__link{ color:#fff;text-decoration:none;opacity:.95 }
+  .wbf__link:hover{ text-decoration:underline }
 
-<footer class="footer">
-  <div class="footer-content">
+  /* Columna derecha: CTA + pills + redes */
+  .wbf__cta-col{ display:flex;flex-direction:column;align-items:flex-end;gap:18px }
+  .wbf__cta{
+    display:inline-block;padding:16px 28px;background:#fff;color:#E43F43;
+    border-radius:999px;font-weight:800;text-decoration:none;letter-spacing:.5px;
+    box-shadow:0 1px 0 rgba(0,0,0,.06)
+  }
+  .wbf__selectors{ display:flex;gap:12px; }
+  .wbf__pill{
+    border:0;border-radius:999px;padding:10px 16px;background:rgba(255,255,255,.16);
+    color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:8px;line-height:1;text-decoration:none
+  }
+  .wbf__social{ display:flex;gap:16px }
+  .wbf__social a{ color:#fff;text-decoration:none;opacity:.95;font-weight:700; }
+
+  /* Pagos (parte baja izq.) */
+  .wbf__payments{ max-width:1200px;margin:16px auto 0;padding:0 24px;display:flex;gap:8px }
+  .wbf__payments img{ height:22px;background:#fff;padding:2px 6px;border-radius:6px }
+
+  /* Franja inferior con WOMBOX enorme y claim */
+  .wbf__bottom{ position:relative;overflow:hidden;text-align:center;padding:32px 16px 48px }
+  .wbf__brand-line{
+    font-size:160px;font-weight:900;color:#F6A8BA;opacity:.55;white-space:nowrap;
+    line-height:1;margin:0;letter-spacing:2px
+  }
+  .wbf__claim{ margin:10px 0 0;font-weight:800;letter-spacing:2px }
+  .wbf__copy{ margin:10px 0 0;opacity:.9;font-size:14px }
+</style>
+
+<footer class="wombox-footer">
+  <div class="wbf__inner">
     <!-- Columna 1 -->
-    <div class="footer-column">
-      <button class="footer-title">WOMBOX</button>
-      <ul class="footer-links">
-        <li><a href="#">Preguntas frecuentes</a></li>
-        <li><a href="#">Nuestra filosofía</a></li>
-        <li><a href="#">Nuestros productos</a></li>
+    <nav class="wbf__col">
+      <ul class="wbf__list">
+        <li class="wbf__item"><a class="wbf__link" href="#">Preguntas Frecuentes</a></li>
+        <li class="wbf__item"><a class="wbf__link" href="#">Nuestra filosofía</a></li>
+        <li class="wbf__item"><a class="wbf__link" href="#">Nuestros productos</a></li>
       </ul>
-    </div>
+    </nav>
 
     <!-- Columna 2 -->
-    <div class="footer-column">
-      <button class="footer-title">LEGALES</button>
-      <ul class="footer-links">
-        <li><a href="#">Política de Privacidad</a></li>
-        <li><a href="#">Aviso Legal</a></li>
-        <li><a href="#">Política de Cookies</a></li>
-        <li><a href="#">Términos y condiciones</a></li>
-        <li><a href="#">Métodos de pago</a></li>
+    <nav class="wbf__col">
+      <ul class="wbf__list">
+        <li class="wbf__item"><a class="wbf__link" href="#">Política de Privacidad</a></li>
+        <li class="wbf__item"><a class="wbf__link" href="#">Aviso Legal</a></li>
+        <li class="wbf__item"><a class="wbf__link" href="#">Política de Cookies</a></li>
       </ul>
-    </div>
+    </nav>
 
     <!-- Columna 3 -->
-    <div class="footer-column">
-      <button class="footer-title">CONTACTO</button>
-      <ul class="footer-links">
-        <li><a href="#">Contacto</a></li>
+    <nav class="wbf__col">
+      <ul class="wbf__list">
+        <li class="wbf__item"><a class="wbf__link" href="#">Contacto</a></li>
+        <li class="wbf__item"><a class="wbf__link" href="#">Términos y condiciones</a></li>
+        <li class="wbf__item"><a class="wbf__link" href="#">Métodos de pago</a></li>
       </ul>
-    </div>
+    </nav>
 
-    <!-- Redes -->
-    <div class="footer-social">
-      <a href="#"><i class="icon">f</i></a>
-      <a href="#"><i class="icon">i</i></a>
-      <a href="#"><i class="icon">x</i></a>
-      <a href="#"><i class="icon">l</i></a>
-      <a href="#"><i class="icon">▶</i></a>
-      <a href="#"><i class="icon">t</i></a>
-    </div>
+    <!-- Columna 4: CTA + selectores + redes -->
+    <div class="wbf__cta-col">
+      <a href="#" class="wbf__cta">DESCUBRE NUESTRAS CAJAS</a>
 
-    <!-- Selector idioma / moneda -->
-    <div class="footer-selectors">
-      <select>
-        <option>ESPAÑA €</option>
-      </select>
-      <select>
-        <option>ESPAÑOL</option>
-      </select>
-    </div>
+      <div class="wbf__selectors">
+        <a href="#" class="wbf__pill" aria-label="País y moneda">🇪🇸 ESPAÑA €</a>
+        <a href="#" class="wbf__pill" aria-label="Idioma">🇪🇸 ESPAÑOL</a>
+      </div>
 
-    <!-- Métodos de pago -->
-    <div class="footer-payments">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Klarna_Logo_black.svg" alt="Klarna">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_Pay_logo.svg" alt="Apple Pay">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Pay_Logo.svg" alt="Google Pay">
+      <div class="wbf__social" aria-label="Redes sociales">
+        <a href="#" title="Facebook">f</a>
+        <a href="#" title="Instagram">i</a>
+        <a href="#" title="X">x</a>
+        <a href="#" title="LinkedIn">in</a>
+        <a href="#" title="YouTube">▶</a>
+        <a href="#" title="TikTok">t</a>
+      </div>
     </div>
   </div>
 
-  <!-- Marca -->
-  <div class="footer-bottom">
-    <h2>WOMBOX</h2>
-    <p>HECHO POR Y PARA ELLAS</p>
-    <p>© 2024 WOMBOX</p>
+  <!-- Pagos -->
+  <div class="wbf__payments">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Visa.svg" alt="Visa">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg" alt="PayPal">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Klarna_Logo_black.svg" alt="Klarna">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Apple_Pay_logo.svg" alt="Apple Pay">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_Pay_Logo.svg" alt="Google Pay">
+  </div>
+
+  <!-- Franja inferior -->
+  <div class="wbf__bottom">
+    <p class="wbf__brand-line">WOMBOX WOMBOX WOMBOX WOMBOX</p>
+    <p class="wbf__claim">HECHO POR Y PARA ELLAS</p>
+    <p class="wbf__copy">© 2024 WOMBOX</p>
   </div>
 </footer>
 
-<script>
-  // Desplegables en móvil
-  const titles = document.querySelectorAll('.footer-title');
-  titles.forEach(title => {
-    title.addEventListener('click', () => {
-      if (window.innerWidth <= 768) {
-        title.classList.toggle('active');
-        title.nextElementSibling.classList.toggle('show');
-      }
-    });
-  });
-</script>
-
 {% schema %}
 {
-  "name": "Footer WOMBOX",
+  "name": "Footer WOMBOX (Desktop)",
   "tag": "section",
   "class": "section-footer-wombox",
   "presets": [
-    {
-      "name": "Footer WOMBOX"
-    }
+    { "name": "Footer WOMBOX (Desktop)" }
   ]
 }
 {% endschema %}
