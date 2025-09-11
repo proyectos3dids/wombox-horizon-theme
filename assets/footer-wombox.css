@@ -111,7 +111,28 @@
 
 
 
+/* Poner los forms en línea (horizontal) */
+.locpill-wrap{
+  display:flex;            /* los hijos (forms) en fila */
+  align-items:center;
+  gap:24px;                /* espacio entre los dos pills */
+  flex-wrap:nowrap;        /* no saltar de línea en desktop */
+}
 
+/* Asegura que cada form no rompa la línea */
+.locpill-wrap > .locpill{
+  display:inline-flex;
+  margin:0;
+}
+
+/* Opcional: en móvil, que puedan saltar y centrarse */
+@media (max-width: 768px){
+  .locpill-wrap{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+  }
+}
 
 
 
