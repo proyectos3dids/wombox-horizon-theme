@@ -28,61 +28,78 @@
 
 <div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
   {%- if _show_country -%}
-    {% form 'localization', id: 'LocPillCountry', class: 'locpill locpill---xxs' %}
+    {% form 'localization', id: 'LocPillCountry', class: 'locpill locpill--xxs' %}
       <details class="locpill__details">
         <summary class="locpill__summary" aria-label="Cambiar país y moneda">
           <span class="locpill__flag">
             {% assign cc = localization.country.iso_code | upcase %}
-            {%- comment -%} Usa emojis por defecto. Si prefieres SVG en assets: flag-es.svg, flag-us.svg, etc. {%- endcomment -%}
-            <span class="locpill__emoji">
-              {{ cc
-                }}
-            </span>
+            <span class="locpill__emoji">{{ cc }}</span>
           </span>
           <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
           <span class="locpill__chev" aria-hidden="true">▾</span>
         </summary>
 
-        <div class="locpill__list" role="listbox">
-          {%- for country in localization.available_countries -%}
-            <button type="submit"
-                    name="country_code"
-                    value="{{ country.iso_code }}"
-                    class="locpill__option"
-                    {% if country.iso_code == localization.country.iso_code %}aria-current="true"{% endif %}>
-              <span class="locpill__opt-flag">
-                <span class="locpill__emoji">
-                  {{ country.iso_code | upcase
-                     }}
-                </span>
-              </span>
-              <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
-            </button>
-          {%- endfor -%}
+        {#-- MODAL CENTRADO: País/Moneda --#}
+        <div class="locpill__modal" aria-modal="true" role="dialog">
+          <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
+
+          <div class="locpill__panel" role="document">
+            <div class="locpill__head">
+              <span class="locpill__title">Selecciona país y moneda</span>
+              <button class="locpill__close" type="button" data-close aria-label="Cerrar">✕</button>
+            </div>
+
+            <div class="locpill__options" role="listbox">
+              {%- for country in localization.available_countries -%}
+                <button type="submit"
+                        name="country_code"
+                        value="{{ country.iso_code }}"
+                        class="locpill__option"
+                        {% if country.iso_code == localization.country.iso_code %}aria-current="true"{% endif %}>
+                  <span class="locpill__opt-flag">
+                    <span class="locpill__emoji">{{ country.iso_code | upcase }}</span>
+                  </span>
+                  <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
         </div>
       </details>
     {% endform %}
   {%- endif -%}
 
   {%- if _show_language -%}
-    {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill---xxs' %}
+    {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--xxs' %}
       <details class="locpill__details">
         <summary class="locpill__summary" aria-label="Cambiar idioma">
-          <span class="locpill__flag"><span class="locpill__emoji"></span></span>
+          <span class="locpill__flag"><span class="locpill__emoji">🌐</span></span>
           <span class="locpill__label">{{ localization.language.endonym_name | default: localization.language.name | upcase }}</span>
           <span class="locpill__chev" aria-hidden="true">▾</span>
         </summary>
 
-        <div class="locpill__list" role="listbox">
-          {%- for language in localization.available_languages -%}
-            <button type="submit"
-                    name="locale_code"
-                    value="{{ language.iso_code }}"
-                    class="locpill__option"
-                    {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
-              <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
-            </button>
-          {%- endfor -%}
+        {#-- MODAL CENTRADO: Idioma --#}
+        <div class="locpill__modal" aria-modal="true" role="dialog">
+          <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
+
+          <div class="locpill__panel" role="document">
+            <div class="locpill__head">
+              <span class="locpill__title">Selecciona idioma</span>
+              <button class="locpill__close" type="button" data-close aria-label="Cerrar">✕</button>
+            </div>
+
+            <div class="locpill__options" role="listbox">
+              {%- for language in localization.available_languages -%}
+                <button type="submit"
+                        name="locale_code"
+                        value="{{ language.iso_code }}"
+                        class="locpill__option"
+                        {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
+                  <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
         </div>
       </details>
     {% endform %}
@@ -90,35 +107,117 @@
 </div>
 
 <style>
-/* --- NUEVO: dos píldoras en la misma línea, sin salto --- */
+/* ===== PÍLDORAS EN LA MISMA LÍNEA ===== */
 .locpill-wrap{
-  display:inline-flex;          /* se alinea con otros elementos del header */
+  display:inline-flex;
   align-items:center;
-  gap:10px;                     /* separación entre las dos píldoras */
-  flex-wrap:nowrap;             /* NO permitir salto de línea */
-  white-space:nowrap;           /* evitar cortes del texto */
-}
-
-/* Evitar que el form se estire a 100% */
-form.locpill{
-  display:inline-flex;
-  width:auto !important;
-  flex:0 0 auto;
-  margin:0;
-}
-
-/* Asegurar que el trigger ocupa solo su contenido */
-.locpill__details{ display:inline-block; }
-.locpill__summary{
-  display:inline-flex;
-  width:auto;
-  margin:0;
+  gap:10px;
+  flex-wrap:nowrap;
   white-space:nowrap;
 }
+form.locpill{ display:inline-flex; width:auto !important; flex:0 0 auto; margin:0; }
+.locpill__details{ display:inline-block; }
+.locpill__summary{ display:inline-flex; width:auto; margin:0; white-space:nowrap; }
 
-/* (Opcional) Si el viewport es MUY estrecho, mejor scroll que salto */
+/* ===== Tamaños ===== */
+.locpill--sm{
+  --pill-h:26px; --pill-px:12px; --pill-gap:8px; --flag-size:20px; --border-w:1.6px;
+}
+.locpill--xxs{
+  --pill-h:18px; --pill-px:8px; --pill-gap:6px; --flag-size:14px; --border-w:1.2px;
+}
+.locpill--micro{
+  --pill-h:16px; --pill-px:6px; --pill-gap:4px; --flag-size:12px; --border-w:1px;
+}
+
+/* ===== Base pill ===== */
+.locpill{ position:relative; }
+.locpill__summary{
+  list-style:none;
+  align-items:center; gap:var(--pill-gap);
+  height:var(--pill-h); padding:0 var(--pill-px);
+  border-radius:9999px; border:var(--border-w) solid #fff;
+  background:rgba(255,255,255,.08);
+  color:#fff; font-weight:600; text-transform:uppercase;
+  font-size:10px; line-height:1; cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+.locpill--sm .locpill__summary{ font-size:12px; }
+.locpill--xxs .locpill__summary{ font-size:10px; }
+.locpill--micro .locpill__summary{ font-size:9px; }
+.locpill__summary::-webkit-details-marker{ display:none; }
+
+.locpill__flag{ width:var(--flag-size); height:var(--flag-size); border-radius:9999px; overflow:hidden; display:grid; place-items:center; flex:0 0 var(--flag-size); }
+.locpill__emoji{ font-size:11px; line-height:1; }
+.locpill--sm .locpill__emoji{ font-size:14px; }
+
+.locpill__label{ white-space:nowrap; }
+.locpill__chev{ margin-left:auto; font-size:9px; transition:transform .2s; }
+.locpill__details[open] .locpill__chev{ transform:rotate(180deg); }
+
+/* ===== MODAL CENTRADO ===== */
+.locpill__modal{ position:fixed; inset:0; display:none; z-index:999; }
+.locpill__details[open] .locpill__modal{ display:flex; }
+
+.locpill__overlay{ position:absolute; inset:0; background:rgba(0,0,0,.55); border:0; cursor:pointer; }
+.locpill__panel{
+  position:relative; margin:auto; width:min(560px,92vw); max-height:80vh; overflow:auto;
+  background:#fff; color:#111; border-radius:16px; padding:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+.locpill__head{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; }
+.locpill__title{ font-weight:700; font-size:16px; }
+.locpill__close{ background:transparent; border:0; font-size:20px; line-height:1; cursor:pointer; padding:6px; border-radius:8px; }
+.locpill__close:hover{ background:#f3f3f3; }
+
+/* Grid de opciones del modal */
+.locpill__options{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
+  gap:8px; padding:4px;
+}
+
+/* Estilo de opción (modo modal) */
+.locpill__option{
+  width:100%; display:flex; align-items:center; gap:8px;
+  padding:10px 12px; border-radius:10px;
+  background:#f7f7f7; border:none; cursor:pointer; text-align:left; font-size:13px;
+}
+.locpill__option:hover{ background:#efefef; }
+.locpill__option[aria-current="true"]{ background:#e8e8e8; font-weight:600; }
+
+/* Accesibilidad */
+.locpill__summary:focus-visible, .locpill__option:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+html.locpill--modal-open, body.locpill--modal-open{ overflow:hidden; }
+
+/* Opcional: scroll horizontal si el viewport es MUY estrecho */
 @media (max-width: 380px){
   .locpill-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
 }
-
 </style>
+
+<script>
+/* ===== Comportamiento del modal (ligero y sin dependencias) ===== */
+(function(){
+  // Cerrar al pulsar overlay o la X
+  document.addEventListener('click', function(ev){
+    if(ev.target.matches('.locpill__overlay, .locpill__close')){
+      const d = ev.target.closest('.locpill__details'); if(d) d.removeAttribute('open');
+    }
+  });
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', function(ev){
+    if(ev.key === 'Escape'){
+      document.querySelectorAll('.locpill__details[open]').forEach(d=>d.removeAttribute('open'));
+    }
+  });
+
+  // Bloquear/desbloquear scroll de la página según estado del modal
+  document.addEventListener('toggle', function(ev){
+    if(ev.target.classList && ev.target.classList.contains('locpill__details')){
+      const anyOpen = document.querySelector('.locpill__details[open]');
+      document.documentElement.classList.toggle('locpill--modal-open', !!anyOpen);
+      document.body.classList.toggle('locpill--modal-open', !!anyOpen);
+    }
+  }, true);
+})();
+</script>
