@@ -30,21 +30,16 @@
   {%- if _show_country -%}
     {% form 'localization', id: 'LocPillCountry', class: 'locpill' %}
       <details class="locpill__details">
-        <summary class="locpill__summary" aria-label="Cambiar país y moneda">
-          <span class="locpill__flag">
-            {%- assign cc = localization.country.iso_code | downcase -%}
-            {# Para usar banderas desde assets, sube p.ej. flag-es.svg y descomenta:
-            <!-- <img src="{{ ('flag-' | append: cc | append: '.svg') | asset_url }}" alt="{{ localization.country.name }}"> -->
-            #}
-            <span class="locpill__emoji">
-              {{ localization.country.iso_code
-                 | replace: 'ES','🇪🇸' | replace: 'US','🇺🇸'
-                 | replace: 'FR','🇫🇷' | replace: 'DE','🇩🇪' }}
-            </span>
-          </span>
-          <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
-          <span class="locpill__chev" aria-hidden="true">▾</span>
-        </summary>
+       <summary class="locpill__summary" aria-label="Cambiar país y moneda">
+  <span class="locpill__flag">
+    {% assign cc = localization.country.iso_code | downcase %}
+    {% comment %} Carga assets/flag-es.svg, flag-us.svg, etc. {% endcomment %}
+    {% assign flag_name = 'flag-' | append: cc | append: '.svg' %}
+    <img src="{{ flag_name | asset_url }}" alt="{{ localization.country.name }}">
+  </span>
+  <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
+  <span class="locpill__chev" aria-hidden="true">▾</span>
+</summary>
 
         <div class="locpill__list" role="listbox">
           {%- for country in localization.available_countries -%}
