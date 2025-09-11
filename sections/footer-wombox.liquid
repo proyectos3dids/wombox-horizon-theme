@@ -2,32 +2,22 @@
 <!-- sections/footer-wombox.liquid -->
 <footer class="wombox-footer">
   <div class="wbf__inner">
-    <!-- Columna 1 -->
-    <nav class="wbf__col">
-      <ul class="wbf__list">
-        <li class="wbf__item"><a class="wbf__link" href="#">Preguntas Frecuentes</a></li>
-        <li class="wbf__item"><a class="wbf__link" href="#">Nuestra filosofía</a></li>
-        <li class="wbf__item"><a class="wbf__link" href="#">Nuestros productos</a></li>
-      </ul>
-    </nav>
-
-    <!-- Columna 2 -->
-    <nav class="wbf__col">
-      <ul class="wbf__list">
-        <li class="wbf__item"><a class="wbf__link" href="#">Política de Privacidad</a></li>
-        <li class="wbf__item"><a class="wbf__link" href="#">Aviso Legal</a></li>
-        <li class="wbf__item"><a class="wbf__link" href="#">Política de Cookies</a></li>
-      </ul>
-    </nav>
-
-    <!-- Columna 3 -->
-    <nav class="wbf__col">
-      <ul class="wbf__list">
-        <li class="wbf__item"><a class="wbf__link" href="#">Contacto</a></li>
-        <li class="wbf__item"><a class="wbf__link" href="#">Términos y condiciones</a></li>
-        <li class="wbf__item"><a class="wbf__link" href="#">Métodos de pago</a></li>
-      </ul>
-    </nav>
+    
+    {%- for block in section.blocks -%}
+    {%- if block.type == 'menu_column' -%}
+      <nav class="wbf__col" {{ block.shopify_attributes }}>
+        {%- if block.settings.menu != blank -%}
+          <ul class="wbf__list">
+            {%- for link in block.settings.menu.links -%}
+              <li class="wbf__item">
+                <a class="wbf__link" href="{{ link.url }}">{{ link.title }}</a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        {%- endif -%}
+      </nav>
+    {%- endif -%}
+  {%- endfor -%}
 
     <!-- Columna 4: CTA + selectores + redes -->
     <div class="wbf__cta-col">
@@ -128,8 +118,31 @@
       "unit": "px"
     }
   ],
-  "presets": [
-    { "name": "Footer WOMBOX (Desktop)" }
-  ]
+  "blocks": [
+  {
+    "type": "menu_column",
+    "name": "Columna de menú",
+    "limit": 3,
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "label": "Selecciona un menú"
+      }
+    ]
+  }
+],
+"max_blocks": 3,
+"presets": [
+  {
+    "name": "Footer WOMBOX (Desktop)",
+    "blocks": [
+      { "type": "menu_column" },
+      { "type": "menu_column" },
+      { "type": "menu_column" }
+    ]
+  }
+]
+
 }
 {% endschema %}
