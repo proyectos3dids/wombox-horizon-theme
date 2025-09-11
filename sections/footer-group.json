@@ -52,7 +52,7 @@
         "payment_icon_PWWh83": {
           "type": "payment_icon",
           "settings": {
-            "icon_image": "shopify://shop_images/Vector_21_b03f6e84-f671-43e8-9ea5-b1ccc5fbf3e2.svg",
+            "icon_image": "shopify://shop_images/GooglePay.svg",
             "icon_alt": ""
           }
         },
