@@ -102,6 +102,7 @@
     margin:8px auto 0;          /* centrado del contenedor */
     float:none !important;      /* anula float inline si lo hubiera */
     width:100%;
+    margin-bottom:12px;
   }
   .wbf__soc-a{ display:inline-flex; } /* asegúrate de que cada enlace ocupa su contenido */
 
