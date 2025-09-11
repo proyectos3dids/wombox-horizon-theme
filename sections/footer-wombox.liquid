@@ -1,5 +1,97 @@
 {{ 'footer-wombox.css' | asset_url | stylesheet_tag }}
 
+
+{{ 'footer-wombox.css' | asset_url | stylesheet_tag }}
+
+<style>
+/* ====== FOOTER DESKTOP (no mobile) ====== */
+.wombox-footer{background:#F24343;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}
+
+/* Grid principal: 3 menús + 1 CTA */
+.wbf__inner{
+  max-width:1200px;margin:0 auto;padding:56px 24px 28px;
+  display:grid;grid-template-columns:1fr 1fr 1fr 1.25fr;gap:32px;align-items:start
+}
+
+/* Menús (bloques) */
+.wbf__menus{grid-column:1 / span 3;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
+.wbf__col{text-align:left}
+.wbf__list{list-style:none;margin:0;padding:0}
+.wbf__item{margin:18px 0}
+.wbf__link{
+  font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:400;font-size:14px;line-height:1;
+  letter-spacing:0;color:#fff;text-decoration:none;opacity:1
+}
+.wbf__link:hover{text-decoration:underline}
+
+/* CTA + redes */
+.wbf__cta-col{grid-column:4 / span 1;display:flex;flex-direction:column;align-items:flex-end;gap:18px}
+.wbf__cta{
+  display:inline-block;padding:16px 28px;background:#fff;color:#E43F43;border-radius:999px;
+  font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:800;font-size:16px;text-transform:uppercase;
+  letter-spacing:.5px;text-decoration:none;box-shadow:0 1px 0 rgba(0,0,0,.06);transition:opacity .2s
+}
+.wbf__cta:hover{opacity:.9}
+.wbf__social{display:flex;gap:16px}
+.wbf__social a{color:#fff;text-decoration:none;opacity:.95;font-weight:700}
+
+/* ====== FRANJA INFERIOR ====== */
+.wbf__bottom{position:relative;overflow:hidden;text-align:center;padding:12px 0 5px}
+
+/* Métodos de pago (desktop en la franja) */
+.wbf__payments{
+  position:absolute;left:24px;bottom:10px;
+  display:flex;gap:8px;z-index:2
+}
+.wbf__pay-pill{
+  display:inline-flex;align-items:center;justify-content:center;
+  height:calc(var(--pay-size,18px) + 4px);padding:2px 6px;border-radius:16px;background:#fff
+}
+.wbf__pay-pill svg{height:var(--pay-size,18px);width:auto;display:block}
+.wbf__pay-pill img{height:var(--pay-size,18px);width:auto;display:block}
+
+/* Slider inferior */
+.wbf__marquee{width:100%;overflow:hidden}
+.wbf__track{display:flex;align-items:center;gap:var(--marquee-gap,140px);animation:wbf-track var(--marquee-speed,25s) linear infinite;width:max-content}
+.wbf__item-img{height:var(--marquee-h,120px);width:auto;display:block}
+@keyframes wbf-track{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* Copy tipografía */
+.wbf__copy{
+  padding:10px 0;font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:400;font-size:12px;line-height:1.29;
+  color:#fff;text-align:center;display:block;max-width:922px;margin:8px auto 0;opacity:1
+}
+
+/* Copy visibilidad */
+.wbf__copy--desktop{display:block}
+.wbf__copy--mobile{display:none}
+
+/* ====== PAGOS MÓVIL (fuera de la franja) ====== */
+.wbf__payments-mobile{
+  display:none;              /* oculto en desktop */
+}
+.wbf__payments-mobile .wbf__pay-pill{background:#fff;border-radius:16px}
+
+/* ====== Mobile ====== */
+@media (max-width: 768px){
+  .wbf__bottom{padding:16px 16px 12px}
+  .wbf__bottom{ --pay-size: 16px; }
+
+  /* Ocultar pagos dentro de la franja en móvil */
+  .wbf__payments{ display:none !important; }
+
+  /* Mostrar pagos móviles centrados en fila y fuera de la franja */
+  .wbf__payments-mobile{
+    display:flex;justify-content:center;align-items:center;gap:8px;
+    margin:10px auto 6px; width:100%;
+  }
+
+  /* Copys: solo el móvil */
+  .wbf__copy--desktop{display:none}
+  .wbf__copy--mobile{display:block}
+}
+</style>
+
 <!-- sections/footer-wombox.liquid -->
 <footer class="wombox-footer">
   <div class="wbf__inner">
@@ -33,7 +125,7 @@
     {% assign strip_src = section.settings.strip_image | image_url %}
     <div class="wbf__bottom" style="--pay-size: {{ section.settings.payments_size }}px;">
 
-      <!-- Métodos de pago (subidos o automáticos) -->
+      <!-- Métodos de pago (DESKTOP en la franja) -->
       <div class="wbf__payments" aria-label="Métodos de pago">
         {% if section.settings.use_custom_payment_icons %}
           {% for block in section.blocks %}
@@ -59,12 +151,30 @@
         </div>
       </div>
 
-      <!-- Copy desktop -->
+      <!-- Copy desktop (dentro de la franja) -->
       <p class="wbf__copy wbf__copy--desktop">© {{ 'now' | date: "%Y" }} WOMBOX</p>
-      <!-- Copy móvil (debajo de pagos gracias al media query) -->
-      <p class="wbf__copy wbf__copy--mobile">© {{ 'now' | date: "%Y" }} WOMBOX</p>
     </div>
   {% endif %}
+
+  <!-- Métodos de pago (MÓVIL – fuera de la franja) -->
+  <div class="wbf__payments-mobile" style="--pay-size: {{ section.settings.payments_size }}px;" aria-label="Métodos de pago">
+    {% if section.settings.use_custom_payment_icons %}
+      {% for block in section.blocks %}
+        {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
+          <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
+            <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
+          </span>
+        {% endif %}
+      {% endfor %}
+    {% elsif section.settings.show_payments %}
+      {% for type in shop.enabled_payment_types %}
+        <span class="wbf__pay-pill">{{ type | payment_type_svg_tag }}</span>
+      {% endfor %}
+    {% endif %}
+  </div>
+
+  <!-- Copy móvil (debajo de los pagos móviles) -->
+  <p class="wbf__copy wbf__copy--mobile">© {{ 'now' | date: "%Y" }} WOMBOX</p>
 </footer>
 
 {% schema %}
