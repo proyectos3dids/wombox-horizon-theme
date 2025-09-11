@@ -49,3 +49,35 @@
   padding:10px 0;font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:400;font-size:12px;line-height:1.29;
   color:#fff;text-align:center;display:block;max-width:922px;margin:8px auto 0;opacity:1
 }
+
+
+/* ====== MOBILE: pagos centrados, uno debajo de otro ====== */
+@media (max-width: 768px){
+  .wombox-footer .wbf__bottom{
+    padding:16px 16px 16px;
+  }
+
+  .wombox-footer .wbf__payments{
+    position:relative !important;   /* deja de estar pegado a la esquina */
+    left:auto !important;
+    right:auto !important;
+    bottom:auto !important;
+    top:auto !important;
+
+    width:100%;
+    margin:0 auto 12px !important;  /* centrado arriba del copy */
+    display:flex;
+    flex-direction:column;           /* uno bajo otro */
+    align-items:center;
+    justify-content:center;
+    gap:10px;
+    z-index:3;
+  }
+
+  .wombox-footer .wbf__pay-pill{
+    display:block;                   /* cada pill ocupa su línea */
+  }
+
+  /* (opcional) iconos un poco más pequeños en móvil */
+  .wombox-footer .wbf__bottom{ --pay-size: 16px; }
+}
