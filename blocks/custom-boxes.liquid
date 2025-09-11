@@ -24,19 +24,19 @@
               {%- assign imagen_field = caja.imagen -%}
               {%- assign titulo_field = caja.titulo -%}
               {%- assign color_field = caja.color -%}
-              <div class="cajas-option-info">
-                {%- if imagen_field.value -%}
-                  <div class="cajas-option-image">
-                    <img src="{{ imagen_field.value | image_url: width: 60 }}" alt="{{ titulo_field.value }}" loading="lazy" width="60" height="60">
+              {%- if imagen_field.value -%}
+                <div class="cajas-option-image">
+                  <img src="{{ imagen_field.value | image_url: width: 800 }}" alt="{{ titulo_field.value }}" loading="lazy" width="200" height="200">
+                  <div class="cajas-magnifier-icon">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                      <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                    </svg>
                   </div>
-                {%- elsif color_field.value -%}
-                  <div class="cajas-option-color" style="background-color: {{ color_field.value }};"></div>
-                {%- endif -%}
-                <div class="cajas-title-container">
-                  <span class="cajas-option-title">{{ titulo_field.value }}</span>
-                  <span class="cajas-expand-hint">{{ block.settings.expand_hint_text | default: 'Click to expand' }}</span>
                 </div>
-              </div>
+              {%- elsif color_field.value -%}
+                <div class="cajas-option-color-full" style="background-color: {{ color_field.value }};"></div>
+              {%- endif -%}
             </label>
           </div>
         {%- endfor -%}

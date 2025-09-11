@@ -2,14 +2,15 @@ if (!customElements.get('cajas-selector')) {
   class CajasSelector extends HTMLElement {
     constructor() {
       super();
-      this.clickStates = new Map(); // Track click states for each option
       this.init();
     }
 
     init() {
       this.setupEventListeners();
       this.setInitialSelection();
-      this.createImageModal();
+      this.calculateLayout();
+      // Recalcular layout en resize
+      window.addEventListener('resize', () => this.calculateLayout());
     }
 
     setupEventListeners() {
@@ -24,39 +25,36 @@ if (!customElements.get('cajas-selector')) {
       labels.forEach(label => {
         label.addEventListener('click', this.handleLabelClick.bind(this));
       });
+
+      // Escuchar clics específicos en las lupas
+      const magnifiers = this.querySelectorAll('.cajas-magnifier-icon');
+      magnifiers.forEach(magnifier => {
+        magnifier.addEventListener('click', this.handleMagnifierClick.bind(this));
+      });
     }
 
+    /**
+     * Maneja el cambio de selección
+     * @param {Event} event - El evento de cambio
+     */
     handleSelectionChange(event) {
       const target = event.target;
       if (!target || !(target instanceof HTMLInputElement)) return;
       
       const selectedValue = target.value;
       const selectedLabel = target.closest('.cajas-option')?.querySelector('.cajas-option-label');
-      const selectedRadio = target;
       
-      // Remover clase 'selected' de todas las opciones y resetear estados de click
+      // Remover clase 'selected' de todas las opciones
       this.querySelectorAll('.cajas-option-label').forEach(label => {
         label.classList.remove('selected');
-        // Resetear opacity: mostrar título, ocultar hint
-        const title = label.querySelector('.cajas-option-title');
-        const hint = label.querySelector('.cajas-expand-hint');
-        if (title && hint && title instanceof HTMLElement && hint instanceof HTMLElement) {
-          title.style.opacity = '1';
-          hint.style.opacity = '0';
-        }
       });
       
-      // Resetear todos los estados de click excepto el seleccionado
-        this.clickStates.clear();
-        
-        // Agregar clase 'selected' a la opción seleccionada
-        if (selectedLabel) {
-          selectedLabel.classList.add('selected');
-          // Mantener el estado del radio seleccionado como 'unclicked' para que funcione el primer click
-          this.clickStates.set(selectedRadio.id, 'unclicked');
-        }
+      // Agregar clase 'selected' a la opción seleccionada
+      if (selectedLabel) {
+        selectedLabel.classList.add('selected');
+      }
       
-      // Disparar evento personalizado para notificar la selección
+      // Disparar evento personalizado
       this.dispatchEvent(new CustomEvent('cajaSelected', {
         detail: {
           value: selectedValue,
@@ -69,46 +67,206 @@ if (!customElements.get('cajas-selector')) {
       console.log('Caja seleccionada:', selectedValue);
     }
 
+    /**
+     * Maneja el click en las etiquetas
+     * @param {Event} event - El evento de click
+     */
     handleLabelClick(event) {
       event.preventDefault();
-      const label = event.currentTarget;
+      
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      
+      // Si el click fue en la lupa, no hacer nada (la lupa tiene su propio handler)
+      if (target.closest('.cajas-magnifier-icon')) {
+        return;
+      }
+      
+      const label = target.closest('.cajas-option-label');
+      if (!label) return;
+      
       const radio = label.closest('.cajas-option')?.querySelector('input[type="radio"]');
       if (!radio || !(radio instanceof HTMLInputElement)) return;
       
-      const optionId = radio.id;
-      const expandHint = label.querySelector('.cajas-expand-hint');
+      // Solo seleccionar la opción, no ampliar imagen
+      if (!radio.checked) {
+        radio.checked = true;
+        radio.dispatchEvent(new Event('change'));
+      }
+    }
+
+    /**
+     * Maneja el click específico en la lupa
+     * @param {Event} event - El evento de click
+     */
+    handleMagnifierClick(event) {
+      event.preventDefault();
+      event.stopPropagation();
+      
+      const target = event.target;
+      if (!(target instanceof Element)) return;
+      
+      const magnifier = target.closest('.cajas-magnifier-icon');
+      if (!magnifier) return;
+      
+      const label = magnifier.closest('.cajas-option-label');
+      if (!label) return;
+      
       const image = label.querySelector('.cajas-option-image img');
+      if (image && image instanceof HTMLImageElement) {
+        this.enlargeImage(image);
+      }
+    }
+
+    /**
+     * Amplía la imagen en un modal
+     * @param {HTMLImageElement} image - La imagen a ampliar
+     */
+    enlargeImage(image) {
+      if (!image || !(image instanceof HTMLImageElement) || !image.src) return;
       
-      // Get current click state for this option
-      const currentState = this.clickStates.get(optionId) || 'unclicked';
+      // Crear modal si no existe
+      let modal = document.getElementById('image-modal');
+      if (!modal) {
+        modal = this.createImageModal();
+      }
       
-      if (currentState === 'unclicked') {
-        // First click: select the option and show hint
-        if (radio instanceof HTMLInputElement && !radio.checked) {
-          radio.checked = true;
-          radio.dispatchEvent(new Event('change'));
+      const modalImage = modal.querySelector('.modal-image');
+      if (modalImage && modalImage instanceof HTMLImageElement) {
+        // Usar la imagen con width: 800 para mantener calidad optimizada
+        modalImage.src = image.src;
+        modalImage.alt = image.alt || 'Imagen ampliada';
+      }
+      
+      modal.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+
+    /**
+     * Crea el modal para mostrar imágenes ampliadas
+     * @returns {HTMLElement} El elemento modal creado
+     */
+    createImageModal() {
+      const modal = document.createElement('div');
+      modal.id = 'image-modal';
+      modal.className = 'image-modal';
+      modal.innerHTML = `
+        <div class="modal-overlay">
+          <div class="modal-content">
+            <button class="modal-close" aria-label="Cerrar">&times;</button>
+            <img class="modal-image" src="" alt="" />
+          </div>
+        </div>
+      `;
+      
+      // Agregar estilos al modal
+      const style = document.createElement('style');
+      style.textContent = `
+        .image-modal {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.9);
+          display: none;
+          align-items: center;
+          justify-content: center;
+          z-index: 9999;
         }
-        
-        // Intercambiar opacity entre título y hint
-        const title = label.querySelector('.cajas-option-title');
-        if (title instanceof HTMLElement && expandHint instanceof HTMLElement) {
-          title.style.opacity = '0';
-          expandHint.style.opacity = '1';
+        @media (max-width: 768px) {
+          .modal-overlay {
+            padding: 10px;
+          }
+          .modal-content {
+            max-width: 95%;
+            max-height: 85%;
+          }
         }
-        
-        this.clickStates.set(optionId, 'first-clicked');
-      } else if (currentState === 'first-clicked') {
-        // Second click: enlarge image if available
-        if (image) {
-          this.enlargeImage(image);
+        .modal-overlay {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
         }
-        
-        this.clickStates.set(optionId, 'second-clicked');
-      } else {
-        // Subsequent clicks: just enlarge image
-        if (image) {
-          this.enlargeImage(image);
+        .modal-content {
+          position: relative;
+          background: transparent;
+          border-radius: 8px;
+          overflow: hidden;
+          max-width: 90%;
+          max-height: 90%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
+        .modal-image {
+          max-width: 100%;
+          max-height: 100%;
+          width: auto;
+          height: auto;
+          object-fit: contain;
+          display: block;
+        }
+        .modal-close {
+          position: absolute;
+          top: 20px;
+          right: 20px;
+          background: rgba(255, 255, 255, 0.8);
+          color: black;
+          border: none;
+          font-size: 30px;
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+        }
+        .modal-close:hover {
+          background: rgba(255, 255, 255, 1);
+        }
+      `;
+      
+      document.head.appendChild(style);
+      document.body.appendChild(modal);
+      
+      // Agregar event listeners
+      const closeBtn = modal.querySelector('.modal-close');
+      const overlay = modal.querySelector('.modal-overlay');
+      
+      closeBtn?.addEventListener('click', () => this.closeImageModal());
+      
+      // Cerrar modal al hacer click fuera de la imagen (en el overlay)
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target === overlay) {
+          this.closeImageModal();
+        }
+      });
+      
+      // Cerrar con tecla Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+          this.closeImageModal();
+        }
+      });
+      
+      return modal;
+    }
+
+    /**
+     * Cierra el modal de imagen
+     */
+    closeImageModal() {
+      const modal = document.getElementById('image-modal');
+      if (modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
       }
     }
 
@@ -123,7 +281,7 @@ if (!customElements.get('cajas-selector')) {
         }
       } else {
         // Si ya hay una seleccionada, aplicar el estilo y disparar el evento
-        const selectedLabel = checkedRadio.closest('.cajas-option').querySelector('.cajas-option-label');
+        const selectedLabel = checkedRadio.closest('.cajas-option')?.querySelector('.cajas-option-label');
         if (selectedLabel) {
           selectedLabel.classList.add('selected');
         }
@@ -132,13 +290,19 @@ if (!customElements.get('cajas-selector')) {
       }
     }
 
-    // Método público para obtener la selección actual
+    /**
+     * Obtiene el valor seleccionado
+     * @returns {string|null} El valor seleccionado
+     */
     getSelectedValue() {
       const selectedRadio = this.querySelector('input[type="radio"]:checked');
       return (selectedRadio instanceof HTMLInputElement) ? selectedRadio.value : null;
     }
 
-    // Método público para establecer una selección programáticamente
+    /**
+     * Establece la selección
+     * @param {string} value - El valor a seleccionar
+     */
     setSelection(value) {
       const radio = this.querySelector(`input[type="radio"][value="${value}"]`);
       if (radio && radio instanceof HTMLInputElement) {
@@ -147,69 +311,38 @@ if (!customElements.get('cajas-selector')) {
       }
     }
 
-    createImageModal() {
-      // Create modal HTML structure
-      const modalHTML = `
-        <div id="cajas-image-modal" class="cajas-modal" style="display: none;">
-          <div class="cajas-modal-backdrop"></div>
-          <div class="cajas-modal-content">
-            <button class="cajas-modal-close">&times;</button>
-            <img class="cajas-modal-image" src="" alt="">
-          </div>
-        </div>
-      `;
+    /**
+     * Calcula dinámicamente el layout basado en el ancho disponible
+     */
+    calculateLayout() {
+      const container = this.querySelector('.cajas-options');
+      if (!container || !(container instanceof HTMLElement)) return;
       
-      // Add modal to body if it doesn't exist
-      if (!document.getElementById('cajas-image-modal')) {
-        document.body.insertAdjacentHTML('beforeend', modalHTML);
-        
-        // Add event listeners for modal
-        const modal = document.getElementById('cajas-image-modal');
-        const closeBtn = modal?.querySelector('.cajas-modal-close');
-        const backdrop = modal?.querySelector('.cajas-modal-backdrop');
-        
-        if (closeBtn) {
-          closeBtn.addEventListener('click', () => this.closeImageModal());
-        }
-        if (backdrop) {
-          backdrop.addEventListener('click', () => this.closeImageModal());
-        }
-        
-        // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-          if (e.key === 'Escape' && modal && modal instanceof HTMLElement && modal.style.display === 'block') {
-            this.closeImageModal();
+      const containerWidth = container.offsetWidth;
+      const options = this.querySelectorAll('.cajas-option');
+      
+      // Si el ancho es superior a 228px, pueden caber más imágenes (3 en 3)
+      if (containerWidth > 228) {
+        // Layout de 3 columnas
+        options.forEach(option => {
+          if (option instanceof HTMLElement) {
+            option.style.flex = '1 1 calc(33.333% - 10px)';
+            option.style.minWidth = 'calc(33.333% - 10px)';
+            option.style.maxWidth = 'calc(33.333% - 10px)';
+          }
+        });
+      } else {
+        // Layout de 2 columnas (por defecto)
+        options.forEach(option => {
+          if (option instanceof HTMLElement) {
+            option.style.flex = '1 1 calc(50% - 7.5px)';
+            option.style.minWidth = 'calc(50% - 7.5px)';
+            option.style.maxWidth = 'calc(50% - 7.5px)';
           }
         });
       }
     }
 
-    enlargeImage(imgElement) {
-      if (!(imgElement instanceof HTMLImageElement)) return;
-      
-      const modal = document.getElementById('cajas-image-modal');
-      if (!modal || !(modal instanceof HTMLElement)) return;
-      
-      const modalImage = modal.querySelector('.cajas-modal-image');
-      if (!modalImage || !(modalImage instanceof HTMLImageElement)) return;
-      
-      // Get larger version of the image
-      const originalSrc = imgElement.src;
-      const largerSrc = originalSrc.replace(/width=\d+/, 'width=400');
-      
-      modalImage.src = largerSrc;
-      modalImage.alt = imgElement.alt;
-      modal.style.display = 'block';
-      document.body.style.overflow = 'hidden';
-    }
-
-    closeImageModal() {
-      const modal = document.getElementById('cajas-image-modal');
-      if (modal && modal instanceof HTMLElement) {
-        modal.style.display = 'none';
-      }
-      document.body.style.overflow = '';
-    }
   }
 
   customElements.define('cajas-selector', CajasSelector);
@@ -225,9 +358,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const cajasBlock = cajasSelector.closest('.product-form__cajas');
     const selectedBoxText = (cajasBlock && cajasBlock instanceof HTMLElement && cajasBlock.dataset && cajasBlock.dataset.selectedBoxText) ? cajasBlock.dataset.selectedBoxText : 'Selected Box';
     
-    // Función para actualizar la propiedad del producto
+    /**
+     * Función para actualizar la propiedad del producto
+     * @param {string} selectedValue - El valor seleccionado
+     */
     function updateProductProperty(selectedValue) {
-      if (!productForm) return;
+      if (!productForm || typeof selectedValue !== 'string') return;
       
       let hiddenInput = productForm.querySelector(`input[name="properties[${selectedBoxText}]"]`);
       if (!hiddenInput) {
@@ -236,7 +372,7 @@ document.addEventListener('DOMContentLoaded', function() {
           hiddenInput.type = 'hidden';
           hiddenInput.name = `properties[${selectedBoxText}]`;
         }
-        productForm.appendChild(hiddenInput);
+        productForm?.appendChild(hiddenInput);
       }
       if (hiddenInput instanceof HTMLInputElement) {
         hiddenInput.value = selectedValue;
@@ -248,7 +384,9 @@ document.addEventListener('DOMContentLoaded', function() {
     cajasSelector.addEventListener('cajaSelected', function(event) {
       if ('detail' in event && event.detail && typeof event.detail === 'object' && 'value' in event.detail) {
         const selectedValue = event.detail.value;
-        updateProductProperty(selectedValue);
+        if (typeof selectedValue === 'string') {
+          updateProductProperty(selectedValue);
+        }
       }
     });
     
