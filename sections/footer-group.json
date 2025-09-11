@@ -15,6 +15,8 @@
       "type": "footer-wombox",
       "name": "Footer WOMBOX",
       "settings": {
+        "cta_text": "DESCUBRE NUESTRAS CAJAS",
+        "cta_link": "#",
         "strip_image": "shopify://shop_images/Capa_1.png",
         "strip_height": 120,
         "strip_speed": 60,
