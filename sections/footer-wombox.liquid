@@ -1,55 +1,58 @@
- {% comment %} {{ 'footer-wombox.css' | asset_url | stylesheet_tag }} {% endcomment %}
-<!-- sections/footer-wombox.liquid -->
 <!-- sections/footer-wombox.liquid -->
 <style>
   /* ====== FOOTER DESKTOP (no mobile) ====== */
   .wombox-footer{background:#F24343;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}
-  .wbf__inner{max-width:1200px;margin:0 auto;padding:56px 24px 28px;display:grid;grid-template-columns:1fr 1fr 1fr 1.25fr;gap:32px;align-items:start}
-  .wbf__col{ text-align:left; }
-  .wbf__list{ list-style:none;margin:0;padding:0 }
-  .wbf__item{ margin:14px 0; }
-  .wbf__link{ color:#fff;text-decoration:none;opacity:.95 }
-  .wbf__link:hover{ text-decoration:underline }
+  .wbf__inner{
+    max-width:1200px;margin:0 auto;padding:56px 24px 28px;
+    display:grid;grid-template-columns:1fr 1fr 1fr 1.25fr;gap:32px;align-items:start
+  }
+  .wbf__col{text-align:left}
+  .wbf__list{list-style:none;margin:0;padding:0}
+  .wbf__item{margin:14px 0}
+  .wbf__link{color:#fff;text-decoration:none;opacity:.95}
+  .wbf__link:hover{text-decoration:underline}
 
   /* Columna derecha: CTA + pills + redes */
-  .wbf__cta-col{ display:flex;flex-direction:column;align-items:flex-end;gap:18px }
+  .wbf__cta-col{display:flex;flex-direction:column;align-items:flex-end;gap:18px}
   .wbf__cta{
     display:inline-block;padding:16px 28px;background:#fff;color:#E43F43;
     border-radius:999px;font-weight:800;text-decoration:none;letter-spacing:.5px;
     box-shadow:0 1px 0 rgba(0,0,0,.06)
   }
-  .wbf__selectors{ display:flex;gap:12px; }
+  .wbf__selectors{display:flex;gap:12px}
   .wbf__pill{
     border:0;border-radius:999px;padding:10px 16px;background:rgba(255,255,255,.16);
     color:#fff;font-weight:600;display:inline-flex;align-items:center;gap:8px;line-height:1;text-decoration:none
   }
-  .wbf__social{ display:flex;gap:16px }
-  .wbf__social a{ color:#fff;text-decoration:none;opacity:.95;font-weight:700; }
+  .wbf__social{display:flex;gap:16px}
+  .wbf__social a{color:#fff;text-decoration:none;opacity:.95;font-weight:700}
 
   /* Pagos (parte baja izq.) */
-  .wbf__payments{ max-width:1200px;margin:16px auto 0;padding:0 24px;display:flex;gap:8px }
-  .wbf__payments img{ height:22px;background:#fff;padding:2px 6px;border-radius:6px }
+  .wbf__payments{max-width:1200px;margin:16px auto 0;padding:0 24px;display:flex;gap:8px}
+  .wbf__payments img{height:22px;background:#fff;padding:2px 6px;border-radius:6px}
 
-  /* ====== FRANJA INFERIOR: SLIDER INFINITO CON IMAGEN ====== */
-  .wbf__bottom{ position:relative;overflow:hidden;text-align:center;padding:12px 0 48px }
-  /* la franja animada usa la imagen como background repetido en X */
-  .wbf__marquee{
+  /* ====== FRANJA INFERIOR: SLIDER INFINITO CON IMÁGENES SEPARADAS ====== */
+  .wbf__bottom{position:relative;overflow:hidden;text-align:center;padding:12px 0 48px}
+  .wbf__marquee{width:100%;overflow:hidden}
+  .wbf__track{
+    display:flex;
+    gap:var(--marquee-gap,140px);   /* separación entre imágenes */
+    align-items:center;
+    animation:wbf-track var(--marquee-speed,25s) linear infinite;
+    will-change:transform;
+    width:max-content;
+  }
+  .wbf__item-img{
     height:var(--marquee-h,120px);
-    background-image:var(--wbf-strip);
-    background-repeat:repeat-x;
-    background-position:0 50%;
-    background-size:auto 100%;
-    animation:wbf-scroll var(--marquee-speed,25s) linear infinite;
-    /* desvanecido lateral suave (opcional) */
-    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-            mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+    flex-shrink:0;
+    display:block;
   }
-  @keyframes wbf-scroll{
-    from{ background-position-x:0; }
-    to  { background-position-x:-1000px; } /* se repite, no hay salto */
+  @keyframes wbf-track{
+    from{transform:translateX(0)}
+    to{transform:translateX(-50%)}  /* recorremos la mitad porque duplicamos el set */
   }
 
-  .wbf__copy{ margin:10px 0 0;opacity:.9;font-size:14px }
+  .wbf__copy{margin:10px 0 0;opacity:.9;font-size:14px}
 </style>
 
 <footer class="wombox-footer">
@@ -103,15 +106,20 @@
 
   <!-- Franja inferior -->
   {% if section.settings.strip_image != blank %}
+    {% assign strip_src = section.settings.strip_image | image_url %}
     <div class="wbf__bottom">
-      <!-- Pasamos la imagen y opciones como CSS variables -->
-      <div
-        class="wbf__marquee"
-        style="
-          --wbf-strip: url('{{ section.settings.strip_image | image_url }}');
-          --marquee-h: {{ section.settings.strip_height }}px;
-          --marquee-speed: {{ section.settings.strip_speed }}s;
-        ">
+      <div class="wbf__marquee"
+           style="--marquee-h: {{ section.settings.strip_height }}px;
+                  --marquee-speed: {{ section.settings.strip_speed }}s;
+                  --marquee-gap: {{ section.settings.strip_gap }}px;">
+        <div class="wbf__track">
+          {%- for i in (1..8) -%}
+            <img src="{{ strip_src }}" alt="WOMBOX" class="wbf__item-img">
+          {%- endfor -%}
+          {%- for i in (1..8) -%} {# duplicado para bucle perfecto #}
+            <img src="{{ strip_src }}" alt="WOMBOX" class="wbf__item-img">
+          {%- endfor -%}
+        </div>
       </div>
 
       <p class="wbf__copy">© {{ 'now' | date: "%Y" }} WOMBOX</p>
@@ -129,7 +137,7 @@
       "type": "image_picker",
       "id": "strip_image",
       "label": "Imagen de franja (se repite en bucle)",
-      "info": "Sube la imagen con WOMBOX + claim en horizontal, fondo transparente si quieres que respire."
+      "info": "Sube la imagen WOMBOX + claim en horizontal. Preferible fondo transparente."
     },
     {
       "type": "range",
@@ -150,6 +158,16 @@
       "step": 1,
       "default": 25,
       "unit": "s"
+    },
+    {
+      "type": "range",
+      "id": "strip_gap",
+      "label": "Separación entre imágenes",
+      "min": 0,
+      "max": 300,
+      "step": 5,
+      "default": 140,
+      "unit": "px"
     }
   ],
   "presets": [
