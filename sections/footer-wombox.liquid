@@ -31,7 +31,9 @@
 
     <!-- Columna 4: CTA + selectores + redes -->
     <div class="wbf__cta-col">
-      <a href="#" class="wbf__cta">DESCUBRE NUESTRAS CAJAS</a>
+     <a href="{{ section.settings.cta_link }}" class="wbf__cta">
+      {{ section.settings.cta_text }}
+    </a>
 
     
 
@@ -77,6 +79,18 @@
   "tag": "section",
   "class": "section-footer-wombox",
   "settings": [
+    {
+      "type": "text",
+      "id": "cta_text",
+      "label": "Texto del botón CTA",
+      "default": "DESCUBRE NUESTRAS CAJAS"
+    },
+    {
+      "type": "url",
+      "id": "cta_link",
+      "label": "Enlace del botón CTA"
+    }
+    ,
     {
       "type": "image_picker",
       "id": "strip_image",
