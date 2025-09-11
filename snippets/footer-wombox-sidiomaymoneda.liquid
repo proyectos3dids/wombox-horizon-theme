@@ -85,91 +85,64 @@
 
 
 
- {% assign cc = localization.country.iso_code | downcase %}
+{% assign lc = localization.language.iso_code | downcase %}
 
 <span class="locpill__flag">
-  {% case cc %}
-    {% when 'es' %} {# España #}
-      <img class="locpill__flag-img" src="URL_ES" alt="Bandera de España" loading="lazy" decoding="async">
-
-    {% when 'de' %} {# Alemania #}
-      <img class="locpill__flag-img" src="URL_DE" alt="Bandera de Alemania" loading="lazy" decoding="async">
-
-    {% when 'be' %} {# Bélgica #}
-      <img class="locpill__flag-img" src="URL_BE" alt="Bandera de Bélgica" loading="lazy" decoding="async">
-
-    {% when 'cz' %} {# Chequia #}
-      <img class="locpill__flag-img" src="URL_CZ" alt="Bandera de Chequia" loading="lazy" decoding="async">
-
-    {% when 'hr' %} {# Croacia #}
-      <img class="locpill__flag-img" src="URL_HR" alt="Bandera de Croacia" loading="lazy" decoding="async">
-
-    {% when 'sk' %} {# Eslovaquia #}
-      <img class="locpill__flag-img" src="URL_SK" alt="Bandera de Eslovaquia" loading="lazy" decoding="async">
-
-    {% when 'fi' %} {# Finlandia #}
-      <img class="locpill__flag-img" src="URL_FI" alt="Bandera de Finlandia" loading="lazy" decoding="async">
-
-    {% when 'gr' %} {# Grecia #}
-      <img class="locpill__flag-img" src="URL_GR" alt="Bandera de Grecia" loading="lazy" decoding="async">
-
-    {% when 'ie' %} {# Irlanda #}
-      <img class="locpill__flag-img" src="URL_IE" alt="Bandera de Irlanda" loading="lazy" decoding="async">
-
-    {% when 'lt' %} {# Lituania #}
-      <img class="locpill__flag-img" src="URL_LT" alt="Bandera de Lituania" loading="lazy" decoding="async">
-
-    {% when 'mt' %} {# Malta #}
-      <img class="locpill__flag-img" src="URL_MT" alt="Bandera de Malta" loading="lazy" decoding="async">
-
-    {% when 'pl' %} {# Polonia #}
-      <img class="locpill__flag-img" src="URL_PL" alt="Bandera de Polonia" loading="lazy" decoding="async">
-
-    {% when 'gb' %} {# Reino Unido #}
-      <img class="locpill__flag-img" src="URL_GB" alt="Bandera del Reino Unido" loading="lazy" decoding="async">
-
-    {% when 'ch' %} {# Suiza #}
-      <img class="locpill__flag-img" src="URL_CH" alt="Bandera de Suiza" loading="lazy" decoding="async">
-
-    {% when 'at' %} {# Austria #}
-      <img class="locpill__flag-img" src="URL_AT" alt="Bandera de Austria" loading="lazy" decoding="async">
-
-    {% when 'bg' %} {# Bulgaria #}
-      <img class="locpill__flag-img" src="URL_BG" alt="Bandera de Bulgaria" loading="lazy" decoding="async">
-
-    {% when 'va' %} {# Ciudad del Vaticano #}
-      <img class="locpill__flag-img" src="URL_VA" alt="Bandera de Ciudad del Vaticano" loading="lazy" decoding="async">
-
-    {% when 'dk' %} {# Dinamarca #}
-      <img class="locpill__flag-img" src="URL_DK" alt="Bandera de Dinamarca" loading="lazy" decoding="async">
-
-    {% when 'si' %} {# Eslovenia #}
-      <img class="locpill__flag-img" src="URL_SI" alt="Bandera de Eslovenia" loading="lazy" decoding="async">
-
-    {% when 'ee' %} {# Estonia #}
-      <img class="locpill__flag-img" src="URL_EE" alt="Bandera de Estonia" loading="lazy" decoding="async">
-
-    {% when 'fr' %} {# Francia #}
-      <img class="locpill__flag-img" src="URL_FR" alt="Bandera de Francia" loading="lazy" decoding="async">
-
-    {% when 'hu' %} {# Hungría #}
-      <img class="locpill__flag-img" src="URL_HU" alt="Bandera de Hungría" loading="lazy" decoding="async">
-
-    {% when 'it' %} {# Italia #}
-      <img class="locpill__flag-img" src="URL_IT" alt="Bandera de Italia" loading="lazy" decoding="async">
-
-    {% when 'lu' %} {# Luxemburgo #}
-      <img class="locpill__flag-img" src="URL_LU" alt="Bandera de Luxemburgo" loading="lazy" decoding="async">
-
-    {% when 'nl' %} {# Países Bajos #}
-      <img class="locpill__flag-img" src="URL_NL" alt="Bandera de Países Bajos" loading="lazy" decoding="async">
-
-    {% when 'pt' %} {# Portugal #}
-      <img class="locpill__flag-img" src="URL_PT" alt="Bandera de Portugal" loading="lazy" decoding="async">
-
-    {% when 'ro' %} {# Rumanía #}
-      <img class="locpill__flag-img" src="URL_RO" alt="Bandera de Rumanía" loading="lazy" decoding="async">
-
+  {% case lc %}
+    {% when 'de' %}
+      <img class="locpill__flag-img" src="{{ flag_de | image_url }}" alt="Alemania" loading="lazy" decoding="async">
+    {% when 'at' %}
+      <img class="locpill__flag-img" src="{{ flag_at | image_url }}" alt="Austria" loading="lazy" decoding="async">
+    {% when 'be' %}
+      <img class="locpill__flag-img" src="{{ flag_be | image_url }}" alt="Bélgica" loading="lazy" decoding="async">
+    {% when 'bg' %}
+      <img class="locpill__flag-img" src="{{ flag_bg | image_url }}" alt="Bulgaria" loading="lazy" decoding="async">
+    {% when 'cz' %}
+      <img class="locpill__flag-img" src="{{ flag_cz | image_url }}" alt="Chequia" loading="lazy" decoding="async">
+    {% when 'va' %}
+      <img class="locpill__flag-img" src="{{ flag_va | image_url }}" alt="Ciudad del Vaticano" loading="lazy" decoding="async">
+    {% when 'hr' %}
+      <img class="locpill__flag-img" src="{{ flag_hr | image_url }}" alt="Croacia" loading="lazy" decoding="async">
+    {% when 'dk' %}
+      <img class="locpill__flag-img" src="{{ flag_dk | image_url }}" alt="Dinamarca" loading="lazy" decoding="async">
+    {% when 'sk' %}
+      <img class="locpill__flag-img" src="{{ flag_sk | image_url }}" alt="Eslovaquia" loading="lazy" decoding="async">
+    {% when 'si' %}
+      <img class="locpill__flag-img" src="{{ flag_si | image_url }}" alt="Eslovenia" loading="lazy" decoding="async">
+    {% when 'es' %}
+      <img class="locpill__flag-img" src="{{ flag_es | image_url }}" alt="España" loading="lazy" decoding="async">
+    {% when 'ee' %}
+      <img class="locpill__flag-img" src="{{ flag_ee | image_url }}" alt="Estonia" loading="lazy" decoding="async">
+    {% when 'fi' %}
+      <img class="locpill__flag-img" src="{{ flag_fi | image_url }}" alt="Finlandia" loading="lazy" decoding="async">
+    {% when 'fr' %}
+      <img class="locpill__flag-img" src="{{ flag_fr | image_url }}" alt="Francia" loading="lazy" decoding="async">
+    {% when 'gr' %}
+      <img class="locpill__flag-img" src="{{ flag_gr | image_url }}" alt="Grecia" loading="lazy" decoding="async">
+    {% when 'hu' %}
+      <img class="locpill__flag-img" src="{{ flag_hu | image_url }}" alt="Hungría" loading="lazy" decoding="async">
+    {% when 'ie' %}
+      <img class="locpill__flag-img" src="{{ flag_ie | image_url }}" alt="Irlanda" loading="lazy" decoding="async">
+    {% when 'it' %}
+      <img class="locpill__flag-img" src="{{ flag_it | image_url }}" alt="Italia" loading="lazy" decoding="async">
+    {% when 'lt' %}
+      <img class="locpill__flag-img" src="{{ flag_lt | image_url }}" alt="Lituania" loading="lazy" decoding="async">
+    {% when 'lu' %}
+      <img class="locpill__flag-img" src="{{ flag_lu | image_url }}" alt="Luxemburgo" loading="lazy" decoding="async">
+    {% when 'mt' %}
+      <img class="locpill__flag-img" src="{{ flag_mt | image_url }}" alt="Malta" loading="lazy" decoding="async">
+    {% when 'nl' %}
+      <img class="locpill__flag-img" src="{{ flag_nl | image_url }}" alt="Países Bajos" loading="lazy" decoding="async">
+    {% when 'pl' %}
+      <img class="locpill__flag-img" src="{{ flag_pl | image_url }}" alt="Polonia" loading="lazy" decoding="async">
+    {% when 'pt' %}
+      <img class="locpill__flag-img" src="{{ flag_pt | image_url }}" alt="Portugal" loading="lazy" decoding="async">
+    {% when 'gb', 'en' %}
+      <img class="locpill__flag-img" src="{{ flag_gb | image_url }}" alt="Reino Unido" loading="lazy" decoding="async">
+    {% when 'ro' %}
+      <img class="locpill__flag-img" src="{{ flag_ro | image_url }}" alt="Rumanía" loading="lazy" decoding="async">
+    {% when 'ch' %}
+      <img class="locpill__flag-img" src="{{ flag_ch | image_url }}" alt="Suiza" loading="lazy" decoding="async">
     {% else %}
       <span class="locpill__emoji">🌐</span>
   {% endcase %}
