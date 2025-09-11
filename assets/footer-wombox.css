@@ -131,7 +131,15 @@
 }
 
 .wbf__copy{
-  margin:10px 0 0;
-  opacity:.9;
-  font-size:14px;
+  font-family: 'Archivo', Inter, system-ui, Arial, sans-serif;
+  font-weight: 400;         /* Regular */
+  font-size: 12px;          /* 12px */
+  line-height: 1.29;        /* 129% */
+  letter-spacing: 0;        /* 0% */
+  color: #FFFFFF;           /* WB - WHITE */
+  text-align: center;
+  display: block;
+  max-width: 922px;         /* como en la maqueta (opcional) */
+  margin: 8px auto 0;       /* centrado y con poco margen superior */
+  opacity: 1;
 }
