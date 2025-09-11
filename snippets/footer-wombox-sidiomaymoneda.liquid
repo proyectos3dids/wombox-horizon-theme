@@ -30,23 +30,21 @@
   {%- if _show_country -%}
     {% form 'localization', id: 'LocPillCountry', class: 'locpill' %}
       <details class="locpill__details">
-       
         <summary class="locpill__summary" aria-label="Cambiar país y moneda">
-        <span class="locpill__flag">
+          <span class="locpill__flag">
             {% assign cc = localization.country.iso_code | upcase %}
-            {% comment %} Amplía el mapping si lo necesitas {% endcomment %}
+            {%- comment -%} Usa emojis por defecto. Si prefieres SVG en assets: flag-es.svg, flag-us.svg, etc. {%- endcomment -%}
             <span class="locpill__emoji">
-            {{ cc
+              {{ cc
                 | replace: 'ES','🇪🇸'
                 | replace: 'US','🇺🇸'
                 | replace: 'FR','🇫🇷'
                 | replace: 'DE','🇩🇪' }}
             </span>
-        </span>
-        <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
-        <span class="locpill__chev" aria-hidden="true">▾</span>
+          </span>
+          <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
+          <span class="locpill__chev" aria-hidden="true">▾</span>
         </summary>
-
 
         <div class="locpill__list" role="listbox">
           {%- for country in localization.available_countries -%}
@@ -54,12 +52,14 @@
                     name="country_code"
                     value="{{ country.iso_code }}"
                     class="locpill__option"
-                    aria-current="{{ country.iso_code == localization.country.iso_code }}">
+                    {% if country.iso_code == localization.country.iso_code %}aria-current="true"{% endif %}>
               <span class="locpill__opt-flag">
                 <span class="locpill__emoji">
-                  {{ country.iso_code
-                     | replace: 'ES','🇪🇸' | replace: 'US','🇺🇸'
-                     | replace: 'FR','🇫🇷' | replace: 'DE','🇩🇪' }}
+                  {{ country.iso_code | upcase
+                    | replace: 'ES','🇪🇸'
+                    | replace: 'US','🇺🇸'
+                    | replace: 'FR','🇫🇷'
+                    | replace: 'DE','🇩🇪' }}
                 </span>
               </span>
               <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
@@ -85,7 +85,7 @@
                     name="locale_code"
                     value="{{ language.iso_code }}"
                     class="locpill__option"
-                    aria-current="{{ language.iso_code == localization.language.iso_code }}">
+                    {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
               <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
             </button>
           {%- endfor -%}
@@ -140,5 +140,4 @@
   .locpill__label{font-size:18px}
   .locpill__flag{width:28px;height:28px}
 }
-
 </style>
