@@ -1,5 +1,3 @@
-
-
 /* ====== FOOTER DESKTOP (no mobile) ====== */
 .wombox-footer{background:#F24343;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}
 
@@ -28,17 +26,8 @@
   letter-spacing:.5px;text-decoration:none;box-shadow:0 1px 0 rgba(0,0,0,.06);transition:opacity .2s
 }
 .wbf__cta:hover{opacity:.9}
-
-/* --- Social + pills en una sola fila (desktop) --- */
-.wbf__social{
-  display:flex;align-items:center;gap:28px;flex-wrap:nowrap;
-}
-.wbf__social .locpill-wrap{          /* bloque que viene del snippet */
-  display:flex;align-items:center;gap:24px;margin-right:24px;flex-wrap:nowrap;
-}
-.wbf__soc-a{display:inline-flex;align-items:center}
-.wbf__soc-img{height:28px;width:auto;display:block}
-.wbf__soc-svg svg{height:28px;width:auto;display:block}
+.wbf__social{display:flex;gap:16px}
+.wbf__social a{color:#fff;text-decoration:none;opacity:.95;font-weight:700}
 
 /* ====== FRANJA INFERIOR (slider) ====== */
 .wbf__bottom{position:relative;overflow:hidden;text-align:center;padding:12px 0 5px}
@@ -103,51 +92,82 @@
   .wbf__copy--desktop{display:none}
   .wbf__copy--mobile{display:block}
 
-  /* Redes dentro del bloque móvil centradas */
+
   .wbfm__social{
-    display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap;
-    margin:8px auto 12px;float:none !important;width:100%;
+    display:flex;               /* activa flex */
+    justify-content:center;     /* centra horizontal */
+    align-items:center;         /* centra vertical */
+    gap:12px;                   /* separa iconos */
+    flex-wrap:wrap;             /* por si saltan de línea */
+    margin:8px auto 0;          /* centrado del contenedor */
+    float:none !important;      /* anula float inline si lo hubiera */
+    width:100%;
+    margin-bottom:12px;
   }
-  .wbf__soc-a{display:inline-flex}
+  .wbf__soc-a{ display:inline-flex; } /* asegúrate de que cada enlace ocupa su contenido */
+
 }
+
+
+
+
+
+
 
 /* ===== Pills País/Moneda + Idioma (solo layout) ===== */
 .locpill-wrap{
-  display:flex;align-items:center;gap:28px;flex-wrap:nowrap; /* una al lado de la otra */
+  display:flex;              /* una al lado de la otra */
+  align-items:center;
+  gap:28px;                  /* espacio entre pills */
+  flex-wrap:nowrap;          /* no saltar de línea en desktop */
 }
-.locpill{display:inline-flex;position:relative}
-.locpill__details{display:block}
+
+/* cada pill */
+.locpill{ display:inline-flex; position:relative; }
+.locpill__details{ display:block; }
 
 /* botón pill */
 .locpill__summary{
-  display:flex;align-items:center;gap:12px;padding:12px 20px;
-  border:2px solid #fff;border-radius:999px;color:#fff;background:transparent;
-  cursor:pointer;list-style:none;
+  display:flex; align-items:center; gap:12px;
+  padding:12px 20px;
+  border:2px solid #fff; border-radius:999px;
+  color:#fff; background:transparent; cursor:pointer;
+  list-style:none;
 }
-.locpill__summary::-webkit-details-marker{display:none}
-.locpill__flag{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:rgba(255,255,255,.15)}
-.locpill__emoji{font-size:20px;line-height:1}
-.locpill__chev{font-size:16px}
+.locpill__summary::-webkit-details-marker{ display:none; }
 
-/* panel de opciones */
-.locpill__list{
-  position:absolute;left:0;min-width:100%;z-index:10;margin-top:8px;padding:8px;
-  background:rgba(0,0,0,.25);border:1px solid rgba(255,255,255,.3);border-radius:14px;
-  backdrop-filter:saturate(150%) blur(6px);display:none;
+.locpill__flag{ width:34px; height:34px; border-radius:50%;
+  display:grid; place-items:center; overflow:hidden;
+  background:rgba(255,255,255,.15);
 }
-.locpill__details[open] .locpill__list{display:block}
+.locpill__emoji{ font-size:20px; line-height:1; }
+.locpill__chev{ font-size:16px; }
+
+/* panel de opciones (abre bajo cada pill) */
+.locpill__list{
+  position:absolute; left:0; min-width:100%; z-index:10;
+  margin-top:8px; padding:8px;
+  background:rgba(0,0,0,.25); border:1px solid rgba(255,255,255,.3);
+  border-radius:14px; backdrop-filter:saturate(150%) blur(6px);
+  display:none;
+}
+.locpill__details[open] .locpill__list{ display:block; }
 
 .locpill__option{
-  display:flex;align-items:center;gap:10px;width:100%;padding:10px 12px;background:transparent;border:0;color:#fff;
-  text-align:left;border-radius:10px;
+  display:flex; align-items:center; gap:10px; width:100%;
+  padding:10px 12px; background:transparent; border:0; color:#fff;
+  text-align:left; border-radius:10px;
 }
-.locpill__option:hover,.locpill__option[aria-current="true"]{background:rgba(255,255,255,.15)}
+.locpill__option:hover,
+.locpill__option[aria-current="true"]{ background:rgba(255,255,255,.15); }
 
-/* Responsive de pills */
+/* Responsive: en móvil pueden saltar y se centran */
 @media (max-width:768px){
-  .locpill-wrap{flex-wrap:wrap;justify-content:center;gap:14px}
-  .locpill__flag{width:28px;height:28px}
+  .locpill-wrap{ flex-wrap:wrap; justify-content:center; gap:14px; }
+  .locpill__flag{ width:28px; height:28px; }
 }
+
+
 
 
 
