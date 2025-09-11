@@ -28,7 +28,7 @@
 
 <div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
   {%- if _show_country -%}
-    {% form 'localization', id: 'LocPillCountry', class: 'locpill' %}
+    {% form 'localization', id: 'LocPillCountry', class: 'locpill locpill--sm' %}
       <details class="locpill__details">
         <summary class="locpill__summary" aria-label="Cambiar país y moneda">
           <span class="locpill__flag">
@@ -65,7 +65,7 @@
   {%- endif -%}
 
   {%- if _show_language -%}
-    {% form 'localization', id: 'LocPillLanguage', class: 'locpill' %}
+    {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--sm'' %}
       <details class="locpill__details">
         <summary class="locpill__summary" aria-label="Cambiar idioma">
           <span class="locpill__flag"><span class="locpill__emoji">🌐</span></span>
