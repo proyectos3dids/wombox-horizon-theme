@@ -28,7 +28,7 @@
 
 <div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
   {%- if _show_country -%}
-    {% form 'localization', id: 'LocPillCountry', class: 'locpill locpill--sm' %}
+    {% form 'localization', id: 'LocPillCountry', class: 'locpill locpill---xxs' %}
       <details class="locpill__details">
         <summary class="locpill__summary" aria-label="Cambiar país y moneda">
           <span class="locpill__flag">
@@ -65,7 +65,7 @@
   {%- endif -%}
 
   {%- if _show_language -%}
-    {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--sm' %}
+    {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill---xxs' %}
       <details class="locpill__details">
         <summary class="locpill__summary" aria-label="Cambiar idioma">
           <span class="locpill__flag"><span class="locpill__emoji">🌐</span></span>
@@ -158,4 +158,30 @@
   outline:2px solid #fff; outline-offset:2px;
 }
 
+/* Tamaño MUY pequeño */
+.locpill--xxs{
+  --pill-h:18px;      /* alto total */
+  --pill-px:8px;      /* padding horizontal */
+  --pill-gap:6px;     /* separación entre icono y texto */
+  --flag-size:14px;   /* diámetro icono */
+  --border-w:1.2px;   /* borde */
+}
+
+/* Reducciones específicas */
+.locpill--xxs .locpill__summary{
+  font-size:10px; line-height:1; padding:0 var(--pill-px); height:var(--pill-h);
+  border-width:var(--border-w);
+}
+.locpill--xxs .locpill__flag{ width:var(--flag-size); height:var(--flag-size); }
+.locpill--xxs .locpill__emoji{ font-size:11px; }
+.locpill--xxs .locpill__chev{ font-size:9px; }
+.locpill--xxs .locpill__label{ letter-spacing:0; }
+
+/* Si quieres todavía MÁS pequeño, activa también esta clase */
+.locpill--micro{
+  --pill-h:16px; --pill-px:6px; --pill-gap:4px; --flag-size:12px; --border-w:1px;
+}
+.locpill--micro .locpill__summary{ font-size:9px; }
+.locpill--micro .locpill__emoji{ font-size:10px; }
+.locpill--micro .locpill__chev{ font-size:8px; }
 </style>
