@@ -73,7 +73,7 @@
 
 /* Pagos fuera de la franja: sólo móvil */
 .wbf__payments-mobile{display:none}
-.wbf__payments-mobile .wbf__pay-pill{background:#fff;border-radius:16px}
+.wbf__payments-mobile .wbf__pay-pill{border-radius:16px}
 
 /* ====== MOBILE ====== */
 @media (max-width: 768px){
