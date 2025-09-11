@@ -61,22 +61,6 @@
     z-index: 2;
    
 }
-
-  .wbf__copy1{ display:none; }  /* Oculta en móvil */
-  .wbf__copy2{ display:block; } 
-  .wbf1{ display:none; } 
-  .wbf2{ display:block; } 
-
 }
-
-
-/* Visibilidad por dispositivo para los copy */
-.wbf__copy1{ display:block; }   /* Desktop por defecto */
-.wbf__copy2{ display:none; }    /* Oculto por defecto */
-.wbf1{ display:block; }   /* Desktop por defecto */
-.wbf2{ display:none; }    /* Oculto por defecto */
-
-
-
 <style>
 

@@ -35,7 +35,7 @@
     <div class="wbf__bottom" style="--pay-size: {{ section.settings.payments_size }}px;">
 
       <!-- Métodos de pago: personalizados (CDN) o automáticos -->
-      <div class="wf1 wbf__payments" aria-label="Métodos de pago">
+      <div class="wbf__payments1" aria-label="Métodos de pago">
         {% if section.settings.use_custom_payment_icons %}
           {% for block in section.blocks %}
             {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
@@ -67,7 +67,7 @@
   {% endif %}
        
        <!-- Métodos de pago: personalizados (CDN) o automáticos -->
-      <div class="wbf__payments wf2" aria-label="Métodos de pago">
+      <div class="wbf__payments" aria-label="Métodos de pago">
         {% if section.settings.use_custom_payment_icons %}
           {% for block in section.blocks %}
             {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
