@@ -88,3 +88,74 @@
     {% endform %}
   {%- endif -%}
 </div>
+
+<style>
+/* Wrapper (dos píldoras en línea) */
+.locpill-wrap{
+  display:flex; gap:16px; align-items:center; flex-wrap:wrap;
+}
+
+/* Tamaño pequeño por defecto */
+.locpill--sm{
+  --pill-h:26px;       /* alto de la píldora      */
+  --pill-px:12px;      /* padding horizontal       */
+  --pill-gap:8px;      /* separación interna       */
+  --flag-size:20px;    /* diámetro del icono       */
+  --border-w:1.6px;    /* grosor del borde         */
+}
+
+/* Base */
+.locpill{ position:relative; }
+.locpill__details{ position:relative; }
+
+/* Botón pill */
+.locpill__summary{
+  list-style:none;
+  display:flex; align-items:center; gap:var(--pill-gap);
+  height:var(--pill-h); padding:0 var(--pill-px);
+  border-radius:9999px; border:var(--border-w) solid #fff;
+  background:rgba(255,255,255,.08); /* opcional, sobre fondo rojo queda como en la captura */
+  color:#fff; font-weight:600; text-transform:uppercase;
+  font-size:12px; line-height:1; cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+}
+.locpill__summary::-webkit-details-marker{ display:none; }
+
+/* Icono/flag */
+.locpill__flag{
+  width:var(--flag-size); height:var(--flag-size);
+  border-radius:9999px; overflow:hidden;
+  display:grid; place-items:center; flex:0 0 var(--flag-size);
+}
+.locpill__emoji{ font-size:14px; line-height:1; }
+
+/* Texto y chevron */
+.locpill__label{ white-space:nowrap; }
+.locpill__chev{ margin-left:auto; font-size:12px; transition:transform .2s; }
+.locpill__details[open] .locpill__chev{ transform:rotate(180deg); }
+
+/* Lista desplegable */
+.locpill__list{
+  position:absolute; top:calc(100% + 8px); left:0; min-width:100%;
+  background:#fff; color:#111; border-radius:12px;
+  box-shadow:0 8px 30px rgba(0,0,0,.16);
+  padding:6px; display:none; z-index:50;
+}
+.locpill__details[open] .locpill__list{ display:block; }
+
+/* Opciones */
+.locpill__option{
+  width:100%; display:flex; align-items:center; gap:8px;
+  padding:8px 10px; border-radius:8px;
+  border:none; background:transparent; cursor:pointer; font-size:13px; text-align:left;
+}
+.locpill__option:hover{ background:#f2f2f2; }
+.locpill__option[aria-current="true"]{ background:#eee; font-weight:600; }
+
+/* Accesibilidad (teclado) */
+.locpill__summary:focus-visible,
+.locpill__option:focus-visible{
+  outline:2px solid #fff; outline-offset:2px;
+}
+
+</style>
