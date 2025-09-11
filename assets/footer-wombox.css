@@ -51,3 +51,16 @@
 }
 
 
+/* ====== Mobile ====== */
+@media (max-width: 768px){
+  .wbf__payments {
+    position: absolute;
+    left: 20%;
+    bottom: 10px;
+    display: flex;
+    z-index: 2;
+   
+}
+}
+<style>
+
