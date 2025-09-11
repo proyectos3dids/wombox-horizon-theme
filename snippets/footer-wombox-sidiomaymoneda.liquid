@@ -64,52 +64,41 @@
     {% endform %}
   {%- endif -%}
 
+  {%- if _show_language -%}
+    {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--xxs' %}
+      <details class="locpill__details">
+        <summary class="locpill__summary" aria-label="Cambiar idioma">
+          <span class="locpill__flag"><span class="locpill__emoji">🌐</span></span>
+          <span class="locpill__label">{{ localization.language.endonym_name | default: localization.language.name | upcase }}</span>
+          <span class="locpill__chev" aria-hidden="true">▾</span>
+        </summary>
 
-  
-{%- if _show_language -%}
-  {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--xxs' %}
-    <details class="locpill__details">
-      <summary class="locpill__summary" aria-label="Cambiar idioma">
-        <span class="locpill__flag">
-          {% render 'flag-icon', iso: localization.language.iso_code %}
-        </span>
-        <span class="locpill__label">
-          {{ localization.language.endonym_name | default: localization.language.name | upcase }}
-        </span>
-        <span class="locpill__chev" aria-hidden="true">▾</span>
-      </summary>
+     
+        <div class="locpill__modal" aria-modal="true" role="dialog">
+          <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
 
-      <div class="locpill__modal" aria-modal="true" role="dialog">
-        <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
+          <div class="locpill__panel" role="document">
+            <div class="locpill__head">
+              <span class="locpill__title">Selecciona idioma</span>
+              <button class="locpill__close" type="button" data-close aria-label="Cerrar">✕</button>
+            </div>
 
-        <div class="locpill__panel" role="document">
-          <div class="locpill__head">
-            <span class="locpill__title">Selecciona idioma</span>
-            <button class="locpill__close" type="button" data-close aria-label="Cerrar">✕</button>
-          </div>
-
-          <div class="locpill__options" role="listbox">
-            {%- for language in localization.available_languages -%}
-              {%- assign opt_label = language.endonym_name -%}
-              {%- if opt_label == blank -%}{%- assign opt_label = language.name -%}{%- endif -%}
-
-              <button type="submit"
-                      name="locale_code"
-                      value="{{ language.iso_code }}"
-                      class="locpill__option"
-                      {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
-                <span class="locpill__opt-flag">
-                  {% render 'flag-icon', iso: language.iso_code %}
-                </span>
-                <span class="locpill__opt-label">{{ opt_label }}</span>
-              </button>
-            {%- endfor -%}
+            <div class="locpill__options" role="listbox">
+              {%- for language in localization.available_languages -%}
+                <button type="submit"
+                        name="locale_code"
+                        value="{{ language.iso_code }}"
+                        class="locpill__option"
+                        {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
+                  <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
+                </button>
+              {%- endfor -%}
+            </div>
           </div>
         </div>
-      </div>
-    </details>
-  {% endform %}
-{%- endif -%}
+      </details>
+    {% endform %}
+  {%- endif -%}
 </div>
 
 <style>
