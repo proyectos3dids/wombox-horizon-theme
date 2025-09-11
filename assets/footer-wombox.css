@@ -1,86 +1,53 @@
-/* ====== FOOTER DESKTOP (no mobile) ====== */
-.wombox-footer{background:#F24343;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}
+/* --- por defecto, el bloque móvil está oculto --- */
+.wbf__inner--mobile{ display:none; }
 
-/* Grid principal: 3 menús + 1 CTA */
-.wbf__inner{
-  max-width:1200px;margin:0 auto;padding:56px 24px 28px;
-  display:grid;grid-template-columns:1fr 1fr 1fr 1.25fr;gap:32px;align-items:start
-}
-
-/* Menús (bloques) */
-.wbf__menus{grid-column:1 / span 3;display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px}
-.wbf__col{text-align:left}
-.wbf__list{list-style:none;margin:0;padding:0}
-.wbf__item{margin:18px 0}
-.wbf__link{
-  font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:400;font-size:14px;line-height:1;
-  letter-spacing:0;color:#fff;text-decoration:none;opacity:1
-}
-.wbf__link:hover{text-decoration:underline}
-
-/* CTA + redes */
-.wbf__cta-col{grid-column:4 / span 1;display:flex;flex-direction:column;align-items:flex-end;gap:18px}
-.wbf__cta{
-  display:inline-block;padding:16px 28px;background:#fff;color:#E43F43;border-radius:999px;
-  font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:800;font-size:16px;text-transform:uppercase;
-  letter-spacing:.5px;text-decoration:none;box-shadow:0 1px 0 rgba(0,0,0,.06);transition:opacity .2s
-}
-.wbf__cta:hover{opacity:.9}
-.wbf__social{display:flex;gap:16px}
-.wbf__social a{color:#fff;text-decoration:none;opacity:.95;font-weight:700}
-
-/* ====== FRANJA INFERIOR ====== */
-.wbf__bottom{position:relative;overflow:hidden;text-align:center;padding:12px 0 5px}
-
-/* Métodos de pago (desktop en la franja) */
-.wbf__payments{
-  position:absolute;left:24px;bottom:10px;
-  display:flex;gap:8px;z-index:2
-}
-.wbf__pay-pill{
-  display:inline-flex;align-items:center;justify-content:center;
-  height:calc(var(--pay-size,18px) + 4px);border-radius:16px;
-}
-.wbf__pay-pill svg{height:var(--pay-size,18px);width:auto;display:block}
-.wbf__pay-pill img{height:var(--pay-size,18px);width:auto;display:block}
-
-/* Slider inferior */
-.wbf__marquee{width:100%;overflow:hidden}
-.wbf__track{display:flex;align-items:center;gap:var(--marquee-gap,140px);animation:wbf-track var(--marquee-speed,25s) linear infinite;width:max-content}
-.wbf__item-img{height:var(--marquee-h,120px);width:auto;display:block}
-@keyframes wbf-track{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* Copy tipografía */
-.wbf__copy{
-  padding:10px 0;font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:400;font-size:12px;line-height:1.29;
-  color:#fff;text-align:center;display:block;max-width:922px;margin:8px auto 0;opacity:1
-}
-
-/* Copy visibilidad */
-.wbf__copy--desktop{display:block}
-.wbf__copy--mobile{display:none}
-
-/* ====== PAGOS MÓVIL (fuera de la franja) ====== */
-.wbf__payments-mobile{
-  display:none;              /* oculto en desktop */
-}
-.wbf__payments-mobile .wbf__pay-pill{border-radius:16px}
-
-/* ====== Mobile ====== */
+/* ====== móvil ====== */
 @media (max-width: 768px){
-  .wbf__bottom{padding:16px 16px 12px}
-  .wbf__bottom{ --pay-size: 16px; }
+  /* ocultamos el grid desktop sin tocar nada más */
+  .wbf__inner{ display:none; }
 
-  /* Ocultar pagos dentro de la franja en móvil */
-  .wbf__payments{ display:none !important; }
-
-  /* Mostrar pagos móviles centrados en fila y fuera de la franja */
-  .wbf__payments-mobile{
-    display:flex;justify-content:center;align-items:center;gap:8px;
-    margin:10px auto 6px; width:100%;
+  /* mostramos el bloque específico de móvil */
+  .wbf__inner--mobile{
+    display:block;
+    max-width:1200px;
+    margin:0 auto;
+    padding:28px 16px 0;
   }
 
-  /* Copys: solo el móvil */
-  .wbf__copy--desktop{display:none}
-  .wbf__copy--mobile{display:block}
+  /* acordeón */
+  .wbfm__acc{
+    border-bottom:1px solid rgba(255,255,255,.6);
+    padding:14px 0;
+  }
+  .wbfm__sum{
+    list-style:none;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    cursor:pointer;
+  }
+  .wbfm__title{
+    font-family:'Archivo',Inter,system-ui,Arial,sans-serif;
+    font-weight:800;
+    font-size:20px;
+    letter-spacing:.5px;
+    text-transform:uppercase;
+    color:#fff;
+  }
+  .wbfm__icon{
+    font-size:24px;
+    line-height:1;
+    transition:transform .2s ease;
+  }
+  .wbfm__acc[open] .wbfm__icon{ transform:rotate(45deg); } /* de + a x */
+
+  .wbfm__list{ list-style:none; margin:12px 0 10px; padding:0; }
+  .wbfm__item{ margin:10px 0; }
+  .wbfm__link{
+    color:#fff; text-decoration:none; font-size:14px; line-height:1;
+  }
+  .wbfm__link:hover{ text-decoration:underline; }
+
+  .wbfm__social{ display:flex; gap:16px; padding:14px 0 8px; }
+  .wbfm__social a{ color:#fff; text-decoration:none; font-weight:700; }
 }
