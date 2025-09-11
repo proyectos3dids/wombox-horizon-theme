@@ -1,17 +1,30 @@
 {%- comment -%}
-  Pills de localización (país/moneda + idioma)
-  - Usa el form nativo: {% form 'localization' %} … {% endform %}
-  - Sin JS: <details> para el desplegable y <button name="country_code"/"locale_code"> para enviar
-  - Flags: por defecto muestra un emoji; si quieres iconos sube a assets "flag-xx.svg"
-           y descomenta la línea indicada abajo.
-
-  Props opcionales (al renderizar):
-    - show_country: true/false (por defecto true si hay >1 país)
-    - show_language: true/false (por defecto true si hay >1 idioma)
+  Pills País/Moneda + Idioma (sin JS del tema)
+  Parámetros opcionales al render:
+    - show_country: true/false (si no se pasa, se activa cuando hay >1 país)
+    - show_language: true/false (si no se pasa, se activa cuando hay >1 idioma)
 {%- endcomment -%}
 
-{%- assign _show_country   = show_country | default: (localization.available_countries.size > 1) -%}
-{%- assign _show_language  = show_language | default: (localization.available_languages.size > 1) -%}
+{% liquid
+  assign _show_country  = show_country
+  assign _show_language = show_language
+
+  if _show_country == nil or _show_country == ''
+    if localization.available_countries.size > 1
+      assign _show_country = true
+    else
+      assign _show_country = false
+    endif
+  endif
+
+  if _show_language == nil or _show_language == ''
+    if localization.available_languages.size > 1
+      assign _show_language = true
+    else
+      assign _show_language = false
+    endif
+  endif
+%}
 
 <div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
   {%- if _show_country -%}
@@ -20,14 +33,16 @@
         <summary class="locpill__summary" aria-label="Cambiar país y moneda">
           <span class="locpill__flag">
             {%- assign cc = localization.country.iso_code | downcase -%}
-            {#-- Si subes banderas a assets como flag-es.svg, descomenta:
-            <img src="{{ ('flag-' | append: cc | append: '.svg') | asset_url }}" alt="{{ localization.country.name }}" />
-            --#}
-            <span class="locpill__emoji">{{ localization.country.iso_code | replace: 'ES', '🇪🇸' | replace: 'US', '🇺🇸' }}</span>
+            {# Para usar banderas desde assets, sube p.ej. flag-es.svg y descomenta:
+            <!-- <img src="{{ ('flag-' | append: cc | append: '.svg') | asset_url }}" alt="{{ localization.country.name }}"> -->
+            #}
+            <span class="locpill__emoji">
+              {{ localization.country.iso_code
+                 | replace: 'ES','🇪🇸' | replace: 'US','🇺🇸'
+                 | replace: 'FR','🇫🇷' | replace: 'DE','🇩🇪' }}
+            </span>
           </span>
-          <span class="locpill__label">
-            {{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}
-          </span>
+          <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
           <span class="locpill__chev" aria-hidden="true">▾</span>
         </summary>
 
@@ -39,12 +54,10 @@
                     class="locpill__option"
                     aria-current="{{ country.iso_code == localization.country.iso_code }}">
               <span class="locpill__opt-flag">
-                {%- assign cc2 = country.iso_code | downcase -%}
-                {#-- Para banderas en assets:
-                <!--<img src="{{ ('flag-' | append: cc2 | append: '.svg') | asset_url }}" alt="" />-->
-                --#}
                 <span class="locpill__emoji">
-                  {{ country.iso_code | replace: 'ES', '🇪🇸' | replace: 'US', '🇺🇸' }}
+                  {{ country.iso_code
+                     | replace: 'ES','🇪🇸' | replace: 'US','🇺🇸'
+                     | replace: 'FR','🇫🇷' | replace: 'DE','🇩🇪' }}
                 </span>
               </span>
               <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
@@ -59,12 +72,8 @@
     {% form 'localization', id: 'LocPillLanguage', class: 'locpill' %}
       <details class="locpill__details">
         <summary class="locpill__summary" aria-label="Cambiar idioma">
-          <span class="locpill__flag">
-            <span class="locpill__emoji">🌐</span>
-          </span>
-          <span class="locpill__label">
-            {{ localization.language.endonym_name | default: localization.language.name | upcase }}
-          </span>
+          <span class="locpill__flag"><span class="locpill__emoji">🌐</span></span>
+          <span class="locpill__label">{{ localization.language.endonym_name | default: localization.language.name | upcase }}</span>
           <span class="locpill__chev" aria-hidden="true">▾</span>
         </summary>
 
@@ -75,9 +84,7 @@
                     value="{{ language.iso_code }}"
                     class="locpill__option"
                     aria-current="{{ language.iso_code == localization.language.iso_code }}">
-              <span class="locpill__opt-label">
-                {{ language.endonym_name | default: language.name }}
-              </span>
+              <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
             </button>
           {%- endfor -%}
         </div>
@@ -85,6 +92,7 @@
     {% endform %}
   {%- endif -%}
 </div>
+
 <style>
 /* ===== Pills de localización (país/idioma) ===== */
 .locpill-wrap{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
