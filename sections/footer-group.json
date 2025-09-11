@@ -59,19 +59,22 @@
         "menu_column_kGNgiU": {
           "type": "menu_column",
           "settings": {
-            "menu": "menu-footer-1"
+            "menu": "menu-footer-1",
+            "mobile_title": "Wombox"
           }
         },
         "menu_column_PKLqEa": {
           "type": "menu_column",
           "settings": {
-            "menu": "menu-footer-2"
+            "menu": "menu-footer-2",
+            "mobile_title": "LEGALES"
           }
         },
         "menu_column_m98qmq": {
           "type": "menu_column",
           "settings": {
-            "menu": "menu-footer-3"
+            "menu": "menu-footer-3",
+            "mobile_title": "CONTACTO"
           }
         }
       },
