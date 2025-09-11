@@ -1,7 +1,6 @@
-{{ 'footer-wombox.css' | asset_url | stylesheet_tag }} 
+{{ 'footer-wombox.css' | asset_url | stylesheet_tag }}
 
 
-<!-- sections/footer-wombox.liquid -->
 <footer class="wombox-footer">
   <div class="wbf__inner">
     <!-- Menús (bloques) -->
@@ -34,7 +33,23 @@
     {% assign strip_src = section.settings.strip_image | image_url %}
     <div class="wbf__bottom" style="--pay-size: {{ section.settings.payments_size }}px;">
 
-     
+      <!-- Métodos de pago (imagen subida o automáticos) -->
+      <div class="wbf__payments" aria-label="Métodos de pago">
+        {% if section.settings.use_custom_payment_icons %}
+          {% for block in section.blocks %}
+            {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
+              <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
+                <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
+              </span>
+            {% endif %}
+          {% endfor %}
+        {% elsif section.settings.show_payments %}
+          {% for type in shop.enabled_payment_types %}
+            <span class="wbf__pay-pill">{{ type | payment_type_svg_tag }}</span>
+          {% endfor %}
+        {% endif %}
+      </div>
+
       <!-- Slider WOMBOX -->
       <div class="wbf__marquee"
            style="--marquee-h: {{ section.settings.strip_height }}px; --marquee-speed: {{ section.settings.strip_speed }}s; --marquee-gap: {{ section.settings.strip_gap }}px;">
@@ -44,32 +59,13 @@
         </div>
       </div>
 
-        <p class="wbf__copy wbf__copy1">© {{ 'now' | date: "%Y" }} WOMBOX</p>
+      <!-- Copy desktop -->
+      <p class="wbf__copy wbf__copy--desktop">© {{ 'now' | date: "%Y" }} WOMBOX</p>
+
+      <!-- Copy móvil (se mostrará solo en mobile, queda debajo de pagos gracias al media query) -->
+      <p class="wbf__copy wbf__copy--mobile">© {{ 'now' | date: "%Y" }} WOMBOX</p>
     </div>
-
-   
   {% endif %}
-       
-      <!-- Métodos de pago: personalizados (CDN) o automáticos -->
-      <div class="wbf__payments1" aria-label="Métodos de pago">
-        {% if section.settings.use_custom_payment_icons %}
-          {% for block in section.blocks %}
-            {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
-            <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
-              <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
-            </span>
-          {% endif %}
-          {% endfor %}
-        {% elsif section.settings.show_payments %}
-          {% for type in shop.enabled_payment_types %}
-            <span class="wbf__pay-pill">{{ type | payment_type_svg_tag }}</span>
-          {% endfor %}
-        {% endif %}
-
-        <p class="wbf__copy wbf__copy1">© {{ 'now' | date: "%Y" }} WOMBOX</p>
-      </div>
-
-       
 </footer>
 
 {% schema %}
@@ -87,7 +83,7 @@
     { "type": "range", "id": "strip_gap", "label": "Separación entre imágenes", "min": 0, "max": 300, "step": 5, "default": 140, "unit": "px" },
 
     { "type": "checkbox", "id": "show_payments", "label": "Mostrar métodos de pago automáticos", "default": false },
-    { "type": "checkbox", "id": "use_custom_payment_icons", "label": "Usar iconos de pago desde mi CDN", "default": true },
+    { "type": "checkbox", "id": "use_custom_payment_icons", "label": "Usar iconos de pago (subidos en bloques)", "default": true },
     { "type": "range", "id": "payments_size", "label": "Tamaño de iconos de pago", "min": 14, "max": 26, "step": 1, "default": 18, "unit": "px" }
   ],
   "blocks": [
@@ -99,7 +95,7 @@
         { "type": "link_list", "id": "menu", "label": "Selecciona un menú" }
       ]
     },
-   {
+    {
       "type": "payment_icon",
       "name": "Icono de pago (imagen)",
       "limit": 10,
