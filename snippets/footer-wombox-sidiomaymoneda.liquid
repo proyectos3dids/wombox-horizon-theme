@@ -75,9 +75,35 @@
   {%- if _show_language -%}
     {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--xxs' %}
       <details class="locpill__details">
-       <summary class="locpill__summary" aria-label="Cambiar idioma"> <span class="locpill__flag"><span class="locpill__emoji">🌐</span></span> <span class="locpill__label">{{ localization.language.endonym_name | default: localization.language.name | upcase }}</span> <span class="locpill__chev" aria-hidden="true">▾</span> </summary>
 
-     
+
+<summary class="locpill__summary" aria-label="Cambiar idioma">
+  {% assign lc = localization.language.iso_code | downcase %}
+
+  <!-- Icono izquierdo -->
+  <span class="locpill__flag">
+    {% if lc == 'es' or lc contains 'es-' %}
+      <img class="locpill__flag-img"
+           src="https://cdn.shopify.com/s/files/1/0908/5973/3339/files/7a50cfa9897df6c2e5e814f4f02ab01d00a9323d.png?v=1757594960"
+           alt="Bandera de España" loading="lazy" decoding="async">
+    {% else %}
+      <span class="locpill__emoji">🌐</span>
+    {% endif %}
+  </span>
+
+  <!-- Texto con bandera inline cuando ES -->
+  <span class="locpill__label">
+    {% if lc == 'es' or lc contains 'es-' %}
+      <img class="locpill__flag-inline"
+           src="https://cdn.shopify.com/s/files/1/0908/5973/3339/files/7a50cfa9897df6c2e5e814f4f02ab01d00a9323d.png?v=1757594960"
+           alt="España" loading="lazy" decoding="async">
+    {% endif %}
+    {{ localization.language.endonym_name | default: localization.language.name | upcase }}
+  </span>
+
+  <span class="locpill__chev" aria-hidden="true">▾</span>
+</summary>
+
         <div class="locpill__modal" aria-modal="true" role="dialog">
           <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
 
