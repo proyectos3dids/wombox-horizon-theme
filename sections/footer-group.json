@@ -17,42 +17,42 @@
         "payment_icon_KjCpXL": {
           "type": "payment_icon",
           "settings": {
-            "icon_url": "",
+            "icon_image": "shopify://shop_images/Vector_17.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_X7LMdH": {
           "type": "payment_icon",
           "settings": {
-            "icon_url": "",
+            "icon_image": "shopify://shop_images/Vector_18.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_AEiMnj": {
           "type": "payment_icon",
           "settings": {
-            "icon_url": "",
+            "icon_image": "shopify://shop_images/Vector_21.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_WU3c3J": {
           "type": "payment_icon",
           "settings": {
-            "icon_url": "",
+            "icon_image": "shopify://shop_images/Vector_19.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_DwpJJ6": {
           "type": "payment_icon",
           "settings": {
-            "icon_url": "",
+            "icon_image": "shopify://shop_images/Vector_20.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_PWWh83": {
           "type": "payment_icon",
           "settings": {
-            "icon_url": "",
+            "icon_image": "shopify://shop_images/Vector_21_b03f6e84-f671-43e8-9ea5-b1ccc5fbf3e2.svg",
             "icon_alt": ""
           }
         },
