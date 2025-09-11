@@ -215,3 +215,192 @@ html.locpill--modal-open, body.locpill--modal-open{ overflow:hidden; }
   }, true);
 })();
 </script>
+{%- comment -%}
+  Pills País/Moneda + Idioma (sin JS del tema)
+{%- endcomment -%}
+
+{% liquid
+  assign _show_country  = show_country
+  assign _show_language = show_language
+%}
+
+{% assign _show_country = localization.available_countries.size > 1 %}
+{% assign _show_language = localization.available_languages.size > 1 %}
+
+{%- assign cc_up = localization.country.iso_code | upcase -%}
+{%- assign cc_lc = localization.country.iso_code | downcase -%}
+{%- assign current_flag_asset = 'flag-' | append: cc_lc | append: '.svg' -%}
+
+<div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
+  {%- if _show_country -%}
+    {% form 'localization', id: 'LocPillCountry', class: 'locpill locpill--xxs' %}
+      <details class="locpill__details">
+        <summary class="locpill__summary" aria-label="Cambiar país y moneda">
+          <span class="locpill__flag">
+            <img class="locpill__flagimg"
+                 src="{{ current_flag_asset | asset_url }}"
+                 alt="{{ localization.country.name }}"
+                 loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'">
+            <span class="locpill__emoji" style="display:none;">🌐</span>
+          </span>
+          <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
+          <span class="locpill__chev" aria-hidden="true">▾</span>
+        </summary>
+
+        <!-- MODAL País/Moneda -->
+        <div class="locpill__modal" aria-modal="true" role="dialog">
+          <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
+          <div class="locpill__panel" role="document">
+            <div class="locpill__head">
+              <span class="locpill__title">Selecciona país y moneda</span>
+              <button class="locpill__close" type="button" data-close aria-label="Cerrar">✕</button>
+            </div>
+
+            <div class="locpill__options" role="listbox">
+              {%- for country in localization.available_countries -%}
+                {% liquid
+                  assign iso_up = country.iso_code | upcase
+                  assign iso_lc = country.iso_code | downcase
+                  assign opt_flag_asset = 'flag-' | append: iso_lc | append: '.svg'
+                %}
+                <button type="submit"
+                        name="country_code"
+                        value="{{ country.iso_code }}"
+                        class="locpill__option"
+                        {% if country.iso_code == localization.country.iso_code %}aria-current="true"{% endif %}>
+                  <span class="locpill__opt-flag">
+                    <span class="locpill__flag locpill__flag--opt">
+                      <img class="locpill__flagimg"
+                           src="{{ opt_flag_asset | asset_url }}"
+                           alt="{{ country.name }}"
+                           loading="lazy"
+                           onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'">
+                      <span class="locpill__emoji" style="display:none;">🌐</span>
+                    </span>
+                  </span>
+                  <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </details>
+    {% endform %}
+  {%- endif -%}
+
+  {%- if _show_language -%}
+    {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--xxs' %}
+      <details class="locpill__details">
+        <summary class="locpill__summary" aria-label="Cambiar idioma">
+          <!-- MISMA BANDERA QUE EL PAÍS ACTUAL -->
+          <span class="locpill__flag">
+            <img class="locpill__flagimg"
+                 src="{{ current_flag_asset | asset_url }}"
+                 alt="{{ localization.country.name }}"
+                 loading="lazy"
+                 onerror="this.style.display='none';this.nextElementSibling.style.display='inline-block'">
+            <span class="locpill__emoji" style="display:none;">🌐</span>
+          </span>
+          <span class="locpill__label">{{ localization.language.endonym_name | default: localization.language.name | upcase }}</span>
+          <span class="locpill__chev" aria-hidden="true">▾</span>
+        </summary>
+
+        <!-- MODAL Idioma -->
+        <div class="locpill__modal" aria-modal="true" role="dialog">
+          <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
+          <div class="locpill__panel" role="document">
+            <div class="locpill__head">
+              <span class="locpill__title">Selecciona idioma</span>
+              <button class="locpill__close" type="button" data-close aria-label="Cerrar">✕</button>
+            </div>
+
+            <div class="locpill__options" role="listbox">
+              {%- for language in localization.available_languages -%}
+                <button type="submit"
+                        name="locale_code"
+                        value="{{ language.iso_code }}"
+                        class="locpill__option"
+                        {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
+                  <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </details>
+    {% endform %}
+  {%- endif -%}
+</div>
+
+<style>
+/* Línea */
+.locpill-wrap{ display:inline-flex; align-items:center; gap:10px; flex-wrap:nowrap; white-space:nowrap; }
+form.locpill{ display:inline-flex; width:auto !important; flex:0 0 auto; margin:0; }
+.locpill__details{ display:inline-block; }
+.locpill__summary{ display:inline-flex; width:auto; margin:0; white-space:nowrap; }
+
+/* Tamaños */
+.locpill--xxs{ --pill-h:18px; --pill-px:8px; --pill-gap:6px; --flag-size:14px; --border-w:1.2px; }
+
+/* Base pill */
+.locpill{ position:relative; }
+.locpill__summary{
+  list-style:none; align-items:center; gap:var(--pill-gap);
+  height:var(--pill-h); padding:0 var(--pill-px);
+  border-radius:9999px; border:var(--border-w) solid #fff;
+  background:rgba(255,255,255,.08); color:#fff; font-weight:600;
+  text-transform:uppercase; font-size:10px; line-height:1; cursor:pointer;
+}
+.locpill__summary::-webkit-details-marker{ display:none; }
+
+.locpill__flag{ width:var(--flag-size); height:var(--flag-size); border-radius:9999px; overflow:hidden; display:grid; place-items:center; flex:0 0 var(--flag-size); background:#fff2; }
+.locpill__flagimg{ width:100%; height:100%; object-fit:cover; display:block; border-radius:9999px; }
+.locpill__emoji{ font-size:11px; line-height:1; }
+
+.locpill__label{ white-space:nowrap; }
+.locpill__chev{ margin-left:auto; font-size:9px; transition:transform .2s; }
+.locpill__details[open] .locpill__chev{ transform:rotate(180deg); }
+
+/* Modal */
+.locpill__modal{ position:fixed; inset:0; display:none; z-index:999; }
+.locpill__details[open] .locpill__modal{ display:flex; }
+.locpill__overlay{ position:absolute; inset:0; background:rgba(0,0,0,.55); border:0; cursor:pointer; }
+.locpill__panel{
+  position:relative; margin:auto; width:min(720px,92vw); max-height:80vh; overflow:auto;
+  background:#fff; color:#111; border-radius:16px; padding:16px; box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+.locpill__head{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; }
+.locpill__title{ font-weight:700; font-size:20px; }
+.locpill__close{ background:transparent; border:0; font-size:22px; line-height:1; cursor:pointer; padding:6px; border-radius:8px; }
+.locpill__close:hover{ background:#f3f3f3; }
+
+.locpill__options{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; padding:4px; }
+.locpill__option{ width:100%; display:flex; align-items:center; gap:10px; padding:12px 14px; border-radius:12px; background:#f5f5f5; border:0; cursor:pointer; text-align:left; font-size:14px; }
+.locpill__option:hover{ background:#efefef; }
+.locpill__option[aria-current="true"]{ background:#e8e8e8; font-weight:700; }
+.locpill__opt-flag .locpill__flag{ width:24px; height:24px; }
+html.locpill--modal-open, body.locpill--modal-open{ overflow:hidden; }
+</style>
+
+<script>
+(function(){
+  document.addEventListener('click', function(ev){
+    if(ev.target.matches('.locpill__overlay, .locpill__close')){
+      const d = ev.target.closest('.locpill__details'); if(d) d.removeAttribute('open');
+    }
+  });
+  document.addEventListener('keydown', function(ev){
+    if(ev.key === 'Escape'){
+      document.querySelectorAll('.locpill__details[open]').forEach(d=>d.removeAttribute('open'));
+    }
+  });
+  document.addEventListener('toggle', function(ev){
+    if(ev.target.classList && ev.target.classList.contains('locpill__details')){
+      const anyOpen = document.querySelector('.locpill__details[open]');
+      document.documentElement.classList.toggle('locpill--modal-open', !!anyOpen);
+      document.body.classList.toggle('locpill--modal-open', !!anyOpen);
+    }
+  }, true);
+})();
+</script>
