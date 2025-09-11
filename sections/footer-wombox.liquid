@@ -37,7 +37,36 @@
 
        
 
-      {% render 'footer-wombox-sidiomaymoneda' %}
+      {% render 'flag-switcher',
+      flag_de: section.settings.flag_de,
+      flag_at: section.settings.flag_at,
+      flag_be: section.settings.flag_be,
+      flag_bg: section.settings.flag_bg,
+      flag_cz: section.settings.flag_cz,
+      flag_va: section.settings.flag_va,
+      flag_hr: section.settings.flag_hr,
+      flag_dk: section.settings.flag_dk,
+      flag_sk: section.settings.flag_sk,
+      flag_si: section.settings.flag_si,
+      flag_es: section.settings.flag_es,
+      flag_ee: section.settings.flag_ee,
+      flag_fi: section.settings.flag_fi,
+      flag_fr: section.settings.flag_fr,
+      flag_gr: section.settings.flag_gr,
+      flag_hu: section.settings.flag_hu,
+      flag_ie: section.settings.flag_ie,
+      flag_it: section.settings.flag_it,
+      flag_lt: section.settings.flag_lt,
+      flag_lu: section.settings.flag_lu,
+      flag_mt: section.settings.flag_mt,
+      flag_nl: section.settings.flag_nl,
+      flag_pl: section.settings.flag_pl,
+      flag_pt: section.settings.flag_pt,
+      flag_gb: section.settings.flag_gb,
+      flag_ro: section.settings.flag_ro,
+      flag_ch: section.settings.flag_ch
+    %}
+
 
 
         {% assign has_social = false %}
@@ -180,6 +209,34 @@
   "tag": "section",
   "class": "section-footer-wombox",
   "settings": [
+
+    { "type": "image_picker", "id": "flag_de", "label": "Bandera Alemania" },
+    { "type": "image_picker", "id": "flag_at", "label": "Bandera Austria" },
+    { "type": "image_picker", "id": "flag_be", "label": "Bandera Bélgica" },
+    { "type": "image_picker", "id": "flag_bg", "label": "Bandera Bulgaria" },
+    { "type": "image_picker", "id": "flag_cz", "label": "Bandera Chequia" },
+    { "type": "image_picker", "id": "flag_va", "label": "Bandera Ciudad del Vaticano" },
+    { "type": "image_picker", "id": "flag_hr", "label": "Bandera Croacia" },
+    { "type": "image_picker", "id": "flag_dk", "label": "Bandera Dinamarca" },
+    { "type": "image_picker", "id": "flag_sk", "label": "Bandera Eslovaquia" },
+    { "type": "image_picker", "id": "flag_si", "label": "Bandera Eslovenia" },
+    { "type": "image_picker", "id": "flag_es", "label": "Bandera España" },
+    { "type": "image_picker", "id": "flag_ee", "label": "Bandera Estonia" },
+    { "type": "image_picker", "id": "flag_fi", "label": "Bandera Finlandia" },
+    { "type": "image_picker", "id": "flag_fr", "label": "Bandera Francia" },
+    { "type": "image_picker", "id": "flag_gr", "label": "Bandera Grecia" },
+    { "type": "image_picker", "id": "flag_hu", "label": "Bandera Hungría" },
+    { "type": "image_picker", "id": "flag_ie", "label": "Bandera Irlanda" },
+    { "type": "image_picker", "id": "flag_it", "label": "Bandera Italia" },
+    { "type": "image_picker", "id": "flag_lt", "label": "Bandera Lituania" },
+    { "type": "image_picker", "id": "flag_lu", "label": "Bandera Luxemburgo" },
+    { "type": "image_picker", "id": "flag_mt", "label": "Bandera Malta" },
+    { "type": "image_picker", "id": "flag_nl", "label": "Bandera Países Bajos" },
+    { "type": "image_picker", "id": "flag_pl", "label": "Bandera Polonia" },
+    { "type": "image_picker", "id": "flag_pt", "label": "Bandera Portugal" },
+    { "type": "image_picker", "id": "flag_gb", "label": "Bandera Reino Unido" },
+    { "type": "image_picker", "id": "flag_ro", "label": "Bandera Rumanía" },
+    { "type": "image_picker", "id": "flag_ch", "label": "Bandera Suiza" },
     { "type": "text", "id": "cta_text", "label": "Texto del botón CTA", "default": "DESCUBRE NUESTRAS CAJAS" },
     { "type": "url", "id": "cta_link", "label": "Enlace del botón CTA" },
 
