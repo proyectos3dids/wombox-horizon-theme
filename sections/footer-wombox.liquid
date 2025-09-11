@@ -33,17 +33,16 @@
   /* ====== FRANJA INFERIOR: SLIDER INFINITO CON IMAGEN ====== */
   .wbf__bottom{ position:relative;overflow:hidden;text-align:center;padding:12px 0 48px }
   /* la franja animada usa la imagen como background repetido en X */
-  .wbf__marquee{
-    height:var(--marquee-h,120px);
-    background-image:var(--wbf-strip);
-    background-repeat:repeat-x;
-    background-position:0 50%;
-    background-size:auto 100%;
-    animation:wbf-scroll var(--marquee-speed,25s) linear infinite;
-    /* desvanecido lateral suave (opcional) */
-    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-            mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
-  }
+    .wbf__marquee{
+        height:var(--marquee-h,120px);
+        background-image:var(--wbf-strip);
+        background-repeat:repeat-x;
+        background-position:0 50%;
+        background-size:calc(var(--marquee-gap,120%) * 1) 100%;
+        animation:wbf-scroll var(--marquee-speed,25s) linear infinite;
+        -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+                mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+    }
   @keyframes wbf-scroll{
     from{ background-position-x:0; }
     to  { background-position-x:-1000px; } /* se repite, no hay salto */
