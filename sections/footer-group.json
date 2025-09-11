@@ -11,6 +11,11 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "footer_wombox_LkkGtE": {
+      "type": "footer-wombox",
+      "name": "Footer WOMBOX",
+      "settings": {}
+    },
     "section_TQpXXq": {
       "type": "section",
       "blocks": {
@@ -695,6 +700,7 @@
     }
   },
   "order": [
+    "footer_wombox_LkkGtE",
     "section_TQpXXq",
     "footer"
   ]
