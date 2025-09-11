@@ -1,5 +1,34 @@
 {{ 'footer-wombox.css' | asset_url | stylesheet_tag }} 
+
+
 <!-- sections/footer-wombox.liquid -->
+<footer class="wombox-footer">
+  <div class="wbf__inner">
+    <!-- Menús (bloques) -->
+    <div class="wbf__menus">
+      {% for block in section.blocks %}
+        {% if block.type == 'menu_column' %}
+          <nav class="wbf__col" {{ block.shopify_attributes }}>
+            {% if block.settings.menu != blank %}
+              <ul class="wbf__list">
+                {% for link in block.settings.menu.links %}
+                  <li class="wbf__item"><a class="wbf__link" href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </nav>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <!-- Columna 4: CTA + redes -->
+    <div class="wbf__cta-col">
+      <a href="{{ section.settings.cta_link }}" class="wbf__cta">{{ section.settings.cta_text }}</a>
+      <div class="wbf__social" aria-label="Redes sociales">
+        <a href="#">f</a><a href="#">i</a><a href="#">x</a><a href="#">in</a><a href="#">▶</a><a href="#">t</a>
+      </div>
+    </div>
+  </div>
 
   {% if section.settings.strip_image != blank %}
     {% assign strip_src = section.settings.strip_image | image_url %}
