@@ -111,7 +111,124 @@
 
 
 
+/* Poner los forms en línea (horizontal) */
+.locpill-wrap{
+  display:flex;            /* los hijos (forms) en fila */
+  align-items:center;
+  gap:24px;                /* espacio entre los dos pills */
+  flex-wrap:nowrap;        /* no saltar de línea en desktop */
+}
 
+/* Asegura que cada form no rompa la línea */
+.locpill-wrap > .locpill{
+  display:inline-flex;
+  margin:0;
+}
+
+/* Opcional: en móvil, que puedan saltar y centrarse */
+@media (max-width: 768px){
+  .locpill-wrap{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+  }
+}
+
+/* ===== Estilo visual de las pills País/Moneda + Idioma ===== */
+
+/* Cada pill (form) */
+.locpill{
+  position: relative;
+  display: inline-flex;
+}
+
+/* Contenedor del <summary> (el botón) */
+.locpill__details{ display:block; }
+.locpill__summary{
+  display:flex; align-items:center; gap:12px;
+  padding: 12px 20px;                 /* tamaño */
+  border: 2px solid #fff;             /* borde blanco */
+  border-radius: 999px;               /* pastilla */
+  color:#fff; background: transparent;
+  cursor:pointer; list-style:none; user-select:none;
+  transition: background .15s ease, border-color .15s ease;
+  min-height: 48px;
+}
+.locpill__summary::-webkit-details-marker{ display:none; }
+.locpill__summary:focus{ outline:none; }
+.locpill__summary:hover{ background: rgba(255,255,255,.06); }
+
+/* Bandera circular a la izquierda */
+.locpill__flag{
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  display:grid; place-items:center;
+  overflow:hidden;
+  background: rgba(255,255,255,.18);
+}
+.locpill__flag img{ width:100%; height:100%; object-fit:cover; display:block; }
+.locpill__emoji{ font-size: 18px; line-height: 1; }
+
+/* Texto de la pill */
+.locpill__label{
+  font-family: 'Archivo', Inter, system-ui, Arial, sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Caret a la derecha */
+.locpill__chev{
+  margin-left: 8px;
+  font-size: 16px;
+  opacity: .9;
+  transition: transform .15s ease;
+}
+.locpill__details[open] .locpill__chev{ transform: rotate(180deg); }
+
+/* ===== Panel desplegable ===== */
+.locpill__list{
+  position: absolute;
+  left: 0; top: 100%;
+  min-width: 100%;
+  margin-top: 8px; padding: 8px;
+  background: rgba(0,0,0,.28);
+  backdrop-filter: saturate(150%) blur(6px);
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 14px;
+  display: none; z-index: 20;
+}
+.locpill__details[open] .locpill__list{ display:block; }
+
+/* Opción */
+.locpill__option{
+  display:flex; align-items:center; gap:10px;
+  width:100%;
+  padding: 10px 12px;
+  background: transparent; border: 0; color:#fff;
+  text-align:left; border-radius: 10px;
+  font: 500 15px/1.2 Inter, system-ui, Arial, sans-serif;
+  cursor: pointer;
+}
+.locpill__option:hover,
+.locpill__option[aria-current="true"]{
+  background: rgba(255,255,255,.16);
+}
+
+/* Mini bandera en la lista */
+.locpill__opt-flag{ width: 22px; display:grid; place-items:center; }
+.locpill__opt-flag img{ width:100%; height:auto; display:block; }
+.locpill__opt-label{ white-space: nowrap; }
+
+/* ===== Responsive ===== */
+@media (max-width: 768px){
+  /* ya tienes el wrap, sólo ajustamos tamaños */
+  .locpill__summary{ padding: 10px 16px; min-height: 44px; }
+  .locpill__flag{ width: 28px; height: 28px; }
+  .locpill__label{ font-size: 16px; }
+}
 
 
 
