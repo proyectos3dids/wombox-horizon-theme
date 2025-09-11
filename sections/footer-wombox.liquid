@@ -34,7 +34,9 @@
       {% if block.type == 'menu_column' and block.settings.menu != blank %}
         <details class="wbfm__acc" {{ block.shopify_attributes }}>
           <summary class="wbfm__sum">
-            <span class="wbfm__title">{{ block.settings.menu.title | upcase }}</span>
+            <span class="wbfm__title">
+              {{ block.settings.mobile_title | upcase }}
+            </span>
             <span class="wbfm__icon" aria-hidden="true">+</span>
           </summary>
           <ul class="wbfm__list">
@@ -130,7 +132,13 @@
       "name": "Columna de menú",
       "limit": 3,
       "settings": [
-        { "type": "link_list", "id": "menu", "label": "Selecciona un menú" }
+        { "type": "link_list", "id": "menu", "label": "Selecciona un menú" },
+        {
+          "type": "text",
+          "id": "mobile_title",
+          "label": "Título móvil del acordeón",
+          "info": "Si lo dejas vacío, se usa el nombre del menú."
+        }
       ]
     },
     {
