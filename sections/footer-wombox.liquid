@@ -1,4 +1,13 @@
-{{ 'footer-wombox.css' | asset_url | stylesheet_tag }} 
+{{ 'footer-wombox.css' | asset_url | stylesheet_tag }}
+
+<!-- Normalizador de iconos de redes (puedes moverlo a footer-wombox.css) -->
+<style>
+  .wbf__social, .wbfm__social { --social-size: 20px; gap:16px; }
+  .wbf__soc-a { display:inline-flex; align-items:center; justify-content:center; }
+  .wbf__soc-img { height: var(--social-size); width:auto; display:block; }
+  .wbf__soc-svg { line-height:0; display:inline-flex; }
+  .wbf__soc-svg svg { height: var(--social-size); width:auto; display:block; }
+</style>
 
 <!-- sections/footer-wombox.liquid -->
 <footer class="wombox-footer">
@@ -22,8 +31,33 @@
 
     <div class="wbf__cta-col">
       <a href="{{ section.settings.cta_link }}" class="wbf__cta">{{ section.settings.cta_text }}</a>
+
+      <!-- Redes sociales DESKTOP (editables) -->
       <div class="wbf__social" aria-label="Redes sociales">
-        <a href="#">f</a><a href="#">i</a><a href="#">x</a><a href="#">in</a><a href="#">▶</a><a href="#">t</a>
+        {% assign has_social = false %}
+        {% for block in section.blocks %}
+          {% if block.type == 'social_link' %}
+            {% assign has_social = true %}
+            <a href="{{ block.settings.url | default: '#' }}"
+               {% if block.settings.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+               class="wbf__soc-a" {{ block.shopify_attributes }}>
+              {% if block.settings.icon_svg != blank %}
+                <span class="wbf__soc-svg">{{ block.settings.icon_svg }}</span>
+              {% elsif block.settings.icon_image != blank %}
+                <img class="wbf__soc-img"
+                     src="{{ block.settings.icon_image | image_url }}"
+                     alt="{{ block.settings.alt | escape }}"
+                     loading="lazy">
+              {% endif %}
+            </a>
+          {% endif %}
+        {% endfor %}
+        {% unless has_social %}
+          <!-- Fallback si no hay bloques configurados -->
+          <a href="#" class="wbf__soc-a">f</a><a href="#" class="wbf__soc-a">i</a>
+          <a href="#" class="wbf__soc-a">x</a><a href="#" class="wbf__soc-a">in</a>
+          <a href="#" class="wbf__soc-a">▶</a><a href="#" class="wbf__soc-a">t</a>
+        {% endunless %}
       </div>
     </div>
   </div>
@@ -34,9 +68,8 @@
       {% if block.type == 'menu_column' and block.settings.menu != blank %}
         <details class="wbfm__acc" {{ block.shopify_attributes }}>
           <summary class="wbfm__sum">
-            <span class="wbfm__title">
-              {{ block.settings.mobile_title | upcase }}
-            </span>
+           {% assign accordion_title = block.settings.mobile_title | default: block.settings.menu.title %}
+<span class="wbfm__title">{{ accordion_title | upcase }}</span>
             <span class="wbfm__icon" aria-hidden="true">+</span>
           </summary>
           <ul class="wbfm__list">
@@ -47,8 +80,32 @@
         </details>
       {% endif %}
     {% endfor %}
+
+    <!-- Redes sociales MÓVIL (editables) -->
     <div class="wbfm__social" aria-label="Redes sociales">
-      <a href="#">f</a><a href="#">i</a><a href="#">x</a><a href="#">in</a><a href="#">▶</a><a href="#">t</a>
+      {% assign has_social_m = false %}
+      {% for block in section.blocks %}
+        {% if block.type == 'social_link' %}
+          {% assign has_social_m = true %}
+          <a href="{{ block.settings.url | default: '#' }}"
+             {% if block.settings.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+             class="wbf__soc-a" {{ block.shopify_attributes }}>
+            {% if block.settings.icon_svg != blank %}
+              <span class="wbf__soc-svg">{{ block.settings.icon_svg }}</span>
+            {% elsif block.settings.icon_image != blank %}
+              <img class="wbf__soc-img"
+                   src="{{ block.settings.icon_image | image_url }}"
+                   alt="{{ block.settings.alt | escape }}"
+                   loading="lazy">
+            {% endif %}
+          </a>
+        {% endif %}
+      {% endfor %}
+      {% unless has_social_m %}
+        <a href="#" class="wbf__soc-a">f</a><a href="#" class="wbf__soc-a">i</a>
+        <a href="#" class="wbf__soc-a">x</a><a href="#" class="wbf__soc-a">in</a>
+        <a href="#" class="wbf__soc-a">▶</a><a href="#" class="wbf__soc-a">t</a>
+      {% endunless %}
     </div>
   </div>
 
@@ -149,9 +206,21 @@
         { "type": "image_picker", "id": "icon_image", "label": "Subir icono de pago (SVG/PNG)" },
         { "type": "text", "id": "icon_alt", "label": "Texto alternativo" }
       ]
+    },
+    {
+      "type": "social_link",
+      "name": "Red social (icono)",
+      "limit": 12,
+      "settings": [
+        { "type": "image_picker", "id": "icon_image", "label": "Icono como imagen (SVG/PNG/JPG)" },
+        { "type": "textarea", "id": "icon_svg", "label": "Icono como SVG (pega el código <svg>…</svg>)", "info": "Si rellenas este campo, se usará el SVG en lugar de la imagen." },
+        { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Red social" },
+        { "type": "url", "id": "url", "label": "Enlace" },
+        { "type": "checkbox", "id": "new_tab", "label": "Abrir en nueva pestaña", "default": true }
+      ]
     }
   ],
-  "max_blocks": 13,
+  "max_blocks": 40,
   "presets": [
     {
       "name": "Footer WOMBOX (Desktop)",
