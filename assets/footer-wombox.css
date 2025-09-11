@@ -59,7 +59,7 @@
 
 /* ====== BLOQUE SÓLO MÓVIL (acordeones) ====== */
 .wbf__inner--mobile{display:none}
-.wbfm__acc{border-bottom:1px solid rgba(255,255,255,.6);padding:14px 0}
+.wbfm__acc{border-bottom:1px solid rgba(255,255,255,.6);}
 .wbfm__sum{list-style:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
 .wbfm__title{font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:800;font-size:20px;letter-spacing:.5px;text-transform:uppercase;color:#fff}
 .wbfm__icon{font-size:24px;line-height:1;transition:transform .2s ease}
