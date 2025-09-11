@@ -93,11 +93,6 @@
 
   <!-- Texto con bandera inline cuando ES -->
   <span class="locpill__label">
-    {% if lc == 'es' or lc contains 'es-' %}
-      <img class="locpill__flag-inline"
-           src="https://cdn.shopify.com/s/files/1/0908/5973/3339/files/7a50cfa9897df6c2e5e814f4f02ab01d00a9323d.png?v=1757594960"
-           alt="España" loading="lazy" decoding="async">
-    {% endif %}
     {{ localization.language.endonym_name | default: localization.language.name | upcase }}
   </span>
 
