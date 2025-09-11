@@ -29,30 +29,6 @@
     </div>
   </div>
 
-  {# ---------- NUEVO: bloque SOLO MÓVIL ---------- #}
-  <div class="wbf__inner--mobile" aria-label="Footer móvil">
-    {% for block in section.blocks %}
-      {% if block.type == 'menu_column' and block.settings.menu != blank %}
-        <details class="wbfm__acc" {{ block.shopify_attributes }}>
-          <summary class="wbfm__sum">
-            <span class="wbfm__title">{{ block.settings.menu.title | upcase }}</span>
-            <span class="wbfm__icon" aria-hidden="true">+</span>
-          </summary>
-          <ul class="wbfm__list">
-            {% for link in block.settings.menu.links %}
-              <li class="wbfm__item"><a class="wbfm__link" href="{{ link.url }}">{{ link.title }}</a></li>
-            {% endfor %}
-          </ul>
-        </details>
-      {% endif %}
-    {% endfor %}
-
-    <div class="wbfm__social" aria-label="Redes sociales">
-      <a href="#">f</a><a href="#">i</a><a href="#">x</a><a href="#">in</a><a href="#">▶</a><a href="#">t</a>
-    </div>
-  </div>
-  {# -------- FIN NUEVO BLOQUE MÓVIL -------- #}
-
   {% if section.settings.strip_image != blank %}
     {% assign strip_src = section.settings.strip_image | image_url %}
     <div class="wbf__bottom" style="--pay-size: {{ section.settings.payments_size }}px;">
