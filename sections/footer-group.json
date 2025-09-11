@@ -13,6 +13,31 @@
   "sections": {
     "footer_wombox_LkkGtE": {
       "type": "footer-wombox",
+      "blocks": {
+        "menu_column_kGNgiU": {
+          "type": "menu_column",
+          "settings": {
+            "menu": "menu-footer-1"
+          }
+        },
+        "menu_column_PKLqEa": {
+          "type": "menu_column",
+          "settings": {
+            "menu": "menu-footer-2"
+          }
+        },
+        "menu_column_m98qmq": {
+          "type": "menu_column",
+          "settings": {
+            "menu": "menu-footer-3"
+          }
+        }
+      },
+      "block_order": [
+        "menu_column_kGNgiU",
+        "menu_column_PKLqEa",
+        "menu_column_m98qmq"
+      ],
       "name": "Footer WOMBOX",
       "settings": {
         "cta_text": "DESCUBRE NUESTRAS CAJAS",
