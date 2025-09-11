@@ -182,24 +182,8 @@
     </div>
   {% endif %}
 
-  <!-- Pagos MÓVIL (fuera de franja) -->
-  <div class="wbf__payments-mobile" style="--pay-size: {{ section.settings.payments_size }}px;" aria-label="Métodos de pago">
-    {% if section.settings.use_custom_payment_icons %}
-      {% for block in section.blocks %}
-        {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
-          <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
-            <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
-          </span>
-        {% endif %}
-      {% endfor %}
-    {% elsif section.settings.show_payments %}
-      {% for type in shop.enabled_payment_types %}
-        <span class="wbf__pay-pill">{{ type | payment_type_svg_tag }}</span>
-      {% endfor %}
-    {% endif %}
-  </div>
 
-  
+
 <!-- Idioma/Moneda MÓVIL -->
 <div class="wbf__flags-mobile">
   {% render 'footer-wombox-sidiomaymoneda',
@@ -232,6 +216,25 @@
     flag_ch: section.settings.flag_ch
   %}
 </div>
+
+
+  <!-- Pagos MÓVIL (fuera de franja) -->
+  <div class="wbf__payments-mobile" style="--pay-size: {{ section.settings.payments_size }}px;" aria-label="Métodos de pago">
+    {% if section.settings.use_custom_payment_icons %}
+      {% for block in section.blocks %}
+        {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
+          <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
+            <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
+          </span>
+        {% endif %}
+      {% endfor %}
+    {% elsif section.settings.show_payments %}
+      {% for type in shop.enabled_payment_types %}
+        <span class="wbf__pay-pill">{{ type | payment_type_svg_tag }}</span>
+      {% endfor %}
+    {% endif %}
+  </div>
+  
 
 
   <!-- Copy móvil -->
