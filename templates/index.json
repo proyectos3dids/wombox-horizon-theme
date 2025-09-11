@@ -806,7 +806,7 @@
                 "color": "var(--color-foreground)",
                 "background": true,
                 "background_color": "#ffffff",
-                "corner_radius": 0,
+                "corner_radius": 8,
                 "padding-block-start": 4,
                 "padding-block-end": 4,
                 "padding-inline-start": 8,
