@@ -44,7 +44,7 @@
         {% for block in section.blocks %}
           {% if block.type == 'social_link' %}
             {% assign has_social = true %}
-            <a href="{{ block.settings.url | default: '#' }}"
+            <a style="width:20px;" href="{{ block.settings.url | default: '#' }}"
                {% if block.settings.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
                class="wbf__soc-a" {{ block.shopify_attributes }}>
               {% if block.settings.icon_svg != blank %}
