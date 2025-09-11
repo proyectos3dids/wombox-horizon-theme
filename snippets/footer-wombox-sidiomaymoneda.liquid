@@ -36,10 +36,7 @@
             {%- comment -%} Usa emojis por defecto. Si prefieres SVG en assets: flag-es.svg, flag-us.svg, etc. {%- endcomment -%}
             <span class="locpill__emoji">
               {{ cc
-                | replace: 'ES','🇪🇸'
-                | replace: 'US','🇺🇸'
-                | replace: 'FR','🇫🇷'
-                | replace: 'DE','🇩🇪' }}
+                }}
             </span>
           </span>
           <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
@@ -56,10 +53,7 @@
               <span class="locpill__opt-flag">
                 <span class="locpill__emoji">
                   {{ country.iso_code | upcase
-                    | replace: 'ES','🇪🇸'
-                    | replace: 'US','🇺🇸'
-                    | replace: 'FR','🇫🇷'
-                    | replace: 'DE','🇩🇪' }}
+                     }}
                 </span>
               </span>
               <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
