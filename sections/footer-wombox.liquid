@@ -1,5 +1,6 @@
  {% comment %} {{ 'footer-wombox.css' | asset_url | stylesheet_tag }} {% endcomment %}
 <!-- sections/footer-wombox.liquid -->
+<!-- sections/footer-wombox.liquid -->
 <style>
   /* ====== FOOTER DESKTOP (no mobile) ====== */
   .wombox-footer{background:#F24343;color:#fff;font-family:Inter,system-ui,Arial,sans-serif}
@@ -29,13 +30,25 @@
   .wbf__payments{ max-width:1200px;margin:16px auto 0;padding:0 24px;display:flex;gap:8px }
   .wbf__payments img{ height:22px;background:#fff;padding:2px 6px;border-radius:6px }
 
-  /* Franja inferior con WOMBOX enorme y claim */
-  .wbf__bottom{ position:relative;overflow:hidden;text-align:center;padding:32px 16px 48px }
-  .wbf__brand-line{
-    font-size:160px;font-weight:900;color:#F6A8BA;opacity:.55;white-space:nowrap;
-    line-height:1;margin:0;letter-spacing:2px
+  /* ====== FRANJA INFERIOR: SLIDER INFINITO CON IMAGEN ====== */
+  .wbf__bottom{ position:relative;overflow:hidden;text-align:center;padding:12px 0 48px }
+  /* la franja animada usa la imagen como background repetido en X */
+  .wbf__marquee{
+    height:var(--marquee-h,120px);
+    background-image:var(--wbf-strip);
+    background-repeat:repeat-x;
+    background-position:0 50%;
+    background-size:auto 100%;
+    animation:wbf-scroll var(--marquee-speed,25s) linear infinite;
+    /* desvanecido lateral suave (opcional) */
+    -webkit-mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
+            mask-image:linear-gradient(90deg, transparent 0, #000 7%, #000 93%, transparent 100%);
   }
-  .wbf__claim{ margin:10px 0 0;font-weight:800;letter-spacing:2px }
+  @keyframes wbf-scroll{
+    from{ background-position-x:0; }
+    to  { background-position-x:-1000px; } /* se repite, no hay salto */
+  }
+
   .wbf__copy{ margin:10px 0 0;opacity:.9;font-size:14px }
 </style>
 
@@ -88,14 +101,22 @@
     </div>
   </div>
 
-
-
   <!-- Franja inferior -->
-  <div class="wbf__bottom">
-    <p class="wbf__brand-line">WOMBOX WOMBOX WOMBOX WOMBOX</p>
-    <p class="wbf__claim">HECHO POR Y PARA ELLAS</p>
-    <p class="wbf__copy">© 2024 WOMBOX</p>
-  </div>
+  {% if section.settings.strip_image != blank %}
+    <div class="wbf__bottom">
+      <!-- Pasamos la imagen y opciones como CSS variables -->
+      <div
+        class="wbf__marquee"
+        style="
+          --wbf-strip: url('{{ section.settings.strip_image | image_url }}');
+          --marquee-h: {{ section.settings.strip_height }}px;
+          --marquee-speed: {{ section.settings.strip_speed }}s;
+        ">
+      </div>
+
+      <p class="wbf__copy">© {{ 'now' | date: "%Y" }} WOMBOX</p>
+    </div>
+  {% endif %}
 </footer>
 
 {% schema %}
@@ -103,6 +124,34 @@
   "name": "Footer WOMBOX (Desktop)",
   "tag": "section",
   "class": "section-footer-wombox",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "strip_image",
+      "label": "Imagen de franja (se repite en bucle)",
+      "info": "Sube la imagen con WOMBOX + claim en horizontal, fondo transparente si quieres que respire."
+    },
+    {
+      "type": "range",
+      "id": "strip_height",
+      "label": "Altura de la franja",
+      "min": 60,
+      "max": 220,
+      "step": 2,
+      "default": 120,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "strip_speed",
+      "label": "Velocidad del slider",
+      "min": 5,
+      "max": 60,
+      "step": 1,
+      "default": 25,
+      "unit": "s"
+    }
+  ],
   "presets": [
     { "name": "Footer WOMBOX (Desktop)" }
   ]
