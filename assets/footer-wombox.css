@@ -145,10 +145,9 @@
 /* Contenedor del <summary> (el botón) */
 .locpill__details{ display:block; }
 .locpill__summary{
-  display:flex; align-items:center; gap:12px;
-  padding: 12px 20px;                 /* tamaño */
-  border: 2px solid #fff;             /* borde blanco */
-  border-radius: 999px;               /* pastilla */
+  display:flex; align-items:center;           
+  border: 2px solid #fff;            
+  border-radius: 999px;               
   color:#fff; background: transparent;
   cursor:pointer; list-style:none; user-select:none;
   transition: background .15s ease, border-color .15s ease;
