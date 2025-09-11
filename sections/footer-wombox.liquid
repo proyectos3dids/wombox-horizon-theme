@@ -38,11 +38,11 @@
       <div class="wbf__payments" aria-label="Métodos de pago">
         {% if section.settings.use_custom_payment_icons %}
           {% for block in section.blocks %}
-            {% if block.type == 'payment_icon' and block.settings.icon_url != blank %}
-              <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
-                <img src="{{ block.settings.icon_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
-              </span>
-            {% endif %}
+            {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
+            <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
+              <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
+            </span>
+          {% endif %}
           {% endfor %}
         {% elsif section.settings.show_payments %}
           {% for type in shop.enabled_payment_types %}
