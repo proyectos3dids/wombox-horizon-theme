@@ -1,8 +1,8 @@
 {%- comment -%}
-  Pills País/Moneda + Idioma + pack de iconos sociales (SVG en línea).
-  Se muestra todo en una sola fila para encajar dentro de .wbf__social.
-  Si quieres que los enlaces de redes sean editables desde la sección del footer,
-  BORRA el <nav class="soc-inline"> de este snippet y deja tu loop de bloques.
+  Pills País/Moneda + Idioma (sin JS del tema)
+  Parámetros opcionales al render:
+    - show_country: true/false (si no se pasa, se activa cuando hay >1 país)
+    - show_language: true/false (si no se pasa, se activa cuando hay >1 idioma)
 {%- endcomment -%}
 
 {% liquid
@@ -26,121 +26,90 @@
   endif
 %}
 
-<div class="locsoc">
-  <!-- ===== Pills País/Moneda + Idioma ===== -->
-  <div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
-    {%- if _show_country -%}
-      {% form 'localization', id: 'LocPillCountry', class: 'locpill' %}
-        <details class="locpill__details">
-          <summary class="locpill__summary" aria-label="Cambiar país y moneda">
-            <span class="locpill__flag">
-              {% assign cc = localization.country.iso_code | upcase %}
-              <span class="locpill__emoji">
-                {{ cc
-                  | replace: 'ES','🇪🇸'
-                  | replace: 'US','🇺🇸'
-                  | replace: 'FR','🇫🇷'
-                  | replace: 'DE','🇩🇪' }}
-              </span>
+<div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
+  {%- if _show_country -%}
+    {% form 'localization', id: 'LocPillCountry', class: 'locpill' %}
+      <details class="locpill__details">
+        <summary class="locpill__summary" aria-label="Cambiar país y moneda">
+          <span class="locpill__flag">
+            {% assign cc = localization.country.iso_code | upcase %}
+            {%- comment -%} Usa emojis por defecto. Si prefieres SVG en assets: flag-es.svg, flag-us.svg, etc. {%- endcomment -%}
+            <span class="locpill__emoji">
+              {{ cc
+                }}
             </span>
-            <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
-            <span class="locpill__chev" aria-hidden="true">▾</span>
-          </summary>
+          </span>
+          <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
+          <span class="locpill__chev" aria-hidden="true">▾</span>
+        </summary>
 
-          <div class="locpill__list" role="listbox">
-            {%- for country in localization.available_countries -%}
-              <button type="submit"
-                      name="country_code"
-                      value="{{ country.iso_code }}"
-                      class="locpill__option"
-                      {% if country.iso_code == localization.country.iso_code %}aria-current="true"{% endif %}>
-                <span class="locpill__opt-flag">
-                  <span class="locpill__emoji">
-                    {{ country.iso_code | upcase
-                      | replace: 'ES','🇪🇸'
-                      | replace: 'US','🇺🇸'
-                      | replace: 'FR','🇫🇷'
-                      | replace: 'DE','🇩🇪' }}
-                  </span>
+        <div class="locpill__list" role="listbox">
+          {%- for country in localization.available_countries -%}
+            <button type="submit"
+                    name="country_code"
+                    value="{{ country.iso_code }}"
+                    class="locpill__option"
+                    {% if country.iso_code == localization.country.iso_code %}aria-current="true"{% endif %}>
+              <span class="locpill__opt-flag">
+                <span class="locpill__emoji">
+                  {{ country.iso_code | upcase
+                     }}
                 </span>
-                <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
-              </button>
-            {%- endfor -%}
-          </div>
-        </details>
-      {% endform %}
-    {%- endif -%}
+              </span>
+              <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
+            </button>
+          {%- endfor -%}
+        </div>
+      </details>
+    {% endform %}
+  {%- endif -%}
 
-    {%- if _show_language -%}
-      {% form 'localization', id: 'LocPillLanguage', class: 'locpill' %}
-        <details class="locpill__details">
-          <summary class="locpill__summary" aria-label="Cambiar idioma">
-            <span class="locpill__flag"><span class="locpill__emoji">🌐</span></span>
-            <span class="locpill__label">{{ localization.language.endonym_name | default: localization.language.name | upcase }}</span>
-            <span class="locpill__chev" aria-hidden="true">▾</span>
-          </summary>
+  {%- if _show_language -%}
+    {% form 'localization', id: 'LocPillLanguage', class: 'locpill' %}
+      <details class="locpill__details">
+        <summary class="locpill__summary" aria-label="Cambiar idioma">
+          <span class="locpill__flag"><span class="locpill__emoji">🌐</span></span>
+          <span class="locpill__label">{{ localization.language.endonym_name | default: localization.language.name | upcase }}</span>
+          <span class="locpill__chev" aria-hidden="true">▾</span>
+        </summary>
 
-          <div class="locpill__list" role="listbox">
-            {%- for language in localization.available_languages -%}
-              <button type="submit"
-                      name="locale_code"
-                      value="{{ language.iso_code }}"
-                      class="locpill__option"
-                      {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
-                <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
-              </button>
-            {%- endfor -%}
-          </div>
-        </details>
-      {% endform %}
-    {%- endif -%}
-  </div>
-
-  <!-- ===== Iconos sociales (SVG en línea) ===== -->
-  <nav class="soc-inline" aria-label="Redes sociales">
-    <a class="soc-a" href="#" aria-label="Facebook">
-      <svg class="soc-ico" viewBox="0 0 24 24" fill="none"><path d="M15 8h-2c-1.1 0-2 .9-2 2v12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M11 12h4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><rect x="3.5" y="1.5" width="17" height="21" rx="5.5" stroke="currentColor" stroke-width="1.8"/></svg>
-    </a>
-    <a class="soc-a" href="#" aria-label="Instagram">
-      <svg class="soc-ico" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.8"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-    </a>
-    <a class="soc-a" href="#" aria-label="X">
-      <svg class="soc-ico" viewBox="0 0 24 24" fill="none"><path d="M4 4l16 16M20 4L4 20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-    </a>
-    <a class="soc-a" href="#" aria-label="LinkedIn">
-      <svg class="soc-ico" viewBox="0 0 24 24" fill="none"><rect x="3.5" y="3.5" width="17" height="17" rx="2.5" stroke="currentColor" stroke-width="1.8"/><path d="M7 10v7M7 7.5v.1M11 17v-5a2 2 0 0 1 4 0v5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-    </a>
-    <a class="soc-a" href="#" aria-label="YouTube">
-      <svg class="soc-ico" viewBox="0 0 24 24" fill="none"><rect x="3" y="6.5" width="18" height="11" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M11 10l4 2-4 2v-4z" fill="currentColor"/></svg>
-    </a>
-    <a class="soc-a" href="#" aria-label="TikTok">
-      <svg class="soc-ico" viewBox="0 0 24 24" fill="none"><path d="M10 8v8a3 3 0 1 1-3-3h2M14 6a4 4 0 0 0 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-    </a>
-  </nav>
+        <div class="locpill__list" role="listbox">
+          {%- for language in localization.available_languages -%}
+            <button type="submit"
+                    name="locale_code"
+                    value="{{ language.iso_code }}"
+                    class="locpill__option"
+                    {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
+              <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
+            </button>
+          {%- endfor -%}
+        </div>
+      </details>
+    {% endform %}
+  {%- endif -%}
 </div>
 
 <style>
-/* ===== Layout fila dentro de .wbf__social ===== */
-.locsoc{display:flex;align-items:center;gap:28px}
-
-/* Pills */
+/* ===== Pills de localización (país/idioma) ===== */
 .locpill-wrap{display:flex;gap:28px;align-items:center;flex-wrap:wrap}
+
 .locpill{position:relative}
 .locpill__details{display:block}
 .locpill__summary{
   display:flex;align-items:center;gap:14px;
   padding:14px 22px;border:2px solid #fff;border-radius:999px;
   color:#fff;background:transparent;cursor:pointer;list-style:none;
-  text-decoration:none;outline:0;
 }
 .locpill__summary::-webkit-details-marker{display:none}
 .locpill__flag{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;overflow:hidden;background:rgba(255,255,255,.15)}
+.locpill__flag img{width:100%;height:100%;object-fit:cover;display:block}
 .locpill__emoji{font-size:20px;line-height:1}
 .locpill__label{font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-size:24px;font-weight:700;letter-spacing:.5px}
 .locpill__chev{margin-left:6px;font-size:18px;opacity:.9}
 
+/* Panel opciones */
 .locpill__list{
-  position:absolute;left:0;z-index:10;min-width:100%;
+  position:absolute;left:0;right:auto;z-index:10;min-width:100%;
   margin-top:8px;padding:8px;background:rgba(0,0,0,.25);
   backdrop-filter:saturate(150%) blur(6px);
   border:1px solid rgba(255,255,255,.3);border-radius:14px;
@@ -150,25 +119,19 @@
 
 .locpill__option{
   display:flex;align-items:center;gap:10px;width:100%;
-  padding:10px 12px;background:transparent;border:0;color:#fff;text-align:left;border-radius:10px;cursor:pointer;
+  padding:10px 12px;background:transparent;border:0;color:#fff;text-align:left;border-radius:10px;
 }
 .locpill__option:hover,.locpill__option[aria-current="true"]{background:rgba(255,255,255,.15)}
-.locpill__opt-flag{width:22px;display:grid;place-items:center}
-.locpill__opt-label{font-size:15px}
 
-/* Iconos sociales */
-.soc-inline{display:flex;align-items:center;gap:16px}
-.soc-a{display:inline-grid;place-items:center;width:40px;height:40px;border:2px solid #fff;border-radius:10px;color:#fff;text-decoration:none}
-.soc-ico{width:24px;height:24px;display:block}
+.locpill__opt-flag{width:22px;display:grid;place-items:center}
+.locpill__opt-flag img{width:100%;height:auto;display:block}
+.locpill__opt-label{font-size:15px}
 
 /* Responsive */
 @media (max-width: 768px){
-  .locsoc{gap:16px;flex-wrap:wrap;justify-content:center}
   .locpill-wrap{gap:14px}
   .locpill__summary{padding:12px 18px}
   .locpill__label{font-size:18px}
   .locpill__flag{width:28px;height:28px}
-  .soc-inline{gap:12px}
-  .soc-a{width:38px;height:38px}
 }
 </style>
