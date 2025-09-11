@@ -33,7 +33,7 @@
 .wbf__bottom{position:relative;overflow:hidden;text-align:center;padding:12px 0 5px}
 
 /* Métodos de pago (esquina izq. inferior) */
-.wbf__payments{position:absolute;left:24px;bottom:10px;display:flex;gap:8px;z-index:2}
+.wbf__payments{position:absolute;left:24px;bottom:10px;display:flex;z-index:2}
 .wbf__pay-pill{display:inline-flex;align-items:center;justify-content:center;height:calc(var(--pay-size,18px) + 4px);padding:2px 6px;border-radius:16px}
 .wbf__pay-pill svg{height:var(--pay-size,18px);width:auto;display:block}
 .wbf__pay-pill img{height:var(--pay-size,18px);width:auto;display:block}
