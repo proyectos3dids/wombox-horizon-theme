@@ -137,6 +137,7 @@
 }
 
 .wbf__copy{
+  padding:10px 0px 10px 0px;
   font-family: 'Archivo', Inter, system-ui, Arial, sans-serif;
   font-weight: 400;         /* Regular */
   font-size: 12px;          /* 12px */
