@@ -63,9 +63,9 @@
 }
 
   .wbf__copy1{ display:none; }  /* Oculta en móvil */
-  .wbf__copy2{ display:block; } /* Muestra en móvil */
-  .wbf1{ display:none; }  /* Oculta en móvil */
-  .wbf2{ display:block; } /* Muestra en móvil */
+  .wbf__copy2{ display:block; } 
+  .wbf1{ display:none; } 
+  .wbf2{ display:block; } 
 
 }
 
