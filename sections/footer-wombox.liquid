@@ -2,33 +2,34 @@
 <!-- sections/footer-wombox.liquid -->
 <footer class="wombox-footer">
   <div class="wbf__inner">
-    
-    {%- for block in section.blocks -%}
-    {%- if block.type == 'menu_column' -%}
-      <nav class="wbf__col" {{ block.shopify_attributes }}>
-        {%- if block.settings.menu != blank -%}
-          <ul class="wbf__list">
-            {%- for link in block.settings.menu.links -%}
-              <li class="wbf__item">
-                <a class="wbf__link" href="{{ link.url }}">{{ link.title }}</a>
-              </li>
-            {%- endfor -%}
-          </ul>
+    <!-- Bloques de menús (hasta 3, uno por columna) -->
+    <div class="wbf__menus">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'menu_column' -%}
+          <nav class="wbf__col" {{ block.shopify_attributes }}>
+            {%- if block.settings.menu != blank -%}
+              <ul class="wbf__list">
+                {%- for link in block.settings.menu.links -%}
+                  <li class="wbf__item">
+                    <a class="wbf__link" href="{{ link.url }}">{{ link.title }}</a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
+          </nav>
         {%- endif -%}
-      </nav>
-    {%- endif -%}
-  {%- endfor -%}
+      {%- endfor -%}
+    </div>
 
-    <!-- Columna 4: CTA + selectores + redes -->
+    <!-- Columna 4: CTA + (espacio para idioma/moneda) + redes -->
     <div class="wbf__cta-col">
-     <a href="{{ section.settings.cta_link }}" class="wbf__cta">
-      {{ section.settings.cta_text }}
-    </a>
+      <a href="{{ section.settings.cta_link }}" class="wbf__cta">
+        {{ section.settings.cta_text }}
+      </a>
 
-    
+      <!-- aquí podrías renderizar selectores de idioma/moneda del tema, si los tienes -->
 
       <div class="wbf__social" aria-label="Redes sociales">
-         *idioma y moneda
         <a href="#" title="Facebook">f</a>
         <a href="#" title="Instagram">i</a>
         <a href="#" title="X">x</a>
@@ -39,22 +40,30 @@
     </div>
   </div>
 
-  <!-- Franja inferior -->
   {% if section.settings.strip_image != blank %}
     {% assign strip_src = section.settings.strip_image | image_url %}
-    <div class="wbf__bottom">
+    <div class="wbf__bottom" style="--pay-size: {{ section.settings.payments_size }}px;">
+      {% if section.settings.show_payments %}
+        <div class="wbf__payments" aria-label="Métodos de pago">
+          {% for type in shop.enabled_payment_types %}
+            <span class="wbf__pay-pill">
+              {{ type | payment_type_svg_tag }}
+            </span>
+          {% endfor %}
+        </div>
+      {% endif %}
+
       <div class="wbf__marquee"
-          style="
-            --marquee-h: {{ section.settings.strip_height }}px;
-            --marquee-speed: {{ section.settings.strip_speed }}s;
-            --marquee-gap: {{ section.settings.strip_gap }}px;">
+           style="--marquee-h: {{ section.settings.strip_height }}px;
+                  --marquee-speed: {{ section.settings.strip_speed }}s;
+                  --marquee-gap: {{ section.settings.strip_gap }}px;">
         <div class="wbf__track">
-          {%- for i in (1..8) -%}
+          {% for i in (1..8) %}
             <img src="{{ strip_src }}" alt="WOMBOX" class="wbf__item-img">
-          {%- endfor -%}
-          {%- for i in (1..8) -%}
+          {% endfor %}
+          {% for i in (1..8) %}
             <img src="{{ strip_src }}" alt="WOMBOX" class="wbf__item-img">
-          {%- endfor -%}
+          {% endfor %}
         </div>
       </div>
 
@@ -79,13 +88,12 @@
       "type": "url",
       "id": "cta_link",
       "label": "Enlace del botón CTA"
-    }
-    ,
+    },
     {
       "type": "image_picker",
       "id": "strip_image",
-      "label": "Imagen de franja (se repite en bucle)",
-      "info": "Sube la imagen con WOMBOX + claim en horizontal, fondo transparente si quieres que respire."
+      "label": "Imagen de franja (slider)",
+      "info": "Imagen WOMBOX + claim en horizontal (fondo transparente recomendado)."
     },
     {
       "type": "range",
@@ -116,33 +124,48 @@
       "step": 5,
       "default": 140,
       "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_payments",
+      "label": "Mostrar métodos de pago",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "payments_size",
+      "label": "Tamaño de iconos de pago",
+      "min": 14,
+      "max": 26,
+      "step": 1,
+      "default": 18,
+      "unit": "px"
     }
   ],
   "blocks": [
-  {
-    "type": "menu_column",
-    "name": "Columna de menú",
-    "limit": 3,
-    "settings": [
-      {
-        "type": "link_list",
-        "id": "menu",
-        "label": "Selecciona un menú"
-      }
-    ]
-  }
-],
-"max_blocks": 3,
-"presets": [
-  {
-    "name": "Footer WOMBOX (Desktop)",
-    "blocks": [
-      { "type": "menu_column" },
-      { "type": "menu_column" },
-      { "type": "menu_column" }
-    ]
-  }
-]
-
+    {
+      "type": "menu_column",
+      "name": "Columna de menú",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "label": "Selecciona un menú"
+        }
+      ]
+    }
+  ],
+  "max_blocks": 3,
+  "presets": [
+    {
+      "name": "Footer WOMBOX (Desktop)",
+      "blocks": [
+        { "type": "menu_column" },
+        { "type": "menu_column" },
+        { "type": "menu_column" }
+      ]
+    }
+  ]
 }
 {% endschema %}
