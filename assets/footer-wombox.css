@@ -1,0 +1,139 @@
+/* GENERAL */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.footer {
+  background: #F24343;
+  color: #fff;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.footer-column {
+  text-align: left;
+}
+
+.footer-title {
+  background: none;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.2rem;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-title::after {
+  content: '+';
+  font-weight: normal;
+}
+
+.footer-title.active::after {
+  content: '−';
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.footer-links li {
+  margin: 0.3rem 0;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+/* Redes sociales */
+.footer-social {
+  grid-column: span 3;
+  margin-top: 2rem;
+}
+
+.footer-social a {
+  display: inline-block;
+  margin: 0 0.5rem;
+  font-size: 1.2rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Selectores */
+.footer-selectors {
+  grid-column: span 3;
+  margin: 2rem 0 1rem;
+}
+
+.footer-selectors select {
+  margin: 0 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  border: none;
+}
+
+/* Pagos */
+.footer-payments {
+  grid-column: span 3;
+}
+
+.footer-payments img {
+  height: 25px;
+  margin: 0 0.3rem;
+}
+
+/* Parte inferior */
+.footer-bottom {
+  background: #F24343;
+  padding: 2rem 1rem 3rem;
+}
+
+.footer-bottom h2 {
+  font-size: 3rem;
+  color: #f9b7c7;
+  margin: 0;
+}
+
+.footer-bottom p {
+  margin: 0.5rem 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .footer-links.show {
+    display: block;
+  }
+
+  .footer-title::after {
+    margin-left: auto;
+  }
+}
