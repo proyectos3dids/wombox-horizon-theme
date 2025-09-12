@@ -187,6 +187,15 @@ Es personalizable en el editor de temas.
       font-size: {{ block.settings.mobile_price_size }}px;
     }
   }
+
+
+  .ai-sticky-bar-{{ ai_gen_id }} {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
 {% endstyle %}
 
 {% comment %}
