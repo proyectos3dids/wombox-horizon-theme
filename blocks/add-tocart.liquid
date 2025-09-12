@@ -1,0 +1,486 @@
+{% doc %}
+  @prompt
+    I want a sticky bottom floating bar with some space from the bottom margin of the screen that is not full width, displaying a photo of the product, the product name and a button that says ‘select options’ which, when clicked, takes you to the ‘add to cart’ button. In terms of style, it should have completely rounded corners., make it wider and adjustable in width
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-sticky-bar-{{ ai_gen_id }} {
+    position: fixed;
+    bottom: {{ block.settings.bottom_margin }}px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: {{ block.settings.bar_width }}%;
+    max-width: {{ block.settings.max_width }}px;
+    min-width: {{ block.settings.min_width }}px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: 50px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    padding: {{ block.settings.padding }}px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    backdrop-filter: blur(10px);
+  }
+
+  .ai-sticky-bar-image-{{ ai_gen_id }} {
+    width: {{ block.settings.image_size }}px;
+    height: {{ block.settings.image_size }}px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .ai-sticky-bar-image-{{ ai_gen_id }} img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .ai-sticky-bar-image-placeholder-{{ ai_gen_id }} {
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;}
+
+  .ai-sticky-bar-image-placeholder-{{ ai_gen_id }} svg {
+    width: 60%;
+    height: 60%;
+    opacity: 0.5;
+  }
+
+  .ai-sticky-bar-content-{{ ai_gen_id }} {
+    flex-grow: 1;
+    min-width: 0;
+  }
+
+  .ai-sticky-bar-title-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.title_size }}px;
+    font-weight: 600;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .ai-sticky-bar-price-{{ ai_gen_id }} {
+    color: {{ block.settings.price_color }};
+    font-size: {{ block.settings.price_size }}px;
+    font-weight: 500;
+    margin: 2px 0 0;}
+
+  .ai-sticky-bar-button-{{ ai_gen_id }} {
+    background-color: {{ block.settings.button_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    border-radius: 50px;
+    padding: {{ block.settings.button_padding }}px {{ block.settings.button_padding | times: 1.5 }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0;
+  }
+
+  .ai-sticky-bar-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_color }};
+    transform: translateY(-1px);
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-sticky-bar-{{ ai_gen_id }} {
+      width: {{ block.settings.mobile_bar_width }}%;
+      max-width: {{ block.settings.mobile_max_width }}px;
+      min-width: {{ block.settings.mobile_min_width }}px;padding: {{ block.settings.mobile_padding }}px;
+    }
+
+    .ai-sticky-bar-image-{{ ai_gen_id }} {
+      width: {{ block.settings.mobile_image_size }}px;
+      height: {{ block.settings.mobile_image_size }}px;
+    }
+
+    .ai-sticky-bar-title-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_title_size }}px;
+    }
+
+    .ai-sticky-bar-price-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_price_size }}px;
+    }
+
+    .ai-sticky-bar-button-{{ ai_gen_id }} {
+      font-size: {{ block.settings.mobile_button_text_size }}px;
+      padding: {{ block.settings.mobile_button_padding }}px {{ block.settings.mobile_button_padding | times: 1.2 }}px;
+    }
+  }
+{% endstyle %}<sticky-product-bar-{{ ai_gen_id }}
+  class="ai-sticky-bar-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-sticky-bar-image-{{ ai_gen_id }}">
+    {% if product.featured_image %}
+      <img
+        src="{{ product.featured_image | image_url: width: 200}}"
+        alt="{{ product.featured_image.alt | escape }}"
+        loading="lazy"
+        width="200"
+        height="200"
+      >
+    {% else %}
+      <div class="ai-sticky-bar-image-placeholder-{{ ai_gen_id }}">
+        {{ 'product-1' | placeholder_svg_tag }}
+      </div>
+    {% endif %}
+  </div>
+
+  <div class="ai-sticky-bar-content-{{ ai_gen_id }}">
+    <h3 class="ai-sticky-bar-title-{{ ai_gen_id }}">
+      {% if product.title %}
+        {{ product.title }}
+      {% else %}
+        {{ block.settings.fallback_title }}
+      {% endif %}
+    </h3>
+    {% if product.price and block.settings.show_price %}
+      <div class="ai-sticky-bar-price-{{ ai_gen_id }}">
+        {{ product.price | money }}
+      </div>
+    {% endif %}</div>
+
+  <button
+    class="ai-sticky-bar-button-{{ ai_gen_id }}"
+    type="button"
+    aria-label="Go to add to cart section"
+  >
+    {{ block.settings.button_text }}
+  </button>
+</sticky-product-bar-{{ ai_gen_id }}><script>
+  (function() {
+    class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
+        this.setupEventListeners();
+      }
+
+      setupEventListeners() {
+        if (this.button) {
+          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        }
+      }
+
+      scrollToAddToCart() {
+        const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
+        
+        if (addToCartButton) {
+          addToCartButton.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });setTimeout(() => {
+            addToCartButton.focus();
+          }, 500);
+        }
+      }
+    }
+
+    customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Sticky product bar",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Select options"
+    },
+    {
+      "type": "text",
+      "id": "fallback_title",
+      "label": "Fallback product title",
+      "default": "Product name"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price",
+      "label": "Show price",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Bar dimensions"
+    },
+    {
+      "type": "range",
+      "id": "bar_width",
+      "min": 60,
+      "max": 95,
+      "step": 5,
+      "unit": "%",
+      "label": "Bar width",
+      "default": 85
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "min": 400,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "label": "Maximum width",
+      "default": 700
+    },
+    {
+      "type": "range",
+      "id": "min_width",
+      "min": 300,
+      "max": 500,
+      "step": 25,
+      "unit": "px",
+      "label": "Minimum width",
+      "default": 350
+    },
+    {
+      "type": "range",
+      "id": "mobile_bar_width",
+      "min": 80,
+      "max": 95,
+      "step": 5,
+      "unit": "%",
+      "label": "Mobile bar width",
+      "default": 90
+    },
+    {
+      "type": "range",
+      "id": "mobile_max_width",
+      "min": 300,
+      "max": 500,
+      "step": 25,
+      "unit": "px",
+      "label": "Mobile maximum width",
+      "default": 400
+    },
+    {
+      "type": "range",
+      "id": "mobile_min_width",
+      "min": 250,
+      "max": 350,
+      "step": 25,
+      "unit": "px",
+      "label": "Mobile minimum width",
+      "default": 300
+    },
+    {
+      "type": "header",
+      "content": "Position and spacing"
+    },
+    {
+      "type": "range",
+      "id": "bottom_margin",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "label": "Bottom margin",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "padding",
+      "min": 8,
+      "max": 24,
+      "step": 2,
+      "unit": "px",
+      "label": "Internal padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding",
+      "min": 6,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile internal padding",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Product image"
+    },
+    {
+      "type": "range",
+      "id": "image_size",
+      "min": 40,
+      "max": 80,
+      "step": 4,
+      "unit": "px",
+      "label": "Image size",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "mobile_image_size",
+      "min": 30,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile image size",
+      "default": 50
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Title size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "mobile_title_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile title size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "price_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Price size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "mobile_price_size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile price size",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "mobile_button_text_size",
+      "min": 10,
+      "max": 16,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile button text size",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "button_padding",
+      "min": 8,
+      "max": 20,
+      "step": 2,
+      "unit": "px",
+      "label": "Button padding",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "mobile_button_padding",
+      "min": 6,
+      "max": 16,
+      "step": 2,
+      "unit": "px",
+      "label": "Mobile button padding",
+      "default": 10
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "price_color",
+      "label": "Price color",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button background",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text color",
+      "default": "#ffffff"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Sticky product bar"
+    }
+  ],
+  "tag": null
+}
+{% endschema %}
