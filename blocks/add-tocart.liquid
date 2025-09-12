@@ -1,8 +1,8 @@
-{% doc %}
-  @prompt
-    I want a sticky bottom floating bar with some space from the bottom margin of the screen that is not full width, displaying a photo of the product, the product name and a button that says ‘select options’ which, when clicked, takes you to the ‘add to cart’ button. In terms of style, it should have completely rounded corners., make it wider and adjustable in width
-
-{% enddoc %}
+{% comment %}
+This code creates a sticky bottom bar on product pages.
+It displays the product image, title, and a button to add the product to the cart.
+The bar's appearance (colors, size, etc.) is fully customizable in the theme editor.
+{% endcomment %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
 {% style %}
@@ -101,7 +101,8 @@
     .ai-sticky-bar-{{ ai_gen_id }} {
       width: {{ block.settings.mobile_bar_width }}%;
       max-width: {{ block.settings.mobile_max_width }}px;
-      min-width: {{ block.settings.mobile_min_width }}px;padding: {{ block.settings.mobile_padding }}px;
+      min-width: {{ block.settings.mobile_min_width }}px;
+      padding: {{ block.settings.mobile_padding }}px;
     }
 
     .ai-sticky-bar-image-{{ ai_gen_id }} {
@@ -122,7 +123,9 @@
       padding: {{ block.settings.mobile_button_padding }}px {{ block.settings.mobile_button_padding | times: 1.2 }}px;
     }
   }
-{% endstyle %}<sticky-product-bar-{{ ai_gen_id }}
+{% endstyle %}
+
+<sticky-product-bar-{{ ai_gen_id }}
   class="ai-sticky-bar-{{ ai_gen_id }}"
   {{ block.shopify_attributes }}
 >
@@ -154,29 +157,53 @@
       <div class="ai-sticky-bar-price-{{ ai_gen_id }}">
         {{ product.price | money }}
       </div>
-    {% endif %}</div>
+    {% endif %}
+  </div>
 
-  <button
-    class="ai-sticky-bar-button-{{ ai_gen_id }}"
-    type="button"
-    aria-label="Go to add to cart section"
-  >
-    {{ block.settings.button_text }}
-  </button>
-</sticky-product-bar-{{ ai_gen_id }}><script>
+  <form method="post" action="/cart/add" accept-charset="UTF-8" class="ai-sticky-bar-form-{{ ai_gen_id }}" enctype="multipart/form-data">
+    {% if product.has_only_default_variant %}
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <button
+        class="ai-sticky-bar-button-{{ ai_gen_id }}"
+        type="submit"
+        name="add"
+      >
+        {{ block.settings.button_text }}
+      </button>
+    {% else %}
+      <button
+        class="ai-sticky-bar-button-{{ ai_gen_id }}"
+        type="button"
+        aria-label="Select options"
+      >
+        {{ block.settings.button_text }}
+      </button>
+    {% endif %}
+  </form>
+</sticky-product-bar-{{ ai_gen_id }}>
+
+<script>
   (function() {
     class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
       constructor() {
         super();
-      }
-
-      connectedCallback() {
+        this.form = this.querySelector('form');
         this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
+        this.selectOptions = this.button && this.button.type === 'button';
         this.setupEventListeners();
       }
 
+      connectedCallback() {
+        if (!this.form) return;
+
+        if (this.selectOptions) {
+          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        }
+      }
+
       setupEventListeners() {
-        if (this.button) {
+        // This is only for the "Select options" button to scroll to the main form
+        if (this.selectOptions) {
           this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
         }
       }
@@ -188,7 +215,8 @@
           addToCartButton.scrollIntoView({
             behavior: 'smooth',
             block: 'center'
-          });setTimeout(() => {
+          });
+          setTimeout(() => {
             addToCartButton.focus();
           }, 500);
         }
@@ -211,7 +239,7 @@
       "type": "text",
       "id": "button_text",
       "label": "Button text",
-      "default": "Select options"
+      "default": "Add to cart"
     },
     {
       "type": "text",
