@@ -5,7 +5,10 @@
 {% endcapture %}
 
 {% render 'section', section: section, children: children %}
-
+<style>
+  .esp-ext{
+  padding: {{ section.settings.espaciado_grupo }} px;}
+</style>
 {% schema %}
 {
   "name": "t:names.section",
@@ -25,6 +28,18 @@
     "groups": ["header"]
   },
   "settings": [
+    
+    {
+      "type": "range",
+      "id": "espaciado_grupo",
+      "label": "Espaciado",
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "default": 20,
+      "info":"Separación padding section solo para banner grupo."
+    }
+    ,
     {
       "type": "header",
       "content": "t:content.layout"
