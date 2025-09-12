@@ -11,6 +11,164 @@
   "type": "footer",
   "name": "Footer",
   "sections": {
+    "footer_wombox_WBpNyk": {
+      "type": "footer-wombox",
+      "blocks": {
+        "social_link_CxQNnN": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/Facebook_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_e4LnNF": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/Instagram_3.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_PnMHmW": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/X_logo_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_brmb7U": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/LinkedIn_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_xzRNjD": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/YouTube_3.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "social_link_d4JdVM": {
+          "type": "social_link",
+          "settings": {
+            "icon_image": "shopify://shop_images/TikTok_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "",
+            "new_tab": true
+          }
+        },
+        "payment_icon_8A3LyJ": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector_17.svg",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_gfigBN": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector_18.svg",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_8bhHzF": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector_21.svg",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_XwUiHW": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector_19.svg",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_cqmHJE": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_image": "shopify://shop_images/Vector_20.svg",
+            "icon_alt": ""
+          }
+        },
+        "payment_icon_AeqUNx": {
+          "type": "payment_icon",
+          "settings": {
+            "icon_image": "shopify://shop_images/GooglePay.svg",
+            "icon_alt": ""
+          }
+        },
+        "menu_column_hKfhDR": {
+          "type": "menu_column",
+          "settings": {
+            "menu": "menu-footer-1",
+            "mobile_title": "Wombox"
+          }
+        },
+        "menu_column_UrYGgM": {
+          "type": "menu_column",
+          "settings": {
+            "menu": "menu-footer-2",
+            "mobile_title": "LEGALES"
+          }
+        },
+        "menu_column_ap99Qc": {
+          "type": "menu_column",
+          "settings": {
+            "menu": "menu-footer-3",
+            "mobile_title": "CONTACTO"
+          }
+        }
+      },
+      "block_order": [
+        "social_link_CxQNnN",
+        "social_link_e4LnNF",
+        "social_link_PnMHmW",
+        "social_link_brmb7U",
+        "social_link_xzRNjD",
+        "social_link_d4JdVM",
+        "payment_icon_8A3LyJ",
+        "payment_icon_gfigBN",
+        "payment_icon_8bhHzF",
+        "payment_icon_XwUiHW",
+        "payment_icon_cqmHJE",
+        "payment_icon_AeqUNx",
+        "menu_column_hKfhDR",
+        "menu_column_UrYGgM",
+        "menu_column_ap99Qc"
+      ],
+      "name": "Footer WOMBOX",
+      "settings": {
+        "flag_es": "shopify://shop_images/7a50cfa9897df6c2e5e814f4f02ab01d00a9323d.png",
+        "cta_text": "DESCUBRE NUESTRAS CAJAS",
+        "cta_link": "#",
+        "strip_image": "shopify://shop_images/Capa_1.png",
+        "strip_height": 120,
+        "strip_speed": 60,
+        "strip_gap": 45,
+        "show_payments": false,
+        "use_custom_payment_icons": true,
+        "payments_size": 18
+      }
+    },
     "section_TQpXXq": {
       "type": "section",
       "blocks": {
@@ -650,6 +808,7 @@
     }
   },
   "order": [
+    "footer_wombox_WBpNyk",
     "section_TQpXXq",
     "footer"
   ]
