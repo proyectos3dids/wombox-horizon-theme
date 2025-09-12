@@ -177,7 +177,7 @@
         "flag_it": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
         "flag_lt": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
         "flag_lu": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_mt": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
+        "flag_mt": "shopify://shop_images/Image_12_sept_2025_10_26_16_a.m..png",
         "flag_nl": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
         "flag_pl": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
         "flag_pt": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
@@ -508,6 +508,7 @@
       "disabled": true,
       "name": "t:names.large_logo",
       "settings": {
+        "espaciado_grupo": 20,
         "content_direction": "column",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
