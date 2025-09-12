@@ -321,6 +321,36 @@ Es personalizable en el editor de temas.
     }
     customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
   })();
+
+
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const stickyBar = document.querySelector('.ai-sticky-bar');
+  const scrollThreshold = 300; // Cambia este valor a la cantidad de píxeles que desees.
+
+  if (stickyBar) {
+    // Esconder la barra inicialmente para que no se muestre al cargar la página
+    stickyBar.style.display = 'none';
+
+    function handleScroll() {
+      if (window.scrollY > scrollThreshold) {
+        // Mostrar la barra si el usuario se ha desplazado más allá del umbral
+        stickyBar.style.display = 'flex';
+      } else {
+        // Ocultar la barra si el usuario se desplaza de vuelta hacia arriba
+        stickyBar.style.display = 'none';
+      }
+    }
+
+    // Escuchar el evento de desplazamiento (scroll)
+    window.addEventListener('scroll', handleScroll);
+
+    // Llamar a la función una vez al cargar la página en caso de que el usuario
+    // ya esté en una posición desplazada
+    handleScroll();
+  }
+});
 </script>
 
 {% schema %}
