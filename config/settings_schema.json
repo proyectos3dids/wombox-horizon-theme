@@ -37,9 +37,9 @@
     "settings": [
        {
             "type": "color",
-            "id": "color-menu",
+            "id": "color-menux",
             "label": "Color del menú",
-            "default": "#000000"
+            "default": "#3C2C81"
       }
       ,
       {
