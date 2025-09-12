@@ -275,130 +275,134 @@ Es personalizable en el editor de temas.
 </sticky-product-bar-{{ ai_gen_id }}>
 
 <script>
-  (function() {
-    class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
-      constructor() {
-        super();
-        this.form = this.querySelector('form');
-        this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
-        this.selectOptions = this.button && this.button.type === 'button';
-        this.quantityInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
-        this.quantityMinus = this.querySelector('[data-action="minus"]');
-        this.quantityPlus = this.querySelector('[data-action="plus"]');
-        this.setupEventListeners();
-      }
+  (function() {
+    class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.form = this.querySelector('form');
+        this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
+        this.selectOptions = this.button && this.button.type === 'button';
+        this.quantityInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
+        this.quantityMinus = this.querySelector('[data-action="minus"]');
+        this.quantityPlus = this.querySelector('[data-action="plus"]');
+        this.setupEventListeners();
+      }
 
-      connectedCallback() {
-        if (this.selectOptions) {
-          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
-        } else {
-          // Agrega el event listener para el envío del formulario
-          this.form.addEventListener('submit', this.handleFormSubmit.bind(this));
-        }
-      }
+      connectedCallback() {
+        if (this.selectOptions) {
+          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        } else {
+          this.form.addEventListener('submit', this.handleFormSubmit.bind(this));
+        }
+      }
 
-      setupEventListeners() {
-        if (this.selectOptions) {
-          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
-        }
-        if (this.quantityMinus && this.quantityPlus && this.quantityInput) {
-          this.quantityMinus.addEventListener('click', () => this.updateQuantity(-1));
-          this.quantityPlus.addEventListener('click', () => this.updateQuantity(1));
-        }
-      }
+      setupEventListeners() {
+        if (this.selectOptions) {
+          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        }
+        if (this.quantityMinus && this.quantityPlus && this.quantityInput) {
+          this.quantityMinus.addEventListener('click', () => this.updateQuantity(-1));
+          this.quantityPlus.addEventListener('click', () => this.updateQuantity(1));
+        }
+      }
 
-      updateQuantity(step) {
-        let currentValue = parseInt(this.quantityInput.value, 10);
-        if (isNaN(currentValue)) {
-          currentValue = 1;
-        }
-        const newValue = currentValue + step;
-        if (newValue >= 1) {
-          this.quantityInput.value = newValue;
-        }
-      }
+      updateQuantity(step) {
+        let currentValue = parseInt(this.quantityInput.value, 10);
+        if (isNaN(currentValue)) {
+          currentValue = 1;
+        }
+        const newValue = currentValue + step;
+        if (newValue >= 1) {
+          this.quantityInput.value = newValue;
+        }
+      }
 
-      scrollToAddToCart() {
-        const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
-        if (addToCartButton) {
-          addToCartButton.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center'
-          });
-          setTimeout(() => {
-            addToCartButton.focus();
-          }, 500);
-        }
-      }
-      
-      async handleFormSubmit(event) {
-        event.preventDefault();
+      scrollToAddToCart() {
+        const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
+        if (addToCartButton) {
+          addToCartButton.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+          setTimeout(() => {
+            addToCartButton.focus();
+          }, 500);
+        }
+      }
+      
+      handleFormSubmit(event) {
+        this.button.disabled = true;
+        this.button.textContent = 'Añadiendo...';
 
-        const formData = new FormData(this.form);
-        const productData = {
-          id: formData.get('id'),
-          quantity: formData.get('quantity')
-        };
+        // Get the form data
+        const formData = new FormData(this.form);
 
-        this.button.disabled = true;
-        this.button.textContent = 'Añadiendo...';
+        // Append the product ID and quantity to the form submission
+        const data = new URLSearchParams(formData);
+        data.append('sections', 'cart-drawer-component');
+        data.append('sections_url', window.location.pathname);
 
-        try {
-          const response = await fetch('/cart/add.js', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-            },
-            body: JSON.stringify(productData)
-          });
+        // Perform the form submission via a fetch request
+        fetch('/cart/add', {
+          method: 'POST',
+          body: data
+        })
+        .then(response => response.json())
+        .then(response => {
+          if (response.ok) {
+            // Redirect to the current URL with a parameter to open the cart
+            window.location.href = window.location.pathname + '?open-cart=true';
+          } else {
+            console.error('Failed to add item to cart');
+            this.button.textContent = 'Error';
+          }
+        })
+        .catch(error => {
+          console.error('Network error:', error);
+          this.button.textContent = 'Error';
+        })
+        .finally(() => {
+          setTimeout(() => {
+            this.button.disabled = false;
+            this.button.textContent = '{{ block.settings.button_text }}';
+          }, 2000);
+        });
+      }
+    }
+    customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
 
-          if (response.ok) {
-            // Producto añadido, ahora abre el carrito
-            // Esto es específico del tema Dawn, pero es lo más común.
-            const cartDrawerButton = document.querySelector('cart-drawer-component > button');
-            if (cartDrawerButton) {
-              cartDrawerButton.click();
-            }
-            
-            this.button.textContent = 'Añadido!';
-            
-          } else {
-            console.error('Failed to add item to cart');
-            this.button.textContent = 'Error';
-          }
-        } catch (error) {
-          console.error('Network error:', error);
-          this.button.textContent = 'Error';
-        } finally {
-          setTimeout(() => {
-            this.button.disabled = false;
-            this.button.textContent = '{{ block.settings.button_text }}';
-          }, 2000);
-        }
-      }
-    }
-    customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
+    // --- Lógica de visibilidad al hacer scroll ---
+    const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
+    const scrollThreshold = 1190;
 
-    // --- Lógica de visibilidad al hacer scroll ---
-    const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
-    const scrollThreshold = 1190;
+    if (stickyBar) {
+      function handleScroll() {
+        if (window.scrollY > scrollThreshold) {
+          stickyBar.style.opacity = '1';
+          stickyBar.style.visibility = 'visible';
+        } else {
+          stickyBar.style.opacity = '0';
+          stickyBar.style.visibility = 'hidden';
+        }
+      }
 
-    if (stickyBar) {
-      function handleScroll() {
-        if (window.scrollY > scrollThreshold) {
-          stickyBar.style.opacity = '1';
-          stickyBar.style.visibility = 'visible';
-        } else {
-          stickyBar.style.opacity = '0';
-          stickyBar.style.visibility = 'hidden';
-        }
-      }
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+    }
 
-      window.addEventListener('scroll', handleScroll);
-      handleScroll();
-    }
-  })();
+    // --- Lógica para abrir el carrito después de la recarga ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('open-cart') === 'true') {
+        const cartDrawerButton = document.querySelector('cart-drawer-component > button');
+        if (cartDrawerButton) {
+          cartDrawerButton.click();
+          // Remove the parameter from the URL to avoid opening the cart on future reloads
+          history.replaceState({}, '', window.location.pathname);
+        }
+      }
+    });
+  })();
 </script>
 
 {% schema %}
