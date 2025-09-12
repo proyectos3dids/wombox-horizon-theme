@@ -69,15 +69,14 @@ Es personalizable en el editor de temas.
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
+
   .ai-sticky-bar-price-{{ ai_gen_id }} {
     color: {{ block.settings.price_color }};
     font-size: {{ block.settings.price_size }}px;
     font-weight: 500;
     margin: 2px 0 0;
   }
-
-  /* Nuevo estilo para el contenedor del formulario para la alineación horizontal */
+  
   .ai-sticky-bar-form-{{ ai_gen_id }} {
     display: flex;
     align-items: center;
@@ -169,11 +168,10 @@ Es personalizable en el editor de temas.
       font-size: {{ block.settings.mobile_price_size }}px;
     }
 
-    /* Ajuste para el espaciado en móviles */
     .ai-sticky-bar-form-{{ ai_gen_id }} {
       gap: 8px;
     }
-
+    
     .ai-sticky-bar-button-{{ ai_gen_id }} {
       font-size: {{ block.settings.mobile_button_text_size }}px;
       padding: {{ block.settings.mobile_button_padding }}px {{ block.settings.mobile_button_padding | times: 1.2 }}px;
@@ -191,15 +189,23 @@ Es personalizable en el editor de temas.
   }
 {% endstyle %}
 
+{% comment %}
+  Determina qué producto mostrar: el producto de la página actual o un producto seleccionado en la configuración.
+{% endcomment %}
+{% assign display_product = product %}
+{% if block.settings.featured_product != blank %}
+  {% assign display_product = block.settings.featured_product %}
+{% endif %}
+
 <sticky-product-bar-{{ ai_gen_id }}
   class="ai-sticky-bar-{{ ai_gen_id }}"
   {{ block.shopify_attributes }}
 >
   <div class="ai-sticky-bar-image-{{ ai_gen_id }}">
-    {% if product.featured_image %}
+    {% if display_product.featured_image %}
       <img
-        src="{{ product.featured_image | image_url: width: 200}}"
-        alt="{{ product.featured_image.alt | escape }}"
+        src="{{ display_product.featured_image | image_url: width: 200}}"
+        alt="{{ display_product.featured_image.alt | escape }}"
         loading="lazy"
         width="200"
         height="200"
@@ -213,30 +219,33 @@ Es personalizable en el editor de temas.
 
   <div class="ai-sticky-bar-content-{{ ai_gen_id }}">
     <h3 class="ai-sticky-bar-title-{{ ai_gen_id }}">
-      {% if product.title %}
-        {{ product.title }}
+      {% if display_product.title %}
+        {{ display_product.title }}
       {% else %}
         {{ block.settings.fallback_title }}
       {% endif %}
     </h3>
-    {% if product.price and block.settings.show_price %}
+    {% if block.settings.show_price %}
       <div class="ai-sticky-bar-price-{{ ai_gen_id }}">
-        {{ product.price | money }}
+        {{ display_product.price | money }}
       </div>
     {% endif %}
   </div>
 
   <form method="post" action="/cart/add" accept-charset="UTF-8" class="ai-sticky-bar-form-{{ ai_gen_id }}" enctype="multipart/form-data">
-    {% if product.has_only_default_variant %}
-      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    {% if display_product.has_only_default_variant %}
+      <input type="hidden" name="id" value="{{ display_product.selected_or_first_available_variant.id }}">
       
-      {% comment %} Selector de cantidad horizontal {% endcomment %}
+      {% if block.settings.show_quantity_selector %}
       <div class="ai-sticky-bar-quantity-selector-{{ ai_gen_id }}">
         <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Decrease quantity" data-action="minus">-</button>
         <input type="number" name="quantity" value="1" min="1" class="ai-sticky-bar-quantity-input-{{ ai_gen_id }}">
         <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Increase quantity" data-action="plus">+</button>
       </div>
-      
+      {% else %}
+        <input type="hidden" name="quantity" value="1">
+      {% endif %}
+
       <button
         class="ai-sticky-bar-button-{{ ai_gen_id }}"
         type="submit"
@@ -248,7 +257,7 @@ Es personalizable en el editor de temas.
       <button
         class="ai-sticky-bar-button-{{ ai_gen_id }}"
         type="button"
-        aria-label="Select options"
+        aria-label="Seleccionar opciones"
       >
         {{ block.settings.button_text }}
       </button>
@@ -271,8 +280,6 @@ Es personalizable en el editor de temas.
       }
 
       connectedCallback() {
-        if (!this.form) return;
-
         if (this.selectOptions) {
           this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
         }
@@ -282,8 +289,6 @@ Es personalizable en el editor de temas.
         if (this.selectOptions) {
           this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
         }
-        
-        // Listeners for quantity selector
         if (this.quantityMinus && this.quantityPlus && this.quantityInput) {
           this.quantityMinus.addEventListener('click', () => this.updateQuantity(-1));
           this.quantityPlus.addEventListener('click', () => this.updateQuantity(1));
@@ -303,7 +308,6 @@ Es personalizable en el editor de temas.
 
       scrollToAddToCart() {
         const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
-        
         if (addToCartButton) {
           addToCartButton.scrollIntoView({
             behavior: 'smooth',
@@ -315,7 +319,6 @@ Es personalizable en el editor de temas.
         }
       }
     }
-
     customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
   })();
 </script>
@@ -326,29 +329,41 @@ Es personalizable en el editor de temas.
   "settings": [
     {
       "type": "header",
-      "content": "Content"
+      "content": "Contenido"
+    },
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Producto a mostrar (opcional)",
+      "info": "Si se selecciona un producto, la barra lo mostrará en lugar del producto de la página."
     },
     {
       "type": "text",
       "id": "button_text",
-      "label": "Button text",
+      "label": "Texto del botón",
       "default": "Add to cart"
     },
     {
       "type": "text",
       "id": "fallback_title",
-      "label": "Fallback product title",
+      "label": "Título de producto por defecto",
       "default": "Product name"
     },
     {
       "type": "checkbox",
       "id": "show_price",
-      "label": "Show price",
+      "label": "Mostrar precio",
       "default": true
     },
     {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": "Mostrar selector de cantidad",
+      "default": false
+    },
+    {
       "type": "header",
-      "content": "Bar dimensions"
+      "content": "Dimensiones de la barra"
     },
     {
       "type": "range",
@@ -357,7 +372,7 @@ Es personalizable en el editor de temas.
       "max": 95,
       "step": 5,
       "unit": "%",
-      "label": "Bar width",
+      "label": "Ancho de la barra",
       "default": 85
     },
     {
@@ -367,7 +382,7 @@ Es personalizable en el editor de temas.
       "max": 1000,
       "step": 50,
       "unit": "px",
-      "label": "Maximum width",
+      "label": "Ancho máximo",
       "default": 700
     },
     {
@@ -377,7 +392,7 @@ Es personalizable en el editor de temas.
       "max": 500,
       "step": 25,
       "unit": "px",
-      "label": "Minimum width",
+      "label": "Ancho mínimo",
       "default": 350
     },
     {
@@ -387,7 +402,7 @@ Es personalizable en el editor de temas.
       "max": 95,
       "step": 5,
       "unit": "%",
-      "label": "Mobile bar width",
+      "label": "Ancho de barra móvil",
       "default": 90
     },
     {
@@ -397,7 +412,7 @@ Es personalizable en el editor de temas.
       "max": 500,
       "step": 25,
       "unit": "px",
-      "label": "Mobile maximum width",
+      "label": "Ancho máximo móvil",
       "default": 400
     },
     {
@@ -407,12 +422,12 @@ Es personalizable en el editor de temas.
       "max": 350,
       "step": 25,
       "unit": "px",
-      "label": "Mobile minimum width",
+      "label": "Ancho mínimo móvil",
       "default": 300
     },
     {
       "type": "header",
-      "content": "Position and spacing"
+      "content": "Posición y espaciado"
     },
     {
       "type": "range",
@@ -421,7 +436,7 @@ Es personalizable en el editor de temas.
       "max": 50,
       "step": 2,
       "unit": "px",
-      "label": "Bottom margin",
+      "label": "Margen inferior",
       "default": 20
     },
     {
@@ -431,7 +446,7 @@ Es personalizable en el editor de temas.
       "max": 24,
       "step": 2,
       "unit": "px",
-      "label": "Internal padding",
+      "label": "Relleno interno",
       "default": 12
     },
     {
@@ -441,12 +456,12 @@ Es personalizable en el editor de temas.
       "max": 20,
       "step": 2,
       "unit": "px",
-      "label": "Mobile internal padding",
+      "label": "Relleno interno móvil",
       "default": 10
     },
     {
       "type": "header",
-      "content": "Product image"
+      "content": "Imagen del producto"
     },
     {
       "type": "range",
@@ -455,7 +470,7 @@ Es personalizable en el editor de temas.
       "max": 80,
       "step": 4,
       "unit": "px",
-      "label": "Image size",
+      "label": "Tamaño de imagen",
       "default": 60
     },
     {
@@ -465,12 +480,12 @@ Es personalizable en el editor de temas.
       "max": 60,
       "step": 2,
       "unit": "px",
-      "label": "Mobile image size",
+      "label": "Tamaño de imagen móvil",
       "default": 50
     },
     {
       "type": "header",
-      "content": "Typography"
+      "content": "Tipografía"
     },
     {
       "type": "range",
@@ -479,7 +494,7 @@ Es personalizable en el editor de temas.
       "max": 20,
       "step": 1,
       "unit": "px",
-      "label": "Title size",
+      "label": "Tamaño de título",
       "default": 16
     },
     {
@@ -489,7 +504,7 @@ Es personalizable en el editor de temas.
       "max": 18,
       "step": 1,
       "unit": "px",
-      "label": "Mobile title size",
+      "label": "Tamaño de título móvil",
       "default": 14
     },
     {
@@ -499,7 +514,7 @@ Es personalizable en el editor de temas.
       "max": 18,
       "step": 1,
       "unit": "px",
-      "label": "Price size",
+      "label": "Tamaño de precio",
       "default": 14
     },
     {
@@ -509,12 +524,12 @@ Es personalizable en el editor de temas.
       "max": 16,
       "step": 1,
       "unit": "px",
-      "label": "Mobile price size",
+      "label": "Tamaño de precio móvil",
       "default": 12
     },
     {
       "type": "header",
-      "content": "Button style"
+      "content": "Estilo del botón"
     },
     {
       "type": "range",
@@ -523,7 +538,7 @@ Es personalizable en el editor de temas.
       "max": 18,
       "step": 1,
       "unit": "px",
-      "label": "Button text size",
+      "label": "Tamaño del texto del botón",
       "default": 14
     },
     {
@@ -533,7 +548,7 @@ Es personalizable en el editor de temas.
       "max": 16,
       "step": 1,
       "unit": "px",
-      "label": "Mobile button text size",
+      "label": "Tamaño del texto del botón móvil",
       "default": 12
     },
     {
@@ -543,7 +558,7 @@ Es personalizable en el editor de temas.
       "max": 20,
       "step": 2,
       "unit": "px",
-      "label": "Button padding",
+      "label": "Relleno del botón",
       "default": 12
     },
     {
@@ -553,47 +568,47 @@ Es personalizable en el editor de temas.
       "max": 16,
       "step": 2,
       "unit": "px",
-      "label": "Mobile button padding",
+      "label": "Relleno del botón móvil",
       "default": 10
     },
     {
       "type": "header",
-      "content": "Colors"
+      "content": "Colores"
     },
     {
       "type": "color",
       "id": "background_color",
-      "label": "Background color",
+      "label": "Color de fondo",
       "default": "#ffffff"
     },
     {
       "type": "color",
       "id": "text_color",
-      "label": "Text color",
+      "label": "Color del texto",
       "default": "#000000"
     },
     {
       "type": "color",
       "id": "price_color",
-      "label": "Price color",
+      "label": "Color del precio",
       "default": "#666666"
     },
     {
       "type": "color",
       "id": "button_color",
-      "label": "Button background",
+      "label": "Fondo del botón",
       "default": "#000f9f"
     },
     {
       "type": "color",
       "id": "button_hover_color",
-      "label": "Button hover background",
+      "label": "Fondo del botón (hover)",
       "default": "#000000"
     },
     {
       "type": "color",
       "id": "button_text_color",
-      "label": "Button text color",
+      "label": "Color del texto del botón",
       "default": "#ffffff"
     }
   ],
