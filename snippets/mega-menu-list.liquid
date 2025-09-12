@@ -128,6 +128,7 @@
           {% render 'link-featured-image', link: link, class: 'mega-menu__link-image', sizes: collection_image_sizes %}
         {% endif %}
         <span
+          style="color:{{ settings.color-menux }};"
           class="mega-menu__link-title"
         >
           {{- link.title -}}
@@ -151,7 +152,7 @@
                 href="{{ childLink.url }}"
                 class="mega-menu__link"
               >
-                <span class="mega-menu__link-title">{{- childLink.title -}}</span>
+                <span  style="color:{{ settings.color-menux }};" class="mega-menu__link-title">{{- childLink.title -}}</span>
               </a>
             </li>
           {% endfor %}
