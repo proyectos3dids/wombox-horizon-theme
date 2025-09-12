@@ -246,9 +246,6 @@
 %}
 
 {% style %}
-    .mega-menu__grid{
-       padding-left:15%;
-    }
   [data-menu-grid-id="{{ id }}"] {
     {% if menu_content_type == 'collection_images' and parent_link.links.size < 5 %}
       --menu-columns-desktop: {{ grid_columns_count_collection_images }};
