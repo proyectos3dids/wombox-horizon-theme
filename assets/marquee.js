@@ -99,7 +99,7 @@ class MarqueeComponent extends Component {
     const speedFactor = Number(this.getAttribute('data-speed-factor'));
     
     // Define un factor de velocidad para móviles. Un número más pequeño = animación más lenta
-    const mobileSpeedFactor = 30; // Ajusta este valor para la velocidad deseada en móvil
+    const mobileSpeedFactor = 2000; // Ajusta este valor para la velocidad deseada en móvil
 
     // Comprueba si el ancho de la pantalla es menor o igual a 768px (un breakpoint común para móviles)
     const currentSpeedFactor = window.innerWidth <= 768 ? mobileSpeedFactor : speedFactor;
