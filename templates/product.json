@@ -111,7 +111,7 @@
                   "type": "add-tocart",
                   "name": "Sticky product bar",
                   "settings": {
-                    "featured_product": "",
+                    "featured_product": "belle-clip-white-petal-whisper",
                     "button_text": "Add to cart",
                     "fallback_title": "Product name",
                     "show_price": true,
