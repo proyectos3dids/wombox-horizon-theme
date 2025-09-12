@@ -89,10 +89,6 @@
   {% content_for 'blocks' %}
 </div>
 
-<!-- Sticky Product Bar -->
-{% if section.settings.enable_sticky_bar %}
-  {% render 'sticky-product-bar', product: section.settings.product, section_id: section.id %}
-{% endif %}
 
 {% stylesheet %}
   .product-information {
@@ -304,14 +300,6 @@
       "type": "header",
       "content": "t:content.layout"
     },
-    {
-      "type": "checkbox",
-      "id": "enable_sticky_bar",
-      "label": "t:settings.enable_sticky_bar",
-      "default": true,
-      "info": "t:settings.enable_sticky_bar_info"
-    }
-    ,
     {
       "type": "select",
       "id": "content_width",
