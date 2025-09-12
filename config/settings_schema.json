@@ -43,13 +43,6 @@
       
           {
             "type": "color",
-            "id": "color-menu",
-            "label": "Color del menú",
-            "default": "#000000"
-          }
-          ,
-          {
-            "type": "color",
             "id": "background",
             "label": "t:settings.background",
             "default": "#FFFFFF",
