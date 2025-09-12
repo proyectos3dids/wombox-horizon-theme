@@ -12,7 +12,16 @@
     class="svg-wrapper"
     aria-hidden="true"
   >
-    {{ 'icon-cart.svg' | inline_asset_content }}
+    {% comment %} {{ 'icon-cart.svg' | inline_asset_content }} {% endcomment %}
+      <svg style="margin-right: 6px;" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+      <mask id="mask0_957_1245" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+        <rect width="24" height="24" fill="#D9D9D9"></rect>
+      </mask>
+      <g mask="url(#mask0_957_1245)">
+        <path d="M1.66357 19.5001V18.0001H6.33658V15.7501H2.66357V14.2501H6.33658V12.0001H3.71357V10.5001H6.33658V7.56936L4.48282 3.54236L5.84057 2.90411L7.97882 7.50011H19.6943L17.7828 3.44636L19.1403 2.80786L21.3366 7.50011V19.5001H1.66357ZM11.8366 12.7501H15.8366C16.0491 12.7501 16.2272 12.6782 16.3711 12.5344C16.5147 12.3905 16.5866 12.2124 16.5866 11.9999C16.5866 11.7872 16.5147 11.6091 16.3711 11.4656C16.2272 11.3219 16.0491 11.2501 15.8366 11.2501H11.8366C11.6241 11.2501 11.446 11.322 11.3023 11.4659C11.1585 11.6097 11.0866 11.7879 11.0866 12.0004C11.0866 12.213 11.1585 12.3911 11.3023 12.5346C11.446 12.6783 11.6241 12.7501 11.8366 12.7501ZM7.83657 18.0001H19.8366V9.00011H7.83657V18.0001Z" fill="#3C2C81"></path>
+      </g>
+      </svg>
+
   </span>
 
   {% render 'cart-bubble', limit: 100, live_region: true, test_id: test_id %}
