@@ -1,0 +1,339 @@
+{{ 'footer-wombox.css' | asset_url | stylesheet_tag }}
+
+<!-- Normalizador de iconos de redes (puedes moverlo a footer-wombox.css) -->
+<style>
+  .wbf__social, .wbfm__social { --social-size: 20px; gap:16px; }
+  .wbf__soc-a { display:inline-flex; align-items:center; justify-content:center; }
+  .wbf__soc-img { height: var(--social-size); width:auto; display:block; }
+  .wbf__soc-svg { line-height:0; display:inline-flex; }
+  .wbf__soc-svg svg { height: var(--social-size); width:auto; display:block; }
+</style>
+
+<!-- sections/footer-wombox.liquid -->
+<footer class="wombox-footer">
+  <!-- DESKTOP -->
+  <div class="wbf__inner">
+    <div class="wbf__menus">
+      {% for block in section.blocks %}
+        {% if block.type == 'menu_column' %}
+          <nav class="wbf__col" {{ block.shopify_attributes }}>
+            {% if block.settings.menu != blank %}
+              <ul class="wbf__list">
+                {% for link in block.settings.menu.links %}
+                  <li class="wbf__item"><a class="wbf__link" href="{{ link.url }}">{{ link.title }}</a></li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          </nav>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    <div class="wbf__cta-col">
+      <a href="{{ section.settings.cta_link }}" class="wbf__cta">{{ section.settings.cta_text }}</a>
+
+      <!-- Redes sociales DESKTOP (editables) -->
+      <div class="wbf__social" aria-label="Redes sociales">
+
+       
+
+      {% render 'footer-wombox-sidiomaymoneda',
+      flag_de: section.settings.flag_de,
+      flag_at: section.settings.flag_at,
+      flag_be: section.settings.flag_be,
+      flag_bg: section.settings.flag_bg,
+      flag_cz: section.settings.flag_cz,
+      flag_va: section.settings.flag_va,
+      flag_hr: section.settings.flag_hr,
+      flag_dk: section.settings.flag_dk,
+      flag_sk: section.settings.flag_sk,
+      flag_si: section.settings.flag_si,
+      flag_es: section.settings.flag_es,
+      flag_ee: section.settings.flag_ee,
+      flag_fi: section.settings.flag_fi,
+      flag_fr: section.settings.flag_fr,
+      flag_gr: section.settings.flag_gr,
+      flag_hu: section.settings.flag_hu,
+      flag_ie: section.settings.flag_ie,
+      flag_it: section.settings.flag_it,
+      flag_lt: section.settings.flag_lt,
+      flag_lu: section.settings.flag_lu,
+      flag_mt: section.settings.flag_mt,
+      flag_nl: section.settings.flag_nl,
+      flag_pl: section.settings.flag_pl,
+      flag_pt: section.settings.flag_pt,
+      flag_gb: section.settings.flag_gb,
+      flag_ro: section.settings.flag_ro,
+      flag_ch: section.settings.flag_ch
+    %}
+
+
+
+        {% assign has_social = false %}
+        {% for block in section.blocks %}
+          {% if block.type == 'social_link' %}
+            {% assign has_social = true %}
+            <a style="width:12.35px;" href="{{ block.settings.url | default: '#' }}"
+               {% if block.settings.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+               class="wbf__soc-a" {{ block.shopify_attributes }}>
+              {% if block.settings.icon_svg != blank %}
+                <span class="wbf__soc-svg">{{ block.settings.icon_svg }}</span>
+              {% elsif block.settings.icon_image != blank %}
+                <img class="wbf__soc-img"
+                     src="{{ block.settings.icon_image | image_url }}"
+                     alt="{{ block.settings.alt | escape }}"
+                     loading="lazy">
+              {% endif %}
+            </a>
+          {% endif %}
+        {% endfor %}
+        {% unless has_social %}
+          <!-- Fallback si no hay bloques configurados -->
+          <a href="#" class="wbf__soc-a">f</a><a href="#" class="wbf__soc-a">i</a>
+          <a href="#" class="wbf__soc-a">x</a><a href="#" class="wbf__soc-a">in</a>
+          <a href="#" class="wbf__soc-a">▶</a><a href="#" class="wbf__soc-a">t</a>
+        {% endunless %}
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <!-- MÓVIL: acordeones + redes -->
+  <div class="wbf__inner--mobile" aria-label="Footer móvil">
+    {% for block in section.blocks %}
+      {% if block.type == 'menu_column' and block.settings.menu != blank %}
+        <details class="wbfm__acc" {{ block.shopify_attributes }}>
+          <summary class="wbfm__sum">
+           {% assign accordion_title = block.settings.mobile_title | default: block.settings.menu.title %}
+         <span class="wbfm__title">{{ accordion_title | upcase }}</span>
+            <span class="wbfm__icon" aria-hidden="true">+</span>
+          </summary>
+          <ul class="wbfm__list">
+            {% for link in block.settings.menu.links %}
+              <li class="wbfm__item"><a class="wbfm__link" href="{{ link.url }}">{{ link.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </details>
+      {% endif %}
+    {% endfor %}
+
+    <!-- Redes sociales MÓVIL (editables) -->
+    <div class="wbfm__social" aria-label="Redes sociales">
+      {% assign has_social_m = false %}
+      {% for block in section.blocks %}
+        {% if block.type == 'social_link' %}
+          {% assign has_social_m = true %}
+          <a href="{{ block.settings.url | default: '#' }}"
+             {% if block.settings.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
+             class="wbf__soc-a" {{ block.shopify_attributes }}>
+            {% if block.settings.icon_svg != blank %}
+              <span class="wbf__soc-svg">{{ block.settings.icon_svg }}</span>
+            {% elsif block.settings.icon_image != blank %}
+              <img class="wbf__soc-img"
+                   src="{{ block.settings.icon_image | image_url }}"
+                   alt="{{ block.settings.alt | escape }}"
+                   loading="lazy">
+            {% endif %}
+          </a>
+        {% endif %}
+      {% endfor %}
+      {% unless has_social_m %}
+        <a href="#" class="wbf__soc-a">f</a><a href="#" class="wbf__soc-a">i</a>
+        <a href="#" class="wbf__soc-a">x</a><a href="#" class="wbf__soc-a">in</a>
+        <a href="#" class="wbf__soc-a">▶</a><a href="#" class="wbf__soc-a">t</a>
+      {% endunless %}
+    </div>
+  </div>
+
+  {% if section.settings.strip_image != blank %}
+    {% assign strip_src = section.settings.strip_image | image_url %}
+    <div class="wbf__bottom" style="--pay-size: {{ section.settings.payments_size }}px;">
+
+      <!-- Pagos DESKTOP (en franja) -->
+      <div class="wbf__payments" aria-label="Métodos de pago">
+        {% if section.settings.use_custom_payment_icons %}
+          {% for block in section.blocks %}
+            {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
+              <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
+                <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
+              </span>
+            {% endif %}
+          {% endfor %}
+        {% elsif section.settings.show_payments %}
+          {% for type in shop.enabled_payment_types %}
+            <span class="wbf__pay-pill">{{ type | payment_type_svg_tag }}</span>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <!-- Slider WOMBOX -->
+      <div class="wbf__marquee"
+           style="--marquee-h: {{ section.settings.strip_height }}px; --marquee-speed: {{ section.settings.strip_speed }}s; --marquee-gap: {{ section.settings.strip_gap }}px;">
+        <div class="wbf__track">
+          {% for i in (1..8) %}<img src="{{ strip_src }}" alt="WOMBOX" class="wbf__item-img">{% endfor %}
+          {% for i in (1..8) %}<img src="{{ strip_src }}" alt="WOMBOX" class="wbf__item-img">{% endfor %}
+        </div>
+      </div>
+
+      <!-- Copy desktop -->
+      <p class="wbf__copy wbf__copy--desktop">© {{ 'now' | date: "%Y" }} WOMBOX</p>
+    </div>
+  {% endif %}
+
+<br>
+
+<!-- Idioma/Moneda MÓVIL -->
+<div style="margin-left:20%;" class="wbf__flags-mobile">
+  {% render 'footer-wombox-sidiomaymoneda',
+    flag_de: section.settings.flag_de,
+    flag_at: section.settings.flag_at,
+    flag_be: section.settings.flag_be,
+    flag_bg: section.settings.flag_bg,
+    flag_cz: section.settings.flag_cz,
+    flag_va: section.settings.flag_va,
+    flag_hr: section.settings.flag_hr,
+    flag_dk: section.settings.flag_dk,
+    flag_sk: section.settings.flag_sk,
+    flag_si: section.settings.flag_si,
+    flag_es: section.settings.flag_es,
+    flag_ee: section.settings.flag_ee,
+    flag_fi: section.settings.flag_fi,
+    flag_fr: section.settings.flag_fr,
+    flag_gr: section.settings.flag_gr,
+    flag_hu: section.settings.flag_hu,
+    flag_ie: section.settings.flag_ie,
+    flag_it: section.settings.flag_it,
+    flag_lt: section.settings.flag_lt,
+    flag_lu: section.settings.flag_lu,
+    flag_mt: section.settings.flag_mt,
+    flag_nl: section.settings.flag_nl,
+    flag_pl: section.settings.flag_pl,
+    flag_pt: section.settings.flag_pt,
+    flag_gb: section.settings.flag_gb,
+    flag_ro: section.settings.flag_ro,
+    flag_ch: section.settings.flag_ch
+  %}
+</div>
+
+
+  <!-- Pagos MÓVIL (fuera de franja) -->
+  <div class="wbf__payments-mobile" style="--pay-size: {{ section.settings.payments_size }}px;" aria-label="Métodos de pago">
+    {% if section.settings.use_custom_payment_icons %}
+      {% for block in section.blocks %}
+        {% if block.type == 'payment_icon' and block.settings.icon_image != blank %}
+          <span class="wbf__pay-pill" {{ block.shopify_attributes }}>
+            <img src="{{ block.settings.icon_image | image_url }}" alt="{{ block.settings.icon_alt | escape }}" loading="lazy">
+          </span>
+        {% endif %}
+      {% endfor %}
+    {% elsif section.settings.show_payments %}
+      {% for type in shop.enabled_payment_types %}
+        <span class="wbf__pay-pill">{{ type | payment_type_svg_tag }}</span>
+      {% endfor %}
+    {% endif %}
+  </div>
+  
+
+
+  <!-- Copy móvil -->
+  <p class="wbf__copy wbf__copy--mobile">© {{ 'now' | date: "%Y" }} WOMBOX</p>
+</footer>
+
+{% schema %}
+{
+  "name": "Footer WOMBOX (Desktop)",
+  "tag": "section",
+  "class": "section-footer-wombox",
+  "settings": [
+
+    { "type": "image_picker", "id": "flag_de", "label": "Bandera Alemania" },
+    { "type": "image_picker", "id": "flag_at", "label": "Bandera Austria" },
+    { "type": "image_picker", "id": "flag_be", "label": "Bandera Bélgica" },
+    { "type": "image_picker", "id": "flag_bg", "label": "Bandera Bulgaria" },
+    { "type": "image_picker", "id": "flag_cz", "label": "Bandera Chequia" },
+    { "type": "image_picker", "id": "flag_va", "label": "Bandera Ciudad del Vaticano" },
+    { "type": "image_picker", "id": "flag_hr", "label": "Bandera Croacia" },
+    { "type": "image_picker", "id": "flag_dk", "label": "Bandera Dinamarca" },
+    { "type": "image_picker", "id": "flag_sk", "label": "Bandera Eslovaquia" },
+    { "type": "image_picker", "id": "flag_si", "label": "Bandera Eslovenia" },
+    { "type": "image_picker", "id": "flag_es", "label": "Bandera España" },
+    { "type": "image_picker", "id": "flag_ee", "label": "Bandera Estonia" },
+    { "type": "image_picker", "id": "flag_fi", "label": "Bandera Finlandia" },
+    { "type": "image_picker", "id": "flag_fr", "label": "Bandera Francia" },
+    { "type": "image_picker", "id": "flag_gr", "label": "Bandera Grecia" },
+    { "type": "image_picker", "id": "flag_hu", "label": "Bandera Hungría" },
+    { "type": "image_picker", "id": "flag_ie", "label": "Bandera Irlanda" },
+    { "type": "image_picker", "id": "flag_it", "label": "Bandera Italia" },
+    { "type": "image_picker", "id": "flag_lt", "label": "Bandera Lituania" },
+    { "type": "image_picker", "id": "flag_lu", "label": "Bandera Luxemburgo" },
+    { "type": "image_picker", "id": "flag_mt", "label": "Bandera Malta" },
+    { "type": "image_picker", "id": "flag_nl", "label": "Bandera Países Bajos" },
+    { "type": "image_picker", "id": "flag_pl", "label": "Bandera Polonia" },
+    { "type": "image_picker", "id": "flag_pt", "label": "Bandera Portugal" },
+    { "type": "image_picker", "id": "flag_gb", "label": "Bandera Reino Unido" },
+    { "type": "image_picker", "id": "flag_ro", "label": "Bandera Rumanía" },
+    { "type": "image_picker", "id": "flag_ch", "label": "Bandera Suiza" },
+    { "type": "text", "id": "cta_text", "label": "Texto del botón CTA", "default": "DESCUBRE NUESTRAS CAJAS" },
+    { "type": "url", "id": "cta_link", "label": "Enlace del botón CTA" },
+
+    { "type": "image_picker", "id": "strip_image", "label": "Imagen de franja (slider)" },
+    { "type": "range", "id": "strip_height", "label": "Altura de la franja", "min": 60, "max": 220, "step": 2, "default": 120, "unit": "px" },
+    { "type": "range", "id": "strip_speed", "label": "Velocidad del slider", "min": 5, "max": 60, "step": 1, "default": 25, "unit": "s" },
+    { "type": "range", "id": "strip_gap", "label": "Separación entre imágenes", "min": 0, "max": 300, "step": 5, "default": 140, "unit": "px" },
+
+    { "type": "checkbox", "id": "show_payments", "label": "Mostrar métodos de pago automáticos", "default": false },
+    { "type": "checkbox", "id": "use_custom_payment_icons", "label": "Usar iconos de pago (subidos en bloques)", "default": true },
+    { "type": "range", "id": "payments_size", "label": "Tamaño de iconos de pago", "min": 14, "max": 26, "step": 1, "default": 18, "unit": "px" }
+  ],
+  "blocks": [
+    {
+      "type": "menu_column",
+      "name": "Columna de menú",
+      "limit": 3,
+      "settings": [
+        { "type": "link_list", "id": "menu", "label": "Selecciona un menú" },
+        {
+          "type": "text",
+          "id": "mobile_title",
+          "label": "Título móvil del acordeón",
+          "info": "Si lo dejas vacío, se usa el nombre del menú."
+        }
+      ]
+    },
+    {
+      "type": "payment_icon",
+      "name": "Icono de pago (imagen)",
+      "limit": 10,
+      "settings": [
+        { "type": "image_picker", "id": "icon_image", "label": "Subir icono de pago (SVG/PNG)" },
+        { "type": "text", "id": "icon_alt", "label": "Texto alternativo" }
+      ]
+    },
+    {
+      "type": "social_link",
+      "name": "Red social (icono)",
+      "limit": 12,
+      "settings": [
+        { "type": "image_picker", "id": "icon_image", "label": "Icono como imagen (SVG/PNG/JPG)" },
+        { "type": "textarea", "id": "icon_svg", "label": "Icono como SVG (pega el código <svg>…</svg>)", "info": "Si rellenas este campo, se usará el SVG en lugar de la imagen." },
+        { "type": "text", "id": "alt", "label": "Texto alternativo", "default": "Red social" },
+        { "type": "url", "id": "url", "label": "Enlace" },
+        { "type": "checkbox", "id": "new_tab", "label": "Abrir en nueva pestaña", "default": true }
+      ]
+    }
+  ],
+  "max_blocks": 40,
+  "presets": [
+    {
+      "name": "Footer WOMBOX (Desktop)",
+      "blocks": [
+        { "type": "menu_column" },
+        { "type": "menu_column" },
+        { "type": "menu_column" }
+      ]
+    }
+  ]
+}
+{% endschema %}

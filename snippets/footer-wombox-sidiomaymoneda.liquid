@@ -1,0 +1,352 @@
+{%- comment -%}
+  Pills País/Moneda + Idioma (sin JS del tema)
+  Parámetros opcionales al render:
+    - show_country: true/false (si no se pasa, se activa cuando hay >1 país)
+    - show_language: true/false (si no se pasa, se activa cuando hay >1 idioma)
+{%- endcomment -%}
+
+{% liquid
+  assign _show_country  = show_country
+  assign _show_language = show_language
+
+%}
+
+{% assign _show_country = false %}
+{% if localization.available_countries.size > 1 %}
+  {% assign _show_country = true %}
+{% endif %}
+
+{% assign _show_language = false %}
+{% if localization.available_languages.size > 1 %}
+  {% assign _show_language = true %}
+{% endif %}
+
+<div class="locpill-wrap" role="group" aria-label="Selección de país e idioma">
+  {%- if _show_country -%}
+    {% form 'localization', id: 'LocPillCountry', class: 'locpill locpill--xxs' %}
+      <details class="locpill__details">
+        <summary class="locpill__summary" aria-label="Cambiar país y moneda">
+          <span class="locpill__flag">
+
+
+{% assign cc = localization.country.iso_code | upcase %}
+
+<span class="locpill__flag">
+  {% case cc %}
+    {% when 'DE' %}
+      <img class="locpill__flag-img" src="{{ flag_de | image_url }}" alt="Alemania" loading="lazy" decoding="async">
+    {% when 'AT' %}
+      <img class="locpill__flag-img" src="{{ flag_at | image_url }}" alt="Austria" loading="lazy" decoding="async">
+    {% when 'BE' %}
+      <img class="locpill__flag-img" src="{{ flag_be | image_url }}" alt="Bélgica" loading="lazy" decoding="async">
+    {% when 'BG' %}
+      <img class="locpill__flag-img" src="{{ flag_bg | image_url }}" alt="Bulgaria" loading="lazy" decoding="async">
+    {% when 'CZ' %}
+      <img class="locpill__flag-img" src="{{ flag_cz | image_url }}" alt="Chequia" loading="lazy" decoding="async">
+    {% when 'VA' %}
+      <img class="locpill__flag-img" src="{{ flag_va | image_url }}" alt="Ciudad del Vaticano" loading="lazy" decoding="async">
+    {% when 'HR' %}
+      <img class="locpill__flag-img" src="{{ flag_hr | image_url }}" alt="Croacia" loading="lazy" decoding="async">
+    {% when 'DK' %}
+      <img class="locpill__flag-img" src="{{ flag_dk | image_url }}" alt="Dinamarca" loading="lazy" decoding="async">
+    {% when 'SK' %}
+      <img class="locpill__flag-img" src="{{ flag_sk | image_url }}" alt="Eslovaquia" loading="lazy" decoding="async">
+    {% when 'SI' %}
+      <img class="locpill__flag-img" src="{{ flag_si | image_url }}" alt="Eslovenia" loading="lazy" decoding="async">
+    {% when 'ES' %}
+      <img class="locpill__flag-img" src="{{ flag_es | image_url }}" alt="España" loading="lazy" decoding="async">
+    {% when 'EE' %}
+      <img class="locpill__flag-img" src="{{ flag_ee | image_url }}" alt="Estonia" loading="lazy" decoding="async">
+    {% when 'FI' %}
+      <img class="locpill__flag-img" src="{{ flag_fi | image_url }}" alt="Finlandia" loading="lazy" decoding="async">
+    {% when 'FR' %}
+      <img class="locpill__flag-img" src="{{ flag_fr | image_url }}" alt="Francia" loading="lazy" decoding="async">
+    {% when 'GR' %}
+      <img class="locpill__flag-img" src="{{ flag_gr | image_url }}" alt="Grecia" loading="lazy" decoding="async">
+    {% when 'HU' %}
+      <img class="locpill__flag-img" src="{{ flag_hu | image_url }}" alt="Hungría" loading="lazy" decoding="async">
+    {% when 'IE' %}
+      <img class="locpill__flag-img" src="{{ flag_ie | image_url }}" alt="Irlanda" loading="lazy" decoding="async">
+    {% when 'IT' %}
+      <img class="locpill__flag-img" src="{{ flag_it | image_url }}" alt="Italia" loading="lazy" decoding="async">
+    {% when 'LT' %}
+      <img class="locpill__flag-img" src="{{ flag_lt | image_url }}" alt="Lituania" loading="lazy" decoding="async">
+    {% when 'LU' %}
+      <img class="locpill__flag-img" src="{{ flag_lu | image_url }}" alt="Luxemburgo" loading="lazy" decoding="async">
+    {% when 'MT' %}
+      <img class="locpill__flag-img" src="{{ flag_mt | image_url }}" alt="Malta" loading="lazy" decoding="async">
+    {% when 'NL' %}
+      <img class="locpill__flag-img" src="{{ flag_nl | image_url }}" alt="Países Bajos" loading="lazy" decoding="async">
+    {% when 'PL' %}
+      <img class="locpill__flag-img" src="{{ flag_pl | image_url }}" alt="Polonia" loading="lazy" decoding="async">
+    {% when 'PT' %}
+      <img class="locpill__flag-img" src="{{ flag_pt | image_url }}" alt="Portugal" loading="lazy" decoding="async">
+    {% when 'GB' %}
+      <img class="locpill__flag-img" src="{{ flag_gb | image_url }}" alt="Reino Unido" loading="lazy" decoding="async">
+    {% when 'RO' %}
+      <img class="locpill__flag-img" src="{{ flag_ro | image_url }}" alt="Rumanía" loading="lazy" decoding="async">
+    {% when 'CH' %}
+      <img class="locpill__flag-img" src="{{ flag_ch | image_url }}" alt="Suiza" loading="lazy" decoding="async">
+    {% else %}
+      <span class="locpill__emoji" data-cc="{{ cc }}">🌐</span>
+  {% endcase %}
+</span>
+
+
+
+          </span>
+          <span class="locpill__label">{{ localization.country.name | upcase }} {{ localization.country.currency.symbol }}</span>
+          <span class="locpill__chev" aria-hidden="true">▾</span>
+        </summary>
+
+        
+        <div class="locpill__modal" aria-modal="true" role="dialog">
+          <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
+
+          <div class="locpill__panel" role="document">
+            <div class="locpill__head">
+              <span class="locpill__title">Selecciona país y moneda</span>
+              <button class="locpill__close" type="button" data-close aria-label="Cerrar">✕</button>
+            </div>
+
+            <div class="locpill__options" role="listbox">
+              {%- for country in localization.available_countries -%}
+                <button type="submit"
+                        name="country_code"
+                        value="{{ country.iso_code }}"
+                        class="locpill__option"
+                        {% if country.iso_code == localization.country.iso_code %}aria-current="true"{% endif %}>
+                  <span class="locpill__opt-flag">
+                    <span class="locpill__emoji">{{ country.iso_code | upcase }}</span>
+                  </span>
+                  <span class="locpill__opt-label">{{ country.name }} {{ country.currency.symbol }}</span>
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </details>
+    {% endform %}
+  {%- endif -%}
+
+  {%- if _show_language -%}
+    {% form 'localization', id: 'LocPillLanguage', class: 'locpill locpill--xxs' %}
+      <details class="locpill__details">
+<summary class="locpill__summary" aria-label="Cambiar idioma">
+
+
+
+{% assign lc = localization.language.iso_code | downcase %}
+
+<span class="locpill__flag">
+  {% case lc %}
+    {% when 'de' %}
+      <img class="locpill__flag-img" src="{{ flag_de | image_url }}" alt="Alemania" loading="lazy" decoding="async">
+    {% when 'at' %}
+      <img class="locpill__flag-img" src="{{ flag_at | image_url }}" alt="Austria" loading="lazy" decoding="async">
+    {% when 'be' %}
+      <img class="locpill__flag-img" src="{{ flag_be | image_url }}" alt="Bélgica" loading="lazy" decoding="async">
+    {% when 'bg' %}
+      <img class="locpill__flag-img" src="{{ flag_bg | image_url }}" alt="Bulgaria" loading="lazy" decoding="async">
+    {% when 'cz' %}
+      <img class="locpill__flag-img" src="{{ flag_cz | image_url }}" alt="Chequia" loading="lazy" decoding="async">
+    {% when 'va' %}
+      <img class="locpill__flag-img" src="{{ flag_va | image_url }}" alt="Ciudad del Vaticano" loading="lazy" decoding="async">
+    {% when 'hr' %}
+      <img class="locpill__flag-img" src="{{ flag_hr | image_url }}" alt="Croacia" loading="lazy" decoding="async">
+    {% when 'dk' %}
+      <img class="locpill__flag-img" src="{{ flag_dk | image_url }}" alt="Dinamarca" loading="lazy" decoding="async">
+    {% when 'sk' %}
+      <img class="locpill__flag-img" src="{{ flag_sk | image_url }}" alt="Eslovaquia" loading="lazy" decoding="async">
+    {% when 'si' %}
+      <img class="locpill__flag-img" src="{{ flag_si | image_url }}" alt="Eslovenia" loading="lazy" decoding="async">
+    {% when 'es' %}
+      <img class="locpill__flag-img" src="{{ flag_es | image_url }}" alt="España" loading="lazy" decoding="async">
+    {% when 'ee' %}
+      <img class="locpill__flag-img" src="{{ flag_ee | image_url }}" alt="Estonia" loading="lazy" decoding="async">
+    {% when 'fi' %}
+      <img class="locpill__flag-img" src="{{ flag_fi | image_url }}" alt="Finlandia" loading="lazy" decoding="async">
+    {% when 'fr' %}
+      <img class="locpill__flag-img" src="{{ flag_fr | image_url }}" alt="Francia" loading="lazy" decoding="async">
+    {% when 'gr' %}
+      <img class="locpill__flag-img" src="{{ flag_gr | image_url }}" alt="Grecia" loading="lazy" decoding="async">
+    {% when 'hu' %}
+      <img class="locpill__flag-img" src="{{ flag_hu | image_url }}" alt="Hungría" loading="lazy" decoding="async">
+    {% when 'ie' %}
+      <img class="locpill__flag-img" src="{{ flag_ie | image_url }}" alt="Irlanda" loading="lazy" decoding="async">
+    {% when 'it' %}
+      <img class="locpill__flag-img" src="{{ flag_it | image_url }}" alt="Italia" loading="lazy" decoding="async">
+    {% when 'lt' %}
+      <img class="locpill__flag-img" src="{{ flag_lt | image_url }}" alt="Lituania" loading="lazy" decoding="async">
+    {% when 'lu' %}
+      <img class="locpill__flag-img" src="{{ flag_lu | image_url }}" alt="Luxemburgo" loading="lazy" decoding="async">
+    {% when 'mt' %}
+      <img class="locpill__flag-img" src="{{ flag_mt | image_url }}" alt="Malta" loading="lazy" decoding="async">
+    {% when 'nl' %}
+      <img class="locpill__flag-img" src="{{ flag_nl | image_url }}" alt="Países Bajos" loading="lazy" decoding="async">
+    {% when 'pl' %}
+      <img class="locpill__flag-img" src="{{ flag_pl | image_url }}" alt="Polonia" loading="lazy" decoding="async">
+    {% when 'pt' %}
+      <img class="locpill__flag-img" src="{{ flag_pt | image_url }}" alt="Portugal" loading="lazy" decoding="async">
+    {% when 'gb', 'en' %}
+      <img class="locpill__flag-img" src="{{ flag_gb | image_url }}" alt="Reino Unido" loading="lazy" decoding="async">
+    {% when 'ro' %}
+      <img class="locpill__flag-img" src="{{ flag_ro | image_url }}" alt="Rumanía" loading="lazy" decoding="async">
+    {% when 'ch' %}
+      <img class="locpill__flag-img" src="{{ flag_ch | image_url }}" alt="Suiza" loading="lazy" decoding="async">
+    {% else %}
+      <span class="locpill__emoji">🌐</span>
+  {% endcase %}
+</span>
+
+
+  <!-- Texto con bandera inline cuando ES -->
+  <span class="locpill__label">
+    {{ localization.language.endonym_name | default: localization.language.name | upcase }}
+  </span>
+
+  <span class="locpill__chev" aria-hidden="true">▾</span>
+</summary>
+
+        <div class="locpill__modal" aria-modal="true" role="dialog">
+          <button class="locpill__overlay" type="button" data-close aria-label="Cerrar"></button>
+
+          <div class="locpill__panel" role="document">
+            <div class="locpill__head">
+              <span class="locpill__title">Selecciona idioma</span>
+              <button class="locpill__close" type="button" data-close aria-label="Cerrar">✕</button>
+            </div>
+
+            <div class="locpill__options" role="listbox">
+              {%- for language in localization.available_languages -%}
+                <button type="submit"
+                        name="locale_code"
+                        value="{{ language.iso_code }}"
+                        class="locpill__option"
+                        {% if language.iso_code == localization.language.iso_code %}aria-current="true"{% endif %}>
+                  <span class="locpill__opt-label">{{ language.endonym_name | default: language.name }}</span>
+                </button>
+              {%- endfor -%}
+            </div>
+          </div>
+        </div>
+      </details>
+    {% endform %}
+  {%- endif -%}
+</div>
+
+<style>
+/* ===== PÍLDORAS EN LA MISMA LÍNEA ===== */
+.locpill-wrap{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:nowrap;
+  white-space:nowrap;
+}
+form.locpill{ display:inline-flex; width:auto !important; flex:0 0 auto; margin:0; }
+.locpill__details{ display:inline-block; }
+.locpill__summary{ display:inline-flex; width:auto; margin:0; white-space:nowrap; }
+
+/* ===== Tamaños ===== */
+.locpill--sm{
+  --pill-h:26px; --pill-px:12px; --pill-gap:8px; --flag-size:20px; --border-w:1.6px;
+}
+.locpill--xxs{
+  --pill-h:18px; --pill-px:8px; --pill-gap:6px; --flag-size:14px; --border-w:1.2px;
+}
+.locpill--micro{
+  --pill-h:16px; --pill-px:6px; --pill-gap:4px; --flag-size:12px; --border-w:1px;
+}
+
+/* ===== Base pill ===== */
+.locpill{ position:relative; }
+.locpill__summary{
+  list-style:none;
+  align-items:center; gap:var(--pill-gap);
+  height:var(--pill-h); padding:0 var(--pill-px);
+  border-radius:9999px; border:var(--border-w) solid #fff;
+  background:rgba(255,255,255,.08);
+  color:#fff; font-weight:600; text-transform:uppercase;
+  font-size:10px; line-height:1; cursor:pointer; -webkit-tap-highlight-color:transparent;
+}
+.locpill--sm .locpill__summary{ font-size:12px; }
+.locpill--xxs .locpill__summary{ font-size:10px; }
+.locpill--micro .locpill__summary{ font-size:9px; }
+.locpill__summary::-webkit-details-marker{ display:none; }
+
+.locpill__flag{ width:var(--flag-size); height:var(--flag-size); border-radius:9999px; overflow:hidden; display:grid; place-items:center; flex:0 0 var(--flag-size); }
+.locpill__emoji{ font-size:11px; line-height:1; }
+.locpill--sm .locpill__emoji{ font-size:14px; }
+
+.locpill__label{ white-space:nowrap; }
+.locpill__chev{ margin-left:auto; font-size:9px; transition:transform .2s; }
+.locpill__details[open] .locpill__chev{ transform:rotate(180deg); }
+
+/* ===== MODAL CENTRADO ===== */
+.locpill__modal{ position:fixed; inset:0; display:none; z-index:999; }
+.locpill__details[open] .locpill__modal{ display:flex; }
+
+.locpill__overlay{ position:absolute; inset:0; background:rgba(0,0,0,.55); border:0; cursor:pointer; }
+.locpill__panel{
+  position:relative; margin:auto; width:min(560px,92vw); max-height:80vh; overflow:auto;
+  background:#fff; color:#111; border-radius:16px; padding:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,.25);
+}
+.locpill__head{ display:flex; align-items:center; justify-content:space-between; gap:8px; margin-bottom:10px; }
+.locpill__title{ font-weight:700; font-size:16px; }
+.locpill__close{ background:transparent; border:0; font-size:20px; line-height:1; cursor:pointer; padding:6px; border-radius:8px; }
+.locpill__close:hover{ background:#f3f3f3; }
+
+/* Grid de opciones del modal */
+.locpill__options{
+  display:grid; grid-template-columns:repeat(auto-fill, minmax(180px,1fr));
+  gap:8px; padding:4px;
+}
+
+/* Estilo de opción (modo modal) */
+.locpill__option{
+  width:100%; display:flex; align-items:center; gap:8px;
+  padding:10px 12px; border-radius:10px;
+  background:#f7f7f7; border:none; cursor:pointer; text-align:left; font-size:13px;
+}
+.locpill__option:hover{ background:#efefef; }
+.locpill__option[aria-current="true"]{ background:#e8e8e8; font-weight:600; }
+
+/* Accesibilidad */
+.locpill__summary:focus-visible, .locpill__option:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+html.locpill--modal-open, body.locpill--modal-open{ overflow:hidden; }
+
+/* Opcional: scroll horizontal si el viewport es MUY estrecho */
+@media (max-width: 380px){
+  .locpill-wrap{ overflow-x:auto; -webkit-overflow-scrolling:touch; }
+}
+</style>
+
+<script>
+/* ===== Comportamiento del modal (ligero y sin dependencias) ===== */
+(function(){
+  // Cerrar al pulsar overlay o la X
+  document.addEventListener('click', function(ev){
+    if(ev.target.matches('.locpill__overlay, .locpill__close')){
+      const d = ev.target.closest('.locpill__details'); if(d) d.removeAttribute('open');
+    }
+  });
+
+  // Cerrar con ESC
+  document.addEventListener('keydown', function(ev){
+    if(ev.key === 'Escape'){
+      document.querySelectorAll('.locpill__details[open]').forEach(d=>d.removeAttribute('open'));
+    }
+  });
+
+  // Bloquear/desbloquear scroll de la página según estado del modal
+  document.addEventListener('toggle', function(ev){
+    if(ev.target.classList && ev.target.classList.contains('locpill__details')){
+      const anyOpen = document.querySelector('.locpill__details[open]');
+      document.documentElement.classList.toggle('locpill--modal-open', !!anyOpen);
+      document.body.classList.toggle('locpill--modal-open', !!anyOpen);
+    }
+  }, true);
+})();
+</script>
