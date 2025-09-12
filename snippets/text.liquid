@@ -220,7 +220,7 @@
 
 <script>
 
-  document.querySelectorAll('.expand-text-button').forEach(button => {
+document.querySelectorAll('.expand-text-button').forEach(button => {
   // Encuentra el bloque de texto asociado al botón
   const textBlock = button.closest('.text-block-wrapper').querySelector('.text-block');
 
@@ -248,5 +248,4 @@
     button.setAttribute('aria-expanded', isExpanded);
   });
 });
-
 </script>
