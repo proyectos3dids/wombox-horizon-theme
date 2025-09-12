@@ -1,16 +1,13 @@
-{%- doc -%}
-  Intended for use in a block similar to the text block.
-
-  @param {string} [class] - custom class to define in addition to text-block classes
-  @param {string} [fallback_text] - fallback text if settings.text does not exist
-  @param {object} [block] - The block object
-  @param {string} [width] - width of the text block
-{%- enddoc -%}
+{%- comment -%}
+  Bloque de texto con funcionalidad de "Ver más".
+  Este archivo incluye HTML, CSS y JavaScript para el comportamiento.
+{%- endcomment -%}
 
 {% liquid
   assign block_settings = block.settings
   assign plain_text = block_settings.text | strip_newlines | strip_html | strip
   assign text_width = width | default: block_settings.width
+  assign truncate_lines = 2
 
   if block_settings.font_size contains 'heading-lg' or block_settings.font_size contains 'heading-xl'
     assign type = 'display'
@@ -48,48 +45,44 @@
   endcapture
 %}
 
-{% capture attributes %}
-  class="{{ class }} spacing-style text-block text-block--{{ block.id }} {{ block_settings.type_preset }}
-    {{ text_block_classes }}
-  "
+<div class="text-block-wrapper">
+  {% capture attributes %}
+    class="{{ class }} spacing-style text-block text-block--{{ block.id }} {{ block_settings.type_preset }} {{ text_block_classes }}"
+    style="
+      {% render 'spacing-padding', settings: block_settings %}
+      {% render 'typography-style', settings: block_settings %}
+      --width: {{ text_width }};
+      --max-width: var(--max-width--{{ type }}-{{ block_settings.max_width }});
+      {% if text_width == "100%" %}
+        --text-align: {{ block_settings.alignment }};
+      {% endif %}
+      {% if block_settings.background %}
+        --text-background-color: {{ block_settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
+        --text-corner-radius: {{ block_settings.corner_radius }}px;
+        --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
+      {% endif %}
+      --truncate-lines: {{ truncate_lines }};
+    "
+    {{ block.shopify_attributes }}
+  {% endcapture %}
 
-  style="
-    {% render 'spacing-padding', settings: block_settings %}
-    {% render 'typography-style', settings: block_settings %}
-    --width: {{ text_width }};
-    --max-width: var(--max-width--{{ type }}-{{ block_settings.max_width }});
-    {% if text_width == "100%" %}
-      --text-align: {{ block_settings.alignment }};
-    {% endif %}
-    {% if block_settings.background %}
-      --text-background-color: {{ block_settings.background_color | default: 'rgb(255 255 255 / 1.0)' }};
-      --text-corner-radius: {{ block_settings.corner_radius }}px;
-      --text-padding: max(var(--padding-2xs), calc((var(--text-corner-radius) + var(--padding-xs)) * (1 - cos(45deg))));
-    {% endif %}
-  "
+  {%- if fallback_text != blank and plain_text == blank -%}
+    <div {{ attributes }}>
+      {{ fallback_text }}
+    </div>
+  {%- elsif plain_text != blank -%}
+    <div {{ attributes }}>
+      {{ block.settings.text }}
+    </div>
+  {%- endif -%}
 
-  {{ block.shopify_attributes }}
-{% endcapture %}
-{% liquid
-  # {{ attributes }} must be on the immediate HTML parent of the text to preserve
-  # the click-to-edit connection in the theme editor. Any break between the text,
-  # including if-statements, will break the connection.
-
-  assign element = 'div'
-  if is_rte
-    assign element = 'rte-formatter'
-  endif
-%}
-
-{% if fallback_text != blank and plain_text == blank %}
-  <div {{ attributes }}>
-    {{ fallback_text }}
-  </div>
-{% elsif plain_text != blank %}
-  <{{ element }} {{ attributes }}>
-    {{ block.settings.text }}
-  </{{ element }}>
-{% endif %}
+  {% comment %} El botón solo se muestra si el texto es lo suficientemente largo para ser truncado {% endcomment %}
+  {% if plain_text.size > 150 %}
+    <button type="button" class="expand-text-button" aria-expanded="false">
+      <span>Ver más</span>
+    </button>
+  {% endif %}
+</div>
 
 {% stylesheet %}
   :root {
@@ -116,19 +109,48 @@
     --text-align-default: right;
   }
 
+  .text-block-wrapper {
+    position: relative;
+  }
+
   .text-block {
     width: var(--width);
     max-width: 100%;
     display: flex;
     flex-direction: column;
     align-items: var(--horizontal-alignment);
+    text-align: var(--text-align, var(--text-align-default));
   }
-
+  
   .text-block > * {
     width: var(--width);
     max-width: var(--max-width, 100%);
     text-align: var(--text-align, var(--text-align-default));
     text-wrap: var(--text-wrap);
+  }
+
+  /* Estilos para truncar el texto */
+  .text-block.is-truncated {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--truncate-lines);
+    overflow: hidden;
+  }
+
+  .text-block.is-expanded {
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+
+  .expand-text-button {
+    background: none;
+    border: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: underline;
+    padding: 0;
+    margin-top: 10px;
   }
 
   .text-block:not(.text-block--full-width).rte,
@@ -217,3 +239,31 @@
   }
 {% endstylesheet %}
 
+<script>
+  document.querySelectorAll('.expand-text-button').forEach(button => {
+    const textBlock = button.closest('.text-block-wrapper').querySelector('.text-block');
+
+    const checkTruncation = () => {
+      // Usa scrollHeight > offsetHeight para verificar si el contenido se desborda
+      const isLongEnough = textBlock.scrollHeight > textBlock.offsetHeight;
+      if (isLongEnough) {
+        button.style.display = 'block';
+        textBlock.classList.add('is-truncated');
+      } else {
+        button.style.display = 'none';
+        textBlock.classList.remove('is-truncated');
+      }
+    };
+    
+    // Ejecutar al cargar la página y al redimensionar
+    window.addEventListener('load', checkTruncation);
+    window.addEventListener('resize', checkTruncation);
+
+    // Evento para el clic del botón
+    button.addEventListener('click', () => {
+      const isExpanded = textBlock.classList.toggle('is-expanded');
+      button.querySelector('span').textContent = isExpanded ? 'Ver menos' : 'Ver más';
+      button.setAttribute('aria-expanded', isExpanded);
+    });
+  });
+</script>
