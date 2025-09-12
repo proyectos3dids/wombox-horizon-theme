@@ -217,6 +217,7 @@
       ],
       "name": "t:names.split_showcase",
       "settings": {
+        "espaciado_grupo": 20,
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
@@ -353,7 +354,7 @@
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_radius": 0,
+                "border_radius": 20,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -520,7 +521,7 @@
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_radius": 0,
+                "border_radius": 20,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -786,7 +787,7 @@
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
-            "border_radius": 0
+            "border_radius": 20
           },
           "blocks": {
             "collection_title_8GXEwm": {
@@ -806,7 +807,7 @@
                 "color": "var(--color-foreground)",
                 "background": true,
                 "background_color": "#ffffff",
-                "corner_radius": 0,
+                "corner_radius": 20,
                 "padding-block-start": 4,
                 "padding-block-end": 4,
                 "padding-inline-start": 8,
@@ -884,7 +885,7 @@
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
-            "border_radius": 0,
+            "border_radius": 20,
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
@@ -919,7 +920,7 @@
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
-            "border_radius": 0,
+            "border_radius": 20,
             "placeholder": "",
             "toggle_overlay": false,
             "overlay_color": "#00000026",
@@ -1010,6 +1011,7 @@
       ],
       "name": "t:names.image_with_text",
       "settings": {
+        "espaciado_grupo": 20,
         "content_direction": "row",
         "vertical_on_mobile": true,
         "horizontal_alignment": "flex-start",
