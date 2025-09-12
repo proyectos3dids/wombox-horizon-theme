@@ -1,7 +1,8 @@
 {% comment %}
-Este código crea una barra flotante de producto con un selector de cantidad.
+Este código crea una barra flotante de producto.
 La barra se adhiere a la parte inferior de la pantalla en las páginas de producto.
-Incluye una imagen del producto, el título, un selector de cantidad y un botón para añadir al carrito.
+Incluye una imagen del producto, el título y un botón para añadir al carrito.
+El botón siempre desplaza al usuario a la sección principal de compra del producto.
 Es personalizable en el editor de temas.
 {% endcomment %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
@@ -69,7 +70,7 @@ Es personalizable en el editor de temas.
     overflow: hidden;
     text-overflow: ellipsis;
   }
-
+  
   .ai-sticky-bar-price-{{ ai_gen_id }} {
     color: {{ block.settings.price_color }};
     font-size: {{ block.settings.price_size }}px;
@@ -106,47 +107,6 @@ Es personalizable en el editor de temas.
     transform: translateY(-1px);
   }
 
-  /* Estilos del selector de cantidad */
-  .ai-sticky-bar-quantity-selector-{{ ai_gen_id }} {
-    display: flex;
-    align-items: center;
-    border: 1px solid #ddd;
-    border-radius: 50px;
-    padding: 4px 8px;
-    flex-shrink: 0;
-    gap: 8px;
-  }
-
-  .ai-sticky-bar-quantity-button-{{ ai_gen_id }} {
-    background: transparent;
-    border: none;
-    color: {{ block.settings.text_color }};
-    font-size: 1.2em;
-    cursor: pointer;
-    padding: 0;
-    width: 24px;
-    height: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .ai-sticky-bar-quantity-input-{{ ai_gen_id }} {
-    width: 40px;
-    text-align: center;
-    border: none;
-    background: transparent;
-    font-size: {{ block.settings.price_size }}px;
-    color: {{ block.settings.text_color }};
-    -moz-appearance: textfield;
-  }
-
-  .ai-sticky-bar-quantity-input-{{ ai_gen_id }}::-webkit-outer-spin-button,
-  .ai-sticky-bar-quantity-input-{{ ai_gen_id }}::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-  }
-
   @media screen and (max-width: 749px) {
     .ai-sticky-bar-{{ ai_gen_id }} {
       width: {{ block.settings.mobile_bar_width }}%;
@@ -175,16 +135,6 @@ Es personalizable en el editor de temas.
     .ai-sticky-bar-button-{{ ai_gen_id }} {
       font-size: {{ block.settings.mobile_button_text_size }}px;
       padding: {{ block.settings.mobile_button_padding }}px {{ block.settings.mobile_button_padding | times: 1.2 }}px;
-    }
-
-    .ai-sticky-bar-quantity-selector-{{ ai_gen_id }} {
-      padding: 2px 6px;
-      gap: 6px;
-    }
-
-    .ai-sticky-bar-quantity-input-{{ ai_gen_id }} {
-      width: 30px;
-      font-size: {{ block.settings.mobile_price_size }}px;
     }
   }
 {% endstyle %}
@@ -232,37 +182,15 @@ Es personalizable en el editor de temas.
     {% endif %}
   </div>
 
-  <form method="post" action="/cart/add" accept-charset="UTF-8" class="ai-sticky-bar-form-{{ ai_gen_id }}" enctype="multipart/form-data">
-    {% if display_product.has_only_default_variant %}
-      <input type="hidden" name="id" value="{{ display_product.selected_or_first_available_variant.id }}">
-      
-      {% if block.settings.show_quantity_selector %}
-      <div class="ai-sticky-bar-quantity-selector-{{ ai_gen_id }}">
-        <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Decrease quantity" data-action="minus">-</button>
-        <input type="number" name="quantity" value="1" min="1" class="ai-sticky-bar-quantity-input-{{ ai_gen_id }}">
-        <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Increase quantity" data-action="plus">+</button>
-      </div>
-      {% else %}
-        <input type="hidden" name="quantity" value="1">
-      {% endif %}
-
-      <button
-        class="ai-sticky-bar-button-{{ ai_gen_id }}"
-        type="submit"
-        name="add"
-      >
-        {{ block.settings.button_text }}
-      </button>
-    {% else %}
-      <button
-        class="ai-sticky-bar-button-{{ ai_gen_id }}"
-        type="button"
-        aria-label="Seleccionar opciones"
-      >
-        {{ block.settings.button_text }}
-      </button>
-    {% endif %}
-  </form>
+  <div class="ai-sticky-bar-form-{{ ai_gen_id }}">
+    <button
+      class="ai-sticky-bar-button-{{ ai_gen_id }}"
+      type="button"
+      aria-label="Seleccionar opciones"
+    >
+      {{ block.settings.button_text }}
+    </button>
+  </div>
 </sticky-product-bar-{{ ai_gen_id }}>
 
 <script>
@@ -270,39 +198,13 @@ Es personalizable en el editor de temas.
     class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
       constructor() {
         super();
-        this.form = this.querySelector('form');
         this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
-        this.selectOptions = this.button && this.button.type === 'button';
-        this.quantityInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
-        this.quantityMinus = this.querySelector('[data-action="minus"]');
-        this.quantityPlus = this.querySelector('[data-action="plus"]');
         this.setupEventListeners();
       }
 
-      connectedCallback() {
-        if (this.selectOptions) {
-          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
-        }
-      }
-
       setupEventListeners() {
-        if (this.selectOptions) {
+        if (this.button) {
           this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
-        }
-        if (this.quantityMinus && this.quantityPlus && this.quantityInput) {
-          this.quantityMinus.addEventListener('click', () => this.updateQuantity(-1));
-          this.quantityPlus.addEventListener('click', () => this.updateQuantity(1));
-        }
-      }
-
-      updateQuantity(step) {
-        let currentValue = parseInt(this.quantityInput.value, 10);
-        if (isNaN(currentValue)) {
-          currentValue = 1;
-        }
-        const newValue = currentValue + step;
-        if (newValue >= 1) {
-          this.quantityInput.value = newValue;
         }
       }
 
