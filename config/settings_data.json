@@ -11,6 +11,7 @@
   "current": {
     "logo": "shopify://shop_images/Modo_de_aislamiento_3f4c7686-69d6-4b90-a9d3-04ca72ec1aa5.png",
     "favicon": "shopify://shop_images/Vector.svg",
+    "color-menu": "#ff0000",
     "activar_fuente_uefan": false,
     "type_body_font": "archivo_n4",
     "type_subheading_font": "archivo_n4",
