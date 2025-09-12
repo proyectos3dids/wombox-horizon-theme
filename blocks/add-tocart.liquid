@@ -1,7 +1,8 @@
 {% comment %}
-This code creates a sticky bottom bar on product pages.
-It displays the product image, title, and a button to add the product to the cart.
-The bar's appearance (colors, size, etc.) is fully customizable in the theme editor.
+Este código crea una barra flotante de producto con un selector de cantidad.
+La barra se adhiere a la parte inferior de la pantalla en las páginas de producto.
+Incluye una imagen del producto, el título, un selector de cantidad y un botón para añadir al carrito.
+Es personalizable en el editor de temas.
 {% endcomment %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
 
@@ -45,7 +46,8 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
     background-color: #f4f4f4;
     display: flex;
     align-items: center;
-    justify-content: center;}
+    justify-content: center;
+  }
 
   .ai-sticky-bar-image-placeholder-{{ ai_gen_id }} svg {
     width: 60%;
@@ -72,7 +74,8 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
     color: {{ block.settings.price_color }};
     font-size: {{ block.settings.price_size }}px;
     font-weight: 500;
-    margin: 2px 0 0;}
+    margin: 2px 0 0;
+  }
 
   .ai-sticky-bar-button-{{ ai_gen_id }} {
     background-color: {{ block.settings.button_color }};
@@ -95,6 +98,47 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
   .ai-sticky-bar-button-{{ ai_gen_id }}:hover {
     background-color: {{ block.settings.button_hover_color }};
     transform: translateY(-1px);
+  }
+
+  /* Quantity selector styles */
+  .ai-sticky-bar-quantity-selector-{{ ai_gen_id }} {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+    padding: 4px 8px;
+    flex-shrink: 0;
+    gap: 8px;
+  }
+
+  .ai-sticky-bar-quantity-button-{{ ai_gen_id }} {
+    background: transparent;
+    border: none;
+    color: {{ block.settings.text_color }};
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .ai-sticky-bar-quantity-input-{{ ai_gen_id }} {
+    width: 40px;
+    text-align: center;
+    border: none;
+    background: transparent;
+    font-size: {{ block.settings.price_size }}px;
+    color: {{ block.settings.text_color }};
+    -moz-appearance: textfield;
+  }
+
+  .ai-sticky-bar-quantity-input-{{ ai_gen_id }}::-webkit-outer-spin-button,
+  .ai-sticky-bar-quantity-input-{{ ai_gen_id }}::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
   }
 
   @media screen and (max-width: 749px) {
@@ -122,18 +166,36 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       font-size: {{ block.settings.mobile_button_text_size }}px;
       padding: {{ block.settings.mobile_button_padding }}px {{ block.settings.mobile_button_padding | times: 1.2 }}px;
     }
+
+    .ai-sticky-bar-quantity-selector-{{ ai_gen_id }} {
+      padding: 2px 6px;
+      gap: 6px;
+    }
+
+    .ai-sticky-bar-quantity-input-{{ ai_gen_id }} {
+      width: 30px;
+      font-size: {{ block.settings.mobile_price_size }}px;
+    }
   }
 {% endstyle %}
+
+{% comment %}
+  Determine which product to display: the current product page's product or a selected product from settings.
+{% endcomment %}
+{% assign display_product = product %}
+{% if block.settings.featured_product != blank %}
+  {% assign display_product = block.settings.featured_product %}
+{% endif %}
 
 <sticky-product-bar-{{ ai_gen_id }}
   class="ai-sticky-bar-{{ ai_gen_id }}"
   {{ block.shopify_attributes }}
 >
   <div class="ai-sticky-bar-image-{{ ai_gen_id }}">
-    {% if product.featured_image %}
+    {% if display_product.featured_image %}
       <img
-        src="{{ product.featured_image | image_url: width: 200}}"
-        alt="{{ product.featured_image.alt | escape }}"
+        src="{{ display_product.featured_image | image_url: width: 200}}"
+        alt="{{ display_product.featured_image.alt | escape }}"
         loading="lazy"
         width="200"
         height="200"
@@ -147,22 +209,27 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
 
   <div class="ai-sticky-bar-content-{{ ai_gen_id }}">
     <h3 class="ai-sticky-bar-title-{{ ai_gen_id }}">
-      {% if product.title %}
-        {{ product.title }}
+      {% if display_product.title %}
+        {{ display_product.title }}
       {% else %}
         {{ block.settings.fallback_title }}
       {% endif %}
     </h3>
-    {% if product.price and block.settings.show_price %}
+    {% if block.settings.show_price %}
       <div class="ai-sticky-bar-price-{{ ai_gen_id }}">
-        {{ product.price | money }}
+        {{ display_product.price | money }}
       </div>
     {% endif %}
   </div>
 
   <form method="post" action="/cart/add" accept-charset="UTF-8" class="ai-sticky-bar-form-{{ ai_gen_id }}" enctype="multipart/form-data">
-    {% if product.has_only_default_variant %}
-      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    {% if display_product.has_only_default_variant and block.settings.show_quantity_selector %}
+      <input type="hidden" name="id" value="{{ display_product.selected_or_first_available_variant.id }}">
+      <div class="ai-sticky-bar-quantity-selector-{{ ai_gen_id }}">
+        <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Decrease quantity" data-action="minus">-</button>
+        <input type="number" name="quantity" value="1" min="1" class="ai-sticky-bar-quantity-input-{{ ai_gen_id }}">
+        <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Increase quantity" data-action="plus">+</button>
+      </div>
       <button
         class="ai-sticky-bar-button-{{ ai_gen_id }}"
         type="submit"
@@ -171,13 +238,25 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
         {{ block.settings.button_text }}
       </button>
     {% else %}
-      <button
-        class="ai-sticky-bar-button-{{ ai_gen_id }}"
-        type="button"
-        aria-label="Select options"
-      >
-        {{ block.settings.button_text }}
-      </button>
+      {% if display_product.has_only_default_variant %}
+        <input type="hidden" name="id" value="{{ display_product.selected_or_first_available_variant.id }}">
+        <input type="hidden" name="quantity" value="1">
+        <button
+          class="ai-sticky-bar-button-{{ ai_gen_id }}"
+          type="submit"
+          name="add"
+        >
+          {{ block.settings.button_text }}
+        </button>
+      {% else %}
+        <button
+          class="ai-sticky-bar-button-{{ ai_gen_id }}"
+          type="button"
+          aria-label="Seleccionar opciones"
+        >
+          {{ block.settings.button_text }}
+        </button>
+      {% endif %}
     {% endif %}
   </form>
 </sticky-product-bar-{{ ai_gen_id }}>
@@ -190,27 +269,41 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
         this.form = this.querySelector('form');
         this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
         this.selectOptions = this.button && this.button.type === 'button';
+        this.quantityInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
+        this.quantityMinus = this.querySelector('[data-action="minus"]');
+        this.quantityPlus = this.querySelector('[data-action="plus"]');
         this.setupEventListeners();
       }
 
       connectedCallback() {
-        if (!this.form) return;
-
         if (this.selectOptions) {
           this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
         }
       }
 
       setupEventListeners() {
-        // This is only for the "Select options" button to scroll to the main form
         if (this.selectOptions) {
           this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        }
+        if (this.quantityMinus && this.quantityPlus && this.quantityInput) {
+          this.quantityMinus.addEventListener('click', () => this.updateQuantity(-1));
+          this.quantityPlus.addEventListener('click', () => this.updateQuantity(1));
+        }
+      }
+
+      updateQuantity(step) {
+        let currentValue = parseInt(this.quantityInput.value, 10);
+        if (isNaN(currentValue)) {
+          currentValue = 1;
+        }
+        const newValue = currentValue + step;
+        if (newValue >= 1) {
+          this.quantityInput.value = newValue;
         }
       }
 
       scrollToAddToCart() {
         const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
-        
         if (addToCartButton) {
           addToCartButton.scrollIntoView({
             behavior: 'smooth',
@@ -222,7 +315,6 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
         }
       }
     }
-
     customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
   })();
 </script>
@@ -233,29 +325,41 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
   "settings": [
     {
       "type": "header",
-      "content": "Content"
+      "content": "Contenido"
+    },
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Producto a mostrar (opcional)",
+      "info": "Si se selecciona un producto, la barra lo mostrará en lugar del producto de la página."
     },
     {
       "type": "text",
       "id": "button_text",
-      "label": "Button text",
+      "label": "Texto del botón",
       "default": "Add to cart"
     },
     {
       "type": "text",
       "id": "fallback_title",
-      "label": "Fallback product title",
+      "label": "Título de producto por defecto",
       "default": "Product name"
     },
     {
       "type": "checkbox",
       "id": "show_price",
-      "label": "Show price",
+      "label": "Mostrar precio",
       "default": true
     },
     {
+      "type": "checkbox",
+      "id": "show_quantity_selector",
+      "label": "Mostrar selector de cantidad",
+      "default": false
+    },
+    {
       "type": "header",
-      "content": "Bar dimensions"
+      "content": "Dimensiones de la barra"
     },
     {
       "type": "range",
@@ -264,7 +368,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 95,
       "step": 5,
       "unit": "%",
-      "label": "Bar width",
+      "label": "Ancho de la barra",
       "default": 85
     },
     {
@@ -274,7 +378,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 1000,
       "step": 50,
       "unit": "px",
-      "label": "Maximum width",
+      "label": "Ancho máximo",
       "default": 700
     },
     {
@@ -284,7 +388,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 500,
       "step": 25,
       "unit": "px",
-      "label": "Minimum width",
+      "label": "Ancho mínimo",
       "default": 350
     },
     {
@@ -294,7 +398,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 95,
       "step": 5,
       "unit": "%",
-      "label": "Mobile bar width",
+      "label": "Ancho de barra móvil",
       "default": 90
     },
     {
@@ -304,7 +408,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 500,
       "step": 25,
       "unit": "px",
-      "label": "Mobile maximum width",
+      "label": "Ancho máximo móvil",
       "default": 400
     },
     {
@@ -314,12 +418,12 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 350,
       "step": 25,
       "unit": "px",
-      "label": "Mobile minimum width",
+      "label": "Ancho mínimo móvil",
       "default": 300
     },
     {
       "type": "header",
-      "content": "Position and spacing"
+      "content": "Posición y espaciado"
     },
     {
       "type": "range",
@@ -328,7 +432,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 50,
       "step": 2,
       "unit": "px",
-      "label": "Bottom margin",
+      "label": "Margen inferior",
       "default": 20
     },
     {
@@ -338,7 +442,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 24,
       "step": 2,
       "unit": "px",
-      "label": "Internal padding",
+      "label": "Relleno interno",
       "default": 12
     },
     {
@@ -348,12 +452,12 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 20,
       "step": 2,
       "unit": "px",
-      "label": "Mobile internal padding",
+      "label": "Relleno interno móvil",
       "default": 10
     },
     {
       "type": "header",
-      "content": "Product image"
+      "content": "Imagen del producto"
     },
     {
       "type": "range",
@@ -362,7 +466,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 80,
       "step": 4,
       "unit": "px",
-      "label": "Image size",
+      "label": "Tamaño de imagen",
       "default": 60
     },
     {
@@ -372,12 +476,12 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 60,
       "step": 2,
       "unit": "px",
-      "label": "Mobile image size",
+      "label": "Tamaño de imagen móvil",
       "default": 50
     },
     {
       "type": "header",
-      "content": "Typography"
+      "content": "Tipografía"
     },
     {
       "type": "range",
@@ -386,7 +490,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 20,
       "step": 1,
       "unit": "px",
-      "label": "Title size",
+      "label": "Tamaño del título",
       "default": 16
     },
     {
@@ -396,7 +500,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 18,
       "step": 1,
       "unit": "px",
-      "label": "Mobile title size",
+      "label": "Tamaño del título móvil",
       "default": 14
     },
     {
@@ -406,7 +510,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 18,
       "step": 1,
       "unit": "px",
-      "label": "Price size",
+      "label": "Tamaño del precio",
       "default": 14
     },
     {
@@ -416,12 +520,12 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 16,
       "step": 1,
       "unit": "px",
-      "label": "Mobile price size",
+      "label": "Tamaño del precio móvil",
       "default": 12
     },
     {
       "type": "header",
-      "content": "Button style"
+      "content": "Estilo del botón"
     },
     {
       "type": "range",
@@ -430,7 +534,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 18,
       "step": 1,
       "unit": "px",
-      "label": "Button text size",
+      "label": "Tamaño del texto del botón",
       "default": 14
     },
     {
@@ -440,7 +544,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 16,
       "step": 1,
       "unit": "px",
-      "label": "Mobile button text size",
+      "label": "Tamaño del texto del botón móvil",
       "default": 12
     },
     {
@@ -450,7 +554,7 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 20,
       "step": 2,
       "unit": "px",
-      "label": "Button padding",
+      "label": "Relleno del botón",
       "default": 12
     },
     {
@@ -460,47 +564,47 @@ The bar's appearance (colors, size, etc.) is fully customizable in the theme edi
       "max": 16,
       "step": 2,
       "unit": "px",
-      "label": "Mobile button padding",
+      "label": "Relleno del botón móvil",
       "default": 10
     },
     {
       "type": "header",
-      "content": "Colors"
+      "content": "Colores"
     },
     {
       "type": "color",
       "id": "background_color",
-      "label": "Background color",
+      "label": "Color de fondo",
       "default": "#ffffff"
     },
     {
       "type": "color",
       "id": "text_color",
-      "label": "Text color",
+      "label": "Color de texto",
       "default": "#000000"
     },
     {
       "type": "color",
       "id": "price_color",
-      "label": "Price color",
+      "label": "Color del precio",
       "default": "#666666"
     },
     {
       "type": "color",
       "id": "button_color",
-      "label": "Button background",
+      "label": "Fondo del botón",
       "default": "#000f9f"
     },
     {
       "type": "color",
       "id": "button_hover_color",
-      "label": "Button hover background",
+      "label": "Fondo del botón al pasar el mouse",
       "default": "#000000"
     },
     {
       "type": "color",
       "id": "button_text_color",
-      "label": "Button text color",
+      "label": "Color del texto del botón",
       "default": "#ffffff"
     }
   ],
