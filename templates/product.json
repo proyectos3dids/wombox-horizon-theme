@@ -336,7 +336,7 @@
               "type": "add-tocart",
               "name": "Sticky product bar",
               "settings": {
-                "button_text": "Select options",
+                "button_text": "Add to cart",
                 "fallback_title": "Product name",
                 "show_price": true,
                 "bar_width": 85,
@@ -361,7 +361,7 @@
                 "background_color": "#ffffff",
                 "text_color": "#000000",
                 "price_color": "#666666",
-                "button_color": "#000f9f",
+                "button_color": "#d4a697",
                 "button_hover_color": "#000000",
                 "button_text_color": "#ffffff"
               },
