@@ -274,6 +274,15 @@ Es personalizable en el editor de temas.
   </form>
 </sticky-product-bar-{{ ai_gen_id }}>
 
+OK, I get it. You want the page to reload after the product is added, and then have the cart drawer open automatically on the reloaded page.
+
+To achieve this, we can use a URL parameter. Here's the complete script that will handle the page reload and then trigger the cart drawer to open once the new page has loaded.
+
+New Script with Page Reload and Cart Drawer
+This script replaces the form's default behavior. Instead of just adding the product and opening the cart drawer with a simple click, it will add the product and then redirect the user to the same page with a special parameter in the URL. On page load, it checks for that parameter and then opens the cart drawer.
+
+JavaScript
+
 <script>
   (function() {
     class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
@@ -292,6 +301,7 @@ Es personalizable en el editor de temas.
         if (this.selectOptions) {
           this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
         } else {
+          // Add the event listener for form submission
           this.form.addEventListener('submit', this.handleFormSubmit.bind(this));
         }
       }
@@ -331,37 +341,43 @@ Es personalizable en el editor de temas.
       }
       
       handleFormSubmit(event) {
+        event.preventDefault();
+
         this.button.disabled = true;
         this.button.textContent = 'Añadiendo...';
 
-        // Get the form data
         const formData = new FormData(this.form);
+        const productData = {
+          id: formData.get('id'),
+          quantity: formData.get('quantity')
+        };
 
-        // Append the product ID and quantity to the form submission
-        const data = new URLSearchParams(formData);
-        data.append('sections', 'cart-drawer-component');
-        data.append('sections_url', window.location.pathname);
-
-        // Perform the form submission via a fetch request
-        fetch('/cart/add', {
+        // Use Shopify's AJAX API to add the item
+        fetch('/cart/add.js', {
           method: 'POST',
-          body: data
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(productData)
         })
         .then(response => response.json())
         .then(response => {
           if (response.ok) {
-            // Redirect to the current URL with a parameter to open the cart
+            // After successful addition, redirect to the same page with a parameter
             window.location.href = window.location.pathname + '?open-cart=true';
           } else {
             console.error('Failed to add item to cart');
             this.button.textContent = 'Error';
+            setTimeout(() => {
+              this.button.disabled = false;
+              this.button.textContent = '{{ block.settings.button_text }}';
+            }, 2000);
           }
         })
         .catch(error => {
           console.error('Network error:', error);
           this.button.textContent = 'Error';
-        })
-        .finally(() => {
           setTimeout(() => {
             this.button.disabled = false;
             this.button.textContent = '{{ block.settings.button_text }}';
@@ -385,19 +401,18 @@ Es personalizable en el editor de temas.
           stickyBar.style.visibility = 'hidden';
         }
       }
-
       window.addEventListener('scroll', handleScroll);
       handleScroll();
     }
 
-    // --- Lógica para abrir el carrito después de la recarga ---
+    // --- Logic to open the cart after page reload ---
     document.addEventListener('DOMContentLoaded', () => {
       const urlParams = new URLSearchParams(window.location.search);
       if (urlParams.get('open-cart') === 'true') {
         const cartDrawerButton = document.querySelector('cart-drawer-component > button');
         if (cartDrawerButton) {
           cartDrawerButton.click();
-          // Remove the parameter from the URL to avoid opening the cart on future reloads
+          // Remove the parameter from the URL to prevent it from opening on subsequent reloads
           history.replaceState({}, '', window.location.pathname);
         }
       }
