@@ -111,3 +111,8 @@
 
 
 
+@media (max-width: 767px) {
+  .wbf__flags-mobile {
+    display: none !important;
+  }
+}
