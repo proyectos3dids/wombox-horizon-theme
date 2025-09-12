@@ -2,6 +2,18 @@
   box-sizing: border-box;
 }
 
+
+
+section#shopify-pc__banner {
+  border-radius: 20px;
+}
+
+
+#shopify-pc__banner button {
+  border-radius: 20px;
+}
+
+
 body {
   color: var(--color-foreground);
   background: var(--color-background);
@@ -4259,3 +4271,5 @@ text-component {
     font-size: max(1rem, 100%);
   }
 }
+
+
