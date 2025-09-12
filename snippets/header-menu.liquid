@@ -33,7 +33,7 @@
       on:pointerenter="/activate"
       on:pointerleave="/deactivate"
     >
-      <a
+   <a
         href="{{ link.url }}"
         data-skip-node-update="true"
         class="menu-list__link{% if link.active %} menu-list__link--active{% endif %}"
@@ -44,8 +44,50 @@
         {%- endif -%}
         ref="menuitem"
       >
-        <span style="font-size:16px; margin: 0 10px 0 10px;" class="menu-list__link-title">{{- link.title -}} </span>
-      </a>
+        <span style="font-size:16px; margin: 0 10px 0 10px;" class="menu-list__link-title">{{- link.title -}}</span>
+        {% if link.links != blank %}
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="icon-default">
+            <mask id="mask0_861_1218" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+              <rect width="20" height="20" fill="#D9D9D9"></rect>
+            </mask>
+            <g mask="url(#mask0_861_1218)">
+              <path d="M10.0003 11.9231L6.82715 8.75H13.1734L10.0003 11.9231Z" fill="#3C2C81"></path>
+            </g>
+          </svg>
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20" viewBox="0 0 19 20" fill="none" class="icon-hover">
+            <mask id="mask0_479_27148" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="19" height="20">
+              <rect y="0.5" width="19" height="19" fill="#D9D9D9"></rect>
+            </mask>
+            <g mask="url(#mask0_479_27148)">
+              <path d="M6.34562 17.6425L5.22205 16.519L11.741 9.99997L5.22205 3.481L6.34562 2.35742L13.9882 9.99997L6.34562 17.6425Z" fill="#3C2C81"></path>
+            </g>
+          </svg>
+        {% endif %}
+    </a>
+      <style>
+        /* Style for all links that can have a mega-menu */
+      .menu-list__link {
+        display: flex;
+        align-items: center;
+      }
+
+      /* Hide the hover icon by default */
+      .menu-list__link .icon-hover {
+        display: none;
+      }
+
+      /* When the link is hovered, hide the default icon and show the hover icon */
+      .menu-list__link:hover .icon-default {
+        display: none;
+      }
+
+      .menu-list__link:hover .icon-hover {
+        display: block; /* Use 'block' or 'inline-block' for a better display */
+      }
+      </style>
+
+
+
       {%- if link.links != blank -%}
         <div class="menu-list__submenu{{ color_scheme_classes }}" ref="submenu[]">
           <div
