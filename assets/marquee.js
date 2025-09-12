@@ -94,10 +94,18 @@ class MarqueeComponent extends Component {
     this.style.setProperty('--marquee-speed', `${value}s`);
   }
 
-  #calculateSpeed() {
+ #calculateSpeed() {
+    // Obtiene el factor de velocidad del atributo data
     const speedFactor = Number(this.getAttribute('data-speed-factor'));
+    
+    // Define un factor de velocidad para móviles. Un número más pequeño = animación más lenta
+    const mobileSpeedFactor = 30; // Ajusta este valor para la velocidad deseada en móvil
+
+    // Comprueba si el ancho de la pantalla es menor o igual a 768px (un breakpoint común para móviles)
+    const currentSpeedFactor = window.innerWidth <= 768 ? mobileSpeedFactor : speedFactor;
+
     const marqueeWidth = this.offsetWidth;
-    const speed = Math.ceil(marqueeWidth / speedFactor / 2);
+    const speed = Math.ceil(marqueeWidth / currentSpeedFactor / 2);
     return speed;
   }
 
