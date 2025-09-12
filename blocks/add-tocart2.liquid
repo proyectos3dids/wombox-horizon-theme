@@ -137,6 +137,15 @@ Es personalizable en el editor de temas.
       padding: {{ block.settings.mobile_button_padding }}px {{ block.settings.mobile_button_padding | times: 1.2 }}px;
     }
   }
+
+
+  
+  .ai-sticky-bar-{{ ai_gen_id }} {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
 {% endstyle %}
 
 {% comment %}
@@ -221,6 +230,32 @@ Es personalizable en el editor de temas.
     }
     customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
   })();
+
+
+
+  
+document.addEventListener('DOMContentLoaded', function() {
+  const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
+  const scrollThreshold = 1090; // Cambia esto para ajustar el punto de aparición
+
+  if (stickyBar) {
+    function handleScroll() {
+      if (window.scrollY > scrollThreshold) {
+        stickyBar.style.opacity = '1';
+        stickyBar.style.visibility = 'visible';
+      } else {
+        stickyBar.style.opacity = '0';
+        stickyBar.style.visibility = 'hidden';
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Ejecutar la función una vez al cargar para verificar la posición inicial
+    handleScroll();
+  }
+});
+
 </script>
 
 {% schema %}
