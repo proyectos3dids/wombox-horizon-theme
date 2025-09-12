@@ -275,170 +275,141 @@ Es personalizable en el editor de temas.
 </sticky-product-bar-{{ ai_gen_id }}>
 
 <script>
-
-  (function() {
-
-    class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
-
-      constructor() {
-
-        super();
-
-        this.form = this.querySelector('form');
-
-        this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
-
-        this.selectOptions = this.button && this.button.type === 'button';
-
-        this.quantityInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
-
-        this.quantityMinus = this.querySelector('[data-action="minus"]');
-
-        this.quantityPlus = this.querySelector('[data-action="plus"]');
-
-        this.setupEventListeners();
-
-      }
-
-
-
-      connectedCallback() {
-
-        if (this.selectOptions) {
-
-          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
-
-        }
-
-      }
-
-
-
-      setupEventListeners() {
-
-        if (this.selectOptions) {
-
-          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
-
-        }
-
-        if (this.quantityMinus && this.quantityPlus && this.quantityInput) {
-
-          this.quantityMinus.addEventListener('click', () => this.updateQuantity(-1));
-
-          this.quantityPlus.addEventListener('click', () => this.updateQuantity(1));
-
-        }
-
-      }
-
-
-
-      updateQuantity(step) {
-
-        let currentValue = parseInt(this.quantityInput.value, 10);
-
-        if (isNaN(currentValue)) {
-
-          currentValue = 1;
-
-        }
-
-        const newValue = currentValue + step;
-
-        if (newValue >= 1) {
-
-          this.quantityInput.value = newValue;
-
-        }
-
-      }
-
-
-
-      scrollToAddToCart() {
-
-        const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
-
-        if (addToCartButton) {
-
-          addToCartButton.scrollIntoView({
-
-            behavior: 'smooth',
-
-            block: 'center'
-
-          });
-
-          setTimeout(() => {
-
-            addToCartButton.focus();
-
-          }, 500);
-
-        }
-
-      }
-
-    }
-
-    customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
-
-  })();
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
-
-  const scrollThreshold = 1190; // Cambia esto para ajustar el punto de aparición
-
-
-
-  if (stickyBar) {
-
-    function handleScroll() {
-
-      if (window.scrollY > scrollThreshold) {
-
-        stickyBar.style.opacity = '1';
-
-        stickyBar.style.visibility = 'visible';
-
-      } else {
-
-        stickyBar.style.opacity = '0';
-
-        stickyBar.style.visibility = 'hidden';
-
-      }
-
-    }
-
-
-
-    window.addEventListener('scroll', handleScroll);
-
-
-
-    // Ejecutar la función una vez al cargar para verificar la posición inicial
-
-    handleScroll();
-
-  }
-
-});
-
-
-
-</script> 
+  (function() {
+    class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+        this.form = this.querySelector('form');
+        this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
+        this.selectOptions = this.button && this.button.type === 'button';
+        this.quantityInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
+        this.quantityMinus = this.querySelector('[data-action="minus"]');
+        this.quantityPlus = this.querySelector('[data-action="plus"]');
+        this.setupEventListeners();
+      }
+
+      connectedCallback() {
+        if (this.selectOptions) {
+          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        } else {
+          // Add the event listener for form submission
+          this.form.addEventListener('submit', this.handleFormSubmit.bind(this));
+        }
+      }
+
+      setupEventListeners() {
+        if (this.selectOptions) {
+          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        }
+        if (this.quantityMinus && this.quantityPlus && this.quantityInput) {
+          this.quantityMinus.addEventListener('click', () => this.updateQuantity(-1));
+          this.quantityPlus.addEventListener('click', () => this.updateQuantity(1));
+        }
+      }
+
+      updateQuantity(step) {
+        let currentValue = parseInt(this.quantityInput.value, 10);
+        if (isNaN(currentValue)) {
+          currentValue = 1;
+        }
+        const newValue = currentValue + step;
+        if (newValue >= 1) {
+          this.quantityInput.value = newValue;
+        }
+      }
+
+      scrollToAddToCart() {
+        const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
+        if (addToCartButton) {
+          addToCartButton.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+          setTimeout(() => {
+            addToCartButton.focus();
+          }, 500);
+        }
+      }
+      
+      handleFormSubmit(event) {
+        event.preventDefault();
+
+        this.button.disabled = true;
+        this.button.textContent = 'Añadiendo...';
+
+        const formData = new FormData(this.form);
+        const productData = {
+          id: formData.get('id'),
+          quantity: formData.get('quantity')
+        };
+
+        // Use Shopify's AJAX API to add the item
+        fetch('/cart/add.js', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(productData)
+        })
+        .then(response => response.json())
+        .then(response => {
+          if (response.ok) {
+            // After successful addition, redirect to the same page with a parameter
+            window.location.href = window.location.pathname + '?open-cart=true';
+          } else {
+            console.error('Failed to add item to cart');
+            this.button.textContent = 'Error';
+            setTimeout(() => {
+              this.button.disabled = false;
+              this.button.textContent = '{{ block.settings.button_text }}';
+            }, 2000);
+          }
+        })
+        .catch(error => {
+          console.error('Network error:', error);
+          this.button.textContent = 'Error';
+          setTimeout(() => {
+            this.button.disabled = false;
+            this.button.textContent = '{{ block.settings.button_text }}';
+          }, 2000);
+        });
+      }
+    }
+    customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
+
+    // --- Lógica de visibilidad al hacer scroll ---
+    const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
+    const scrollThreshold = 1190;
+
+    if (stickyBar) {
+      function handleScroll() {
+        if (window.scrollY > scrollThreshold) {
+          stickyBar.style.opacity = '1';
+          stickyBar.style.visibility = 'visible';
+        } else {
+          stickyBar.style.opacity = '0';
+          stickyBar.style.visibility = 'hidden';
+        }
+      }
+      window.addEventListener('scroll', handleScroll);
+      handleScroll();
+    }
+
+    // --- Logic to open the cart after page reload ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('open-cart') === 'true') {
+        const cartDrawerButton = document.querySelector('cart-drawer-component > button');
+        if (cartDrawerButton) {
+          cartDrawerButton.click();
+          // Remove the parameter from the URL to prevent it from opening on subsequent reloads
+          history.replaceState({}, '', window.location.pathname);
+        }
+      }
+    });
+  })();
+</script>
 
 {% schema %}
 {
