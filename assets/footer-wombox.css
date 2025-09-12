@@ -63,7 +63,7 @@
 .wbfm__sum{list-style:none;display:flex;align-items:center;justify-content:space-between;cursor:pointer}
 .wbfm__title{font-family:'Archivo',Inter,system-ui,Arial,sans-serif;font-weight:800;font-size:20px;letter-spacing:.5px;text-transform:uppercase;color:#fff}
 .wbfm__icon{font-size:24px;line-height:1;transition:transform .2s ease}
-.wbfm__acc[open] .wbfm__icon{transform:rotate(45deg)} /* de + a x */
+.wbfm__acc[open] .wbfm__icon{transform:rotate(45deg)} 
 .wbfm__list{list-style:none;margin:12px 0 10px;padding:0}
 .wbfm__item{margin:10px 0}
 .wbfm__link{color:#fff;text-decoration:none;font-size:14px;line-height:1}
@@ -77,34 +77,34 @@
 
 /* ====== MOBILE ====== */
 @media (max-width: 768px){
-  /* Oculta grid desktop, muestra bloque móvil */
+ 
   .wbf__inner{display:none}
   .wbf__inner--mobile{display:block;max-width:1200px;margin:0 auto;padding:28px 16px 0}
 
-  /* Ajustes franja y slider */
+  
   .wbf__bottom{padding:0px 0px 12px; --pay-size:16px;}
 
-  /* Oculta pagos dentro de franja; usa los móviles */
+  
   .wbf__payments{display:none !important}
   .wbf__payments-mobile{display:flex;justify-content:center;align-items:center;gap:8px;margin:10px auto 6px;width:100%}
 
-  /* Copy: sólo móvil */
+ 
   .wbf__copy--desktop{display:none}
   .wbf__copy--mobile{display:block}
 
 
   .wbfm__social{
-    display:flex;               /* activa flex */
-    justify-content:center;     /* centra horizontal */
-    align-items:center;         /* centra vertical */
-    gap:12px;                   /* separa iconos */
-    flex-wrap:wrap;             /* por si saltan de línea */
-    margin:8px auto 0;          /* centrado del contenedor */
-    float:none !important;      /* anula float inline si lo hubiera */
+    display:flex;               
+    justify-content:center;    
+    align-items:center;        
+    gap:12px;                   
+    flex-wrap:wrap;             
+    margin:8px auto 0;          
+    float:none !important;     
     width:100%;
     margin-bottom:12px;
   }
-  .wbf__soc-a{ display:inline-flex; } /* asegúrate de que cada enlace ocupa su contenido */
+  .wbf__soc-a{ display:inline-flex; } 
 
 }
 
