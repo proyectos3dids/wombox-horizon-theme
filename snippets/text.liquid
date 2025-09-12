@@ -217,35 +217,3 @@
   }
 {% endstylesheet %}
 
-
-<script>
-
-document.querySelectorAll('.expand-text-button').forEach(button => {
-  // Encuentra el bloque de texto asociado al botón
-  const textBlock = button.closest('.text-block-wrapper').querySelector('.text-block');
-
-  // Inicialmente, comprueba si el texto está truncado para mostrar el botón
-  const checkTruncation = () => {
-    // Si el contenido interno tiene más de un hijo o el contenido es largo, muestra el botón.
-    const isLongEnough = textBlock.offsetHeight < textBlock.scrollHeight;
-    if (isLongEnough) {
-      button.style.display = 'block';
-      textBlock.classList.add('is-truncated'); // Añade una clase para truncar
-    } else {
-      button.style.display = 'none';
-      textBlock.classList.remove('is-truncated');
-    }
-  };
-  
-  // Ejecutar al cargar la página y al redimensionar
-  window.addEventListener('load', checkTruncation);
-  window.addEventListener('resize', checkTruncation);
-
-  // Evento para el clic del botón
-  button.addEventListener('click', () => {
-    const isExpanded = textBlock.classList.toggle('is-expanded');
-    button.querySelector('span').textContent = isExpanded ? 'Ver menos' : 'Ver más';
-    button.setAttribute('aria-expanded', isExpanded);
-  });
-});
-</script>
