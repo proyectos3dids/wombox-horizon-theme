@@ -6,8 +6,11 @@
 
 {% render 'section', section: section, children: children %}
 <style>
-  .esp-ext{
-  padding: {{ section.settings.espaciado_grupo }}px;}
+  @media(min-width: 768px) {
+    .esp-ext {
+      padding: {{ section.settings.espaciado_grupo }}px;
+    }
+  }
 </style>
 {% schema %}
 {
