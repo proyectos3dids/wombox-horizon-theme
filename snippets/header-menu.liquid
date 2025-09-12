@@ -33,21 +33,6 @@
       on:pointerenter="/activate"
       on:pointerleave="/deactivate"
     >
-
-      {% comment %} <a
-        href="{{ link.url }}"
-        data-skip-node-update="true"
-        class="menu-list__link{% if link.active %} menu-list__link--active{% endif %}"
-        {%- if link.links != blank -%}
-          aria-controls="submenu-{{ forloop.index }}"
-          aria-haspopup="true"
-          aria-expanded="false"
-        {%- endif -%}
-        ref="menuitem"
-      >
-        <span style="font-size:16px; margin: 0 10px 0 10px;" class="menu-list__link-title">{{- link.title -}} </span>
-      </a> {% endcomment %}
-
       <a
         href="{{ link.url }}"
         data-skip-node-update="true"
@@ -59,46 +44,8 @@
         {%- endif -%}
         ref="menuitem"
       >
-        <span style="font-size:16px; margin: 0 10px;" class="menu-list__link-title">
-          {{- link.title -}}
-        </span>
-
-        <!-- Icono normal -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-          viewBox="0 0 20 20" fill="none" class="icon-default">
-          <path d="M10.0003 11.9231L6.82715 8.75H13.1734L10.0003 11.9231Z" fill="#3C2C81"/>
-        </svg>
-
-        <!-- Icono al hacer hover -->
-        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="20"
-          viewBox="0 0 19 20" fill="none" class="icon-hover">
-          <path d="M6.34562 17.6425L5.22205 16.519L11.741 9.99997L5.22205 3.481L6.34562 2.35742L13.9882 9.99997L6.34562 17.6425Z" fill="#3C2C81"/>
-        </svg>
+        <span style="font-size:16px; margin: 0 10px 0 10px;" class="menu-list__link-title">{{- link.title -}} </span>
       </a>
-
-      <style>
-        .icon-default,
-        .icon-hover {
-          display: inline-block;
-          vertical-align: middle;
-          margin-left: 5px;
-          transition: opacity 0.3s ease;
-        }
-
-        .icon-hover { 
-          opacity: 0; /* oculto por defecto */
-          position: absolute; 
-        }
-
-        .menu-list__link:hover .icon-default {
-          opacity: 0;
-        }
-        .menu-list__link:hover .icon-hover {
-          opacity: 1;
-          position: static;
-        }
-      </style>
-
       {%- if link.links != blank -%}
         <div class="menu-list__submenu{{ color_scheme_classes }}" ref="submenu[]">
           <div
