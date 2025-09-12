@@ -324,6 +324,39 @@ Es personalizable en el editor de temas.
 
 
 
+document.addEventListener('DOMContentLoaded', function() {
+  const stickyBar = document.querySelector('.ai-sticky-bar');
+  const scrollThreshold = 300; // Change this value to your desired scroll point in pixels.
+
+  // If the element exists, set up the scroll listener
+  if (stickyBar) {
+    function handleScroll() {
+      // Check if the user has scrolled past the threshold
+      if (window.scrollY > scrollThreshold) {
+        // Show the bar with a smooth transition
+        stickyBar.style.opacity = '1';
+        stickyBar.style.visibility = 'visible';
+      } else {
+        // Hide the bar
+        stickyBar.style.opacity = '0';
+        stickyBar.style.visibility = 'hidden';
+      }
+    }
+
+    // Add a transition to the bar's CSS for a smooth fade effect
+    stickyBar.style.transition = 'opacity 0.3s ease';
+
+    // Set initial state to hidden
+    stickyBar.style.opacity = '0';
+    stickyBar.style.visibility = 'hidden';
+
+    // Attach the scroll event listener
+    window.addEventListener('scroll', handleScroll);
+
+    // Run the function once on page load
+    handleScroll();
+  }
+});
 
 </script>
 
