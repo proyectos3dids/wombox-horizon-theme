@@ -33,20 +33,20 @@
       "content": "Cart & Checkout Text"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "cart_additional_text",
       "label": "Cart drawer text",
       "default": "<p>Cart</p>",
       "info": "This text will appear in the collapsible cart drawer."
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "custom_text_one",
       "label": "Additional text block 1",
       "default": "<p>Ver más</p>"
     },
     {
-      "type": "richtext",
+      "type": "text",
       "id": "custom_text_two",
       "label": "Additional text block 2",
       "default": "<p>Ver menos</p>"
