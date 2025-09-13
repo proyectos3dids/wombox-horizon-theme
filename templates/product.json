@@ -284,6 +284,7 @@
               "name": "Product description",
               "settings": {
                 "text": "{{ closest.product.description }}",
+                "line_limit": 2,
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -458,6 +459,7 @@
           "name": "t:names.header",
           "settings": {
             "text": "<h3>You may also like </h3>",
+            "line_limit": 3,
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
