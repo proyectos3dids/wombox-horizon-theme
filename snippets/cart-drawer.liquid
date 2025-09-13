@@ -71,7 +71,8 @@
             id="cart-drawer-header"
           >
             <span class="cart-drawer__heading h3">
-              {{ 'content.cart_title' | t }}
+              {% comment %} {{ 'content.cart_title' | t }} {% endcomment %}
+              {{settings.cart_additional_text}}
               {% render 'cart-bubble' %}
             </span>
 
