@@ -7,16 +7,16 @@
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes",
     "theme_support_url": "https://support.shopify.com/"
   },
-  {
-  "name": "Additional Features",
+{
+  "name": "Additional Content",
   "settings": [
     {
       "type": "header",
-      "content": "Product Description - Show More/Show Less"
+      "content": "Product Page Text"
     },
     {
       "type": "paragraph",
-      "content": "This setting adds a 'show more/show less' feature to the product description."
+      "content": "Adds a 'show more/show less' feature to the product description."
     },
     {
       "type": "range",
@@ -30,14 +30,26 @@
     },
     {
       "type": "header",
-      "content": "Cart Page - Additional Text"
+      "content": "Cart & Checkout Text"
     },
     {
       "type": "richtext",
       "id": "cart_additional_text",
-      "label": "Cart text",
+      "label": "Cart drawer text",
       "default": "<p>Shipping, taxes, and discounts are calculated at checkout.</p>",
       "info": "This text will appear in the collapsible cart drawer."
+    },
+    {
+      "type": "richtext",
+      "id": "custom_text_one",
+      "label": "Additional text block 1",
+      "default": "<p>Add custom text here.</p>"
+    },
+    {
+      "type": "richtext",
+      "id": "custom_text_two",
+      "label": "Additional text block 2",
+      "default": "<p>Add more custom text here.</p>"
     }
   ]
 }
