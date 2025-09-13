@@ -36,7 +36,7 @@
       "type": "richtext",
       "id": "cart_additional_text",
       "label": "Cart drawer text",
-      "default": "<p>Shipping, taxes, and discounts are calculated at checkout.</p>",
+      "default": "<p>Cart</p>",
       "info": "This text will appear in the collapsible cart drawer."
     },
     {
