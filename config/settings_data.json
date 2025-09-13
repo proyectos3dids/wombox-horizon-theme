@@ -9,6 +9,7 @@
  */
 {
   "current": {
+    "pdp_description_line_limit": 2,
     "custom_text_one": "",
     "logo": "shopify://shop_images/Modo_de_aislamiento_3f4c7686-69d6-4b90-a9d3-04ca72ec1aa5.png",
     "favicon": "shopify://shop_images/Vector.svg",
