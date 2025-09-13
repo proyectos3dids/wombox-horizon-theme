@@ -86,9 +86,12 @@
     {{ fallback_text }}
   </div>
 {% elsif plain_text != blank %}
-  <{{ element }} {{ attributes }}>
-    {{ block.settings.text }}
-  </{{ element }}>
+  <div {{ attributes | remove: 'text-block--' | prepend: 'text-block--container ' }}>
+    <{{ element }} class="text-block__content" style="--line-limit: {{ block.settings.line_limit | times: 1.5 }}em;">
+      {{ block.settings.text }}
+    </{{ element }}>
+    <button class="text-block__toggle" aria-expanded="false">Ver más</button>
+  </div>
 {% endif %}
 
 {% stylesheet %}
@@ -215,5 +218,58 @@
   .custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {
     color: var(--color);
   }
+
+
+  .text-block__content {
+  overflow: hidden;
+  max-height: var(--line-limit);
+  transition: max-height 0.3s ease-in-out;
+}
+
+.text-block__content.is-expanded {
+  max-height: none; /* Muestra todo el contenido */
+}
+
+.text-block__toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: var(--color-primary, #007bff); /* Usa el color de enlace de tu tema */
+  margin-top: 10px;
+  display: block; /* Asegura que el botón esté en su propia línea */
+}
+
+
 {% endstylesheet %}
 
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleButtons = document.querySelectorAll('.text-block__toggle');
+
+  toggleButtons.forEach(button => {
+    const container = button.closest('.text-block--container');
+    const content = container.querySelector('.text-block__content');
+
+    // Oculta el botón si el texto ya cabe en el contenedor
+    if (content.scrollHeight <= content.clientHeight) {
+      button.style.display = 'none';
+      return;
+    }
+
+    button.addEventListener('click', () => {
+      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+      if (isExpanded) {
+        content.classList.remove('is-expanded');
+        button.setAttribute('aria-expanded', 'false');
+        button.textContent = 'Ver más';
+      } else {
+        content.classList.add('is-expanded');
+        button.setAttribute('aria-expanded', 'true');
+        button.textContent = 'Ver menos';
+      }
+    });
+  });
+});
+</script>
