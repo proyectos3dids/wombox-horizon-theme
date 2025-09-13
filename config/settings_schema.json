@@ -8,6 +8,41 @@
     "theme_support_url": "https://support.shopify.com/"
   },
   {
+  "name": "Additional Features",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Product Description - Show More/Show Less"
+    },
+    {
+      "type": "paragraph",
+      "content": "This setting adds a 'show more/show less' feature to the product description."
+    },
+    {
+      "type": "range",
+      "id": "pdp_description_line_limit",
+      "label": "Line limit",
+      "default": 3,
+      "min": 1,
+      "max": 10,
+      "step": 1,
+      "info": "Set the number of lines to display before the 'show more' link appears."
+    },
+    {
+      "type": "header",
+      "content": "Cart Page - Additional Text"
+    },
+    {
+      "type": "richtext",
+      "id": "cart_additional_text",
+      "label": "Cart text",
+      "default": "<p>Shipping, taxes, and discounts are calculated at checkout.</p>",
+      "info": "This text will appear in the collapsible cart drawer."
+    }
+  ]
+}
+,
+  {
     "name": "t:names.logo_and_favicon",
     "settings": [
       {
