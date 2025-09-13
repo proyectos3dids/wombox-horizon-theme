@@ -29,17 +29,6 @@
       "info": "Set the number of lines to display before the 'show more' link appears."
     },
     {
-      "type": "header",
-      "content": "Cart & Checkout Text"
-    },
-    {
-      "type": "text",
-      "id": "cart_additional_text",
-      "label": "Cart drawer text",
-      "default": "<p>Cart</p>",
-      "info": "This text will appear in the collapsible cart drawer."
-    },
-    {
       "type": "text",
       "id": "custom_text_one",
       "label": "Additional text block 1",
@@ -50,6 +39,18 @@
       "id": "custom_text_two",
       "label": "Additional text block 2",
       "default": "<p>Ver menos</p>"
+    }
+    ,
+    {
+      "type": "header",
+      "content": "Cart & Checkout Text"
+    },
+    {
+      "type": "text",
+      "id": "cart_additional_text",
+      "label": "Cart drawer text",
+      "default": "<p>Cart</p>",
+      "info": "This text will appear in the collapsible cart drawer."
     }
   ]
 }
