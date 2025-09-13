@@ -1,10 +1,10 @@
 {%- doc -%}
-  Intended for use in a block similar to the text block.
+  Intended for use in a block similar to the text block.
 
-  @param {string} [class] - custom class to define in addition to text-block classes
-  @param {string} [fallback_text] - fallback text if settings.text does not exist
-  @param {object} [block] - The block object
-  @param {string} [width] - width of the text block
+  @param {string} [class] - custom class to define in addition to text-block classes
+  @param {string} [fallback_text] - fallback text if settings.text does not exist
+  @param {object} [block] - The block object
+  @param {string} [width] - width of the text block
 {%- enddoc -%}
 
 {% liquid
@@ -96,131 +96,130 @@
 
 {% stylesheet %}
   :root {
-    --text-align-default: left;
-  }
+  --text-align-default: left;
+}
 
-  [style*='--horizontal-alignment: center'] .text-block {
-    --text-align-default: center;
-  }
+[style*='--horizontal-alignment: center'] .text-block {
+  --text-align-default: center;
+}
 
-  [style*='--horizontal-alignment: flex-end'] .text-block {
-    --text-align-default: right;
-  }
+[style*='--horizontal-alignment: flex-end'] .text-block {
+  --text-align-default: right;
+}
 
-  [style*='--horizontal-alignment: flex-start'] > .text-block {
-    --text-align-default: left;
-  }
+[style*='--horizontal-alignment: flex-start'] > .text-block {
+  --text-align-default: left;
+}
 
-  [style*='--horizontal-alignment: center'] > .text-block {
-    --text-align-default: center;
-  }
+[style*='--horizontal-alignment: center'] > .text-block {
+  --text-align-default: center;
+}
 
-  [style*='--horizontal-alignment: flex-end'] > .text-block {
-    --text-align-default: right;
-  }
+[style*='--horizontal-alignment: flex-end'] > .text-block {
+  --text-align-default: right;
+}
 
-  .text-block {
-    width: var(--width);
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: var(--horizontal-alignment);
-  }
+.text-block {
+  width: var(--width);
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: var(--horizontal-alignment);
+}
 
-  .text-block > * {
-    width: var(--width);
-    max-width: var(--max-width, 100%);
-    text-align: var(--text-align, var(--text-align-default));
-    text-wrap: var(--text-wrap);
-  }
+.text-block > * {
+  width: var(--width);
+  max-width: var(--max-width, 100%);
+  text-align: var(--text-align, var(--text-align-default));
+  text-wrap: var(--text-wrap);
+}
 
-  .text-block:not(.text-block--full-width).rte,
-  .text-block:not(.text-block--full-width).paragraph {
-    /* Safari doesn't support pretty, so fallback to balance */
-    text-wrap: balance;
-    text-wrap: pretty;
-  }
+.text-block:not(.text-block--full-width).rte,
+.text-block:not(.text-block--full-width).paragraph {
+  /* Safari doesn't support pretty, so fallback to balance */
+  text-wrap: balance;
+  text-wrap: pretty;
+}
 
-  .text-block:not(.text-block--full-width):is(.h1, .h2, .h3, .h4, .h5, .h6) {
-    text-wrap: balance;
-  }
+.text-block:not(.text-block--full-width):is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  text-wrap: balance;
+}
 
-  /* Hide underline unless text is using paragraph styles. */
-  .text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) a {
-    text-decoration-color: transparent;
-  }
+/* Hide underline unless text is using paragraph styles. */
+.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) a {
+  text-decoration-color: transparent;
+}
 
-  .text-block h1,
-  .text-block.h1 > * {
-    margin-block: var(--font-h1--spacing);
-  }
+.text-block h1,
+.text-block.h1 > * {
+  margin-block: var(--font-h1--spacing);
+}
 
-  .text-block h2,
-  .text-block.h2 > * {
-    margin-block: var(--font-h2--spacing);
-  }
+.text-block h2,
+.text-block.h2 > * {
+  margin-block: var(--font-h2--spacing);
+}
 
-  .text-block h3,
-  .text-block.h3 > * {
-    margin-block: var(--font-h3--spacing);
-  }
+.text-block h3,
+.text-block.h3 > * {
+  margin-block: var(--font-h3--spacing);
+}
 
-  .text-block h4,
-  .text-block.h4 > * {
-    margin-block: var(--font-h4--spacing);
-  }
+.text-block h4,
+.text-block.h4 > * {
+  margin-block: var(--font-h4--spacing);
+}
 
-  .text-block h5,
-  .text-block.h5 > * {
-    margin-block: var(--font-h5--spacing);
-  }
+.text-block h5,
+.text-block.h5 > * {
+  margin-block: var(--font-h5--spacing);
+}
 
-  .text-block h6,
-  .text-block.h6 > * {
-    margin-block: var(--font-h6--spacing);
-  }
+.text-block h6,
+.text-block.h6 > * {
+  margin-block: var(--font-h6--spacing);
+}
 
-  .text-block p,
-  .text-block.p > * {
-    margin-block: var(--font-paragraph--spacing);
-  }
+.text-block p,
+.text-block.p > * {
+  margin-block: var(--font-paragraph--spacing);
+}
 
-  .text-block > *:first-child {
-    margin-block-start: 0;
-  }
+.text-block > *:first-child {
+  margin-block-start: 0;
+}
 
-  .text-block > *:last-child {
-    margin-block-end: 0;
-  }
+.text-block > *:last-child {
+  margin-block-end: 0;
+}
 
-  .text-block--align-center,
-  .text-block--align-center > * {
-    margin-inline: auto;
-  }
+.text-block--align-center,
+.text-block--align-center > * {
+  margin-inline: auto;
+}
 
-  .text-block--align-right,
-  .text-block--align-right > * {
-    margin-inline-start: auto;
-  }
+.text-block--align-right,
+.text-block--align-right > * {
+  margin-inline-start: auto;
+}
 
-  .text-block--background {
-    background-color: var(--text-background-color);
-    border-radius: var(--text-corner-radius);
+.text-block--background {
+  background-color: var(--text-background-color);
+  border-radius: var(--text-corner-radius);
 
-    /* To avoid text being cropped when using a border radius we add a minimum padding. */
-    padding-block-start: max(var(--text-padding), var(--padding-block-start, 0));
-    padding-block-end: max(var(--text-padding), var(--padding-block-end, 0));
-    padding-inline-start: max(var(--text-padding), var(--padding-inline-start, 0));
-    padding-inline-end: max(var(--text-padding), var(--padding-inline-end, 0));
-  }
+  /* To avoid text being cropped when using a border radius we add a minimum padding. */
+  padding-block-start: max(var(--text-padding), var(--padding-block-start, 0));
+  padding-block-end: max(var(--text-padding), var(--padding-block-end, 0));
+  padding-inline-start: max(var(--text-padding), var(--padding-inline-start, 0));
+  padding-inline-end: max(var(--text-padding), var(--padding-inline-end, 0));
+}
 
-  .custom-color,
-  .custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {
-    color: var(--color);
-  }
+.custom-color,
+.custom-color > :is(h1, h2, h3, h4, h5, h6, p, *) {
+  color: var(--color);
+}
 
-
-  .text-block__content {
+.text-block__content {
   overflow: hidden;
   max-height: var(--line-limit);
   transition: max-height 0.3s ease-in-out;
@@ -235,13 +234,12 @@
   border: none;
   cursor: pointer;
   font-weight: bold;
-  color: var(--color-primary, #007bff); /* Usa el color de enlace de tu tema */
+  color: var(--color-primary, #007bff);
   margin-top: 10px;
-  display: block; /* Asegura que el botón esté en su propia línea */
+  display: block;
 }
-
-
 {% endstylesheet %}
+
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
@@ -258,16 +256,12 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     button.addEventListener('click', () => {
-      const isExpanded = button.getAttribute('aria-expanded') === 'true';
+      const isExpanded = content.classList.toggle('is-expanded');
 
       if (isExpanded) {
-        content.classList.remove('is-expanded');
-        button.setAttribute('aria-expanded', 'false');
-        button.textContent = 'Ver más';
-      } else {
-        content.classList.add('is-expanded');
-        button.setAttribute('aria-expanded', 'true');
         button.textContent = 'Ver menos';
+      } else {
+        button.textContent = 'Ver más';
       }
     });
   });
