@@ -2143,10 +2143,12 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 .cart-drawer__summary .dynamic-checkout__content {
   display:none;
 }
-.cart-items__media-container img{
+.cart-drawer__summary .cart-items__media-container img{
   border-radius:20px;  
 }
-
+.cart-drawer__summary .quantity-selector{
+  border-radius:20px;  
+}
 
 .drawer {
   background-color: var(--color-background);
