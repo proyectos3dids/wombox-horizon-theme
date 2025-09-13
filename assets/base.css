@@ -2146,7 +2146,7 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 .cart-items__media-container img{
   border-radius:20px;  
 }
-.quantity-selector{
+.cart-items__quantity .quantity-selector{
   border-radius:20px;  
 }
 
