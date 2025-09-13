@@ -2,6 +2,53 @@
 
 {% render 'text', block: block %}
 
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const textBlocks = document.querySelectorAll('.text-block.rte');
+
+    textBlocks.forEach(block => {
+      const content = block.querySelector('p');
+      const lineHeight = parseFloat(getComputedStyle(content).lineHeight);
+      const maxHeight = lineHeight * 2; // Dos líneas
+
+      // Si el texto es más alto que 2 líneas
+      if (content.scrollHeight > maxHeight) {
+        const wrapper = document.createElement('div');
+        wrapper.classList.add('text-block__wrapper');
+        block.parentNode.insertBefore(wrapper, block);
+        wrapper.appendChild(block);
+
+        const button = document.createElement('button');
+        button.textContent = 'Ver más';
+        button.classList.add('text-block__toggle');
+        button.setAttribute('aria-expanded', 'false');
+        wrapper.appendChild(button);
+
+        block.style.maxHeight = `${maxHeight}px`;
+        block.style.overflow = 'hidden';
+
+        button.addEventListener('click', () => {
+          const isExpanded = button.getAttribute('aria-expanded') === 'true';
+
+          if (!isExpanded) {
+            block.style.maxHeight = `${content.scrollHeight}px`;
+            block.style.overflow = 'visible';
+            button.textContent = 'Ver menos';
+            button.setAttribute('aria-expanded', 'true');
+          } else {
+            block.style.maxHeight = `${maxHeight}px`;
+            block.style.overflow = 'hidden';
+            button.textContent = 'Ver más';
+            button.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+    });
+  });
+</script>
+
+
 {% schema %}
 {
   "name": "t:names.text",
