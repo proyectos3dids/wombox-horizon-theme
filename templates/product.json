@@ -110,6 +110,7 @@
                 "add_tocart_mLmcLn": {
                   "type": "add-tocart",
                   "name": "Sticky product bar",
+                  "disabled": true,
                   "settings": {
                     "button_text": "Add to cart",
                     "fallback_title": "Product name",
@@ -146,7 +147,6 @@
                 "add_tocart2_EMAWfK": {
                   "type": "add-tocart2",
                   "name": "Sticky product bar para cajas",
-                  "disabled": true,
                   "settings": {
                     "button_text": "Add to cart",
                     "fallback_title": "Product name",
