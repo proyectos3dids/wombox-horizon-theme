@@ -43,13 +43,13 @@
       "type": "richtext",
       "id": "custom_text_one",
       "label": "Additional text block 1",
-      "default": "<p>Add custom text here.</p>"
+      "default": "<p>Ver más</p>"
     },
     {
       "type": "richtext",
       "id": "custom_text_two",
       "label": "Additional text block 2",
-      "default": "<p>Add more custom text here.</p>"
+      "default": "<p>Ver menos</p>"
     }
   ]
 }
