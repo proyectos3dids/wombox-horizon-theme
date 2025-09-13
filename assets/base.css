@@ -2138,6 +2138,12 @@ product-price.text-block:is(.h1, .h2, .h3, .h4, .h5, .h6) > *:not(.tax-note) {
 }
 
 /* Drawer */
+
+
+.cart-drawer__summary .dynamic-checkout__content {
+  display:none;
+}
+
 .drawer {
   background-color: var(--color-background);
   position: fixed;
