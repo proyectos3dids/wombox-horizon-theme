@@ -73,7 +73,7 @@
         {% for block in section.blocks %}
           {% if block.type == 'social_link' %}
             {% assign has_social = true %}
-            <a style="width:12.35px;" href="{{ block.settings.url | default: '#' }}"
+            <a style="width:30.35px;" href="{{ block.settings.url | default: '#' }}"
                {% if block.settings.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}
                class="wbf__soc-a" {{ block.shopify_attributes }}>
               {% if block.settings.icon_svg != blank %}
