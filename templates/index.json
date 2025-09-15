@@ -662,7 +662,7 @@
         "text_WUjxFF": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>HIGH QUALITY BEAUTY</strong> <strong>BOXES FOR WOMEN </strong>—</p>",
+            "text": "<h2><strong>HIGH QUALITY BEAUTY</strong> <strong>BOXES FOR WOMEN </strong>—</h2>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -687,7 +687,7 @@
         "text_TUdRxL": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>TOP QUALITY BEAUTY PRODUCTS FOR WOMEN </strong>—</p>",
+            "text": "<h3><strong>TOP QUALITY BEAUTY PRODUCTS FOR WOMEN </strong>—</h3>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
