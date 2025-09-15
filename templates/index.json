@@ -1137,13 +1137,13 @@
             "ai_gen_block_00a4e89_LetU9a": {
               "type": "ai_gen_block_00a4e89",
               "settings": {
-                "heading": "SUSCRÍBETE A NUESTRO BOLETÍN",
-                "description": "Entérate de todas las novedades, secretos y promociones antes que nadie.",
-                "email_placeholder": "Escribe aquí tu correo electrónico",
-                "button_text": "SUSCRIBIRSE",
+                "heading": "SUBSCRIBE TO OUR NEWSLETTER",
+                "description": "Be the first to find out about all the latest news, secrets, and promotions.",
+                "email_placeholder": "Write your email address",
+                "button_text": "SUBSCRIBE",
                 "success_message": "Thank you for subscribing to our newsletter!",
                 "show_privacy_checkbox": true,
-                "privacy_text": "He leído y acepto la <a href=\"/policies/privacy-policy\">Política de Privacidad</a>",
+                "privacy_text": "I've read and accept the <a href=\"/policies/privacy-policy\">Privacy Policy</a>",
                 "heading_font_style": "h2",
                 "heading_font_weight": "600",
                 "heading_line_height": 1,
