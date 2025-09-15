@@ -1,6 +1,477 @@
+{% doc %}
+  @prompt
+    I want a section with an email field for the newsletter sbscription. It must include a Privacy Policy checkbox. Make it customizable so I can change the text size, colors and corner radius
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-newsletter-signup-{{ ai_gen_id }} {
+    padding: 40px 20px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.container_border_radius }}px;
+    text-align: center;
+  }
+
+  .ai-newsletter-signup__content-{{ ai_gen_id }} {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .ai-newsletter-signup__heading-{{ ai_gen_id }} {
+    color: {{ block.settings.heading_color }};
+    font-size: {{ block.settings.heading_size }}px;
+    margin: 0 0 16px 0;
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.text_size }}px;
+    margin: 0 0 24px 0;
+    line-height: 1.5;
+  }
+
+  .ai-newsletter-signup__form-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ai-newsletter-signup__email-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }} {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid {{ block.settings.input_border_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+    font-size: {{ block.settings.input_text_size }}px;
+    color: {{ block.settings.input_text_color }};
+    background-color: {{ block.settings.input_background_color }};
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}:focus {
+    outline: none;
+    border-color: {{ block.settings.input_focus_border_color }};
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }} {
+    padding: 14px 24px;
+    background-color: {{ block.settings.button_background_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-size: {{ block.settings.button_text_size }}px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background_color }};
+  }
+
+  .ai-newsletter-signup__checkbox-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+    margin-top: 8px;
+  }
+
+  .ai-newsletter-signup__checkbox-{{ ai_gen_id }} {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    accent-color: {{ block.settings.checkbox_color }};
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    font-size: {{ block.settings.checkbox_text_size }}px;
+    line-height: 1.4;
+    flex: 1;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }} a {
+    color: {{ block.settings.link_color }};
+    text-decoration: underline;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }} a:hover {
+    color: {{ block.settings.link_hover_color }};
+  }
+
+  .ai-newsletter-signup__success-{{ ai_gen_id }} {
+    color: {{ block.settings.success_color }};
+    font-size: {{ block.settings.text_size }}px;
+    margin-top: 16px;
+    padding: 12px;
+    background-color: {{ block.settings.success_background_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+  }
+
+  .ai-newsletter-signup__error-{{ ai_gen_id }} {
+    color: {{ block.settings.error_color }};
+    font-size: {{ block.settings.text_size }}px;
+    margin-top: 16px;
+    padding: 12px;
+    background-color: {{ block.settings.error_background_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-newsletter-signup__email-wrapper-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-newsletter-signup__submit-button-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-newsletter-signup-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-newsletter-signup__content-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-newsletter-signup__heading-{{ ai_gen_id }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="ai-newsletter-signup__description-{{ ai_gen_id }}">{{ block.settings.description }}</div>
+    {% endif %}
+
+    {% form 'customer' %}
+      <div class="ai-newsletter-signup__form-{{ ai_gen_id }}">
+        <div class="ai-newsletter-signup__email-wrapper-{{ ai_gen_id }}">
+          <input
+            type="email"
+            name="contact[email]"
+            class="ai-newsletter-signup__email-input-{{ ai_gen_id }}"
+            value="{{ form.email }}"
+            placeholder="{{ block.settings.email_placeholder }}"
+            aria-required="true"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            {% if form.errors %}
+              aria-invalid="true"
+              aria-describedby="ai-newsletter-signup-error-{{ ai_gen_id }}"
+            {% endif %}
+            {% if form.posted_successfully? %}
+              aria-describedby="ai-newsletter-signup-success-{{ ai_gen_id }}"
+            {% endif %}
+            required
+          >
+          <button
+            type="submit"
+            class="ai-newsletter-signup__submit-button-{{ ai_gen_id }}"
+          >
+            {{ block.settings.button_text }}
+          </button>
+        </div>
+
+        {% if block.settings.show_privacy_checkbox %}
+          <div class="ai-newsletter-signup__checkbox-wrapper-{{ ai_gen_id }}">
+            <input
+              type="checkbox"
+              id="ai-newsletter-privacy-{{ ai_gen_id }}"
+              name="contact[accepts_marketing]"
+              class="ai-newsletter-signup__checkbox-{{ ai_gen_id }}"
+              value="1"
+              required
+            >
+            <label
+              for="ai-newsletter-privacy-{{ ai_gen_id }}"
+              class="ai-newsletter-signup__checkbox-label-{{ ai_gen_id }}"
+            >
+              {{ block.settings.privacy_text }}
+            </label>
+          </div>
+        {% endif %}
+
+        {% if form.posted_successfully? %}
+          <div
+            id="ai-newsletter-signup-success-{{ ai_gen_id }}"
+            class="ai-newsletter-signup__success-{{ ai_gen_id }}"
+          >
+            {{ block.settings.success_message }}
+          </div>
+        {% endif %}
+
+        {% if form.errors %}
+          <div
+            id="ai-newsletter-signup-error-{{ ai_gen_id }}"
+            class="ai-newsletter-signup__error-{{ ai_gen_id }}"
+          >
+            {% for error in form.errors %}
+              {{ error }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <input type="hidden" name="contact[tags]" value="newsletter">
+    {% endform %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Newsletter signup",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Stay in the loop"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Subscribe to our newsletter and be the first to know about new products, exclusive offers, and updates."
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email placeholder",
+      "default": "Enter your email address"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Thank you for subscribing to our newsletter!"
+    },
+    {
+      "type": "header",
+      "content": "Privacy policy"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_privacy_checkbox",
+      "label": "Show privacy policy checkbox",
+      "default": true
+    },
+    {
+      "type": "html",
+      "id": "privacy_text",
+      "label": "Privacy policy text",
+      "default": "I agree to the <a href=\"/policies/privacy-policy\">Privacy Policy</a> and consent to receive marketing emails."
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "min": 16,
+      "max": 48,
+      "step": 2,
+      "unit": "px",
+      "label": "Heading size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "input_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Input text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button text size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "checkbox_text_size",
+      "min": 10,
+      "max": 18,
+      "step": 1,
+      "unit": "px",
+      "label": "Checkbox text size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "input_background_color",
+      "label": "Input background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Input text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Input border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "input_focus_border_color",
+      "label": "Input focus border",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "Button hover background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "checkbox_color",
+      "label": "Checkbox",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "success_color",
+      "label": "Success text",
+      "default": "#008060"
+    },
+    {
+      "type": "color",
+      "id": "success_background_color",
+      "label": "Success background",
+      "default": "#e8f5e8"
+    },
+    {
+      "type": "color",
+      "id": "error_color",
+      "label": "Error text",
+      "default": "#d82c0d"
+    },
+    {
+      "type": "color",
+      "id": "error_background_color",
+      "label": "Error background",
+      "default": "#fdeaea"
+    },
+    {
+      "type": "header",
+      "content": "Border radius"
+    },
+    {
+      "type": "range",
+      "id": "container_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Container",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "input_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Input",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter signup"
+    }
+  ]
+}
 {% endschema %}
