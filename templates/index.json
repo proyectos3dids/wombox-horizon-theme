@@ -896,11 +896,11 @@
       "name": "t:names.collections_bento",
       "settings": {
         "collection_list": [
-          "pouch",
           "hair-brushes",
           "scrunchies",
+          "massagers",
           "hair-clip",
-          "massagers"
+          "pouch"
         ],
         "layout_type": "bento",
         "carousel_on_mobile": false,
