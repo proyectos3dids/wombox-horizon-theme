@@ -602,28 +602,19 @@
         "padding-block-end": 48
       }
     },
-    "ss_product_vidoes_yxJCtr": {
+    "ss_product_vidoes_dwwV3p": {
       "type": "ss-product-vidoes",
       "blocks": {
-        "video_cMyCC3": {
+        "video_jMhCAg": {
           "type": "video",
           "settings": {
-            "video": "shopify://files/videos/08_SELF CARE.mp4",
+            "video": "shopify://files/videos/10_UNBOXING 1.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "modal_heading": "<h4>Heading</h4>",
             "modal_text": "<p>Text</p>"
           }
         },
-        "video_dFEcAN": {
-          "type": "video",
-          "settings": {
-            "video": "shopify://files/videos/04_HAUL 1.mp4",
-            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
-            "modal_heading": "<h4>Heading</h4>",
-            "modal_text": "<p>Text</p>"
-          }
-        },
-        "video_r9BRgp": {
+        "video_BXy7rJ": {
           "type": "video",
           "settings": {
             "video": "shopify://files/videos/wombox_02_banyo_sin_filtos.mp4",
@@ -632,17 +623,28 @@
             "modal_text": "<p>Text</p>"
           }
         },
-        "video_CUBTTz": {
+        "video_8ma6nd": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/04_HAUL 1.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "modal_heading": "<h4>Heading</h4>",
             "modal_text": "<p>Text</p>"
           }
         },
-        "video_dkQYBJ": {
+        "video_AbT4Bf": {
           "type": "video",
           "settings": {
+            "video": "shopify://files/videos/08_SELF CARE.mp4",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "modal_heading": "<h4>Heading</h4>",
+            "modal_text": "<p>Text</p>"
+          }
+        },
+        "video_rQBkEM": {
+          "type": "video",
+          "settings": {
+            "video": "shopify://files/videos/05_HAUL 2.mp4",
             "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
             "modal_heading": "<h4>Heading</h4>",
             "modal_text": "<p>Text</p>"
@@ -650,11 +652,11 @@
         }
       },
       "block_order": [
-        "video_cMyCC3",
-        "video_dFEcAN",
-        "video_r9BRgp",
-        "video_CUBTTz",
-        "video_dkQYBJ"
+        "video_jMhCAg",
+        "video_BXy7rJ",
+        "video_8ma6nd",
+        "video_AbT4Bf",
+        "video_rQBkEM"
       ],
       "name": "SS - Product videos",
       "settings": {
@@ -732,31 +734,31 @@
         "modal_text_align_mobile": "center",
         "modal_text_mt": 16,
         "modal_text_mt_mobile": 16,
-        "card_bg_color": "#ffffff",
+        "card_bg_color": "#FFFFFF",
         "card_border_color": "#000000",
         "video_overlay_color": "#000000",
         "card_shadow_color": "#000000",
-        "icon_color": "#ffffff",
+        "icon_color": "#FFFFFF",
         "icon_bg_color": "#000000",
-        "icon_border_color": "#ffffff",
+        "icon_border_color": "#FFFFFF",
         "arrow_icon_color": "#1c1c1c",
         "arrow_icon_hover_color": "#1c1c1c",
-        "arrow_bg_color": "#ffffff",
-        "arrow_bg_hover_color": "#ffffff",
+        "arrow_bg_color": "#FFFFFF",
+        "arrow_bg_hover_color": "#FFFFFF",
         "arrow_border_color": "#000000",
         "arrow_border_hover_color": "#000000",
         "modal_heading_color": "#000000",
         "modal_text_color": "#000000",
-        "modal_content_bg_color": "#ffffff",
+        "modal_content_bg_color": "#FFFFFF",
         "modal_border_color": "#000000",
         "modal_overlay_color": "#000000",
-        "modal_bg_color": "#ffffff",
+        "modal_bg_color": "#FFFFFF",
         "modal_video_border_color": "#000000",
-        "buttons_icon_color": "#ffffff",
-        "buttons_bg_color": "#ffffff",
+        "buttons_icon_color": "#FFFFFF",
+        "buttons_bg_color": "#FFFFFF",
         "buttons_border_color": "#000000",
-        "close_icon_color": "#ffffff",
-        "close_bg_color": "#ffffff",
+        "close_icon_color": "#FFFFFF",
+        "close_bg_color": "#FFFFFF",
         "close_border_color": "#000000",
         "heading_color": "#000000",
         "background_color": "",
@@ -776,6 +778,6 @@
   "order": [
     "main",
     "product_recommendations_qggXJq",
-    "ss_product_vidoes_yxJCtr"
+    "ss_product_vidoes_dwwV3p"
   ]
 }
