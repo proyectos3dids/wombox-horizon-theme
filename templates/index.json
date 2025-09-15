@@ -897,10 +897,10 @@
       "settings": {
         "collection_list": [
           "pouch",
-          "claw-clip",
           "hair-brushes",
-          "massager",
-          "scrunchies"
+          "scrunchies",
+          "hair-clip",
+          "massagers"
         ],
         "layout_type": "bento",
         "carousel_on_mobile": false,
