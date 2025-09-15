@@ -262,7 +262,7 @@
           "type": "text",
           "name": "Description",
           "settings": {
-            "text": "<p>Discover the next level of beauty care with our gift boxes designed for women who value both elegance and technology. At the heart of these sets is the <strong>Face Lifting Massager</strong>, a smart tool that combines innovation and comfort to bring professional results into your daily routine.</p><p>Engineered to <strong>stimulate circulation, tone facial muscles, and reduce signs of fatigue</strong>, the massager is ideal for women seeking to preserve firmness and radiance as they age. Used regularly—whether in the morning to awaken the skin or in the evening as part of a relaxing ritual—it helps improve elasticity, diminish puffiness, and enhance the absorption of skincare products.</p><p>Paired with <strong>velvet beauty pouches</strong> that keep essentials organized and <strong>delicate scrunchies and clips</strong> that protect hair without breakage, these boxes are perfect for women who want more than beauty accessories: they want tools that actively <strong>support long-term skin health and confidence</strong>.</p>",
+            "text": "{{ closest.collection.description }}",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
