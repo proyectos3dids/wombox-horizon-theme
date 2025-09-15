@@ -1,6 +1,1017 @@
+{% doc %}
+  @prompt
+    I want a section with an email field for the newsletter sbscription. It must include a Privacy Policy checkbox. Make it customizable so I can change the text size, colors and corner radius, Let me change the font like if its Header 1, 2, 3, paragraph, etc, I want to be able to change the weight of the font, Let me also change line heights
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-newsletter-signup-{{ ai_gen_id }} {
+    padding: 40px 20px;
+    background-color: {{ block.settings.background_color }};
+    border-radius: {{ block.settings.container_border_radius }}px;
+    text-align: center;
+  }
+
+  .ai-newsletter-signup__content-{{ ai_gen_id }} {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .ai-newsletter-signup__heading-{{ ai_gen_id }} {
+    color: {{ block.settings.heading_color }};
+    margin: 0 0 16px 0;
+    font-weight: {{ block.settings.heading_font_weight }};
+    line-height: {{ block.settings.heading_line_height }};
+  }
+
+  .ai-newsletter-signup__heading-{{ ai_gen_id }}.heading-h1 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h1 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h1 }});
+    text-transform: {{ settings.type_case_h1 }};
+  }
+
+  .ai-newsletter-signup__heading-{{ ai_gen_id }}.heading-h2 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h2 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h2 }});
+    text-transform: {{ settings.type_case_h2 }};
+  }
+
+  .ai-newsletter-signup__heading-{{ ai_gen_id }}.heading-h3 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h3 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h3 }});
+    text-transform: {{ settings.type_case_h3 }};
+  }
+
+  .ai-newsletter-signup__heading-{{ ai_gen_id }}.heading-h4 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h4 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h4 }});
+    text-transform: {{ settings.type_case_h4 }};
+  }
+
+  .ai-newsletter-signup__heading-{{ ai_gen_id }}.heading-h5 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h5 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h5 }});
+    text-transform: {{ settings.type_case_h5 }};
+  }
+
+  .ai-newsletter-signup__heading-{{ ai_gen_id }}.heading-h6 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h6 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h6 }});
+    text-transform: {{ settings.type_case_h6 }};
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    margin: 0 0 24px 0;
+    font-weight: {{ block.settings.description_font_weight }};
+    line-height: {{ block.settings.description_line_height }};
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }}.text-paragraph {
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: {{ settings.type_size_paragraph }}px;
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }}.text-h1 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h1 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h1 }});
+    text-transform: {{ settings.type_case_h1 }};
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }}.text-h2 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h2 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h2 }});
+    text-transform: {{ settings.type_case_h2 }};
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }}.text-h3 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h3 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h3 }});
+    text-transform: {{ settings.type_case_h3 }};
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }}.text-h4 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h4 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h4 }});
+    text-transform: {{ settings.type_case_h4 }};
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }}.text-h5 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h5 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h5 }});
+    text-transform: {{ settings.type_case_h5 }};
+  }
+
+  .ai-newsletter-signup__description-{{ ai_gen_id }}.text-h6 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h6 }}px;
+    letter-spacing: var(--font-{{ settings.type_letter_spacing_h6 }});
+    text-transform: {{ settings.type_case_h6 }};
+  }
+
+  .ai-newsletter-signup__form-{{ ai_gen_id }} {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .ai-newsletter-signup__email-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }} {
+    flex: 1;
+    padding: 14px 16px;
+    border: 2px solid {{ block.settings.input_border_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+    color: {{ block.settings.input_text_color }};
+    background-color: {{ block.settings.input_background_color }};
+    font-weight: {{ block.settings.input_font_weight }};
+    line-height: {{ block.settings.input_line_height }};}
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}.input-paragraph {
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: {{ settings.type_size_paragraph }}px;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}.input-h1 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h1 }}px;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}.input-h2 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h2 }}px;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}.input-h3 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h3 }}px;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}.input-h4 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h4 }}px;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}.input-h5 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h5 }}px;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}.input-h6 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h6 }}px;
+  }
+
+  .ai-newsletter-signup__email-input-{{ ai_gen_id }}:focus {
+    outline: none;
+    border-color: {{ block.settings.input_focus_border_color }};
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }} {
+    padding: 14px 24px;
+    background-color: {{ block.settings.button_background_color }};
+    color: {{ block.settings.button_text_color }};
+    border: none;
+    border-radius: {{ block.settings.button_border_radius }}px;
+    font-weight: {{ block.settings.button_font_weight }};
+    line-height: {{ block.settings.button_line_height }};
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}.button-paragraph {
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: {{ settings.type_size_paragraph }}px;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}.button-h1 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h1 }}px;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}.button-h2 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h2 }}px;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}.button-h3 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h3 }}px;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}.button-h4 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h4 }}px;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}.button-h5 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h5 }}px;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}.button-h6 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h6 }}px;
+  }
+
+  .ai-newsletter-signup__submit-button-{{ ai_gen_id }}:hover {
+    background-color: {{ block.settings.button_hover_background_color }};
+  }
+
+  .ai-newsletter-signup__checkbox-wrapper-{{ ai_gen_id }} {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    text-align: left;
+    margin-top: 8px;
+  }
+
+  .ai-newsletter-signup__checkbox-{{ ai_gen_id }} {
+    margin-top: 2px;
+    width: 18px;
+    height: 18px;
+    accent-color: {{ block.settings.checkbox_color }};
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }} {
+    color: {{ block.settings.text_color }};
+    flex: 1;
+    font-weight: {{ block.settings.checkbox_font_weight }};
+    line-height: {{ block.settings.checkbox_line_height }};
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }}.checkbox-paragraph {
+    font-family: {{ settings.type_body_font.family }}, {{ settings.type_body_font.fallback_families }};
+    font-size: {{ settings.type_size_paragraph }}px;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }}.checkbox-h1 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h1 }}px;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }}.checkbox-h2 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h2 }}px;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }}.checkbox-h3 {
+    font-family: {{ settings.type_heading_font.family }}, {{ settings.type_heading_font.fallback_families }};
+    font-size: {{ settings.type_size_h3 }}px;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }}.checkbox-h4 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h4 }}px;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }}.checkbox-h5 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h5 }}px;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }}.checkbox-h6 {
+    font-family: {{ settings.type_subheading_font.family }}, {{ settings.type_subheading_font.fallback_families }};
+    font-size: {{ settings.type_size_h6 }}px;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }} a {
+    color: {{ block.settings.link_color }};text-decoration: underline;
+  }
+
+  .ai-newsletter-signup__checkbox-label-{{ ai_gen_id }} a:hover {
+    color: {{ block.settings.link_hover_color }};
+  }
+
+  .ai-newsletter-signup__success-{{ ai_gen_id }} {
+    color: {{ block.settings.success_color }};
+    margin-top: 16px;
+    padding: 12px;
+    background-color: {{ block.settings.success_background_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+  }
+
+  .ai-newsletter-signup__error-{{ ai_gen_id }} {
+    color: {{ block.settings.error_color }};
+    margin-top: 16px;
+    padding: 12px;
+    background-color: {{ block.settings.error_background_color }};
+    border-radius: {{ block.settings.input_border_radius }}px;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-newsletter-signup__email-wrapper-{{ ai_gen_id }} {
+      flex-direction: column;
+    }
+
+    .ai-newsletter-signup__submit-button-{{ ai_gen_id }} {
+      width: 100%;
+    }
+  }
+{% endstyle %}
+
+<div class="ai-newsletter-signup-{{ ai_gen_id }}" {{ block.shopify_attributes }}>
+  <div class="ai-newsletter-signup__content-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h2 class="ai-newsletter-signup__heading-{{ ai_gen_id }} heading-{{ block.settings.heading_font_style }}">{{ block.settings.heading }}</h2>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="ai-newsletter-signup__description-{{ ai_gen_id }} text-{{ block.settings.description_font_style }}">{{ block.settings.description }}</div>
+    {% endif %}
+
+    {% form 'customer' %}
+      <div class="ai-newsletter-signup__form-{{ ai_gen_id }}"><div class="ai-newsletter-signup__email-wrapper-{{ ai_gen_id }}">
+          <input
+            type="email"
+            name="contact[email]"
+            class="ai-newsletter-signup__email-input-{{ ai_gen_id }} input-{{ block.settings.input_font_style }}"
+            value="{{ form.email }}"
+            placeholder="{{ block.settings.email_placeholder }}"
+            aria-required="true"
+            autocorrect="off"
+            autocapitalize="off"
+            autocomplete="email"
+            {% if form.errors %}
+              aria-invalid="true"aria-describedby="ai-newsletter-signup-error-{{ ai_gen_id }}"
+            {% endif %}
+            {% if form.posted_successfully? %}
+              aria-describedby="ai-newsletter-signup-success-{{ ai_gen_id }}"
+            {% endif %}required
+          >
+          <button
+            type="submit"
+            class="ai-newsletter-signup__submit-button-{{ ai_gen_id }} button-{{ block.settings.button_font_style }}"
+          >
+            {{ block.settings.button_text }}
+          </button>
+        </div>
+
+        {% if block.settings.show_privacy_checkbox %}
+          <div class="ai-newsletter-signup__checkbox-wrapper-{{ ai_gen_id }}">
+            <input
+              type="checkbox"
+              id="ai-newsletter-privacy-{{ ai_gen_id }}"
+              name="contact[accepts_marketing]"
+              class="ai-newsletter-signup__checkbox-{{ ai_gen_id }}"
+              value="1"
+              required
+            >
+            <label
+              for="ai-newsletter-privacy-{{ ai_gen_id }}"
+              class="ai-newsletter-signup__checkbox-label-{{ ai_gen_id }} checkbox-{{ block.settings.checkbox_font_style }}"
+            >
+              {{ block.settings.privacy_text }}
+            </label>
+          </div>
+        {% endif %}
+
+        {% if form.posted_successfully? %}
+          <div
+            id="ai-newsletter-signup-success-{{ ai_gen_id }}"
+            class="ai-newsletter-signup__success-{{ ai_gen_id }}"
+          >
+            {{ block.settings.success_message }}
+          </div>
+        {% endif %}
+
+        {% if form.errors %}
+          <div
+            id="ai-newsletter-signup-error-{{ ai_gen_id }}"
+            class="ai-newsletter-signup__error-{{ ai_gen_id }}"
+          >
+            {% for error in form.errors %}
+              {{ error }}
+            {% endfor %}
+          </div>
+        {% endif %}
+      </div>
+
+      <input type="hidden" name="contact[tags]" value="newsletter">
+    {% endform %}
+  </div>
+</div>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Newsletter signup",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Stay in the loop"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Subscribe to our newsletter and be the first to know about new products, exclusive offers, and updates."
+    },
+    {
+      "type": "text",
+      "id": "email_placeholder",
+      "label": "Email placeholder",
+      "default": "Enter your email address"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button text",
+      "default": "Subscribe"
+    },
+    {
+      "type": "text",
+      "id": "success_message",
+      "label": "Success message",
+      "default": "Thank you for subscribing to our newsletter!"
+    },
+    {
+      "type": "header",
+      "content": "Privacy policy"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_privacy_checkbox",
+      "label": "Show privacy policy checkbox",
+      "default": true
+    },
+    {
+      "type": "html",
+      "id": "privacy_text",
+      "label": "Privacy policy text",
+      "default": "I agree to the <a href=\"/policies/privacy-policy\">Privacy Policy</a> and consent to receive marketing emails."
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "select",
+      "id": "heading_font_style",
+      "label": "Heading font style",
+      "options": [
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "h2"
+    },
+    {
+      "type": "select",
+      "id": "heading_font_weight",
+      "label": "Heading font weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "Thin"
+        },
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "900",
+          "label": "Black"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "heading_line_height",
+      "min": 0.8,
+      "max": 2.0,
+      "step": 0.1,
+      "label": "Heading line height",
+      "default": 1.2
+    },
+    {
+      "type": "select",
+      "id": "description_font_style",
+      "label": "Description font style",
+      "options": [
+        {
+          "value": "paragraph",
+          "label": "Paragraph"
+        },
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "paragraph"
+    },
+    {
+      "type": "select",
+      "id": "description_font_weight",
+      "label": "Description font weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "Thin"
+        },
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "900",
+          "label": "Black"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "description_line_height",
+      "min": 0.8,
+      "max": 2.0,
+      "step": 0.1,
+      "label": "Description line height",
+      "default": 1.5
+    },
+    {
+      "type": "select",
+      "id": "input_font_style",
+      "label": "Input font style",
+      "options": [
+        {
+          "value": "paragraph",
+          "label": "Paragraph"
+        },
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "paragraph"
+    },
+    {
+      "type": "select",
+      "id": "input_font_weight",
+      "label": "Input font weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "Thin"
+        },
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "900",
+          "label": "Black"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "input_line_height",
+      "min": 0.8,
+      "max": 2.0,
+      "step": 0.1,
+      "label": "Input line height",
+      "default": 1.4
+    },
+    {
+      "type": "select",
+      "id": "button_font_style",
+      "label": "Button font style",
+      "options": [
+        {
+          "value": "paragraph",
+          "label": "Paragraph"
+        },
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "paragraph"
+    },
+    {
+      "type": "select",
+      "id": "button_font_weight",
+      "label": "Button font weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "Thin"
+        },
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "900",
+          "label": "Black"
+        }
+      ],
+      "default": "600"
+    },
+    {
+      "type": "range",
+      "id": "button_line_height",
+      "min": 0.8,
+      "max": 2.0,
+      "step": 0.1,
+      "label": "Button line height",
+      "default": 1.2
+    },
+    {
+      "type": "select",
+      "id": "checkbox_font_style",
+      "label": "Checkbox text font style",
+      "options": [
+        {
+          "value": "paragraph",
+          "label": "Paragraph"
+        },
+        {
+          "value": "h1",
+          "label": "Heading 1"
+        },
+        {
+          "value": "h2",
+          "label": "Heading 2"
+        },
+        {
+          "value": "h3",
+          "label": "Heading 3"
+        },
+        {
+          "value": "h4",
+          "label": "Heading 4"
+        },
+        {
+          "value": "h5",
+          "label": "Heading 5"
+        },
+        {
+          "value": "h6",
+          "label": "Heading 6"
+        }
+      ],
+      "default": "h6"
+    },
+    {
+      "type": "select",
+      "id": "checkbox_font_weight",
+      "label": "Checkbox text font weight",
+      "options": [
+        {
+          "value": "100",
+          "label": "Thin"
+        },
+        {
+          "value": "300",
+          "label": "Light"
+        },
+        {
+          "value": "400",
+          "label": "Regular"
+        },
+        {
+          "value": "500",
+          "label": "Medium"
+        },
+        {
+          "value": "600",
+          "label": "Semibold"
+        },
+        {
+          "value": "700",
+          "label": "Bold"
+        },
+        {
+          "value": "900",
+          "label": "Black"
+        }
+      ],
+      "default": "400"
+    },
+    {
+      "type": "range",
+      "id": "checkbox_line_height",
+      "min": 0.8,
+      "max": 2.0,
+      "step": 0.1,
+      "label": "Checkbox text line height",
+      "default": 1.4
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background",
+      "default": "#f8f8f8"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text",
+      "default": "#666666"
+    },
+    {
+      "type": "color",
+      "id": "input_background_color",
+      "label": "Input background",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "input_text_color",
+      "label": "Input text",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "input_border_color",
+      "label": "Input border",
+      "default": "#e0e0e0"
+    },
+    {
+      "type": "color",
+      "id": "input_focus_border_color",
+      "label": "Input focus border",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_background_color",
+      "label": "Button background",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button text",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_background_color",
+      "label": "Button hover background",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "checkbox_color",
+      "label": "Checkbox",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "link_color",
+      "label": "Link",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "link_hover_color",
+      "label": "Link hover",
+      "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "success_color",
+      "label": "Success text",
+      "default": "#008060"
+    },
+    {
+      "type": "color",
+      "id": "success_background_color",
+      "label": "Success background",
+      "default": "#e8f5e8"
+    },
+    {
+      "type": "color",
+      "id": "error_color",
+      "label": "Error text",
+      "default": "#d82c0d"
+    },
+    {
+      "type": "color",
+      "id": "error_background_color",
+      "label": "Error background",
+      "default": "#fdeaea"
+    },
+    {
+      "type": "header",
+      "content": "Border radius"
+    },
+    {
+      "type": "range",
+      "id": "container_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Container",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "input_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Input",
+      "default": 8
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button",
+      "default": 8
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newsletter signup"
+    }
+  ]
+}
 {% endschema %}
