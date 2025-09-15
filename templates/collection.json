@@ -372,7 +372,7 @@
                 "success_message": "Thank you for subscribing to our newsletter!",
                 "show_privacy_checkbox": true,
                 "privacy_text": "I've read and accept the <a href=\"/policies/privacy-policy\">Privacy Policy</a>",
-                "heading_font_style": "h2",
+                "heading_font_style": "h3",
                 "heading_font_weight": "600",
                 "heading_line_height": 1,
                 "description_font_style": "paragraph",
