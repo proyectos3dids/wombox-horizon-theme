@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "main": {
       "type": "product-information",
@@ -70,6 +71,7 @@
               "type": "group",
               "name": "Header",
               "settings": {
+                "link": "",
                 "open_in_new_tab": false,
                 "content_direction": "column",
                 "vertical_on_mobile": true,
@@ -187,7 +189,20 @@
               "type": "custom-boxes",
               "settings": {
                 "title": "Selecciona tu caja",
-                "description": "Elige el tipo de caja que prefieras para tu pedido"
+                "description": "Elige el tipo de caja que prefieras para tu pedido",
+                "expand_hint_text": "Click to expand",
+                "selected_box_text": "Selected Box",
+                "max_products": 6,
+                "min_products": 3,
+                "show_product_images": true,
+                "show_product_prices": true,
+                "layout_style": "grid",
+                "background_color": "#ffffff",
+                "text_color": "#000000",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -272,6 +287,142 @@
         "color_scheme": "",
         "padding-block-start": 0,
         "padding-block-end": 0
+      }
+    },
+    "ss_hotspots_3wWnVb": {
+      "type": "ss-hotspots",
+      "blocks": {
+        "hotspot_nnXCAV": {
+          "type": "hotspot",
+          "settings": {
+            "vertical_position": 50,
+            "vertical_position_mobile": 28,
+            "horizontal_position": 22,
+            "horizontal_position_mobile": 9,
+            "type": "icon",
+            "title": "White Beauty Pouch in Lace Dream",
+            "image": "shopify://shop_images/Generated_Image_September_03_2025_-_10_58AM.jpg",
+            "content": "<p><strong>White Beauty Pouch in Lace Dream</strong>: This beauty cosmetic bag white Beauty cosmetic bag in Lace Dream brings a sophisticated, feminine touch to your collection. Perfect for keeping your beauty essentials neatly organized with style.</p>",
+            "video_url": ""
+          }
+        },
+        "hotspot_9fQXCx": {
+          "type": "hotspot",
+          "settings": {
+            "vertical_position": 30,
+            "vertical_position_mobile": 21,
+            "horizontal_position": 54,
+            "horizontal_position_mobile": 54,
+            "type": "icon",
+            "title": "Pink Bamboo Paddle brush in Rosy Glow",
+            "content": "<p><strong>Pink Bamboo Paddle brush in Rosy Glow</strong>: This hair comb pink Bamboo Paddle brush in Rosy Glow brings together superior quality with a refined design. Perfect for everyday use, adding confidence and style.</p>",
+            "video_url": ""
+          }
+        },
+        "hotspot_ztPf3D": {
+          "type": "hotspot",
+          "settings": {
+            "vertical_position": 50,
+            "vertical_position_mobile": 50,
+            "horizontal_position": 65,
+            "horizontal_position_mobile": 69,
+            "type": "icon",
+            "title": "Beige Belle Hair Clip in Macaron Vanilla",
+            "content": "<p><strong>Beige Belle Hair Clip in Macaron Vanilla</strong>: This beige Belle hair clip in Macaron Vanilla is a true reflection of femininity and style. Its practical design keeps your essentials within reach, adding a touch of elegance to any occasion.</p>",
+            "video_url": ""
+          }
+        },
+        "hotspot_pqFy3W": {
+          "type": "hotspot",
+          "settings": {
+            "vertical_position": 55,
+            "vertical_position_mobile": 74,
+            "horizontal_position": 38,
+            "horizontal_position_mobile": 34,
+            "type": "icon",
+            "title": "White Styling brush Morning Dew",
+            "content": "<p><strong>White Styling brush Morning Dew</strong>: This hair comb white Styling brush Morning Dew is a true reflection of femininity and style. Its practical design keeps your essentials within reach, adding a touch of elegance to any occasion.</p>",
+            "video_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "hotspot_nnXCAV",
+        "hotspot_9fQXCx",
+        "hotspot_ztPf3D",
+        "hotspot_pqFy3W"
+      ],
+      "name": "SS - Hotspots",
+      "settings": {
+        "heading": "",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 40,
+        "heading_size_mobile": 30,
+        "heading_height": 150,
+        "heading_align": "left",
+        "heading_align_mobile": "center",
+        "body_padding_vertical": 0,
+        "body_padding_horizontal": 0,
+        "body_radius": 16,
+        "body_border_thickness": 0,
+        "body_shadow": false,
+        "image": "shopify://shop_images/BANNER-LANDING-PRODUCTOS-DESK.jpg",
+        "image_ratio": "original",
+        "image_ratio_mobile": "landscape",
+        "image_radius": 16,
+        "image_border_thickness": 0,
+        "image_shadow": false,
+        "item_padding_vertical": 6,
+        "item_padding_horizontal": 6,
+        "item_radius": 16,
+        "item_border_thickness": 0,
+        "item_animation": true,
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 14,
+        "title_size_mobile": 14,
+        "title_height": 100,
+        "item_image_width": 30,
+        "item_image_width_mobile": 30,
+        "item_image_radius": 16,
+        "item_content_width": 300,
+        "item_content_width_mobile": 190,
+        "item_content_padding_vertical": 12,
+        "item_content_padding_horizontal": 12,
+        "item_content_radius": 16,
+        "item_content_border_thickness": 0,
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 14,
+        "text_size_mobile": 14,
+        "text_height": 100,
+        "text_mt": 8,
+        "item_bg": "#c67461",
+        "item_border_color": "#ffffff",
+        "item_icon_color": "#ffffff",
+        "title_color": "#ffffff",
+        "item_content_bg": "#ffffff",
+        "item_content_border_color": "#d4a697",
+        "text_color": "#c67461",
+        "heading_color": "#c67461",
+        "body_bg_color": "#f3f3f3",
+        "body_border_color": "#000000",
+        "body_shadow_color": "#000000",
+        "image_border_color": "#000000",
+        "image_shadow_color": "#000000",
+        "background_color": "#ffffff",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0
       }
     },
     "product_recommendations_qggXJq": {
@@ -418,6 +569,7 @@
   },
   "order": [
     "main",
+    "ss_hotspots_3wWnVb",
     "product_recommendations_qggXJq"
   ]
 }
