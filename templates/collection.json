@@ -262,7 +262,7 @@
           "type": "text",
           "name": "Description",
           "settings": {
-            "text": "{{ closest.collection.description }}<p>Crafted with the highest quality and 100% natural, organic materials. Inspired by timeless elegance and sophistication. Carefully crafted pieces for stylish and perfect hair hold.</p>",
+            "text": "{{ closest.collection.description }}<p>Made with top quality and 100% natural, organic materials. From boar bristles that polish every strand to nylon bristles that detangle effortlessly. Beauty begins at the root.</p>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
