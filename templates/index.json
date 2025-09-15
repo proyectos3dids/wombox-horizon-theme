@@ -68,7 +68,7 @@
             "text_EbjAFe": {
               "type": "text",
               "settings": {
-                "text": "<p><strong>YOUR MOMENT YOUR INSPIRATION YOUR WOMBOX</strong></p>",
+                "text": "<p><strong>YOUR MOMENT. YOUR INSPIRATION. YOUR WOMBOX.</strong></p>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "center",
@@ -612,7 +612,7 @@
         "text_kFHqND": {
           "type": "text",
           "settings": {
-            "text": "<p>—<strong> FIND THE PERFECT WOMBOX FOR YOU</strong></p>",
+            "text": "<p>—<strong>  FIND THE PERFECT WOMBOX FOR YOU</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -637,7 +637,7 @@
         "text_QYUHt8": {
           "type": "text",
           "settings": {
-            "text": "<p>— <strong>A WOMBOX FOR EVERY WOMAN AND EVERY MOMENT </strong>—</p>",
+            "text": "<p>—  <strong>A WOMBOX FOR EVERY WOMAN AND EVERY MOMENT  </strong>—</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
