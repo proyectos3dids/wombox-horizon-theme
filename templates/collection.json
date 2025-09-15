@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Title",
           "settings": {
-            "text": "<h1>{{ closest.collection.title }}</h1><h1>EXTRA BEAUTY BOX</h1>",
+            "text": "<h1>{{ closest.collection.title }}</h1><h1>TECH BOX</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -262,7 +262,7 @@
           "type": "text",
           "name": "Description",
           "settings": {
-            "text": "<p>Our beauty gift boxes are more than accessories—they are an invitation to transform your daily beauty rituals into moments of pure self-care. Crafted with <strong>premium-quality natural materials</strong>, each item has been designed to respect your hair, scalp, and skin while adding an effortless touch of elegance.</p><p>The <strong>bamboo and acetate combs</strong> glide smoothly, detangling without pulling and stimulating the scalp for healthier, stronger hair. <strong>Paddle and styling brushes</strong> refine every strand, enhancing natural shine and volume. <strong>Scrunchies in soft fabrics</strong> secure your hairstyle comfortably, avoiding breakage, while <strong>tiny and butterfly hair clips</strong> offer versatility for both quick fixes and polished looks.</p><p>Completing the set, the <strong>velvet beauty pouches</strong> keep everything organized in style, and the <strong>Face Lifting Massager</strong> revitalizes your skin by promoting circulation, easing tension, and restoring a youthful glow. Every box is carefully curated to deliver <strong>comfort, protection, and timeless beauty</strong>, making it the perfect ally for women who want to feel radiant every day.</p>",
+            "text": "<p>Discover the next level of beauty care with our gift boxes designed for women who value both elegance and technology. At the heart of these sets is the <strong>Face Lifting Massager</strong>, a smart tool that combines innovation and comfort to bring professional results into your daily routine.</p><p>Engineered to <strong>stimulate circulation, tone facial muscles, and reduce signs of fatigue</strong>, the massager is ideal for women seeking to preserve firmness and radiance as they age. Used regularly—whether in the morning to awaken the skin or in the evening as part of a relaxing ritual—it helps improve elasticity, diminish puffiness, and enhance the absorption of skincare products.</p><p>Paired with <strong>velvet beauty pouches</strong> that keep essentials organized and <strong>delicate scrunchies and clips</strong> that protect hair without breakage, these boxes are perfect for women who want more than beauty accessories: they want tools that actively <strong>support long-term skin health and confidence</strong>.</p>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
