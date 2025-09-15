@@ -448,11 +448,39 @@
             "content": "<p><strong>Pink Bamboo Paddle brush in Rosy Glow</strong>: This hair comb pink Bamboo Paddle brush in Rosy Glow brings together superior quality with a refined design. Perfect for everyday use, adding confidence and style.</p>",
             "video_url": ""
           }
+        },
+        "hotspot_yFDiGP": {
+          "type": "hotspot",
+          "settings": {
+            "vertical_position": 50,
+            "vertical_position_mobile": 50,
+            "horizontal_position": 65,
+            "horizontal_position_mobile": 50,
+            "type": "icon",
+            "title": "Beige Belle Hair Clip in Macaron Vanilla",
+            "content": "<p><strong>Beige Belle Hair Clip in Macaron Vanilla</strong>: This beige Belle hair clip in Macaron Vanilla is a true reflection of femininity and style. Its practical design keeps your essentials within reach, adding a touch of elegance to any occasion.</p>",
+            "video_url": ""
+          }
+        },
+        "hotspot_PpcFjk": {
+          "type": "hotspot",
+          "settings": {
+            "vertical_position": 55,
+            "vertical_position_mobile": 50,
+            "horizontal_position": 38,
+            "horizontal_position_mobile": 50,
+            "type": "icon",
+            "title": "White Styling brush Morning Dew",
+            "content": "<p><strong>White Styling brush Morning Dew</strong>: This hair comb white Styling brush Morning Dew is a true reflection of femininity and style. Its practical design keeps your essentials within reach, adding a touch of elegance to any occasion.</p>",
+            "video_url": ""
+          }
         }
       },
       "block_order": [
         "hotspot_PXFFm9",
-        "hotspot_BXDUaJ"
+        "hotspot_BXDUaJ",
+        "hotspot_yFDiGP",
+        "hotspot_PpcFjk"
       ],
       "name": "SS - Hotspots",
       "settings": {
@@ -500,14 +528,14 @@
         "text_size_mobile": 14,
         "text_height": 100,
         "text_mt": 8,
-        "item_bg": "#000000",
+        "item_bg": "#c67461",
         "item_border_color": "#ffffff",
         "item_icon_color": "#ffffff",
         "title_color": "#ffffff",
         "item_content_bg": "#ffffff",
-        "item_content_border_color": "#000000",
-        "text_color": "#000000",
-        "heading_color": "#000000",
+        "item_content_border_color": "#d4a697",
+        "text_color": "#c67461",
+        "heading_color": "#c67461",
         "body_bg_color": "#f3f3f3",
         "body_border_color": "#000000",
         "body_shadow_color": "#000000",
