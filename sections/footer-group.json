@@ -127,14 +127,14 @@
           "type": "menu_column",
           "settings": {
             "menu": "menu-footer-2",
-            "mobile_title": "LEGALES"
+            "mobile_title": "LEGAL"
           }
         },
         "menu_column_ap99Qc": {
           "type": "menu_column",
           "settings": {
             "menu": "menu-footer-3",
-            "mobile_title": "CONTACTO"
+            "mobile_title": "CONTACT"
           }
         }
       },
@@ -157,33 +157,9 @@
       ],
       "name": "Footer WOMBOX",
       "settings": {
-        "flag_de": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_at": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_be": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_bg": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_cz": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_va": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_hr": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_dk": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_sk": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_si": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
         "flag_es": "shopify://shop_images/7a50cfa9897df6c2e5e814f4f02ab01d00a9323d.png",
-        "flag_ee": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_fi": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_fr": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_gr": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_hu": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_ie": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_it": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_lt": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_lu": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
         "flag_mt": "shopify://shop_images/Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_nl": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_pl": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_pt": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
         "flag_gb": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_17_48_a.m..png",
-        "flag_ro": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
-        "flag_ch": "shopify://shop_images/ChatGPT_Image_12_sept_2025_10_26_16_a.m..png",
         "cta_text": "DESCUBRE NUESTRAS CAJAS",
         "cta_link": "#",
         "strip_image": "shopify://shop_images/Capa_1.png",
