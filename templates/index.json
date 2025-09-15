@@ -612,7 +612,7 @@
         "text_kFHqND": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>| FIND THE PERFECT WOMBOX FOR YOU</strong></p>",
+            "text": "<p>—<strong> FIND THE PERFECT WOMBOX FOR YOU</strong></p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -637,7 +637,32 @@
         "text_QYUHt8": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>| A WOMBOX FOR EVERY WOMAN AND EVERY MOMENT</strong></p>",
+            "text": "<p>— <strong>A WOMBOX FOR EVERY WOMAN AND EVERY MOMENT </strong>—</p>",
+            "width": "fit-content",
+            "max_width": "normal",
+            "alignment": "left",
+            "type_preset": "h1",
+            "font": "var(--font-body--family)",
+            "font_size": "1rem",
+            "line_height": "tight",
+            "letter_spacing": "tight",
+            "case": "none",
+            "wrap": "nowrap",
+            "color": "var(--color-foreground-heading)",
+            "background": false,
+            "background_color": "#00000026",
+            "corner_radius": 0,
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
+        },
+        "text_WUjxFF": {
+          "type": "text",
+          "settings": {
+            "text": "<p><strong>HIGH QUALITY BEAUTY</strong> <strong>BOXES FOR WOMEN </strong>—</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -662,7 +687,7 @@
         "text_TUdRxL": {
           "type": "text",
           "settings": {
-            "text": "<p><strong>TOP QUALITY BEAUTY PRODUCTS FOR WOMEN</strong></p>",
+            "text": "<p><strong>TOP QUALITY BEAUTY PRODUCTS FOR WOMEN </strong>—</p>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -713,6 +738,7 @@
       "block_order": [
         "text_kFHqND",
         "text_QYUHt8",
+        "text_WUjxFF",
         "text_TUdRxL",
         "text_V4wqk6"
       ],
