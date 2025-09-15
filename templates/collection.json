@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Title",
           "settings": {
-            "text": "<h1>{{ closest.collection.title }}</h1><h1>BASIC PREMIUM BOX</h1>",
+            "text": "<h1>{{ closest.collection.title }}</h1><h1>COMPLETE BEAUTY BOX</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
