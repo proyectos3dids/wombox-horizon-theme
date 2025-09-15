@@ -597,7 +597,7 @@
         "card_bg_color": "#FFFFFF",
         "card_border_color": "#121212",
         "video_overlay_color": "#121212",
-        "card_shadow_color": "#121212",
+        "card_shadow_color": "rgba(0,0,0,0)",
         "title_color": "#FFFFFF",
         "price_color": "#FFFFFF",
         "image_border_color": "#121212",
