@@ -16,7 +16,7 @@
           "type": "text",
           "name": "Title",
           "settings": {
-            "text": "<p>{{ closest.collection.title }}</p>",
+            "text": "<h1>{{ closest.collection.title }}</h1><h1>BASIC DAILY BOX</h1>",
             "width": "fit-content",
             "max_width": "normal",
             "alignment": "left",
@@ -262,7 +262,7 @@
           "type": "text",
           "name": "Description",
           "settings": {
-            "text": "{{ closest.collection.description }}<p>Made with premium quality and 100% natural, organic materials. Designed to relax, revitalize, and enhance your daily self-care rituals. Gentle yet effective tools that bring beauty and well-being into perfect balance.</p>",
+            "text": "<p>Discover the essence of everyday  legance with our exclusive beauty gift boxes, designedfor women who value both style and care. </p><p>Each set combines premium-quality,natural materials that protect and enhance your hair and beauty routine. From velvetbeauty pouches that carry your essentials with a touch of sophistication,to bamboo paddle brushes that gently detangle without damaging the hairfiber, every product is crafted to elevate your daily rituals.</p><p>Our scrunchiesin delicate fabrics offer a comfortable hold without breakage, while acetatehair clips ensure a secure grip that protects strands and adds timelesscharm. </p><p>Whether it’s a mini claw clip for quick styling, a moon combfor effortless detangling, or a soft brush that polishes every strand,each accessory is designed to make your beauty routine more effective andgraceful.</p><p>Thesethoughtfully curated boxes adapt to every moment—from casual mornings tospecial occasions—making them the perfect balance between care, functionality,and feminine elegance. </p>",
             "width": "fit-content",
             "max_width": "none",
             "alignment": "left",
