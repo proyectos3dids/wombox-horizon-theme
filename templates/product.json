@@ -564,7 +564,7 @@
             "video": "shopify://files/videos/wombox_02_banyo_sin_filtos.mp4",
             "video_url": "",
             "autoplay": true,
-            "product": "",
+            "product": "complete-beauty-box-aurora-glow-florence",
             "use_variants": true,
             "modal_heading": "<h4>Modal heading</h4>",
             "modal_text": "<p>Modal text</p>"
@@ -576,7 +576,7 @@
             "video": "shopify://files/videos/08_SELF CARE.mp4",
             "video_url": "",
             "autoplay": true,
-            "product": "",
+            "product": "basic-premium-box-azure-prague",
             "use_variants": true,
             "modal_heading": "<h4>Modal heading</h4>",
             "modal_text": "<p>Modal text</p>"
@@ -588,7 +588,7 @@
             "video": "shopify://files/videos/10_UNBOXING 1.mp4",
             "video_url": "",
             "autoplay": true,
-            "product": "",
+            "product": "belle-clip-macaron-vanilla",
             "use_variants": true,
             "modal_heading": "<h4>Modal heading</h4>",
             "modal_text": "<p>Modal text</p>"
@@ -600,7 +600,7 @@
             "video": "shopify://files/videos/04_HAUL 1.mp4",
             "video_url": "",
             "autoplay": true,
-            "product": "",
+            "product": "belle-clip-macaron-vanilla",
             "use_variants": true,
             "modal_heading": "<h4>Modal heading</h4>",
             "modal_text": "<p>Modal text</p>"
