@@ -111,7 +111,7 @@
                   "type": "add-tocart",
                   "name": "Sticky product bar",
                   "settings": {
-                    "button_text": "Add to cart",
+                    "button_text": "Add to Box",
                     "fallback_title": "Product name",
                     "show_price": true,
                     "show_quantity_selector": true,
