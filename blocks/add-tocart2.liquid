@@ -219,7 +219,7 @@ Es personalizable en el editor de temas.
       scrollToAddToCart() {
         const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
         if (addToCartButton) {
-          const y = addToCartButton.getBoundingClientRect().top + window.pageYOffset - 8000; // 100px por encima del botón
+          const y = addToCartButton.getBoundingClientRect().top + window.pageYOffset - 2000; // 100px por encima del botón
           window.scrollTo({ top: y, behavior: 'smooth' });
           setTimeout(() => { try { addToCartButton.focus(); } catch(e){} }, 500);
         }
