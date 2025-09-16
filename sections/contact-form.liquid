@@ -1,0 +1,146 @@
+<div class="section contact-form {{ section.settings.color_scheme }} {% if section.settings.full_width %}section--full{% endif %}">
+  {% if section.settings.heading != blank %}
+    <h2 class="{{ section.settings.heading_align }}">{{ section.settings.heading }}</h2>
+  {% endif %}
+
+  {% form 'contact' %}
+    {% if form.posted_success %}
+      <p class="contact__success">{{ 'templates.contact.form.post_success' | t }}</p>
+    {% else %}
+      {% if form.errors %}
+        <div class="contact__errors">{{ form.errors | default_errors }}</div>
+      {% endif %}
+
+      <div class="contact__grid">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'text' %}
+              <div class="contact__text" {{ block.shopify_attributes }}>
+                <div class="rte">{{ block.settings.text }}</div>
+              </div>
+
+            {% when 'name' %}
+              <div class="contact__field {% if block.settings.half_width %}half{% endif %}" {{ block.shopify_attributes }}>
+                <label for="ContactFormName">{{ 'templates.contact.form.name' | t }}</label>
+                <input
+                  id="ContactFormName"
+                  type="text"
+                  name="contact[name]"
+                  {% if block.settings.required %}required{% endif %}>
+              </div>
+
+            {% when 'email' %}
+              <div class="contact__field {% if block.settings.half_width %}half{% endif %}" {{ block.shopify_attributes }}>
+                <label for="ContactFormEmail">{{ 'templates.contact.form.email' | t }}</label>
+                <input
+                  id="ContactFormEmail"
+                  type="email"
+                  name="contact[email]"
+                  autocorrect="off"
+                  autocapitalize="off"
+                  {% if block.settings.required %}required{% endif %}>
+              </div>
+
+            {% when 'body' %}
+              <div class="contact__field {% if block.settings.half_width %}half{% endif %}" {{ block.shopify_attributes }}>
+                <label for="ContactFormMessage">{{ 'templates.contact.form.message' | t }}</label>
+                <textarea
+                  id="ContactFormMessage"
+                  name="contact[body]"
+                  rows="6"
+                  {% if block.settings.required %}required{% endif %}></textarea>
+              </div>
+
+            {% when 'checkbox' %}
+              <div class="contact__checkbox" {{ block.shopify_attributes }}>
+                <label>
+                  <input type="checkbox" name="attributes[gdpr_consent]"
+                    value="{{ block.settings.value_yes }}"
+                    {% if block.settings.required %}required{% endif %}>
+                  {{ block.settings.title }}
+                </label>
+              </div>
+          {% endcase %}
+        {% endfor %}
+
+        <div class="contact__actions">
+          <button type="submit" class="{{ section.settings.button_style | default: 'btn' }}">
+            {{ 'templates.contact.form.send' | t }}
+          </button>
+        </div>
+      </div>
+    {% endif %}
+  {% endform %}
+</div>
+
+{% schema %}
+{
+  "name": "Contact form",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Heading", "default": "¿sigues buscando respuestas?" },
+    { "type": "select", "id": "heading_align", "label": "Heading align",
+      "options": [
+        { "value": "text-start", "label": "Left" },
+        { "value": "text-center", "label": "Center" },
+        { "value": "text-end", "label": "Right" }
+      ],
+      "default": "text-center"
+    },
+    { "type": "select", "id": "color_scheme", "label": "Color scheme",
+      "options": [
+        { "value": "0", "label": "Default" },
+        { "value": "1", "label": "Alt 1" }
+      ],
+      "default": "0"
+    },
+    { "type": "checkbox", "id": "full_width", "label": "Full width", "default": false },
+    { "type": "text", "id": "button_style", "label": "Button CSS classes", "default": "btn btn--primary" }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "Text",
+      "settings": [
+        { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Add some help text here.</p>" },
+        { "type": "checkbox", "id": "half_width", "label": "Half width", "default": false }
+      ]
+    },
+    {
+      "type": "name",
+      "name": "Name field",
+      "settings": [
+        { "type": "checkbox", "id": "required", "label": "Required", "default": true },
+        { "type": "checkbox", "id": "half_width", "label": "Half width", "default": true }
+      ]
+    },
+    {
+      "type": "email",
+      "name": "Email field",
+      "settings": [
+        { "type": "checkbox", "id": "required", "label": "Required", "default": true },
+        { "type": "checkbox", "id": "half_width", "label": "Half width", "default": true }
+      ]
+    },
+    {
+      "type": "body",
+      "name": "Message field",
+      "settings": [
+        { "type": "checkbox", "id": "required", "label": "Required", "default": true },
+        { "type": "checkbox", "id": "half_width", "label": "Half width", "default": false }
+      ]
+    },
+    {
+      "type": "checkbox",
+      "name": "Checkbox (GDPR)",
+      "settings": [
+        { "type": "text", "id": "title", "label": "Label", "default": "I have read and accept the Privacy Policy." },
+        { "type": "text", "id": "value_no", "label": "Value no", "default": "No" },
+        { "type": "text", "id": "value_yes", "label": "Value yes", "default": "Yes" },
+        { "type": "checkbox", "id": "half_width", "label": "Half width", "default": false },
+        { "type": "checkbox", "id": "required", "label": "Required", "default": true }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Contact form" }]
+}
+{% endschema %}
