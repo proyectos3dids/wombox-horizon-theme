@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "cart-section": {
       "type": "main-cart",
@@ -15,7 +16,7 @@
           "type": "_cart-title",
           "static": true,
           "settings": {
-            "title": "Cart",
+            "title": "Your Box",
             "show_count": true,
             "type_preset": "h4",
             "alignment": "left",
