@@ -334,7 +334,7 @@ Es personalizable en el editor de temas.
         const header = document.querySelector('#shopify-section-header, header[is-sticky], .shopify-section-header, header[role="banner"]');
         const headerH = header ? header.offsetHeight : 0;
 
-        const EXTRA = 200; // << súbelo si quieres aún más arriba (p.ej. 240, 280)
+        const EXTRA = 800; // << súbelo si quieres aún más arriba (p.ej. 240, 280)
         const targetY = addToCartButton.getBoundingClientRect().top + window.pageYOffset - (headerH + EXTRA);
 
         window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
