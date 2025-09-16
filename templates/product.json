@@ -758,7 +758,7 @@
                 "button_text": "Add to cart",
                 "fallback_title": "Product name",
                 "show_price": true,
-                "show_quantity_selector": false,
+                "show_quantity_selector": true,
                 "bar_width": 85,
                 "max_width": 700,
                 "min_width": 350,
