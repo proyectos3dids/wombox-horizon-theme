@@ -1,8 +1,7 @@
 {% comment %}
 Este código crea una barra flotante de producto con un selector de cantidad.
 La barra se adhiere a la parte inferior de la pantalla en las páginas de producto.
-Incluye una imagen del producto, el título, un selector de cantidad y un botón.
-El botón SOLO desplaza al usuario a la sección principal de compra (no añade al carrito).
+Incluye una imagen del producto, el título, un selector de cantidad y un botón para añadir al carrito.
 Es personalizable en el editor de temas.
 {% endcomment %}
 {% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
@@ -19,15 +18,12 @@ Es personalizable en el editor de temas.
     background-color: {{ block.settings.background_color }};
     border-radius: 20px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    z-index: 2147483647 !important; /* SIEMPRE por encima */
+    z-index: 1000;
     padding: {{ block.settings.padding }}px;
     display: flex;
     align-items: center;
     gap: 12px;
     backdrop-filter: blur(10px);
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
   }
 
   .ai-sticky-bar-image-{{ ai_gen_id }} {
@@ -110,7 +106,7 @@ Es personalizable en el editor de temas.
     transform: translateY(-1px);
   }
 
-  /* Selector de cantidad */
+  /* Estilos del selector de cantidad */
   .ai-sticky-bar-quantity-selector-{{ ai_gen_id }} {
     display: flex;
     align-items: center;
@@ -156,6 +152,7 @@ Es personalizable en el editor de temas.
       width: {{ block.settings.mobile_bar_width }}%;
       max-width: {{ block.settings.mobile_max_width }}px;
       min-width: {{ block.settings.mobile_min_width }}px;
+      padding: {{ block.settings.mobile_padding }}px;
     }
 
     .ai-sticky-bar-image-{{ ai_gen_id }} {
@@ -190,24 +187,33 @@ Es personalizable en el editor de temas.
       font-size: {{ block.settings.mobile_price_size }}px;
     }
   }
+
+
+  .ai-sticky-bar-{{ ai_gen_id }} {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
 {% endstyle %}
 
 {% comment %}
-  Determina qué producto mostrar: el producto de la página actual o uno elegido en ajustes.
+  Determina qué producto mostrar: el producto de la página actual o un producto seleccionado en la configuración.
 {% endcomment %}
 {% assign display_product = product %}
 {% if block.settings.featured_product != blank %}
   {% assign display_product = block.settings.featured_product %}
 {% endif %}
 
-<sticky-product-bar-{{ ai_gen_id }}
+<sticky-product-bar-{{ ai_gen_id }} style="z-index:999;"
   class="ai-sticky-bar-{{ ai_gen_id }}"
   {{ block.shopify_attributes }}
 >
   <div class="ai-sticky-bar-image-{{ ai_gen_id }}">
     {% if display_product.featured_image %}
       <img
-        src="{{ display_product.featured_image | image_url: width: 200 }}"
+        src="{{ display_product.featured_image | image_url: width: 200}}"
         alt="{{ display_product.featured_image.alt | escape }}"
         loading="lazy"
         width="200"
@@ -235,121 +241,143 @@ Es personalizable en el editor de temas.
     {% endif %}
   </div>
 
-  <div class="ai-sticky-bar-form-{{ ai_gen_id }}">
-    {% if block.settings.show_quantity_selector %}
+  <form method="post" action="/cart/add" accept-charset="UTF-8" class="ai-sticky-bar-form-{{ ai_gen_id }}" enctype="multipart/form-data">
+    {% if display_product.has_only_default_variant %}
+      <input type="hidden" name="id" value="{{ display_product.selected_or_first_available_variant.id }}">
+      
+      {% if block.settings.show_quantity_selector %}
       <div class="ai-sticky-bar-quantity-selector-{{ ai_gen_id }}">
-        <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Disminuir cantidad" data-action="minus">-</button>
-        <input type="number" value="1" min="1" class="ai-sticky-bar-quantity-input-{{ ai_gen_id }}" aria-label="Cantidad">
-        <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Aumentar cantidad" data-action="plus">+</button>
+        <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Decrease quantity" data-action="minus">-</button>
+        <input type="number" name="quantity" value="1" min="1" class="ai-sticky-bar-quantity-input-{{ ai_gen_id }}">
+        <button type="button" class="ai-sticky-bar-quantity-button-{{ ai_gen_id }}" aria-label="Increase quantity" data-action="plus">+</button>
       </div>
-    {% endif %}
+      {% else %}
+        <input type="hidden" name="quantity" value="1">
+      {% endif %}
 
-    <button
-      class="ai-sticky-bar-button-{{ ai_gen_id }}"
-      type="button"
-      aria-label="Ir a la zona de compra"
-    >
-      {{ block.settings.button_text }}
-    </button>
-  </div>
+      <button
+        class="ai-sticky-bar-button-{{ ai_gen_id }}"
+        type="submit"
+        name="add"
+      >
+        {{ block.settings.button_text }}
+      </button>
+    {% else %}
+      <button
+        class="ai-sticky-bar-button-{{ ai_gen_id }}"
+        type="button"
+        aria-label="Seleccionar opciones"
+      >
+        {{ block.settings.button_text }}
+      </button>
+    {% endif %}
+  </form>
 </sticky-product-bar-{{ ai_gen_id }}>
 
 <script>
   (function() {
     class StickyProductBar{{ ai_gen_id }} extends HTMLElement {
-      connectedCallback() {
-        // Portalizar al <body> para evitar stacking contexts de ancestros
-        if (!this.hasAttribute('data-portalized')) {
-          document.body.appendChild(this);
-          this.setAttribute('data-portalized', '');
-        }
-
-        // Asegurar z-index máximo por si el CSS es sobreescrito
-        this.style.zIndex = '2147483647';
-
-        this.button   = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
-        this.qtyInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
-        this.qtyMinus = this.querySelector('[data-action="minus"]');
-        this.qtyPlus  = this.querySelector('[data-action="plus"]');
-
+      constructor() {
+        super();
+        this.form = this.querySelector('form');
+        this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
+        this.selectOptions = this.button && this.button.type === 'button';
+        this.quantityInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
+        this.quantityMinus = this.querySelector('[data-action="minus"]');
+        this.quantityPlus = this.querySelector('[data-action="plus"]');
         this.setupEventListeners();
       }
 
-      setupEventListeners() {
-        if (this.button) {
-          this.button.addEventListener('click', () => {
-            this.syncQuantityToMainForm(); // opcional: refleja la cantidad en el form principal
-            this.scrollToTop();            // SUBIR HASTA ARRIBA DE LA WEB
-          });
+      connectedCallback() {
+        if (this.selectOptions) {
+          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        } else {
+          // Add the event listener for form submission
+          this.form.addEventListener('submit', this.handleFormSubmit.bind(this));
         }
-        if (this.qtyMinus && this.qtyPlus && this.qtyInput) {
-          this.qtyMinus.addEventListener('click', () => this.updateQuantity(-1));
-          this.qtyPlus.addEventListener('click', () => this.updateQuantity(1));
-          this.qtyInput.addEventListener('change', () => this.syncQuantityToMainForm());
+      }
+
+      setupEventListeners() {
+        if (this.selectOptions) {
+          this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
+        }
+        if (this.quantityMinus && this.quantityPlus && this.quantityInput) {
+          this.quantityMinus.addEventListener('click', () => this.updateQuantity(-1));
+          this.quantityPlus.addEventListener('click', () => this.updateQuantity(1));
         }
       }
 
       updateQuantity(step) {
-        let v = parseInt(this.qtyInput && this.qtyInput.value, 10);
-        if (isNaN(v) || v < 1) v = 1;
-        v = Math.max(1, v + step);
-        if (this.qtyInput) this.qtyInput.value = v;
-        this.syncQuantityToMainForm();
-      }
-
-      getMainAddToCartButton() {
-        return document.querySelector(
-          '[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button'
-        );
-      }
-
-      getMainQuantityInput() {
-        // Busca el input de cantidad dentro del formulario principal de producto
-        const addBtn = this.getMainAddToCartButton();
-        const form = addBtn ? addBtn.closest('form') : null;
-        return (
-          (form && form.querySelector('input[name="quantity"]')) ||
-          document.querySelector('form[action*="/cart/add"] input[name="quantity"]') ||
-          document.querySelector('quantity-input input[name="quantity"]') ||
-          document.querySelector('.product-form__quantity input[name="quantity"]')
-        );
-      }
-
-      syncQuantityToMainForm() {
-        if (!this.qtyInput) return;
-        const mainQty = this.getMainQuantityInput();
-        if (mainQty) {
-          try { mainQty.value = this.qtyInput.value; } catch(e) {}
-          const evt = new Event('change', { bubbles: true });
-          mainQty.dispatchEvent(evt);
+        let currentValue = parseInt(this.quantityInput.value, 10);
+        if (isNaN(currentValue)) {
+          currentValue = 1;
+        }
+        const newValue = currentValue + step;
+        if (newValue >= 1) {
+          this.quantityInput.value = newValue;
         }
       }
 
-      // --- SCROLL HASTA ARRIBA DE LA WEB ---
-      scrollToTop() {
-        // Scroll suave al inicio de la página (top = 0)
-        if ('scrollBehavior' in document.documentElement.style) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          return;
+      scrollToAddToCart() {
+        const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
+        if (addToCartButton) {
+          addToCartButton.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+          });
+          setTimeout(() => {
+            addToCartButton.focus();
+          }, 500);
         }
-        
-        // Fallback suave para navegadores antiguos
-        const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
-        if (currentPosition > 0) {
-          window.requestAnimationFrame(() => this.scrollToTop());
-          window.scrollTo(0, currentPosition - currentPosition / 8);
+      }
+      
+      async handleFormSubmit(event) {
+        event.preventDefault(); // Stop the default form submission (page reload)
+
+        this.button.disabled = true;
+        this.button.textContent = 'Añadiendo...';
+
+        const formData = new FormData(this.form);
+        const productData = {
+          id: formData.get('id'),
+          quantity: formData.get('quantity')
+        };
+
+        try {
+          // Use the Shopify AJAX API to add the item to the cart
+          const response = await fetch('/cart/add.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(productData)
+          });
+          
+          if (response.ok) {
+            // Product added successfully, now reload the page with a special parameter
+            window.location.href = window.location.pathname + '?open-cart=true';
+          } else {
+            console.error('Failed to add item to cart');
+            this.button.textContent = 'Error';
+          }
+        } catch (error) {
+          console.error('Network error:', error);
+          this.button.textContent = 'Error';
+        } finally {
+          setTimeout(() => {
+            this.button.disabled = false;
+            this.button.textContent = '{{ block.settings.button_text }}';
+          }, 2000);
         }
       }
     }
+    customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
 
-    // Registrar el custom element (único por block gracias a {{ ai_gen_id }})
-    if (!customElements.get('sticky-product-bar-{{ ai_gen_id }}')) {
-      customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
-    }
-
-    // Visibilidad según scroll
+    // --- Visibility control based on scroll position ---
     const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
-    const scrollThreshold = 100; // aparece a partir de 100px de scroll
+    const scrollThreshold = 100;
+
     if (stickyBar) {
       function handleScroll() {
         if (window.scrollY > scrollThreshold) {
@@ -360,25 +388,39 @@ Es personalizable en el editor de temas.
           stickyBar.style.visibility = 'hidden';
         }
       }
-      window.addEventListener('scroll', handleScroll, { passive: true });
+      window.addEventListener('scroll', handleScroll);
       handleScroll();
     }
+
+    // --- Logic to open the cart after page reload ---
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('open-cart') === 'true') {
+        const cartDrawerButton = document.querySelector('cart-drawer-component > button');
+        if (cartDrawerButton) {
+          cartDrawerButton.click();
+          // Remove the parameter from the URL to avoid opening the cart on future reloads
+          history.replaceState({}, '', window.location.pathname);
+        }
+      }
+    });
   })();
 </script>
 
 {% schema %}
 {
-  "name": "Sticky product 1",
+  "name": "Sticky product bar",
   "settings": [
     {
       "type": "header",
       "content": "Contenido"
     },
+    
     {
       "type": "text",
       "id": "button_text",
       "label": "Texto del botón",
-      "default": "Ir a comprar"
+      "default": "Add to cart"
     },
     {
       "type": "text",
@@ -395,7 +437,7 @@ Es personalizable en el editor de temas.
     {
       "type": "checkbox",
       "id": "show_quantity_selector",
-      "label": "Mostrar selector de cantidad (sin añadir desde la barra)",
+      "label": "Mostrar selector de cantidad",
       "default": false
     },
     {
@@ -651,7 +693,7 @@ Es personalizable en el editor de temas.
   ],
   "presets": [
     {
-      "name": "Sticky product 1"
+      "name": "Sticky product bar"
     }
   ],
   "tag": null
