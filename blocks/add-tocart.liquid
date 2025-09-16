@@ -279,7 +279,7 @@ Es personalizable en el editor de temas.
         if (this.button) {
           this.button.addEventListener('click', () => {
             this.syncQuantityToMainForm(); // opcional: refleja la cantidad en el form principal
-            this.scrollToTop();            // SUBIR ARRIBA DEL TODO
+            this.scrollToBuySection();     // SUBIR MÁS ARRIBA de la zona de compra
           });
         }
         if (this.qtyMinus && this.qtyPlus && this.qtyInput) {
@@ -290,10 +290,10 @@ Es personalizable en el editor de temas.
       }
 
       updateQuantity(step) {
-        let v = parseInt(this.qtyInput.value, 10);
+        let v = parseInt(this.qtyInput && this.qtyInput.value, 10);
         if (isNaN(v) || v < 1) v = 1;
         v = Math.max(1, v + step);
-        this.qtyInput.value = v;
+        if (this.qtyInput) this.qtyInput.value = v;
         this.syncQuantityToMainForm();
       }
 
@@ -325,19 +325,22 @@ Es personalizable en el editor de temas.
         }
       }
 
-      // --- SUBIR ARRIBA DEL TODO ---
-      scrollToTop() {
-        if ('scrollBehavior' in document.documentElement.style) {
-          // Navegadores modernos con scroll suave nativo
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        } else {
-          // Fallback suave
-          const c = document.documentElement.scrollTop || document.body.scrollTop;
-          if (c > 0) {
-            window.requestAnimationFrame(this.scrollToTop.bind(this));
-            window.scrollTo(0, c - c / 8);
-          }
-        }
+      // --- SUBIR MÁS ARRIBA de la zona de compra ---
+      scrollToBuySection() {
+        const addToCartButton = this.getMainAddToCartButton();
+        if (!addToCartButton) return;
+
+        // Detecta header sticky (ajusta selectores según tu tema si hiciera falta)
+        const header = document.querySelector('#shopify-section-header, header[is-sticky], .shopify-section-header, header[role="banner"]');
+        const headerH = header ? header.offsetHeight : 0;
+
+        const EXTRA = 200; // << súbelo si quieres aún más arriba (p.ej. 240, 280)
+        const targetY = addToCartButton.getBoundingClientRect().top + window.pageYOffset - (headerH + EXTRA);
+
+        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+
+        // Enfoca el botón tras el desplazamiento
+        setTimeout(() => { try { addToCartButton.focus(); } catch(e){} }, 400);
       }
     }
 
