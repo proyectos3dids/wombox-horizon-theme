@@ -1195,7 +1195,7 @@
         "button_padding_vertical_mobile": 10,
         "button_padding_horizontal": 10,
         "button_padding_horizontal_mobile": 10,
-        "reload_after_adding": false,
+        "reload_after_adding": true,
         "redirect_after_adding": false,
         "option_custom": false,
         "option_font": "josefin_sans_n4",
