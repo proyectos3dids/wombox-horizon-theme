@@ -326,18 +326,20 @@ Es personalizable en el editor de temas.
       }
 
       // --- SUBIR MÁS ARRIBA de la zona de compra ---
-      scrollToBuySection() {
-        if ('scrollBehavior' in document.documentElement.style) {
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-          return;
-        }
-        // Fallback
-        const c = document.documentElement.scrollTop || document.body.scrollTop;
-        if (c > 0) {
-          window.requestAnimationFrame(this.scrollToBuySection.bind(this));
-          window.scrollTo(0, c - c / 8);
-        }
-      }
+     // Añade este método a la clase:
+              scrollToTop() {
+                // Scroll suave al inicio de la página
+                if ('scrollBehavior' in document.documentElement.style) {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                  return;
+                }
+                // Fallback suave para navegadores viejos
+                const c = document.documentElement.scrollTop || document.body.scrollTop;
+                if (c > 0) {
+                  window.requestAnimationFrame(this.scrollToTop.bind(this));
+                  window.scrollTo(0, c - c / 8);
+                }
+              }
     }
 
     // Registrar el custom element (único por block gracias a {{ ai_gen_id }})
