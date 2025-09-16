@@ -14,6 +14,28 @@
     "footer_wombox_WBpNyk": {
       "type": "footer-wombox",
       "blocks": {
+        "social_link_e4LnNF": {
+          "type": "social_link",
+          "name": "IG",
+          "settings": {
+            "icon_image": "shopify://shop_images/Instagram_3.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "https://instagram.com/@mywombox",
+            "new_tab": true
+          }
+        },
+        "social_link_d4JdVM": {
+          "type": "social_link",
+          "name": "TIKTOK",
+          "settings": {
+            "icon_image": "shopify://shop_images/TikTok_Stroke_1.svg",
+            "icon_svg": "",
+            "alt": "Red social",
+            "url": "https://tiktok.com/@mywombox",
+            "new_tab": true
+          }
+        },
         "social_link_CxQNnN": {
           "type": "social_link",
           "name": "FB",
@@ -23,17 +45,6 @@
             "icon_svg": "",
             "alt": "Red social",
             "url": "",
-            "new_tab": true
-          }
-        },
-        "social_link_e4LnNF": {
-          "type": "social_link",
-          "name": "IG",
-          "settings": {
-            "icon_image": "shopify://shop_images/Instagram_3.svg",
-            "icon_svg": "",
-            "alt": "Red social",
-            "url": "https://instagram.com/@wombox",
             "new_tab": true
           }
         },
@@ -67,17 +78,6 @@
           "disabled": true,
           "settings": {
             "icon_image": "shopify://shop_images/YouTube_3.svg",
-            "icon_svg": "",
-            "alt": "Red social",
-            "url": "",
-            "new_tab": true
-          }
-        },
-        "social_link_d4JdVM": {
-          "type": "social_link",
-          "name": "TIKTOK",
-          "settings": {
-            "icon_image": "shopify://shop_images/TikTok_Stroke_1.svg",
             "icon_svg": "",
             "alt": "Red social",
             "url": "",
@@ -149,12 +149,12 @@
         }
       },
       "block_order": [
-        "social_link_CxQNnN",
         "social_link_e4LnNF",
+        "social_link_d4JdVM",
+        "social_link_CxQNnN",
         "social_link_PnMHmW",
         "social_link_brmb7U",
         "social_link_xzRNjD",
-        "social_link_d4JdVM",
         "payment_icon_8A3LyJ",
         "payment_icon_gfigBN",
         "payment_icon_8bhHzF",
