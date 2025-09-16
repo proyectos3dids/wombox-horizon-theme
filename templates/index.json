@@ -94,9 +94,9 @@
               "type": "button",
               "settings": {
                 "label": "BUY YOUR WOMBOX",
-                "link": "shopify://collections/wombox-100",
+                "link": "shopify://collections/gift-box",
                 "open_in_new_tab": true,
-                "style_class": "link",
+                "style_class": "button",
                 "width": "fit-content",
                 "custom_width": 100,
                 "width_mobile": "fit-content",
