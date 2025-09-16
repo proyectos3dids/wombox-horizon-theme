@@ -264,10 +264,13 @@ Es personalizable en el editor de temas.
           this.setAttribute('data-portalized', '');
         }
 
-        this.button = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
+        // Asegurar z-index máximo por si el CSS es sobreescrito
+        this.style.zIndex = '2147483647';
+
+        this.button   = this.querySelector('.ai-sticky-bar-button-{{ ai_gen_id }}');
         this.qtyInput = this.querySelector('.ai-sticky-bar-quantity-input-{{ ai_gen_id }}');
         this.qtyMinus = this.querySelector('[data-action="minus"]');
-        this.qtyPlus = this.querySelector('[data-action="plus"]');
+        this.qtyPlus  = this.querySelector('[data-action="plus"]');
 
         this.setupEventListeners();
       }
@@ -275,8 +278,8 @@ Es personalizable en el editor de temas.
       setupEventListeners() {
         if (this.button) {
           this.button.addEventListener('click', () => {
-            this.syncQuantityToMainForm();
-            this.scrollToBuySection();
+            this.syncQuantityToMainForm(); // opcional: refleja la cantidad en el form principal
+            this.scrollToTop();            // SUBIR ARRIBA DEL TODO
           });
         }
         if (this.qtyMinus && this.qtyPlus && this.qtyInput) {
@@ -295,7 +298,9 @@ Es personalizable en el editor de temas.
       }
 
       getMainAddToCartButton() {
-        return document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
+        return document.querySelector(
+          '[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button'
+        );
       }
 
       getMainQuantityInput() {
@@ -314,27 +319,36 @@ Es personalizable en el editor de temas.
         if (!this.qtyInput) return;
         const mainQty = this.getMainQuantityInput();
         if (mainQty) {
-          try { mainQty.value = this.qtyInput.value; } catch(e){}
+          try { mainQty.value = this.qtyInput.value; } catch(e) {}
           const evt = new Event('change', { bubbles: true });
           mainQty.dispatchEvent(evt);
         }
       }
 
-      scrollToBuySection() {
-        const addToCartButton = this.getMainAddToCartButton();
-        if (addToCartButton) {
-          const y = addToCartButton.getBoundingClientRect().top + window.pageYOffset - 100; // 100px por encima
-          window.scrollTo({ top: y, behavior: 'smooth' });
-          setTimeout(() => { try { addToCartButton.focus(); } catch(e){} }, 400);
+      // --- SUBIR ARRIBA DEL TODO ---
+      scrollToTop() {
+        if ('scrollBehavior' in document.documentElement.style) {
+          // Navegadores modernos con scroll suave nativo
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          // Fallback suave
+          const c = document.documentElement.scrollTop || document.body.scrollTop;
+          if (c > 0) {
+            window.requestAnimationFrame(this.scrollToTop.bind(this));
+            window.scrollTo(0, c - c / 8);
+          }
         }
       }
     }
 
-    customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
+    // Registrar el custom element (único por block gracias a {{ ai_gen_id }})
+    if (!customElements.get('sticky-product-bar-{{ ai_gen_id }}')) {
+      customElements.define('sticky-product-bar-{{ ai_gen_id }}', StickyProductBar{{ ai_gen_id }});
+    }
 
     // Visibilidad según scroll
     const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
-    const scrollThreshold = 0;
+    const scrollThreshold = 100; // aparece a partir de 100px de scroll
     if (stickyBar) {
       function handleScroll() {
         if (window.scrollY > scrollThreshold) {
@@ -350,6 +364,7 @@ Es personalizable en el editor de temas.
     }
   })();
 </script>
+
 
 {% schema %}
 {
