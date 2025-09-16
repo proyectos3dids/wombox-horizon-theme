@@ -279,7 +279,7 @@ Es personalizable en el editor de temas.
         if (this.button) {
           this.button.addEventListener('click', () => {
             this.syncQuantityToMainForm(); // opcional: refleja la cantidad en el form principal
-            this.scrollToBuySection();     // SUBIR MÁS ARRIBA de la zona de compra
+            this.scrollToTop();            // SUBIR HASTA ARRIBA DE LA WEB
           });
         }
         if (this.qtyMinus && this.qtyPlus && this.qtyInput) {
@@ -325,21 +325,21 @@ Es personalizable en el editor de temas.
         }
       }
 
-      // --- SUBIR MÁS ARRIBA de la zona de compra ---
-     // Añade este método a la clase:
-              scrollToTop() {
-                // Scroll suave al inicio de la página
-                if ('scrollBehavior' in document.documentElement.style) {
-                  window.scrollTo({ top: 0, behavior: 'smooth' });
-                  return;
-                }
-                // Fallback suave para navegadores viejos
-                const c = document.documentElement.scrollTop || document.body.scrollTop;
-                if (c > 0) {
-                  window.requestAnimationFrame(this.scrollToTop.bind(this));
-                  window.scrollTo(0, c - c / 8);
-                }
-              }
+      // --- SCROLL HASTA ARRIBA DE LA WEB ---
+      scrollToTop() {
+        // Scroll suave al inicio de la página (top = 0)
+        if ('scrollBehavior' in document.documentElement.style) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+        
+        // Fallback suave para navegadores antiguos
+        const currentPosition = document.documentElement.scrollTop || document.body.scrollTop;
+        if (currentPosition > 0) {
+          window.requestAnimationFrame(() => this.scrollToTop());
+          window.scrollTo(0, currentPosition - currentPosition / 8);
+        }
+      }
     }
 
     // Registrar el custom element (único por block gracias a {{ ai_gen_id }})
@@ -365,7 +365,6 @@ Es personalizable en el editor de temas.
     }
   })();
 </script>
-
 
 {% schema %}
 {
