@@ -727,6 +727,7 @@
             },
             "social_icons": {
               "type": "_footer-social-icons",
+              "disabled": true,
               "static": true,
               "settings": {},
               "blocks": {
