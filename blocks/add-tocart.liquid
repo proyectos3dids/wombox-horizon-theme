@@ -327,20 +327,16 @@ Es personalizable en el editor de temas.
 
       // --- SUBIR MÁS ARRIBA de la zona de compra ---
       scrollToBuySection() {
-        const addToCartButton = this.getMainAddToCartButton();
-        if (!addToCartButton) return;
-
-        // Detecta header sticky (ajusta selectores según tu tema si hiciera falta)
-        const header = document.querySelector('#shopify-section-header, header[is-sticky], .shopify-section-header, header[role="banner"]');
-        const headerH = header ? header.offsetHeight : 0;
-
-        const EXTRA = 999; // << súbelo si quieres aún más arriba (p.ej. 240, 280)
-        const targetY = addToCartButton.getBoundingClientRect().top + window.pageYOffset - (headerH + EXTRA);
-
-        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
-
-        // Enfoca el botón tras el desplazamiento
-        setTimeout(() => { try { addToCartButton.focus(); } catch(e){} }, 400);
+        if ('scrollBehavior' in document.documentElement.style) {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          return;
+        }
+        // Fallback
+        const c = document.documentElement.scrollTop || document.body.scrollTop;
+        if (c > 0) {
+          window.requestAnimationFrame(this.scrollToBuySection.bind(this));
+          window.scrollTo(0, c - c / 8);
+        }
       }
     }
 
