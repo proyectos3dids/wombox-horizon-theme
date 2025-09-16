@@ -781,7 +781,7 @@
                 "background_color": "#ffffff",
                 "text_color": "#000000",
                 "price_color": "#666666",
-                "button_color": "#000f9f",
+                "button_color": "#c67461",
                 "button_hover_color": "#000000",
                 "button_text_color": "#ffffff"
               },
