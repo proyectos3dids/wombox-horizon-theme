@@ -16,6 +16,8 @@
       "blocks": {
         "social_link_CxQNnN": {
           "type": "social_link",
+          "name": "FB",
+          "disabled": true,
           "settings": {
             "icon_image": "shopify://shop_images/Facebook_Stroke_1.svg",
             "icon_svg": "",
@@ -26,16 +28,19 @@
         },
         "social_link_e4LnNF": {
           "type": "social_link",
+          "name": "IG",
           "settings": {
             "icon_image": "shopify://shop_images/Instagram_3.svg",
             "icon_svg": "",
             "alt": "Red social",
-            "url": "",
+            "url": "https://instagram.com/@wombox",
             "new_tab": true
           }
         },
         "social_link_PnMHmW": {
           "type": "social_link",
+          "name": "X",
+          "disabled": true,
           "settings": {
             "icon_image": "shopify://shop_images/X_logo_1.svg",
             "icon_svg": "",
@@ -46,6 +51,8 @@
         },
         "social_link_brmb7U": {
           "type": "social_link",
+          "name": "LINKEDIN",
+          "disabled": true,
           "settings": {
             "icon_image": "shopify://shop_images/LinkedIn_1.svg",
             "icon_svg": "",
@@ -56,6 +63,8 @@
         },
         "social_link_xzRNjD": {
           "type": "social_link",
+          "name": "YT",
+          "disabled": true,
           "settings": {
             "icon_image": "shopify://shop_images/YouTube_3.svg",
             "icon_svg": "",
@@ -66,6 +75,7 @@
         },
         "social_link_d4JdVM": {
           "type": "social_link",
+          "name": "TIKTOK",
           "settings": {
             "icon_image": "shopify://shop_images/TikTok_Stroke_1.svg",
             "icon_svg": "",
