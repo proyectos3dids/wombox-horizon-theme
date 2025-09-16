@@ -140,11 +140,11 @@
             "mobile_title": "LEGAL"
           }
         },
-        "menu_column_ap99Qc": {
+        "menu_column_DdGpKM": {
           "type": "menu_column",
           "settings": {
             "menu": "menu-footer-3",
-            "mobile_title": "CONTACT"
+            "mobile_title": "Contact"
           }
         }
       },
@@ -163,7 +163,7 @@
         "payment_icon_AeqUNx",
         "menu_column_hKfhDR",
         "menu_column_UrYGgM",
-        "menu_column_ap99Qc"
+        "menu_column_DdGpKM"
       ],
       "name": "Footer WOMBOX",
       "settings": {
