@@ -469,7 +469,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "add_tocart2_3wHnhc": {
+            "add_tocart2_nf9nMh": {
               "type": "add-tocart2",
               "name": "Sticky product bar para cajas",
               "settings": {
@@ -499,7 +499,7 @@
                 "background_color": "#ffffff",
                 "text_color": "#000000",
                 "price_color": "#666666",
-                "button_color": "#d4a697",
+                "button_color": "#000f9f",
                 "button_hover_color": "#000000",
                 "button_text_color": "#ffffff"
               },
@@ -507,7 +507,7 @@
             }
           },
           "block_order": [
-            "add_tocart2_3wHnhc"
+            "add_tocart2_nf9nMh"
           ]
         },
         "text_X88M3n": {
