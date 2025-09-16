@@ -1039,7 +1039,7 @@
               "type": "button",
               "settings": {
                 "label": "DISCOVER",
-                "link": "shopify://collections/all",
+                "link": "shopify://collections/gift-box",
                 "open_in_new_tab": false,
                 "style_class": "button",
                 "width": "fit-content",
