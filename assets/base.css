@@ -4158,6 +4158,9 @@ text-component {
   }
 }
 
+#shopify-section-sections--26387012747611__header_section{
+  z-index:9999;
+}
 
 @keyframes text-shimmer {
   0% {
