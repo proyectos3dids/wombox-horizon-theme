@@ -6,7 +6,8 @@
  * or related systems. Please exercise caution as any changes
  * made to this file may be overwritten.
  * ------------------------------------------------------------
- */{
+ */
+{
   "sections": {
     "search": {
       "type": "search-header",
@@ -38,7 +39,7 @@
           "type": "_search-input",
           "static": true,
           "settings": {
-            "width": "custom",
+            "width": "fill",
             "custom_width": 50,
             "inherit_color_scheme": true,
             "color_scheme": ""
@@ -48,7 +49,7 @@
       },
       "settings": {
         "alignment": "flex-start",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-0b5f8aaf-6faa-4991-b3ad-6bcf7fe8eeed",
         "padding-block-start": 40,
         "padding-block-end": 0
       }
@@ -104,7 +105,7 @@
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_radius": 0,
+                "border_radius": 20,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -119,14 +120,14 @@
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "rte",
+                "type_preset": "custom",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "1.125rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
                 "wrap": "pretty",
-                "color": "var(--color-foreground)",
+                "color": "var(--color-foreground-heading)",
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
@@ -144,15 +145,15 @@
                 "show_sale_price_first": true,
                 "show_installments": false,
                 "show_tax_info": false,
-                "type_preset": "h6",
+                "type_preset": "custom",
                 "width": "100%",
                 "alignment": "left",
                 "font": "var(--font-body--family)",
-                "font_size": "1rem",
+                "font_size": "1.125rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
                 "case": "none",
-                "color": "var(--color-foreground)",
+                "color": "var(--color-foreground-heading)",
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
