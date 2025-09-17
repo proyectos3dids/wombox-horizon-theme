@@ -120,6 +120,35 @@
       "label": "Color del texto de las pills",
       "default": "#00ff00"
     }
+    ,
+       {
+      "type": "header",
+      "content": "Facets (Filtros)"
+    },
+    {
+      "type": "color",
+      "id": "facets_summary_bg",
+      "label": "Fondo del sumario de filtros (desktop)",
+      "default": "#ffc0da"
+    },
+    {
+      "type": "color",
+      "id": "facets_summary_label",
+      "label": "Texto del sumario de filtros (desktop)",
+      "default": "#3c2c81"
+    },
+    {
+      "type": "color",
+      "id": "facets_toggle_bg",
+      "label": "Fondo del botón de filtros (toggle)",
+      "default": "#ffc0da"
+    },
+    {
+      "type": "color",
+      "id": "facets_toggle_text",
+      "label": "Texto del botón de filtros (toggle)",
+      "default": "#3c2c81"
+    }
   ]
 }
 ,

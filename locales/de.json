@@ -986,7 +986,134 @@
         "paid_label": "Bezahlt",
         "payment_due_label": "Zahlung fällig",
         "vat_label_html": "Einschließlich %{amount} in Steuern",
-        "duties_included_label": "Insgesamt beinhaltet Steuern und Pflichten. Keine zusätzlichen Gebühren bei der Lieferung."
+        "duties_included_label": "Insgesamt beinhaltet Steuern und Pflichten. Keine zusätzlichen Gebühren bei der Lieferung.",
+        "discount_and_gift_card_savings_notice": "Nach %{discount_amount} in Rabatten und %{gift_card_amount} in Geschenkkarten",
+        "discount_savings_notice": "Nach %{discount_amount} in Rabatten",
+        "gift_card_savings_notice": "Nach %{gift_card_amount} in Geschenkkarten",
+        "cost_table_title": "Kostenzusammenfassung",
+        "cost_table_item_column_header": "Artikel",
+        "cost_table_value_column_header": "Wert",
+        "description_label": "Beschreibung",
+        "price_label": "Preis",
+        "price_per_item": {
+          "accessibility_label": "%{price} pro Gegenstand",
+          "label": "%{price}/ea"
+        },
+        "quantity_label": "Menge",
+        "product_change_label": "Ändern",
+        "product_image_label": "Produktbild",
+        "product_image_quantity_label": "Menge",
+        "scroll_order_summary": "Scrollen Sie für weitere Artikel",
+        "expand_order_summary_short": "Zeigen",
+        "collapse_order_summary_short": "Verstecken",
+        "expand_order_summary": "Auftragszusammenfassung anzeigen",
+        "collapse_order_summary": "Auftragszusammenfassung ausblenden",
+        "original_price": "Originalpreis",
+        "sale_price": "Verkaufspreis",
+        "total_updated_label": "Aktualisierter Gesamtpreis:",
+        "order_total_updated_label": "Gesamt aktualisiert",
+        "total_already_paid_label": "Bezahlt",
+        "unit_price": {
+          "accessible_separator": "pro",
+          "content_html": "%{price}%{accessible_separator}%{per_unit}",
+          "per_item": {
+            "single": "%{price} jede",
+            "one": "%{price} pro %{count} Artikel",
+            "other": "%{price} pro %{count} Artikel"
+          },
+          "per_unit": {
+            "single": "%{price}/%{unit}",
+            "plural": "%{price}/%{count}%{unit}"
+          }
+        },
+        "gift_card_ending": "Geschenkkarte, die mit endet mit %{last_characters}",
+        "estimated_tax_label": "Geschätzte Steuer",
+        "multiple_shipping_lines_label": "Versand insgesamt",
+        "recurring_subtotal_label": "Wiederkehrende subtotale",
+        "recurring_total_label": "Wiederkehrende Gesamtzahl",
+        "recurring_total_tooltip": "Enthält keine Versand, Steuern, Pflichten oder anwendbare Rabatte.",
+        "confirmation_number_label": "Bestätigung #%{confirmation_number}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> konnte nicht mit Ihren vorhandenen Rabatten verwendet werden.",
+        "percent_off_shipping": "%{percent}% Rabatt auf Versand",
+        "amount_off_shipping": "%{amount} aus Versand",
+        "deferred_payment_info": {
+          "title": "Zahlung von %{amount_due} ist fällig %{due_at}",
+          "description_html": "Für Fragen zu Ihrer Bestellung, %{contact_us}.",
+          "paid_today": "Total bezahlt heute",
+          "paid_today_next": "Heute bezahlt",
+          "due_on_fulfillment_title": "Zahlung von %{amount_due} ist auf Erfüllung fällig",
+          "due_on_receipt_title": "Zahlung von %{amount_due} ist nach Erhalt fällig"
+        },
+        "deferred_balance_info": {
+          "title": "Gleichgewicht von {{amount_due}} ist fällig {{due_at}}",
+          "due_on_fulfillment_title": "Gleichgewicht von {{amount_due}} ist auf Erfüllung fällig"
+        },
+        "payment_terms_totals": {
+          "due_today": "Summe heute fällig",
+          "due_today_next": "Heute fällig",
+          "due_later": "Total fällig %{due_at}",
+          "due_on_fulfillment": "Insgesamt fällig auf Erfüllung",
+          "due_on_fulfillment_next": "Auf Erfüllung",
+          "due_on_receipt": "Gesamt fällig bei Erhalt",
+          "due_later_checkout_to_draft": "Insgesamt später fällig",
+          "total_paid": "Total bezahlt"
+        },
+        "maximum_discount_code_limit_reached": "Sie haben die maximale Anzahl von Rabattcodes erreicht. Entfernen Sie einen vorhandenen Code, der verwendet werden soll <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> funktioniert momentan nicht. Kontaktieren Sie uns, um Hilfe zu erhalten.",
+        "due_on_fulfillment": "Auf Erfüllung",
+        "gift_card_masked": "•••• %{last_characters}",
+        "subscriptions": "Abonnements",
+        "duties_label": "Aufgaben",
+        "duties_and_taxes_label": "Pflichten und Steuern",
+        "error_duties_tooltip": "Diese Bestellung wird aus einem anderen Land verschifft, sodass Pflichten und Steuern zur Lieferung erhoben werden können.",
+        "may_be_charged_on_delivery": "Kann bei der Lieferung berechnet werden",
+        "total_updated_label_with_price": "Aktualisierter Gesamtpreis: %{totalPrice}",
+        "updated_shipping_method": "Aktualisierte Versandmethode: %{shipping_method}",
+        "recurring_payments": "Wiederkehrende Zahlungen",
+        "recurring_total_multiple_label": "Diese Bestellung hat eine wiederkehrende Gebühr für mehrere Artikel.",
+        "deferred_total_due_date_label": "Total fällig {{date}}",
+        "deferred_total_due_date_label_next": "Fällig %{date}",
+        "full_price": "Voller Preis: %{price}",
+        "custom_discount": "Benutzerdefinierte Rabatt",
+        "expand_component_information": {
+          "one": "Zeigen %{count} Artikel",
+          "other": "Zeigen %{count} Artikel"
+        },
+        "collapse_component_information": {
+          "one": "Verstecken %{count} Artikel",
+          "other": "Verstecken %{count} Artikel"
+        },
+        "component_quantity_title": "%{quantity} × %{product_title}",
+        "discount_discovery": {
+          "add_code": "Rabatt hinzufügen",
+          "merchandise_quantity_label": {
+            "one": "%{count} Artikel",
+            "other": "%{count} Artikel"
+          }
+        },
+        "alternative_payment_currency_total": "Aufgeladen als %{amount_due}"
+      },
+      "shipping": {
+        "title": "Versand",
+        "delivery_title": "Lieferung",
+        "shipping_method_title": "Versandmethode",
+        "shipping_method_rollup_accessibility_label": "Versandmethodenoptionen",
+        "shipping_method_one_time_purchase_group_title": "Einmaliger Kauf",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Erster Versand",
+          "other": "Erste Sendungen"
+        },
+        "shipping_method_subscription_group_title": "Abonnement",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Wiederkehrender Versand",
+          "other": "Wiederkehrende Sendungen"
+        },
+        "subscription_shipping": "Abonnementversand",
+        "subscription_local_delivery": "Abonnement lokale Lieferung",
+        "subscription_pickup": "Abonnementabholung",
+        "waiting_on_rate_notice": "Versandraten zur Verfügung stellen…",
+        "waiting_on_pickup_location_notice": "Erhalten Sie verfügbare Abholorte…",
+        "no_rates_for_cart_or_destination_notice": "Für Ihren Warenkorb oder Ihre Adresse sind keine Versandmethoden verfügbar"
       }
     }
   }
