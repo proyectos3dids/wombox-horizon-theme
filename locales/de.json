@@ -4038,7 +4038,79 @@
         "search": "Suchorte",
         "search_location_title": "Wählen Sie einen Ort aus",
         "selection_cancel_button": "Stornieren",
-        "selection_confirmation_button": "Wählen Sie den Standort"
+        "selection_confirmation_button": "Wählen Sie den Standort",
+        "selection_continue_button": "Weitermachen",
+        "title": "Für welchen Standort kaufen Sie?",
+        "title_choose_location": "Wählen Sie einen Ort",
+        "clear_search": "Klare Suche",
+        "try_new_search": "Probieren Sie eine neue Suche aus"
+      },
+      "addresses": {
+        "add_billing_address_button": "Fügen Sie Abrechnungsadresse hinzu",
+        "add_billing_address_section_accessibility_label": "Fügen Sie Abrechnungsadresse hinzu",
+        "add_shipping_address_button": "Versandadresse hinzufügen",
+        "add_shipping_address_section_accessibility_label": "Versandadresse hinzufügen",
+        "billing_address_card_title": "Abrechnungsadresse",
+        "cancel_adding_billing_address_accessibility_label": "Abbrechen Hinzufügen von Abrechnungsadresse",
+        "cancel_adding_shipping_address_accessibility_label": "Addivivieren Sie die Versandadresse addieren",
+        "save_new_billing_address_accessibility_label": "Rechnungsadresse sparen",
+        "save_new_shipping_address_accessibility_label": "Versandadresse sparen",
+        "shipping_address_card_title": "Versandadresse"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Alles verstecken",
+          "show_all": "Zeigen Sie alles",
+          "hide_all_accessibility_label": "Verstecken Sie alle Bestellungen in der Bewertung",
+          "show_all_accessibility_label": "Zeigen Sie alle Bestellungen in Rezension an",
+          "show_all_orders_in_review": "Zeigen Sie alle Bestellungen in Rezension an",
+          "show_less_orders_in_review": "Zeigen Sie weniger Überprüfungsaufträge",
+          "title": "Ausstehend",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Sie haben keine anhängigen Bestellungen",
+            "pending_orders": {
+              "one": "Du hast {{count}} Ausstehende Reihenfolge",
+              "other": "Du hast {{count}} Ausstehende Bestellungen"
+            },
+            "more_than_pagination_length": "Sie haben mehr als {{count}} Ausstehende Bestellungen"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}}+",
+          "pagination": {
+            "nav_accessibility_label": "Bestellungen in Überprüfungsnavigationstasten"
+          }
+        },
+        "order_list_column_headers_location": "Standort",
+        "order_list_column_headers_contact": "Kontakt",
+        "order_list_column_headers_status": "Status",
+        "removed_company_contact_tooltip": "Aus der Gesellschaft entfernt"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Bestätigt {{date}} aus der Bestellung {{draftOrderName}}",
+        "loading": "Auftragsdetails laden",
+        "loading_finished_accessibility_message": "Bestelldetails wurden geladen",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "Ihre Zahlung ist {{count}} Tag überfällig",
+              "other": "Ihre Zahlung ist {{count}} Tage überfällig"
+            },
+            "banner_due": {
+              "one": "Ihre Zahlung ist fällig in {{count}} Tag",
+              "other": "Ihre Zahlung ist fällig in {{count}} Tage"
+            },
+            "banner_due_today": "Ihre Zahlung ist heute fällig",
+            "title": "Zahlung fällig",
+            "title_with_date": "Zahlung fällig {{date}}",
+            "title_due_on_receipt": "Zahlung noch nicht fällig",
+            "title_due_on_fulfillment": "Zahlung fälliger Erfüllung",
+            "description_overdue": "Ihre Zahlung ist spät.",
+            "description_partially_paid": "Diese Bestellung wurde teilweise bezahlt. Sie haben ein verbleibendes Gleichgewicht.",
+            "description_authorized": "Ihre Zahlungsmethode wird am Fälligkeitsdatum berechnet oder Sie können jetzt bezahlen.",
+            "description_waiting_for_manual_payment": "Diese Bestellung hat eine ausstehende Zahlung. Der Guthaben wird aktualisiert, wenn die Zahlung eingegangen ist.",
+            "description_due_on_receipt": "Sie erhalten eine Rechnung, wenn die Zahlung fällig ist.",
+            "description_due_on_receipt_partially_paid": "Diese Bestellung wurde teilweise bezahlt. Sie haben ein verbleibendes Gleichgewicht. Sie erhalten eine Rechnung, wenn die Zahlung fällig ist."
+          }
+        }
       }
     }
   }
