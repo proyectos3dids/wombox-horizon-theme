@@ -3448,7 +3448,81 @@
         "no_order_banner": "Pour tester votre extension sur la page d'état de la commande, créez une commande.",
         "estimated_shortform": "HNE. {{date}}",
         "estimated_delivery": "Attendu {{date}}",
-        "one_images_accessibility_label": "La commande comprend {{lineItemName1}}"
+        "one_images_accessibility_label": "La commande comprend {{lineItemName1}}",
+        "payment_status": {
+          "list_view": {
+            "payment_not_due": "Pas encore dû"
+          }
+        },
+        "sort_by": "Trier par: {{option}}",
+        "sort_hide_options_accessibility_label": "Masquer les options de tri pour les commandes confirmées.",
+        "sort_show_options_accessibility_label": "Afficher les options de tri pour les commandes confirmées.",
+        "sort_currently_sorted_by_accessibility_label": "Actuellement trié par: {{option}}",
+        "sort_title": "Trier",
+        "sort": {
+          "date": {
+            "newest": "Le plus récent au plus ancien",
+            "oldest": "Le plus ancien au plus récent"
+          },
+          "location": {
+            "ascending": "Emplacement (A-Z)",
+            "descending": "Emplacement (Z-A)"
+          },
+          "order_number": {
+            "ascending": "Numéro de commande (bas à haut)",
+            "descending": "Numéro de commande (haut à bas)"
+          },
+          "order_total": {
+            "ascending": "Commande total (faible à élevé)",
+            "descending": "Commande total (élevé à bas)"
+          }
+        },
+        "location_filter_picker": {
+          "all_location": "Tous les emplacements",
+          "current_location": "Emplacement actuel",
+          "switch_view": "Vue de commutation"
+        },
+        "filter_title": "Filtre",
+        "filter": {
+          "clear_section": "Section claire",
+          "clear_all": "Effacer tout",
+          "apply": "Appliquer",
+          "date": {
+            "start_date": "Date de début",
+            "end_date": "Date de fin",
+            "title": "Date de commande",
+            "today": "Aujourd'hui",
+            "last_7_days": "7 derniers jours",
+            "last_30_days": "30 derniers jours",
+            "last_90_days": "90 derniers jours",
+            "last_365_days": "12 derniers mois",
+            "custom": "Coutume"
+          }
+        },
+        "show_order_actions_accessibility_label": "Afficher les actions de commande pour l'ordre {{name}}"
+      },
+      "order_status": {
+        "attempted_delivery_label": "Tentative de livraison",
+        "attempted_to_deliver_label": "Tenté de livrer",
+        "preparing_for_shipping_label": "Se préparer à l'expédition",
+        "ready_for_pickup_label": "Prêt pour le ramassage",
+        "ready_for_pickup_description": "Ces articles sont prêts pour le ramassage. Veuillez apporter votre confirmation de commande lorsque vous récupérez votre commande.",
+        "ready_for_pickup_location": "Votre commande est prête pour le ramassage à l'emplacement",
+        "picked_up_label": "Ramassé",
+        "canceled_label": "Annulé",
+        "canceled_title": "Votre commande a été annulée",
+        "come_back": "Revenez à cette page pour des mises à jour sur le statut de votre envoi.",
+        "company_tracking_number": "{{company}} Numéro de suivi:",
+        "confirmed_label": "Confirmé",
+        "confirmed_title": "Votre commande est confirmée",
+        "confirmed_description_pickup": "Vous recevrez un e-mail lorsque votre commande sera prête pour le ramassage.",
+        "confirmed_description_digital": "Vous recevrez un e-mail lorsque votre commande sera prête.",
+        "confirmed_description_gift_card_text": "Vous recevrez un texte lorsque votre commande sera prête.",
+        "complete_label": "Complet",
+        "delivered_label": "Livré",
+        "delivered_description_gift_card": {
+          "one": "La carte-cadeau a été envoyée par e-mail."
+        }
       }
     }
   }
