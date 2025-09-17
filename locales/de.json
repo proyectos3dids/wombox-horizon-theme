@@ -2330,7 +2330,76 @@
         },
         "manage_order_label": "Verwalten Sie Ihre Bestellung",
         "gift_card_confirmation_by_text_typ": {
-          "one": "Sie erhalten in wenigen Minuten einen Text mit Ihrer Geschenkkarte."
+          "one": "Sie erhalten in wenigen Minuten einen Text mit Ihrer Geschenkkarte.",
+          "other": "Sie erhalten in wenigen Minuten einen Text mit Ihren Geschenkkarten."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Sie erhalten in wenigen Minuten eine E -Mail mit Ihrer Geschenkkarte.",
+          "other": "Sie erhalten in wenigen Minuten eine E -Mail mit Ihren Geschenkkarten."
+        },
+        "gift_card_email_title": {
+          "one": "Geschenkkarte wurde per E -Mail gesendet",
+          "other": "Geschenkkarten wurden per E -Mail gesendet"
+        },
+        "gift_card_text_title": {
+          "one": "Geschenkkarte wurde per SMS gesendet",
+          "other": "Geschenkkarten wurden per SMS gesendet"
+        },
+        "resend_gift_cards_by_email": "E -Mail wiedergeben",
+        "resend_gift_cards_by_text": "Senden Sie die Textnachricht erneut ab",
+        "gift_card_resent_confirmation": {
+          "one": "Geschenkkarte war ärgerlich.",
+          "other": "Geschenkkarten waren ärgerlich."
+        },
+        "gift_card_resend_failure": {
+          "one": "Es gab ein Problem, Ihre Geschenkkarte zu verschaffen. Versuchen Sie es erneut oder kontaktieren Sie uns.",
+          "other": "Es gab ein Problem, Ihre Geschenkkarten zu verschieben. Versuchen Sie es erneut oder kontaktieren Sie uns."
+        },
+        "vat_invoices": {
+          "title": "Mehrwertsteuer -Rechnungen"
+        },
+        "verify_shop_account_title": "Überprüfen Sie Ihr Ladenkonto",
+        "verify_shop_account_message": "Ihre Informationen wurden mit Shop gespeichert. Überprüfen Sie Ihr Konto, um es automatisch in Millionen von Geschäften zu verwenden.",
+        "verify_shop_account_cta": "Überprüfen Sie Ihr Konto",
+        "verify_shop_account_confirmation": "Checkout -Details gespeichert",
+        "announcement": {
+          "close": "Schließen",
+          "expand": "Expandieren",
+          "collapse": "Zusammenbruch"
+        }
+      },
+      "vaulted": {
+        "change_button": "Ändern"
+      },
+      "review": {
+        "title": "Rezension",
+        "review_title": "Füllen Sie Ihre Bestellung ab",
+        "review_and_confirm_title": "Überprüfen und bestätigen",
+        "checkout_as_guest": "Schauen Sie sich als Gast an",
+        "account_more_actions": "Weitere Aktionen für diesen Konto",
+        "checkout_a_different_way": "Schauen Sie sich eine andere Art und Weise an",
+        "blocks": {
+          "contact_method_title": "Kontakt",
+          "billing_address_title": "Abrechnung",
+          "shipping_address_title": "Ausliefern",
+          "shipping_method_title": "Versandmethode",
+          "payment_method_title": "Zahlungsmethode",
+          "change_link_label": "Ändern",
+          "change_contact_method_link_label": "Kontaktinformationen ändern",
+          "change_billing_address_link_label": "Änderung der Abrechnungsadresse",
+          "change_shipping_address_link_label": "Versandadresse ändern",
+          "change_shipping_method_link_label": "Versandmethode ändern",
+          "change_payment_method_link_label": "Zahlungsmethode ändern",
+          "pick_up_in_store_shipping_method_html": "Abholung im Laden · %{location_name}",
+          "purchase_order_number_title": "PO -Nummer",
+          "change_purchase_order_number_label": "PO -Nummer ändern",
+          "change_delivery_method_link_label": "Liefermethode ändern",
+          "no_address": "(Keine Adresse)",
+          "no_purchase_order_number": "(Keine PO -Nummer)",
+          "due_after_order_reviewed_html": "Fällig nach der Bestellung überprüft",
+          "review_title_free_order": "Überprüfen Sie Ihre Bestellung und geben Sie Ihre Bestellung ab",
+          "payment_method_saved_company_location": "Speichern Sie die Karte für diesen Standort",
+          "company_location": "Firmenstandort"
         }
       }
     }
