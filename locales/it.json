@@ -3037,8 +3037,70 @@
       "line_item": {
         "item_status": {
           "add_variant": "Aggiunto %{delta}",
-          "increment_item": "Aggiunto %{delta}"
+          "increment_item": "Aggiunto %{delta}",
+          "decrement_item": "RIMOSSO %{delta} Di %{total}",
+          "decrement_fulfilled_line_item": "Restituito %{delta} Di %{total}",
+          "decrement_return_line_item": "RIMOSSO %{delta} dal ritorno"
         }
+      },
+      "order": {
+        "not_available": "Questo ordine non è disponibile",
+        "financial_status": {
+          "authorized": "Autorizzato",
+          "pending": "In attesa di",
+          "paid": "Pagato",
+          "unpaid": "Non pagato",
+          "voided": "Annullato",
+          "partially_paid": "Parzialmente pagato",
+          "partially_refunded": "Parzialmente rimborsato",
+          "refunded": "Rimborsato",
+          "expired": "Scaduto"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Soddisfatto",
+          "complete": "Completare",
+          "partial": "Parziale",
+          "unfulfilled": "Insoddisfatto",
+          "restocked": "Rifornito"
+        },
+        "transaction_status": {
+          "success": "Successo",
+          "pending": "In attesa di",
+          "failure": "Fallimento",
+          "error": "Errore"
+        },
+        "cancel_reason": {
+          "declined": "Pagamento diminuito",
+          "inventory": "Articoli non disponibili",
+          "fraud": "Ordine fraudolento",
+          "customer": "Ordine modificato/cancellato dal cliente",
+          "staff": "Errore del personale",
+          "other": "Altro"
+        },
+        "cash_on_delivery": "Consegna in contanti (COD)"
+      },
+      "cart": {
+        "only_n_items_available": "Puoi solo aggiungere %{count} %{name} al carrello.",
+        "too_many_items_in_cart": "Non puoi aggiungere di più %{name} al carrello.",
+        "only_one_added_to_cart": "Solo 1 articolo è stato aggiunto al carrello a causa della disponibilità.",
+        "only_n_added_to_cart": "Soltanto %{quantity} Gli articoli sono stati aggiunti al carrello a causa della disponibilità.",
+        "maximum_available_quantity_reached": "La quantità massima di questo articolo è già nel tuo carrello.",
+        "less_than_minimum": "Questo articolo ha un minimo di %{min}.",
+        "more_than_maximum": "Questo articolo ha un massimo di %{max}.",
+        "not_respect_step": "Puoi aggiungere questo elemento solo con incrementi di %{step}.",
+        "all_items_in_cart": "Tutto %{count} %{name} sono nel tuo carrello.",
+        "empty_update": "Impossibile aggiornare il carrello vuoto",
+        "missing_parameters": "Nessun parametro ID o linea valido",
+        "generic_error": "Errore del carrello",
+        "invalid_input": "%{parameter} Il parametro non è valido.",
+        "product_not_available": "Il prodotto non è disponibile",
+        "too_many_line_items_error": "Il tuo carrello non può contenere più di %{max} elementi.",
+        "link_expired": "Link scaduto",
+        "link_no_longer_exists": "Il collegamento non esiste più.",
+        "stock_problems_html": "Uno o più articoli non sono più disponibili. Abbiamo fornito un <a href='%{link}'>carrello aggiornato</a>.",
+        "changed": "Il carrello è cambiato",
+        "items_changed": "Uno o più articoli sono cambiati.",
+        "product_sold_out": "Il prodotto '%{name}'è già esaurito."
       }
     }
   }
