@@ -4412,8 +4412,72 @@
           "with_pending_orders_and_subscriptions": "Durch das Löschen dieser Zahlungsmethode wirkt sich die vorautorisierten Zahlungen aus. Sofern Sie keine alternative Zahlungsmethode auswählen, wird diese Zahlungsmethode weiterhin für ausstehende Guthaben für bestehende Bestellungen berechnet. Durch die Auswahl einer alternativen Zahlungsmethode können Sie bevorstehende Abonnementaufträge ohne Unterbrechung erhalten.",
           "with_pending_orders": "Durch das Löschen dieser Zahlungsmethode werden sie aus Ihrem Konto entfernt und für zukünftige Einkäufe nicht mehr verfügbar. Sofern Sie keine alternative Zahlungsmethode auswählen, wird sie weiterhin für ausstehende Guthaben für bestehende Bestellungen berechnet.",
           "with_subscriptions": "Durch das Löschen dieser Zahlungsmethode wirkt sich die vorautorisierten Zahlungen aus. Ersetzen Sie es durch eine alternative Zahlungsmethode, um weiterhin bevorstehende Bestellungen zu erhalten."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "Durch das Löschen dieser Zahlungsmethode wirkt sich die vorautorisierten Zahlungen aus. Diese Zahlungsmethode wird weiterhin für ausstehende Guthaben für bestehende Bestellungen berechnet, Sie erhalten jedoch keine bevorstehenden Abonnementaufträge. Fügen Sie eine alternative Zahlungsmethode hinzu, um weiterhin Abonnementaufträge zu erhalten.",
+          "with_pending_orders": "Durch das Löschen dieser Zahlungsmethode werden sie aus Ihrem Konto entfernt und für zukünftige Einkäufe nicht mehr verfügbar. Es wird weiterhin für ausstehende Guthaben für bestehende Bestellungen berechnet.",
+          "with_subscriptions": "Durch das Löschen dieser Zahlungsmethode wirkt sich die vorautorisierten Zahlungen aus. Fügen Sie eine alternative Zahlungsmethode hinzu, um weiterhin bevorstehende Bestellungen zu erhalten."
+        },
+        "payment_method_selector_placeholder": "Wählen Sie eine Ersatzzahlmethode (optional)",
+        "payment_method_selector_no_alternative_payment": "Keine Ersatzmethode",
+        "replace_method_with_new_method_description": "Dein {{currentPaymentMethodName}} wird gelöscht und durch Ihre ersetzt {{newPaymentMethodName}}.",
+        "error_when_deleting": "Wir entschuldigen uns, aber etwas ist schief gelaufen und wir konnten diese Zahlungsmethode nicht löschen. Bitte versuchen Sie es später erneut oder aktualisieren Sie die Seite.",
+        "delete_and_replace_button": "Löschen und ersetzen",
+        "delete_and_replace_button_accessibility_label": "Löschen {{currentPaymentMethodName}} und ersetzen durch {{newPaymentMethodName}}.",
+        "deleted_successfully": "Zahlungsmethode erfolgreich gelöscht.",
+        "loading_available_payment_methods_accessibility_label": "Laden verfügbare Zahlungsmethoden"
+      },
+      "add_payment_method": {
+        "title": "Zahlungsmethode hinzufügen",
+        "payment_method_added_confirmation": "Zahlungsmethode hinzugefügt",
+        "replace_mode_warning": "Durch das Löschen dieser Zahlungsmethode werden Abonnements oder Vorbestellungen beeinflusst. Ersetzen Sie es durch eine alternative Zahlungsmethode, um weiterhin bevorstehende Bestellungen zu erhalten.",
+        "choose_from_list": "Wählen Sie aus der Liste",
+        "add_new_button": "Neu hinzuzufügen",
+        "billing_address": {
+          "title": "Abrechnungsadresse",
+          "add_billing_address_button": "Neu hinzuzufügen",
+          "add_billing_address_button_accessibility_label": "Neue Abrechnungsadresse hinzufügen",
+          "choose_billing_address_from_list_button": "Wählen Sie aus der Liste",
+          "choose_billing_address_from_list_button_accessibility_label": "Wählen Sie eine Abrechnungsadresse aus der Liste",
+          "missing_billing_address_error_message": "Bitte geben Sie eine Abrechnungsadresse an",
+          "default_checkbox": "Setzen Sie als Standardzahlungsmethode"
         }
+      },
+      "three_d_secure": {
+        "title": "3D sicher"
       }
+    },
+    "payment_method_brands": {
+      "visa": "Visum",
+      "mastercard": "MasterCard",
+      "americanexpress": "American Express",
+      "discover": "Entdecken",
+      "dinersclub": "Diners Club",
+      "jcb": "JCB",
+      "elo": "Elo",
+      "visaelectron": "Visa -Elektron",
+      "maestro": "Maestro",
+      "forbrugsforeningen": "Forbrugsforeningen",
+      "dankort": "Dankort",
+      "hipercard": "HiperCard",
+      "unionpay": "UnionPay",
+      "laser": "Laser",
+      "shoppay": "Shop -Bezahlung",
+      "applepay": "Apfelzahl",
+      "googlepay": "Google Pay",
+      "paypal": "Paypal",
+      "storecredit": "Kredite speichern",
+      "bogus": "Schein"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "Keksvorstellungen"
+    },
+    "ui_components": {
+      "clear": "Klar",
+      "clipboardCopied": "Kopiert",
+      "clipboardFailedToCopy": "Nicht kopieren",
+      "closeNotification": "Schließen",
+      "expandNotification": "Mehr anzeigen"
     }
   }
 }
