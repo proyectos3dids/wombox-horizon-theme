@@ -743,7 +743,7 @@
         "price_size": 14,
         "price_size_mobile": 14,
         "price_height": 130,
-        "button": "Add to cart",
+        "button": "Add to box",
         "button_soldout": "Sold Out",
         "button_custom": false,
         "button_font": "josefin_sans_n4",
