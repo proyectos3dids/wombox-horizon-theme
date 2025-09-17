@@ -1186,7 +1186,143 @@
           "prepaid_order_one_cycle": {
             "one": "%{shipping_price} für %{count} mehr Lieferung",
             "other": "%{shipping_price} für %{count} Weitere Lieferungen (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} für %{count} Lieferung",
+            "other": "%{shipping_price} für %{count} Lieferungen (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} für %{count} Weitere Lieferung, gefolgt von %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} für %{count} Weitere Lieferungen (%{per_delivery_cost}), gefolgt von %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} für %{count} Lieferung, gefolgt von %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} für %{count} Lieferungen (%{per_delivery_cost}), gefolgt von %{recurring_order_shipping_price}"
+          },
+          "subscription_free_with_frequency_label": "Kostenloser Versand %{delivery_frequency}",
+          "prepaid_delivery_frequency": {
+            "one": "für %{count} Lieferung",
+            "other": "für %{count} Lieferungen"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "täglich",
+              "other": "jeder %{count} Tage"
+            },
+            "week": {
+              "one": "jede Woche",
+              "other": "jeder %{count} Wochen"
+            },
+            "month": {
+              "one": "jeden Monat",
+              "other": "jeder %{count} Monate"
+            },
+            "year": {
+              "one": "jährlich",
+              "other": "jeder %{count} Jahre"
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} pro Lieferung",
+          "prepaid_shipping_price_label": "%{shipping_price} pro Lieferung x %{delivery_interval_count}",
+          "initial_order_discounted": "Erste Versandkosten %{discounted_shipping_cost}, Dann %{frequency_description}",
+          "prepaid_initial_order_discounted": "Erste Versandkosten %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Erste Versandkosten %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Erste Versandkosten %{discounted_shipping_price} %{prepaid_delivery_frequency}, Dann %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Erste Versandkosten %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), Dann %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "Enthalten",
+          "recurring_order_shipping_price": "gefolgt von %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "Erste Ordnung enthalten, gefolgt von %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} pro Lieferung), gefolgt von %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Erste Ordnung frei",
+            "other": "Erste %{count} Bestellungen frei"
+          },
+          "free_for_first_n_order": {
+            "one": "Für Erste Ordnung",
+            "other": "Für zuerst %{count} Bestellungen"
           }
+        },
+        "one_time_purchase_shipping": "Einmaliger Versand",
+        "duties_and_taxes_title": "Pflichten und Steuern",
+        "shipping_information_required_notice": "Versandinformationen sind erforderlich. {{link}}.",
+        "shipping_information_redirect_link": "Geben Sie hier Ihre Informationen ein",
+        "loading_progressive_rates": "Suche nach mehr Preisen…",
+        "no_other_methods_available": "Keine anderen Methoden verfügbar",
+        "duties_and_taxes_options": {
+          "ddu_title": "Bezahlung bei Lieferung",
+          "ddu_caption": "Zusätzliche Gebühren können gelten",
+          "ddp_title": "Jetzt bezahlen",
+          "ddp_caption": "Keine zusätzlichen Gebühren für die Lieferung"
+        },
+        "shipping_method_combinations": {
+          "without_separator": "%{firstMethod}, %{secondMethod}",
+          "with_separator": "%{rest}, %{current},",
+          "combination": "%{rest} Und %{current}"
+        },
+        "shipping_used_as_billing_notice": "Dies wird auch als Ihre Abrechnungsadresse für diese Bestellung verwendet.",
+        "address_update": "Adresse aktualisieren",
+        "shipping_address_title": "Ausliefern",
+        "shipping_address_rollup_accessibility_label": "Ship to address options",
+        "add_address": "Verwenden Sie eine andere Adresse",
+        "add_delivery_instructions": "Lieferanweisungen hinzufügen",
+        "edit": "Bearbeiten",
+        "delete": "Löschen",
+        "address_more": "Weitere Aktionen für diese Adresse",
+        "address_edit": "Adresse bearbeiten",
+        "address_delete": "Adresse löschen",
+        "address_confirm": "Sind Sie sicher, dass Sie diese Adresse aus Ihrem Konto löschen möchten?",
+        "address_default": "Standardmäßig festgelegt",
+        "address_form": {
+          "add_address": "Adresse hinzufügen",
+          "save": "Speichern",
+          "cancel": "Stornieren",
+          "generic_error": "Es gab ein Problem, Ihre Adresse zu retten. Bitte versuchen Sie es erneut.",
+          "one_time_address_subtitle": "Verwenden Sie eine einmalige Adresse für diese Bestellung"
+        },
+        "different_shipping_method_summary": "Geben Sie eine andere Versandadresse ein, um die verfügbaren Versandmethoden anzuzeigen",
+        "invalid_shipping_method_summary": "Geben Sie eine gültige Versandadresse ein, um die verfügbaren Versandmethoden anzuzeigen",
+        "method_summary": {
+          "incomplete_address_entered": "Geben Sie eine vollständige Versandadresse ein, um die verfügbaren Versandmethoden anzuzeigen",
+          "incomplete_address_selected": "Wählen Sie eine vollständige Versandadresse, um die verfügbaren Versandmethoden anzuzeigen"
+        },
+        "local_pickup": {
+          "search_address": "Suche nach Adresse",
+          "rollup_title": "Abholort",
+          "rollup_accessibility_label": "Abholortoptionen"
+        },
+        "missing_shipping_address": "Versandadresse fehlt",
+        "split_shipping_merchandise_quantity_label_standard": "%{quantity} Artikel",
+        "split_shipping_merchandise_quantity_label_additional": "+%{quantity} mehr",
+        "split_shipping_merchandise_shipment_number": "Lieferung %{number} von %{total}",
+        "pre_order_ships_now": "Schiffe jetzt",
+        "pre_order_ships_later": "Schiffe später",
+        "pre_order_ships_date": "Schiffe %{date}",
+        "split_shipping_shipped_by_shop": "Verschifft vorbei %{shop_name}",
+        "split_shipping_multiple_shipment_label": "Mehrere Sendungen",
+        "split_shipping_shipping_label": "Verfahren",
+        "split_shipping_shipment_notice": "Ihre Bestellung wird in ankommen %{quantity_shipments}",
+        "split_shipping_first_shipment_notice": "Ihre erste Bestellung wird in eintreffen %{quantity_shipments}",
+        "split_shipping_multiple_shipment_quantity_label": "%{quantity} Sendungen",
+        "split_shipping_multiple_shipment_notice": "Ihre Bestellung wird in mehreren Sendungen eintreffen",
+        "split_shipping_multiple_shipment_notice_one_time_purchase": "Ihre Bestellung wird in ankommen %{quantity} Sendungen",
+        "split_shipping_more_shipping_options": "Weitere Versandoptionen",
+        "split_shipping_shipment_number": "Lieferung %{number}",
+        "split_shipping_merchandise_quantity_label_inline_primary": "Menge: %{quantity}",
+        "split_shipping_merchandise_quantity_label_inline": "%{merchandise_title} ×%{quantity}",
+        "split_shipping_option_free": "Kostenloser Versand",
+        "split_shipping_option_lowest_price": "Niedrigster Preis",
+        "split_shipping_option_fastest": "Am schnellsten",
+        "split_shipping_option_recommended": "Empfohlen",
+        "split_shipping_option_custom": "Brauch"
+      },
+      "localized_fields": {
+        "additional_information": {
+          "title": "Weitere Informationen",
+          "tax_credential_br": "CPF/CNPJ",
+          "shipping_credential_br": "CPF/CNPJ",
+          "shipping_credential_kr": "Persönlicher Zollcode",
+          "shipping_credential_cn": "Resident ID -Nummer",
+          "tax_credential_it": "Codice Fiscale (optional)"
         }
       }
     }
