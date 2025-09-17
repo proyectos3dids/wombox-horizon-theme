@@ -2346,6 +2346,177 @@
           "review_title_free_order": "Rivedi e completa il tuo ordine",
           "payment_method_saved_company_location": "Salva carta per questa posizione",
           "company_location": "Posizione aziendale"
+        },
+        "block_title": "Rivedi le tue informazioni",
+        "item_header": {
+          "change_value": "Cambiare valore",
+          "section": "Sezione",
+          "value": "Valore"
+        }
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Inviami un'e -mail con notizie e offerte",
+        "post_accept_marketing_checkbox_label": "Sei iscritto a ricevere notizie e offerte e -mail",
+        "pending_accept_marketing_checkbox_label": "Controlla la tua email per confermare l'abbonamento alle notizie e alle offerte",
+        "accept_sms_checkbox_label": "Scrivimi con notizie e offerte",
+        "disclaimer": {
+          "privacy_policy": "politica sulla riservatezza",
+          "terms_of_service": "Termini di servizio"
+        },
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "politica sulla riservatezza",
+            "terms_of_service": "Termini di servizio",
+            "description_html": "Iscrivendosi tramite SMS, l'utente accetta di ricevere messaggi di marketing automatizzati ricorrenti, inclusi promemoria in carrello, al numero di telefono fornito. Il consenso non è una condizione di acquisto. Rispondi Stop per annullare l'iscrizione. Rispondi Aiuto per aiuto. La frequenza dei messaggi varia. MSG e le velocità dei dati possono essere applicate. Visualizza il nostro %{privacy_policy_link} E %{terms_of_service_link}.",
+            "description_transactional_html": "È possibile ricevere messaggi di testo relativi agli aggiornamenti di conferma e spedizione dell'ordine. Rispondi Stop per annullare l'iscrizione. Rispondi Aiuto per aiuto. La frequenza dei messaggi varia. MSG e le velocità dei dati possono essere applicate. Visualizza il nostro %{privacy_policy_modal_link} E %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Numero di cellulare",
+          "get_offers_by_text": "Ottieni offerte tramite testo"
+        },
+        "unsubscribe": {
+          "title": "Hai cancellato",
+          "description": "Non riceverai più promemoria per il carrello da noi."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "Iscriviti a notizie e offerte da questo negozio"
+      },
+      "shop_policies": {
+        "policy_label": "Politica",
+        "policies_label": "Politiche",
+        "select_policy_label": "Seleziona una politica",
+        "refund_policy": "Politica di rimborso",
+        "privacy_policy": "Politica sulla riservatezza",
+        "terms_of_service": "Termini di servizio",
+        "legal_notice": "Avviso legale",
+        "shipping_policy": "Spedizione",
+        "terms_of_sale": "Termini di vendita",
+        "subscription_policy": "Cancellazioni",
+        "purchase_options_policy": "Politica delle opzioni di acquisto",
+        "contact_information": "Contatto",
+        "purchase_options_cancellation_policy": "Cancellazioni",
+        "cookie_preferences": "Biscotti"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Mercante di termini e condizioni record",
+        "privacy_policy": "Informativa sulla privacy commerciale"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Rivedi le informazioni di contatto prima di completare il pagamento"
+      },
+      "notifications": {
+        "title": "Notifiche"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Importo per pagare l'ordine %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Aggiunto",
+            "other": "Aggiunto %{count}"
+          },
+          "removed": "RIMOSSO",
+          "subtracted": "RIMOSSO %{count}",
+          "returned": "Restituito %{count}",
+          "return_line_item_removed": "RIMOSSO %{count} dal ritorno"
+        },
+        "additional_payment_requested": "Pagamento di %{total_outstanding} è necessario",
+        "checkout_review_and_pay": "Il tuo ordine %{order_name} è stato aggiornato. Rivedi queste modifiche, quindi paga per confermare il tuo ordine.",
+        "order_updated_on": "Il tuo ordine è stato aggiornato su %{last_edited_at}.",
+        "order_review_and_pay": "Il tuo ordine è stato aggiornato. Rivedi e paga per confermare il tuo ordine.",
+        "pay_now": "Paga ora"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "La tua carta di credito verrà addebitata %{amount}",
+        "payment_total_label": "Totale di pagamento",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Cambiare in %{currency_name}",
+        "card_provider_fx_charges_warning": "Il tuo fornitore di carte può addebitare commissioni %{currency_code} transazioni.",
+        "currency_not_supported_by_shop": "La valuta selezionata non è più disponibile. Tutti i prezzi sono ora dentro %{currency_code}."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Il tuo carrello è stato aggiornato in base al tuo paese di spedizione.",
+        "cart_and_currency_updated_based_on_country": "Il carrello e la valuta sono stati aggiornati in base al tuo paese di spedizione."
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Il tuo paese/regione è stato aggiornato. Inserisci il tuo indirizzo di spedizione per continuare il checkout."
+      },
+      "tips": {
+        "title": "Aggiungi consiglio",
+        "description": "Mostra il tuo supporto per il team a %{shop_name}",
+        "presets_description": "Seleziona una percentuale di punta",
+        "custom_label": "Suggerimento personalizzato",
+        "add_tip": "Aggiungi consiglio",
+        "update_tip": "Suggerimento di aggiornamento",
+        "message": "Grazie, lo apprezziamo.",
+        "preset_label": "%{tip_percent}%",
+        "no_tip_label": "Nessuno"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Acquistare %{product_name}",
+          "one": "Acquistare %{product_name} E %{count} Altro oggetto",
+          "other": "Acquistare %{product_name} E %{count} Altri articoli"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "giorno",
+            "other": "%{count} giorni"
+          },
+          "week": {
+            "one": "settimana",
+            "other": "%{count} settimane"
+          },
+          "month": {
+            "one": "mese",
+            "other": "%{count} mesi"
+          },
+          "year": {
+            "one": "anno",
+            "other": "%{count} anni"
+          }
+        },
+        "recurring_totals": "%{total_price} ogni %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Primo pagamento %{total_price_with_discount}, Poi %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Primo pagamento %{total_price}",
+            "other": "Primo %{count} pagamenti %{total_price} ogni"
+          },
+          "following_cycles": ", Poi %{total_price} ogni %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", Poi %{count} pagamento a %{total_price}",
+            "other": ", Poi %{count} pagamenti a %{total_price} ogni"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "Metodi di pagamento",
+        "title": "Metodi di pagamento",
+        "update_card_button_label": "Scheda di aggiornamento",
+        "delete_customer_mandate": {
+          "generic_error": "C'è stato un problema che elabora la tua richiesta.",
+          "success_message": "Il tuo metodo di pagamento è stato eliminato con successo"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "Troppi tentativi",
+          "description": "Si prega di riprovare tra qualche minuto"
+        },
+        "line_to_check_out": "Sei in fila per il check -out",
+        "cart_summary_heading": "La tua scatola",
+        "merchandise": {
+          "available": "Disponibile",
+          "sold_out": "Esaurito"
+        },
+        "inventory": {
+          "partial_inventory_banner": "Parte del carrello è esaurita e non sarà disponibile per l'acquisto al momento del pagamento.",
+          "sold_out": {
+            "heading": "Il tuo carrello è esaurito"
+          }
         }
       }
     }
