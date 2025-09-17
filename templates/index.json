@@ -848,6 +848,7 @@
               "type": "collection-title",
               "name": "t:names.collection_title",
               "settings": {
+                "colorcartX": "#ffffff",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -861,11 +862,11 @@
                 "color": "var(--color-foreground)",
                 "background": true,
                 "background_color": "#d4a697",
-                "corner_radius": 20,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 8
+                "corner_radius": 10,
+                "padding-block-start": 15,
+                "padding-block-end": 15,
+                "padding-inline-start": 15,
+                "padding-inline-end": 15
               },
               "blocks": {}
             },
