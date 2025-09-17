@@ -4221,7 +4221,77 @@
       "expiration_warning_button_accessibility_label": "Montrer un avertissement d'expiration pour {{paymentMethodName}} se terminer dans {{lastDigits}}",
       "expires_soon": "Cette carte expire bientôt",
       "expired": "Cette carte est arrivée à expiration",
-      "card_update_consent": "Ce mode de paiement sera enregistré pour les achats futurs."
+      "card_update_consent": "Ce mode de paiement sera enregistré pour les achats futurs.",
+      "card_update_consent_subscriptions": "Ce mode de paiement sera économisé pour les achats futurs et peut être utilisé pour tout achat récurrent ou différé.",
+      "digital_wallet_title": "Portefeuille numérique",
+      "credit_or_debit_card_title": "Carte de crédit ou de débit",
+      "google_pay": {
+        "iframe_title_accessibility_label": "Ajouter le mode de paiement Google Pay",
+        "loading_accessibility_message": "Chargement de Google Pay",
+        "loading": "Chargement de Google Pay",
+        "errors": {
+          "generic": "Il y avait un problème avec Google Pay. Réessayez ou utilisez un mode de paiement différent.",
+          "missing_billing_address": "Google Pay nécessite une adresse de facturation. Veuillez en ajouter un à votre compte."
+        }
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "Ajouter le mode de paiement PayPal",
+        "loading_accessibility_message": "Chargement PayPal"
+      },
+      "apple_pay": {
+        "loading": "Chargement d'Apple Pay",
+        "errors": {
+          "generic": "Il y avait un problème avec Apple Pay. Réessayez ou utilisez un mode de paiement différent.",
+          "not_available": "Apple Pay n'est pas disponible sur cet appareil.",
+          "missing_billing_address": "Apple Pay nécessite une adresse de facturation. Veuillez en ajouter un à votre compte."
+        }
+      },
+      "store_credit": {
+        "label": "Crédit de magasin",
+        "accesibility_label": "Crédit de magasin - {{formattedBalance}}",
+        "expirable_amounts_button": "Afficher les montants expirables",
+        "expirable_amounts_label": "Montants expirables",
+        "details_modal": {
+          "title": "Crédit de magasin à expiration",
+          "balance_label": "Équilibre",
+          "expiration_date_label": "Date d'expiration",
+          "amount_label": "Montant",
+          "date_label": "Date",
+          "event_label": "Événement",
+          "events": {
+            "adjustment": "Ajustement",
+            "order_payment": "Paiement de commande",
+            "order_refund": "Remboursement de la commande",
+            "payment_failure": "Échec de paiement",
+            "payment_returned": "Paiement retourné",
+            "order_cancellation": "Commande d'annulation",
+            "tax_finalization": "Finalisation fiscale"
+          },
+          "expirable_balance_info": "Une partie de votre solde expirera à une date future",
+          "expirable_amount_label": "Montant à expiration totale",
+          "expirable_amounts_info": "Les montants expirés plus tôt sont appliqués en premier à la caisse",
+          "expirable_amounts_button": "Voir",
+          "expired_amounts_button": "Afficher les montants expirés",
+          "pagination": {
+            "load_more_label": "Chargez plus",
+            "load_more_accessibility_label": "Chargez des montants plus expirables"
+          }
+        }
+      },
+      "payment_details": {
+        "title": "Détails du mode de paiement",
+        "credit_card_details_accessibility_label": "se terminer dans {{lastDigits}}",
+        "billing_title": "Adresse de facturation",
+        "card_info_title": "Informations sur la carte",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "payment_method_expiring_on": "Expirer {{expiryDate}}",
+        "payment_method_expired_on": "Expiré {{expiryDate}}",
+        "preauthorized_payments": "Paiements préautorisés",
+        "close_payment_modal": "Fermer",
+        "close_payment_modal_accessibility_label": "Détails de la méthode de paiement fermé Modal",
+        "payment_method_not_found_error": "Impossible de trouver le mode de paiement",
+        "payment_details_loading": "Détails du mode de paiement de chargement"
+      }
     }
   }
 }
