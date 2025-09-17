@@ -412,7 +412,127 @@
             "local_pickup_delivery_line_detail_changed": "A atual estratégia de entrega de captura local deve ser alterada para continuar.",
             "selected_pickup_option_no_longer_available": "A opção de captação selecionada anteriormente não está mais disponível.",
             "local_pickup_no_delivery_strategy_available": "Nenhuma estratégia de entrega local de coleta disponível encontrada.",
-            "origin_location_id_required": "Um ID de localização de origem é necessário quando o método de entrega de varejo é solicitado."
+            "origin_location_id_required": "Um ID de localização de origem é necessário quando o método de entrega de varejo é solicitado.",
+            "invalid_origin_location_id": "Não foi possível encontrar um local que corresponda ao ID do local de origem.",
+            "origin_location_id_not_allowed": "Os métodos de entrega solicitados não suportam um ID de localização de origem.",
+            "auto_fulfill_not_allowed": "Esta sessão não está autorizada a substituir o comportamento do cumprimento.",
+            "auto_fulfill_required": "O cumprimento automático é necessário quando o método de entrega de varejo for solicitado.",
+            "prefetch_shipping_rates_used": "As taxas de envio pré -buscadas nunca devem retornar as taxas de retorno.",
+            "fulfillment_constraints_not_satisfied": "Uma ou mais restrições de realização não foram satisfeitas.",
+            "must_fulfill_from_constraint_not_satisfied": "As restrições de cumprimento não são satisfeitas porque os itens não podem ser cumpridos a partir dos locais necessários.",
+            "must_fulfill_from_same_location_constraint_not_satisfied": "As restrições de cumprimento não são satisfeitas porque os itens não podem ser cumpridos do mesmo local.",
+            "delivery_strategy_conditions_not_satisfied": "Estratégias de entrega estão disponíveis para este local, mas suas condições não são satisfeitas.",
+            "out_of_stock_at_origin_location": "Nenhum estoque no local de origem.",
+            "invalid_signature": "Assinatura de desconto inválido."
+          },
+          "discount": {
+            "discounts_not_allowed_for_b2b": "Os descontos não são permitidos nas lojas B2B.",
+            "custom_discount_not_honoured": "O desconto personalizado fornecido não foi homenageado.",
+            "unsupported_expectation": "A linha de desconto fornecida continha uma expectativa de que a política não pudesse interpretar.",
+            "additional_requested_discount_code_discarded": "{{code}} é válido, mas não aplicável. Verifique os termos de desconto.",
+            "additional_requested_discount_discarded": "Seu desconto é válido, mas não aplicável. Verifique os termos de desconto.",
+            "allocations_mismatch": "Seu código de desconto mudou. Revise seu carrinho e tente novamente.",
+            "discount_code_not_honoured": "<strong style=\"text-transform:uppercase\">%{discount_rejection_message}</strong>",
+            "discount_title_too_long": "O título com desconto não pode ter mais de 255 caracteres."
+          },
+          "tax": {
+            "new_tax_must_be_accepted": "Os impostos associados ao seu pedido mudaram. Revise e tente novamente.",
+            "unresolvable_tax_terms": "Os termos propostos são insolúveis, dado o contexto atual de negociação.",
+            "delivery_price_is_abstract": "O preço de entrega relacionado é abstrato.",
+            "tax_inclusivity_mismatch": "Renegociado com concreto totalTaxAndDutyamount ou total de valor de valor.",
+            "tax_exemption_not_supported": "As isenções fiscais não são suportadas para a sessão de negociação atual.",
+            "delivery_tax_exemption_not_supported": "As isenções fiscais para linhas de entrega não são atualmente suportadas.",
+            "proposed_allocations_required": "Ausente 'alocações propostas'.",
+            "merchandise_terms_must_be_defined": "Os termos de mercadorias devem ser definidos.",
+            "delivery_terms_must_be_defined": "Os termos de entrega devem ser definidos.",
+            "merchandise_discount_terms_must_be_defined": "Termos de desconto de mercadorias devem ser definidos.",
+            "delivery_discount_terms_must_be_defined": "Os termos de desconto da entrega devem ser definidos.",
+            "allocated_required": "Campo 'alocado' ausente.",
+            "value_required": "Campo de 'valor' ausente.",
+            "line_splits_not_supported": "O campo 'Linhas de mercadorias' deve ser dividido, de modo que cada um tenha um componente de linha única na proposta do vendedor."
+          },
+          "payment": {
+            "manual_payments_not_allowed_for_b2b": "Os pagamentos manuais não são permitidos nas lojas B2B.",
+            "positive_amount_expected": "O valor a pagar deve ser maior que 0.",
+            "total_amount_mismatch": "O total a pagar não corresponde à soma do valor dos pagamentos.",
+            "subscription_terms_not_accepted": "Termos de assinatura não aceitos.",
+            "missing_session_id": "Informações sobre o cartão de crédito ausentes.",
+            "gateway_not_supported": "O gateway de pagamento não suporta armazenar o método de pagamento.",
+            "credit_card_last_name_required": "'Sobrenome' não pode ser nulo.",
+            "credit_card_update_failed": "A atualização do cartão de crédito falhou.",
+            "installments_amount_invalid": "Valor inválido para a transação de parcelas.",
+            "installments_test_mode_not_allowed": "Modo de teste não permitido.",
+            "installments_gift_card_not_allowed": "Parcelas não permite o uso de cartões -presente.",
+            "installments_unsupported_currency": "Parcelas não suporta essa moeda.",
+            "installments_unsupported_shipping": "As parcelas não suportam o envio para este endereço.",
+            "installments_unsupported_billing": "Parcelas não suporta este endereço de cobrança.",
+            "installments_unsupported_subscriptions": "Parcelas não suporta assinaturas.",
+            "installments_ineligible_line_item": "As parcelas são desativadas para um item de linha nesta compra.",
+            "shop_cash_not_found": "O dinheiro da loja não foi encontrado.",
+            "shop_cash_not_allowed": "Compre dinheiro não permitido sem pagamento de loja.",
+            "shop_cash_unsupported_checkout_source": "A loja em dinheiro não suporta essa finalização.",
+            "shop_cash_gift_card_not_allowed": "A loja em dinheiro não permite a compra de cartões -presente.",
+            "shop_cash_not_enabled": "O dinheiro da loja não está ativado para esta loja.",
+            "shop_cash_not_available": "O dinheiro da loja não é suportado nessa finalização.",
+            "shop_cash_unsupported_subscriptions": "A loja em dinheiro não suporta assinaturas.",
+            "shop_cash_unsupported_shipping": "A Shop Cash não suporta mercadorias sem remessa.",
+            "invalid_address_type": "O tipo de endereço fornecido é inválido para este método de pagamento.",
+            "missing_retail_attributions": "As atribuições de varejo são necessárias para pagamentos com cartão de crédito inseridos manualmente.",
+            "unexpected_retail_attributions": "As atribuições de varejo inesperadamente previam o pagamento do cartão de crédito.",
+            "invalid_card_source": "Esta sessão não tem permissão para usar esta fonte de cartão.",
+            "wallet_content_missing": "Falta o conteúdo da carteira.",
+            "payment_instrument_not_found": "Não foi possível encontrar o método de pagamento",
+            "unauthorized_capture_method": "Configurando o método de captura de pagamento não é permitido.",
+            "saved_payment_methods_not_allowed": "Métodos de pagamento salvos não são permitidos.",
+            "saved_payment_methods_not_enabled": "Os métodos de pagamento salvos não estão ativados para esta loja.",
+            "saved_payment_methods_cvv_verification_disabled": "O método de pagamento selecionado requer verificação de CVV, que não está ativado para esta loja. Selecione um método de pagamento diferente.",
+            "store_credit_not_enabled": "O crédito da loja não está ativado para esta loja.",
+            "store_credit_account_not_found": "Conta de crédito da loja não encontrada.",
+            "store_credit_account_mismatch": "A conta de crédito da loja não corresponde à identidade do comprador.",
+            "store_credit_mismatched_currency": "A moeda da conta de crédito da loja não corresponde à moeda de check -out.",
+            "store_credit_insufficient_funds": "Não há fundos insuficientes na conta de crédito da loja.",
+            "store_credit_buying_gift_card": "Você não pode usar o crédito da loja para comprar um cartão -presente.",
+            "gift_cards_not_allowed_for_b2b": "Os cartões -presente não são permitidos nas lojas B2B.",
+            "method_required": "Um método de pagamento deve ser proposto.",
+            "paypal_express_address_invalid": "O PayPal retornou um endereço inválido.",
+            "shop_cash_unsupported_currency": "O dinheiro da loja não suporta essa moeda."
+          },
+          "tip": {
+            "not_accepted_by_shop": "A loja não aceita dicas.",
+            "only_one_tip_line_allowed": "Várias linhas de dicas não são suportadas.",
+            "tips_not_allowed_for_b2b": "As dicas não são permitidas nas lojas B2B.",
+            "currency_change_reset": "A TIP foi redefinida devido à alteração da moeda.",
+            "tips_not_allowed_for_deferred_purchase_options": "As dicas ainda não são suportadas para opções de compra defferou."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Esta ordem de rascunho não existe na loja atual.",
+            "staff_member_not_exist": "Essa equipe não existe na loja atual.",
+            "location_not_exist": "Este local não existe na loja atual.",
+            "point_of_sale_device_not_exist": "Este dispositivo de ponto de venda não existe na loja atual.",
+            "unresolvable_target_merchandise_lines": "As atribuições de venda propostas não são resolvíveis, dado o contexto atual de negociação."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "A proposta do seu comprador deve conter não negociável_terms.",
+            "invalid_signature": "A assinatura para {{target_terms}} é inválido."
+          },
+          "inventory": {
+            "missing_quantity_value": "O campo de quantidade está ausente nas linhas de inventário do comprador.",
+            "changing_behavior_not_allowed": "Este cliente não tem permissão para alterar o comportamento do inventário.",
+            "only_one_inventory_behavior_allowed": "Atualmente, apenas um comportamento de inventário é permitido por check -out."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Recusar tarefas não é permitido para este checkout."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "A atribuição de varejo não é permitida para este checkout.",
+            "retail_attribution_required": "A atribuição de varejo é necessária para esta finalização da compra."
+          },
+          "captcha": {
+            "metadata_missing": "A conclusão de um captcha é necessária para este checkout.",
+            "metadata_mismatch": "Fornecem o provedor e o tipo CAPTCHA não correspondem aos valores esperados.",
+            "token_missing": "Um token CAPTCHA deve ser fornecido para concluir este checkout.",
+            "job_enqueue_failed": "O trabalho de validação de Captcha não foi inserido.",
+            "job_already_queued": "A validação de Captcha já foi filmada para este token Captcha."
           }
         }
       }
