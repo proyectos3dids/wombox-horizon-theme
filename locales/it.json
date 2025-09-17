@@ -534,7 +534,81 @@
             "job_enqueue_failed": "Il lavoro di convalida CAPTCHA non è stato accolto.",
             "job_already_queued": "La convalida di Captcha è già stata in fila per questo token CAPTCHA."
           }
+        },
+        "dates": {
+          "months": {
+            "july": "Luglio",
+            "august": "agosto",
+            "september": "settembre",
+            "october": "ottobre",
+            "november": "novembre",
+            "december": "Dicembre"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Mostra il mese precedente, {{month}} {{year}}",
+          "show_next_month": "Mostra il mese prossimo, {{month}} {{year}}",
+          "range_start": "Inizio della gamma",
+          "in_range": "A distanza",
+          "range_end": "Fine gamma"
+        },
+        "list_formatter": {
+          "and": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, E {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} E {{secondWord}}"
+          },
+          "or": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, O {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} O {{secondWord}}"
+          },
+          "narrow": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, {{lastWord}}",
+            "twoWordConnector": "{{firstWord}}, {{secondWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Cluster di {{number}} marcatore",
+            "other": "Cluster di {{number}} marcatori"
+          }
+        },
+        "sheet": {
+          "expand": "Espandere"
+        },
+        "dropzone": {
+          "add_file": "Aggiungi file",
+          "invalid_file_type": "Tipo di file non supportato",
+          "dragged_over": "DROP FILE PER CARICARE"
         }
+      },
+      "contact": {
+        "title": "Informazioni",
+        "address_title": "Indirizzo",
+        "shipping_used_as_billing_notice": "Questo verrà utilizzato anche come indirizzo di fatturazione per questo ordine.",
+        "delivery_option_title": "Metodo di consegna",
+        "contact_method_title": "Contatto",
+        "email_label": "E-mail",
+        "email_rollup_accessibility_label": "Opzioni e -mail",
+        "email_placeholder": "E-mail",
+        "email_or_phone_label": "Email o numero di cellulare",
+        "email_or_phone_placeholder": "Email o numero di cellulare",
+        "stored_addresses_label": "Indirizzi salvati",
+        "available_addresses_label": "Indirizzi disponibili",
+        "new_address_label": "Usa un nuovo indirizzo",
+        "first_name_label": "Nome di battesimo",
+        "optional_first_name_label": "Nome (opzionale)",
+        "last_name_label": "Cognome",
+        "company_label": "Azienda",
+        "company_attention_label": "Azienda/attenzione",
+        "optional_company_attention_label": "Azienda/attenzione (opzionale)",
+        "optional_company_label": "Azienda (opzionale)",
+        "address1_label": "Indirizzo",
+        "address2_label": "Appartamento, suite, ecc.",
+        "optional_address2_label": "Appartamento, suite, ecc. (Opzionale)",
+        "city_label": "Città"
       }
     }
   }
