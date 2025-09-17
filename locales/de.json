@@ -4186,8 +4186,100 @@
         "edit_accessibility_label": "PO -Nummer bearbeiten",
         "edit_modal_title": "PO -Nummer bearbeiten",
         "empty_state": "Keine PO -Nummer",
-        "modal_po_number_input_label": "PO -Nummer"
+        "modal_po_number_input_label": "PO -Nummer",
+        "modal_po_number_input_max_length_error": "PO -Zahlen haben maximal von {{maxLength}} Charaktere.",
+        "save": "Speichern",
+        "title": "Po #{{poNumber}}"
       }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Es gab ein Problem, diese Adresse zu löschen. Versuchen Sie es erneut oder aktualisieren Sie die Seite."
+      },
+      "addresses_loading_issue": {
+        "description": "Verbindungsfehler. Überprüfen Sie Ihre Internetverbindung und versuchen Sie es erneut."
+      },
+      "banner_title": {
+        "one": "Es gibt {{count}} Fehler",
+        "other": "Es gibt {{count}} Fehler"
+      },
+      "failed_address_creation": {
+        "description": "Es gab ein Problem mit dem Erstellen Ihrer Adresse. Versuchen Sie, diese Seite zu aktualisieren oder Ihre Internetverbindung zu überprüfen."
+      },
+      "failed_address_update": {
+        "description": "Es gab ein Problem mit der Aktualisierung Ihrer Adresse. Versuchen Sie, diese Seite zu aktualisieren oder Ihre Internetverbindung zu überprüfen."
+      },
+      "load_orders_error": {
+        "title": "Bestellungen können nicht geladen werden",
+        "description": "Wiederholen oder später zurückkommen.",
+        "retry_button": "Wiederholen"
+      },
+      "load_paypal_error": {
+        "description": "Es gibt ein Problem beim Laden von Paypal. Bitte versuchen Sie es erneut."
+      },
+      "logout_everywhere": {
+        "description": "Während des Abmeldes ging etwas schief. Bitte versuchen Sie es erneut."
+      },
+      "no_access_to_locations": {
+        "description": "Sie haben keinen Zugriff auf Standorte"
+      },
+      "not_found": {
+        "description": "Überprüfen Sie die URL oder versuchen Sie es in wenigen Minuten erneut.",
+        "title": "Es gibt ein Problem beim Laden dieser Seite"
+      },
+      "order_not_found": {
+        "description": "Diese Bestellung existiert nicht oder Sie haben keine Erlaubnis, sie anzusehen.",
+        "title": "Nicht gefunden"
+      },
+      "profile_update_error": {
+        "description": "Es gab ein Problem, Ihr Profil zu aktualisieren. Versuchen Sie, diese Seite zu aktualisieren oder Ihre Internetverbindung zu überprüfen."
+      },
+      "profile_name_update_error": {
+        "description": "Es gab ein Problem, Ihren Namen zu aktualisieren. Versuchen Sie, diese Seite zu aktualisieren oder Ihre Internetverbindung zu überprüfen."
+      },
+      "retry_action_label": "Wiederholen",
+      "resend_link": {
+        "too_many_requests": "Zu viele Anfragen. Versuchen Sie es später erneut.",
+        "generic": "Fehlgeschlagene Anfrage"
+      },
+      "load_extension_error": {
+        "title": "Fehler",
+        "description": "Aktualisieren Sie diese Seite oder versuchen Sie es in wenigen Minuten erneut.",
+        "refresh_button": "Seite aktualisieren"
+      }
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "Zu viele Versuche",
+        "description": "Bitte versuchen Sie es in wenigen Minuten erneut"
+      }
+    },
+    "payment_methods": {
+      "replacement_payment_method_title": "Ersatzzahlmethode",
+      "title": "Zahlungsmethoden",
+      "add_payment_method_button": "Zahlungsmethode hinzufügen",
+      "add_payment_method_dropdown": {
+        "credit_or_debit_card": "Kredit- oder Debitkarte",
+        "bank_account": "Bankkonto"
+      },
+      "bank_account": {
+        "loading_accessibility_message": "Bankkonto -Taste wird geladen",
+        "iframe_title_accessibility_label": "Bankkonto Setup"
+      },
+      "add_payment_method_banner": "Fügen Sie die Zahlungsmethode für schnellere Auschecken oder vorbereitete Dienste hinzu",
+      "no_payment_methods_banner": "Keine Zahlungsmethoden hinzugefügt",
+      "edit_payment_method_button_accessibility_label": "Bearbeiten {{paymentMethodName}} Ende in {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Bearbeiten {{paymentMethodName}}",
+      "delete_payment_method_button": "Löschen",
+      "delete_payment_method_button_accessibility_label": "Löschen {{paymentMethodName}}",
+      "back_button": "Zurück",
+      "back_button_accessibility_label": "Zurück zu {{paymentMethodStepTitle}}",
+      "default": "Standard",
+      "generic_card": "Karte",
+      "expiration_warning_button_accessibility_label": "Verfallswarnung für zeigen {{paymentMethodName}} Ende in {{lastDigits}}",
+      "expires_soon": "Diese Karte läuft bald aus",
+      "expired": "Diese Karte ist ungültig",
+      "card_update_consent": "Diese Zahlungsmethode wird für zukünftige Einkäufe gespeichert."
     }
   }
 }
