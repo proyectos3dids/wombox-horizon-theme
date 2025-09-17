@@ -4132,7 +4132,169 @@
         "edit_accessibility_label": "Modifica il numero PO",
         "edit_modal_title": "Modifica il numero PO",
         "empty_state": "Nessun numero PO",
-        "modal_po_number_input_label": "Numero PO"
+        "modal_po_number_input_label": "Numero PO",
+        "modal_po_number_input_max_length_error": "I numeri di PO hanno un massimo di {{maxLength}} caratteri.",
+        "save": "Salva",
+        "title": "PO #{{poNumber}}"
+      }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "C'è stato un problema a eliminare questo indirizzo. Riprova o aggiorna la pagina."
+      },
+      "addresses_loading_issue": {
+        "description": "Errore di connessione. Controlla la tua connessione Internet e riprova."
+      },
+      "banner_title": {
+        "one": "C'è {{count}} errore",
+        "other": "Ci sono {{count}} errori"
+      },
+      "failed_address_creation": {
+        "description": "C'è stato un problema a creare il tuo indirizzo. Prova a rinfrescare questa pagina o controlla la tua connessione Internet."
+      },
+      "failed_address_update": {
+        "description": "C'è stato un problema ad aggiornare il tuo indirizzo. Prova a rinfrescare questa pagina o controlla la tua connessione Internet."
+      },
+      "load_orders_error": {
+        "title": "Impossibile caricare gli ordini",
+        "description": "Riprova o torna più tardi.",
+        "retry_button": "Riprovare"
+      },
+      "load_paypal_error": {
+        "description": "C'è un problema a caricare PayPal. Per favore riprova."
+      },
+      "logout_everywhere": {
+        "description": "Qualcosa è andato storto durante la firma. Per favore riprova."
+      },
+      "no_access_to_locations": {
+        "description": "Non hai accesso a nessuna posizione"
+      },
+      "not_found": {
+        "description": "Controlla l'URL o riprova in pochi minuti.",
+        "title": "C'è un problema a caricare questa pagina"
+      },
+      "order_not_found": {
+        "description": "Questo ordine non esiste o non hai il permesso di visualizzarlo.",
+        "title": "Ordine non trovato"
+      },
+      "profile_update_error": {
+        "description": "C'è stato un problema ad aggiornare il tuo profilo. Prova a rinfrescare questa pagina o controlla la tua connessione Internet."
+      },
+      "profile_name_update_error": {
+        "description": "C'è stato un problema ad aggiornare il tuo nome. Prova a rinfrescare questa pagina o controlla la tua connessione Internet."
+      },
+      "retry_action_label": "Riprovare",
+      "resend_link": {
+        "too_many_requests": "Troppe richieste. Riprova più tardi.",
+        "generic": "Richiesta non riuscita"
+      },
+      "load_extension_error": {
+        "title": "Errore",
+        "description": "Aggiorna questa pagina o riprova in pochi minuti.",
+        "refresh_button": "Pagina di aggiornamento"
+      }
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "Troppi tentativi",
+        "description": "Si prega di riprovare tra qualche minuto"
+      }
+    },
+    "payment_methods": {
+      "replacement_payment_method_title": "Metodo di pagamento sostitutivo",
+      "title": "Metodi di pagamento",
+      "add_payment_method_button": "Aggiungi metodo di pagamento",
+      "add_payment_method_dropdown": {
+        "credit_or_debit_card": "Carta di credito o debito",
+        "bank_account": "Conto bancario"
+      },
+      "bank_account": {
+        "loading_accessibility_message": "Il pulsante del conto bancario sta caricando",
+        "iframe_title_accessibility_label": "Configurazione del conto bancario"
+      },
+      "add_payment_method_banner": "Aggiungi metodo di pagamento per un checkout più rapido o servizi pre-autorizzati",
+      "no_payment_methods_banner": "Nessun metodo di pagamento aggiunto",
+      "edit_payment_method_button_accessibility_label": "Modificare {{paymentMethodName}} finire {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Modificare {{paymentMethodName}}",
+      "delete_payment_method_button": "Eliminare",
+      "delete_payment_method_button_accessibility_label": "Eliminare {{paymentMethodName}}",
+      "back_button": "Indietro",
+      "back_button_accessibility_label": "Torna a {{paymentMethodStepTitle}}",
+      "default": "Predefinito",
+      "generic_card": "Carta",
+      "expiration_warning_button_accessibility_label": "Mostra avviso di scadenza per {{paymentMethodName}} finire {{lastDigits}}",
+      "expires_soon": "Questa carta scade presto",
+      "expired": "Questa carta è scaduta",
+      "card_update_consent": "Questo metodo di pagamento verrà salvato per acquisti futuri.",
+      "card_update_consent_subscriptions": "Questo metodo di pagamento verrà salvato per acquisti futuri e può essere utilizzato per qualsiasi acquisto ricorrente o differito.",
+      "digital_wallet_title": "Portafoglio digitale",
+      "credit_or_debit_card_title": "Carta di credito o debito",
+      "google_pay": {
+        "iframe_title_accessibility_label": "Aggiungi il metodo di pagamento di Google Pay",
+        "loading_accessibility_message": "Caricamento di Google Pay",
+        "loading": "Caricamento di Google Pay",
+        "errors": {
+          "generic": "C'è stato un problema con Google Pay. Riprova o usa un metodo di pagamento diverso.",
+          "missing_billing_address": "Google Pay richiede un indirizzo di fatturazione. Aggiungi uno al tuo account."
+        }
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "Aggiungi metodo di pagamento PayPal",
+        "loading_accessibility_message": "Caricamento di PayPal"
+      },
+      "apple_pay": {
+        "loading": "Caricamento di Apple Pay",
+        "errors": {
+          "generic": "C'è stato un problema con Apple Pay. Riprova o usa un metodo di pagamento diverso.",
+          "not_available": "Apple Pay non è disponibile su questo dispositivo.",
+          "missing_billing_address": "Apple Pay richiede un indirizzo di fatturazione. Aggiungi uno al tuo account."
+        }
+      },
+      "store_credit": {
+        "label": "Credito del negozio",
+        "accesibility_label": "Credito del negozio - {{formattedBalance}}",
+        "expirable_amounts_button": "Visualizza gli importi espiabili",
+        "expirable_amounts_label": "Importi espirabili",
+        "details_modal": {
+          "title": "Credito espiabile del negozio",
+          "balance_label": "Bilancia",
+          "expiration_date_label": "Data di scadenza",
+          "amount_label": "Quantità",
+          "date_label": "Data",
+          "event_label": "Evento",
+          "events": {
+            "adjustment": "Regolazione",
+            "order_payment": "Pagamento dell'ordine",
+            "order_refund": "Rimborso dell'ordine",
+            "payment_failure": "Fallimento del pagamento",
+            "payment_returned": "Pagamento restituito",
+            "order_cancellation": "Cancellazione dell'ordine",
+            "tax_finalization": "Finalizzazione fiscale"
+          },
+          "expirable_balance_info": "Parte del tuo saldo scadrà in una data futura",
+          "expirable_amount_label": "Importo espirabile totale",
+          "expirable_amounts_info": "Gli importi in scadenza prima vengono applicati prima al momento del pagamento",
+          "expirable_amounts_button": "Visualizzazione",
+          "expired_amounts_button": "Visualizza gli importi scaduti",
+          "pagination": {
+            "load_more_label": "Carica di più",
+            "load_more_accessibility_label": "Carica importi più espirabili"
+          }
+        }
+      },
+      "payment_details": {
+        "title": "Dettagli del metodo di pagamento",
+        "credit_card_details_accessibility_label": "finire {{lastDigits}}",
+        "billing_title": "Indirizzo di fatturazione",
+        "card_info_title": "Informazioni sulla carta",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "payment_method_expiring_on": "In scadenza {{expiryDate}}",
+        "payment_method_expired_on": "Scaduto su {{expiryDate}}",
+        "preauthorized_payments": "Pagamenti preadutizzati",
+        "close_payment_modal": "Vicino",
+        "close_payment_modal_accessibility_label": "Chiudi i dettagli del metodo di pagamento modale",
+        "payment_method_not_found_error": "Impossibile trovare il metodo di pagamento",
+        "payment_details_loading": "Caricamento dei dettagli del metodo di pagamento"
       }
     }
   }
