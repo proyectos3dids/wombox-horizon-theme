@@ -462,7 +462,135 @@
             "installments_unsupported_billing": "Raten unterstützt diese Abrechnungsadresse nicht.",
             "installments_unsupported_subscriptions": "Raten unterstützt keine Abonnements.",
             "installments_ineligible_line_item": "Raten werden für eine Werbebuchung in diesem Kauf deaktiviert.",
-            "shop_cash_not_found": "Shop Cash wurde nicht gefunden."
+            "shop_cash_not_found": "Shop Cash wurde nicht gefunden.",
+            "shop_cash_not_allowed": "Shop Bargeld nicht ohne Ladenbezahlung erlaubt.",
+            "shop_cash_unsupported_checkout_source": "Shop Cash unterstützt diese Kasse nicht.",
+            "shop_cash_gift_card_not_allowed": "Shop Cash erlaubt nicht den Kauf von Geschenkkarten.",
+            "shop_cash_not_enabled": "Shop Cash ist für diesen Laden nicht aktiviert.",
+            "shop_cash_not_available": "Shop Cash wird in dieser Kasse nicht unterstützt.",
+            "shop_cash_unsupported_subscriptions": "Shop Cash unterstützt keine Abonnements.",
+            "shop_cash_unsupported_shipping": "Shop Cash unterstützt keine Waren ohne Versand.",
+            "invalid_address_type": "Der angegebene Adresstyp ist für diese Zahlungsmethode ungültig.",
+            "missing_retail_attributions": "Einzelhandelsbeschreibungen sind für manuell eingereichte Kreditkartenzahlungen erforderlich.",
+            "unexpected_retail_attributions": "Einzelhandelsbeschreibungen sorgten unerwartet für die Zahlung von Kreditkarten.",
+            "invalid_card_source": "Diese Sitzung verfügt nicht über die Verwendung dieser Kartenquelle.",
+            "wallet_content_missing": "Brieftascheninhalt fehlt.",
+            "payment_instrument_not_found": "Konnte keine Zahlungsmethode finden",
+            "unauthorized_capture_method": "Das Konfigurieren der Zahlungsaufnahmemethode ist nicht zulässig.",
+            "saved_payment_methods_not_allowed": "Speicherte Zahlungsmethoden sind nicht zulässig.",
+            "saved_payment_methods_not_enabled": "Sparen Zahlungsmethoden sind für diesen Laden nicht aktiviert.",
+            "saved_payment_methods_cvv_verification_disabled": "Die ausgewählte Zahlungsmethode erfordert eine CVV -Überprüfung, die für diesen Laden nicht aktiviert ist. Wählen Sie eine andere Zahlungsmethode.",
+            "store_credit_not_enabled": "Das Geschäftskredit ist für diesen Laden nicht aktiviert.",
+            "store_credit_account_not_found": "Speicherkreditkonto nicht gefunden.",
+            "store_credit_account_mismatch": "Store Credit Account entspricht nicht der Käuferidentität.",
+            "store_credit_mismatched_currency": "Die Währung des Store -Kreditkontos entspricht nicht der Kasse.",
+            "store_credit_insufficient_funds": "Es gibt unzureichende Mittel auf dem Kreditkonto.",
+            "store_credit_buying_gift_card": "Sie können kein Geschäft mit einem Geschäft verwenden, um eine Geschenkkarte zu kaufen.",
+            "gift_cards_not_allowed_for_b2b": "Geschenkkarten sind in B2B -Stores nicht erlaubt.",
+            "method_required": "Eine Zahlungsmethode muss vorgeschlagen werden.",
+            "paypal_express_address_invalid": "PayPal hat eine ungültige Adresse zurückgegeben.",
+            "shop_cash_unsupported_currency": "Shop Cash unterstützt diese Währung nicht."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Shop akzeptiert keine Tipps.",
+            "only_one_tip_line_allowed": "Mehrere Tipps werden nicht unterstützt.",
+            "tips_not_allowed_for_b2b": "Tipps sind in B2B -Stores nicht erlaubt.",
+            "currency_change_reset": "Der Tipp wurde aufgrund der Währungsänderung zurückgesetzt.",
+            "tips_not_allowed_for_deferred_purchase_options": "Tipps werden noch nicht für differenzierte Kaufoptionen unterstützt."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Dieser Entwurfsbestellung gibt es im aktuellen Laden nicht.",
+            "staff_member_not_exist": "Dieses Personal gibt es im aktuellen Laden nicht.",
+            "location_not_exist": "Dieser Ort gibt es im aktuellen Laden nicht.",
+            "point_of_sale_device_not_exist": "Dieser Verkaufspunkt gibt im aktuellen Laden nicht.",
+            "unresolvable_target_merchandise_lines": "Die vorgeschlagenen Verkaufsbeschreibungen sind angesichts des aktuellen Verhandlungskontexts unlösbar."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "Der Vorschlag Ihres Käufers sollte nicht verhandelbare_Terms enthalten.",
+            "invalid_signature": "Die Signatur für {{target_terms}} ist ungültig."
+          },
+          "inventory": {
+            "missing_quantity_value": "Das Quantity -Feld fehlt in den Inventarlinien des Käufers.",
+            "changing_behavior_not_allowed": "Dieser Kunde hat keine Erlaubnis, das Bestandsverhalten zu ändern.",
+            "only_one_inventory_behavior_allowed": "Derzeit ist pro Checkout nur ein Bestandsverhalten zulässig."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Die Ablehnung der Aufgaben ist für diese Kasse nicht zulässig."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "Die Einzelhandelsbeschreibung ist für diese Kasse nicht zulässig.",
+            "retail_attribution_required": "Für diese Checkout ist eine Zuschreibung des Einzelhandels erforderlich."
+          },
+          "captcha": {
+            "metadata_missing": "Für diese Kasse ist ein Captcha erforderlich.",
+            "metadata_mismatch": "Der Captcha -Anbieter und der Typ stimmen nicht mit den erwarteten Werten überein.",
+            "token_missing": "Ein Captcha -Token muss bereitgestellt werden, um diese Kasse abzuschließen.",
+            "job_enqueue_failed": "Der Captcha -Validierungsjob konnte nicht aufgenommen werden.",
+            "job_already_queued": "Die Captcha -Validierung wurde bereits für dieses Captcha -Token in der Warteschlange gestellt.",
+            "token_expired": "Das bereitgestellte Captcha -Token ist abgelaufen. Vervollständigen Sie eine neue Captcha, um die Kasse fortzusetzen.",
+            "token_invalid": "Das bereitgestellte Captcha -Token war ungültig. Vervollständigen Sie eine neue Captcha, um die Kasse fortzusetzen.",
+            "token_not_valid_for_session": "Die bereitgestellte Captcha kann mit dieser Kasse nicht verwendet werden."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Der eingegangene Betrag muss in der Ladenwährung sein."
+          },
+          "checkout_source": {
+            "revoked": "Diese Kasse ist nicht mehr verfügbar."
+          }
+        },
+        "full_price": "Voller Preis:",
+        "title": "Kasse - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Kasse",
+        "loading": "Laden…",
+        "loading_title": "Kasse - {{shopName}}",
+        "display_name": "{{firstName}} {{lastName}}",
+        "google_map_title": "Google Map",
+        "confirm_order_button_label": "Bestätigung der Bestellung bestätigen",
+        "submit_order_button_label": "Bestellung einreichen",
+        "submit_for_review_button_label": "Zur Überprüfung einreichen",
+        "submit_for_review_notice_label": "Die Zahlung wird erst fällig, wenn Ihre Bestellung überprüft wird",
+        "continue_to_payment_plans_button_label": "Weiter zu Zahlungsplänen",
+        "back_button_label": "Zurückkehren",
+        "choose_delivery_strategy": "Wählen Sie eine Liefermethode",
+        "autocomplete_zero_item": "Keine Artikel verfügbar",
+        "autocomplete_powered_by_google": "Angetrieben von {{brandName}}",
+        "submit": "Einreichen",
+        "processing": "Verarbeitung…",
+        "stepper": {
+          "increase": "Zunahme {{type}}",
+          "decrease": "Verringern {{type}}",
+          "minimum_reached": "Minimum von {{value}} erreicht",
+          "maximum_reached": "Maximal von {{value}} erreicht"
+        },
+        "remove_chip": "Gegenstand entfernen",
+        "remove_item": "Entfernen %{label}",
+        "remove_tag": "Tag entfernen",
+        "dates": {
+          "weekdays": {
+            "monday": "Montag",
+            "tuesday": "Dienstag",
+            "wednesday": "Mittwoch",
+            "thursday": "Donnerstag",
+            "friday": "Freitag",
+            "saturday": "Samstag",
+            "sunday": "Sonntag"
+          },
+          "weekdays_abbreviation": {
+            "monday": "MO",
+            "tuesday": "Tu",
+            "wednesday": "Wir",
+            "thursday": "Th",
+            "friday": "Fr",
+            "saturday": "Sa",
+            "sunday": "Su"
+          },
+          "months": {
+            "january": "Januar",
+            "february": "Februar",
+            "march": "Marsch",
+            "april": "April",
+            "may": "Mai",
+            "june": "Juni"
           }
         }
       }
