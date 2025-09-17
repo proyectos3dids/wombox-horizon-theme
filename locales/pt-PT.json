@@ -992,7 +992,134 @@
         "paid_label": "Pago",
         "payment_due_label": "Pagamento devido",
         "vat_label_html": "Incluindo %{amount} em impostos",
-        "duties_included_label": "O total inclui impostos e taxas. Não há cobranças extras na entrega."
+        "duties_included_label": "O total inclui impostos e taxas. Não há cobranças extras na entrega.",
+        "discount_and_gift_card_savings_notice": "Depois %{discount_amount} em descontos e %{gift_card_amount} em cartões -presente",
+        "discount_savings_notice": "Depois %{discount_amount} em descontos",
+        "gift_card_savings_notice": "Depois %{gift_card_amount} em cartões -presente",
+        "cost_table_title": "Resumo dos custos",
+        "cost_table_item_column_header": "Item",
+        "cost_table_value_column_header": "Valor",
+        "description_label": "Descrição",
+        "price_label": "Preço",
+        "price_per_item": {
+          "accessibility_label": "%{price} por item",
+          "label": "%{price}/ea"
+        },
+        "quantity_label": "Quantidade",
+        "product_change_label": "Mudar",
+        "product_image_label": "Imagem do produto",
+        "product_image_quantity_label": "Quantidade",
+        "scroll_order_summary": "Role para mais itens",
+        "expand_order_summary_short": "Mostrar",
+        "collapse_order_summary_short": "Esconder",
+        "expand_order_summary": "Mostrar resumo da ordem",
+        "collapse_order_summary": "Ocultar o resumo da ordem",
+        "original_price": "Preço original",
+        "sale_price": "Preço de venda",
+        "total_updated_label": "Preço total atualizado:",
+        "order_total_updated_label": "Total atualizado",
+        "total_already_paid_label": "Pago",
+        "unit_price": {
+          "accessible_separator": "por",
+          "content_html": "%{price}%{accessible_separator}%{per_unit}",
+          "per_item": {
+            "single": "%{price} cada",
+            "one": "%{price} por %{count} item",
+            "other": "%{price} por %{count} Unid"
+          },
+          "per_unit": {
+            "single": "%{price}/%{unit}",
+            "plural": "%{price}/%{count}%{unit}"
+          }
+        },
+        "gift_card_ending": "Cartão -presente terminando com %{last_characters}",
+        "estimated_tax_label": "Imposto estimado",
+        "multiple_shipping_lines_label": "Frete total",
+        "recurring_subtotal_label": "Subtotal recorrente",
+        "recurring_total_label": "Total recorrente",
+        "recurring_total_tooltip": "Não inclui remessa, impostos, tarefas ou descontos aplicáveis.",
+        "confirmation_number_label": "Confirmação #%{confirmation_number}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> Não foi possível ser usado com seus descontos existentes.",
+        "percent_off_shipping": "%{percent}% de desconto no envio",
+        "amount_off_shipping": "%{amount} fora do envio",
+        "deferred_payment_info": {
+          "title": "Pagamento de %{amount_due} é devido %{due_at}",
+          "description_html": "Para perguntas sobre seu pedido, %{contact_us}.",
+          "paid_today": "Total pago hoje",
+          "paid_today_next": "Pago hoje",
+          "due_on_fulfillment_title": "Pagamento de %{amount_due} é devido ao cumprimento",
+          "due_on_receipt_title": "Pagamento de %{amount_due} é devido no recebimento"
+        },
+        "deferred_balance_info": {
+          "title": "Equilíbrio de {{amount_due}} é devido {{due_at}}",
+          "due_on_fulfillment_title": "Equilíbrio de {{amount_due}} é devido ao cumprimento"
+        },
+        "payment_terms_totals": {
+          "due_today": "Total devido hoje",
+          "due_today_next": "Devido hoje",
+          "due_later": "Total devido %{due_at}",
+          "due_on_fulfillment": "Total devido no cumprimento",
+          "due_on_fulfillment_next": "Devido ao cumprimento",
+          "due_on_receipt": "Total devido no recebimento",
+          "due_later_checkout_to_draft": "Total devido mais tarde",
+          "total_paid": "Total pago"
+        },
+        "maximum_discount_code_limit_reached": "Você atingiu o número máximo de códigos de desconto. Remova um código existente para usar <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> não está funcionando agora. Entre em contato conosco para obter ajuda.",
+        "due_on_fulfillment": "Devido ao cumprimento",
+        "gift_card_masked": "•••• %{last_characters}",
+        "subscriptions": "Assinaturas",
+        "duties_label": "Obrigações",
+        "duties_and_taxes_label": "Deveres e impostos",
+        "error_duties_tooltip": "Este pedido está sendo enviado de outro país, para que os deveres e impostos possam ser cobrados na entrega.",
+        "may_be_charged_on_delivery": "Pode ser cobrado na entrega",
+        "total_updated_label_with_price": "Preço total atualizado: %{totalPrice}",
+        "updated_shipping_method": "Método de envio atualizado: %{shipping_method}",
+        "recurring_payments": "Pagamentos recorrentes",
+        "recurring_total_multiple_label": "Este pedido possui uma carga recorrente para vários itens.",
+        "deferred_total_due_date_label": "Total devido {{date}}",
+        "deferred_total_due_date_label_next": "Devido %{date}",
+        "full_price": "Preço total: %{price}",
+        "custom_discount": "Desconto personalizado",
+        "expand_component_information": {
+          "one": "Mostrar %{count} item",
+          "other": "Mostrar %{count} Unid"
+        },
+        "collapse_component_information": {
+          "one": "Esconder %{count} item",
+          "other": "Esconder %{count} Unid"
+        },
+        "component_quantity_title": "%{quantity} × %{product_title}",
+        "discount_discovery": {
+          "add_code": "Adicione desconto",
+          "merchandise_quantity_label": {
+            "one": "%{count} item",
+            "other": "%{count} Unid"
+          }
+        },
+        "alternative_payment_currency_total": "Cobrado como %{amount_due}"
+      },
+      "shipping": {
+        "title": "Envio",
+        "delivery_title": "Entrega",
+        "shipping_method_title": "Método de envio",
+        "shipping_method_rollup_accessibility_label": "Opções do método de envio",
+        "shipping_method_one_time_purchase_group_title": "Compra única",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Primeira remessa",
+          "other": "Primeiras remessas"
+        },
+        "shipping_method_subscription_group_title": "Subscrição",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Remessa recorrente",
+          "other": "Remessas recorrentes"
+        },
+        "subscription_shipping": "Envio de assinatura",
+        "subscription_local_delivery": "Entrega local de assinatura",
+        "subscription_pickup": "Captação de assinatura",
+        "waiting_on_rate_notice": "Obtendo as taxas de envio disponíveis…",
+        "waiting_on_pickup_location_notice": "Recebendo os locais de coleta disponível…",
+        "no_rates_for_cart_or_destination_notice": "Não há métodos de envio disponíveis para o seu carrinho ou endereço"
       }
     }
   }
