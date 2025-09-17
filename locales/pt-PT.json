@@ -2432,6 +2432,180 @@
         "order_updated_on": "Seu pedido foi atualizado sobre %{last_edited_at}.",
         "order_review_and_pay": "Seu pedido foi atualizado. Revise e pague para confirmar seu pedido.",
         "pay_now": "Pagar agora"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "Seu cartão de crédito será cobrado %{amount}",
+        "payment_total_label": "Pagamento total",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Mudar para %{currency_name}",
+        "card_provider_fx_charges_warning": "Seu provedor de cartões pode cobrar taxas em %{currency_code} transações.",
+        "currency_not_supported_by_shop": "A moeda que você selecionou não está mais disponível. Todos os preços estão agora em %{currency_code}."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Seu carrinho foi atualizado com base no seu país de navegação.",
+        "cart_and_currency_updated_based_on_country": "Seu carrinho e moeda foram atualizados com base no seu país de navegação."
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Seu país/região foi atualizado. Digite seu endereço de entrega para continuar a compra."
+      },
+      "tips": {
+        "title": "Adicione a dica",
+        "description": "Mostre seu apoio à equipe em %{shop_name}",
+        "presets_description": "Selecione uma porcentagem de dica",
+        "custom_label": "Dica personalizada",
+        "add_tip": "Adicione a dica",
+        "update_tip": "Dica de atualização",
+        "message": "Obrigado, agradecemos.",
+        "preset_label": "%{tip_percent}%",
+        "no_tip_label": "Nenhum"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Comprar %{product_name}",
+          "one": "Comprar %{product_name} e %{count} outro item",
+          "other": "Comprar %{product_name} e %{count} Outros itens"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "dia",
+            "other": "%{count} dias"
+          },
+          "week": {
+            "one": "semana",
+            "other": "%{count} semanas"
+          },
+          "month": {
+            "one": "mês",
+            "other": "%{count} meses"
+          },
+          "year": {
+            "one": "ano",
+            "other": "%{count} anos"
+          }
+        },
+        "recurring_totals": "%{total_price} todo %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Primeiro pagamento %{total_price_with_discount}, então %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Primeiro pagamento %{total_price}",
+            "other": "Primeiro %{count} pagamentos %{total_price} cada"
+          },
+          "following_cycles": ", então %{total_price} todo %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", então %{count} pagamento em %{total_price}",
+            "other": ", então %{count} pagamentos em %{total_price} cada"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "Métodos de pagamento",
+        "title": "Métodos de pagamento",
+        "update_card_button_label": "Cartão de atualização",
+        "delete_customer_mandate": {
+          "generic_error": "Houve um problema processando sua solicitação.",
+          "success_message": "Seu método de pagamento foi excluído com sucesso"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "Muitas tentativas",
+          "description": "Por favor, tente novamente em alguns minutos"
+        },
+        "line_to_check_out": "Você está na fila para conferir",
+        "cart_summary_heading": "Sua caixa",
+        "merchandise": {
+          "available": "Disponível",
+          "sold_out": "Vendido"
+        },
+        "inventory": {
+          "partial_inventory_banner": "Parte do seu carrinho está esgotada e não estará disponível para compra na finalização da compra.",
+          "sold_out": {
+            "heading": "Seu carrinho está esgotado",
+            "storefront_body": "Volte para a loja para continuar comprando",
+            "no_storefront_body": "Infelizmente, o item que você deseja comprar não está mais disponível.",
+            "link": "De volta à loja"
+          }
+        },
+        "title": "Fila",
+        "time_to_checkout_title": "Hora de conferir - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Cálculo do tempo de espera estimado",
+          "less_than_one": "Tempo de espera estimado: menos de um minuto",
+          "one": "Tempo de espera estimado: {{count}} minuto",
+          "other": "Tempo de espera estimado: {{count}} minutos"
+        },
+        "last_checked": "(Última verificação: {{time}})",
+        "footer": {
+          "heading": "Não atualize esta página, ele atualizará automaticamente.",
+          "body": "Os itens no seu carrinho não são reservados até você concluir a finalização da compra."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "Houve um problema de processando sua solicitação, entre em contato com o proprietário da loja."
+      },
+      "no_address_location": {
+        "title": "Localização sem endereço",
+        "header": "Você não tem um endereço de entrega para este local",
+        "alt_header": "Endereço de envio ausente",
+        "message": "Entre em contato conosco para adicionar um endereço para este local para concluir a finalização da compra.",
+        "email_us_button_label": "Envie -nos um e -mail"
+      },
+      "order_errors": {
+        "creation_failure": "Havia um problema criando seu pedido. Tente novamente ou entre em contato conosco para obter mais detalhes.",
+        "network_failure": "Seu pedido não pôde ser enviado devido a um erro de rede. Verifique sua conexão e tente novamente.",
+        "inventory_reservation_failure": "Alguns itens não estão mais disponíveis."
+      },
+      "session_errors": {
+        "session_not_unique": "Houve um problema de processar seu pedido. Atualize esta página para retornar à loja.",
+        "session_already_finished": "Este pedido já foi enviado. Você pode retornar à loja para iniciar um novo pedido."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "Houve um problema de processar seu pedido. Tente novamente em alguns minutos."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Fechado",
+        "business_hours": "Horário de funcionamento",
+        "no_business_hours": "Sem horário de funcionamento disponível",
+        "open_twenty_four_hours": "Aberto 24/7",
+        "title": "Ponto de coleta",
+        "or": "ou",
+        "search_button": "Procurar",
+        "address_label": "Endereço",
+        "selector_tabs": "Seletor de ponto de coleta",
+        "selector_tab_map": "Mapa",
+        "selector_tab_list": "Lista",
+        "could_not_resolve_address": "Seu endereço não pôde ser localizado. Tente novamente ou use um endereço diferente",
+        "no_pickup_points_near_you": "Nenhum ponto de coleta encontrado perto do endereço selecionado",
+        "no_pickup_points_near_location": "Nenhum ponto de coleta encontrado perto da sua localização",
+        "pickup_unavailable_banner_title": {
+          "one": "Sem pontos de coleta disponíveis para o seu item",
+          "other": "Sem pontos de coleta disponíveis para seus itens"
+        },
+        "no_pickup_points_found": "Sem pontos de coleta encontrados",
+        "paginator": {
+          "next_accessibility_label": "Próxima página",
+          "previous_accessibility_label": "Página anterior",
+          "header": {
+            "one": "Mostrando %{first} - %{last} de %{count} apontar",
+            "other": "Mostrando %{first} - %{last} de %{count} pontos"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} de %{count} apontar",
+            "other": "%{pickup_point_index} de %{count} pontos"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} de %{count} apontar",
+            "other": "%{first} - %{last} de %{count} pontos"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} ponto de coleta perto da sua localização"
+        }
       }
     }
   }
