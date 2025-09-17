@@ -2286,8 +2286,152 @@
         },
         "manage_order_label": "Gerencie seu pedido",
         "gift_card_confirmation_by_text_typ": {
-          "one": "Você receberá um texto com seu cartão -presente em alguns minutos."
+          "one": "Você receberá um texto com seu cartão -presente em alguns minutos.",
+          "other": "Você receberá um texto com seus cartões -presente em alguns minutos."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Você receberá um e -mail com seu cartão -presente em alguns minutos.",
+          "other": "Você receberá um e -mail com seus cartões -presente em alguns minutos."
+        },
+        "gift_card_email_title": {
+          "one": "O vale -presente foi enviado por e -mail",
+          "other": "Os cartões -presente foram enviados por e -mail"
+        },
+        "gift_card_text_title": {
+          "one": "O vale -presente foi enviado por mensagem de texto",
+          "other": "Os cartões -presente foram enviados por mensagem de texto"
+        },
+        "resend_gift_cards_by_email": "Reenviar o email",
+        "resend_gift_cards_by_text": "Reenviar a mensagem de texto",
+        "gift_card_resent_confirmation": {
+          "one": "O vale -presente estava ressentido.",
+          "other": "Os cartões -presente estavam ressentidos."
+        },
+        "gift_card_resend_failure": {
+          "one": "Houve um problema de render seu cartão -presente. Tente novamente ou entre em contato conosco.",
+          "other": "Houve um problema em render seus cartões -presente. Tente novamente ou entre em contato conosco."
+        },
+        "vat_invoices": {
+          "title": "Faturas de IVA"
+        },
+        "verify_shop_account_title": "Verifique sua conta da sua loja",
+        "verify_shop_account_message": "Suas informações foram salvas com a Shop, verifique sua conta para usá -las automaticamente em milhões de lojas.",
+        "verify_shop_account_cta": "Verifique sua conta",
+        "verify_shop_account_confirmation": "Detalhes da finalização da compra salvos",
+        "announcement": {
+          "close": "Fechar",
+          "expand": "Expandir",
+          "collapse": "Colapso"
         }
+      },
+      "vaulted": {
+        "change_button": "Mudar"
+      },
+      "review": {
+        "title": "Análise",
+        "review_title": "Complete seu pedido",
+        "review_and_confirm_title": "Revise e confirme",
+        "checkout_as_guest": "Confira como convidado",
+        "account_more_actions": "Mais ações para esta conta",
+        "checkout_a_different_way": "Confira uma maneira diferente",
+        "blocks": {
+          "contact_method_title": "Contato",
+          "billing_address_title": "Cobrança",
+          "shipping_address_title": "Enviar para",
+          "shipping_method_title": "Método de envio",
+          "payment_method_title": "Método de pagamento",
+          "change_link_label": "Mudar",
+          "change_contact_method_link_label": "Alterar informações de contato",
+          "change_billing_address_link_label": "Endereço de cobrança de alteração",
+          "change_shipping_address_link_label": "Altere o endereço de entrega",
+          "change_shipping_method_link_label": "Alterar o método de envio",
+          "change_payment_method_link_label": "Alterar o método de pagamento",
+          "pick_up_in_store_shipping_method_html": "Captação na loja · %{location_name}",
+          "purchase_order_number_title": "PO Número",
+          "change_purchase_order_number_label": "Altere o número de PO",
+          "change_delivery_method_link_label": "Alterar o método de entrega",
+          "no_address": "(Sem endereço)",
+          "no_purchase_order_number": "(Sem número de PO)",
+          "due_after_order_reviewed_html": "Devido após o pedido é revisado",
+          "review_title_free_order": "Revise e conclua seu pedido",
+          "payment_method_saved_company_location": "Salvar cartão para este local",
+          "company_location": "Localização da empresa"
+        },
+        "block_title": "Revise suas informações",
+        "item_header": {
+          "change_value": "Alterar valor",
+          "section": "Seção",
+          "value": "Valor"
+        }
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Envie -me um e -mail com notícias e ofertas",
+        "post_accept_marketing_checkbox_label": "Você está inscrito para receber notícias e ofertas por e -mail",
+        "pending_accept_marketing_checkbox_label": "Verifique seu e -mail para confirmar sua assinatura de notícias e ofertas",
+        "accept_sms_checkbox_label": "Me mande uma mensagem com notícias e ofertas",
+        "disclaimer": {
+          "privacy_policy": "política de Privacidade",
+          "terms_of_service": "Termos de Serviço"
+        },
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "política de Privacidade",
+            "terms_of_service": "Termos de Serviço",
+            "description_html": "Ao se inscrever via texto, você concorda em receber mensagens de marketing automatizadas recorrentes, incluindo lembretes de carrinho, no número de telefone fornecido. O consentimento não é uma condição de compra. Responder pare para cancelar a inscrição. Responder ajuda para obter ajuda. A frequência da mensagem varia. MSG e taxas de dados podem ser aplicadas. Veja o nosso %{privacy_policy_link} e %{terms_of_service_link}.",
+            "description_transactional_html": "Você pode receber mensagens de texto relacionadas à confirmação do pedido e atualizações de envio. Responder pare para cancelar a inscrição. Responder ajuda para obter ajuda. A frequência da mensagem varia. MSG e taxas de dados podem ser aplicadas. Veja o nosso %{privacy_policy_modal_link} e %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Número do telefone celular",
+          "get_offers_by_text": "Obtenha ofertas por texto"
+        },
+        "unsubscribe": {
+          "title": "Você não foi inscrito",
+          "description": "Você não receberá mais lembretes de carrinho."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "Inscreva -me para notícias e ofertas desta loja"
+      },
+      "shop_policies": {
+        "policy_label": "Política",
+        "policies_label": "Políticas",
+        "select_policy_label": "Selecione uma política",
+        "refund_policy": "Política de reembolso",
+        "privacy_policy": "Política de Privacidade",
+        "terms_of_service": "Termos de Serviço",
+        "legal_notice": "Aviso legal",
+        "shipping_policy": "Envio",
+        "terms_of_sale": "Termos de venda",
+        "subscription_policy": "Cancelamentos",
+        "purchase_options_policy": "Política de opções de compra",
+        "contact_information": "Contato",
+        "purchase_options_cancellation_policy": "Cancelamentos",
+        "cookie_preferences": "Biscoitos"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Comerciante de termos e condições de registro",
+        "privacy_policy": "Mercante da Política de Privacidade de Registro"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Revise suas informações de contato antes de concluir o pagamento"
+      },
+      "notifications": {
+        "title": "Notificações"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Valor a pagar pelo pedido %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Adicionado",
+            "other": "Adicionado %{count}"
+          },
+          "removed": "Removido",
+          "subtracted": "Removido %{count}",
+          "returned": "Retornou %{count}",
+          "return_line_item_removed": "Removido %{count} do retorno"
+        },
+        "additional_payment_requested": "Pagamento de %{total_outstanding} é necessário",
+        "checkout_review_and_pay": "Seu pedido %{order_name} foi atualizado. Revise essas alterações e pague para confirmar seu pedido.",
+        "order_updated_on": "Seu pedido foi atualizado sobre %{last_edited_at}.",
+        "order_review_and_pay": "Seu pedido foi atualizado. Revise e pague para confirmar seu pedido.",
+        "pay_now": "Pagar agora"
       }
     }
   }
