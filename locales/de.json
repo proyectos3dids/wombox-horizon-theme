@@ -3789,9 +3789,75 @@
         "manual_payment_methods": {
           "money_order": "Zahlungsanweisung - {{formattedTransactionAmount}}",
           "cash_on_delivery": "Bargeld für Lieferung (Kabeljau) - {{formattedTransactionAmount}}",
-          "bank_deposit": "Bankeinzahlung - {{formattedTransactionAmount}}"
+          "bank_deposit": "Bankeinzahlung - {{formattedTransactionAmount}}",
+          "manual": "Handbuch - {{formattedTransactionAmount}}"
+        },
+        "transactions": {
+          "show_all": "Zeigen Sie alles",
+          "show_less": "Weniger zeigen",
+          "details": "Details",
+          "payment_details": "Zahlungsdetails"
+        },
+        "emv_details": {
+          "auth": "Auth:",
+          "aid": "HILFE:",
+          "source": "QUELLE:"
         }
-      }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Bezahlt mit Ladenbezahlungsausrichtungen",
+        "description": "Bleiben Sie mit Erinnerungen in der Shop -App auf dem Laufenden.",
+        "payment_reminders_button": "Erhalten Sie Zahlungsemacher",
+        "desktop_qr_code_content": {
+          "title": "Scannen Sie nach Erinnerungen",
+          "description": "Erinnern Sie Erinnerungen an Ihre Raten mit Shop."
+        }
+      },
+      "refunded_amount": "Erstattet",
+      "request_return_failed": "Es gab eine Ausgabe, die Ihre Anfrage bearbeitet. Bitte versuchen Sie es erneut.",
+      "login_card": {
+        "resend_link_and_login": "Um Ihre Bestelldetails anzuzeigen, melden Sie sich an oder senden Sie einen neuen Link an die an der Kasse verwendete E -Mail oder Telefonnummer.",
+        "resend_link_only": "Um Ihre Bestelldetails anzuzeigen, senden Sie einen neuen Link an die an der Kasse verwendete E -Mail oder Telefonnummer.",
+        "log_in": "anmelden",
+        "resend_link": "Neuen Link senden",
+        "link_expired": "Link abgelaufen"
+      },
+      "remaining_amount": "Übrig",
+      "marketing_section_title": "Nachrichten und Angebote",
+      "marketing_description": "Sie erhalten Marketing -E -Mails. Sie können sich jederzeit abmelden.",
+      "marketing_checkbox_label": "Senden Sie mir eine E -Mail mit Neuigkeiten und Angeboten",
+      "marketing_checkmark_label": "Sie werden abonniert, um E -Mail -Nachrichten und -angebote zu erhalten",
+      "returns": {
+        "expand_events_label": "Details anzeigen",
+        "hide_events_label": "Details verbergen",
+        "ineligible_return_message": "In dieser Reihenfolge können keine Elemente zurückgegeben werden.",
+        "ineligible_return_message_when_returned": "In dieser Reihenfolge sind keine zusätzlichen Elemente zur Rückgabe berechtigt.",
+        "print_shipping_label": "Druckenversandetikett drucken",
+        "return_and_refund_modal_header": "Rückerstattungspolitik",
+        "tracking_number": "Tracking-Nummer:",
+        "exchange_header": "Gegenstände austauschen",
+        "exchange_subheader": "Austauschelemente werden der Bestellung hinzugefügt, sobald die Rückgabe abgeschlossen ist."
+      },
+      "shipping": {
+        "address": "Versandadresse",
+        "address_map_marker": "Versandadresse",
+        "method": "Versandmethode",
+        "summary": "Versand",
+        "free": "Frei",
+        "free_shipping_discount": "Kostenloser Versand",
+        "one_time": "Einmaliger Versand",
+        "subscription": "Abonnementversand"
+      },
+      "pickup": {
+        "pickup": "Abholen",
+        "pickup_location": "Abholort",
+        "pickup_point": "Abholpunkt"
+      },
+      "show_items": "Gegenstände anzeigen",
+      "show_order_summary": "Auftragszusammenfassung anzeigen",
+      "hide_order_summary": "Auftragszusammenfassung ausblenden",
+      "subtitle": "Bestätigt {{date}}",
+      "subtotal": "Zwischensumme"
     }
   }
 }
