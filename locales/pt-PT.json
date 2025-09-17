@@ -3332,7 +3332,141 @@
         "email_help_text": "O email não pode ser editado",
         "first_name": "Primeiro nome",
         "last_name": "Sobrenome",
-        "email": "E-mail"
+        "email": "E-mail",
+        "no_name_provided_accessibility_label": "Nenhum nome adicionado",
+        "phone_number_help_text": "O número de telefone não pode ser editado",
+        "save": "Salvar",
+        "save_accessibility_label": "Salvar perfil",
+        "title": "Perfil",
+        "errors": {
+          "name_too_long": "{{fieldName}} é muito longo (o máximo é 255 caracteres)",
+          "name_cannot_contain_url": "{{fieldName}} não pode conter URL",
+          "name_cannot_contain_html_tags": "{{fieldName}} Não é possível conter tags HTML",
+          "email_cant_be_blank": "O email não pode ficar em branco",
+          "invalid_email_format": "Digite um e -mail válido"
+        }
+      },
+      "verify_new_email_modal": {
+        "title": "Verifique o email",
+        "description": "Digite o código enviado para {{email}}",
+        "one_time_password_label": "Código de 6 dígitos",
+        "email_resend_button": "REENSENHA CÓDIGO",
+        "email_resend_button_accessibility_label": "Reenviar o código de verificação",
+        "verify_button": "Verificar",
+        "verify_button_accessibility_label": "Verifique uma senha única",
+        "cancel_button": "Cancelar",
+        "cancel_button_accessibility_label": "Cancelar e -mail de edição"
+      },
+      "email_update_success_modal": {
+        "title": "Verifique o email",
+        "description": "Email atualizado com sucesso. Redirecionando para o login."
+      },
+      "profile_update_confirmation_message": "Perfil atualizado",
+      "email_update_confirmation_message": "Email atualizado para {{email}}",
+      "title": "Perfil",
+      "people": {
+        "pagination": {
+          "load_more": "Carregar mais",
+          "load_more_accessibility_label": "Carregar mais pessoas",
+          "loading_accessibility_label": "Carregando pessoas"
+        }
+      },
+      "add_button": "Adicionar"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "Opções de layout",
+      "list_title": "Ordens",
+      "list_title_with_pending_orders": "Ordens:",
+      "list_title_confirmed_orders_accessibility_label": "Ordens: confirmado",
+      "list_title_pending_orders_accessibility_label": "Ordens: pendente",
+      "switch_order_type_pending_orders_accessibility_label": "Tipo de pedido de comutação, atualmente visualizando pedidos pendentes",
+      "switch_order_type_confirmed_orders_accessibility_label": "Tipo de pedido de comutação, atualmente visualizando pedidos confirmados",
+      "order_list": {
+        "column_headers": {
+          "order": "Ordem",
+          "total": "Total",
+          "actions_accessibility_label": "Ações",
+          "products_accessibility_label": "Produtos"
+        },
+        "order_status_and_message": "{{orderStatus}} - {{message}}",
+        "delivered": "Entregue {{date}}",
+        "empty_state_order_source_description": "Apenas ordens feitas por {{email}} vai mostrar aqui.",
+        "empty_state_subtitle": "Vá para a loja para fazer um pedido.",
+        "empty_state_title": "Sem ordens ainda",
+        "empty_state_with_location_title": "Sem ordens para {{locationName}}",
+        "empty_state_title_for_pending_orders": "Sem ordens pendentes",
+        "no_order_banner": "Para testar sua extensão na página de status do pedido, crie um pedido.",
+        "estimated_shortform": "Husa. {{date}}",
+        "estimated_delivery": "Esperado {{date}}",
+        "one_images_accessibility_label": "O pedido inclui {{lineItemName1}}",
+        "two_images_accessibility_label": "O pedido inclui {{lineItemName1}}, {{lineItemName2}}",
+        "three_images_accessibility_label": "O pedido inclui {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}",
+        "four_images_accessibility_label": "O pedido inclui {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "O pedido inclui {{lineItemName1}}, {{lineItemName2}}, e {{numberOfAdditionalProducts}} Mais produtos",
+        "more_than_four_products_accessibility_label": "O pedido inclui {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, e {{numberOfAdditionalProducts}} Mais produtos",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "plus_more_products": "+{{numberOfAdditionalProducts}} produtos",
+        "carousel": {
+          "one_products_accessibility_label": "O pedido inclui {{lineItemName1}} quantidade {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "O pedido inclui {{lineItemName1}} quantidade {{lineItemQuantity1}}, {{lineItemName2}} quantidade {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "O pedido inclui {{lineItemName1}} quantidade {{lineItemQuantity1}}, {{lineItemName2}} quantidade {{lineItemQuantity2}}, {{lineItemName3}} quantidade {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "O pedido inclui {{lineItemName1}} quantidade {{lineItemQuantity1}}, {{lineItemName2}} quantidade {{lineItemQuantity2}}, {{lineItemName3}} quantidade {{lineItemQuantity3}}, {{lineItemName4}} quantidade {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "O pedido inclui {{lineItemName1}} quantidade {{lineItemQuantity1}}, {{lineItemName2}} quantidade {{lineItemQuantity2}}, {{lineItemName3}} quantidade {{lineItemQuantity3}}, {{lineItemName4}} quantidade {{lineItemQuantity4}}, {{lineItemName5}} quantidade {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "O pedido inclui {{lineItemName1}} quantidade {{lineItemQuantity1}}, {{lineItemName2}} quantidade {{lineItemQuantity2}}, {{lineItemName3}} quantidade {{lineItemQuantity3}}, {{lineItemName4}} quantidade {{lineItemQuantity4}}, {{lineItemName5}} quantidade {{lineItemQuantity5}}, {{lineItemName6}} quantidade {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "O pedido inclui {{lineItemName1}} quantidade {{lineItemQuantity1}}, {{lineItemName2}} quantidade {{lineItemQuantity2}}, {{lineItemName3}} quantidade {{lineItemQuantity3}}, {{lineItemName4}} quantidade {{lineItemQuantity4}}, {{lineItemName5}} quantidade {{lineItemQuantity5}}, {{lineItemName6}} quantidade {{lineItemQuantity6}} e mais",
+          "view_order_details": "Ver detalhes do pedido",
+          "previous": "Anterior",
+          "next": "Próximo"
+        },
+        "items": {
+          "one": "{{count}} item",
+          "other": "{{count}} Unid"
+        },
+        "no_filtered_results_description": "Remova ou ajuste os filtros para ver seus pedidos",
+        "no_filtered_results_title": "Sem resultados filtrados",
+        "order_link": "Visualize o pedido {{name}}",
+        "order_number": "Ordem {{name}}",
+        "orders_title": "Confirmado",
+        "pagination": {
+          "nav_accessibility_label": "Ordens botões de navegação",
+          "next": "Próximo",
+          "next_accessibility_label": "Próximas ordens",
+          "previous": "Anterior",
+          "previous_accessibility_label": "Ordens anteriores",
+          "load_more": "Carregar mais",
+          "load_more_accessibility_label": "Carregar mais pedidos"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Exibir o pedido para obter detalhes",
+            "estimated_delivery": "Esperado {{date}}",
+            "last_updated": "Última atualização {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Husa. entrega {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "payment_status": {
+          "gallery_view": {
+            "overdue": "Pagamento vencido",
+            "due": "Pagamento devido {{date}}",
+            "due_today": "Pagamento vencido hoje",
+            "due_without_date": "Pagamento devido",
+            "due_on_fulfillment": "Pagamento devido no cumprimento",
+            "pay_to_confirm": "Pagar para confirmar",
+            "payment_not_due": "Pagamento ainda não devido"
+          },
+          "list_view": {
+            "overdue": "Atrasado",
+            "due": "Devido {{date}}",
+            "due_today": "Devido hoje",
+            "paid": "Pago",
+            "due_without_date": "Devido",
+            "due_on_fulfillment": "Devido ao cumprimento",
+            "pay_to_confirm": "Pagar para confirmar"
+          }
+        }
       }
     }
   }
