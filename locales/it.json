@@ -1749,7 +1749,65 @@
         "credit_card_start_month_invalid": "Immettere un mese di inizio della scheda valido",
         "credit_card_start_year_invalid": "Immettere un anno di inizio della carta valido",
         "credit_card_number_blank": "Immettere un numero di carta",
-        "credit_card_verification_value_blank": "Immettere il CVV o il codice di sicurezza sulla tua carta"
+        "credit_card_verification_value_blank": "Immettere il CVV o il codice di sicurezza sulla tua carta",
+        "delivery_line_detail_changed": "Alcuni dettagli di consegna potrebbero essere cambiati. Verifica il tuo metodo di spedizione e riprova.",
+        "delivery_zone_not_found": "La zona specificata non è stata trovata nel paese specificato.",
+        "reduction_code_code_not_found": "Immettere un codice di sconto valido o una carta regalo",
+        "reduction_code_discount_not_found": "Immettere un codice di sconto valido",
+        "reduction_code_gift_card_code_invalid": "Inserisci una carta regalo valida",
+        "reduction_code_gift_card_unusable": "Non puoi usare una carta regalo per acquistare un'altra carta regalo",
+        "reduction_code_gift_cards_not_supported_with_deferred_purchase_options": "Le carte regalo non sono supportate da opzioni di acquisto differito.",
+        "shipping_line_phone_blank": "Immettere un numero di telefono per utilizzare questo metodo di consegna",
+        "shipping_line_phone_invalid": "Immettere un numero di telefono valido",
+        "tips_invalid_tip_amount": "Immettere un suggerimento in meno di %{amount}",
+        "gift_card_already_applied": "Questa carta regalo è già stata applicata al tuo ordine",
+        "gift_card_disabled": "Questa carta regalo non è più disponibile",
+        "gift_card_expired": "Questa carta regalo è scaduta",
+        "gift_card_depleted": "Questa carta regalo non ha fondi rimasti",
+        "gift_card_currency_mismatch": "Solo carte regalo in %{checkout_currency} può essere usato con questo ordine",
+        "gift_cards_not_supported_with_deferred_purchase_options": "Le carte regalo non sono supportate da opzioni di acquisto differito.",
+        "gift_card_buying_gift_card": "Non puoi usare una carta regalo per acquistare un'altra carta regalo",
+        "payment_gateway_missing": "Scegli un metodo di pagamento.",
+        "payment_gateway_needs_paid_plan_error": "Questo metodo di pagamento non è disponibile sul negozio in questo momento",
+        "payment_gateway_not_in_test_mode": "non è configurato per testare gli ordini. Questo negozio non può accettare ordini reali o pagamenti reali.",
+        "payment_gateway_incompatible_with_multi_currency": "Per completare questo checkout nella valuta locale, devi pagare con carta di credito.",
+        "payment_gateway_unsupported_for_subscriptions": "Questo metodo di pagamento non è disponibile per gli ordini di abbonamento.",
+        "payment_gateway_unsupported_for_deferred_purchase_options": "Questo metodo di pagamento non è disponibile per le opzioni di acquisto differito.",
+        "payment_gateway_unsupported_for_country": "Questo metodo di pagamento non è disponibile per il tuo paese di spedizione.",
+        "payment_gateway_unsupported_for_development_store_html": "Per effettuare un ordine di test, dovrai utilizzare un gateway di pagamento del test. Ulteriori informazioni <a href=\"%{docs_link}\">Testare gli ordini nei negozi di sviluppo</a>.",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "Hai raggiunto il limite per gli ordini del negozio di sviluppo con questo processore di pagamento. Per effettuare un altro ordine, dovrai utilizzare un gateway di pagamento del test. Ulteriori informazioni <a href=\"%{docs_link}\">Testare gli ordini nei negozi di sviluppo</a>.",
+        "purchase_options_agreement_blank": "Per continuare con l'acquisto, accetta i termini di acquisto differiti o ricorrenti.",
+        "physical_gift_card_invalid_quantity": "Gli elementi della linea della carta regalo fisica devono avere una quantità che corrisponde al numero di codici regalo.",
+        "physical_gift_card_duplicate_code": "L'elemento della riga della carta regalo fisica contiene codice duplicato.",
+        "physical_gift_card_invalid_code": "Il codice della carta regalo fisica non è valido.",
+        "email_blank": "Inserisci una e -mail",
+        "phone_blank": "Immettere un numero di telefono",
+        "address_country_invalid": "Seleziona un paese/regione dall'elenco",
+        "address_zip_invalid": "Immettere un codice zip / postale valido",
+        "gift_card_invalid": "Carta regalo \"••••%{last_four_characters}\"Non è più valido",
+        "vaulting_agreement_blank": "La tua carta deve essere salvata perché il pagamento per il saldo di questo ordine è dovuto in seguito.",
+        "sms_marketing_phone_invalid": "Immettere un numero di telefono valido",
+        "address_suggestion_did_you_mean_html": "Intendevi %{html}?",
+        "split_cart_international_shipping_not_supported": "Tutti gli articoli devono utilizzare lo stesso metodo di consegna durante la spedizione a livello internazionale. Aggiorna il metodo di consegna o crea più ordini.",
+        "invalid_delivery_address_reference_handle": "L'impugnazione di riferimento dell'indirizzo di consegna non può essere abbinato a qualsiasi indirizzi di consegna disponibili.",
+        "must_use_available_delivery_address": "L'indirizzo di consegna deve essere selezionato dagli indirizzi di consegna disponibili.",
+        "must_use_available_shipping_rate": "La tariffa di spedizione deve essere selezionata dalle tariffe di spedizione disponibili."
+      },
+      "store_credit_errors": {
+        "generic_error": "C'è stato un problema con il credito del tuo negozio. Riprova o ricarica la pagina."
+      },
+      "redeemable_errors": {
+        "shop_cash": {
+          "currency_mismatch": "La valuta è cambiata. Per favore rivedi il tuo negozio in contanti e l'offerta."
+        },
+        "gift_card": {
+          "duplicate": "La carta regalo è già stata applicata al tuo ordine",
+          "insufficient_funds": "Questa carta regalo non ha fondi rimasti",
+          "expired": "Questa carta regalo è scaduta",
+          "not_available": "Questa carta regalo non è più disponibile",
+          "invalid": "Inserisci una carta regalo valida",
+          "currency_mismatch": "Solo carte regalo in %{shop_currency} sono accettati"
+        }
       }
     }
   }
