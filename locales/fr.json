@@ -468,9 +468,207 @@
             "installments_unsupported_billing": "Les versements ne prennent pas en charge cette adresse de facturation.",
             "installments_unsupported_subscriptions": "Les versements ne prennent pas en charge les abonnements.",
             "installments_ineligible_line_item": "Les versements sont désactivés pour un article de ligne dans cet achat.",
-            "shop_cash_not_found": "L'espèce de magasin n'a pas été trouvé."
+            "shop_cash_not_found": "L'espèce de magasin n'a pas été trouvé.",
+            "shop_cash_not_allowed": "L'espèce de magasin n'est pas autorisée sans salaire de magasin.",
+            "shop_cash_unsupported_checkout_source": "Shop Cash ne prend pas en charge ce paiement.",
+            "shop_cash_gift_card_not_allowed": "L'espèce de magasin ne permet pas l'achat de cartes-cadeaux.",
+            "shop_cash_not_enabled": "L'argent de la boutique n'est pas activé pour cette boutique.",
+            "shop_cash_not_available": "L'espèce de magasin n'est pas soutenu dans ce paiement.",
+            "shop_cash_unsupported_subscriptions": "L'espèce de magasin ne prend pas en charge les abonnements.",
+            "shop_cash_unsupported_shipping": "Shop Cash ne prend pas en charge les marchandises sans expédition.",
+            "invalid_address_type": "Le type d'adresse fourni n'est pas valide pour ce mode de paiement.",
+            "missing_retail_attributions": "Des attributions de vente au détail sont requises pour les paiements par carte de crédit entravés manuellement.",
+            "unexpected_retail_attributions": "Les attributions de vente au détail ont prévu de manière inattendue le paiement des cartes de crédit.",
+            "invalid_card_source": "Cette session n'a pas la permission d'utiliser cette source de carte.",
+            "wallet_content_missing": "Le contenu du portefeuille est manquant.",
+            "payment_instrument_not_found": "Impossible de trouver le mode de paiement",
+            "unauthorized_capture_method": "La configuration du mode de capture de paiement n'est pas autorisée.",
+            "saved_payment_methods_not_allowed": "Les méthodes de paiement enregistrées ne sont pas autorisées.",
+            "saved_payment_methods_not_enabled": "Les méthodes de paiement enregistrées ne sont pas activées pour cette boutique.",
+            "saved_payment_methods_cvv_verification_disabled": "Le mode de paiement sélectionné nécessite une vérification du CVV qui n'est pas activée pour cette boutique. Sélectionnez un autre mode de paiement.",
+            "store_credit_not_enabled": "Le crédit en magasin n'est pas activé pour cette boutique.",
+            "store_credit_account_not_found": "Compte de crédit de magasin non trouvé.",
+            "store_credit_account_mismatch": "Le compte de crédit en magasin ne correspond pas à l'identité de l'acheteur.",
+            "store_credit_mismatched_currency": "La monnaie du compte de crédit du magasin ne correspond pas à la monnaie de paiement.",
+            "store_credit_insufficient_funds": "Les fonds sont insuffisants dans le compte de crédit du magasin.",
+            "store_credit_buying_gift_card": "Vous ne pouvez pas utiliser le crédit en magasin pour acheter une carte-cadeau.",
+            "gift_cards_not_allowed_for_b2b": "Les cartes-cadeaux ne sont pas autorisées dans les magasins B2B.",
+            "method_required": "Un mode de paiement doit être proposé.",
+            "paypal_express_address_invalid": "PayPal a renvoyé une adresse non valide.",
+            "shop_cash_unsupported_currency": "L'espèce de magasin ne supporte pas cette monnaie."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Le magasin n'accepte pas les conseils.",
+            "only_one_tip_line_allowed": "Plusieurs lignes de conseils ne sont pas prises en charge.",
+            "tips_not_allowed_for_b2b": "Les conseils ne sont pas autorisés dans les magasins B2B.",
+            "currency_change_reset": "La pointe a été réinitialisée en raison d'un changement de devise.",
+            "tips_not_allowed_for_deferred_purchase_options": "Les conseils ne sont pas encore pris en charge pour les options d'achat défini."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Ce projet de commande n'existe pas dans la boutique actuelle.",
+            "staff_member_not_exist": "Ce personnel n'existe pas dans la boutique actuelle.",
+            "location_not_exist": "Cet emplacement n'existe pas dans la boutique actuelle.",
+            "point_of_sale_device_not_exist": "Ce dispositif de point de vente n'existe pas dans la boutique actuelle.",
+            "unresolvable_target_merchandise_lines": "Les attributions de vente proposées ne sont pas résolubles compte tenu du contexte de négociation actuel."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "La proposition de votre acheteur doit contenir non négociable_terms.",
+            "invalid_signature": "La signature pour {{target_terms}} n'est pas valide."
+          },
+          "inventory": {
+            "missing_quantity_value": "Le champ de quantité est manquant dans les lignes d'inventaire de l'acheteur.",
+            "changing_behavior_not_allowed": "Ce client n'a pas la permission de modifier le comportement des stocks.",
+            "only_one_inventory_behavior_allowed": "Actuellement, un seul comportement d'inventaire est autorisé par paiement."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Refuser les tâches n'est pas autorisée pour cette caisse."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "L'attribution de la vente au détail n'est pas autorisée pour cette caisse.",
+            "retail_attribution_required": "L'attribution de la vente au détail est requise pour cette caisse."
+          },
+          "captcha": {
+            "metadata_missing": "La réalisation d'un captcha est requise pour cette caisse.",
+            "metadata_mismatch": "Le fournisseur et le type CAPTCHA fournis ne correspondent pas aux valeurs attendues.",
+            "token_missing": "Un jeton CAPTCHA doit être fourni pour effectuer ce paiement.",
+            "job_enqueue_failed": "Le travail de validation CAPTCHA n'a pas été en cours.",
+            "job_already_queued": "La validation CAPTCHA a déjà été mis en file d'attente pour ce jeton CAPTCHA.",
+            "token_expired": "Le jeton CAPTCHA fourni a expiré. Complétez un nouveau captcha pour continuer à vérifier.",
+            "token_invalid": "Le jeton CAPTCHA fourni n'était pas valide. Complétez un nouveau captcha pour continuer à vérifier.",
+            "token_not_valid_for_session": "Le captcha fourni ne peut pas être utilisé avec cette caisse."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "Le montant reçu doit être dans la monnaie du magasin."
+          },
+          "checkout_source": {
+            "revoked": "Ce paiement n'est plus disponible."
           }
+        },
+        "full_price": "Prix ​​complet:",
+        "title": "Vérifier - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Vérifier",
+        "loading": "Chargement…",
+        "loading_title": "Vérifier - {{shopName}}",
+        "display_name": "{{firstName}} {{lastName}}",
+        "google_map_title": "Google map",
+        "confirm_order_button_label": "Confirmer la commande",
+        "submit_order_button_label": "Soumettre la commande",
+        "submit_for_review_button_label": "Soumettre pour examen",
+        "submit_for_review_notice_label": "Le paiement ne sera pas dû tant que votre commande n'est pas examinée",
+        "continue_to_payment_plans_button_label": "Continuez à des plans de paiement",
+        "back_button_label": "Retour",
+        "choose_delivery_strategy": "Choisissez une méthode de livraison",
+        "autocomplete_zero_item": "Aucun article disponible",
+        "autocomplete_powered_by_google": "Alimenté par {{brandName}}",
+        "submit": "Soumettre",
+        "processing": "Traitement…",
+        "stepper": {
+          "increase": "Augmenter {{type}}",
+          "decrease": "Diminuer {{type}}",
+          "minimum_reached": "Minimum de {{value}} atteint",
+          "maximum_reached": "Maximum {{value}} atteint"
+        },
+        "remove_chip": "Supprimer",
+        "remove_item": "Retirer %{label}",
+        "remove_tag": "Supprimer la balise",
+        "dates": {
+          "weekdays": {
+            "monday": "Lundi",
+            "tuesday": "Mardi",
+            "wednesday": "Mercredi",
+            "thursday": "Jeudi",
+            "friday": "Vendredi",
+            "saturday": "Samedi",
+            "sunday": "Dimanche"
+          },
+          "weekdays_abbreviation": {
+            "monday": "MO",
+            "tuesday": "Tu",
+            "wednesday": "Nous",
+            "thursday": "Ème",
+            "friday": "Frousser",
+            "saturday": "SA",
+            "sunday": "Su"
+          },
+          "months": {
+            "january": "Janvier",
+            "february": "Février",
+            "march": "Mars",
+            "april": "Avril",
+            "may": "Peut",
+            "june": "Juin",
+            "july": "Juillet",
+            "august": "Août",
+            "september": "Septembre",
+            "october": "Octobre",
+            "november": "Novembre",
+            "december": "Décembre"
+          }
+        },
+        "datepicker": {
+          "show_previous_month": "Montrer le mois précédent, {{month}} {{year}}",
+          "show_next_month": "Show le mois prochain, {{month}} {{year}}",
+          "range_start": "Démarrage de la plage",
+          "in_range": "À portée",
+          "range_end": "Plage de gamme"
+        },
+        "list_formatter": {
+          "and": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, et {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} et {{secondWord}}"
+          },
+          "or": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, ou {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} ou {{secondWord}}"
+          },
+          "narrow": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, {{lastWord}}",
+            "twoWordConnector": "{{firstWord}}, {{secondWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Groupement de {{number}} marqueur",
+            "other": "Groupement de {{number}} marqueurs"
+          }
+        },
+        "sheet": {
+          "expand": "Développer"
+        },
+        "dropzone": {
+          "add_file": "Ajouter un fichier",
+          "invalid_file_type": "Type de fichier non pris en charge",
+          "dragged_over": "Déposez le fichier à télécharger"
         }
+      },
+      "contact": {
+        "title": "Information",
+        "address_title": "Adresse",
+        "shipping_used_as_billing_notice": "Cela sera également utilisé comme adresse de facturation pour cette commande.",
+        "delivery_option_title": "Méthode de livraison",
+        "contact_method_title": "Contact",
+        "email_label": "E-mail",
+        "email_rollup_accessibility_label": "Options par e-mail",
+        "email_placeholder": "E-mail",
+        "email_or_phone_label": "E-mail ou numéro de téléphone mobile",
+        "email_or_phone_placeholder": "E-mail ou numéro de téléphone mobile",
+        "stored_addresses_label": "Adresses enregistrées",
+        "available_addresses_label": "Adresses disponibles",
+        "new_address_label": "Utilisez une nouvelle adresse",
+        "first_name_label": "Prénom",
+        "optional_first_name_label": "Prénom (facultatif)",
+        "last_name_label": "Nom de famille",
+        "company_label": "Entreprise",
+        "company_attention_label": "Entreprise / attention",
+        "optional_company_attention_label": "Entreprise / attention (facultatif)",
+        "optional_company_label": "Société (facultative)",
+        "address1_label": "Adresse",
+        "address2_label": "Appartement, suite, etc.",
+        "optional_address2_label": "Appartement, suite, etc. (facultatif)",
+        "city_label": "Ville"
       }
     }
   }
