@@ -2915,7 +2915,63 @@
     },
     "addresses": {
       "zip_code": "CEP",
-      "postal_code": "Código postal"
+      "postal_code": "Código postal",
+      "postcode": "Código postal",
+      "pincode": "Pincodo",
+      "region": "Região",
+      "prefecture": "Prefeitura",
+      "province": "Província",
+      "state": "Estado",
+      "state_and_territory": "Estado/território",
+      "county": "Condado",
+      "emirate": "Emirado",
+      "governorate": "Governamental",
+      "confirm": "Tem certeza de que deseja excluir este endereço?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Apresentou",
+        "best_selling": "Mais vendido",
+        "az": "Alfabético, A-Z",
+        "za": "Alfabeticamente, Z-A",
+        "price_ascending": "Preço, baixo para alto",
+        "price_descending": "Preço, alto para baixo",
+        "date_ascending": "Data, antiga para novo",
+        "date_descending": "Data, novo para o antigo"
+      }
+    },
+    "errors": {
+      "blank": "não pode ficar em branco",
+      "blocked_address": "Este local não é suportado",
+      "credit_card_session_expired": "A autorização do cartão de crédito expirou, insira suas informações de pagamento novamente. Seu cartão não foi cobrado.",
+      "empty": "não pode estar vazio",
+      "invalid_email": "Deve ser um endereço de e -mail válido",
+      "discount_disabled": "Este desconto foi desativado",
+      "discount_expired": "Este desconto não é mais válido",
+      "discount_limit_reached": "Este desconto atingiu seu limite de uso",
+      "discount_not_found": "Incapaz de encontrar um desconto válido correspondendo ao código inserido",
+      "customer_already_used_once_per_customer_discount_notice": "Este desconto atingiu seu limite de uso",
+      "gift_card_already_applied": "O código já foi aplicado ao seu checkout",
+      "gift_card_code_invalid": "O código é inválido",
+      "gift_card_currency_mismatch": "Seu cartão -presente está em %{gift_card_currency}. Entre em contato conosco para reeditá -lo em %{checkout_currency}.",
+      "gift_card_depleted": "Não há fundos restantes neste cartão -presente",
+      "gift_card_disabled": "Vale -presente está desativado",
+      "gift_card_expired": "Carta -presente expirou",
+      "invalid": "é inválido",
+      "bad_domain": "contém um nome de domínio inválido",
+      "taken": "já foi tomada",
+      "contains_html_tags": "Não é possível conter tags HTML",
+      "too_short": "é muito curto (o mínimo é %{count} personagens)",
+      "too_long": "é muito longo (o máximo é %{count} personagens)",
+      "password_mismatch": "deve corresponder à senha fornecida",
+      "contains_spaces": "inicia ou termina com espaços.",
+      "email_domain_invalid": "provedor não é suportado",
+      "invalid_for_country": "não é válido para %{country}",
+      "invalid_for_country_and_province": "não é válido para %{province} e %{country}",
+      "invalid_province_in_country": "não é uma província válida em %{country}",
+      "invalid_state_in_country": "não é um estado válido em %{country}",
+      "invalid_region_in_country": "não é uma região válida em %{country}",
+      "less_than_or_equal_to": "deve ser menor ou igual a %{count}"
     }
   }
 }
