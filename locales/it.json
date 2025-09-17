@@ -2905,7 +2905,63 @@
     },
     "addresses": {
       "zip_code": "Cap",
-      "postal_code": "Codice Postale"
+      "postal_code": "Codice Postale",
+      "postcode": "Codice postale",
+      "pincode": "Pincodo",
+      "region": "Regione",
+      "prefecture": "Prefettura",
+      "province": "Provincia",
+      "state": "Stato",
+      "state_and_territory": "Stato/territorio",
+      "county": "Contea",
+      "emirate": "Emirato",
+      "governorate": "Governatorato",
+      "confirm": "Sei sicuro di voler eliminare questo indirizzo?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "In primo piano",
+        "best_selling": "Best vendita",
+        "az": "In ordine alfabetico, a-z",
+        "za": "In ordine alfabetico, z-a",
+        "price_ascending": "Prezzo, da basso a alto",
+        "price_descending": "Prezzo, alto a basso",
+        "date_ascending": "Data, vecchia al nuovo",
+        "date_descending": "Data, da un vecchio a vecchio"
+      }
+    },
+    "errors": {
+      "blank": "non può essere vuoto",
+      "blocked_address": "Questa posizione non è supportata",
+      "credit_card_session_expired": "L'autorizzazione della carta di credito è scaduta, inserisci nuovamente le informazioni di pagamento. La tua carta non è stata addebitata.",
+      "empty": "non può essere vuoto",
+      "invalid_email": "Deve essere un indirizzo email valido",
+      "discount_disabled": "Questo sconto è stato disabilitato",
+      "discount_expired": "Questo sconto non è più valido",
+      "discount_limit_reached": "Questo sconto ha raggiunto il suo limite di utilizzo",
+      "discount_not_found": "Impossibile trovare uno sconto valido corrispondente al codice inserito",
+      "customer_already_used_once_per_customer_discount_notice": "Questo sconto ha raggiunto il suo limite di utilizzo",
+      "gift_card_already_applied": "Il codice è già stato applicato al tuo checkout",
+      "gift_card_code_invalid": "Il codice non è valido",
+      "gift_card_currency_mismatch": "La tua carta regalo è in %{gift_card_currency}. Contattaci per averlo ristampato %{checkout_currency}.",
+      "gift_card_depleted": "Non sono rimasti fondi su questa carta regalo",
+      "gift_card_disabled": "La carta regalo è disabilitata",
+      "gift_card_expired": "La carta regalo è scaduta",
+      "invalid": "non è valido",
+      "bad_domain": "contiene un nome di dominio non valido",
+      "taken": "è già stata presa",
+      "contains_html_tags": "Impossibile contenere tag HTML",
+      "too_short": "è troppo breve (il minimo è %{count} caratteri)",
+      "too_long": "è troppo lungo (il massimo è %{count} caratteri)",
+      "password_mismatch": "Deve corrispondere alla password fornita",
+      "contains_spaces": "inizia o termina con gli spazi.",
+      "email_domain_invalid": "Il fornitore non è supportato",
+      "invalid_for_country": "non è valido per %{country}",
+      "invalid_for_country_and_province": "non è valido per %{province} E %{country}",
+      "invalid_province_in_country": "non è una provincia valida in %{country}",
+      "invalid_state_in_country": "non è uno stato valido in %{country}",
+      "invalid_region_in_country": "non è una regione valida in %{country}",
+      "less_than_or_equal_to": "deve essere inferiore o uguale a %{count}"
     }
   }
 }
