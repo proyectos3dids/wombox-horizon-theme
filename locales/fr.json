@@ -2215,7 +2215,129 @@
         "confirmed_title": "Votre commande est confirmée",
         "confirmed_description": "Nous avons accepté votre commande et nous le préparons. Revenez à cette page pour des mises à jour sur le statut de votre envoi.",
         "confirmed_orders_title": "Vos commandes sont confirmées",
-        "ready_for_pickup_title": "Votre commande est prête pour le ramassage"
+        "ready_for_pickup_title": "Votre commande est prête pour le ramassage",
+        "ready_for_pickup_description": "Votre commande est prête pour le ramassage. Veuillez apporter votre confirmation de commande lorsque vous récupérez votre commande.",
+        "ready_for_delivery_title": "Votre commande est prête pour la livraison",
+        "ready_for_delivery_description": "Nous avons préparé votre commande.",
+        "order_updates_title": "Mises à jour de commande",
+        "shop_phone_description": "Vous recevrez un texte avec un lien vers l'application Shop pour suivre votre commande.",
+        "order_updates_description_html": "Les mises à jour seront envoyées à %{customer_contact}",
+        "order_updates_current_step_prefix": "Étape actuelle: ",
+        "order_updates_past_step_prefix": "Étape antérieure: ",
+        "order_updates_upcoming_step_prefix": "Étape à venir: ",
+        "in_transit": "Sur son chemin",
+        "in_transit_title": "Votre commande est en route",
+        "in_transit_description": "Vous recevrez des mises à jour sur ses progrès.",
+        "in_transit_description_days": "Vous devriez recevoir votre commande dans le prochain %{number} jours.",
+        "in_transit_description_today": "Vous devriez recevoir votre commande aujourd'hui.",
+        "in_transit_description_tomorrow": "Vous devriez recevoir votre commande le lendemain.",
+        "no_tracking_number": "Il n'y a pas de numéro de suivi pour cette commande.",
+        "out_for_delivery": "OUT pour livraison",
+        "out_for_delivery_title": "Votre commande est disponible pour la livraison",
+        "out_for_delivery_description_html": "Votre commande est en route et devrait arriver aujourd'hui. S'il n'est pas livré dans les 2 prochains jours, %{contact_us}.",
+        "out_for_delivery_local_title": "Votre commande est disponible pour la livraison",
+        "out_for_delivery_local_description_html": "Votre commande arrivera bientôt.",
+        "attempted_delivery": "Tentative de livraison",
+        "attempted_delivery_title": "Une tentative a été faite pour livrer votre commande",
+        "attempted_delivery_description_html": "Une tentative a été faite pour livrer votre commande, mais elle n'a pas réussi. %{contact_us} pour organiser une autre tentative de livraison.",
+        "attempted_delivery_local_title": "Livraison manquée",
+        "attempted_delivery_local_description_html": "Nous n'avons pas pu livrer votre commande. Pour planifier une autre livraison, %{contact_us}.",
+        "delivered": "Livré",
+        "delivered_title": "Votre commande a été livrée",
+        "delivered_description_html": "Votre commande a été livrée à l'adresse que vous avez fournie. Si vous ne l'avez pas reçu, ou si vous avez d'autres problèmes, %{contact_us}.",
+        "delivered_local_title": "Votre commande a été livrée",
+        "delivered_local_description_html": "Vous n'avez pas reçu votre commande? %{let_us_know}.",
+        "choose_payment_method_later": "Choisissez le mode de paiement plus tard",
+        "picked_up_title": "Votre commande a été ramassée",
+        "picked_up_description_html": "Votre commande a été ramassée à %{location_name} sur %{date}.",
+        "contact_us": "Contactez-nous",
+        "contact_us_lowercase": "Contactez-nous",
+        "contact_us_html": "Besoin d'aide? %{contact_us}",
+        "updated_time": "Mis à jour %{time_ago} il y a",
+        "failure": "Non livré",
+        "failed_title": "Votre commande n'a pas pu être livrée",
+        "failed_contact_merchant": "Contact %{company} pour organiser la livraison.",
+        "failed_contact_merchant_no_company": "Contactez-nous pour organiser la livraison.",
+        "non_shippable_title": "Votre commande est complète",
+        "let_us_know": "Faites-nous savoir",
+        "login_title": "Connectez-vous pour afficher tous les détails de commande",
+        "login_description": "Vous pouvez trouver votre numéro de commande dans le reçu que vous avez reçu par e-mail.",
+        "login_description_phone": "Vous pouvez trouver votre numéro de commande dans le reçu que vous avez reçu par SMS.",
+        "login_not_customer_html": "Pas %{name}? Tu peux %{link}",
+        "login_reorder_link_text": {
+          "one": "Achetez aussi ce produit",
+          "other": "Achetez aussi ces produits"
+        },
+        "customer_information_hidden_fields_message": "Connectez-vous pour afficher toutes les informations clients.",
+        "cancelled_title": "Votre commande a été annulée",
+        "cancelled_description": "Votre commande a été annulée sur %{date}. Contactez-nous si vous avez des questions.",
+        "order_number_label": "Numéro de commande",
+        "customer_validation_error": "Entrez un e-mail ou un numéro de commande valide.",
+        "customer_validation_error_phone": "Entrez un téléphone ou un numéro de commande valide.",
+        "login": "Se connecter",
+        "unfulfilled_items_title": "Se préparer à l'expédition",
+        "unfulfilled_items_description": "Nous préparons actuellement ces articles pour l'expédition.",
+        "marker": {
+          "current": "Emplacement de l'envoi actuel",
+          "shipping": "Adresse de livraison"
+        },
+        "pick_up_in_store_marker": {
+          "current": "Emplacement de l'envoi actuel",
+          "shipping": "Emplacement de ramassage"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "Articles dans cette expédition",
+          "unfulfilled_table_title": "Articles préparant l'expédition",
+          "product_image_label": "Image du produit",
+          "description_label": "Description",
+          "quantity_label": "Quantité"
+        },
+        "order_updates_description_missing": "Vous ne recevez pas de mises à jour d'expédition.",
+        "order_updates_subscribe_to_email_notifications": "Obtenez des mises à jour d'expédition par e-mail",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Obtenez des mises à jour d'expédition par e-mail ou texte",
+        "order_updates_subscribe_to_phone_notifications": "Obtenez des mises à jour d'expédition par SMS",
+        "order_updates_submit_subscription": "Soumettre",
+        "track_shipment": "Expédition de piste",
+        "other_options": "Autres options",
+        "delivery_information_label": "Informations sur la livraison:",
+        "gift_card_sent_confirmation": "Cartes-cadeaux envoyés",
+        "qr_code": {
+          "send_link_to_phone": "Ou envoyez un lien vers votre téléphone",
+          "title": "Suivi sur votre téléphone"
+        },
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "Scanner avec votre téléphone"
+          },
+          "sms": {
+            "title": "Ou envoyez un lien vers votre téléphone"
+          }
+        },
+        "view_business_customer_account": "Afficher le compte",
+        "breadcrumbs_submitted": "Soumis",
+        "breadcrumbs_in_review": "En revue",
+        "breadcrumbs_confirmed": "Confirmé",
+        "missing_shipping_address_banner": {
+          "title": "La commande n'a pas d'adresse d'expédition",
+          "text_html": "%{contact_us} Pour ajouter votre adresse",
+          "contact_us": "Contactez-nous"
+        },
+        "first_payment_complete": "Premier paiement complet",
+        "in_store_purchase": "Achat en magasin",
+        "company_location_section_title": "Entreprise et emplacement",
+        "thank_you_ready_for_picked_up": "Votre commande a été ramassée à %{address}.",
+        "ready_for_delivery": "Prêt pour la livraison",
+        "order_updates_subscribe_to_email_notifications_failed": "Nous ne pouvons pas stocker cet e-mail pour les mises à jour. Veuillez réessayer ou utiliser un autre e-mail.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "L'e-mail que vous avez saisi existe déjà.",
+        "subscriptions_management": {
+          "title": "Abonnement",
+          "description": "Continuez à votre compte pour afficher et gérer vos abonnements.",
+          "button_label": "Gérez votre abonnement"
+        },
+        "manage_order_label": "Gérez votre commande",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Vous recevrez un SMS avec votre carte-cadeau en quelques minutes."
+        }
       }
     }
   }
