@@ -16,6 +16,20 @@
   fetchpriority="low"
 ></script>
 
+<style>
+
+
+.predictive-search-results__title {
+  color: {{ settings.search_title_color }};
+}
+
+.resource-card__image {
+  border-radius: {{ settings.search_image_radius }}px;
+}
+
+
+</style>
+
 <predictive-search-component
   class="predictive-search color-{{ settings.popover_color_scheme }}{% if class != blank %} {{ class | strip }}{% endif %}"
   style="--product-corner-radius: {{ settings.product_corner_radius | default: 8 | append: 'px' }}; --card-corner-radius: {{ settings.card_corner_radius | default: 8 | append: 'px' }};{% if settings.card_title_case == 'uppercase' %} --title-case: uppercase;{% endif %}"

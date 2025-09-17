@@ -78,6 +78,38 @@
   ]
 }
 ,
+{
+  "name": "Search Settings",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Search Result Card"
+    },
+    {
+      "type": "paragraph",
+      "content": "Ajusta la apariencia de los resultados en la búsqueda predictiva."
+    },
+    {
+      "type": "color",
+      "id": "search_title_color",
+      "label": "Color del título de producto",
+      "default": "#000000",
+      "info": "Define el color del texto en los títulos de los productos dentro del buscador."
+    },
+    {
+      "type": "range",
+      "id": "search_image_radius",
+      "label": "Redondeado de imagen",
+      "default": 0,
+      "min": 0,
+      "max": 50,
+      "step": 1,
+      "unit": "px",
+      "info": "Controla el radio de las esquinas de la imagen en los resultados de búsqueda."
+    }
+  ]
+}
+,
   {
     "name": "t:names.logo_and_favicon",
     "settings": [
