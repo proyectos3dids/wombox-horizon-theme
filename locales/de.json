@@ -2400,6 +2400,177 @@
           "review_title_free_order": "Überprüfen Sie Ihre Bestellung und geben Sie Ihre Bestellung ab",
           "payment_method_saved_company_location": "Speichern Sie die Karte für diesen Standort",
           "company_location": "Firmenstandort"
+        },
+        "block_title": "Überprüfen Sie Ihre Informationen",
+        "item_header": {
+          "change_value": "Wert ändern",
+          "section": "Abschnitt",
+          "value": "Wert"
+        }
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Senden Sie mir eine E -Mail mit Neuigkeiten und Angeboten",
+        "post_accept_marketing_checkbox_label": "Sie werden abonniert, um E -Mail -Nachrichten und -angebote zu erhalten",
+        "pending_accept_marketing_checkbox_label": "Überprüfen Sie Ihre E -Mails, um Ihr Abonnement für Nachrichten und Angebote zu bestätigen",
+        "accept_sms_checkbox_label": "Schreiben Sie mir Neuigkeiten und Angebote",
+        "disclaimer": {
+          "privacy_policy": "Datenschutzrichtlinie",
+          "terms_of_service": "Nutzungsbedingungen"
+        },
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "Datenschutzrichtlinie",
+            "terms_of_service": "Nutzungsbedingungen",
+            "description_html": "Durch die Anmeldung per Text erklären Sie sich einig, dass wiederkehrende automatisierte Marketingmeldungen, einschließlich Karren -Erinnerungen, unter der angegebenen Telefonnummer empfangen werden. Die Zustimmung ist keine Kaufbedingung. Antwort Halt zum Abbestellen. Antwort Hilfe für Hilfe. Die Nachrichtenfrequenz variiert. MSG- und Datenraten können gelten. Sehen Sie unsere %{privacy_policy_link} Und %{terms_of_service_link}.",
+            "description_transactional_html": "Möglicherweise erhalten Sie Textnachrichten in Bezug auf Bestätigungs- und Versandaktualisierungen. Antwort Halt zum Abbestellen. Antwort Hilfe für Hilfe. Die Nachrichtenfrequenz variiert. MSG- und Datenraten können gelten. Sehen Sie unsere %{privacy_policy_modal_link} Und %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Handynummer",
+          "get_offers_by_text": "Holen Sie sich Angebote per Text"
+        },
+        "unsubscribe": {
+          "title": "Sie haben sich abgemeldet",
+          "description": "Sie erhalten keine Cart -Erinnerungen von uns."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "Melden Sie mich für Neuigkeiten und Angebote in diesem Geschäft an"
+      },
+      "shop_policies": {
+        "policy_label": "Politik",
+        "policies_label": "Richtlinien",
+        "select_policy_label": "Wählen Sie eine Richtlinie aus",
+        "refund_policy": "Rückerstattungspolitik",
+        "privacy_policy": "Datenschutzrichtlinie",
+        "terms_of_service": "Nutzungsbedingungen",
+        "legal_notice": "Rechtliche Bekanntmachung",
+        "shipping_policy": "Versand",
+        "terms_of_sale": "Verkaufsbedingungen",
+        "subscription_policy": "Stornierungen",
+        "purchase_options_policy": "Kaufoptionen Richtlinien",
+        "contact_information": "Kontakt",
+        "purchase_options_cancellation_policy": "Stornierungen",
+        "cookie_preferences": "Kekse"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Händler der Rekordbedingungen und -bedingungen",
+        "privacy_policy": "Kaufmann der Datenschutzrichtlinie"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Überprüfen Sie Ihre Kontaktinformationen vor Abschluss der Zahlung"
+      },
+      "notifications": {
+        "title": "Benachrichtigungen"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Bezahlt zur Bestellung %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Hinzugefügt",
+            "other": "Hinzugefügt %{count}"
+          },
+          "removed": "ENTFERNT",
+          "subtracted": "ENTFERNT %{count}",
+          "returned": "Zurückgekehrt %{count}",
+          "return_line_item_removed": "ENTFERNT %{count} von der Rückkehr"
+        },
+        "additional_payment_requested": "Zahlung von %{total_outstanding} ist benötigt",
+        "checkout_review_and_pay": "Ihre Bestellung %{order_name} wurde aktualisiert. Überprüfen Sie diese Änderungen und zahlen Sie dann, um Ihre Bestellung zu bestätigen.",
+        "order_updated_on": "Ihre Bestellung wurde aktualisiert %{last_edited_at}.",
+        "order_review_and_pay": "Ihre Bestellung wurde aktualisiert. Überprüfen und zahlen Sie, um Ihre Bestellung zu bestätigen.",
+        "pay_now": "Jetzt bezahlen"
+      },
+      "change_currency": {
+        "currency_button_label": "%{currency} (%{currency_symbol})",
+        "credit_card_will_be_charged_html": "Ihre Kreditkarte wird berechnet %{amount}",
+        "payment_total_label": "Zahlung Gesamt",
+        "conversion_rate": "1 %{from_currency_code} = %{rate} %{to_currency_code}",
+        "change_currency_link": "Wechseln zu %{currency_name}",
+        "card_provider_fx_charges_warning": "Ihr Kartenanbieter kann Gebühren erheben %{currency_code} Transaktionen.",
+        "currency_not_supported_by_shop": "Die von Ihnen ausgewählte Währung ist nicht mehr verfügbar. Alle Preise sind jetzt in %{currency_code}."
+      },
+      "change_country": {
+        "cart_updated_based_on_country": "Ihr Wagen wurde basierend auf Ihrem Versandland aktualisiert.",
+        "cart_and_currency_updated_based_on_country": "Ihr Wagen und Ihre Währung wurden basierend auf Ihrem Versandland aktualisiert."
+      },
+      "change_cart_localization": {
+        "verify_shipping_address": "Ihr Land/Ihre Region wurde aktualisiert. Geben Sie Ihre Versandadresse ein, um die Kasse fortzusetzen."
+      },
+      "tips": {
+        "title": "Tipp hinzufügen",
+        "description": "Zeigen Sie Ihre Unterstützung für das Team bei %{shop_name}",
+        "presets_description": "Wählen Sie einen Tippprozentsatz aus",
+        "custom_label": "Benutzerdefinierte Tipp",
+        "add_tip": "Tipp hinzufügen",
+        "update_tip": "Tipp aktualisieren",
+        "message": "Danke, wir schätzen es.",
+        "preset_label": "%{tip_percent}%",
+        "no_tip_label": "Keiner"
+      },
+      "open_graph_meta_tag": {
+        "title_with_products": {
+          "zero": "Kaufen %{product_name}",
+          "one": "Kaufen %{product_name} Und %{count} Anderer Artikel",
+          "other": "Kaufen %{product_name} Und %{count} andere Gegenstände"
+        }
+      },
+      "subscriptions": {
+        "recurring_total_intervals": {
+          "day": {
+            "one": "Tag",
+            "other": "%{count} Tage"
+          },
+          "week": {
+            "one": "Woche",
+            "other": "%{count} Wochen"
+          },
+          "month": {
+            "one": "Monat",
+            "other": "%{count} Monate"
+          },
+          "year": {
+            "one": "Jahr",
+            "other": "%{count} Jahre"
+          }
+        },
+        "recurring_totals": "%{total_price} jeder %{interval}",
+        "recurring_totals_with_initial_order_shipping_discount": "Erste Zahlung %{total_price_with_discount}, Dann %{recurring_total}",
+        "recurring_totals_with_policies": {
+          "first_cycles": {
+            "one": "Erste Zahlung %{total_price}",
+            "other": "Erste %{count} Zahlungen %{total_price} jede"
+          },
+          "following_cycles": ", Dann %{total_price} jeder %{interval}"
+        },
+        "recurring_totals_with_initial_order_shipping_discount_with_policies": {
+          "first_cycles": {
+            "one": ", Dann %{count} Zahlung bei %{total_price}",
+            "other": ", Dann %{count} Zahlungen bei %{total_price} jede"
+          }
+        }
+      },
+      "customer_payment_methods": {
+        "page_title": "Zahlungsmethoden",
+        "title": "Zahlungsmethoden",
+        "update_card_button_label": "Karte aktualisieren",
+        "delete_customer_mandate": {
+          "generic_error": "Es gab eine Ausgabe, die Ihre Anfrage bearbeitet.",
+          "success_message": "Ihre Zahlungsmethode wurde erfolgreich gelöscht"
+        }
+      },
+      "throttle": {
+        "too_many_attempts": {
+          "message": "Zu viele Versuche",
+          "description": "Bitte versuchen Sie es in wenigen Minuten erneut"
+        },
+        "line_to_check_out": "Sie sind in der Schlange, um sich zu überprüfen",
+        "cart_summary_heading": "Deine Box",
+        "merchandise": {
+          "available": "Verfügbar",
+          "sold_out": "Ausverkauft"
+        },
+        "inventory": {
+          "partial_inventory_banner": "Ein Teil Ihres Wagens ist ausverkauft und kann an der Kasse nicht gekauft werden.",
+          "sold_out": {
+            "heading": "Ihr Wagen ist ausverkauft"
+          }
         }
       }
     }
