@@ -3525,7 +3525,85 @@
         "complete_label": "Completare",
         "delivered_label": "Consegnato",
         "delivered_description_gift_card": {
-          "one": "La carta regalo è stata inviata via e -mail."
+          "one": "La carta regalo è stata inviata via e -mail.",
+          "other": "Le carte regalo sono state inviate via e -mail."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "La carta regalo è stata inviata tramite testo.",
+          "other": "Le carte regalo sono state inviate tramite testo."
+        },
+        "gift_card_label": {
+          "one": "Carta regalo",
+          "other": "Carte regalo"
+        },
+        "gift_card_resend_button": {
+          "one": "Carta regalo Resend",
+          "other": "Carte regalo Resend"
+        },
+        "gift_resend_success": {
+          "one": "Carta regalo risentire",
+          "other": "Carte regalo risentiti"
+        },
+        "gift_resend_failure": {
+          "one": "C'è stato un problema per aver revocato la tua carta regalo. Riprova o contattaci.",
+          "other": "C'è stato un problema per aver revocato le carte regalo. Riprova o contattaci."
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "La carta regalo verrà inviata in un'e -mail separata.",
+          "other": "Ogni carta regalo verrà inviata in un'e -mail separata."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "La carta regalo verrà inviata in un testo separato.",
+          "other": "Ogni carta regalo verrà inviata in un testo separato."
+        },
+        "status_timestamp": "Aggiornato {{date}}",
+        "estimated_delivery": "Previsto {{date}}",
+        "expected_by": "Previsto da {{date}}",
+        "was_expected_by": "Era previsto da {{date}}",
+        "delivered": "Arrivato {{date}}",
+        "buy_with_prime_logo_accessibility_label": "Amazon acquista con il logo Prime",
+        "in_review_label": "In revisione",
+        "in_review_title": "Il tuo ordine è in fase di revisione",
+        "last_updated": "Ultimo aggiornamento {{date}}",
+        "multiple_shipments_label": "Spedizioni multiple",
+        "multiple_statuses_label": "Più stati dell'ordine",
+        "no_tracking_number": "Non esiste un numero di tracciamento per questa spedizione.",
+        "tracking_number": {
+          "one": "Numero di identificazione",
+          "other": "Numeri di monitoraggio"
+        },
+        "on_its_way_label": "Sulla sua strada",
+        "out_for_delivery_label": "Fuori per la consegna",
+        "resume_tracking": "Riprendi il monitoraggio",
+        "submitted_label": "Presentato",
+        "submitted_description": "Revisione dei dettagli dell'ordine e del pagamento.",
+        "there_was_a_problem_label": "C'era un problema",
+        "track_shipment": "Traccia la spedizione",
+        "request_return": "Restituzione della richiesta",
+        "view_order_for_details": "Visualizza l'ordine per i dettagli",
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Gestisci su Amazon"
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Gestisci con Amazon",
+            "new_window_disclaimer": "(Apre una nuova finestra)"
+          }
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "Consegna garantita da",
+            "external_promise_brand_label": "Consegna da",
+            "not_delivered_by_label": "Consegnato dopo {{date}}",
+            "delivery_guarantee_expired_label": "Garanzia di consegna scaduta",
+            "modal_accessibility_button_label": "Dettagli promette di consegna",
+            "download_shop_app_button_label": "Scarica il negozio per tracciare",
+            "track_with_shop_button_label": "Traccia con negozio",
+            "claim_shop_cash_button_label": "CONSIGLIATO SHOP CONT"
+          },
+          "details_modal": {
+            "title": "Garanzia di consegna"
+          }
         }
       }
     }
