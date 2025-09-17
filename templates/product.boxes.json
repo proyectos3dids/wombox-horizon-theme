@@ -185,27 +185,6 @@
               },
               "blocks": {}
             },
-            "custom_boxes_ABC123": {
-              "type": "custom-boxes",
-              "settings": {
-                "title": "Select your box",
-                "description": "Choose the type of box you prefer for your order",
-                "expand_hint_text": "Click to expand",
-                "selected_box_text": "Selected Box",
-                "max_products": 6,
-                "min_products": 3,
-                "show_product_images": true,
-                "show_product_prices": true,
-                "layout_style": "grid",
-                "background_color": "#ffffff",
-                "text_color": "#000000",
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
-            },
             "text_FANHNH": {
               "type": "text",
               "name": "Product description",
@@ -237,6 +216,27 @@
               "name": "Ver mas/ver menos",
               "settings": {
                 "custom_liquid": "<script>\n  // Inyectamos los valores de la configuración general del tema en una variable JS\n  window.customSettings = {\n    lineLimit: {{ settings.pdp_description_line_limit | json }},\n    moreText: {{ settings.custom_text_one | json }},\n    lessText: {{ settings.custom_text_two | json }}\n  };\n</script>\n\n<script>\n  document.addEventListener('DOMContentLoaded', function() {\n    const textBlocks = document.querySelectorAll('.text-block.rte');\n\n    textBlocks.forEach(block => {\n      const content = block.querySelector('p');\n      if (!content) return;\n\n      // Usamos los valores de la configuración general\n      const lineLimit = window.customSettings.lineLimit || 2; // Default a 2 si no está definido\n      const moreText = window.customSettings.moreText || 'Ver más';\n      const lessText = window.customSettings.lessText || 'Ver menos';\n      \n      const lineHeight = parseFloat(getComputedStyle(content).lineHeight);\n      const maxHeight = lineHeight * lineLimit;\n\n      // Si el texto es más alto que el límite de líneas\n      if (content.scrollHeight > maxHeight) {\n        // Establecer el estado inicial del contenido\n        content.style.maxHeight = `${maxHeight}px`;\n        content.style.overflow = 'hidden';\n\n        // Crear el enlace de \"Ver más\"\n        const link = document.createElement('a');\n        link.textContent = moreText;\n        link.href = '#';\n        link.classList.add('text-block__toggle');\n        link.setAttribute('aria-expanded', 'false');\n\n        // Agregar el enlace al DOM, después del bloque de texto\n        block.parentNode.insertBefore(link, block.nextSibling);\n\n        // Agregar el \"event listener\" para manejar el clic\n        link.addEventListener('click', (event) => {\n          event.preventDefault();\n\n          const isExpanded = link.getAttribute('aria-expanded') === 'true';\n\n          if (!isExpanded) {\n            content.style.maxHeight = 'none';\n            content.style.overflow = 'visible';\n            link.textContent = lessText;\n            link.setAttribute('aria-expanded', 'true');\n          } else {\n            content.style.maxHeight = `${maxHeight}px`;\n            content.style.overflow = 'hidden';\n            link.textContent = moreText;\n            link.setAttribute('aria-expanded', 'false');\n          }\n        });\n      }\n    });\n  });\n</script>\n<style>\n.text-block__toggle{\nmargin-top:-20px;\n}\n</style>"
+              },
+              "blocks": {}
+            },
+            "custom_boxes_ABC123": {
+              "type": "custom-boxes",
+              "settings": {
+                "title": "Select your box",
+                "description": "Choose the type of box you prefer for your order",
+                "expand_hint_text": "Click to expand",
+                "selected_box_text": "Selected Box",
+                "max_products": 6,
+                "min_products": 3,
+                "show_product_images": true,
+                "show_product_prices": true,
+                "layout_style": "grid",
+                "background_color": "#ffffff",
+                "text_color": "#000000",
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
               },
               "blocks": {}
             },
@@ -281,9 +281,9 @@
             "group_icgrde",
             "divider_VJhene",
             "variant_picker_R3rGDr",
-            "custom_boxes_ABC123",
             "text_FANHNH",
             "custom_liquid_xix7i4",
+            "custom_boxes_ABC123",
             "buy_buttons_eYQEYi"
           ]
         }
