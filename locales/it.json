@@ -2045,7 +2045,67 @@
         "thank_you_confirmed_orders_with_phone": "Presto riceverai testi di conferma separati con i tuoi numeri d'ordine",
         "thank_you_confirmed_orders_with_email_and_phone": "Riceverai presto e -mail di conferma separate con i tuoi numeri d'ordine",
         "thank_you_confirmed_order_with_email_payment": "Hai effettuato un pagamento sul tuo ordine %{date}.",
-        "thank_you_confirmed_order_with_phone_payment": "Hai effettuato un pagamento sul tuo ordine %{date}."
+        "thank_you_confirmed_order_with_phone_payment": "Hai effettuato un pagamento sul tuo ordine %{date}.",
+        "thank_you_confirmed_order_with_email_and_phone_payment": "Hai effettuato un pagamento sul tuo ordine %{date}.",
+        "thank_you_confirmed_order_with_email_pick_up": "Riceverai un'e -mail quando il tuo ordine è pronto per il ritiro.",
+        "thank_you_confirmed_order_with_phone_pick_up": "Riceverai un testo quando il tuo ordine è pronto per il ritiro.",
+        "thank_you_confirmed_order_with_email_and_phone_pick_up": "Riceverai un'e -mail quando il tuo ordine è pronto per il ritiro.",
+        "thank_you_confirmed_order_with_missing": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_confirmed_order_with_missing_payment": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_confirmed_order_with_missing_pick_up": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_confirmed_order_with_draft": "Ti faremo sapere se abbiamo bisogno di maggiori informazioni o quando il tuo ordine è confermato.",
+        "thank_you_confirmed_order_with_draft_payment": "Ti faremo sapere se abbiamo bisogno di maggiori informazioni o quando il tuo ordine è confermato.",
+        "thank_you_confirmed_order_with_draft_pick_up": "Ti faremo sapere se abbiamo bisogno di maggiori informazioni o quando il tuo ordine è confermato.",
+        "thank_you_unconfirmed_items_heading": {
+          "one": "Un articolo non è confermato",
+          "other": "Alcuni articoli non sono confermati"
+        },
+        "thank_you_unconfirmed_items_description": {
+          "one": "Non ti è stato addebitato per questo",
+          "other": "Non ti sei stato addebitato per questi"
+        },
+        "thank_you_confirmed_items_with_email": {
+          "one": "Riceverai presto un'e -mail di conferma con il tuo numero d'ordine",
+          "other": "Riceverai presto e -mail di conferma con i tuoi numeri d'ordine"
+        },
+        "thank_you_confirmed_items_with_phone": {
+          "one": "Riceverai presto un testo di conferma con il tuo numero d'ordine",
+          "other": "Riceverai presto testi di conferma con i tuoi numeri d'ordine"
+        },
+        "thank_you_item_label": {
+          "one": "%{count} articolo",
+          "other": "%{count} elementi"
+        },
+        "thank_you_from_shop": "Da %{shop_name}",
+        "thank_you_payments_app_failed_pending_payment": "Non ti è stato addebitato il tuo ordine. Torna al tuo carrello per rivedere il tuo ordine e pagare di nuovo.",
+        "thank_you_payments_app_failed_pending_payment_payment": "Non ti è stato addebitato il tuo ordine. Torna al tuo carrello per rivedere il tuo ordine e pagare di nuovo.",
+        "thank_you_payments_app_failed_pending_payment_pick_up": "Non ti è stato addebitato il tuo ordine. Torna al tuo carrello per rivedere il tuo ordine e pagare di nuovo.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing_payment": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_default_with_missing_pick_up": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone": "Riceverai un'e -mail di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_payment": "Riceverai un'e -mail di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_and_phone_pick_up": "Riceverai un'e -mail di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_default_with_email": "Riceverai un'e -mail di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_payment": "Riceverai un'e -mail di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_default_with_email_pick_up": "Riceverai un'e -mail di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone": "Riceverai un testo di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_payment": "Riceverai un testo di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_default_with_phone_pick_up": "Riceverai un testo di conferma con il tuo numero di ordine a breve.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_payment": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_missing_pick_up": "Contattaci via e -mail o telefono per ricevere una conferma dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone": "Dopo aver completato il pagamento, riceverai un'e -mail di conferma con il tuo numero d'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_payment": "Dopo aver completato il pagamento, riceverai un'e -mail di conferma con il tuo numero d'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_and_phone_pick_up": "Dopo aver completato il pagamento, riceverai un'e -mail di conferma con il tuo numero d'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email": "Dopo aver completato il pagamento, riceverai un'e -mail di conferma con il tuo numero d'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_payment": "Dopo aver completato il pagamento, riceverai un'e -mail di conferma con il tuo numero d'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_email_pick_up": "Dopo aver completato il pagamento, riceverai un'e -mail di conferma con il tuo numero d'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone": "Dopo aver completato il pagamento, riceverai un testo di conferma con il numero dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_payment": "Dopo aver completato il pagamento, riceverai un testo di conferma con il numero dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_buyer_action_required_with_phone_pick_up": "Dopo aver completato il pagamento, riceverai un testo di conferma con il numero dell'ordine.",
+        "thank_you_payments_app_pending_payment_description_provider_action_required_default": "Il tuo pagamento viene elaborato. Riceverai un'e -mail quando il pagamento è confermato.",
+        "track_your_order_link_text": "Traccia il tuo ordine"
       }
     }
   }
