@@ -3322,7 +3322,73 @@
         "email_help_text": "L'e -mail non può essere modificata",
         "first_name": "Nome di battesimo",
         "last_name": "Cognome",
-        "email": "E-mail"
+        "email": "E-mail",
+        "no_name_provided_accessibility_label": "Nessun nome aggiunto",
+        "phone_number_help_text": "Il numero di telefono non può essere modificato",
+        "save": "Salva",
+        "save_accessibility_label": "Salva profilo",
+        "title": "Profilo",
+        "errors": {
+          "name_too_long": "{{fieldName}} è troppo lungo (il massimo è 255 caratteri)",
+          "name_cannot_contain_url": "{{fieldName}} non può contenere URL",
+          "name_cannot_contain_html_tags": "{{fieldName}} Impossibile contenere tag HTML",
+          "email_cant_be_blank": "L'email non può essere vuota",
+          "invalid_email_format": "Inserisci un'e -mail valida"
+        }
+      },
+      "verify_new_email_modal": {
+        "title": "Verifica la posta elettronica",
+        "description": "Immettere il codice inviato a {{email}}",
+        "one_time_password_label": "Codice a 6 cifre",
+        "email_resend_button": "Codice Resend",
+        "email_resend_button_accessibility_label": "Codice di verifica a riposo",
+        "verify_button": "Verificare",
+        "verify_button_accessibility_label": "Verifica la password di una volta",
+        "cancel_button": "Cancellare",
+        "cancel_button_accessibility_label": "Annulla e -mail di modifica"
+      },
+      "email_update_success_modal": {
+        "title": "Verifica la posta elettronica",
+        "description": "Email aggiornata correttamente. Reindirizzamento per accedere."
+      },
+      "profile_update_confirmation_message": "Profilo aggiornato",
+      "email_update_confirmation_message": "Email aggiornata a {{email}}",
+      "title": "Profilo",
+      "people": {
+        "pagination": {
+          "load_more": "Carica di più",
+          "load_more_accessibility_label": "Carica più persone",
+          "loading_accessibility_label": "Caricamento delle persone"
+        }
+      },
+      "add_button": "Aggiungere"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "Opzioni di layout",
+      "list_title": "Ordini",
+      "list_title_with_pending_orders": "Ordini:",
+      "list_title_confirmed_orders_accessibility_label": "Ordini: confermato",
+      "list_title_pending_orders_accessibility_label": "Ordini: in sospeso",
+      "switch_order_type_pending_orders_accessibility_label": "Switch Order Tipo, attualmente visualizzando gli ordini in sospeso",
+      "switch_order_type_confirmed_orders_accessibility_label": "Switch Order Tipo, attualmente visualizzando gli ordini confermati",
+      "order_list": {
+        "column_headers": {
+          "order": "Ordine",
+          "total": "Totale",
+          "actions_accessibility_label": "Azioni",
+          "products_accessibility_label": "Prodotti"
+        },
+        "order_status_and_message": "{{orderStatus}} - {{message}}",
+        "delivered": "Consegnato {{date}}",
+        "empty_state_order_source_description": "Solo ordini effettuati da {{email}} mostrerà qui.",
+        "empty_state_subtitle": "Vai al negozio per effettuare un ordine.",
+        "empty_state_title": "Nessun ordine ancora",
+        "empty_state_with_location_title": "Nessun ordine per {{locationName}}",
+        "empty_state_title_for_pending_orders": "Nessun ordine in sospeso",
+        "no_order_banner": "Per testare la tua estensione nella pagina di stato dell'ordine, creare un ordine.",
+        "estimated_shortform": "Est. {{date}}",
+        "estimated_delivery": "Previsto {{date}}",
+        "one_images_accessibility_label": "L'ordine include {{lineItemName1}}"
       }
     }
   }
