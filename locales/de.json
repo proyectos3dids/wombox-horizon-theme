@@ -1803,7 +1803,65 @@
         "credit_card_start_month_invalid": "Geben Sie einen gültigen Kartenstartmonat ein",
         "credit_card_start_year_invalid": "Geben Sie ein gültiges Kartenstartjahr ein",
         "credit_card_number_blank": "Geben Sie eine Kartennummer ein",
-        "credit_card_verification_value_blank": "Geben Sie den CVV oder den Sicherheitscode auf Ihrer Karte ein"
+        "credit_card_verification_value_blank": "Geben Sie den CVV oder den Sicherheitscode auf Ihrer Karte ein",
+        "delivery_line_detail_changed": "Einige Lieferdetails haben sich möglicherweise geändert. Überprüfen Sie Ihre Versandmethode und versuchen Sie es erneut.",
+        "delivery_zone_not_found": "Die angegebene Zone wurde im angegebenen Land nicht gefunden.",
+        "reduction_code_code_not_found": "Geben Sie einen gültigen Rabattcode oder eine Geschenkkarte ein",
+        "reduction_code_discount_not_found": "Geben Sie einen gültigen Rabattcode ein",
+        "reduction_code_gift_card_code_invalid": "Geben Sie eine gültige Geschenkkarte ein",
+        "reduction_code_gift_card_unusable": "Sie können keine Geschenkkarte verwenden, um eine weitere Geschenkkarte zu kaufen",
+        "reduction_code_gift_cards_not_supported_with_deferred_purchase_options": "Geschenkkarten werden nicht mit aufgeschobenen Kaufoptionen unterstützt.",
+        "shipping_line_phone_blank": "Geben Sie eine Telefonnummer ein, um diese Liefermethode zu verwenden",
+        "shipping_line_phone_invalid": "Geben Sie eine gültige Telefonnummer ein",
+        "tips_invalid_tip_amount": "Geben Sie einen Tipp weniger als %{amount}",
+        "gift_card_already_applied": "Diese Geschenkkarte wurde bereits auf Ihre Bestellung angewendet",
+        "gift_card_disabled": "Diese Geschenkkarte ist nicht mehr verfügbar",
+        "gift_card_expired": "Diese Geschenkkarte ist abgelaufen",
+        "gift_card_depleted": "Diese Geschenkkarte hat keine Mittel übrig",
+        "gift_card_currency_mismatch": "Nur Geschenkkarten in %{checkout_currency} kann mit dieser Reihenfolge verwendet werden",
+        "gift_cards_not_supported_with_deferred_purchase_options": "Geschenkkarten werden nicht mit aufgeschobenen Kaufoptionen unterstützt.",
+        "gift_card_buying_gift_card": "Sie können keine Geschenkkarte verwenden, um eine weitere Geschenkkarte zu kaufen",
+        "payment_gateway_missing": "Wählen Sie eine Zahlungsmethode.",
+        "payment_gateway_needs_paid_plan_error": "Diese Zahlungsmethode ist momentan nicht im Geschäft verfügbar",
+        "payment_gateway_not_in_test_mode": "ist nicht eingerichtet, um Bestellungen zu testen. Dieser Laden kann keine echten Bestellungen oder echten Zahlungen akzeptieren.",
+        "payment_gateway_incompatible_with_multi_currency": "Um diese Kasse in Ihrer lokalen Währung abzuschließen, müssen Sie per Kreditkarte bezahlen.",
+        "payment_gateway_unsupported_for_subscriptions": "Diese Zahlungsmethode ist für Abonnementaufträge nicht verfügbar.",
+        "payment_gateway_unsupported_for_deferred_purchase_options": "Diese Zahlungsmethode ist für aufgeschobene Kaufoptionen nicht verfügbar.",
+        "payment_gateway_unsupported_for_country": "Diese Zahlungsmethode ist für Ihr Schiffsland nicht verfügbar.",
+        "payment_gateway_unsupported_for_development_store_html": "Um eine Testbestellung aufzugeben, müssen Sie ein Test -Zahlungs -Gateway verwenden. Erfahren Sie mehr über <a href=\"%{docs_link}\">Testaufträge in Entwicklungsgeschäften</a>.",
+        "payment_gateway_unsupported_for_order_above_maximum_orders_html": "Mit diesem Zahlungsabwickler haben Sie die Grenze für Entwicklungsgeschäfte erreicht. Um eine weitere Bestellung aufzugeben, müssen Sie ein Test -Zahlungs -Gateway verwenden. Erfahren Sie mehr über <a href=\"%{docs_link}\">Testaufträge in Entwicklungsgeschäften</a>.",
+        "purchase_options_agreement_blank": "Um Ihren Kauf fortzusetzen, stimmen Sie den aufgeschobenen oder wiederkehrenden Kaufbedingungen zu.",
+        "physical_gift_card_invalid_quantity": "Physische Geschenkkarten -Werbebuchungen müssen eine Menge haben, die der Anzahl der Geschenkkartencodes entspricht.",
+        "physical_gift_card_duplicate_code": "Physischer Geschenkkarten -Werbebuchung enthält einen doppelten Code.",
+        "physical_gift_card_invalid_code": "Der physische Geschenkkartencode ist ungültig.",
+        "email_blank": "Geben Sie eine E -Mail ein",
+        "phone_blank": "Geben Sie eine Telefonnummer ein",
+        "address_country_invalid": "Wählen Sie aus der Liste ein Land/eine Region aus",
+        "address_zip_invalid": "Geben Sie einen gültigen ZIP / Post -Code ein",
+        "gift_card_invalid": "Geschenkkarte \"••••%{last_four_characters}\"Ist nicht mehr gültig",
+        "vaulting_agreement_blank": "Ihre Karte muss gespeichert werden, da die Zahlung für den Restbetrag dieser Bestellung später fällig ist.",
+        "sms_marketing_phone_invalid": "Geben Sie eine gültige Telefonnummer ein",
+        "address_suggestion_did_you_mean_html": "Meinten Sie %{html}?",
+        "split_cart_international_shipping_not_supported": "Alle Artikel müssen die gleiche Liefermethode verwenden, wenn sie international versendet werden. Aktualisieren Sie die Liefermethode oder erstellen Sie mehrere Bestellungen.",
+        "invalid_delivery_address_reference_handle": "Der Referenzhandle des Lieferadresses konnte nicht mit den verfügbaren Lieferadressen übereinstimmen.",
+        "must_use_available_delivery_address": "Die Lieferadresse muss aus den verfügbaren Lieferadressen ausgewählt werden.",
+        "must_use_available_shipping_rate": "Der Versandsatz muss aus den verfügbaren Versandraten ausgewählt werden."
+      },
+      "store_credit_errors": {
+        "generic_error": "Es gab ein Problem mit Ihrem Ladenkredit. Versuchen Sie es erneut oder laden Sie die Seite neu."
+      },
+      "redeemable_errors": {
+        "shop_cash": {
+          "currency_mismatch": "Die Währung hat sich geändert. Bitte überprüfen Sie Ihr Shop -Bargeld und Ihr Angebot."
+        },
+        "gift_card": {
+          "duplicate": "Die Geschenkkarte wurde bereits auf Ihre Bestellung angewendet",
+          "insufficient_funds": "Diese Geschenkkarte hat keine Mittel übrig",
+          "expired": "Diese Geschenkkarte ist abgelaufen",
+          "not_available": "Diese Geschenkkarte ist nicht mehr verfügbar",
+          "invalid": "Geben Sie eine gültige Geschenkkarte ein",
+          "currency_mismatch": "Nur Geschenkkarten in %{shop_currency} werden akzeptiert"
+        }
       }
     }
   }
