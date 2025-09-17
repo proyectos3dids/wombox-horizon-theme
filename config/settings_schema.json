@@ -128,13 +128,13 @@
     {
       "type": "color",
       "id": "facets_summary_bg",
-      "label": "Fondo del sumario de filtros (desktop)",
+      "label": "Fondo del sumario de filtros",
       "default": "#ffc0da"
     },
     {
       "type": "color",
       "id": "facets_summary_label",
-      "label": "Texto del sumario de filtros (desktop)",
+      "label": "Texto del sumario de filtros",
       "default": "#3c2c81"
     },
     {
