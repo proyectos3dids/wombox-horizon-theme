@@ -714,7 +714,159 @@
         "ship_to_address": "Schiff zur Adresse",
         "shipping_address": "Versandadresse",
         "pick_up": "Abholen",
-        "pick_up_from_store": "Abholung im Laden"
+        "pick_up_from_store": "Abholung im Laden",
+        "pick_up_locations": "Pickup -Standorte",
+        "pick_up_in_one_hour": "Normalerweise in 1 Stunde fertig",
+        "pick_up_in_two_hours": "Normalerweise in 2 Stunden fertig",
+        "pick_up_in_four_hours": "Normalerweise in 4 Stunden fertig",
+        "pick_up_in_twenty_four_hours": "Normalerweise in 24 Stunden fertig",
+        "pick_up_in_two_to_four_days": "Normalerweise in 2-4 Tagen fertig",
+        "pick_up_in_five_or_more_days": "Normalerweise in 5+ Tagen fertig",
+        "pick_up_in_zero_to_two_hours": "Bereit für die Abholung in 2 Stunden",
+        "pick_up_in_two_to_four_hours": "Bereit für die Abholung in 4 Stunden",
+        "pick_up_immediately": "Jetzt bereit für die Abholung",
+        "pick_up_next_day": "Bereit für die Abholung am nächsten Tag",
+        "pickup_point_method_definition": "Versand zum Abholpunkt",
+        "retail_method_definition": "Einzelhandelsversand",
+        "company_location_no_address_banner": "Bestellungen Versand an Standorte ohne Adresse werden zur Überprüfung eingereicht.",
+        "none_method_definition": "Kein Versand",
+        "subscription_pickup_information": "Diese Liefermethode gilt für alle Artikel in dieser Reihenfolge und für alle zukünftigen Bestellungen für dieses Abonnement."
+      },
+      "customer_account": {
+        "not_user_label": "Nicht %{first_name}?",
+        "have_an_account_label": "Einen Konto haben?",
+        "sign_in_link_label": "anmelden",
+        "sign_out_link_label": "Abmelden",
+        "save_my_information_label": "Speichern Sie diese Informationen für das nächste Mal",
+        "invalid_address": "Die ausgewählte Adresse ist ungültig. %{update_address_link} oder wählen Sie eine andere Adresse.",
+        "incomplete_address": "Die ausgewählte Adresse ist unvollständig. %{update_address_link} oder wählen Sie eine andere Adresse.",
+        "rollup_label": "Konto",
+        "rollup_accessibility_label": "Kontooptionen",
+        "invalid_shipping_method_summary": "Wählen Sie eine gültige Versandadresse, um die verfügbaren Versandmethoden anzuzeigen",
+        "saved_address_option_description": {
+          "one": "Du hast {{count}} gespeicherte Adresse.",
+          "other": "Du hast {{count}} gespeicherte Adressen."
+        },
+        "saved_address_option_link": "Verwenden Sie eine gespeicherte Adresse",
+        "saved_address_modal_title": "Verwenden Sie meine gespeicherte Adresse"
+      },
+      "stock": {
+        "page_title": "Inventarprobleme",
+        "title": "Aus dem Bestand",
+        "items_unavailable_notice": "Einige Artikel sind nicht mehr verfügbar.",
+        "product_column_header": "Produkte",
+        "quantity_column_header": "Menge",
+        "price_column_header": "Preis",
+        "status_column_header": "Status",
+        "removed_from_cart_notice": "Aus dem Wagen entfernt",
+        "sold_out_label": "Ausverkauft",
+        "reduced_label": "Reduziert",
+        "reduced_with_quantity_label": "Nur %{quantity_available} links",
+        "remove_from_cart_button_label": "Aus dem Wagen nehmen",
+        "continue_shopping_button_label": "Weitermachen",
+        "go_back_to_cart_button_label": "Geh zurück in meinen Karren",
+        "remove": "Entfernen",
+        "return_to_store_label": "Kehre zum Geschäft zurück",
+        "continue_cta_label": "Fahren Sie weiter",
+        "item_label": {
+          "one": "{{count}} Artikel",
+          "other": "{{count}} Artikel"
+        },
+        "empty_cart_label": "Ihr Wagen ist leer",
+        "quantity_update": {
+          "page_title": "Mengenaktualisierung",
+          "title": "Mengenaktualisierung",
+          "description": "Die verfügbaren Mengen für diese Artikel haben sich geändert und werden in Ihrem Warenkorb aktualisiert."
+        },
+        "unpurchasable_product": {
+          "title": "Unbekirbelbares Produkt",
+          "header": "Einige Artikel wurden aus Ihrem Warenkorb entfernt",
+          "message": "Diese Artikel sind für B2B -Bestellungen nicht verfügbar.",
+          "status_column_header": "Nicht verfügbar"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Unbekirbelbares Produkt",
+          "header": "Einige Artikel wurden aus Ihrem Warenkorb entfernt",
+          "message": "Diese Artikel sind nicht verfügbar.",
+          "status_column_header": "Nicht verfügbar"
+        },
+        "unfulfillable_product": {
+          "title": "Lieferung nicht verfügbar",
+          "message": {
+            "one": "%{delivery_method} ist für diesen Artikel nicht mehr verfügbar.",
+            "other": "%{delivery_method} ist für diese Artikel nicht mehr verfügbar."
+          },
+          "default_message": {
+            "one": "Die ausgewählte Liefermethode ist für diesen Artikel nicht mehr verfügbar.",
+            "other": "Die ausgewählte Liefermethode ist für diese Artikel nicht mehr verfügbar."
+          }
+        },
+        "unshippable_product": {
+          "title": "Keine Lieferung verfügbar",
+          "header": {
+            "one": "Keine Lieferung zur Verfügung %{count} Artikel",
+            "other": "Keine Lieferung zur Verfügung %{count} Artikel"
+          },
+          "message": {
+            "one": "Dieser Artikel wird aus Ihrem Warenkorb entfernt, da für Ihre Adresse keine Liefermethoden verfügbar sind.",
+            "other": "Diese Artikel werden aus Ihrem Warenkorb entfernt, da für Ihre Adresse keine Liefermethoden verfügbar sind."
+          },
+          "status_column_header": "Keine Lieferung"
+        },
+        "price_update": {
+          "title": "Preis -Update",
+          "description": "Die Preise für diese Artikel haben sich geändert und werden in Ihrem Warenkorb aktualisiert."
+        },
+        "price_and_quantity_update": {
+          "title": "Preis- und Menge Update",
+          "description": "Preise und verfügbare Mengen für diese Artikel haben sich geändert und werden in Ihrem Warenkorb aktualisiert."
+        },
+        "out_of_stock": {
+          "description": "Diese Artikel sind nicht mehr verfügbar und wurden aus Ihrem Wagen entfernt.",
+          "items_unavailable": "Einige Artikel sind nicht mehr verfügbar und wurden aus Ihrem Wagen entfernt."
+        },
+        "out_of_stock_in_context_label": "Dieses Produkt ist in Ihrem Land/Ihrer Region nicht verfügbar."
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Nicht verfügbares Produkt",
+          "other": "Nicht verfügbare Produkte"
+        },
+        "products_not_available": {
+          "one": "Dieses Produkt wird aus Ihrem Warenkorb entfernt, da es in Ihrem Land/Ihrer Region nicht verfügbar ist.",
+          "other": "Diese Produkte werden aus Ihrem Warenkorb entfernt, da sie in Ihrem Land/Ihrer Region nicht verfügbar sind."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Dieses Produkt ist in Ihrem Land/Ihrer Region nicht verfügbar.",
+          "other": "Diese Produkte sind in Ihrem Land/Ihrer Region nicht erhältlich."
+        },
+        "unavailable_label": "Nicht verfügbar"
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "Dieses Produkt ist nicht zur Lieferung an verfügbar %{location_name}.",
+          "some_products_other": "Diese Produkte sind nicht zur Lieferung zur Lieferung erhältlich %{location_name}.",
+          "all_products_one": "Das Produkt in Ihrem Warenkorb ist nicht zur Lieferung zur Lieferung verfügbar %{location_name}.",
+          "all_products_other": "Die Produkte in Ihrem Warenkorb sind nicht zur Lieferung zur Lieferung verfügbar %{location_name}."
+        },
+        "missing_country_fallback": "Dein Land",
+        "indeterminate_location_fallback": "Ihr Standort",
+        "cart_updated": "Ihr Wagen wurde aktualisiert.",
+        "change_address_only": "Änderung der Lieferadresse, um fortzufahren.",
+        "change_address_or_remove": "Lieferadresse ändern oder %{remove_action}.",
+        "remove_items_action": {
+          "one": "Entfernen Sie nicht verfügbares Element",
+          "other": "Entfernen Sie nicht verfügbare Gegenstände"
+        },
+        "empty_cart_action": "leerer Wagen und kehren Sie zum Speicher zurück",
+        "unavailable_line_item": "%{product_name} / %{variant_label}"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Keine Lieferung zur Verfügung %{count} Artikel"
+          }
+        }
       }
     }
   }
