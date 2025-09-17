@@ -3857,7 +3857,71 @@
       "show_order_summary": "Auftragszusammenfassung anzeigen",
       "hide_order_summary": "Auftragszusammenfassung ausblenden",
       "subtitle": "Bestätigt {{date}}",
-      "subtotal": "Zwischensumme"
+      "subtotal": "Zwischensumme",
+      "summary_list_title_accessibility_label": "Artikel bestellen",
+      "summary_title": "Auftragszusammenfassung",
+      "summary_totals_title_accessibility_label": "Bestellungsummen",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Laden Sie Shop herunter, um das Paket zu verfolgen",
+        "track_order_with_shop": "Track bestellen mit Shop",
+        "title_header": "Scannen Sie mit Ihrem Telefon",
+        "real_time_delivery_updates": "Shop sendet Ihnen Echtzeit-Lieferaktualisierungen, sobald Ihre Bestellung versendet wird."
+      },
+      "edit_summary": {
+        "added": "Hinzugefügt",
+        "added_with_quantity": "Hinzugefügt {{quantity}}",
+        "removed": "ENTFERNT",
+        "removed_with_quantity": "ENTFERNT {{quantity}}",
+        "updated_at": "Ihre Bestellung wurde aktualisiert {{date}}",
+        "returned": "Zurückgekehrt",
+        "returned_with_quantities": "Zurückgekehrt {{delta}} von {{total}}",
+        "removed_with_quantities": "ENTFERNT {{delta}} von {{total}}",
+        "return_line_item_removed": "Aus der Rückkehr entfernt",
+        "return_line_item_removed_with_quantities": "ENTFERNT {{delta}} von der Rückkehr"
+      },
+      "shop_pay": {
+        "order_completed_with": "Bestellung abgeschlossen mit",
+        "learn_more": "Erfahren Sie mehr"
+      },
+      "taxes": "Steuern",
+      "taxes_included": "Einschließlich {{amount}} in Steuern",
+      "duties_and_taxes_included": "Insgesamt beinhaltet Aufgaben und Steuern. Keine zusätzlichen Gebühren bei der Lieferung.",
+      "duties": "Aufgaben",
+      "ok_duties_tooltip": "Diese Bestellung wird aus einem anderen Land verschifft, sodass Ihre Bestellung insgesamt Aufgaben hinzugefügt wurde.",
+      "error_duties_tooltip": "Diese Bestellung wird aus einem anderen Land verschifft, sodass Pflichten und Steuern zur Lieferung erhoben werden können.",
+      "zero_duties_tooltip": "Diese Bestellung wird aus einem anderen Land verschifft. Die Pflichten werden nicht auf Bestellungen dieses Wertes berechnet.",
+      "tip": "Tipp",
+      "title": "Befehl {{name}}",
+      "total": "Gesamt",
+      "unit_price": "{{price}}/ea",
+      "pagination": {
+        "load_more": "Laden mehr",
+        "load_more_accessibility_label": "Laden Sie mehr Elemente",
+        "loading_accessibility_label": "Elemente laden"
+      },
+      "login_to_view_all_order_details": "Melden Sie sich an, um alle Bestelldetails anzuzeigen.",
+      "log_in": "anmelden",
+      "logged_in_account_no_permission_to_order": "Sie sind unterschrieben als {{email}}. Dieses Konto hat keine Erlaubnis, diese Bestellung zu verwalten.",
+      "log_in_to_a_different_account": "Melden Sie sich in einem anderen Konto an",
+      "fees": {
+        "restocking_fee": "Wiederauffüllungsgebühr",
+        "return_shipping_fee": "Rückgabeversand"
+      },
+      "vat_invoices": {
+        "title": "Mehrwertsteuer -Rechnungen"
+      },
+      "link_sent": "Link gesendet",
+      "cash_rounding": "Bargeldrundung",
+      "adjusted_payment": "Angepasste Zahlung",
+      "adjusted_total": "Gesamtsumme angepasst",
+      "due_on_date": "Fällig {{date}}",
+      "due_on_fulfillment": "Auf Erfüllung",
+      "due_on_receipt": "Fällig nach Erhalt"
+    },
+    "addresses": {
+      "add_button": "Adresse hinzufügen",
+      "add_button_text": "Hinzufügen",
+      "add_button_accessibility_label": "Adresse hinzufügen"
     }
   }
 }
