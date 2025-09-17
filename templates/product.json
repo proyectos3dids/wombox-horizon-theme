@@ -262,6 +262,7 @@
             },
             "custom_boxes_selector": {
               "type": "custom-boxes",
+              "disabled": true,
               "settings": {
                 "title": "Selecciona tu caja personalizada",
                 "description": "Elige el diseño de caja que más te guste para tu pedido.",
