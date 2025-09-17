@@ -3579,7 +3579,85 @@
         "complete_label": "Vollständig",
         "delivered_label": "Geliefert",
         "delivered_description_gift_card": {
-          "one": "Geschenkkarte wurde per E -Mail gesendet."
+          "one": "Geschenkkarte wurde per E -Mail gesendet.",
+          "other": "Geschenkkarten wurden per E -Mail gesendet."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "Geschenkkarte wurde per Text gesendet.",
+          "other": "Geschenkkarten wurden per Text gesendet."
+        },
+        "gift_card_label": {
+          "one": "Geschenkkarte",
+          "other": "Geschenkkarten"
+        },
+        "gift_card_resend_button": {
+          "one": "Geben Sie die Geschenkkarte erneut ab",
+          "other": "Geben Sie Geschenkkarten neu"
+        },
+        "gift_resend_success": {
+          "one": "Geschenkkarte ärgerlich",
+          "other": "Geschenkkarten ärgern sich"
+        },
+        "gift_resend_failure": {
+          "one": "Es gab ein Problem, Ihre Geschenkkarte zu verschaffen. Versuchen Sie es erneut oder kontaktieren Sie uns.",
+          "other": "Es gab ein Problem, Ihre Geschenkkarten zu verschieben. Versuchen Sie es erneut oder kontaktieren Sie uns."
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "Die Geschenkkarte wird in einer separaten E -Mail gesendet.",
+          "other": "Jede Geschenkkarte wird in einer separaten E -Mail gesendet."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "Geschenkkarte wird in einem separaten Text gesendet.",
+          "other": "Jede Geschenkkarte wird in einem separaten Text gesendet."
+        },
+        "status_timestamp": "Aktualisiert {{date}}",
+        "estimated_delivery": "Erwartet {{date}}",
+        "expected_by": "Erwartet von {{date}}",
+        "was_expected_by": "Wurde erwartet von {{date}}",
+        "delivered": "Angekommen {{date}}",
+        "buy_with_prime_logo_accessibility_label": "Amazon kaufen mit Prime Logo",
+        "in_review_label": "In Bewertung",
+        "in_review_title": "Ihre Bestellung wird überprüft",
+        "last_updated": "Zuletzt aktualisiert {{date}}",
+        "multiple_shipments_label": "Mehrere Sendungen",
+        "multiple_statuses_label": "Mehrere Bestellstatus",
+        "no_tracking_number": "Es gibt keine Tracking -Nummer für diese Sendung.",
+        "tracking_number": {
+          "one": "Tracking-Nummer",
+          "other": "Verfolgung von Zahlen"
+        },
+        "on_its_way_label": "Auf dem Weg",
+        "out_for_delivery_label": "Zur Lieferung raus",
+        "resume_tracking": "Lebenslaufverfolgung",
+        "submitted_label": "Eingereicht",
+        "submitted_description": "Überprüfung der Bestell- und Zahlungsdetails.",
+        "there_was_a_problem_label": "Es gab ein Problem",
+        "track_shipment": "Verfolgung von Versand",
+        "request_return": "Anfrage Rückgabe",
+        "view_order_for_details": "Bestellung für Details anzeigen",
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Auf Amazon verwalten"
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Mit Amazon verwalten",
+            "new_window_disclaimer": "(öffnet ein neues Fenster)"
+          }
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "Lieferung garantiert von",
+            "external_promise_brand_label": "Lieferung durch",
+            "not_delivered_by_label": "Nachdem geliefert {{date}}",
+            "delivery_guarantee_expired_label": "Liefergarantie abgelaufen",
+            "modal_accessibility_button_label": "Lieferversprechen Details",
+            "download_shop_app_button_label": "Laden Sie Shop zum Verfolgen herunter",
+            "track_with_shop_button_label": "Track mit Shop",
+            "claim_shop_cash_button_label": "Capture Shop Cash"
+          },
+          "details_modal": {
+            "title": "Liefergarantie"
+          }
         }
       }
     }
