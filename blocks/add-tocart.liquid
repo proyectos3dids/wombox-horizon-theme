@@ -17,7 +17,7 @@ Es personalizable en el editor de temas.
     min-width: {{ block.settings.min_width }}px;
     background-color: {{ block.settings.background_color }};
     border-radius: 20px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 4px 20px rgba(16, 7, 7, 0.15);
     z-index: 1000;
     padding: {{ block.settings.padding }}px;
     display: flex;
@@ -376,11 +376,9 @@ Es personalizable en el editor de temas.
 
     // --- Visibility control based on scroll position ---
     const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
-    const scrollThreshold = 100;
-
     if (stickyBar) {
       function handleScroll() {
-        if (window.scrollY > scrollThreshold) {
+        if (window.scrollY > 0) {
           stickyBar.style.opacity = '1';
           stickyBar.style.visibility = 'visible';
         } else {
