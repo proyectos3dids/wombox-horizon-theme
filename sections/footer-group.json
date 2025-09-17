@@ -107,6 +107,7 @@
         },
         "payment_icon_XwUiHW": {
           "type": "payment_icon",
+          "disabled": true,
           "settings": {
             "icon_image": "shopify://shop_images/Vector_19.svg",
             "icon_alt": ""
