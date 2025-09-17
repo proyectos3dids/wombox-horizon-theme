@@ -426,7 +426,7 @@
             "border_opacity": 100,
             "border_radius": 0,
             "placeholder": "",
-            "toggle_overlay": true,
+            "toggle_overlay": false,
             "overlay_color": "#00000021",
             "overlay_style": "gradient",
             "gradient_direction": "to top",
