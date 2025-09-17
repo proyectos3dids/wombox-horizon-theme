@@ -3388,7 +3388,145 @@
         "no_order_banner": "Per testare la tua estensione nella pagina di stato dell'ordine, creare un ordine.",
         "estimated_shortform": "Est. {{date}}",
         "estimated_delivery": "Previsto {{date}}",
-        "one_images_accessibility_label": "L'ordine include {{lineItemName1}}"
+        "one_images_accessibility_label": "L'ordine include {{lineItemName1}}",
+        "two_images_accessibility_label": "L'ordine include {{lineItemName1}}, {{lineItemName2}}",
+        "three_images_accessibility_label": "L'ordine include {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}",
+        "four_images_accessibility_label": "L'ordine include {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "L'ordine include {{lineItemName1}}, {{lineItemName2}}, E {{numberOfAdditionalProducts}} Più prodotti",
+        "more_than_four_products_accessibility_label": "L'ordine include {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, E {{numberOfAdditionalProducts}} Più prodotti",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "plus_more_products": "+{{numberOfAdditionalProducts}} prodotti",
+        "carousel": {
+          "one_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}, {{lineItemName4}} quantità {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}, {{lineItemName4}} quantità {{lineItemQuantity4}}, {{lineItemName5}} quantità {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}, {{lineItemName4}} quantità {{lineItemQuantity4}}, {{lineItemName5}} quantità {{lineItemQuantity5}}, {{lineItemName6}} quantità {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "L'ordine include {{lineItemName1}} quantità {{lineItemQuantity1}}, {{lineItemName2}} quantità {{lineItemQuantity2}}, {{lineItemName3}} quantità {{lineItemQuantity3}}, {{lineItemName4}} quantità {{lineItemQuantity4}}, {{lineItemName5}} quantità {{lineItemQuantity5}}, {{lineItemName6}} quantità {{lineItemQuantity6}} e altro",
+          "view_order_details": "Visualizza i dettagli dell'ordine",
+          "previous": "Precedente",
+          "next": "Prossimo"
+        },
+        "items": {
+          "one": "{{count}} articolo",
+          "other": "{{count}} elementi"
+        },
+        "no_filtered_results_description": "Rimuovere o regolare i filtri per vedere i tuoi ordini",
+        "no_filtered_results_title": "Nessun risultato filtrato",
+        "order_link": "Visualizza l'ordine {{name}}",
+        "order_number": "Ordine {{name}}",
+        "orders_title": "Confermato",
+        "pagination": {
+          "nav_accessibility_label": "Pulsanti di navigazione ordini",
+          "next": "Prossimo",
+          "next_accessibility_label": "Nei prossimi ordini",
+          "previous": "Prev",
+          "previous_accessibility_label": "Ordini precedenti",
+          "load_more": "Carica di più",
+          "load_more_accessibility_label": "Carica più ordini"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Visualizza l'ordine per i dettagli",
+            "estimated_delivery": "Previsto {{date}}",
+            "last_updated": "Ultimo aggiornamento {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Est. consegna {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "payment_status": {
+          "gallery_view": {
+            "overdue": "Pagamento in ritardo",
+            "due": "Pagamento dovuto {{date}}",
+            "due_today": "Pagamento dovuto oggi",
+            "due_without_date": "Pagamento dovuto",
+            "due_on_fulfillment": "Pagamento dovuto all'adempimento",
+            "pay_to_confirm": "Paga per confermare",
+            "payment_not_due": "Pagamento non ancora dovuto"
+          },
+          "list_view": {
+            "overdue": "In ritardo",
+            "due": "Dovuto {{date}}",
+            "due_today": "Dovuto oggi",
+            "paid": "Pagato",
+            "due_without_date": "Dovuto",
+            "due_on_fulfillment": "A causa dell'adempimento",
+            "pay_to_confirm": "Paga per confermare",
+            "payment_not_due": "Non ancora dovuto"
+          }
+        },
+        "sort_by": "Ordina per: {{option}}",
+        "sort_hide_options_accessibility_label": "Nascondi le opzioni di ordinamento per gli ordini confermati.",
+        "sort_show_options_accessibility_label": "Mostra le opzioni di ordinamento per gli ordini confermati.",
+        "sort_currently_sorted_by_accessibility_label": "Attualmente ordinato da: {{option}}",
+        "sort_title": "Ordinare",
+        "sort": {
+          "date": {
+            "newest": "Più recente al più vecchio",
+            "oldest": "Più vecchio al più nuovo"
+          },
+          "location": {
+            "ascending": "Posizione (A-Z)",
+            "descending": "Posizione (Z-A)"
+          },
+          "order_number": {
+            "ascending": "Numero d'ordine (da basso a alto)",
+            "descending": "Numero d'ordine (da alto a basso)"
+          },
+          "order_total": {
+            "ascending": "Ordine totale (da basso a alto)",
+            "descending": "Ordina totale (da alto a basso)"
+          }
+        },
+        "location_filter_picker": {
+          "all_location": "Tutte le posizioni",
+          "current_location": "Posizione corrente",
+          "switch_view": "Switch View"
+        },
+        "filter_title": "Filtro",
+        "filter": {
+          "clear_section": "Sezione chiara",
+          "clear_all": "Cancella tutto",
+          "apply": "Fare domanda a",
+          "date": {
+            "start_date": "Data di inizio",
+            "end_date": "Data di fine",
+            "title": "Data dell'ordine",
+            "today": "Oggi",
+            "last_7_days": "Ultimi 7 giorni",
+            "last_30_days": "Ultimi 30 giorni",
+            "last_90_days": "Ultimi 90 giorni",
+            "last_365_days": "Ultimi 12 mesi",
+            "custom": "Costume"
+          }
+        },
+        "show_order_actions_accessibility_label": "Mostra le azioni dell'ordine per l'ordine {{name}}"
+      },
+      "order_status": {
+        "attempted_delivery_label": "Tentato consegna",
+        "attempted_to_deliver_label": "Ha tentato di consegnare",
+        "preparing_for_shipping_label": "Prepararsi per la spedizione",
+        "ready_for_pickup_label": "Pronto per il ritiro",
+        "ready_for_pickup_description": "Questi articoli sono pronti per il ritiro. Porta la conferma dell'ordine quando raccogli l'ordine.",
+        "ready_for_pickup_location": "Il tuo ordine è pronto per il ritiro in posizione",
+        "picked_up_label": "Raccolto",
+        "canceled_label": "Annullato",
+        "canceled_title": "Il tuo ordine è stato cancellato",
+        "come_back": "Torna a questa pagina per gli aggiornamenti sullo stato della spedizione.",
+        "company_tracking_number": "{{company}} numero di identificazione:",
+        "confirmed_label": "Confermato",
+        "confirmed_title": "Il tuo ordine è confermato",
+        "confirmed_description_pickup": "Riceverai un'e -mail quando il tuo ordine è pronto per il ritiro.",
+        "confirmed_description_digital": "Riceverai un'e -mail quando il tuo ordine è pronto.",
+        "confirmed_description_gift_card_text": "Riceverai un testo quando il tuo ordine è pronto.",
+        "complete_label": "Completare",
+        "delivered_label": "Consegnato",
+        "delivered_description_gift_card": {
+          "one": "La carta regalo è stata inviata via e -mail."
+        }
       }
     }
   }
