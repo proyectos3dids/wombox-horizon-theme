@@ -4279,7 +4279,77 @@
       "expiration_warning_button_accessibility_label": "Verfallswarnung für zeigen {{paymentMethodName}} Ende in {{lastDigits}}",
       "expires_soon": "Diese Karte läuft bald aus",
       "expired": "Diese Karte ist ungültig",
-      "card_update_consent": "Diese Zahlungsmethode wird für zukünftige Einkäufe gespeichert."
+      "card_update_consent": "Diese Zahlungsmethode wird für zukünftige Einkäufe gespeichert.",
+      "card_update_consent_subscriptions": "Diese Zahlungsmethode wird für zukünftige Einkäufe gespeichert und kann für einen wiederkehrenden oder aufgeschobenen Kauf verwendet werden.",
+      "digital_wallet_title": "Digitaler Brieftasche",
+      "credit_or_debit_card_title": "Kredit- oder Debitkarte",
+      "google_pay": {
+        "iframe_title_accessibility_label": "Fügen Sie die Google Pay -Zahlungsmethode hinzu",
+        "loading_accessibility_message": "Laden von Google Pay",
+        "loading": "Laden von Google Pay",
+        "errors": {
+          "generic": "Es gab ein Problem mit Google Pay. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+          "missing_billing_address": "Google Pay erfordert eine Abrechnungsadresse. Bitte fügen Sie Ihrem Konto eine hinzu."
+        }
+      },
+      "pay_pal": {
+        "iframe_title_accessibility_label": "PayPal -Zahlungsmethode hinzufügen",
+        "loading_accessibility_message": "Ladepaypal"
+      },
+      "apple_pay": {
+        "loading": "Apple -Bezahlung laden",
+        "errors": {
+          "generic": "Es gab ein Problem mit Apple Pay. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+          "not_available": "Apple Pay ist auf diesem Gerät nicht verfügbar.",
+          "missing_billing_address": "Apple Pay erfordert eine Abrechnungsadresse. Bitte fügen Sie Ihrem Konto eine hinzu."
+        }
+      },
+      "store_credit": {
+        "label": "Kredite speichern",
+        "accesibility_label": "Kredite speichern - {{formattedBalance}}",
+        "expirable_amounts_button": "Anzeigen Sie die abfallbaren Beträge",
+        "expirable_amounts_label": "Ablaufwerte Beträge",
+        "details_modal": {
+          "title": "Ablaufer Ladenkredite",
+          "balance_label": "Gleichgewicht",
+          "expiration_date_label": "Verfallsdatum",
+          "amount_label": "Menge",
+          "date_label": "Datum",
+          "event_label": "Ereignis",
+          "events": {
+            "adjustment": "Einstellung",
+            "order_payment": "Zahlungszahlung",
+            "order_refund": "Bestellung Rückerstattung",
+            "payment_failure": "Zahlungsfehler",
+            "payment_returned": "Zahlung zurückgegeben",
+            "order_cancellation": "Auftragsstornierung",
+            "tax_finalization": "Steuerabschluss"
+          },
+          "expirable_balance_info": "Ein Teil Ihres Gleichgewichts wird zu einem zukünftigen Zeitpunkt ablaufen",
+          "expirable_amount_label": "Gesamtausfallbetrag",
+          "expirable_amounts_info": "Die Beträge, die früher ausfallen, werden zuerst an der Kasse angewendet",
+          "expirable_amounts_button": "Sicht",
+          "expired_amounts_button": "Abgelaufene Beträge anzeigen",
+          "pagination": {
+            "load_more_label": "Laden mehr",
+            "load_more_accessibility_label": "Laden Sie mehr verschwenderische Beträge"
+          }
+        }
+      },
+      "payment_details": {
+        "title": "Zahlungsmethode Details",
+        "credit_card_details_accessibility_label": "Ende in {{lastDigits}}",
+        "billing_title": "Abrechnungsadresse",
+        "card_info_title": "Karteninformationen",
+        "credit_card_details": "{{creditCardBrand}} •••• {{lastDigits}}",
+        "payment_method_expiring_on": "Auslauf auf {{expiryDate}}",
+        "payment_method_expired_on": "Abgelaufen auf {{expiryDate}}",
+        "preauthorized_payments": "Vorautorisierte Zahlungen",
+        "close_payment_modal": "Schließen",
+        "close_payment_modal_accessibility_label": "Zahlungsmethodendetails Modal schließen",
+        "payment_method_not_found_error": "Zahlungsmethode nicht finden",
+        "payment_details_loading": "Details der Zahlungsmethode laden"
+      }
     }
   }
 }
