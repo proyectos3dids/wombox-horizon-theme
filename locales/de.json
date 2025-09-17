@@ -3442,7 +3442,75 @@
         "no_order_banner": "Um Ihre Erweiterung auf der Auftragsstatusseite zu testen, erstellen Sie eine Bestellung.",
         "estimated_shortform": "Est. {{date}}",
         "estimated_delivery": "Erwartet {{date}}",
-        "one_images_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}"
+        "one_images_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}",
+        "two_images_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}, {{lineItemName2}}",
+        "three_images_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}",
+        "four_images_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, {{lineItemName4}}",
+        "more_than_three_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}, {{lineItemName2}}, Und {{numberOfAdditionalProducts}} Weitere Produkte",
+        "more_than_four_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}}, {{lineItemName2}}, {{lineItemName3}}, Und {{numberOfAdditionalProducts}} Weitere Produkte",
+        "plus_more": "+{{numberOfAdditionalProducts}}",
+        "plus_more_products": "+{{numberOfAdditionalProducts}} Produkte",
+        "carousel": {
+          "one_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}} Menge {{lineItemQuantity1}}",
+          "two_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}",
+          "three_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}",
+          "four_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}, {{lineItemName4}} Menge {{lineItemQuantity4}}",
+          "five_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}, {{lineItemName4}} Menge {{lineItemQuantity4}}, {{lineItemName5}} Menge {{lineItemQuantity5}}",
+          "six_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}, {{lineItemName4}} Menge {{lineItemQuantity4}}, {{lineItemName5}} Menge {{lineItemQuantity5}}, {{lineItemName6}} Menge {{lineItemQuantity6}}",
+          "six_and_more_products_accessibility_label": "Bestellung beinhaltet {{lineItemName1}} Menge {{lineItemQuantity1}}, {{lineItemName2}} Menge {{lineItemQuantity2}}, {{lineItemName3}} Menge {{lineItemQuantity3}}, {{lineItemName4}} Menge {{lineItemQuantity4}}, {{lineItemName5}} Menge {{lineItemQuantity5}}, {{lineItemName6}} Menge {{lineItemQuantity6}} und mehr",
+          "view_order_details": "Bestelldetails anzeigen",
+          "previous": "Vorherige",
+          "next": "Nächste"
+        },
+        "items": {
+          "one": "{{count}} Artikel",
+          "other": "{{count}} Artikel"
+        },
+        "no_filtered_results_description": "Filter entfernen oder anpassen, um Ihre Bestellungen zu sehen",
+        "no_filtered_results_title": "Keine gefilterten Ergebnisse",
+        "order_link": "Reihenfolge anzeigen {{name}}",
+        "order_number": "Befehl {{name}}",
+        "orders_title": "Bestätigt",
+        "pagination": {
+          "nav_accessibility_label": "Bestellungen Navigationstasten",
+          "next": "Nächste",
+          "next_accessibility_label": "Nächste Bestellungen",
+          "previous": "Vorläufig",
+          "previous_accessibility_label": "Vorherige Bestellungen",
+          "load_more": "Laden mehr",
+          "load_more_accessibility_label": "Laden Sie mehr Bestellungen"
+        },
+        "order_status_message": {
+          "list_view": {
+            "view_order_for_details": "Bestellung für Details anzeigen",
+            "estimated_delivery": "Erwartet {{date}}",
+            "last_updated": "Zuletzt aktualisiert {{date}}"
+          },
+          "table_view": {
+            "estimated_delivery": "Est. Lieferung {{date}}",
+            "last_updated": "{{date}}"
+          }
+        },
+        "payment_status": {
+          "gallery_view": {
+            "overdue": "Zahlung überfällig",
+            "due": "Zahlung fällig {{date}}",
+            "due_today": "Zahlung heute fällig",
+            "due_without_date": "Zahlung fällig",
+            "due_on_fulfillment": "Zahlung fälliger Erfüllung",
+            "pay_to_confirm": "Bezahlen, um zu bestätigen",
+            "payment_not_due": "Zahlung noch nicht fällig"
+          },
+          "list_view": {
+            "overdue": "Überfällig",
+            "due": "Fällig {{date}}",
+            "due_today": "Heute fällig",
+            "paid": "Bezahlt",
+            "due_without_date": "Fällig",
+            "due_on_fulfillment": "Auf Erfüllung",
+            "pay_to_confirm": "Bezahlen, um zu bestätigen"
+          }
+        }
       }
     }
   }
