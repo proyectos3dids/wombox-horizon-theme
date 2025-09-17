@@ -3799,7 +3799,71 @@
       "show_order_summary": "Résumé de la commande de montre",
       "hide_order_summary": "Résumé de la commande de cachette",
       "subtitle": "Confirmé {{date}}",
-      "subtotal": "Total"
+      "subtotal": "Total",
+      "summary_list_title_accessibility_label": "Commandez des articles",
+      "summary_title": "Résumé de la commande",
+      "summary_totals_title_accessibility_label": "Totaux de commande",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Télécharger la boutique à suivre le package",
+        "track_order_with_shop": "Commande de piste avec la boutique",
+        "title_header": "Scanner avec votre téléphone",
+        "real_time_delivery_updates": "La boutique vous enverra des mises à jour de livraison en temps réel une fois votre commande expédiée."
+      },
+      "edit_summary": {
+        "added": "Ajouté",
+        "added_with_quantity": "Ajouté {{quantity}}",
+        "removed": "Supprimé",
+        "removed_with_quantity": "Supprimé {{quantity}}",
+        "updated_at": "Votre commande a été mise à jour sur {{date}}",
+        "returned": "Retourné",
+        "returned_with_quantities": "Retourné {{delta}} de {{total}}",
+        "removed_with_quantities": "Supprimé {{delta}} de {{total}}",
+        "return_line_item_removed": "Supprimé du retour",
+        "return_line_item_removed_with_quantities": "Supprimé {{delta}} De retour"
+      },
+      "shop_pay": {
+        "order_completed_with": "Commande terminée avec",
+        "learn_more": "Apprendre encore plus"
+      },
+      "taxes": "Taxes",
+      "taxes_included": "Y compris {{amount}} en taxes",
+      "duties_and_taxes_included": "Le total comprend des droits et des taxes. Pas de frais supplémentaires à la livraison.",
+      "duties": "Devoirs",
+      "ok_duties_tooltip": "Cette commande est expédiée d'un autre pays, donc des tâches ont été ajoutées à votre total de commande.",
+      "error_duties_tooltip": "Cette commande est expédiée d'un autre pays, de sorte que les droits et les taxes peuvent être facturés à la livraison.",
+      "zero_duties_tooltip": "Cette commande est expédiée d'un autre pays. Les tâches ne sont pas facturées sur les commandes de cette valeur.",
+      "tip": "Conseil",
+      "title": "Commande {{name}}",
+      "total": "Total",
+      "unit_price": "{{price}}/ ea",
+      "pagination": {
+        "load_more": "Chargez plus",
+        "load_more_accessibility_label": "Chargez plus d'éléments",
+        "loading_accessibility_label": "Chargement des articles"
+      },
+      "login_to_view_all_order_details": "Connectez-vous pour afficher tous les détails de la commande.",
+      "log_in": "Se connecter",
+      "logged_in_account_no_permission_to_order": "Vous êtes connecté comme {{email}}. Ce compte n'a pas l'autorisation de gérer cette commande.",
+      "log_in_to_a_different_account": "Connectez-vous à un autre compte",
+      "fees": {
+        "restocking_fee": "Frais de réapprovisionnement",
+        "return_shipping_fee": "Expédition de retour"
+      },
+      "vat_invoices": {
+        "title": "Factures de la cuve"
+      },
+      "link_sent": "Lien envoyé",
+      "cash_rounding": "Arrondi en espèces",
+      "adjusted_payment": "Paiement ajusté",
+      "adjusted_total": "Total ajusté",
+      "due_on_date": "Exigible {{date}}",
+      "due_on_fulfillment": "Dû sur la réalisation",
+      "due_on_receipt": "Dû à la réception"
+    },
+    "addresses": {
+      "add_button": "Ajouter l'adresse",
+      "add_button_text": "Ajouter",
+      "add_button_accessibility_label": "Ajouter l'adresse"
     }
   }
 }
