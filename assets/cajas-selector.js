@@ -364,7 +364,10 @@ document.addEventListener('DOMContentLoaded', function() {
      */
     function updateProductProperty(selectedValue) {
       if (!productForm || typeof selectedValue !== 'string') return;
-      
+
+      // 👇 ÚNICA MODIFICACIÓN: convertir "caja-" en "box-" justo antes de mandar la property
+      const finalValue = selectedValue.replace(/^caja-/, 'box-');
+
       let hiddenInput = productForm.querySelector(`input[name="properties[${selectedBoxText}]"]`);
       if (!hiddenInput) {
         hiddenInput = document.createElement('input');
@@ -375,9 +378,9 @@ document.addEventListener('DOMContentLoaded', function() {
         productForm?.appendChild(hiddenInput);
       }
       if (hiddenInput instanceof HTMLInputElement) {
-        hiddenInput.value = selectedValue;
+        hiddenInput.value = finalValue;
       }
-      console.log('Propiedad del producto actualizada:', selectedValue);
+      console.log('Propiedad del producto actualizada:', finalValue);
     }
     
     // Escuchar selecciones de caja
