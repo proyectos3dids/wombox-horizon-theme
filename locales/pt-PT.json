@@ -1695,7 +1695,71 @@
         "payment_method": "Método de pagamento",
         "payment_method_rollup_accessibility_label": "Opções do método de pagamento",
         "expired_payment_method": "O método de pagamento selecionado expirou",
-        "payment_method_update_failed": "A atualização do método de pagamento falhou."
+        "payment_method_update_failed": "A atualização do método de pagamento falhou.",
+        "payment_method_incompatible_with_payment_terms": "O método de pagamento é incompatível com as condições de pagamento.",
+        "proposed_gateway_unavailable": "O gateway de pagamento proposto não está disponível",
+        "pay_in_installments_split_pay_short": "4 pagamentos de %{amount}",
+        "gift_cards_unavailable": "Seu cartão -presente não pode mais ser aplicado a este pedido e foi removido",
+        "payment_flexibility_terms_id_mismatch": "Termos de flexibilidade de pagamento ID IMMISTAÇÃO",
+        "payment_option": {
+          "accessibility_label": "Escolha uma opção de pagamento"
+        },
+        "bank_account_type": {
+          "checking": "Verificando",
+          "savings": "Poupança"
+        },
+        "bank_account_choose": "Escolha uma conta para completar sua compra com segurança",
+        "bank_account_connect_another": "Conecte outra conta bancária",
+        "bank_account_connect": "Conecte a conta bancária",
+        "bank_account_missing": "A conta bancária deve estar conectada"
+      },
+      "billing": {
+        "billing_address_title": "projeto de lei para",
+        "billing_address_rollup_accessibility_label": "Bill para opções",
+        "same_as_shipping": "O mesmo que endereço de entrega",
+        "add_address": "Use um endereço diferente",
+        "edit": "Editar",
+        "delete": "Excluir",
+        "address_more": "Mais ações para este endereço",
+        "address_edit": "Endereço de edição",
+        "address_delete": "Excluir endereço",
+        "address_confirm": "Tem certeza de que deseja excluir este endereço da sua conta?",
+        "address_form": {
+          "add_address": "Adicione endereço",
+          "save": "Salvar",
+          "cancel": "Cancelar"
+        }
+      },
+      "company_location": {
+        "location_title": "Localização da empresa",
+        "location_rollup_accessibility_label": "Opções de localização da empresa"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "Balanço atual %{amount}",
+        "credit_card_expires_on_notice": "Expira em %{month}/%{year}",
+        "express_payment_gateway_label": "Expressar",
+        "manual_payment_gateway_label": "Manual",
+        "billing_address_title": "Endereço de Cobrança",
+        "free_label": "Livre"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "Insira um número de telefone válido",
+        "handle_email_invalid": "Digite um e -mail válido",
+        "email_invalid": "Digite um e -mail válido",
+        "email_or_phone_blank": "Insira um e -mail ou número de telefone",
+        "email_or_phone_invalid": "Insira um email válido ou um número de telefone celular",
+        "address_first_name_blank": "Digite um primeiro nome",
+        "address_first_name_too_long": "O primeiro nome é muito longo (o máximo é 255 caracteres)",
+        "address_first_name_contains_emojis": "O primeiro nome não pode conter emojis",
+        "address_first_name_contains_html_tags": "O primeiro nome não pode conter tags HTML.",
+        "address_first_name_contains_url": "O primeiro nome não pode conter um URL",
+        "address_first_name_contains_mathematical_symbols": "O primeiro nome não pode conter símbolos matemáticos",
+        "address_last_name_blank": "Digite um sobrenome",
+        "address_last_name_too_long": "O sobrenome é muito longo (o máximo é 255 caracteres)",
+        "address_last_name_contains_emojis": "O sobrenome não pode conter emojis",
+        "address_last_name_contains_html_tags": "O sobrenome não pode conter tags HTML.",
+        "address_last_name_contains_url": "O sobrenome não pode conter um URL",
+        "address_last_name_contains_mathematical_symbols": "O sobrenome não pode conter símbolos matemáticos"
       }
     }
   }
