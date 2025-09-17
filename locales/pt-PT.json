@@ -3464,7 +3464,155 @@
             "paid": "Pago",
             "due_without_date": "Devido",
             "due_on_fulfillment": "Devido ao cumprimento",
-            "pay_to_confirm": "Pagar para confirmar"
+            "pay_to_confirm": "Pagar para confirmar",
+            "payment_not_due": "Ainda não devido"
+          }
+        },
+        "sort_by": "Ordenar por: {{option}}",
+        "sort_hide_options_accessibility_label": "Ocultar opções de classificação para pedidos confirmados.",
+        "sort_show_options_accessibility_label": "Mostrar opções de classificação para pedidos confirmados.",
+        "sort_currently_sorted_by_accessibility_label": "Atualmente classificado por: {{option}}",
+        "sort_title": "Organizar",
+        "sort": {
+          "date": {
+            "newest": "O mais novo para o mais antigo",
+            "oldest": "Mais antigo para o mais novo"
+          },
+          "location": {
+            "ascending": "Localização (A-Z)",
+            "descending": "Localização (Z-A)"
+          },
+          "order_number": {
+            "ascending": "Número do pedido (baixo a alto)",
+            "descending": "Número do pedido (alto a baixo)"
+          },
+          "order_total": {
+            "ascending": "Pedido total (baixo a alto)",
+            "descending": "Total do pedido (alto a baixo)"
+          }
+        },
+        "location_filter_picker": {
+          "all_location": "Todos os locais",
+          "current_location": "Localização atual",
+          "switch_view": "Visualização do Switch"
+        },
+        "filter_title": "Filtro",
+        "filter": {
+          "clear_section": "Seção clara",
+          "clear_all": "Limpar tudo",
+          "apply": "Aplicar",
+          "date": {
+            "start_date": "Data de início",
+            "end_date": "Data de término",
+            "title": "Data do pedido",
+            "today": "Hoje",
+            "last_7_days": "Últimos 7 dias",
+            "last_30_days": "Últimos 30 dias",
+            "last_90_days": "Últimos 90 dias",
+            "last_365_days": "Últimos 12 meses",
+            "custom": "Personalizado"
+          }
+        },
+        "show_order_actions_accessibility_label": "Mostrar ações de ordem para ordem {{name}}"
+      },
+      "order_status": {
+        "attempted_delivery_label": "Tentativa de entrega",
+        "attempted_to_deliver_label": "Tentou entregar",
+        "preparing_for_shipping_label": "Preparando -se para o frete",
+        "ready_for_pickup_label": "Pronto para a coleta",
+        "ready_for_pickup_description": "Esses itens estão prontos para a coleta. Por favor, traga a confirmação do seu pedido quando você pegar seu pedido.",
+        "ready_for_pickup_location": "Seu pedido está pronto para a coleta no local",
+        "picked_up_label": "Pegou",
+        "canceled_label": "Cancelado",
+        "canceled_title": "Seu pedido foi cancelado",
+        "come_back": "Volte a esta página para atualizações sobre o status de sua remessa.",
+        "company_tracking_number": "{{company}} Número de rastreamento:",
+        "confirmed_label": "Confirmado",
+        "confirmed_title": "Seu pedido está confirmado",
+        "confirmed_description_pickup": "Você receberá um e -mail quando seu pedido estiver pronto para a coleta.",
+        "confirmed_description_digital": "Você receberá um e -mail quando seu pedido estiver pronto.",
+        "confirmed_description_gift_card_text": "Você receberá um texto quando seu pedido estiver pronto.",
+        "complete_label": "Completo",
+        "delivered_label": "Entregue",
+        "delivered_description_gift_card": {
+          "one": "O vale -presente foi enviado por e -mail.",
+          "other": "Os cartões -presente foram enviados por e -mail."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "O vale -presente foi enviado por texto.",
+          "other": "Os cartões -presente foram enviados por texto."
+        },
+        "gift_card_label": {
+          "one": "Cartão -presente",
+          "other": "Cartões -presente"
+        },
+        "gift_card_resend_button": {
+          "one": "Reenviar o vale -presente",
+          "other": "Reenvie os cartões -presente"
+        },
+        "gift_resend_success": {
+          "one": "Cartão -presente se ressente",
+          "other": "Os cartões -presente se ressentiram"
+        },
+        "gift_resend_failure": {
+          "one": "Houve um problema de render seu cartão -presente. Tente novamente ou entre em contato conosco.",
+          "other": "Houve um problema em render seus cartões -presente. Tente novamente ou entre em contato conosco."
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "O vale -presente será enviado em um email separado.",
+          "other": "Cada cartão -presente será enviado em um email separado."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "O vale -presente será enviado em um texto separado.",
+          "other": "Cada cartão -presente será enviado em um texto separado."
+        },
+        "status_timestamp": "Atualizado {{date}}",
+        "estimated_delivery": "Esperado {{date}}",
+        "expected_by": "Esperado por {{date}}",
+        "was_expected_by": "Era esperado por {{date}}",
+        "delivered": "Chegado {{date}}",
+        "buy_with_prime_logo_accessibility_label": "Amazon comprar com o logotipo Prime",
+        "in_review_label": "Em revisão",
+        "in_review_title": "Seu pedido está sendo revisado",
+        "last_updated": "Última atualização {{date}}",
+        "multiple_shipments_label": "Múltiplas remessas",
+        "multiple_statuses_label": "Status de vários pedidos",
+        "no_tracking_number": "Não há número de rastreamento para esta remessa.",
+        "tracking_number": {
+          "one": "Número de rastreamento",
+          "other": "Rastreando números"
+        },
+        "on_its_way_label": "A caminho",
+        "out_for_delivery_label": "Para entrega",
+        "resume_tracking": "Retomar rastreamento",
+        "submitted_label": "Enviado",
+        "submitted_description": "Revise os detalhes do pedido e pagamento.",
+        "there_was_a_problem_label": "Houve um problema",
+        "track_shipment": "Remessa de rastreamento",
+        "request_return": "Solicitar retorno",
+        "view_order_for_details": "Exibir o pedido para obter detalhes",
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Gerencie na Amazon"
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Gerencie com a Amazon",
+            "new_window_disclaimer": "(abre uma nova janela)"
+          }
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "Entrega garantida por",
+            "external_promise_brand_label": "Entrega por",
+            "not_delivered_by_label": "Entregue depois {{date}}",
+            "delivery_guarantee_expired_label": "Garantia de entrega expirou",
+            "modal_accessibility_button_label": "Detalhes da promessa de entrega",
+            "download_shop_app_button_label": "Baixe a loja para rastrear",
+            "track_with_shop_button_label": "Faixa com a loja",
+            "claim_shop_cash_button_label": "Caixa da loja de reivindicações"
+          },
+          "details_modal": {
+            "title": "Garantia de entrega"
           }
         }
       }
