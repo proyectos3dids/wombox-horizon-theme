@@ -2515,8 +2515,86 @@
         "inventory": {
           "partial_inventory_banner": "Parte del carrello è esaurita e non sarà disponibile per l'acquisto al momento del pagamento.",
           "sold_out": {
-            "heading": "Il tuo carrello è esaurito"
+            "heading": "Il tuo carrello è esaurito",
+            "storefront_body": "Torna al negozio per continuare a fare shopping",
+            "no_storefront_body": "Purtroppo l'articolo che desideri acquistare non è più disponibile.",
+            "link": "Torna al negozio"
           }
+        },
+        "title": "Coda",
+        "time_to_checkout_title": "È ora di controllare - {{shopName}}",
+        "estimated_wait_time": {
+          "calculating": "Calcolo del tempo di attesa stimato",
+          "less_than_one": "Tempo di attesa stimato: meno di un minuto",
+          "one": "Tempo di attesa stimato: {{count}} minuto",
+          "other": "Tempo di attesa stimato: {{count}} minuti"
+        },
+        "last_checked": "(Ultimo controllato: {{time}})",
+        "footer": {
+          "heading": "Non aggiornare questa pagina, aggiornerà automaticamente.",
+          "body": "Gli articoli nel carrello non sono riservati fino a quando non si completa il checkout."
+        }
+      },
+      "cart_checkout_validation": {
+        "runtime_error": "C'è stato un problema elaborando la tua richiesta, si prega di contattare il proprietario del negozio."
+      },
+      "no_address_location": {
+        "title": "Posizione senza indirizzo",
+        "header": "Non hai un indirizzo di spedizione per questa posizione",
+        "alt_header": "Indirizzo di spedizione mancante",
+        "message": "Contattaci per aggiungere un indirizzo per questa posizione per completare il checkout.",
+        "email_us_button_label": "Inviaci un'e -mail"
+      },
+      "order_errors": {
+        "creation_failure": "C'è stato un problema a creare il tuo ordine. Riprova o contattaci per maggiori dettagli.",
+        "network_failure": "Il tuo ordine non può essere inviato a causa di un errore di rete. Controlla la tua connessione e riprova.",
+        "inventory_reservation_failure": "Alcuni articoli non sono più disponibili."
+      },
+      "session_errors": {
+        "session_not_unique": "C'è stato un problema a elaborare il tuo ordine. Aggiorna questa pagina per tornare al negozio.",
+        "session_already_finished": "Questo ordine è già stato inviato. Puoi tornare al negozio per avviare un nuovo ordine."
+      },
+      "artifact_errors": {
+        "artifact_dissatisfaction_without_violation": "C'è stato un problema a elaborare il tuo ordine. Riprova in pochi minuti."
+      },
+      "pickup_point": {
+        "location_is_currently_closed": "Chiuso",
+        "business_hours": "Orari di apertura",
+        "no_business_hours": "Nessun orario di apertura disponibile",
+        "open_twenty_four_hours": "Aperto 24/7",
+        "title": "Punto di raccolta",
+        "or": "O",
+        "search_button": "Ricerca",
+        "address_label": "Indirizzo",
+        "selector_tabs": "Selettore dei punti di raccolta",
+        "selector_tab_map": "Mappa",
+        "selector_tab_list": "Lista",
+        "could_not_resolve_address": "Il tuo indirizzo non potrebbe essere individuato. Riprova o usa un indirizzo diverso",
+        "no_pickup_points_near_you": "Nessun punto di raccolta trovati vicino all'indirizzo selezionato",
+        "no_pickup_points_near_location": "Nessun punto di raccolta trovati vicino alla tua posizione",
+        "pickup_unavailable_banner_title": {
+          "one": "Nessun punto di raccolta disponibile per il tuo articolo",
+          "other": "Nessun punto di raccolta disponibile per i tuoi articoli"
+        },
+        "no_pickup_points_found": "Nessun punto di raccolta trovati",
+        "paginator": {
+          "next_accessibility_label": "Pagina successiva",
+          "previous_accessibility_label": "Pagina precedente",
+          "header": {
+            "one": "Esibizione %{first} - %{last} Di %{count} punto",
+            "other": "Esibizione %{first} - %{last} Di %{count} punti"
+          },
+          "selected_pickup_point_label": {
+            "one": "%{pickup_point_index} Di %{count} punto",
+            "other": "%{pickup_point_index} Di %{count} punti"
+          },
+          "selected_page": {
+            "one": "%{first} - %{last} Di %{count} punto",
+            "other": "%{first} - %{last} Di %{count} punti"
+          }
+        },
+        "number_of_pickup_points_near_location": {
+          "one": "%{count} Punto di raccolta vicino alla tua posizione"
         }
       }
     }
