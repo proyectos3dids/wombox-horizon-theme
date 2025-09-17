@@ -2820,8 +2820,92 @@
             "address_too_long": "La riga di indirizzo è troppo lunga"
           },
           "select_different_shipping_address_to_resolve_errors": "Il tuo indirizzo di spedizione non è valido. Seleziona un indirizzo diverso o usa uno nuovo."
+        },
+        "scrim": {
+          "continue_purchase_in_window": "Continua il tuo acquisto in {{walletName}} finestra",
+          "and_return_to_checkout": "e torna al checkout",
+          "cancel": "Cancellare"
         }
+      },
+      "note": {
+        "length_exceeds_maximum": "Ridurre le dimensioni della nota a 5000 o meno caratteri."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "Il prezzo della carta regalo deve essere maggiore di 0.",
+            "gift_card_price_must_not_exceed_limit": "Il prezzo della carta regalo non deve superare %{gift_card_limit}.",
+            "subtotal_limit_reached": "È stato raggiunto il valore massimo degli elementi di linea.",
+            "signature_mismatch": "Merchandising Firmature Mismatch per linea %{stable_id}."
+          }
+        }
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "Il checkout contiene solo merce remota. È necessario un reindirizzamento al negozio remoto per completare il checkout."
+        }
+      },
+      "units": {
+        "milligram": "mg",
+        "gram": "G",
+        "kilogram": "kg",
+        "milliliter": "ml",
+        "centiliter": "cl",
+        "liter": "L",
+        "cubic_meter": "m³",
+        "millimeter": "mm",
+        "centimeter": "cm",
+        "meter": "M",
+        "square_meter": "m²",
+        "ounce": "Oz",
+        "pound": "libbre",
+        "fluid_ounce": "fl oz",
+        "pint": "pt",
+        "quart": "Qt",
+        "gallon": "ragazza",
+        "inch": "In",
+        "foot": "ft",
+        "yard": "yd",
+        "square_foot": "ft²",
+        "item": "articolo"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "L'indirizzo non è supportato per l'attuale appartenenza.",
+        "items_split_across_locations_unsupported": "La consegna Prime non è disponibile per il tuo ordine. Le tue opzioni di spedizione sono state aggiornate."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Passa al negozio online"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Maggiori informazioni su %{context}",
+        "additional_payment_methods": "Metodi di pagamento aggiuntivi"
       }
+    },
+    "pagination": {
+      "previous": "Precedente",
+      "next": "Prossimo"
+    },
+    "links": {
+      "powered_by_shopify": "Alimentato da Shopify",
+      "learn_more": "Saperne di più"
+    },
+    "feed": {
+      "more": "Di più"
+    },
+    "attributes": {
+      "email": "e-mail",
+      "password": "password",
+      "password_confirmation": "La conferma della password",
+      "first_name": "nome di battesimo",
+      "last_name": "cognome",
+      "body": "corpo",
+      "signature": "Indirizzo"
+    },
+    "addresses": {
+      "zip_code": "Cap",
+      "postal_code": "Codice Postale"
     }
   }
 }
