@@ -3735,9 +3735,75 @@
         "manual_payment_methods": {
           "money_order": "Ordine di denaro - {{formattedTransactionAmount}}",
           "cash_on_delivery": "Consegna in contanti (COD) - {{formattedTransactionAmount}}",
-          "bank_deposit": "Deposito bancario - {{formattedTransactionAmount}}"
+          "bank_deposit": "Deposito bancario - {{formattedTransactionAmount}}",
+          "manual": "Manuale - {{formattedTransactionAmount}}"
+        },
+        "transactions": {
+          "show_all": "Mostra tutto",
+          "show_less": "Mostra meno",
+          "details": "Dettagli",
+          "payment_details": "Dettagli di pagamento"
+        },
+        "emv_details": {
+          "auth": "Auth:",
+          "aid": "AIUTO:",
+          "source": "FONTE:"
         }
-      }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Pagato con rate di pagamento del negozio",
+        "description": "Rimani al passo con il tuo programma di pagamento con i promemoria nell'app del negozio.",
+        "payment_reminders_button": "Ottieni promemoria di pagamento",
+        "desktop_qr_code_content": {
+          "title": "Scansionare i promemoria",
+          "description": "Ottieni promemoria delle tue rate con Shop."
+        }
+      },
+      "refunded_amount": "Rimborsato",
+      "request_return_failed": "C'è stato un problema che elabora la tua richiesta. Per favore riprova.",
+      "login_card": {
+        "resend_link_and_login": "Per visualizzare i dettagli dell'ordine, accedi o invia un nuovo link all'e -mail o al numero di telefono utilizzato al momento del pagamento.",
+        "resend_link_only": "Per visualizzare i dettagli dell'ordine, invia un nuovo link all'e -mail o al numero di telefono utilizzato al momento del pagamento.",
+        "log_in": "Registrazione",
+        "resend_link": "Invia un nuovo link",
+        "link_expired": "Link scaduto"
+      },
+      "remaining_amount": "Rimanente",
+      "marketing_section_title": "Notizie e offerte",
+      "marketing_description": "Riceverai e -mail di marketing. Puoi annullare l'iscrizione in qualsiasi momento.",
+      "marketing_checkbox_label": "Inviami un'e -mail con notizie e offerte",
+      "marketing_checkmark_label": "Sei iscritto a ricevere notizie e offerte e -mail",
+      "returns": {
+        "expand_events_label": "Mostra i dettagli",
+        "hide_events_label": "Nascondere i dettagli",
+        "ineligible_return_message": "Nessun elemento in questo ordine è idoneo per il ritorno.",
+        "ineligible_return_message_when_returned": "Nessun elemento aggiuntivo in questo ordine è idoneo per il ritorno.",
+        "print_shipping_label": "Etichetta di spedizione di stampa",
+        "return_and_refund_modal_header": "Politica di rimborso",
+        "tracking_number": "Numero di identificazione:",
+        "exchange_header": "Scambiare articoli",
+        "exchange_subheader": "Gli articoli di scambio verranno aggiunti all'ordine una volta completato il reso."
+      },
+      "shipping": {
+        "address": "Indirizzo di spedizione",
+        "address_map_marker": "Indirizzo di spedizione",
+        "method": "Metodo di spedizione",
+        "summary": "Spedizione",
+        "free": "Gratuito",
+        "free_shipping_discount": "Spedizione gratuita",
+        "one_time": "Spedizione una tantum",
+        "subscription": "Spedizione in abbonamento"
+      },
+      "pickup": {
+        "pickup": "Raccolta",
+        "pickup_location": "Posizione di raccolta",
+        "pickup_point": "Punto di raccolta"
+      },
+      "show_items": "Mostra oggetti",
+      "show_order_summary": "Mostra il riepilogo dell'ordine",
+      "hide_order_summary": "Nascondere il riepilogo dell'ordine",
+      "subtitle": "Confermato {{date}}",
+      "subtotal": "Subtotale"
     }
   }
 }
