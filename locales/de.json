@@ -1619,9 +1619,77 @@
             "default": "Standardmäßig festgelegt",
             "card_number": "Kartennummer",
             "expiry": "Verfallsdatum",
-            "security_code": "Sicherheitscode"
+            "security_code": "Sicherheitscode",
+            "name": "Name auf Karte",
+            "billing": "Gesetzesentwurf für"
           }
-        }
+        },
+        "expired_cards_info": {
+          "one": "Es gibt %{count} Abgelaufene Karte, die Sie in Ihrem Konto anzeigen und bearbeiten können.",
+          "other": "Es gibt %{count} Abgelaufene Karten, die Sie in Ihrem Konto anzeigen und bearbeiten können."
+        },
+        "local_payment_method_receiver_notice": "Nachdem Sie Ihre Bestellung aufgegeben haben, erhalten Sie Zahlungsdaten. Nehmen Sie die Zahlung an einem Geldautomaten oder online innerhalb {{dueDays}} Tage.",
+        "order_edit_banner_title": "Zahlung von {{amount_owed}} ist benötigt",
+        "order_edit_banner_subtitle": "Ihre Bestellung {{order_number}} wurde aktualisiert. Überprüfen Sie diese Änderungen und zahlen Sie dann, um Ihre Bestellung zu bestätigen.",
+        "order_edit_banner_items_added": {
+          "one": "Hinzugefügt",
+          "other": "Hinzugefügt %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "ENTFERNT",
+          "with_quantities": "ENTFERNT {{delta}} von {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Zurückgekehrt {{quantity}}",
+          "with_quantities": "Zurückgekehrt {{delta}} von {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Aus der Rückkehr entfernt",
+          "with_quantities": "ENTFERNT {{delta}} von der Rückkehr"
+        },
+        "order_edit_banner_single_item_added": "Hinzugefügt",
+        "order_edit_banner_multiple_items_added": "Hinzugefügt {{amount}}",
+        "order_edit_banner_single_item_removed": "ENTFERNT",
+        "order_edit_banner_multiple_items_removed": "ENTFERNT {{amount}}",
+        "order_edit_banner_single_item_returned": "Zurückgekehrt",
+        "order_edit_banner_multiple_items_returned": "Zurückgekehrt {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "Aus der Rückkehr entfernt",
+        "order_edit_banner_multiple_items_return_line_item_removed": "ENTFERNT {{amount}} von der Rückkehr",
+        "order_edit_banner_updated_order_label": "Aktualisierte Bestellung",
+        "gift_card_wrapper": {
+          "heading": "Geschenkkarte",
+          "apply_gift_card_label": "Bewerben Sie eine Geschenkkarte",
+          "apply_another_gift_card_label": "Wenden Sie eine weitere Geschenkkarte an",
+          "gift_card_label": "Geschenkkarte %{identifier}",
+          "payment_tag": "Geschenkkarte",
+          "add_label": "Fügen Sie eine Geschenkkarte hinzu",
+          "manage_label": "Geschenkkarten verwalten"
+        },
+        "gift_card_store_credit": {
+          "add_label": "Fügen Sie eine Geschenkkarte hinzu oder speichern Sie Guthaben",
+          "manage_label": "Geschenkkarten verwalten oder Krediten aufbewahren"
+        },
+        "gift_card_checkbox_label": "Geschenkkarte anwenden",
+        "custom_onsite_payment_method_modal": {
+          "title": "Benutzerdefinierte Zahlungsbestätigung vor Ort"
+        },
+        "markets_pro_disclaimer_label": "Wenn Sie unten klicken und Ihre Bestellung abschließen, erklären Sie sich damit einverstanden, Ihre Artikel von Global-E als Händler für diese Transaktion bei Global-E zu kaufen %{markets_pro_terms} Und %{privacy_policy}. Global-E ist ein internationaler Anbieter von Fulfillment-Dienstleister für %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Geschäftsbedingungen",
+        "markets_pro_disclaimer_privacy_policy": "Datenschutzrichtlinie",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Händler der Rekordbedingungen und -bedingungen",
+        "markets_pro_disclaimer_privacy_policy_title": "Kaufmann der Datenschutzrichtlinie",
+        "purchase_order_number": {
+          "title": "PO -Nummer",
+          "label": "PO -Nummer (optional)"
+        },
+        "alternative_payment_currency_total_notice": "Hinweis: Sie werden berechnet %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "HINWEIS: Die Gesamtsumme ist %{amount_due}.",
+        "waiting_on_taxes_message": "Wenn Ihre Steuern nicht in den nächsten Sekunden berechnen, aktualisieren Sie die Seite.",
+        "waiting_on_taxes_notice": "Berechnung von Steuern",
+        "payment_method": "Zahlungsmethode",
+        "payment_method_rollup_accessibility_label": "Zahlungsmethodenoptionen",
+        "expired_payment_method": "Die ausgewählte Zahlungsmethode ist abgelaufen",
+        "payment_method_update_failed": "Zahlungsmethode -Update fehlgeschlagen."
       }
     }
   }
