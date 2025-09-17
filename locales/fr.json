@@ -4354,8 +4354,72 @@
           "with_pending_orders_and_subscriptions": "La suppression de ce mode de paiement affectera les paiements préautorisés. À moins que vous ne sélectionniez un autre mode de paiement, ce mode de paiement sera toujours facturé pour tout solde en cours sur les commandes existantes. La sélection d'un autre mode de paiement vous permettra de recevoir des commandes d'abonnement à venir sans interruption.",
           "with_pending_orders": "La suppression de ce mode de paiement le supprimera de votre compte et ne sera plus disponible pour les achats futurs. À moins que vous ne sélectionniez un autre mode de paiement, il sera toujours facturé pour tout solde en cours sur les commandes existantes.",
           "with_subscriptions": "La suppression de ce mode de paiement affectera les paiements préautorisés. Remplacez-le par un autre mode de paiement pour continuer à recevoir des commandes à venir."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "La suppression de ce mode de paiement affectera les paiements préautorisés. Ce mode de paiement sera toujours facturé pour tout solde en circulation sur les commandes existantes, mais vous ne recevrez pas les prochaines commandes d'abonnement. Ajoutez un autre mode de paiement pour continuer à recevoir des commandes d'abonnement.",
+          "with_pending_orders": "La suppression de ce mode de paiement le supprimera de votre compte et ne sera plus disponible pour les achats futurs. Il sera toujours facturé pour tout solde en cours sur les commandes existantes.",
+          "with_subscriptions": "La suppression de ce mode de paiement affectera les paiements préautorisés. Ajoutez un autre mode de paiement pour continuer à recevoir des commandes à venir."
+        },
+        "payment_method_selector_placeholder": "Sélectionnez un mode de paiement de remplacement (facultatif)",
+        "payment_method_selector_no_alternative_payment": "Aucune méthode de remplacement",
+        "replace_method_with_new_method_description": "Ton {{currentPaymentMethodName}} sera supprimé et remplacé par votre {{newPaymentMethodName}}.",
+        "error_when_deleting": "Nous nous excusons, mais quelque chose s'est mal passé et nous n'avons pas pu supprimer ce mode de paiement. Veuillez réessayer plus tard ou actualiser la page.",
+        "delete_and_replace_button": "Supprimer et remplacer",
+        "delete_and_replace_button_accessibility_label": "Supprimer {{currentPaymentMethodName}} et remplacer par {{newPaymentMethodName}}.",
+        "deleted_successfully": "Méthode de paiement supprimé avec succès.",
+        "loading_available_payment_methods_accessibility_label": "Chargement des méthodes de paiement disponibles"
+      },
+      "add_payment_method": {
+        "title": "Ajouter le mode de paiement",
+        "payment_method_added_confirmation": "Méthode de paiement ajouté",
+        "replace_mode_warning": "La suppression de ce mode de paiement affectera les abonnements ou les précommandes. Remplacez-le par un autre mode de paiement pour continuer à recevoir des commandes à venir.",
+        "choose_from_list": "Choisissez parmi la liste",
+        "add_new_button": "Ajouter un nouveau",
+        "billing_address": {
+          "title": "Adresse de facturation",
+          "add_billing_address_button": "Ajouter un nouveau",
+          "add_billing_address_button_accessibility_label": "Ajouter une nouvelle adresse de facturation",
+          "choose_billing_address_from_list_button": "Choisissez parmi la liste",
+          "choose_billing_address_from_list_button_accessibility_label": "Choisissez une adresse de facturation dans la liste",
+          "missing_billing_address_error_message": "Veuillez spécifier une adresse de facturation",
+          "default_checkbox": "Définir comme mode de paiement par défaut"
         }
+      },
+      "three_d_secure": {
+        "title": "Sécurisé 3D"
       }
+    },
+    "payment_method_brands": {
+      "visa": "Visa",
+      "mastercard": "MasterCard",
+      "americanexpress": "American Express",
+      "discover": "Découvrir",
+      "dinersclub": "Club des convives",
+      "jcb": "JCB",
+      "elo": "Elo",
+      "visaelectron": "Électron visa",
+      "maestro": "Maestro",
+      "forbrugsforeningen": "Forbrugsfounengen",
+      "dankort": "Dankort",
+      "hipercard": "Hipercard",
+      "unionpay": "UnionPay",
+      "laser": "Laser",
+      "shoppay": "Faire la rémunération",
+      "applepay": "Pomme",
+      "googlepay": "Google Pay",
+      "paypal": "Paypal",
+      "storecredit": "Crédit de magasin",
+      "bogus": "Faux"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "Préférences à cookies"
+    },
+    "ui_components": {
+      "clear": "Clair",
+      "clipboardCopied": "Copié",
+      "clipboardFailedToCopy": "Échec de la copie",
+      "closeNotification": "Fermer",
+      "expandNotification": "Voir plus"
     }
   }
 }
