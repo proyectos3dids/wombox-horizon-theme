@@ -2276,7 +2276,76 @@
         },
         "manage_order_label": "Gestisci il tuo ordine",
         "gift_card_confirmation_by_text_typ": {
-          "one": "Riceverai un messaggio con la tua carta regalo in pochi minuti."
+          "one": "Riceverai un messaggio con la tua carta regalo in pochi minuti.",
+          "other": "Riceverai un messaggio con le tue carte regalo in pochi minuti."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Riceverai un'e -mail con la tua carta regalo in pochi minuti.",
+          "other": "Riceverai un'e -mail con le tue carte regalo in pochi minuti."
+        },
+        "gift_card_email_title": {
+          "one": "La carta regalo è stata inviata via e -mail",
+          "other": "Le carte regalo sono state inviate via e -mail"
+        },
+        "gift_card_text_title": {
+          "one": "La carta regalo è stata inviata tramite messaggio di testo",
+          "other": "Le carte regalo sono state inviate tramite messaggio di testo"
+        },
+        "resend_gift_cards_by_email": "Email di nuovamente",
+        "resend_gift_cards_by_text": "Resendi il messaggio di testo",
+        "gift_card_resent_confirmation": {
+          "one": "La carta regalo era risentito.",
+          "other": "Le carte regalo erano risentiti."
+        },
+        "gift_card_resend_failure": {
+          "one": "C'è stato un problema per aver revocato la tua carta regalo. Riprova o contattaci.",
+          "other": "C'è stato un problema per aver revocato le carte regalo. Riprova o contattaci."
+        },
+        "vat_invoices": {
+          "title": "Fatture IVA"
+        },
+        "verify_shop_account_title": "Verifica il tuo account negozio",
+        "verify_shop_account_message": "Le tue informazioni sono state salvate con il negozio, verifica il tuo account per utilizzarlo automaticamente su milioni di negozi.",
+        "verify_shop_account_cta": "Verifica il tuo account",
+        "verify_shop_account_confirmation": "Valuta i dettagli salvati",
+        "announcement": {
+          "close": "Vicino",
+          "expand": "Espandere",
+          "collapse": "Crollo"
+        }
+      },
+      "vaulted": {
+        "change_button": "Modifica"
+      },
+      "review": {
+        "title": "Revisione",
+        "review_title": "Completa il tuo ordine",
+        "review_and_confirm_title": "Rivedi e conferma",
+        "checkout_as_guest": "Controlla come ospite",
+        "account_more_actions": "Altre azioni per questo account",
+        "checkout_a_different_way": "Dai un'occhiata a un modo diverso",
+        "blocks": {
+          "contact_method_title": "Contatto",
+          "billing_address_title": "Fatturazione",
+          "shipping_address_title": "Spedire a",
+          "shipping_method_title": "Metodo di spedizione",
+          "payment_method_title": "Metodo di pagamento",
+          "change_link_label": "Modifica",
+          "change_contact_method_link_label": "Modificare le informazioni di contatto",
+          "change_billing_address_link_label": "Indirizzo di fatturazione del cambiamento",
+          "change_shipping_address_link_label": "Modificare l'indirizzo di spedizione",
+          "change_shipping_method_link_label": "Cambia metodo di spedizione",
+          "change_payment_method_link_label": "Modifica metodo di pagamento",
+          "pick_up_in_store_shipping_method_html": "Pickup in negozio · %{location_name}",
+          "purchase_order_number_title": "Numero PO",
+          "change_purchase_order_number_label": "Cambia il numero PO",
+          "change_delivery_method_link_label": "Modifica metodo di consegna",
+          "no_address": "(Nessun indirizzo)",
+          "no_purchase_order_number": "(No PO number)",
+          "due_after_order_reviewed_html": "Dimo dopo l'ordine è stato rivisto",
+          "review_title_free_order": "Rivedi e completa il tuo ordine",
+          "payment_method_saved_company_location": "Salva carta per questa posizione",
+          "company_location": "Posizione aziendale"
         }
       }
     }
