@@ -93,6 +93,7 @@
             "button_HPqij8": {
               "type": "button",
               "settings": {
+                "enable_red_bg": true,
                 "label": "BUY YOUR WOMBOX",
                 "link": "shopify://collections/gift-box",
                 "open_in_new_tab": true,
@@ -192,6 +193,7 @@
             "button_3WEb6q": {
               "type": "button",
               "settings": {
+                "enable_red_bg": false,
                 "label": "",
                 "link": "shopify://collections/all",
                 "open_in_new_tab": false,
@@ -1038,6 +1040,7 @@
             "button_V44iFK": {
               "type": "button",
               "settings": {
+                "enable_red_bg": false,
                 "label": "DISCOVER",
                 "link": "shopify://collections/gift-box",
                 "open_in_new_tab": false,
