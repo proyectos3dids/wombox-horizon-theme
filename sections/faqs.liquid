@@ -1,0 +1,314 @@
+{% comment %}
+  Sección: FAQ / Accordion (Wombox)
+  - Cada "+" gira al abrir/cerrar
+  - Colores, textos y tamaños editables
+  - Cada ítem del FAQ es un bloque
+  - Accesible (aria-expanded, aria-controls)
+{% endcomment %}
+
+<section id="faq-{{ section.id }}" class="faq-3didsprime">
+  <style>
+    #faq-{{ section.id }}{
+      --faq-bg: {{ section.settings.bg_color }};
+      --faq-item-bg: {{ section.settings.item_bg }};
+      --faq-title: {{ section.settings.title_color }};
+      --faq-subtitle: {{ section.settings.subtitle_color }};
+      --faq-question: {{ section.settings.question_color }};
+      --faq-answer: {{ section.settings.answer_color }};
+      --faq-icon: {{ section.settings.icon_color }};
+      --faq-border: {{ section.settings.border_color }};
+      --faq-border-w: {{ section.settings.border_thickness }}px;
+
+      background: var(--faq-bg);
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+    #faq-{{ section.id }} .faq__inner{
+      max-width: {{ section.settings.max_width }}px;
+      margin: 0 auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+    #faq-{{ section.id }} .faq__head{
+      text-align: {{ section.settings.align }};
+      margin-bottom: 24px;
+    }
+    #faq-{{ section.id }} .faq__title{
+      margin: 0 0 8px 0;
+      color: var(--faq-title);
+      font-size: {{ section.settings.title_size }}px;
+      line-height: 1.2;
+      letter-spacing: .2px;
+      font-weight: 800;
+      text-transform: none;
+    }
+    #faq-{{ section.id }} .faq__subtitle{
+      color: var(--faq-subtitle);
+      font-size: {{ section.settings.subtitle_size }}px;
+      line-height: 1.5;
+      margin: 0 auto;
+      max-width: 900px;
+    }
+
+    /* Lista */
+    #faq-{{ section.id }} .faq__list{
+      display: grid;
+      gap: {{ section.settings.items_gap }}px;
+    }
+
+    /* Ítem */
+    #faq-{{ section.id }} .faq__item{
+      background: var(--faq-item-bg);
+      border-bottom: var(--faq-border-w) solid var(--faq-border);
+      border-radius: {{ section.settings.radius }}px;
+      overflow: hidden;
+    }
+
+    /* Botón/encabezado */
+    #faq-{{ section.id }} .faq__toggle{
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: center;
+      gap: 12px;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      padding: 18px 4px 18px 0;
+      text-align: left;
+    }
+    #faq-{{ section.id }} .faq__question{
+      color: var(--faq-question);
+      font-size: {{ section.settings.question_size }}px;
+      line-height: 1.35;
+      font-weight: 600;
+    }
+
+    /* Icono + */
+    #faq-{{ section.id }} .faq__icon{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px; height: 28px;
+      margin-left: 8px;
+      color: var(--faq-icon);
+      transition: transform .25s ease;
+    }
+    #faq-{{ section.id }} .faq__icon svg{
+      width: 20px; height: 20px;
+      display: block;
+    }
+
+    /* Panel de respuesta */
+    #faq-{{ section.id }} .faq__panel{
+      will-change: max-height;
+      overflow: hidden;
+      transition: max-height .28s ease;
+      max-height: 0;
+    }
+    #faq-{{ section.id }} .faq__panel-inner{
+      padding: 0 0 16px 0;
+    }
+    #faq-{{ section.id }} .faq__answer{
+      color: var(--faq-answer);
+      font-size: {{ section.settings.answer_size }}px;
+      line-height: 1.6;
+      margin: 0;
+    }
+    #faq-{{ section.id }} .faq__answer :where(p, ul, ol){ margin: 0 0 12px 0; }
+    #faq-{{ section.id }} .faq__answer :where(a){ text-decoration: underline; }
+
+    /* Estado abierto: rota el + */
+    #faq-{{ section.id }} .is-open .faq__icon{
+      transform: rotate(45deg);
+    }
+
+    /* Toques visuales tipo referencia */
+    @media (min-width: 990px){
+      #faq-{{ section.id }} .faq__toggle{ padding-right: 8px; }
+    }
+  </style>
+
+  <div class="faq__inner">
+    {% if section.settings.title != blank or section.settings.subtitle != blank %}
+      <header class="faq__head">
+        {% if section.settings.title != blank %}
+          <h2 class="faq__title">{{ section.settings.title }}</h2>
+        {% endif %}
+        {% if section.settings.subtitle != blank %}
+          <div class="faq__subtitle">{{ section.settings.subtitle }}</div>
+        {% endif %}
+      </header>
+    {% endif %}
+
+    <div class="faq__list" role="list">
+      {% for block in section.blocks %}
+        <div class="faq__item" {{ block.shopify_attributes }} data-faq-item>
+          <button
+            class="faq__toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="panel-{{ section.id }}-{{ forloop.index }}"
+            id="control-{{ section.id }}-{{ forloop.index }}"
+          >
+            <span class="faq__question">{{ block.settings.question }}</span>
+            <span class="faq__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" focusable="false">
+                <path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </span>
+          </button>
+
+          <div
+            id="panel-{{ section.id }}-{{ forloop.index }}"
+            class="faq__panel"
+            role="region"
+            aria-labelledby="control-{{ section.id }}-{{ forloop.index }}"
+            hidden
+          >
+            <div class="faq__panel-inner">
+              <div class="faq__answer rte">
+                {{ block.settings.answer }}
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      const root = document.getElementById('faq-{{ section.id }}');
+      if(!root) return;
+
+      const items = Array.from(root.querySelectorAll('[data-faq-item]'));
+      const singleOpen = {{ section.settings.single_open | json }};
+      const openFirst = {{ section.settings.open_first | json }};
+
+      const openItem = (item) => {
+        const btn = item.querySelector('.faq__toggle');
+        const panel = item.querySelector('.faq__panel');
+        if(!btn || !panel) return;
+
+        btn.setAttribute('aria-expanded', 'true');
+        item.classList.add('is-open');
+        panel.hidden = false;
+        panel.style.maxHeight = panel.scrollHeight + 'px';
+      };
+
+      const closeItem = (item) => {
+        const btn = item.querySelector('.faq__toggle');
+        const panel = item.querySelector('.faq__panel');
+        if(!btn || !panel) return;
+
+        btn.setAttribute('aria-expanded', 'false');
+        item.classList.remove('is-open');
+        panel.style.maxHeight = panel.scrollHeight + 'px'; // for smooth collapse
+        // allow paint, then set to 0
+        requestAnimationFrame(()=>{ panel.style.maxHeight = '0px'; });
+        // hide after transition ends
+        panel.addEventListener('transitionend', function te(e){
+          if(e.propertyName !== 'max-height') return;
+          if(item.classList.contains('is-open')) return;
+          panel.hidden = true;
+          panel.removeEventListener('transitionend', te);
+        });
+      };
+
+      items.forEach((item) => {
+        const btn = item.querySelector('.faq__toggle');
+        const panel = item.querySelector('.faq__panel');
+
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('is-open');
+
+          if(singleOpen){
+            items.forEach(i => { if(i !== item) closeItem(i); });
+          }
+
+          if(isOpen){
+            closeItem(item);
+          } else {
+            openItem(item);
+          }
+        });
+
+        // prepare panels for height animation
+        panel.style.maxHeight = '0px';
+      });
+
+      if(openFirst && items.length){
+        openItem(items[0]);
+      }
+    })();
+  </script>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ / Accordion (Wombox)",
+  "settings": [
+    { "type": "text", "id": "title", "label": "Título", "default": "¿TIENES DUDAS?" },
+    { "type": "richtext", "id": "subtitle", "label": "Descripción", "default": "<p>Encuentra respuestas a tus preguntas en las cuestiones que más se repiten.</p>" },
+
+    { "type": "range", "id": "max_width", "label": "Ancho máximo del contenido (px)", "min": 600, "max": 1600, "step": 10, "default": 1040 },
+    { "type": "select", "id": "align", "label": "Alineación del encabezado", "default": "center", "options": [
+      { "value": "left", "label": "Izquierda" },
+      { "value": "center", "label": "Centrada" }
+    ]},
+
+    { "type": "color", "id": "bg_color", "label": "Fondo de la sección", "default": "#FFFFFF" },
+    { "type": "color", "id": "item_bg", "label": "Fondo de cada ítem", "default": "#FFFFFF" },
+    { "type": "color", "id": "border_color", "label": "Color de separador/borde", "default": "#E6E6F2" },
+
+    { "type": "color", "id": "title_color", "label": "Color del título", "default": "#1F1F3D" },
+    { "type": "color", "id": "subtitle_color", "label": "Color de la descripción", "default": "#5B5B73" },
+
+    { "type": "color", "id": "question_color", "label": "Color de las preguntas", "default": "#1F1F3D" },
+    { "type": "color", "id": "answer_color", "label": "Color de las respuestas", "default": "#5B5B73" },
+    { "type": "color", "id": "icon_color", "label": "Color del icono (+)", "default": "#5B5B73" },
+
+    { "type": "range", "id": "title_size", "label": "Tamaño del título (px)", "min": 18, "max": 64, "step": 1, "default": 32 },
+    { "type": "range", "id": "subtitle_size", "label": "Tamaño de descripción (px)", "min": 12, "max": 24, "step": 1, "default": 14 },
+    { "type": "range", "id": "question_size", "label": "Tamaño de preguntas (px)", "min": 14, "max": 26, "step": 1, "default": 18 },
+    { "type": "range", "id": "answer_size", "label": "Tamaño de respuestas (px)", "min": 12, "max": 22, "step": 1, "default": 16 },
+
+    { "type": "range", "id": "items_gap", "label": "Espacio entre ítems (px)", "min": 0, "max": 32, "step": 1, "default": 12 },
+    { "type": "range", "id": "border_thickness", "label": "Grosor de separador (px)", "min": 0, "max": 4, "step": 1, "default": 1 },
+    { "type": "range", "id": "radius", "label": "Radio de borde de ítems (px)", "min": 0, "max": 24, "step": 1, "default": 0 },
+
+    { "type": "range", "id": "padding_top", "label": "Padding superior (px)", "min": 0, "max": 160, "step": 2, "default": 48 },
+    { "type": "range", "id": "padding_bottom", "label": "Padding inferior (px)", "min": 0, "max": 160, "step": 2, "default": 48 },
+
+    { "type": "checkbox", "id": "open_first", "label": "Abrir el primer ítem por defecto", "default": false },
+    { "type": "checkbox", "id": "single_open", "label": "Permitir solo un ítem abierto a la vez", "default": true }
+  ],
+  "blocks": [
+    {
+      "type": "faq",
+      "name": "Pregunta frecuente",
+      "settings": [
+        { "type": "text", "id": "question", "label": "Pregunta", "default": "¿Qué es WOMBOX?" },
+        { "type": "richtext", "id": "answer", "label": "Respuesta", "default": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ / Accordion (Wombox)",
+      "blocks": [
+        { "type": "faq", "settings": { "question": "¿Qué es WOMBOX?" } },
+        { "type": "faq", "settings": { "question": "¿Qué tipos de cajas temáticas ofrecemos?" } },
+        { "type": "faq", "settings": { "question": "¿Cómo se eligen los productos dentro de cada caja?" } },
+        { "type": "faq", "settings": { "question": "¿Puedo personalizar el contenido de mi caja?" } },
+        { "type": "faq", "settings": { "question": "¿Las cajas están disponibles todo el año?" } },
+        { "type": "faq", "settings": { "question": "¿Cuánto cuesta una caja Wombox?" } },
+        { "type": "faq", "settings": { "question": "¿Realizan envíos a nivel nacional o internacional?" } },
+        { "type": "faq", "settings": { "question": "¿Hay suscripciones mensuales para recibir cajas temáticas?" } },
+        { "type": "faq", "settings": { "question": "¿Las cajas Wombox son ideales para regalar?" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
