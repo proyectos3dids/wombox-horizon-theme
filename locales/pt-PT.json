@@ -10,20 +10,20 @@
 {
   "blocks": {
     "load_video": "Carregar vídeo: {{ description }}",
-    "sold_out": "Esgotado",
+    "sold_out": "Vendido",
     "email_signup": {
       "label": "E-mail",
-      "placeholder": "Endereço de e-mail",
-      "success": "Agradecemos a sua subscrição!"
+      "placeholder": "Endereço de email",
+      "success": "Obrigado por assinar!"
     },
-    "filter": "Filtrar",
+    "filter": "Filtro",
     "payment_methods": "Métodos de pagamento",
     "contact_form": {
       "name": "Nome",
       "email": "E-mail",
       "phone": "Telefone",
       "comment": "Comentário",
-      "post_success": "Agradecemos o seu contacto. Responder-lhe-emos logo que possível.",
+      "post_success": "Obrigado por nos contatar. Voltaremos a você o mais rápido possível.",
       "error_heading": "Ajuste o seguinte:"
     }
   },
@@ -77,41 +77,41 @@
     "add_to_cart": "Adicionar ao carrinho",
     "clear_all": "Limpar tudo",
     "remove": "Remover",
-    "view_in_your_space": "Ver no seu espaço",
-    "show_filters": "Filtrar",
-    "clear": "Limpar",
-    "continue_shopping": "Continuar a comprar",
-    "log_in_html": "Tem uma conta? <a href=\"{{ link }}\">Inicie sessão</a> para finalizar a compra mais rápido.",
+    "view_in_your_space": "Ver em seu espaço",
+    "show_filters": "Filtro",
+    "clear": "Claro",
+    "continue_shopping": "Continue fazendo compras",
+    "log_in_html": "Tem uma conta? <a href=\"{{ link }}\">Conecte-se</a> para conferir mais rápido.",
     "see_items": {
       "one": "Ver {{ count }} item",
-      "other": "Ver {{ count }} itens",
+      "other": "Ver {{ count }} Unid",
       "many": "Ver {{ count }} itens"
     },
     "view_all": "Ver tudo",
     "add": "Adicionar",
     "choose": "Escolher",
     "added": "Adicionado",
-    "show_less": "Mostrar menos",
-    "show_more": "Mostrar mais",
+    "show_less": "Mostre menos",
+    "show_more": "Mostre mais",
     "close": "Fechar",
     "more": "Mais",
-    "reset": "Repor",
+    "reset": "Reiniciar",
     "zoom": "Zoom",
-    "close_dialog": "Fechar caixa de diálogo",
+    "close_dialog": "Fechar diálogo",
     "back": "Voltar",
-    "log_in": "Iniciar sessão",
-    "log_out": "Terminar sessão",
-    "remove_discount": "Remover desconto {{ code }}",
-    "enter_using_password": "Entrar com palavra-passe",
-    "submit": "Submeter",
-    "enter_password": "Introduzir palavra-passe",
-    "view_store_information": "Ver as informações da loja",
+    "log_in": "Entrar",
+    "log_out": "Log Out",
+    "remove_discount": "Remova o desconto {{ code }}",
+    "enter_using_password": "Insira usando a senha",
+    "submit": "Enviar",
+    "enter_password": "Digite a senha",
+    "view_store_information": "Veja as informações da loja",
     "apply": "Aplicar",
-    "open_image_in_full_screen": "Abrir imagem em ecrã inteiro",
-    "sign_in_options": "Outras opções de início de sessão",
-    "sign_up": "Registar-se",
-    "sort": "Ordenar",
-    "show_all_options": "Mostrar todas as opções"
+    "open_image_in_full_screen": "Imagem aberta na tela cheia",
+    "sign_in_options": "Outras opções de assinatura",
+    "sign_up": "Inscrever-se",
+    "sort": "Organizar",
+    "show_all_options": "Mostre todas as opções"
   },
   "content": {
     "reviews": "avaliações",
@@ -280,7 +280,7 @@
       "comment_author_separator": "•",
       "comments_heading": {
         "one": "{{ count }} comentário",
-        "other": "{{ count }} comentários",
+        "other": "{{ count }} Comentários",
         "many": "{{ count }} comentários"
       }
     },
