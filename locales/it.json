@@ -2961,7 +2961,85 @@
       "invalid_province_in_country": "non è una provincia valida in %{country}",
       "invalid_state_in_country": "non è uno stato valido in %{country}",
       "invalid_region_in_country": "non è una regione valida in %{country}",
-      "less_than_or_equal_to": "deve essere inferiore o uguale a %{count}"
+      "less_than_or_equal_to": "deve essere inferiore o uguale a %{count}",
+      "not_supported": "non è supportato",
+      "full_name_required": "Immettere un nome e un cognome",
+      "invalid_for_card_type": "non è valido",
+      "invalid_type": "scusa, non accettiamo carte di questo tipo",
+      "invalid_format": "Il formato non è valido",
+      "expired": "è scaduto",
+      "invalid_start_date_or_issue_number_for_debit": "È richiesta una data di inizio o un numero di emissione valido",
+      "invalid_expiry_year": "non è un anno di scadenza valido",
+      "reset_password_html": "Questo indirizzo e -mail è già associato a un account. Se questo account è tuo, puoi <a href=\"/account/login#recover\">reimpostare la password</a>",
+      "verify_email": "Abbiamo inviato un'e -mail a %{customer_email}, Fare clic sul link incluso per verificare il tuo indirizzo email.",
+      "product_not_available": "Il prodotto non è pubblicato per questo cliente.",
+      "shop_404": {
+        "title": "Crea un sito Web di eCommerce e vendi online! Software di eCommerce di Shopify",
+        "heros": {
+          "store_unavailable": "Mi dispiace, questo negozio non è attualmente disponibile.",
+          "store_not_exist": "Questo negozio non esiste.",
+          "no_storefront": "Questo negozio non ha ancora un sito Web."
+        },
+        "links": {
+          "explore_other_stores": "Esplora altri negozi",
+          "start_free_trial": "Inizia una prova gratuita"
+        },
+        "owner_ctas": {
+          "header": "Sei il proprietario del negozio?",
+          "fix_domain": "Finite Impostazione del tuo nuovo indirizzo Web, vai a %{domain_settings_link}. Fai clic su \"Connect Domain\" e inserisci: %{domain}.<br>Se hai problemi ad entrare nel tuo negozio, prova il %{forgot_your_store_link} pagina.",
+          "fix_domain_link_text": "Impostazioni del tuo dominio",
+          "forgot_your_store_link_text": "Ho dimenticato il tuo negozio",
+          "add_storefront": "Puoi impostare il tuo sito Web aggiungendo il canale del negozio online nel tuo %{admin_link}. Se hai problemi ad entrare nel tuo negozio, prova il %{forgot_your_store_link} pagina.",
+          "admin_link_text": "amministratore"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Vendi di persona",
+            "caption": "Ottieni le funzionalità di cui hai bisogno per eseguire il tuo negozio al dettaglio sia che tu stia iniziando o ridimensionando.",
+            "link_text": "Inizia la prova gratuita"
+          },
+          "open_a_store": {
+            "header": "Apri un nuovo negozio Shopify",
+            "caption": "Inizia una prova gratuita di 3 giorni, quindi continua per $ 1/mese per i prossimi 3 mesi.",
+            "link_text": "Iscriviti ora"
+          },
+          "editions": {
+            "header": "Dai un'occhiata a Shopify Editions",
+            "caption": "Con oltre 100 aggiornamenti sui prodotti, puoi essere più produttivo, creativo e potente nel commercio di quanto tu abbia mai immaginato.",
+            "link_text": "Esplora le ultime edizioni"
+          },
+          "store_owner": {
+            "header": "Sei il proprietario del negozio?",
+            "caption": "Hai problemi a entrare nel tuo negozio? Prova il %{forgot_your_store_link} caratteristica. Se desideri riattivare il contatto del tuo negozio %{shopify_support_link}.",
+            "shopify_support_link_text": "Shopify Support"
+          }
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Errore di reimpostazione della password",
+        "subscribe_error": "Iscriviti all'errore",
+        "unsubscribe_error": "Annullare l'iscrizione all'errore",
+        "no_account_found": "Nessun account trovato con quell'e -mail.",
+        "invalid_credentials": "Email o password errate.",
+        "denylisted_reset_password": "Non è possibile accedere al tuo account perché la password corrente non è sicura. Riceverai un'e -mail per aggiornare la password.",
+        "signup_disabled": "La creazione dell'account del cliente è stata disabilitata."
+      },
+      "address": {
+        "updated": "Indirizzo aggiornato correttamente.",
+        "error_updating": "Indirizzo di aggiornamento dell'errore",
+        "created": "Indirizzo creato correttamente",
+        "error_creating": "Errore creazione dell'indirizzo.",
+        "deleted": "Indirizzo eliminato con successo",
+        "error_deleting": "Errore di eliminazione dell'indirizzo."
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "Aggiunto %{delta}",
+          "increment_item": "Aggiunto %{delta}"
+        }
+      }
     }
   }
 }
