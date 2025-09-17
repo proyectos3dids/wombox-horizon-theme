@@ -3382,7 +3382,73 @@
         "email_help_text": "Le courrier électronique ne peut pas être modifié",
         "first_name": "Prénom",
         "last_name": "Nom de famille",
-        "email": "E-mail"
+        "email": "E-mail",
+        "no_name_provided_accessibility_label": "Aucun nom ajouté",
+        "phone_number_help_text": "Le numéro de téléphone ne peut pas être modifié",
+        "save": "Sauvegarder",
+        "save_accessibility_label": "Économiser le profil",
+        "title": "Profil",
+        "errors": {
+          "name_too_long": "{{fieldName}} est trop long (maximum est de 255 caractères)",
+          "name_cannot_contain_url": "{{fieldName}} Impossible de contenir l'URL",
+          "name_cannot_contain_html_tags": "{{fieldName}} Impossible de contenir des balises HTML",
+          "email_cant_be_blank": "Le courrier électronique ne peut pas être vide",
+          "invalid_email_format": "Entrez un e-mail valide"
+        }
+      },
+      "verify_new_email_modal": {
+        "title": "Vérifiez le courrier électronique",
+        "description": "Entrez le code envoyé à {{email}}",
+        "one_time_password_label": "Code à 6 chiffres",
+        "email_resend_button": "Code de resend",
+        "email_resend_button_accessibility_label": "Rensenter le code de vérification",
+        "verify_button": "Vérifier",
+        "verify_button_accessibility_label": "Vérifiez un mot de passe une fois",
+        "cancel_button": "Annuler",
+        "cancel_button_accessibility_label": "Annuler le courrier électronique d'édition"
+      },
+      "email_update_success_modal": {
+        "title": "Vérifiez le courrier électronique",
+        "description": "E-mail avec succès mis à jour. Redirection vers la connexion."
+      },
+      "profile_update_confirmation_message": "Profil mis à jour",
+      "email_update_confirmation_message": "E-mail mis à jour vers {{email}}",
+      "title": "Profil",
+      "people": {
+        "pagination": {
+          "load_more": "Chargez plus",
+          "load_more_accessibility_label": "Chargez plus de personnes",
+          "loading_accessibility_label": "Chargement des gens"
+        }
+      },
+      "add_button": "Ajouter"
+    },
+    "orders": {
+      "list_layout_accessibility_label": "Options de mise en page",
+      "list_title": "Ordres",
+      "list_title_with_pending_orders": "Ordres:",
+      "list_title_confirmed_orders_accessibility_label": "Commandes: confirmée",
+      "list_title_pending_orders_accessibility_label": "Commandes: en attente",
+      "switch_order_type_pending_orders_accessibility_label": "Type de commande de commutation, affichant actuellement les commandes en attente",
+      "switch_order_type_confirmed_orders_accessibility_label": "Type de commande de commutation, Affichage actuellement des commandes confirmées",
+      "order_list": {
+        "column_headers": {
+          "order": "Commande",
+          "total": "Total",
+          "actions_accessibility_label": "Actes",
+          "products_accessibility_label": "Produits"
+        },
+        "order_status_and_message": "{{orderStatus}} - {{message}}",
+        "delivered": "Livré {{date}}",
+        "empty_state_order_source_description": "Seules les commandes passées par {{email}} montrera ici.",
+        "empty_state_subtitle": "Allez stocker pour passer une commande.",
+        "empty_state_title": "Pas encore de commandes",
+        "empty_state_with_location_title": "Aucune commande pour {{locationName}}",
+        "empty_state_title_for_pending_orders": "Pas de commandes en attente",
+        "no_order_banner": "Pour tester votre extension sur la page d'état de la commande, créez une commande.",
+        "estimated_shortform": "HNE. {{date}}",
+        "estimated_delivery": "Attendu {{date}}",
+        "one_images_accessibility_label": "La commande comprend {{lineItemName1}}"
       }
     }
   }
