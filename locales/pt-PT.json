@@ -3994,7 +3994,79 @@
         "search": "Locais de pesquisa",
         "search_location_title": "Selecione um local",
         "selection_cancel_button": "Cancelar",
-        "selection_confirmation_button": "Escolha localização"
+        "selection_confirmation_button": "Escolha localização",
+        "selection_continue_button": "Continuar",
+        "title": "Para qual local você está comprando?",
+        "title_choose_location": "Escolha um local",
+        "clear_search": "Pesquisa clara",
+        "try_new_search": "Experimente uma nova pesquisa"
+      },
+      "addresses": {
+        "add_billing_address_button": "Adicione endereço de cobrança",
+        "add_billing_address_section_accessibility_label": "Adicione endereço de cobrança",
+        "add_shipping_address_button": "Adicione endereço de entrega",
+        "add_shipping_address_section_accessibility_label": "Adicione endereço de entrega",
+        "billing_address_card_title": "Endereço de Cobrança",
+        "cancel_adding_billing_address_accessibility_label": "Cancelar Adicionar endereço de cobrança",
+        "cancel_adding_shipping_address_accessibility_label": "Cancelar adicionar endereço de entrega",
+        "save_new_billing_address_accessibility_label": "Salvar o endereço de cobrança",
+        "save_new_shipping_address_accessibility_label": "Salvar endereço de entrega",
+        "shipping_address_card_title": "Endereço para envio"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Esconder tudo",
+          "show_all": "Mostre tudo",
+          "hide_all_accessibility_label": "Ocultar todas as ordens em revisão",
+          "show_all_accessibility_label": "Mostrar todos os pedidos em revisão",
+          "show_all_orders_in_review": "Mostrar todos os pedidos em revisão",
+          "show_less_orders_in_review": "Mostrar menos ordens em revisão",
+          "title": "Pendente",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Você não tem ordens pendentes",
+            "pending_orders": {
+              "one": "Você tem {{count}} Ordem pendente",
+              "other": "Você tem {{count}} Ordens pendentes"
+            },
+            "more_than_pagination_length": "Você tem mais do que {{count}} Ordens pendentes"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}}+",
+          "pagination": {
+            "nav_accessibility_label": "Ordens nos botões de navegação de revisão"
+          }
+        },
+        "order_list_column_headers_location": "Localização",
+        "order_list_column_headers_contact": "Contato",
+        "order_list_column_headers_status": "Status",
+        "removed_company_contact_tooltip": "Removido da empresa"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Confirmado {{date}} do pedido {{draftOrderName}}",
+        "loading": "Detalhes do pedido de carregamento",
+        "loading_finished_accessibility_message": "Os detalhes do pedido foram carregados",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "Seu pagamento é {{count}} Dia vencido",
+              "other": "Seu pagamento é {{count}} dias vencidos"
+            },
+            "banner_due": {
+              "one": "Seu pagamento é devido em {{count}} dia",
+              "other": "Seu pagamento é devido em {{count}} dias"
+            },
+            "banner_due_today": "Seu pagamento é devido hoje",
+            "title": "Pagamento devido",
+            "title_with_date": "Pagamento devido {{date}}",
+            "title_due_on_receipt": "Pagamento ainda não devido",
+            "title_due_on_fulfillment": "Pagamento devido no cumprimento",
+            "description_overdue": "Seu pagamento está atrasado.",
+            "description_partially_paid": "Este pedido foi parcialmente pago. Você tem um equilíbrio restante.",
+            "description_authorized": "Seu método de pagamento será cobrado na data de vencimento ou você poderá pagar agora.",
+            "description_waiting_for_manual_payment": "Este pedido tem um pagamento pendente. O saldo será atualizado quando o pagamento for recebido.",
+            "description_due_on_receipt": "Você receberá uma fatura quando o pagamento for devido.",
+            "description_due_on_receipt_partially_paid": "Este pedido foi parcialmente pago. Você tem um equilíbrio restante. Você receberá uma fatura quando o pagamento for devido."
+          }
+        }
       }
     }
   }
