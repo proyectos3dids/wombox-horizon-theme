@@ -3602,10 +3602,74 @@
             "claim_shop_cash_button_label": "CONSIGLIATO SHOP CONT"
           },
           "details_modal": {
-            "title": "Garanzia di consegna"
+            "title": "Garanzia di consegna",
+            "active_delivery_guarantee_label": "Consegna da {{date}}",
+            "expired_delivery_guarantee_description": "La garanzia della promessa del negozio di 30 giorni di questo ordine è scaduta.",
+            "expired_badge_label": "Scaduto",
+            "order_includes_guarantees_label": "Il tuo ordine include {{deliveryAgreementsCount}} garanzie",
+            "order_includes_guarantees_description": "Shop Promise garantisce una consegna rapida e affidabile. Richiedere contanti del negozio se il tuo ordine arriva dopo {{date}}.",
+            "delivered_after_label": "Consegnato dopo {{date}}",
+            "delivered_after_description": "Perché il tuo ordine è arrivato in ritardo, sei idoneo a richiedere {{amount}} Acquista denaro.",
+            "claimed_shop_cash_description": "Perché questo ordine è arrivato in ritardo, hai affermato {{amount}} Acquista denaro.",
+            "eligible_to_claim_shop_cash_description": "Perché il tuo ordine è arrivato in ritardo, sei idoneo a richiedere {{amount}} Acquista denaro.",
+            "learn_more_button_label": "Saperne di più",
+            "claim_shop_cash_button_label": "CONSIGLIATO SHOP CONT",
+            "view_balance_in_shop_button_label": "Visualizza l'equilibrio nel negozio",
+            "scan_to_claim_shop_cash_label": "Scansionare per richiedere {{amount}} Acquista denaro"
+          }
+        },
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "Consegna sostenuta da",
+            "mixed_brands_label": "Consegna garantita",
+            "not_delivered_by_label": "Non consegnato da {{date}}",
+            "modal_accessibility_button_label": "Dettagli promette di consegna"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Richiedi il tuo negozio in contanti",
+            "no_shop_app_label": "{{appDownloadLink}} per richiedere contanti",
+            "download_shop_app_label": "Scarica negozio"
+          },
+          "details_modal": {
+            "title": "Consegna sostenuta da",
+            "modal_accessiblity_label": "Dettagli promette di consegna",
+            "delivery_guarantee_label": "Garanzia di consegna",
+            "delivery_by_label": "Consegna da {{date}}",
+            "delivery_guaranteed_by_label": "Consegna garantita da {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "Shop Promise garantisce una consegna rapida e affidabile. Richiedi contanti del negozio se il tuo ordine arriva in ritardo.",
+              "may_be_eligible_not_authorized_label": "Potresti avere diritto a richiedere contanti del negozio perché questo ordine è arrivato in ritardo. Accedi per visualizzare i dettagli.",
+              "redeemed_label": "Hai già richiesto il negozio di contanti perché questo ordine è arrivato in ritardo.",
+              "expired_label": "Questo ordine non è idoneo per una richiesta di consegna in ritardo perché la garanzia di 30 giorni è scaduta.",
+              "no_shop_cash_label": "Questo ordine non è idoneo per una richiesta di consegna in ritardo perché non è stato pagato con la retribuzione del negozio.",
+              "no_longer_guaranteed_label": "Questi articoli non sono più supportati da una garanzia di consegna.",
+              "claim_shop_cash_title": "Scansionare per richiedere {{amount}} in contanti del negozio",
+              "claim_shop_cash_description": "Puoi utilizzare il tuo negozio in contanti per gli acquisti futuri nell'app del negozio."
+            }
           }
         }
-      }
+      },
+      "status_mark_as_delivered": "Mark come consegnato",
+      "fulfillment_status_title": "Stato di realizzazione: {{status}}",
+      "buy_again": "Acquista di nuovo",
+      "buy_again_accessibility_label": "Acquista di nuovo per l'ordine {{orderId}}",
+      "manage": "Maneggio",
+      "manage_accessiblity_label": "Gestisci l'ordine {{orderId}}",
+      "group_title_label": "Parte di: {{groupTitle}}",
+      "group_title_label_with_parent": "Per: {{groupTitle}}"
+    },
+    "order_details": {
+      "shipment_timeline": {
+        "expand_events_label": "Mostra i dettagli",
+        "expand_events_accessibility_label": "Mostra i dettagli della spedizione dell'ordine",
+        "hide_events_label": "Nascondere i dettagli",
+        "hide_events_accessibility_label": "Nascondere i dettagli della spedizione dell'ordine"
+      },
+      "addresses_section_title": "Fatturazione e spedizione",
+      "order_details": "Dettagli dell'ordine",
+      "order_details_skeleton_accessibility_label": "Accedi per visualizzare tutti i dettagli dell'ordine.",
+      "billing_address": "Indirizzo di fatturazione",
+      "card_ending_with": "terminare con {{lastDigits}}"
     }
   }
 }
