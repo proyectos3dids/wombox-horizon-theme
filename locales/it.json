@@ -3100,7 +3100,93 @@
         "stock_problems_html": "Uno o più articoli non sono più disponibili. Abbiamo fornito un <a href='%{link}'>carrello aggiornato</a>.",
         "changed": "Il carrello è cambiato",
         "items_changed": "Uno o più articoli sono cambiati.",
-        "product_sold_out": "Il prodotto '%{name}'è già esaurito."
+        "product_sold_out": "Il prodotto '%{name}'è già esaurito.",
+        "variant_not_found": "Non riesco a trovare la variante",
+        "variant_requires_selling_plan": "La variante può essere acquistata solo con un piano di vendita.",
+        "selling_plan_not_available_for_company_locations": "È disponibile un solo acquisto una tantum per gli ordini B2B",
+        "digital_product_not_available_for_company_locations": "Questo articolo non può essere aggiunto a un ordine B2B",
+        "buyer_cannot_purchase_for_company_locations": "Non puoi acquistare per questa posizione",
+        "selling_plan_not_applicable": "Impossibile applicare il piano di vendita alla variante",
+        "shipping_address_not_required": "Questo carrello non richiede la spedizione",
+        "shipping_address_invalid": "C'è stato un problema a calcolare le tariffe di spedizione. Continua a fare il checkout per scegliere una tariffa di spedizione prima di completare l'ordine.",
+        "bundle_requires_components": "Il prodotto bundle '%{name}'Non può essere aggiunto al carrello.",
+        "gift_card_with_components_not_supported": "Il prodotto bundle '%{name}'Non può essere aggiunto al carrello.",
+        "gift_card_price_must_be_greater_than_zero": "Il prodotto bundle '%{name}'Non può essere aggiunto al carrello.",
+        "gift_card_recipient_validation_error": "Il destinatario della carta regalo specificata non è valido",
+        "view_lines_limit_reached": "Le linee devono essere inferiori a %{limit}",
+        "cart_too_large": "Il carrello è troppo grande.",
+        "cart_attributes_error": "Gli attributi del carrello contengono dati non validi.",
+        "merchandise_line_transformers": {
+          "run_error": "Si è verificato un errore nel carrello."
+        },
+        "merchandise_not_applicable": "L'elemento non può essere acquistato come configurato."
+      },
+      "storefront": {
+        "invalid_password": "Password errata, riprova."
+      },
+      "tags": {
+        "add_articles": "Ricerca ristretta agli articoli anche con tag %{tag}",
+        "add_products": "Selezione ristretta ai prodotti Tag di corrispondenza %{tag}",
+        "remove_articles": "Allarga la ricerca ad articoli che non sono taggati %{tag}",
+        "remove_products": "Rimuovere il tag %{tag}"
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Grazie per esserti iscritto alla nostra mailing list.",
+        "disclaimer": "Puoi annullare l'iscrizione in qualsiasi momento.",
+        "unsubscribe": "Annullare l'iscrizione"
+      },
+      "unsubscribed": {
+        "confirmation": "Hai cancellato dalla nostra mailing list.",
+        "disclaimer": "Non riceverai altri aggiornamenti di marketing da noi. Puoi iscriverti di nuovo in qualsiasi momento.",
+        "preview": "Stai in anteprima ciò che i clienti vedranno quando annullano l'iscrizione."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Hai optato per il monitoraggio aperto e -mail.</b>",
+          "visibility": "Le tariffe aperte e -mail saranno segnalate in modo anonimo. Vedremo solo se hai aperto un'e -mail come parte di una tariffa aperta di e -mail aggregata.",
+          "opt_out_html": "Puoi <a style='text-decoration:underline;' href='%{link}'>decidere di uscire</a> E -mail Apri Tracking se non si desidera condividere queste informazioni.",
+          "preview_bar": "Stai in anteprima ciò che i clienti vedranno quando optano per il monitoraggio aperto e -mail."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Hai optato per il monitoraggio aperto e -mail.</b>",
+          "visibility": "Non vedremo se hai aperto le nostre e -mail.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Optare</a> per e -mail il monitoraggio aperto.",
+          "preview_bar": "Stai in anteprima ciò che i clienti vedranno quando rinunceranno al monitoraggio aperto e -mail."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Non trattiamo più alcuna e -mail.</b>",
+          "privacy_policy": "Dopo aver inviato questa e -mail, abbiamo aggiornato la nostra Informativa sulla privacy e non monitoramo più le aperture."
+        },
+        "track": {
+          "status_html": "<b>Viene riportato il monitoraggio aperto e -mail.</b>",
+          "visibility": "Vedremo solo se hai aperto l'e -mail, come parte della tariffa totale di apertura della posta elettronica."
+        },
+        "updated_policy": {
+          "status_html": "<b>Viene riportato il monitoraggio aperto e -mail.</b>",
+          "visibility": "Abbiamo aggiornato la nostra politica e ora monitora le e -mail. Le tariffe aperte e -mail saranno segnalate in modo anonimo. Vedremo solo se hai aperto un'e -mail come parte della tariffa totale di apertura e -mail.",
+          "opt_out_html": "Se non si desidera condividere queste informazioni, puoi <a style='text-decoration:underline;' href='%{link}'>annullare l'iscrizione.</a>"
+        }
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "In magazzino",
+          "out_of_stock": "Esaurito"
+        }
+      },
+      "boolean": {
+        "true_label": "SÌ",
+        "false_label": "NO"
+      }
+    },
+    "search": {
+      "error": "C'è stato un problema a caricare i risultati della ricerca. Aggiorna la pagina o riprova più tardi.",
+      "sorting": {
+        "relevance": "Rilevanza",
+        "price_ascending": "Prezzo, da basso a alto"
       }
     }
   }
