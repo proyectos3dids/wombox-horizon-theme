@@ -3598,10 +3598,74 @@
             "claim_shop_cash_button_label": "Réclamer en espèces"
           },
           "details_modal": {
-            "title": "Garantie de livraison"
+            "title": "Garantie de livraison",
+            "active_delivery_guarantee_label": "Livraison par {{date}}",
+            "expired_delivery_guarantee_description": "La garantie de promesse de la boutique de 30 jours de cette commande a expiré.",
+            "expired_badge_label": "Expiré",
+            "order_includes_guarantees_label": "Votre commande comprend {{deliveryAgreementsCount}} garanties",
+            "order_includes_guarantees_description": "La promesse des magasins garantit une livraison rapide et fiable. Réclamer la boutique en espèces si votre commande arrive après {{date}}.",
+            "delivered_after_label": "Livré après {{date}}",
+            "delivered_after_description": "Parce que votre commande est arrivée en retard, vous êtes admissible à réclamer {{amount}} Acheter de l'argent.",
+            "claimed_shop_cash_description": "Parce que cette commande est arrivée en retard, vous avez affirmé {{amount}} Acheter de l'argent.",
+            "eligible_to_claim_shop_cash_description": "Parce que votre commande est arrivée en retard, vous êtes admissible à réclamer {{amount}} Acheter de l'argent.",
+            "learn_more_button_label": "Apprendre encore plus",
+            "claim_shop_cash_button_label": "Réclamer en espèces",
+            "view_balance_in_shop_button_label": "Voir l'équilibre dans la boutique",
+            "scan_to_claim_shop_cash_label": "Scanner pour réclamer {{amount}} Acheter de l'argent"
+          }
+        },
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "Livraison soutenue par",
+            "mixed_brands_label": "Livraison garantie",
+            "not_delivered_by_label": "Non livré par {{date}}",
+            "modal_accessibility_button_label": "Détails de la promesse de livraison"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Réclamez votre boutique en espèces",
+            "no_shop_app_label": "{{appDownloadLink}} Pour réclamer des espèces",
+            "download_shop_app_label": "Télécharger la boutique"
+          },
+          "details_modal": {
+            "title": "Livraison soutenue par",
+            "modal_accessiblity_label": "Détails de la promesse de livraison",
+            "delivery_guarantee_label": "Garantie de livraison",
+            "delivery_by_label": "Livraison par {{date}}",
+            "delivery_guaranteed_by_label": "Livraison garantie par {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "La promesse des magasins garantit une livraison rapide et fiable. Réclammer en espèces si votre commande arrive en retard.",
+              "may_be_eligible_not_authorized_label": "Vous pourriez être admissible à réclamer des espèces de magasins, car cette commande est arrivée en retard. Connectez-vous pour afficher les détails.",
+              "redeemed_label": "Vous avez déjà réclamé de l'espèce de la boutique car cette commande est arrivée en retard.",
+              "expired_label": "Cette commande n'est pas admissible à une réclamation de livraison tardive car la garantie de 30 jours a expiré.",
+              "no_shop_cash_label": "Cette commande n'est pas admissible à une réclamation de livraison tardive car elle n'a pas été payée avec la rémunération des magasins.",
+              "no_longer_guaranteed_label": "Ces articles ne sont plus soutenus par une garantie de livraison.",
+              "claim_shop_cash_title": "Scanner pour réclamer {{amount}} en espèces",
+              "claim_shop_cash_description": "Vous pouvez utiliser en espèces votre magasin sur les achats futurs dans l'application de boutique."
+            }
           }
         }
-      }
+      },
+      "status_mark_as_delivered": "Marquez comme livré",
+      "fulfillment_status_title": "Statut de réalisation: {{status}}",
+      "buy_again": "Acheter à nouveau",
+      "buy_again_accessibility_label": "Acheter à nouveau pour la commande {{orderId}}",
+      "manage": "Gérer",
+      "manage_accessiblity_label": "Gérer la commande {{orderId}}",
+      "group_title_label": "Une partie de: {{groupTitle}}",
+      "group_title_label_with_parent": "Pour: {{groupTitle}}"
+    },
+    "order_details": {
+      "shipment_timeline": {
+        "expand_events_label": "Montrer les détails",
+        "expand_events_accessibility_label": "Afficher les détails de l'expédition de commande",
+        "hide_events_label": "Masquer les détails",
+        "hide_events_accessibility_label": "Masquer les détails de l'expédition de commande"
+      },
+      "addresses_section_title": "Facturation et expédition",
+      "order_details": "Détails de la commande",
+      "order_details_skeleton_accessibility_label": "Connectez-vous pour afficher tous les détails de la commande.",
+      "billing_address": "Adresse de facturation",
+      "card_ending_with": "se terminer avec {{lastDigits}}"
     }
   }
 }
