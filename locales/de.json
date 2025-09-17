@@ -3015,7 +3015,85 @@
       "invalid_province_in_country": "ist keine gültige Provinz in %{country}",
       "invalid_state_in_country": "ist kein gültiger Zustand in %{country}",
       "invalid_region_in_country": "ist keine gültige Region in %{country}",
-      "less_than_or_equal_to": "muss geringer sein als oder gleich %{count}"
+      "less_than_or_equal_to": "muss geringer sein als oder gleich %{count}",
+      "not_supported": "wird nicht unterstützt",
+      "full_name_required": "Geben Sie einen Vornamen und einen Nachnamen ein",
+      "invalid_for_card_type": "ist nicht gültig",
+      "invalid_type": "Entschuldigung, wir akzeptieren keine Karten dieser Art",
+      "invalid_format": "Das Format ist nicht gültig",
+      "expired": "ist abgelaufen",
+      "invalid_start_date_or_issue_number_for_debit": "Ein gültiges Startdatum oder eine gültige Ausgabennummer ist erforderlich",
+      "invalid_expiry_year": "ist kein gültiges Ablaufjahr",
+      "reset_password_html": "Diese E -Mail -Adresse ist bereits einem Konto zugeordnet. Wenn dieses Konto Ihnen gehört, können Sie <a href=\"/account/login#recover\">Setzen Sie Ihr Passwort zurück</a>",
+      "verify_email": "Wir haben eine E -Mail an gesendet an %{customer_email}Klicken Sie bitte auf den enthaltenen Link, um Ihre E -Mail -Adresse zu überprüfen.",
+      "product_not_available": "Produkt wird nicht für diesen Kunden veröffentlicht.",
+      "shop_404": {
+        "title": "Erstellen Sie eine E -Commerce -Website und verkaufen Sie online! E -Commerce -Software von Shopify",
+        "heros": {
+          "store_unavailable": "Entschuldigung, dieser Geschäft ist derzeit nicht verfügbar.",
+          "store_not_exist": "Dieser Laden existiert nicht.",
+          "no_storefront": "Dieser Laden hat noch keine Website."
+        },
+        "links": {
+          "explore_other_stores": "Erforschen Sie andere Geschäfte",
+          "start_free_trial": "Starten Sie eine kostenlose Testversion"
+        },
+        "owner_ctas": {
+          "header": "Sind Sie der Ladenbesitzer?",
+          "fix_domain": "Beenden Sie fertig %{domain_settings_link}. Klicken Sie auf \"Domain anschließen\" und geben Sie ein: %{domain}.<br>Wenn Sie Probleme haben, in Ihr Geschäft zu gelangen, probieren Sie die %{forgot_your_store_link} Seite.",
+          "fix_domain_link_text": "Ihre Domäneneinstellungen",
+          "forgot_your_store_link_text": "Vergessen Sie Ihren Laden",
+          "add_storefront": "Sie können Ihre Website einrichten, indem Sie den Online -Shop -Kanal in Ihrem hinzufügen %{admin_link}. Wenn Sie Probleme haben, in Ihr Geschäft zu gelangen, probieren Sie die %{forgot_your_store_link} Seite.",
+          "admin_link_text": "Administrator"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Persönlich verkaufen",
+            "caption": "Holen Sie sich die Funktionen, die Sie benötigen, um Ihr Einzelhandelsgeschäft zu betreiben, unabhängig davon, ob Sie anfangen oder verkleinern.",
+            "link_text": "Kostenlose Testversion beginnen"
+          },
+          "open_a_store": {
+            "header": "Eröffnen Sie einen neuen Shopify -Laden",
+            "caption": "Starten Sie eine 3-tägige kostenlose Testversion und fahren Sie dann für die nächsten 3 Monate für 1 USD/Monat fort.",
+            "link_text": "Melden Sie sich jetzt an"
+          },
+          "editions": {
+            "header": "Schauen Sie sich die Shopify -Editionen an",
+            "caption": "Mit mehr als 100 Produktaktualisierungen können Sie produktiver und kreativer und leistungsstärker im Handel sein, als Sie es sich jemals vorgestellt haben.",
+            "link_text": "Erkunden Sie die neuesten Ausgaben"
+          },
+          "store_owner": {
+            "header": "Sind Sie der Ladenbesitzer?",
+            "caption": "Haben Sie Probleme, in Ihr Geschäft zu gelangen? Versuche das %{forgot_your_store_link} Besonderheit. Wenn Sie Ihren Ladenkontakt reaktivieren möchten %{shopify_support_link}.",
+            "shopify_support_link_text": "Shopify Support"
+          }
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Fehler zurücksetzen",
+        "subscribe_error": "Fehler abonnieren",
+        "unsubscribe_error": "Fehlermeldung",
+        "no_account_found": "Kein Konto mit dieser E -Mail gefunden.",
+        "invalid_credentials": "Falsche E -Mail oder Passwort.",
+        "denylisted_reset_password": "Ihr Konto kann nicht zugegriffen werden, da das aktuelle Passwort nicht sicher ist. Sie erhalten eine E -Mail, um Ihr Passwort zu aktualisieren.",
+        "signup_disabled": "Die Erstellung von Kundenkontos wurde deaktiviert."
+      },
+      "address": {
+        "updated": "Erfolgreich aktualisierte Adresse.",
+        "error_updating": "Fehleraktualisierungsadresse",
+        "created": "Erfolgreich erstellte Adresse",
+        "error_creating": "Fehler beim Erstellen von Adresse.",
+        "deleted": "Erfolgreich gelöschte Adresse",
+        "error_deleting": "Fehler löschen Adresse."
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "Hinzugefügt %{delta}",
+          "increment_item": "Hinzugefügt %{delta}"
+        }
+      }
     }
   }
 }
