@@ -3110,7 +3110,93 @@
         "stock_problems_html": "Um ou mais itens não estão mais disponíveis. Nós fornecemos um <a href='%{link}'>Carrinho atualizado</a>.",
         "changed": "O carrinho mudou",
         "items_changed": "Um ou mais itens mudaram.",
-        "product_sold_out": "O produto '%{name}'já está esgotado."
+        "product_sold_out": "O produto '%{name}'já está esgotado.",
+        "variant_not_found": "Não é possível encontrar variante",
+        "variant_requires_selling_plan": "A variante só pode ser comprada com um plano de venda.",
+        "selling_plan_not_available_for_company_locations": "Somente compra única está disponível para pedidos B2B",
+        "digital_product_not_available_for_company_locations": "Este item não pode ser adicionado a um pedido B2B",
+        "buyer_cannot_purchase_for_company_locations": "Você não pode comprar para este local",
+        "selling_plan_not_applicable": "Não pode aplicar um plano de venda à variante",
+        "shipping_address_not_required": "Este carrinho não requer frete",
+        "shipping_address_invalid": "Houve um problema em calcular suas taxas de envio. Continue a fazer o checkout para escolher uma taxa de envio antes de concluir seu pedido.",
+        "bundle_requires_components": "O produto do pacote '%{name}'Não pode ser adicionado ao carrinho.",
+        "gift_card_with_components_not_supported": "O produto do pacote '%{name}'Não pode ser adicionado ao carrinho.",
+        "gift_card_price_must_be_greater_than_zero": "O produto do pacote '%{name}'Não pode ser adicionado ao carrinho.",
+        "gift_card_recipient_validation_error": "O destinatário do cartão -presente especificado é inválido",
+        "view_lines_limit_reached": "As linhas devem ser menores que %{limit}",
+        "cart_too_large": "O carrinho é muito grande.",
+        "cart_attributes_error": "Os atributos do carrinho contêm dados inválidos.",
+        "merchandise_line_transformers": {
+          "run_error": "Ocorreu um erro no seu carrinho."
+        },
+        "merchandise_not_applicable": "O item não pode ser comprado conforme configurado."
+      },
+      "storefront": {
+        "invalid_password": "Senha incorreta, tente novamente."
+      },
+      "tags": {
+        "add_articles": "Pesquisa estreita para artigos também com tags %{tag}",
+        "add_products": "Seleção estreita para os produtos que correspondem à tag %{tag}",
+        "remove_articles": "Ampliar a pesquisa para artigos que não são marcados %{tag}",
+        "remove_products": "Remova a tag %{tag}"
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Obrigado por assinar nossa lista de discussão.",
+        "disclaimer": "Você pode cancelar a inscrição a qualquer momento.",
+        "unsubscribe": "Cair na inscrição"
+      },
+      "unsubscribed": {
+        "confirmation": "Você não foi inscrito na nossa lista de discussão.",
+        "disclaimer": "Você não receberá mais atualizações de marketing. Você pode se inscrever novamente a qualquer momento.",
+        "preview": "Você está visualizando o que os clientes verão quando cancelarem a inscrição."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Você optou por enviar um e -mail para rastreamento aberto.</b>",
+          "visibility": "As taxas de abertura por e -mail serão relatadas anonimamente. Vamos ver apenas se você abriu um email como parte de uma taxa de abertura de email agregada.",
+          "opt_out_html": "Você pode <a style='text-decoration:underline;' href='%{link}'>excluir</a> de rastreamento aberto por e -mail se você não quiser compartilhar essas informações.",
+          "preview_bar": "Você está visualizando o que os clientes verão quando optarem por enviar um e -mail para o rastreamento aberto."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Você optou por não ter um rastreamento aberto de e -mail.</b>",
+          "visibility": "Não veremos se você abriu nossos e -mails.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Opte</a> Para enviar um e -mail para rastreamento aberto.",
+          "preview_bar": "Você está visualizando o que os clientes verão quando optarem por não participar do rastreamento aberto."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Não rastreamos mais nenhum email aberto.</b>",
+          "privacy_policy": "Depois que este email foi enviado, atualizamos nossa política de privacidade e não rastreamos mais as aberturas."
+        },
+        "track": {
+          "status_html": "<b>O rastreamento aberto por e -mail é relatado.</b>",
+          "visibility": "Vamos ver apenas se você abriu o email, como parte da taxa total de abertura de email."
+        },
+        "updated_policy": {
+          "status_html": "<b>O rastreamento aberto por e -mail é relatado.</b>",
+          "visibility": "Atualizamos nossa política e agora rastreamos os e -mails são abertos. As taxas de abertura por e -mail serão relatadas anonimamente. Vamos ver apenas se você abriu um email como parte da taxa total de abertura de email.",
+          "opt_out_html": "Se você não quiser compartilhar essas informações, você pode <a style='text-decoration:underline;' href='%{link}'>cair na inscrição.</a>"
+        }
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "Em estoque",
+          "out_of_stock": "Fora de estoque"
+        }
+      },
+      "boolean": {
+        "true_label": "Sim",
+        "false_label": "Não"
+      }
+    },
+    "search": {
+      "error": "Houve um problema em carregar seus resultados de pesquisa. Atualize a página ou tente novamente mais tarde.",
+      "sorting": {
+        "relevance": "Relevância",
+        "price_ascending": "Preço, baixo para alto"
       }
     }
   }
