@@ -2971,7 +2971,85 @@
       "invalid_province_in_country": "não é uma província válida em %{country}",
       "invalid_state_in_country": "não é um estado válido em %{country}",
       "invalid_region_in_country": "não é uma região válida em %{country}",
-      "less_than_or_equal_to": "deve ser menor ou igual a %{count}"
+      "less_than_or_equal_to": "deve ser menor ou igual a %{count}",
+      "not_supported": "não é suportado",
+      "full_name_required": "Digite um primeiro nome e sobrenome",
+      "invalid_for_card_type": "não é válido",
+      "invalid_type": "Desculpe, não aceitamos cartões deste tipo",
+      "invalid_format": "formato não é válido",
+      "expired": "expirou",
+      "invalid_start_date_or_issue_number_for_debit": "Uma data de início ou número de emissão válida é necessária",
+      "invalid_expiry_year": "não é um ano de validade válido",
+      "reset_password_html": "Este endereço de e -mail já está associado a uma conta. Se esta conta for sua, você pode <a href=\"/account/login#recover\">Redefina sua senha</a>",
+      "verify_email": "Enviamos um e -mail para %{customer_email}, clique no link incluído para verificar seu endereço de e -mail.",
+      "product_not_available": "O produto não é publicado para este cliente.",
+      "shop_404": {
+        "title": "Crie um site de comércio eletrônico e venda online! Software de comércio eletrônico por Shopify",
+        "heros": {
+          "store_unavailable": "Desculpe, esta loja está atualmente indisponível.",
+          "store_not_exist": "Esta loja não existe.",
+          "no_storefront": "Esta loja ainda não tem um site."
+        },
+        "links": {
+          "explore_other_stores": "Explore outras lojas",
+          "start_free_trial": "Inicie uma avaliação gratuita"
+        },
+        "owner_ctas": {
+          "header": "Você é o dono da loja?",
+          "fix_domain": "Termine de configurar seu novo endereço da web, vá para %{domain_settings_link}. Clique em \"Connect Domain\" e digite: %{domain}.<br>Se você está tendo problemas para entrar em sua loja, tente o %{forgot_your_store_link} página.",
+          "fix_domain_link_text": "suas configurações de domínio",
+          "forgot_your_store_link_text": "Esqueceu sua loja",
+          "add_storefront": "Você pode configurar seu site adicionando o canal de loja online em seu %{admin_link}. Se você está tendo problemas para entrar em sua loja, tente o %{forgot_your_store_link} página.",
+          "admin_link_text": "admin"
+        },
+        "ctas": {
+          "sell_in_person": {
+            "header": "Vender pessoalmente",
+            "caption": "Obtenha os recursos necessários para executar sua loja de varejo, esteja você começando ou aumentando.",
+            "link_text": "Inicie a avaliação gratuita"
+          },
+          "open_a_store": {
+            "header": "Abra uma nova loja do Shopify",
+            "caption": "Inicie uma avaliação gratuita de três dias e continue por US $ 1/mês pelos próximos 3 meses.",
+            "link_text": "Inscreva -se agora"
+          },
+          "editions": {
+            "header": "Confira o Shopify Editions",
+            "caption": "Com mais de 100 atualizações de produtos, você pode ser mais produtivo e criativo e poderoso no comércio do que jamais imaginou.",
+            "link_text": "Explore as últimas edições"
+          },
+          "store_owner": {
+            "header": "Você é o dono da loja?",
+            "caption": "Você está tendo problemas para entrar em sua loja? Experimente o %{forgot_your_store_link} recurso. Se você deseja reativar o contato da sua loja %{shopify_support_link}.",
+            "shopify_support_link_text": "Suporte do Shopify"
+          }
+        }
+      }
+    },
+    "notices": {
+      "customer": {
+        "password_reset_error": "Erro de redefinição de senha",
+        "subscribe_error": "Inscreva -se erro",
+        "unsubscribe_error": "Dessubrar erro de inscrição",
+        "no_account_found": "Nenhuma conta encontrada com esse email.",
+        "invalid_credentials": "Email ou senha incorreta.",
+        "denylisted_reset_password": "Sua conta não pôde ser acessada porque a senha atual não é segura. Você receberá um email para atualizar sua senha.",
+        "signup_disabled": "A criação da conta do cliente foi desativada."
+      },
+      "address": {
+        "updated": "Endereço atualizado com sucesso.",
+        "error_updating": "Erro de atualização do endereço",
+        "created": "Endereço criado com sucesso",
+        "error_creating": "Erro criando endereço.",
+        "deleted": "Endereço excluído com sucesso",
+        "error_deleting": "Erro de exclusão de endereço."
+      },
+      "line_item": {
+        "item_status": {
+          "add_variant": "Adicionado %{delta}",
+          "increment_item": "Adicionado %{delta}"
+        }
+      }
     }
   }
 }
