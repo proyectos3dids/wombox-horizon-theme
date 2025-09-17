@@ -992,7 +992,71 @@
         "paid_label": "Payé",
         "payment_due_label": "Paiement dû",
         "vat_label_html": "Y compris %{amount} en taxes",
-        "duties_included_label": "Le total comprend les taxes et les droits. Pas de frais supplémentaires à la livraison."
+        "duties_included_label": "Le total comprend les taxes et les droits. Pas de frais supplémentaires à la livraison.",
+        "discount_and_gift_card_savings_notice": "Après %{discount_amount} en remises et %{gift_card_amount} en cartes-cadeaux",
+        "discount_savings_notice": "Après %{discount_amount} en remises",
+        "gift_card_savings_notice": "Après %{gift_card_amount} en cartes-cadeaux",
+        "cost_table_title": "Résumé des coûts",
+        "cost_table_item_column_header": "Article",
+        "cost_table_value_column_header": "Valeur",
+        "description_label": "Description",
+        "price_label": "Prix",
+        "price_per_item": {
+          "accessibility_label": "%{price} par article",
+          "label": "%{price}/ ea"
+        },
+        "quantity_label": "Quantité",
+        "product_change_label": "Changement",
+        "product_image_label": "Image du produit",
+        "product_image_quantity_label": "Quantité",
+        "scroll_order_summary": "Faites défiler pour plus d'articles",
+        "expand_order_summary_short": "Montrer",
+        "collapse_order_summary_short": "Cacher",
+        "expand_order_summary": "Résumé de la commande de montre",
+        "collapse_order_summary": "Résumé de la commande de cachette",
+        "original_price": "Prix ​​d'origine",
+        "sale_price": "Prix ​​de vente",
+        "total_updated_label": "Prix ​​total mis à jour:",
+        "order_total_updated_label": "Total mis à jour",
+        "total_already_paid_label": "Payé",
+        "unit_price": {
+          "accessible_separator": "par",
+          "content_html": "%{price}%{accessible_separator}%{per_unit}",
+          "per_item": {
+            "single": "%{price} chaque",
+            "one": "%{price} par %{count} article",
+            "other": "%{price} par %{count} articles"
+          },
+          "per_unit": {
+            "single": "%{price}/%{unit}",
+            "plural": "%{price}/%{count}%{unit}"
+          }
+        },
+        "gift_card_ending": "Carte-cadeau se terminant avec %{last_characters}",
+        "estimated_tax_label": "Taxe estimée",
+        "multiple_shipping_lines_label": "Total d'expédition",
+        "recurring_subtotal_label": "Sous-total récurrent",
+        "recurring_total_label": "Total récurrent",
+        "recurring_total_tooltip": "N'inclut pas l'expédition, la taxe, les droits ou toute remise applicable.",
+        "confirmation_number_label": "Confirmation #%{confirmation_number}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> Je ne pourrais pas être utilisé avec vos remises existantes.",
+        "percent_off_shipping": "%{percent}% de réduction l'expédition",
+        "amount_off_shipping": "%{amount} en dehors de l'expédition",
+        "deferred_payment_info": {
+          "title": "Paiement de %{amount_due} est dû sur %{due_at}",
+          "description_html": "Pour des questions sur votre commande, %{contact_us}.",
+          "paid_today": "Total payé aujourd'hui",
+          "paid_today_next": "Payé aujourd'hui",
+          "due_on_fulfillment_title": "Paiement de %{amount_due} est dû à la réalisation",
+          "due_on_receipt_title": "Paiement de %{amount_due} est dû à la réception"
+        },
+        "deferred_balance_info": {
+          "title": "Équilibre {{amount_due}} est dû sur {{due_at}}",
+          "due_on_fulfillment_title": "Équilibre {{amount_due}} est dû à la réalisation"
+        },
+        "payment_terms_totals": {
+          "due_today": "Total dû aujourd'hui"
+        }
       }
     }
   }
