@@ -468,7 +468,71 @@
             "installments_unsupported_billing": "Le rate non supportano questo indirizzo di fatturazione.",
             "installments_unsupported_subscriptions": "Le rate non supportano gli abbonamenti.",
             "installments_ineligible_line_item": "Le rate sono disabilitate per un elemento di riga in questo acquisto.",
-            "shop_cash_not_found": "Il contanti del negozio non è stato trovato."
+            "shop_cash_not_found": "Il contanti del negozio non è stato trovato.",
+            "shop_cash_not_allowed": "Acquista in contanti non consentiti senza retribuzione del negozio.",
+            "shop_cash_unsupported_checkout_source": "Shop Cash non supporta questo checkout.",
+            "shop_cash_gift_card_not_allowed": "Acquista in contanti non consente l'acquisto di buoni regalo.",
+            "shop_cash_not_enabled": "Il negozio di contanti non è abilitato per questo negozio.",
+            "shop_cash_not_available": "Shop Cash non è supportato in questo checkout.",
+            "shop_cash_unsupported_subscriptions": "Il negozio di contanti non supporta gli abbonamenti.",
+            "shop_cash_unsupported_shipping": "Shop Cash non supporta la merce senza spedizione.",
+            "invalid_address_type": "Il tipo di indirizzo fornito non è valido per questo metodo di pagamento.",
+            "missing_retail_attributions": "Sono necessarie attribuzioni al dettaglio per i pagamenti con carta di credito inseriti manualmente.",
+            "unexpected_retail_attributions": "Attribuzioni al dettaglio inaspettatamente fornite per il pagamento della carta di credito.",
+            "invalid_card_source": "Questa sessione non ha il permesso di utilizzare questa fonte di scheda.",
+            "wallet_content_missing": "Manca il contenuto del portafoglio.",
+            "payment_instrument_not_found": "Impossibile trovare il metodo di pagamento",
+            "unauthorized_capture_method": "La configurazione del metodo di acquisizione del pagamento non è consentita.",
+            "saved_payment_methods_not_allowed": "I metodi di pagamento salvati non sono consentiti.",
+            "saved_payment_methods_not_enabled": "I metodi di pagamento salvati non sono abilitati per questo negozio.",
+            "saved_payment_methods_cvv_verification_disabled": "Il metodo di pagamento selezionato richiede una verifica CVV che non è abilitata per questo negozio. Seleziona un metodo di pagamento diverso.",
+            "store_credit_not_enabled": "Il credito del negozio non è abilitato per questo negozio.",
+            "store_credit_account_not_found": "Account di credito del negozio non trovato.",
+            "store_credit_account_mismatch": "Il conto di credito del negozio non corrisponde all'identità dell'acquirente.",
+            "store_credit_mismatched_currency": "La valuta del conto di credito del negozio non corrisponde alla valuta checkout.",
+            "store_credit_insufficient_funds": "Non ci sono fondi insufficienti nel conto di credito del negozio.",
+            "store_credit_buying_gift_card": "Non puoi utilizzare il credito del negozio per acquistare una carta regalo.",
+            "gift_cards_not_allowed_for_b2b": "Le carte regalo non sono consentite nei negozi B2B.",
+            "method_required": "Deve essere proposto un metodo di pagamento.",
+            "paypal_express_address_invalid": "PayPal ha restituito un indirizzo non valido.",
+            "shop_cash_unsupported_currency": "Shop Cash non supporta questa valuta."
+          },
+          "tip": {
+            "not_accepted_by_shop": "Il negozio non accetta suggerimenti.",
+            "only_one_tip_line_allowed": "Più linee di suggerimenti non sono supportate.",
+            "tips_not_allowed_for_b2b": "I suggerimenti non sono consentiti nei negozi B2B.",
+            "currency_change_reset": "La punta è stata ripristinata a causa della modifica della valuta.",
+            "tips_not_allowed_for_deferred_purchase_options": "I suggerimenti non sono ancora supportati per le opzioni di acquisto Deffered."
+          },
+          "sale_attribution": {
+            "draft_order_not_exist": "Questo ordine di bozza non esiste nel negozio attuale.",
+            "staff_member_not_exist": "Questo personale non esiste nel negozio attuale.",
+            "location_not_exist": "Questa posizione non esiste nel negozio attuale.",
+            "point_of_sale_device_not_exist": "Questo dispositivo di punto di vendita non esiste nel negozio attuale.",
+            "unresolvable_target_merchandise_lines": "Le attribuzioni di vendita proposte sono irrisolvibili, dato l'attuale contesto di negoziazione."
+          },
+          "non_negotiable": {
+            "missing_non_negotiable_terms": "La proposta del tuo acquirente dovrebbe contenere non negoziabili_terms.",
+            "invalid_signature": "La firma per {{target_terms}} non è valido."
+          },
+          "inventory": {
+            "missing_quantity_value": "Il campo di quantità manca nelle linee di inventario dell'acquirente.",
+            "changing_behavior_not_allowed": "Questo cliente non ha il permesso di modificare il comportamento dell'inventario.",
+            "only_one_inventory_behavior_allowed": "Attualmente è consentito un solo comportamento di inventario per pagamento."
+          },
+          "optional_duties": {
+            "optional_duties_not_permitted": "Il rifiuto dei doveri non è consentito per questo checkout."
+          },
+          "attribution": {
+            "retail_attribution_not_allowed": "L'attribuzione al dettaglio non è consentita per questo checkout.",
+            "retail_attribution_required": "L'attribuzione al dettaglio è richiesta per questo checkout."
+          },
+          "captcha": {
+            "metadata_missing": "Il completamento di un captcha è richiesto per questo checkout.",
+            "metadata_mismatch": "Fornito fornitore e tipo Captcha non corrisponde ai valori previsti.",
+            "token_missing": "Un token Captcha deve essere fornito per completare questo checkout.",
+            "job_enqueue_failed": "Il lavoro di convalida CAPTCHA non è stato accolto.",
+            "job_already_queued": "La convalida di Captcha è già stata in fila per questo token CAPTCHA."
           }
         }
       }
