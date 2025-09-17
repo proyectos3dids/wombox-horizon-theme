@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "blocks": {
     "load_video": "Charger la vidéo : {{ description }}",
@@ -285,6 +294,128 @@
       "post": "Publier le commentaire",
       "success_moderated": "Commentaire publié, en attente de modération",
       "success": "Commentaire publié"
+    }
+  },
+  "shopify": {
+    "sentence": {
+      "words_connector": ", ",
+      "two_words_connector": " et ",
+      "last_word_connector": ", et "
+    },
+    "checkout": {
+      "address_management": {
+        "confirm_address_deletion": "Êtes-vous sûr de vouloir supprimer l'adresse {{address}}?"
+      },
+      "general": {
+        "page_title": "Vérifier",
+        "error_page_title": "Erreur",
+        "skip_to_content": "Passer au contenu",
+        "breadcrumb": "Chapelure",
+        "continue_button_label": "Continuer",
+        "complete_purchase_button_label": "Terminer la commande",
+        "pay_now_button_label": "Payer maintenant",
+        "authenticate_purchase_button_label": "Authentifier le paiement",
+        "edit_link_label": "Modifier",
+        "all_rights_reserved": "Tous droits réservés %{shop_name}",
+        "print_policies_link_label": "Imprimer",
+        "cart": "Chariot",
+        "close_modal_label": "Fermer",
+        "close_notice_label": "Fermer",
+        "expand_notice_label": "Voir plus",
+        "continue_to_shipping_method": "Continuez à expédier",
+        "continue_to_payment_method": "Continuez à payer",
+        "continue_to_review": "Commande de révision",
+        "back_to_cart": "Retour au chariot",
+        "back_to_contact_information": "Revenir à l'information",
+        "back_to_shipping_method": "Retour à l'expédition",
+        "back_to_payment_method": "Retour au paiement",
+        "choose_shipping_method": "Choisissez une méthode d'expédition",
+        "choose_payment_method": "Choisissez un mode de paiement",
+        "choose_billing_address": "Choisissez une adresse de facturation",
+        "contact_us_html": "Contactez-nous pour plus d'informations",
+        "autocomplete_title": "Suggestions",
+        "autocomplete_single_item": "1 article disponible",
+        "autocomplete_multi_item": "{{number}} Articles disponibles",
+        "autocomplete_selection": "{{number}} de {{total}}",
+        "autocomplete_close": "Fermer des suggestions",
+        "forwarding_indicator": {
+          "new_window": "Ouvre dans une nouvelle fenêtre.",
+          "external": "Ouvre le site Web externe.",
+          "external_and_new_window": "Ouvre un site Web externe dans une nouvelle fenêtre."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - Vérifier"
+        },
+        "tooltip_accessibility_label": "Plus d'informations",
+        "qr_code": "Code QR",
+        "errors": {
+          "only_empty_terms_accepted": "Cette politique accepte uniquement les termes vides.",
+          "session_identifier_not_unique_error": "Quelque chose a mal tourné avec votre commande, veuillez essayer de vérifier à nouveau.",
+          "line_item_limit_reached": "Le nombre maximum d'éléments de ligne a été atteint.",
+          "session_is_already_finished": "Cette session de paiement a déjà été finalisée.",
+          "merchandise": {
+            "only_value_constraint": "Seules les valeurs exactes sont autorisées dans l'entrée de marchandise.",
+            "merchandise_not_found": "Produit introuvable.",
+            "merchandise_variant_not_found": "Variante de produit introuvable.",
+            "merchandise_not_applicable": "La variante du produit ne peut pas être achetée.",
+            "mixed_currencies": "Le paiement contient des éléments de ligne avec différentes monnaies.",
+            "bundle_products_not_supported_for_b2b": "Les articles groupés ne peuvent pas être ajoutés aux commandes B2B pour cet emplacement.",
+            "gift_card_quantity_mismatch": "Lors de la spécification des codes de carte-cadeau, la quantité d'élément de ligne et le nombre de codes de carte-cadeau doivent correspondre.",
+            "gift_card_not_supported": "Les cartes-cadeaux ne sont pas prises en charge lors de cette caisse.",
+            "gift_card_not_unique": "Carte-cadeau avec code {{code}} se produit plus d'une fois dans ce paiement. Les codes sont formatés avant la comparaison.",
+            "gift_card_used": "Code-cadeau {{code}} est déjà affecté à une carte-cadeau. Les codes sont formatés avant la comparaison.",
+            "gift_card_invalid": "Code-cadeau {{code}} n'est pas valide.",
+            "gift_card_code_changed": "Code-cadeau {{proposed_code}} a été changé en {{formatted_code}} se conformer à la mise en forme des règles.",
+            "gift_card_with_attributes_not_supported": "Les cartes-cadeaux avec des attributs personnalisés ne sont pas prises en charge lors de cette caisse.",
+            "gift_card_with_components_not_supported": "Les cartes-cadeaux avec des composants ne sont pas prises en charge lors de cette caisse.",
+            "selling_plan_mismatch": "L'abonnement a été mis à jour.",
+            "selling_plan_not_supported": "Les abonnements ne sont pas pris en charge.",
+            "selling_plan_not_supported_b2b": "Les abonnements ne sont pas pris en charge pour la caisse B2B.",
+            "price_mismatch": "Le prix proposé précédemment pour cette marchandise n'était pas valide et a été mis à jour.",
+            "inventory_not_found": "Aucun inventaire trouvé pour cette marchandise.",
+            "product_not_published": "Le produit n'est pas publié.",
+            "product_not_published_in_buyer_location": "Le produit n'est pas publié dans l'emplacement de l'acheteur.",
+            "duplicated_stable_id": "Cette ligne de marchandise a le même ID stable qu'une autre ligne.",
+            "minimum_quantity_not_met": "La quantité de certains articles ne répond pas au minimum requis.",
+            "maximum_quantity_exceeded": "La quantité de certains éléments dépasse le maximum autorisé.",
+            "quantity_increment_not_met": "La quantité de certains articles ne répond pas aux limites de commande.",
+            "quantity_rules_not_met": "La quantité de certains articles ne répond pas aux limites de commande.",
+            "bundle_requires_components": "Cette marchandise de bundle n'a pas de composants.",
+            "title_too_long": "Le titre de marchandise est trop long.",
+            "title_empty": "Le titre de marchandise est vide."
+          },
+          "buyer_identity": {
+            "business_customer_does_not_match_company": "Le contact de l'entreprise n'a pas accès à l'entreprise.",
+            "customer_account_required": "Vous devez vous connecter pour continuer.",
+            "company_location_required": "Le client doit choisir un emplacement d'entreprise pour continuer.",
+            "company_purchase_permission_required": "Le client n'a pas la permission de passer les commandes de l'entreprise.",
+            "personal_order_not_allowed": "Les commandes personnelles ne sont pas autorisées pour cette boutique.",
+            "lost_access_to_company": "Le client a perdu accès à n'importe quelle entreprise.",
+            "contact_info_does_not_match_customer_account": "Les informations de contact doivent correspondre au compte auquel vous êtes signé.",
+            "phone_number_does_not_match_expected_pattern": "Le numéro de téléphone spécifié ne correspond pas au modèle attendu.",
+            "email_required": "Un e-mail est requis lorsque la marchandise est achetée à l'aide d'un abonnement.",
+            "email_domain_is_invalid": "Ce domaine spécifié ne peut pas être résolu.",
+            "missing_contact_method": "Manquant une méthode de contact valide.",
+            "checkout_completion_target_is_missing": "L'objectif d'achèvement de la caisse est manquant.",
+            "invalid_customer_profile": "Un profil client non valide a été fourni.",
+            "customer_profile_access_restricted": "Le paiement n'a pas l'autorisation d'accéder au profil client.",
+            "checkout_completion_target_is_invalid_proc": "Cible d'achèvement de paiement non valide.",
+            "buyer_identity_presentment_currency_does_not_match": "Il y a eu un problème de traitement de votre commande. Essayez à nouveau dans quelques minutes."
+          },
+          "delivery": {
+            "only_one_delivery_line_allowed": "Le panier ne doit avoir qu'une seule ligne de livraison.",
+            "wrong_number_of_delivery_lines": "Une ligne de livraison doit être spécifiée pour chaque groupe de marchandises.",
+            "external_delivery_promise_error": "Une promesse de livraison externe Remplace une erreur.",
+            "options_instructions_invalid": "Les instructions spécifiées ne correspondent pas au modèle attendu.",
+            "destination_address_required": "Une adresse de destination est requise pour continuer.",
+            "pickup_points_unavailable": "Les points de ramassage ne sont actuellement pas disponibles.",
+            "local_pickup_delivery_line_detail_changed": "La stratégie actuelle de livraison de ramassage locale doit être modifiée pour continuer.",
+            "selected_pickup_option_no_longer_available": "L'option de ramassage précédemment sélectionné n'est plus disponible.",
+            "local_pickup_no_delivery_strategy_available": "Aucune stratégie de prestation locale disponible disponible.",
+            "origin_location_id_required": "Un ID d'emplacement d'origine est requis lorsque la méthode de livraison de détail est demandée."
+          }
+        }
+      }
     }
   }
 }
