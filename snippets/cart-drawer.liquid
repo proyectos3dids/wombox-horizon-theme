@@ -70,7 +70,7 @@
             class="cart-drawer__header"
             id="cart-drawer-header"
           >
-            <span style="color:#C67461;" class="cart-drawer__heading h3">
+            <span style="{{ settings.colorcart }}" class="cart-drawer__heading h3">
               {% comment %} {{ 'content.cart_title' | t }} {% endcomment %}
               {{settings.cart_additional_text}}
               {% render 'cart-bubble' %}

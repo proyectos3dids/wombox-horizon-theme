@@ -52,6 +52,14 @@
       "default": "<p>Cart</p>",
       "info": "This text will appear in the collapsible cart drawer."
     }
+    ,
+    {
+        "type": "color",
+        "id": "colorcart",
+        "label": "Color del botón",
+        "default": "#C67461"
+      }
+
   ]
 }
 ,
