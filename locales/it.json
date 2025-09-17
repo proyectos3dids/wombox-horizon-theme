@@ -2673,6 +2673,90 @@
       },
       "online_store_chat": {
         "title": "Domande? Chatta con noi"
+      },
+      "local_pickup": {
+        "location_address_search_label": "Indirizzo",
+        "location_information": {
+          "one": "C'è %{count} Posizione con stock vicino a te",
+          "other": "Ci sono %{count} Posizioni con scorte vicine a te"
+        },
+        "toggle_location": "Cambia posizione",
+        "or": "O",
+        "cancel": "Cancellare",
+        "your_location": "la tua posizione",
+        "search_button": "Trova i negozi",
+        "no_stores_found": "Nessun negozio trovato",
+        "all_stores_far_away": {
+          "title": "Le posizioni più vicine sono più di %{distance} lontano",
+          "description": "Seleziona una posizione o %{ship_to_address_link}",
+          "ship_to_address_link": "Spedizione da affrontare"
+        },
+        "selected_pickup_option_no_longer_available": {
+          "title": "La posizione precedentemente selezionata non è più disponibile",
+          "description": "Seleziona una nuova posizione o %{ship_to_address_link}",
+          "ship_to_address_link": "Spedizione da affrontare"
+        },
+        "could_not_resolve_address": "Il tuo indirizzo non potrebbe essere individuato. Riprova o usa un indirizzo diverso",
+        "paginator": {
+          "accessibility_label": "Paginazione di pickup locale",
+          "previous": "Pagina precedente",
+          "next": "Pagina successiva",
+          "label": {
+            "one": "%{first} - %{last} Di %{count} negozio",
+            "other": "%{first} - %{last} Di %{count} negozi"
+          }
+        },
+        "reveal_more_label": {
+          "one": "Spettacolo %{count} Più posizione",
+          "other": "Spettacolo %{count} più posizioni"
+        }
+      },
+      "captcha": {
+        "title": "Completa il captcha per continuare",
+        "errors": {
+          "not_solved": "Completa il captcha per continuare"
+        }
+      },
+      "clipboard": {
+        "copied": "Copiato",
+        "failed_to_copy": "Impossibile copiare"
+      },
+      "discount_errors": {
+        "generic_error": "Il tuo ordine non può essere elaborato perché il tuo codice di sconto non è più disponibile. Rivedi il tuo ordine totale e riprova."
+      },
+      "b2b_errors": {
+        "lost_b2b_purchasing_permissions": "Non hai più il permesso di effettuare gli ordini B2B. %{logout_url} per effettuare invece un ordine personale.",
+        "log_out_link_text": "disconnessione",
+        "lost_permissions_subtitle": "Non hai più il permesso di effettuare gli ordini B2B. Firma per effettuare un ordine personale.",
+        "lost_permissions_title": "Nessuna autorizzazione di posizione"
+      },
+      "shop_pay_external": {
+        "title": "Shop paga checkout",
+        "errors": {
+          "problem_loading": "C'è un problema di caricamento del negozio",
+          "try_again_later": "Controlla la tua connessione o chiudi questa finestra e riprova tra qualche momento.",
+          "checkout_has_expired": "Il tuo checkout è scaduto. Chiudi questa finestra e prova a controllare di nuovo da {{shopName}}."
+        },
+        "return_to_store": "Tornare a {{shopName}}",
+        "return_to_store_simple": "Torna al negozio"
+      },
+      "wallets": {
+        "return_to_store": "Torna al negozio",
+        "return_to_checkout": "Torna al checkout",
+        "redirect_hint": "Ti verrà chiesto di accedere {{walletName}}.",
+        "logged_in": "Connesso a {{email}}",
+        "shipping_line_label": "Spedizione",
+        "connect_shipping_methods": "{{method1}} E {{method2}}",
+        "payment_in_progress_title": "Pagamento in corso",
+        "payment_in_progress_body": "Il tuo pagamento viene elaborato. Il tuo ordine sarà completato presto.",
+        "call_to_action": "Pagare con {{walletName}}",
+        "redirection_notice": "Dopo aver fatto clic \"{{buttonLabel}}\", verrai reindirizzato a {{walletName}} Per completare il tuo acquisto in modo sicuro.",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} non disponibile",
+            "description": "{{walletName}} non era disponibile. Usa un metodo di pagamento diverso o riprova più tardi."
+          }
+        }
       }
     }
   }
