@@ -718,7 +718,101 @@
           "one": "{{count}} articolo",
           "other": "{{count}} elementi"
         },
-        "empty_cart_label": "Il tuo carrello è vuoto"
+        "empty_cart_label": "Il tuo carrello è vuoto",
+        "quantity_update": {
+          "page_title": "Aggiornamento della quantità",
+          "title": "Aggiornamento della quantità",
+          "description": "Le quantità disponibili per questi articoli sono cambiate e vengono aggiornate nel carrello."
+        },
+        "unpurchasable_product": {
+          "title": "Prodotto non pubblicabile",
+          "header": "Alcuni oggetti sono stati rimossi dal carrello",
+          "message": "Questi articoli non sono disponibili per gli ordini B2B.",
+          "status_column_header": "Non disponibile"
+        },
+        "unpurchasable_product_generic": {
+          "title": "Prodotto non pubblicabile",
+          "header": "Alcuni oggetti sono stati rimossi dal carrello",
+          "message": "Questi articoli non sono disponibili.",
+          "status_column_header": "Non disponibile"
+        },
+        "unfulfillable_product": {
+          "title": "Consegna non disponibile",
+          "message": {
+            "one": "%{delivery_method} non è più disponibile per questo articolo.",
+            "other": "%{delivery_method} non è più disponibile per questi articoli."
+          },
+          "default_message": {
+            "one": "Il metodo di consegna scelto non è più disponibile per questo articolo.",
+            "other": "Il metodo di consegna scelto non è più disponibile per questi articoli."
+          }
+        },
+        "unshippable_product": {
+          "title": "Nessuna consegna disponibile",
+          "header": {
+            "one": "Nessuna consegna disponibile per %{count} articolo",
+            "other": "Nessuna consegna disponibile per %{count} elementi"
+          },
+          "message": {
+            "one": "Questo articolo verrà rimosso dal carrello perché non ci sono metodi di consegna disponibili per il tuo indirizzo.",
+            "other": "Questi articoli verranno rimossi dal carrello perché non ci sono metodi di consegna disponibili per il tuo indirizzo."
+          },
+          "status_column_header": "Nessuna consegna"
+        },
+        "price_update": {
+          "title": "Aggiornamento del prezzo",
+          "description": "I prezzi per questi articoli sono cambiati e vengono aggiornati nel carrello."
+        },
+        "price_and_quantity_update": {
+          "title": "Aggiornamento di prezzo e quantità",
+          "description": "I prezzi e le quantità disponibili per questi articoli sono cambiati e vengono aggiornati nel carrello."
+        },
+        "out_of_stock": {
+          "description": "Questi articoli non sono più disponibili e sono stati rimossi dal carrello.",
+          "items_unavailable": "Alcuni articoli non sono più disponibili e sono stati rimossi dal carrello."
+        },
+        "out_of_stock_in_context_label": "Questo prodotto non è disponibile nel tuo paese/regione."
+      },
+      "contextual_availability": {
+        "title": {
+          "one": "Prodotto non disponibile",
+          "other": "Prodotti non disponibili"
+        },
+        "products_not_available": {
+          "one": "Questo prodotto verrà rimosso dal carrello perché non è disponibile nel tuo paese/regione.",
+          "other": "Questi prodotti verranno rimossi dal carrello perché non sono disponibili nel tuo paese/regione."
+        },
+        "all_products_in_cart_unavailable": {
+          "one": "Questo prodotto non è disponibile nel tuo paese/regione.",
+          "other": "Questi prodotti non sono disponibili nel tuo paese/regione."
+        },
+        "unavailable_label": "Non disponibile"
+      },
+      "merchandise_unavailable_in_buyer_location": {
+        "banner_title": {
+          "some_products_one": "Questo prodotto non è disponibile per la consegna a %{location_name}.",
+          "some_products_other": "Questi prodotti non sono disponibili per la consegna a %{location_name}.",
+          "all_products_one": "Il prodotto nel carrello non è disponibile per la consegna a %{location_name}.",
+          "all_products_other": "I prodotti nel carrello non sono disponibili per la consegna a %{location_name}."
+        },
+        "missing_country_fallback": "il tuo paese",
+        "indeterminate_location_fallback": "la tua posizione",
+        "cart_updated": "Il tuo carrello è stato aggiornato.",
+        "change_address_only": "Modifica l'indirizzo di consegna per continuare.",
+        "change_address_or_remove": "Indirizzo di consegna modifica o %{remove_action}.",
+        "remove_items_action": {
+          "one": "Rimuovere l'articolo non disponibile",
+          "other": "Rimuovere gli elementi non disponibili"
+        },
+        "empty_cart_action": "carrello vuoto e tornare al negozio",
+        "unavailable_line_item": "%{product_name} / %{variant_label}"
+      },
+      "deliverability": {
+        "not_deliverable": {
+          "title": {
+            "one": "Nessuna consegna disponibile per %{count} articolo"
+          }
+        }
       }
     }
   }
