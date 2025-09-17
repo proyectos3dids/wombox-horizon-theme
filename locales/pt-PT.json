@@ -596,9 +596,131 @@
             "march": "Marchar",
             "april": "abril",
             "may": "Poderia",
-            "june": "Junho"
+            "june": "Junho",
+            "july": "Julho",
+            "august": "Agosto",
+            "september": "Setembro",
+            "october": "outubro",
+            "november": "novembro",
+            "december": "dezembro"
           }
+        },
+        "datepicker": {
+          "show_previous_month": "Mostrar o mês anterior, {{month}} {{year}}",
+          "show_next_month": "Show no próximo mês, {{month}} {{year}}",
+          "range_start": "Start da faixa",
+          "in_range": "No alcance",
+          "range_end": "Final da faixa"
+        },
+        "list_formatter": {
+          "and": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, e {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} e {{secondWord}}"
+          },
+          "or": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, ou {{lastWord}}",
+            "twoWordConnector": "{{firstWord}} ou {{secondWord}}"
+          },
+          "narrow": {
+            "wordConnector": "{{previousWords}}, {{anotherWord}}",
+            "lastWordConnector": "{{previousWords}}, {{lastWord}}",
+            "twoWordConnector": "{{firstWord}}, {{secondWord}}"
+          }
+        },
+        "map": {
+          "cluster_title": {
+            "one": "Cluster de {{number}} marcador",
+            "other": "Cluster de {{number}} marcadores"
+          }
+        },
+        "sheet": {
+          "expand": "Expandir"
+        },
+        "dropzone": {
+          "add_file": "Adicionar arquivo",
+          "invalid_file_type": "Tipo de arquivo não suportado",
+          "dragged_over": "Soltar o arquivo para fazer upload"
         }
+      },
+      "contact": {
+        "title": "Informação",
+        "address_title": "Endereço",
+        "shipping_used_as_billing_notice": "Isso também será usado como seu endereço de cobrança para este pedido.",
+        "delivery_option_title": "Método de entrega",
+        "contact_method_title": "Contato",
+        "email_label": "E-mail",
+        "email_rollup_accessibility_label": "Opções de email",
+        "email_placeholder": "E-mail",
+        "email_or_phone_label": "Número de e -mail ou telefone celular",
+        "email_or_phone_placeholder": "Número de e -mail ou telefone celular",
+        "stored_addresses_label": "Endereços salvos",
+        "available_addresses_label": "Endereços disponíveis",
+        "new_address_label": "Use um novo endereço",
+        "first_name_label": "Primeiro nome",
+        "optional_first_name_label": "Primeiro nome (opcional)",
+        "last_name_label": "Sobrenome",
+        "company_label": "Empresa",
+        "company_attention_label": "Empresa/atenção",
+        "optional_company_attention_label": "Empresa/Atenção (Opcional)",
+        "optional_company_label": "Empresa (opcional)",
+        "address1_label": "Endereço",
+        "address2_label": "Apartamento, suíte, etc.",
+        "optional_address2_label": "Apartamento, suíte, etc. (opcional)",
+        "city_label": "Cidade",
+        "country_label": "País/região",
+        "country_code": "Código de país/região",
+        "province_label": "Província",
+        "province_placeholder": "Província",
+        "county_label": "Condado",
+        "county_placeholder": "Condado",
+        "state_label": "Estado",
+        "state_placeholder": "Estado",
+        "region_label": "Região",
+        "region_placeholder": "Região",
+        "region_none": "Nenhum selecionado",
+        "prefecture_label": "Prefeitura",
+        "prefecture_placeholder": "Prefeitura",
+        "governorate_label": "Governamental",
+        "governorate_placeholder": "Governamental",
+        "emirate_label": "Emirado",
+        "emirate_placeholder": "Emirado",
+        "state_and_territory_label": "Estado/território",
+        "state_and_territory_placeholder": "Estado/território",
+        "phone_label": "Telefone",
+        "phone_rollup_accessibility_label": "Opções de telefone",
+        "optional_phone_label": "Telefone (opcional)",
+        "phone_placeholder": "Telefone",
+        "phone_tooltip": "Caso precisemos entrar em contato com você sobre seu pedido",
+        "zip_code_label": "CEP",
+        "optional_zip_code_label": "Código ZIP (opcional)",
+        "zip_code_placeholder": "CEP",
+        "postal_code_label": "Código postal",
+        "optional_postal_code_label": "Código postal (opcional)",
+        "postal_code_placeholder": "Código postal",
+        "postcode_label": "Código postal",
+        "optional_postcode_label": "Código postal (opcional)",
+        "postcode_placeholder": "Código postal",
+        "pincode_label": "Código do PIN",
+        "optional_pincode_label": "Código PIN (opcional)",
+        "pincode_placeholder": "Código do PIN",
+        "civic_number_warning": "Adicione um número de casa se você tiver um",
+        "optional_last_name_label": "Sobrenome (opcional)",
+        "company_contact_info": "{{companyName}} · {{contact}}",
+        "different_shipping_address_label": "Enviar para um endereço diferente",
+        "different_shipping_address_text": "Use um endereço único para este pedido",
+        "change_company_location_link_label": "Mudar a localização da empresa",
+        "change_location_link_label": "Alterar localização",
+        "ship_to_company": "Enviar para {{companyName}}"
+      },
+      "delivery_options": {
+        "free_total_label": "Livre",
+        "ship": "Enviar",
+        "ship_to_address": "Envio para resolver",
+        "shipping_address": "Endereço para envio",
+        "pick_up": "Escolher",
+        "pick_up_from_store": "Pickup na loja"
       }
     }
   }
