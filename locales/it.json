@@ -2207,6 +2207,76 @@
         "login_reorder_link_text": {
           "one": "Acquista anche questo prodotto",
           "other": "Acquista anche questi prodotti"
+        },
+        "customer_information_hidden_fields_message": "Accedi per visualizzare tutte le informazioni sui clienti.",
+        "cancelled_title": "Il tuo ordine è stato cancellato",
+        "cancelled_description": "Il tuo ordine è stato cancellato %{date}. Contattaci se hai domande.",
+        "order_number_label": "Numero d'ordine",
+        "customer_validation_error": "Immettere un'e -mail o un numero di ordine valido.",
+        "customer_validation_error_phone": "Immettere un telefono o un numero di ordine valido.",
+        "login": "Registrazione",
+        "unfulfilled_items_title": "Prepararsi per la spedizione",
+        "unfulfilled_items_description": "Attualmente stiamo preparando questi articoli per la spedizione.",
+        "marker": {
+          "current": "Posizione della spedizione corrente",
+          "shipping": "Indirizzo di spedizione"
+        },
+        "pick_up_in_store_marker": {
+          "current": "Posizione della spedizione corrente",
+          "shipping": "Posizione di raccolta"
+        },
+        "fulfillment": {
+          "fulfilled_table_title": "Articoli in questa spedizione",
+          "unfulfilled_table_title": "Articoli che si preparano per la spedizione",
+          "product_image_label": "Immagine del prodotto",
+          "description_label": "Descrizione",
+          "quantity_label": "Quantità"
+        },
+        "order_updates_description_missing": "Non stai ricevendo aggiornamenti di spedizione.",
+        "order_updates_subscribe_to_email_notifications": "Ottieni aggiornamenti di spedizione tramite e -mail",
+        "order_updates_subscribe_to_email_or_phone_notifications": "Ottieni aggiornamenti di spedizione tramite e -mail o SMS",
+        "order_updates_subscribe_to_phone_notifications": "Ottieni aggiornamenti di spedizione tramite testo",
+        "order_updates_submit_subscription": "Invia",
+        "track_shipment": "Traccia la spedizione",
+        "other_options": "Altre opzioni",
+        "delivery_information_label": "Informazioni sulla consegna:",
+        "gift_card_sent_confirmation": "Carte regalo inviate",
+        "qr_code": {
+          "send_link_to_phone": "Oppure invia un link al tuo telefono",
+          "title": "Traccia sul tuo telefono"
+        },
+        "shop_qr_with_sms_upsell": {
+          "qr_code": {
+            "title": "Scansiona con il tuo telefono"
+          },
+          "sms": {
+            "title": "Oppure invia un link al tuo telefono"
+          }
+        },
+        "view_business_customer_account": "Visualizza account",
+        "breadcrumbs_submitted": "Presentato",
+        "breadcrumbs_in_review": "In revisione",
+        "breadcrumbs_confirmed": "Confermato",
+        "missing_shipping_address_banner": {
+          "title": "L'ordine non ha un indirizzo di spedizione",
+          "text_html": "%{contact_us} Per aggiungere il tuo indirizzo",
+          "contact_us": "Contattaci"
+        },
+        "first_payment_complete": "Primo pagamento completo",
+        "in_store_purchase": "Acquisto in negozio",
+        "company_location_section_title": "Azienda e posizione",
+        "thank_you_ready_for_picked_up": "Il tuo ordine è stato ritirato a %{address}.",
+        "ready_for_delivery": "Pronto per la consegna",
+        "order_updates_subscribe_to_email_notifications_failed": "Non possiamo archiviare questa e -mail per gli aggiornamenti. Riprova o usa un'altra e -mail.",
+        "order_updates_subscribe_to_email_notifications_email_already_exists": "L'e -mail che hai inserito già esiste.",
+        "subscriptions_management": {
+          "title": "Sottoscrizione",
+          "description": "Continua sul tuo account per visualizzare e gestire i tuoi abbonamenti.",
+          "button_label": "Gestisci l'abbonamento"
+        },
+        "manage_order_label": "Gestisci il tuo ordine",
+        "gift_card_confirmation_by_text_typ": {
+          "one": "Riceverai un messaggio con la tua carta regalo in pochi minuti."
         }
       }
     }
