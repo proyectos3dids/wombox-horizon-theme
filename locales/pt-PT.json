@@ -4064,10 +4064,178 @@
             "description_authorized": "Seu método de pagamento será cobrado na data de vencimento ou você poderá pagar agora.",
             "description_waiting_for_manual_payment": "Este pedido tem um pagamento pendente. O saldo será atualizado quando o pagamento for recebido.",
             "description_due_on_receipt": "Você receberá uma fatura quando o pagamento for devido.",
-            "description_due_on_receipt_partially_paid": "Este pedido foi parcialmente pago. Você tem um equilíbrio restante. Você receberá uma fatura quando o pagamento for devido."
-          }
+            "description_due_on_receipt_partially_paid": "Este pedido foi parcialmente pago. Você tem um equilíbrio restante. Você receberá uma fatura quando o pagamento for devido.",
+            "description_due_on_fulfillment": "O pagamento é devido quando todos os itens deste pedido forem atendidos.",
+            "description_due_on_fulfillment_partially_paid": "Este pedido foi parcialmente pago. Você tem um equilíbrio restante. O pagamento é devido quando todos os itens deste pedido forem atendidos."
+          },
+          "draft": {
+            "description": "Os detalhes do pagamento são decididos quando o pedido é confirmado.",
+            "title": "Pagamento ainda não devido",
+            "in_review": {
+              "description": "Os detalhes do pagamento são decididos quando o pedido é confirmado.",
+              "title": "Pagamento ainda não devido"
+            },
+            "submitted": {
+              "description": "Envie o pagamento para confirmar este pedido.",
+              "title": "Pagar para confirmar",
+              "deposit": {
+                "title": "O pagamento é devido",
+                "due_later": "O equilíbrio está ligado {{translatedName}} termos e é devido {{dueDate}}.",
+                "due_on_fulfillment": "O saldo é devido quando todos os itens nesta ordem são cumpridos.",
+                "due_on_receipt": "Você receberá uma fatura pelo saldo restante.",
+                "due_on_date": "O saldo é devido em {{dueDate}}."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} será devido quando seu pedido for confirmado. O equilíbrio estará ligado {{translatedName}} termos.",
+              "due_on_fulfillment": "{{depositAmount}} será devido quando seu pedido for confirmado. O saldo será devido quando o pedido for cumprido.",
+              "due_on_receipt": "{{depositAmount}} será devido quando seu pedido for confirmado. O saldo será devido mais tarde.",
+              "due_on_date": "{{depositAmount}} será devido quando seu pedido for confirmado. O saldo será devido em {{dueDate}}."
+            }
+          },
+          "paid": {
+            "title": "Pago",
+            "title_with_date": "Pago {{date}}",
+            "description": "Seu pedido está totalmente pago."
+          },
+          "refund": {
+            "title": "Reembolsado",
+            "title_with_date": "Reembolsado {{date}}",
+            "description_full_refund": "Você recebeu um reembolso total por este pedido.",
+            "description_single_refund": "Você recebeu um reembolso parcial por este pedido.",
+            "description_multiple_refunds": "Você recebeu reembolsos parciais por este pedido."
+          },
+          "canceled": {
+            "title": "Pagamento cancelado",
+            "description": "Você não foi acusado."
+          },
+          "pay_now": "Pagar agora",
+          "pay_now_accessibility_label": "Pague agora pelo pedido {{orderName}}",
+          "title": "Status de pagamento"
+        },
+        "order_timeline": {
+          "expand_events_label": "Mostre detalhes",
+          "expand_events_accessibility_label": "Mostrar detalhes do pedido de rascunho",
+          "hide_events_label": "Ocultar detalhes",
+          "hide_events_accessibility_label": "Ocultar detalhes do pedido de rascunho"
+        },
+        "subtitle": "Enviado {{date}}",
+        "title": "Ordem {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Este método de pagamento não estará mais disponível para compras futuras deste local.",
+          "description_with_replacement": "A exclusão deste método de pagamento afetará os pagamentos pré -autorizados para este local. Substitua -o por um método de pagamento alternativo para continuar recebendo os próximos pedidos."
+        },
+        "payment_details": {
+          "order_label": "Ordem {{name}}",
+          "draft_label": "PROJETO DE PROJETO {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Adicione o número PO",
+        "add_modal_title": "Adicione o número PO",
+        "cancel": "Cancelar",
+        "close_modal_accessibility_label": "Fechar o número de PO modal",
+        "discard": "Descartar",
+        "discard_changes_modal_title": "Descartar mudanças?",
+        "edit_accessibility_label": "Edite o número PO",
+        "edit_modal_title": "Edite o número PO",
+        "empty_state": "Sem número de PO",
+        "modal_po_number_input_label": "PO Número",
+        "modal_po_number_input_max_length_error": "Os números de PO têm um máximo de {{maxLength}} caracteres.",
+        "save": "Salvar",
+        "title": "PO #{{poNumber}}"
       }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Houve um problema para excluir este endereço. Tente novamente ou atualize a página."
+      },
+      "addresses_loading_issue": {
+        "description": "Erro de conexão. Verifique sua conexão com a Internet e tente novamente."
+      },
+      "banner_title": {
+        "one": "Há {{count}} erro",
+        "other": "Há {{count}} erros"
+      },
+      "failed_address_creation": {
+        "description": "Houve um problema em criar seu endereço. Tente atualizar esta página ou verifique sua conexão com a Internet."
+      },
+      "failed_address_update": {
+        "description": "Houve um problema em atualizar seu endereço. Tente atualizar esta página ou verifique sua conexão com a Internet."
+      },
+      "load_orders_error": {
+        "title": "Incapaz de carregar ordens",
+        "description": "Represente ou volte mais tarde.",
+        "retry_button": "Tente novamente"
+      },
+      "load_paypal_error": {
+        "description": "Há um problema em carregar o PayPal. Por favor, tente novamente."
+      },
+      "logout_everywhere": {
+        "description": "Algo deu errado durante a saída. Por favor, tente novamente."
+      },
+      "no_access_to_locations": {
+        "description": "Você não tem acesso a nenhum local"
+      },
+      "not_found": {
+        "description": "Verifique o URL ou tente novamente em alguns minutos.",
+        "title": "Há um problema para carregar esta página"
+      },
+      "order_not_found": {
+        "description": "Este pedido não existe ou você não tem permissão para visualizá -lo.",
+        "title": "Ordem não encontrada"
+      },
+      "profile_update_error": {
+        "description": "Houve um problema em atualizar seu perfil. Tente atualizar esta página ou verifique sua conexão com a Internet."
+      },
+      "profile_name_update_error": {
+        "description": "Houve um problema em atualizar seu nome. Tente atualizar esta página ou verifique sua conexão com a Internet."
+      },
+      "retry_action_label": "Tente novamente",
+      "resend_link": {
+        "too_many_requests": "Muitos pedidos. Tente novamente mais tarde.",
+        "generic": "Solicitação fracassada"
+      },
+      "load_extension_error": {
+        "title": "Erro",
+        "description": "Atualize esta página ou tente novamente em alguns minutos.",
+        "refresh_button": "Página de atualização"
+      }
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "Muitas tentativas",
+        "description": "Por favor, tente novamente em alguns minutos"
+      }
+    },
+    "payment_methods": {
+      "replacement_payment_method_title": "Método de pagamento de reposição",
+      "title": "Métodos de pagamento",
+      "add_payment_method_button": "Adicionar método de pagamento",
+      "add_payment_method_dropdown": {
+        "credit_or_debit_card": "Cartão de crédito ou débito",
+        "bank_account": "Conta bancária"
+      },
+      "bank_account": {
+        "loading_accessibility_message": "O botão da conta bancária está carregando",
+        "iframe_title_accessibility_label": "Configuração da conta bancária"
+      },
+      "add_payment_method_banner": "Adicione o método de pagamento para custos mais rápidos ou serviços pré-autorizados",
+      "no_payment_methods_banner": "Nenhum método de pagamento adicionado",
+      "edit_payment_method_button_accessibility_label": "Editar {{paymentMethodName}} terminando {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Editar {{paymentMethodName}}",
+      "delete_payment_method_button": "Excluir",
+      "delete_payment_method_button_accessibility_label": "Excluir {{paymentMethodName}}",
+      "back_button": "Voltar",
+      "back_button_accessibility_label": "De volta para {{paymentMethodStepTitle}}",
+      "default": "Padrão",
+      "generic_card": "Cartão",
+      "expiration_warning_button_accessibility_label": "Mostrar alerta de expiração para {{paymentMethodName}} terminando {{lastDigits}}",
+      "expires_soon": "Este cartão está expirando em breve",
+      "expired": "Este cartão está vencido",
+      "card_update_consent": "Este método de pagamento será salvo para compras futuras."
     }
   }
 }
