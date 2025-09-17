@@ -1493,7 +1493,69 @@
         "ideal_label": "idéal",
         "bank_picker_label": "Banque",
         "afterpay_label": "Après que",
-        "cashapppay_label": "Payage de l'application en espèces"
+        "cashapppay_label": "Payage de l'application en espèces",
+        "przelewy24_label": "Przelewy24",
+        "blik_label": "Blik",
+        "twint_label": "Double",
+        "mobilepay_label": "Mobilepay",
+        "swish_label": "Bruissement",
+        "vipps_label": "Vipps",
+        "grabpay_label": "Grabot",
+        "kcp_creditcard_label": "Carte de crédit KCP",
+        "usdc_label": "USDC",
+        "usdc_cashback_title": "1% de cashback",
+        "usdc_cashback_additional_info": "Obtenez 1% dans USDC directement dans votre portefeuille.",
+        "usdc_cashback_terms": "Les conditions s'appliquent",
+        "purchase_options_card_update_agreement_label_html": "En mettant à jour votre mode de paiement, vous autorisez les paiements pour tout achat récurrent ou différé en fonction de ce magasin <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">politique d'annulation</a>.",
+        "subscription_card_update_agreement_label": "La modification du mode de paiement mettra à jour votre abonnement et les paiements récurrents futurs.",
+        "subscription_agreement_label": "Un ou plusieurs articles dans votre panier sont un achat différé ou d'abonnement. En poursuivant votre paiement, vous acceptez que votre mode de paiement sera automatiquement facturé au prix et à la fréquence indiqués sur cette page jusqu'à la fin ou à vous annuler. Toutes les annulations sont soumises à %{cancelled}.",
+        "subscription_agreement_cancelled": "politique d'annulation",
+        "subscription_heading": "Contrat d'abonnement",
+        "subscription_agreement_label_html": "Je comprends que j'accepte un abonnement. Il renouvellera au prix et à la fréquence indiqués jusqu'à ce qu'il se termine ou soit\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">annulé</a>.\n",
+        "purchase_options_agreement_label": "Un ou plusieurs articles dans votre panier sont un achat différé ou récurrent. En poursuivant votre paiement, vous acceptez que votre mode de paiement sera automatiquement facturé au prix et à la fréquence indiqués sur cette page jusqu'à la fin ou à vous annuler. Toutes les annulations sont soumises à  %{cancellation_policy_label}.",
+        "purchase_options_agreement_label_html": "Je comprends qu'un ou plusieurs articles dans mon panier sont un achat différé ou récurrent. En continuant, j'accepte le\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">politique d'annulation</a>\net vous autoriser à facturer mon mode de paiement aux prix, à la fréquence et aux dates énumérées sur cette page jusqu'à mon\nLa commande est remplie ou j'annule, si elle est autorisée.\n",
+        "purchase_options_agreement_label_wallets": "En poursuivant votre paiement, vous acceptez les futurs frais indiqués sur cette page et la politique d'annulation.",
+        "change_currency_section_description": "Sélectionnez une option de devise",
+        "no_real_orders_dev_store": "Ce magasin ne peut pas accepter de réelles commandes ou de réels paiements.",
+        "waiting_on_payment_methods": "Obtenir des méthodes de paiement disponibles ...",
+        "apple_pay_payment_error": "Votre paiement n'a pas pu être achevé. Réessayez ou utilisez un mode de paiement différent.",
+        "taxes_not_included": "Taxes non incluses",
+        "no_taxes_banner_content": "Les taxes ne seront pas facturées sur cette commande. Une fois que vous avez collecté le paiement, les taxes ne peuvent plus être ajoutées.",
+        "paypal": {
+          "connect": "Cliquez pour connecter votre compte PayPal"
+        },
+        "apple": {
+          "connect": "Cliquez pour connecter votre compte Apple Pay",
+          "not_available": "Apple Pay n'est pas disponible dans ce navigateur. Pour connecter votre compte Apple Pay, vous devrez utiliser Safari sur un appareil Apple."
+        },
+        "google": {
+          "connect": "Cliquez pour vous connecter avec votre compte Google Pay",
+          "error_authorizing": "Erreur autorisant le paiement"
+        },
+        "account_connected": "Compte connecté.",
+        "mor_disclaimer_html": "En cliquant ci-dessous et en terminant votre commande, vous acceptez d'acheter vos articles auprès de Global-E en tant que marchand d'enregistrement\nPour cette transaction, sur les Global-E <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Termes et conditions</a>\net <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">politique de confidentialité</a>. Global-E est un international\nfournisseur de services d'exécution à %{shop_name}\n",
+        "pending_payment": {
+          "due_notice": "Votre paiement de %{amount_due} est dû sur %{due_date}.",
+          "multibanco": {
+            "buyer_action_info": "Votre paiement de %{amount_due} est dû.",
+            "instruction_html": "Effectuez votre paiement chez Multibanco ou en ligne en utilisant les détails ci-dessous. Pour les questions ou pour mettre à jour les détails de paiement, %{contact_us}.",
+            "entity": "Entité",
+            "reference": "Référence",
+            "amount": "Montant",
+            "find_nearest_atm": "Trouver un guichet automatique le plus proche"
+          }
+        },
+        "update_payment_method": "Mettre à jour le mode de paiement",
+        "order_covered_by_store_credit_notice": "Votre commande est couverte par le crédit de votre magasin.",
+        "order_covered_by_redeemables_notice": "Votre commande est couverte.",
+        "store_credit": {
+          "label": "Crédit de magasin",
+          "apply_label": "Appliquer le crédit en magasin",
+          "add_label": "Ajouter le crédit en magasin",
+          "manage_label": "Gérer le crédit en magasin",
+          "buying_gift_card": "Vous ne pouvez pas utiliser le crédit en magasin pour acheter une carte-cadeau",
+          "no_fixed_selling_plans": "Vous ne pouvez pas utiliser le crédit en magasin avec des options d'achat différé"
+        }
       }
     }
   }
