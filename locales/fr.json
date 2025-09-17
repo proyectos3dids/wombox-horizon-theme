@@ -2654,7 +2654,168 @@
           }
         },
         "number_of_pickup_points_near_location": {
-          "one": "%{count} point de ramassage près de votre emplacement"
+          "one": "%{count} point de ramassage près de votre emplacement",
+          "other": "%{count} Points de ramassage près de votre emplacement"
+        },
+        "change": "Changer l'emplacement",
+        "waiting_on_pickup_point_location_notice": "Recherche de points de ramassage ...",
+        "geolocation": {
+          "shared_location_button": "Utilisez mon emplacement",
+          "errors": {
+            "unsuported_by_browser": "L'obtention de la géolocalisation n'est pas prise en charge par votre navigateur. Réessayez ou utilisez un navigateur différent.",
+            "permission_not_allowed": "Autoriser le partage de votre emplacement.",
+            "permission_denied": "Je ne pouvais pas obtenir votre emplacement. Essayer à nouveau."
+          }
+        }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "Il y avait un problème avec notre paiement",
+          "message": "Actualisez cette page ou réessayez dans quelques minutes",
+          "action": {
+            "cta": "Page de rafraîchissement"
+          },
+          "request_id": "ID de demande: {{requestId}}"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Retour au chariot",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} Pour mettre à jour les quantités",
+        "subscription_changed": "L'un de vos abonnements a changé.",
+        "company_location_changed": "Votre panier a été mis à jour. Passez en revue votre commande avant de la soumettre.",
+        "company_location_changed_product_removed": "Votre panier a été mis à jour car certains produits ne sont pas disponibles à cet endroit. Passez en revue votre commande avant de la soumettre.",
+        "violations_title": "{{violation}} est manquant ou non valide",
+        "individual_violations_title": {
+          "DeliveryViolations": "Adresse de livraison",
+          "PaymentViolations": "Adresse de facturation",
+          "OtherViolations": "Informations sur les commandes",
+          "UnhandledViolations": "Informations sur les commandes"
+        },
+        "all_violations_content": "Appeler ou {{emailLink}} nous pour mettre à jour ces informations et terminer votre commande:",
+        "all_violations_email_link": "e-mail",
+        "editable_shipping_address_violations_message_title": "Ajoutez ces informations pour terminer votre commande:",
+        "editable_shipping_address_violations_message_footer": "Pour mettre à jour en permanence l'adresse de cet emplacement, {{emailLink}}.",
+        "editable_shipping_address_violations_email_link": "Contactez-nous",
+        "shipping_address_incomplete_title": "L'adresse d'expédition est incomplète",
+        "calculating_shipping": "L'expédition est toujours en cours de calcul. Essayez à nouveau dans quelques secondes. Vous n'avez pas été inculpé.",
+        "calculating_taxes": "Les taxes sont toujours en cours de calcul. Essayez à nouveau dans quelques secondes. Vous n'avez pas été inculpé.",
+        "generic_processing_error": {
+          "title": "Il y a eu un problème de traitement de votre commande",
+          "body": "Vous n'avez pas été inculpé. Réessayez ou utilisez un mode de paiement différent."
+        },
+        "payment_method_not_available_with_payment_terms": "Le mode de paiement que vous avez sélectionné n'est plus disponible car le paiement de cette commande est maintenant allumé {{paymentTerms}} termes",
+        "payment_method_not_available_with_fulfillment_terms": "Le mode de paiement que vous avez sélectionné n'est plus disponible car le paiement de cette commande est désormais dû à la réalisation",
+        "payment_method_not_available_with_fixed_terms": "Le mode de paiement que vous avez sélectionné n'est plus disponible car le paiement de cette commande est dû plus tard",
+        "payment_method_not_available_with_review_requirement": "Le mode de paiement que vous avez sélectionné n'est plus disponible car le paiement sera dû une fois votre commande confirmée.",
+        "contact_information": {
+          "title": "Les coordonnées ne sont pas valides",
+          "header": "Pour mettre à jour vos informations, {{emailLink}}.",
+          "email_link": "Contactez-nous"
+        }
+      },
+      "review_address_modal": {
+        "title": "Adresse d'examen",
+        "subtitle": {
+          "one": "Cette commande sera expédiée à l'adresse fournie par {{merchant}}.",
+          "other": "Cette commande sera expédiée à une adresse fournie par {{merchant}}. Sélectionnez une adresse d'expédition."
+        },
+        "subtitle_no_match": "Cette adresse ne correspond à aucune de vos adresses enregistrées.",
+        "subtitle_must_use": "Votre commande sera expédiée à cette adresse.",
+        "continue": "Continuez avec cette adresse",
+        "use_saved_address": "Utilisez une adresse différente",
+        "return_to_cart": "Retour au chariot"
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Revoir",
+          "link_label": "{{partnerDisplayName}} Termes et conditions"
+        }
+      },
+      "online_store_chat": {
+        "title": "Questions? Discuter avec nous"
+      },
+      "local_pickup": {
+        "location_address_search_label": "Adresse",
+        "location_information": {
+          "one": "Il y a %{count} Emplacement avec du stock près de vous",
+          "other": "Il y a %{count} Emplacements avec du stock près de vous"
+        },
+        "toggle_location": "Changer l'emplacement",
+        "or": "OU",
+        "cancel": "Annuler",
+        "your_location": "Votre emplacement",
+        "search_button": "Trouver des magasins",
+        "no_stores_found": "Aucun magasin trouvé",
+        "all_stores_far_away": {
+          "title": "Les emplacements les plus proches sont plus que %{distance} loin",
+          "description": "Sélectionnez un emplacement ou %{ship_to_address_link}",
+          "ship_to_address_link": "navire pour s'adresser"
+        },
+        "selected_pickup_option_no_longer_available": {
+          "title": "Votre emplacement précédemment sélectionné n'est plus disponible",
+          "description": "Sélectionnez un nouvel emplacement ou %{ship_to_address_link}",
+          "ship_to_address_link": "navire pour s'adresser"
+        },
+        "could_not_resolve_address": "Votre adresse ne pouvait pas être localisée. Réessayer ou utiliser une adresse différente",
+        "paginator": {
+          "accessibility_label": "Pagination de ramassage local",
+          "previous": "Page précédente",
+          "next": "Page suivante",
+          "label": {
+            "one": "%{first} - %{last} de %{count} magasin",
+            "other": "%{first} - %{last} de %{count} magasins"
+          }
+        },
+        "reveal_more_label": {
+          "one": "Montrer %{count} Plus d'emplacement",
+          "other": "Montrer %{count} Plus d'emplacements"
+        }
+      },
+      "captcha": {
+        "title": "Complétez le captcha pour continuer",
+        "errors": {
+          "not_solved": "Complétez le captcha pour continuer"
+        }
+      },
+      "clipboard": {
+        "copied": "Copié",
+        "failed_to_copy": "Échec de la copie"
+      },
+      "discount_errors": {
+        "generic_error": "Votre commande n'a pas pu être traitée car votre code de réduction n'est plus disponible. Passez en revue le total de votre commande et réessayez."
+      },
+      "b2b_errors": {
+        "lost_b2b_purchasing_permissions": "Vous n'avez plus la permission de passer des commandes B2B. %{logout_url} pour passer un ordre personnel à la place.",
+        "log_out_link_text": "se déconnecter",
+        "lost_permissions_subtitle": "Vous n'avez plus la permission de passer des commandes B2B. Connectez-vous pour passer une commande personnelle.",
+        "lost_permissions_title": "Aucune autorisation de localisation"
+      },
+      "shop_pay_external": {
+        "title": "Acheter Pay Checkout",
+        "errors": {
+          "problem_loading": "Il y a un problème de chargement",
+          "try_again_later": "Vérifiez votre connexion ou fermez cette fenêtre et réessayez dans quelques instants.",
+          "checkout_has_expired": "Votre paiement a expiré. Fermez cette fenêtre et essayez de vérifier à nouveau {{shopName}}."
+        },
+        "return_to_store": "Retourner {{shopName}}",
+        "return_to_store_simple": "Retour au magasin"
+      },
+      "wallets": {
+        "return_to_store": "Retour au magasin",
+        "return_to_checkout": "Revenir à la caisse",
+        "redirect_hint": "On vous demandera de vous connecter avec {{walletName}}.",
+        "logged_in": "Connecté à {{email}}",
+        "shipping_line_label": "Expédition",
+        "connect_shipping_methods": "{{method1}} et {{method2}}",
+        "payment_in_progress_title": "Paiement en cours",
+        "payment_in_progress_body": "Votre paiement est en cours de traitement. Votre commande sera bientôt terminée.",
+        "call_to_action": "Payer avec {{walletName}}",
+        "redirection_notice": "Après avoir cliqué \"{{buttonLabel}}\", vous serez redirigé vers {{walletName}} Pour terminer votre achat en toute sécurité.",
+        "errors": {
+          "unavailable": {
+            "title": "{{walletName}} pas disponible",
+            "description": "{{walletName}} n'était pas disponible. Utilisez un mode de paiement différent ou réessayez plus tard."
+          }
         }
       }
     }
