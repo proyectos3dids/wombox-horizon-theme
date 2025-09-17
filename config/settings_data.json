@@ -17,6 +17,8 @@
     "cart_country_text": "Select country",
     "search_title_color": "#c67461",
     "search_image_radius": 20,
+    "search_pill_bg": "#ffc0da",
+    "search_pill_text": "#3c2c81",
     "logo": "shopify://shop_images/Modo_de_aislamiento_3f4c7686-69d6-4b90-a9d3-04ca72ec1aa5.png",
     "favicon": "shopify://shop_images/Vector.svg",
     "activar_fuente_uefan": false,
