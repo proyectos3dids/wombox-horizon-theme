@@ -1565,9 +1565,141 @@
             "default": "Impostare come impostazione predefinita",
             "card_number": "Numero della carta",
             "expiry": "Data di scadenza",
-            "security_code": "Codice di sicurezza"
+            "security_code": "Codice di sicurezza",
+            "name": "Nome sulla carta",
+            "billing": "disegno di legge per"
           }
+        },
+        "expired_cards_info": {
+          "one": "C'è %{count} scheda scaduta, che puoi visualizzare e modificare nel tuo account.",
+          "other": "Ci sono %{count} carte scadute, che puoi visualizzare e modificare nel tuo account."
+        },
+        "local_payment_method_receiver_notice": "Dopo aver effettuato l'ordine, riceverai dettagli di pagamento. Make the payment at an ATM or online within {{dueDays}} giorni.",
+        "order_edit_banner_title": "Pagamento di {{amount_owed}} è necessario",
+        "order_edit_banner_subtitle": "Il tuo ordine {{order_number}} è stato aggiornato. Rivedi queste modifiche, quindi paga per confermare il tuo ordine.",
+        "order_edit_banner_items_added": {
+          "one": "Aggiunto",
+          "other": "Aggiunto %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "RIMOSSO",
+          "with_quantities": "RIMOSSO {{delta}} Di {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Restituito {{quantity}}",
+          "with_quantities": "Restituito {{delta}} Di {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Rimosso dal ritorno",
+          "with_quantities": "RIMOSSO {{delta}} dal ritorno"
+        },
+        "order_edit_banner_single_item_added": "Aggiunto",
+        "order_edit_banner_multiple_items_added": "Aggiunto {{amount}}",
+        "order_edit_banner_single_item_removed": "RIMOSSO",
+        "order_edit_banner_multiple_items_removed": "RIMOSSO {{amount}}",
+        "order_edit_banner_single_item_returned": "Restituito",
+        "order_edit_banner_multiple_items_returned": "Restituito {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "Rimosso dal ritorno",
+        "order_edit_banner_multiple_items_return_line_item_removed": "RIMOSSO {{amount}} dal ritorno",
+        "order_edit_banner_updated_order_label": "Ordine aggiornato",
+        "gift_card_wrapper": {
+          "heading": "Carta regalo",
+          "apply_gift_card_label": "Applica una carta regalo",
+          "apply_another_gift_card_label": "Applica un'altra carta regalo",
+          "gift_card_label": "Carta regalo %{identifier}",
+          "payment_tag": "Carta regalo",
+          "add_label": "Aggiungi una carta regalo",
+          "manage_label": "Gestisci le carte regalo"
+        },
+        "gift_card_store_credit": {
+          "add_label": "Aggiungi una carta regalo o un credito del negozio",
+          "manage_label": "Gestisci le carte regalo o il credito del negozio"
+        },
+        "gift_card_checkbox_label": "Applicare la carta regalo",
+        "custom_onsite_payment_method_modal": {
+          "title": "Conferma di pagamento in loco personalizzato"
+        },
+        "markets_pro_disclaimer_label": "Facendo clic di seguito e completando il tuo ordine, accetti di acquistare i tuoi articoli da Global-E come commerciante record per questa transazione, da Global-E %{markets_pro_terms} E %{privacy_policy}. Global-E è un fornitore di servizi di realizzazione internazionale per %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Termini e Condizioni",
+        "markets_pro_disclaimer_privacy_policy": "politica sulla riservatezza",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Mercante di termini e condizioni record",
+        "markets_pro_disclaimer_privacy_policy_title": "Informativa sulla privacy commerciale",
+        "purchase_order_number": {
+          "title": "Numero PO",
+          "label": "Numero PO (opzionale)"
+        },
+        "alternative_payment_currency_total_notice": "Nota: ti verrà addebitato %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Nota: il totale convertito è %{amount_due}.",
+        "waiting_on_taxes_message": "Se le tue tasse non calcolano nei prossimi secondi, aggiorna la pagina.",
+        "waiting_on_taxes_notice": "Calcolo delle tasse",
+        "payment_method": "Metodo di pagamento",
+        "payment_method_rollup_accessibility_label": "Opzioni del metodo di pagamento",
+        "expired_payment_method": "Il metodo di pagamento selezionato è scaduto",
+        "payment_method_update_failed": "Aggiornamento del metodo di pagamento non riuscito.",
+        "payment_method_incompatible_with_payment_terms": "Il metodo di pagamento è incompatibile con i termini di pagamento.",
+        "proposed_gateway_unavailable": "Il gateway di pagamento proposto non è disponibile",
+        "pay_in_installments_split_pay_short": "4 pagamenti di %{amount}",
+        "gift_cards_unavailable": "La tua carta regalo non può più essere applicata a questo ordine ed è stata rimossa",
+        "payment_flexibility_terms_id_mismatch": "Termini di flessibilità del pagamento ID Mismatch",
+        "payment_option": {
+          "accessibility_label": "Scegli un'opzione di pagamento"
+        },
+        "bank_account_type": {
+          "checking": "Controllo",
+          "savings": "Risparmio"
+        },
+        "bank_account_choose": "Scegli un account per completare in modo sicuro il tuo acquisto",
+        "bank_account_connect_another": "Collega un altro conto bancario",
+        "bank_account_connect": "Connetti il ​​conto bancario",
+        "bank_account_missing": "Il conto bancario deve essere connesso"
+      },
+      "billing": {
+        "billing_address_title": "disegno di legge per",
+        "billing_address_rollup_accessibility_label": "Fattura alle opzioni",
+        "same_as_shipping": "Come l'indirizzo di spedizione",
+        "add_address": "Usa un indirizzo diverso",
+        "edit": "Modificare",
+        "delete": "Eliminare",
+        "address_more": "Altre azioni per questo indirizzo",
+        "address_edit": "Modifica indirizzo",
+        "address_delete": "Elimina indirizzo",
+        "address_confirm": "Sei sicuro di voler eliminare questo indirizzo dal tuo account?",
+        "address_form": {
+          "add_address": "Aggiungi indirizzo",
+          "save": "Salva",
+          "cancel": "Cancellare"
         }
+      },
+      "company_location": {
+        "location_title": "Posizione aziendale",
+        "location_rollup_accessibility_label": "Opzioni di posizione aziendale"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "Equilibrio attuale %{amount}",
+        "credit_card_expires_on_notice": "Scade %{month}/%{year}",
+        "express_payment_gateway_label": "Esprimere",
+        "manual_payment_gateway_label": "Manuale",
+        "billing_address_title": "Indirizzo di fatturazione",
+        "free_label": "Gratuito"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "Immettere un numero di telefono valido",
+        "handle_email_invalid": "Inserisci un'e -mail valida",
+        "email_invalid": "Inserisci un'e -mail valida",
+        "email_or_phone_blank": "Immettere un'e -mail o un numero di telefono",
+        "email_or_phone_invalid": "Immettere un'e -mail valida o un numero di cellulare",
+        "address_first_name_blank": "Immettere un nome",
+        "address_first_name_too_long": "Il nome è troppo lungo (il massimo è 255 caratteri)",
+        "address_first_name_contains_emojis": "Il nome non può contenere emoji",
+        "address_first_name_contains_html_tags": "Il nome non può contenere tag HTML.",
+        "address_first_name_contains_url": "Il nome non può contenere un URL",
+        "address_first_name_contains_mathematical_symbols": "Il nome non può contenere simboli matematici",
+        "address_last_name_blank": "Immettere un cognome",
+        "address_last_name_too_long": "Il cognome è troppo lungo (il massimo è 255 caratteri)",
+        "address_last_name_contains_emojis": "Il cognome non può contenere emoji",
+        "address_last_name_contains_html_tags": "Il cognome non può contenere tag HTML.",
+        "address_last_name_contains_url": "Il cognome non può contenere un URL",
+        "address_last_name_contains_mathematical_symbols": "Il cognome non può contenere simboli matematici"
       }
     }
   }
