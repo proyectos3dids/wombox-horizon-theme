@@ -3665,7 +3665,75 @@
       "order_details": "Détails de la commande",
       "order_details_skeleton_accessibility_label": "Connectez-vous pour afficher tous les détails de la commande.",
       "billing_address": "Adresse de facturation",
-      "card_ending_with": "se terminer avec {{lastDigits}}"
+      "card_ending_with": "se terminer avec {{lastDigits}}",
+      "contact": "Contact",
+      "contact_information": "Coordonnées",
+      "company": "Entreprise",
+      "company_and_location": "Entreprise et emplacement",
+      "fully_refunded_label": "Remboursé",
+      "group_title_label": "Une partie de: {{groupTitle}}",
+      "group_title_label_with_parent": "Pour: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "Galerie",
+        "list": "Liste"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "Montrer {{count}} articles",
+        "collapse_line_items": "Cacher {{count}} articles",
+        "line_item_summary": "{{refundableQuantity}} x {{productTitle}}",
+        "line_item_summary_accessibility_label": "{{productTitle}}, Quantité: {{refundableQuantity}}",
+        "line_item_summary_list_accessibility_label": "Articles dans {{productTitle}} paquet"
+      },
+      "discount": "Rabais",
+      "hide_items": "Masquer les éléments",
+      "loading": "Détails de la commande de chargement",
+      "loading_finished_accessibility_message": "Les détails de la commande ont été chargés",
+      "location": "Emplacement",
+      "image_gallery": {
+        "product_name_and_quantity": "{{productName}} quantité {{quantity}}",
+        "next": "Afficher les articles suivants",
+        "previous": "Afficher les articles précédents",
+        "load_more_items": {
+          "one": "Charger {{count}} Plus d'articles",
+          "other": "Charger {{count}} Plus d'articles"
+        }
+      },
+      "mobile_summary_toggle_button": {
+        "open": "Résumé de la commande de montre",
+        "closed": "Résumé de la commande de cachette"
+      },
+      "no_data": "Aucun",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} est vide",
+      "not_applicable": "N / A",
+      "paid_amount": "Payé",
+      "partially_refunded_label": "Partiellement remboursé",
+      "payment": {
+        "status_in_review": "Paiement dû après examen",
+        "status_unpaid": "Paiement dû sur {{date}}",
+        "title": "Paiement",
+        "card_payment_short_details": "{{paymentTypeLabel}} •••• {{lastDigits}}",
+        "payment_type": {
+          "gift_card": "Carte-cadeau",
+          "store_credit": "Crédit de magasin",
+          "money_order": "Mandat postal",
+          "cash_on_delivery": "Caisse à la livraison (COD)",
+          "bank_deposit": "Dépôt bancaire",
+          "manual": "Manuel"
+        },
+        "card_payment_details": "se terminer avec {{lastDigits}} - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "se terminer avec {{lastDigits}} - {{formattedTransactionAmount}}",
+        "store_credit_payment_details": "Crédit de magasin - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Payé avec les versements de paiement de la boutique",
+          "view_schedule": "Afficher le calendrier"
+        },
+        "manual_payment_methods": {
+          "money_order": "Mandat - {{formattedTransactionAmount}}",
+          "cash_on_delivery": "Cash à la livraison (COD) - {{formattedTransactionAmount}}",
+          "bank_deposit": "Dépôt bancaire - {{formattedTransactionAmount}}"
+        }
+      }
     }
   }
 }
