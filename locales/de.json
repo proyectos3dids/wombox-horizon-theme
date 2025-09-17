@@ -1915,7 +1915,139 @@
         "call_issuer": "Ihre Karte wurde abgelehnt. Verwenden Sie eine andere Zahlungsmethode oder wenden Sie sich an Ihre Bank, um weitere Informationen zu erhalten.",
         "test_mode_live_card": "Dieser Geschäft kann keine echten Bestellungen oder echten Zahlungen akzeptieren.",
         "transient_error": "Es gab ein Problem mit der Bearbeitung Ihrer Zahlung. Versuchen Sie, diese Seite zu aktualisieren oder Ihre Internetverbindung zu überprüfen.",
-        "missing_shipping_address": "Ihre Zahlung kann nicht bearbeitet werden, da Ihre Versandadresse fehlt. Fügen Sie eine Versandadresse hinzu und versuchen Sie es erneut."
+        "missing_shipping_address": "Ihre Zahlung kann nicht bearbeitet werden, da Ihre Versandadresse fehlt. Fügen Sie eine Versandadresse hinzu und versuchen Sie es erneut.",
+        "invalid_shipping_address": "Ihre Zahlung könnte nicht bearbeitet werden, da wir Ihre Versandadresse nicht finden konnten. Überprüfen Sie Ihre Versandadresse und versuchen Sie es erneut.",
+        "successful_offsite_with_gift_card_error": "Es gab eine Ausgabe, die Ihre Geschenkkartenzahlung bearbeitet. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "development_store_order_limit_reached": "Mit diesem Zahlungsabwickler haben Sie die Grenze für Entwicklungsgeschäfte erreicht. Um eine weitere Bestellung aufzugeben, müssen Sie ein Test -Zahlungs -Gateway verwenden. Erfahren Sie mehr über %{development_store_order_testing_docs_link}.",
+        "development_store_with_order_limit": "Um eine Testbestellung aufzugeben, müssen Sie ein Test -Zahlungs -Gateway verwenden. Erfahren Sie mehr über %{development_store_order_testing_docs_link}.",
+        "development_store_order_testing_docs_link": "Testaufträge in Entwicklungsgeschäften",
+        "payment_above_threshold": "Der Zahlungsbetrag liegt über der Geldgrenze für diese Region. Reduzieren Sie die Gesamtsumme und versuchen Sie es erneut",
+        "risky": "Es gab eine Ausgabe, die Ihre Zahlung bearbeitet. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "expired_buyer_action": "Die Zahlungsmethode wurde abgelaufen. Bitte versuchen Sie es erneut.",
+        "name_mismatch": "Bitte überprüfen Sie Ihre Kartendaten. Der Name auf Ihrer Karte und Ihre Abrechnungsadresse stimmen nicht überein.",
+        "shop_pay_wallet_not_available": "Das Laden von Laden ist für diese Kasse nicht verfügbar.",
+        "market_manager_blocks_wallet_payments": "Die Zahlungsmethode wird in Ihrem Land nicht unterstützt.",
+        "paypal_over_capture": "Ihre Bestellung wurde aktualisiert. Zahlen mit {{walletName}} um Ihre Bestellung abzuschließen."
+      },
+      "shipping_errors": {
+        "shipping_method": "Die Versandoptionen haben sich für Ihre Bestellung geändert. Bitte überprüfen Sie Ihre Auswahl.",
+        "shipping_method_not_available": "Ihr Wagen wurde aktualisiert und die von Ihnen hinzugefügten Artikel können nicht an Ihre Adresse geliefert werden. Entfernen Sie die Elemente, um Ihre Bestellung abzuschließen.",
+        "shipping_method_not_available_generic": {
+          "one": "Ihre Bestellung kann nicht an die ausgewählte Adresse versendet werden. Überprüfen Sie Ihre Adresse, um sicherzustellen, dass sie korrekt ist, und versuchen Sie es erneut, oder wählen Sie eine andere Adresse aus.",
+          "other": "Einige Artikel in Ihrem Karren können nicht an die von Ihnen eingegebene Adresse geliefert werden. Überprüfen Sie Ihre Adresse, um sicherzustellen, dass sie korrekt ist, und versuchen Sie es erneut, oder wählen Sie eine andere Adresse aus."
+        },
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Artikel im Karren entsprechen den Preis- oder Gewichtsanforderungen nicht, um sich für den Versand zu qualifizieren. Aktualisieren Sie Ihren Wagen und versuchen Sie es erneut.",
+        "shipping_method_not_available_updated": {
+          "one": "Der von Ihnen hinzugefügte Artikel wird nicht an Ihren Standort versendet. Entfernen Sie es, um es zu überprüfen, oder wenden Sie sich an das Geschäft.",
+          "other": "Ein oder mehrere Artikel, die Sie hinzugefügt haben, versenden Sie nicht an Ihren Standort. Entfernen Sie sie, um sie zu überprüfen, oder kontaktieren Sie das Geschäft."
+        },
+        "payment_method_not_supported": "Sie können diese Zahlungsmethode nicht verwenden %{country}. Bitte verwenden Sie eine andere Zahlungsmethode, um in dieses Land zu versenden.",
+        "empty_state": "Geben Sie Ihre Versandadresse ein, um die verfügbaren Versandmethoden anzuzeigen.",
+        "title": "Versand nicht verfügbar",
+        "invalid_selected_address": "Die ausgewählte Versandadresse ist nicht gültig",
+        "invalid_selected_address_with_update_link": "Die ausgewählte Versandadresse ist nicht gültig. %{update_address_link} oder wählen Sie eine andere Adresse aus",
+        "unavailable_addresses_only_countries": "Ihre Bestellung kann nur an versendet werden {{countriesList}}. Fügen Sie eine neue Adresse hinzu, um fortzufahren.",
+        "unavailable_selected_address": "Versand nicht für ausgewählte Adresse verfügbar",
+        "unavailable_selected_address_for_region": "Der Versand ist nicht verfügbar für {{region}}. Wählen Sie eine andere Adresse aus, um fortzufahren"
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Express Checkout",
+        "or": "ODER",
+        "or_pay_another_way": "Oder einen anderen Weg bezahlen",
+        "or_check_out_another_way": "Oder schauen Sie sich einen anderen Weg an",
+        "or_pay_with_credit_card": "Oder mit Kreditkarte bezahlen",
+        "show_more_options": "Zeigen Sie mehr Optionen",
+        "hide_more_options": "Weitere Optionen verstecken"
+      },
+      "post_purchase": {
+        "page_title": "Postkauf",
+        "title": "Postkauf",
+        "escape_confirmation": "Sie haben Ihre Bestellung bezahlt.",
+        "escape_action": "Bestätigungsbestätigung anzeigen ›",
+        "components": {
+          "close": "Schließen",
+          "expand": "Mehr anzeigen",
+          "processing": "Verarbeitung…",
+          "submit": "Einreichen"
+        }
+      },
+      "processing": {
+        "redirecting_page_title": "Umleitung…",
+        "redirecting_title": "Umleitung…",
+        "redirecting_notice": "Warten Sie, während wir Sie umleiten.",
+        "redirecting_to_bank": "Umleiten zu {{bank}}",
+        "complete_your_purchase_title": "Vervollständigen Sie Ihren Kauf",
+        "continue_to_payment_gateway_notice": "Fahren Sie mit der Zahlung fort, um Ihre Zahlungsinformationen hinzuzufügen.",
+        "continue_to_payment_gateway_button_label": "Fahren weiter zur Zahlung",
+        "complete_your_purchase_title_error": "Korrigieren Sie Ihre Zahlungsinformationen",
+        "continue_to_payment_gateway_notice_error": "Ihre Zahlungsinformationen könnten nicht überprüft werden.",
+        "continue_to_payment_gateway_button_label_error": "Zahlungsinformationen aktualisieren",
+        "page_title": "Verarbeitungsreihenfolge",
+        "title": "Verarbeitungsreihenfolge",
+        "your_order_has_been_received_title": "Vielen Dank für Ihre Bestellung",
+        "you_will_receive_confirmation": "Wir bekommen gerade viele Bestellungen. Sie sollten bald eine Bestätigung per E -Mail oder Text erhalten. Wenn Sie es in der nächsten Stunde nicht erhalten, lassen Sie es uns wissen.",
+        "you_will_not_be_charged": "Sie werden noch nicht berechnet",
+        "wait": {
+          "short": "Ihre Bestellung wird verarbeitet.",
+          "medium": {
+            "one": "Ihre Bestellung wird verarbeitet. Die geschätzte Wartezeit ist %{count} Minute.",
+            "other": "Ihre Bestellung wird verarbeitet. Die geschätzte Wartezeit ist %{count} Minuten."
+          },
+          "long": "Sie erhalten eine E -Mail, sobald die Bestellung bearbeitet wird. Derzeit gibt es ein hohes Bestellvolumen.",
+          "no_auto_refresh_html": "Wenn Sie nicht automatisch umgeleitet sind, %{link}.",
+          "refresh_this_page": "Aktualisieren Sie diese Seite"
+        },
+        "remote_shops_payments_processing": "Bearbeitungszahlungen",
+        "action_required": "Aktion erforderlich",
+        "modal_notice": "Wir kontaktieren uns {{paymentMethod}}",
+        "remote_checkout_count": "%{current} von %{total}"
+      },
+      "payment_challenge_modal": {
+        "instructions": "Füllen Sie Ihren Kauf mit Ihrem ab {{paymentMethod}} Code",
+        "timer_message": "Du hast {{timeLeft}} zu bezahlen",
+        "copy_text": "Kopie {{paymentMethod}} Code",
+        "open_app_text": "Offen {{paymentMethod}} App",
+        "header": "Zahlen mit {{paymentMethod}}",
+        "qr_code": {
+          "instructions": "Füllen Sie Ihren Kauf mit Ihrem ab {{paymentMethod}} Code"
+        },
+        "external": {
+          "instructions": "Bestätigen Sie die Zahlung in Ihrer App, um diesen Kauf abzuschließen"
+        },
+        "close": "Schließen Sie die Herausforderung"
+      },
+      "failed_payment": {
+        "page_title": "Die Zahlung konnte nicht bearbeitet werden",
+        "title": "Die Zahlung konnte nicht bearbeitet werden",
+        "payment_not_processed_title": "Ihre Zahlung könnte nicht bearbeitet werden",
+        "payment_not_processed_text": "Sie wurden nicht angeklagt. Kehren Sie in Ihren Wagen zurück, um Ihren Kauf abzuschließen.",
+        "return_to_cart_button_label": "Kehre zum Warenkorb zurück"
+      },
+      "payment_gateway": {
+        "credit_card_label": "Kreditkarte",
+        "bank_deposit_label": "Bankeinzahlung",
+        "cash_on_delivery_label": "Bargeld bei Lieferung (Kabeljau)",
+        "money_order_label": "Zahlungsanweisung",
+        "debit_card_label": "Debitkarte",
+        "deferred_payment_label": "Wählen Sie die Zahlungsmethode später",
+        "fixed_payment_label": "Ihre Zahlung wird fällig {{dueDate}}.",
+        "generic_payment_terms": "Du bist auf {{translatedName}} Bedingungen. Ihre Zahlung wird fällig {{dueDate}}.",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} Zu einem Konto mit Zugriff auf diesen Ort, um gespeicherte Zahlungsmethoden hinzuzufügen oder zu verwenden.",
+            "link": "Einloggen"
+          }
+        },
+        "direct_payment_terms": "Du bist auf {{translatedName}} Bedingungen. Ihre Karte wird aufgeladen {{dueDate}}.",
+        "fixed_direct_payment_terms": "Ihre Karte wird aufgeladen {{dueDate}}.",
+        "order_due_on_fulfillment_choose_later": "Ihre Zahlung wird fällig, sobald Ihre Bestellung erfüllt ist.",
+        "order_due_on_fulfillment_payment": "Ihre Karte wird berechnet, sobald Ihre Bestellung erfüllt ist.",
+        "order_due_on_receipt_choose_later": "Ihre Zahlung wird nach Erhalt fällig.",
+        "order_deposit_due_now": "{{depositAmount}} ist heute fällig. Der Restbetrag ist auf {{translatedName}} Bedingungen und ist fällig {{dueDate}}.",
+        "order_deposit_due_on_fulfillment": "{{depositAmount}} ist heute fällig. Der Restbetrag wird fällig, sobald Ihre Bestellung erfüllt ist.",
+        "order_deposit_due_on_receipt": "{{depositAmount}} ist heute fällig. Der Restbetrag wird später fällig sein.",
+        "order_deposit_due_on_fixed_date": "{{depositAmount}} ist heute fällig. Der Restbetrag wird fällig sein {{dueDate}}.",
+        "draft_order_payment_due_later_no_terms": "Ihre Zahlung wird fällig, sobald Ihre Bestellung bestätigt wurde."
       }
     }
   }
