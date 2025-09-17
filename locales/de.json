@@ -3979,7 +3979,67 @@
       "loading_edit_form_accessibility_message": "Laden des Bearbeitungsadressenformulars",
       "loading_form_accessibility_message": "Laden des Adressformulars",
       "loading_finished_accessibility_message": "Das Adressformular hat geladen",
-      "save": "Speichern"
+      "save": "Speichern",
+      "save_accessibility_label": "Adresse speichern {{address}}",
+      "section_title_accessibility_label": "Adresse hinzufügen",
+      "update_success_notification": "Adresse aktualisiert"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Name der Firma",
+        "company_card_section_accessibility_label": "Unternehmen"
+      },
+      "locations": {
+        "contact_email": "E-Mail",
+        "contact_list_title": "Menschen",
+        "contact_name": "Name",
+        "contact_permissions": "Berechtigungen",
+        "contact_phone_number": "Telefonnummer",
+        "location_picker_label": "Standortname",
+        "location_picker_accessibility_label": "Standortname: {{locationName}}",
+        "net_payment_terms_description": "{{name}}: Zahlungen fällig innerhalb {{numberOfDays}} Tage",
+        "deposit_percentage": "{{percentage}} Kaution",
+        "own_role_contact_name": "Du",
+        "pagination": {
+          "load_more": "Laden mehr",
+          "load_more_accessibility_label": "Laden Sie mehr Standorte"
+        },
+        "payment_details_title": "Zahlungsdetails",
+        "payment_terms": "Zahlungsbedingungen",
+        "permissions_label": "Ihre Berechtigungen",
+        "permissions_title": "Berechtigungen",
+        "section_title": "Standort",
+        "shipping_address_required": "Fügen Sie diesem Standort eine Versandadresse hinzu, um Bestellungen abzugeben.",
+        "staff_and_permissions_title": "Mitarbeiter und Berechtigungen",
+        "tax_details_title": "Steuerdetails",
+        "tax_id": "Steuer -ID",
+        "tax_exemptions": "Steuerbefreiungen",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} mehr",
+        "multiple_tax_exemptions_and": "Und",
+        "tax_exemptions_modal_close": "Schließen",
+        "taxes_none": "Keiner",
+        "tax_exemption_not_applicable": "N / A",
+        "tax_exemptions_modal_button_accessibility_label": "Zeigen Sie alle Steuerausnahmen an"
+      },
+      "location_selection": {
+        "continue_to_store": "Weiter lagern",
+        "description": "Wenn Sie bereits Artikel in Ihrem Warenkorb haben, können sich die Standorte auf den Wagenpreis und Mengen auswirken.",
+        "description_switch_later": "Sie können immer später wechseln",
+        "list_accessibility_label": "Standorte Liste",
+        "list_item_accessibility_label": "{{name}}: {{address}}",
+        "list_item_without_address_accessibility_label": "{{name}}: Keine Adresse",
+        "list_loading_accessibility_message": "Ladeliste von Standorten",
+        "list_loading_address_accessibility_message": "Ladenadresse für {{locationName}}",
+        "list_loading_finished_accessibility_message": "Die Liste der Standorte hat geladen",
+        "loading_store_accessibility_message": "Aufbewahren",
+        "no_location_title": "Nur persönliche Bestellungen",
+        "no_location_description": "Sie haben keine Erlaubnis mehr, Bestellungen für zu erteilen {{company}}. Sie können immer noch persönliche Bestellungen aufgeben.",
+        "no_locations_found": "Keine Standorte gefunden",
+        "search": "Suchorte",
+        "search_location_title": "Wählen Sie einen Ort aus",
+        "selection_cancel_button": "Stornieren",
+        "selection_confirmation_button": "Wählen Sie den Standort"
+      }
     }
   }
 }
