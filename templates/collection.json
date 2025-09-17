@@ -452,31 +452,45 @@
     "section_zBGffz": {
       "type": "section",
       "blocks": {
-        "ai_gen_block_df7ea6f_Rjneky": {
-          "type": "ai_gen_block_df7ea6f",
+        "ai_gen_block_7a9924b_NqKbLJ": {
+          "type": "ai_gen_block_7a9924b",
           "settings": {
             "heading": "",
             "description": "{{ closest.collection.description }}",
+            "preview_lines": 2,
             "read_more_text": "Read more",
             "read_less_text": "Read less",
             "full_width": true,
+            "max_width": 1200,
+            "text_alignment": "center",
             "margin_top": 0,
             "margin_bottom": 0,
             "padding_top": 40,
             "padding_bottom": 40,
-            "padding_horizontal": 0,
+            "padding_horizontal": 20,
+            "mobile_padding_top": 20,
+            "mobile_padding_bottom": 20,
+            "mobile_padding_horizontal": 20,
             "heading_size": 20,
-            "text_size": 16,
             "heading_color": "#000000",
+            "title_margin_bottom": 20,
+            "mobile_heading_scale": 0.8,
+            "full_width_text": true,
+            "text_max_width": 800,
+            "text_size": 16,
             "text_color": "#c67461",
+            "text_margin_bottom": 0,
+            "mobile_text_scale": 0.9,
+            "button_text_size": 16,
             "button_color": "#c67461",
-            "button_hover_color": "#d4a697"
+            "button_hover_color": "#d4a697",
+            "button_margin_top": 0
           },
           "blocks": {}
         }
       },
       "block_order": [
-        "ai_gen_block_df7ea6f_Rjneky"
+        "ai_gen_block_7a9924b_NqKbLJ"
       ],
       "name": "t:names.custom_section",
       "settings": {
