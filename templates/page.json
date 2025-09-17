@@ -459,7 +459,7 @@
         "question_size": 18,
         "answer_size": 16,
         "items_gap": 12,
-        "border_thickness": 1,
+        "border_thickness": 2,
         "radius": 0,
         "padding_top": 48,
         "padding_bottom": 48,
