@@ -1284,7 +1284,7 @@
         "button_color": "#ffffff",
         "button_hover_color": "#ffffff",
         "button_bg_color": "#d4a697",
-        "button_bg_hover_color": "#000000",
+        "button_bg_hover_color": "#333333",
         "arrow_icon_color": "#ffffff",
         "arrow_bg_color": "#d4a697",
         "arrow_border_color": "#ffffff",
