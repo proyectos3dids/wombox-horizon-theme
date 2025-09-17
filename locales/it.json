@@ -3186,7 +3186,143 @@
       "error": "C'è stato un problema a caricare i risultati della ricerca. Aggiorna la pagina o riprova più tardi.",
       "sorting": {
         "relevance": "Rilevanza",
-        "price_ascending": "Prezzo, da basso a alto"
+        "price_ascending": "Prezzo, da basso a alto",
+        "price_descending": "Prezzo, alto a basso"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Errore - %{title}",
+      "products": "Prodotti",
+      "shopping_cart": "Il tuo carrello della spesa",
+      "account": "Account",
+      "create_account": "Creare un account",
+      "reset_account": "Ripristina l'account",
+      "addresses": "Addresses",
+      "order": "Ordine %{name}",
+      "search": "Ricerca",
+      "search_results": {
+        "one": "Ricerca: %{count} risultato trovato per \"%{terms}\"",
+        "other": "Ricerca: %{count} Risultati trovati per \"%{terms}\""
+      },
+      "collections": "Collezioni",
+      "not_found": "404 non trovato",
+      "challenge": "Sfida",
+      "checkpoint": "Checkpoint"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} Sono stati applicati sconti"
+    },
+    "challenge": {
+      "message": "Per continuare, facci sapere che non sei un robot.",
+      "error": "La tua risposta non era corretta, riprova.",
+      "submit_button_text": "Invia"
+    },
+    "checkpoint": {
+      "message": "Risolvi Captcha per continuare",
+      "error": "La convalida di Captcha non è riuscita",
+      "submit_button_text": "Invia"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Di solito pronto in 1 ora",
+        "two_hours": "Di solito pronto in 2 ore",
+        "four_hours": "Di solito pronto in 4 ore",
+        "twenty_four_hours": "Di solito pronto in 24 ore",
+        "two_to_four_days": "Di solito pronto in 2-4 giorni",
+        "five_or_more_days": "Di solito pronto in 5+ giorni",
+        "zero_to_two_hours": "Di solito pronto in 2 ore",
+        "two_to_four_hours": "Di solito pronto in 4 ore",
+        "immediately": "Pronto per il ritiro ora",
+        "next_day": "Pronto per il ritiro il giorno successivo"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Questo articolo è un acquisto ricorrente o differito. Continuando, accetto il %{cancellationPolicyLink} e autorizzarti ad addebitare il mio metodo di pagamento ai prezzi, alla frequenza e alle date elencate in questa pagina fino a quando il mio ordine non viene eseguito o annulo, se consentito.",
+      "buyer_consent_cart": "Uno o più degli articoli nel carrello è un acquisto ricorrente o differito. Continuando, accetto il %{cancellationPolicyLink} e autorizzarti ad addebitare il mio metodo di pagamento ai prezzi, alla frequenza e alle date elencate in questa pagina fino a quando il mio ordine non viene eseguito o annulo, se consentito.",
+      "cancellation_policy": "Politica di cancellazione"
+    }
+  },
+  "customer_accounts": {
+    "date": {
+      "range": "{{startDate}}–{{endDate}}",
+      "humanize": {
+        "lessThanOneYearAgo": "{{date}} A {{time}}",
+        "lessThanOneHourAgo": {
+          "one": "{{count}} minuto fa",
+          "other": "{{count}} minuti fa"
+        },
+        "lessThanOneMinuteAgo": "Proprio adesso",
+        "lessThanOneWeekAgo": "{{weekday}} A {{time}}",
+        "yesterday": "Ieri a {{time}}",
+        "today": "Oggi a {{time}}",
+        "tomorrow": "Domani a {{time}}",
+        "lessThanOneWeekAway": "{{weekday}} A {{time}}",
+        "lessThanOneYearAway": "{{date}} A {{time}}"
+      }
+    },
+    "enable_javascript": "Per visualizzare il tuo account, abilita JavaScript nelle impostazioni del browser o accedi con un altro browser.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Nascondi il menu dell'account",
+        "label": "Account",
+        "show_accessibility_label": "Mostra il menu dell'account",
+        "nav_accessibility_label": "Navigazione dell'account",
+        "open_menu_accessibility_label": "Navigazione dell'account aperta",
+        "close_menu_accessibility_label": "Chiudere la navigazione dell'account",
+        "loading_message": "Caricamento della navigazione dell'account"
+      },
+      "action_menu_accessibility_label": "Più azioni",
+      "close_menu_accessibility_label": "Chiudere la navigazione principale",
+      "contact_email_subject": "Contatto da {{shopName}} negozio online",
+      "contact_link": "Informazioni sui contatti",
+      "delete_confirmation": {
+        "cancel": "Cancellare",
+        "delete": "Eliminare"
+      },
+      "dismiss_toast": "Congedare",
+      "document_title": "{{sectionName}} - {{shopName}} - Account",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "go_to_store_link": "Vai al negozio",
+      "loading_message": "Caricamento",
+      "loading_policy_content_accessibility_label": "Caricamento del contenuto della politica",
+      "log_out_link": "disconnessione",
+      "logout_overlay_label": "Firmare ...",
+      "nav_label_accessibility_label": "Navigazione principale",
+      "navigation_accessibility_message": "Hai navigato a {{sectionName}}",
+      "open_menu_accessibility_label": "Navigazione principale aperta",
+      "orders_link_label": "Ordini",
+      "shop_logo_accessibility_label": "{{shopName}} logo",
+      "subscriptions_link_label": "Abbonamenti",
+      "settings_link": "Impostazioni",
+      "country_switcher_toast_message": "Paese commosso a {{countryName}}",
+      "switch_country": "Cambiare paese",
+      "no_countries_found": "Nessun paesi trovato",
+      "location_switcher_toast_message": "Posizione commutata a {{locationName}}",
+      "switch_location": "Ubicazione della posizione",
+      "no_locations_found": "Nessuna posizione trovata",
+      "try_new_search": "Prova una nuova ricerca",
+      "view_details": "Visualizza i dettagli",
+      "company_location": "Posizione aziendale",
+      "search": "Ricerca",
+      "skip_to_content": "Salta al contenuto"
+    },
+    "announcement_bar": {
+      "expand_label": "Espandi la barra degli annunci",
+      "collapse_label": "Barra di annuncio del collasso",
+      "close_label": "Close annuncio"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Caricamento delle informazioni sull'account",
+      "loading_finished_accessibility_message": "Le informazioni sull'account sono state caricate",
+      "profile_card": {
+        "cancel": "Cancellare",
+        "cancel_accessibility_label": "Annulla il profilo di modifica",
+        "edit": "Modificare",
+        "edit_accessibility_label": "Modifica profilo",
+        "email_help_text": "L'e -mail non può essere modificata",
+        "first_name": "Nome di battesimo",
+        "last_name": "Cognome",
+        "email": "E-mail"
       }
     }
   }
