@@ -1,11 +1,29 @@
 
 {% render 'button', link: block.settings.link %}
 
+
+{% if  block.settings.enable_red_bg %}
+<style>
+.button--ARUNpV054M2oxSlNFY__button_HPqij8{
+  background-color: #D4A697;
+}
+</style>
+{% endif %}
+
 {% schema %}
 {
   "name": "t:names.button",
   "tag": null,
   "settings": [
+    
+
+    {
+      "type": "checkbox",
+      "id": "enable_red_bg",
+      "label": "Activar fondo personalizado",
+      "default": false
+    }
+    ,
     {
       "type": "text",
       "id": "label",
