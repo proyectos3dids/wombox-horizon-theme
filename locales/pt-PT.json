@@ -870,9 +870,129 @@
       "deliverability": {
         "not_deliverable": {
           "title": {
-            "one": "Sem entrega disponível para %{count} item"
-          }
+            "one": "Sem entrega disponível para %{count} item",
+            "other": "Sem entrega disponível para %{count} Unid"
+          },
+          "message": {
+            "one": "Este item será removido do seu carrinho porque não há métodos de entrega disponíveis para o seu endereço.",
+            "other": "Esses itens serão removidos do seu carrinho porque não há métodos de entrega disponíveis para o seu endereço."
+          },
+          "label": "Sem entrega"
         }
+      },
+      "order_summary": {
+        "title": "Resumo do pedido",
+        "group_title_label": "Parte de \"%{group_title}\"",
+        "for_add_on": "Para: %{group_title}",
+        "from_shop_heading": "De %{shop_name}",
+        "from_other_stores_heading": "De outras lojas",
+        "number_items": {
+          "one": "%{count} item",
+          "other": "%{count} Unid"
+        },
+        "view_all_items": {
+          "one": "Visualizar %{count} item",
+          "other": "Ver tudo %{count} Unid"
+        },
+        "more_items_modal": {
+          "search_item": "Procurar",
+          "clear_search": "Pesquisa clara",
+          "empty_results": "Nenhum resultado encontrado para \"%{searchText}\". Verifique a ortografia ou use uma palavra ou frase diferente.",
+          "number_items_shown": "%{shownNumber} de %{totalNumber} Unid"
+        },
+        "order_name_label": "Ordem %{name}",
+        "shopping_cart_label": "Carrinho de compras",
+        "discount_title": "Desconto",
+        "discount_title_stacking": {
+          "one": "Desconto",
+          "other": "Descontos"
+        },
+        "discount_order_stacking": {
+          "one": "Desconto do pedido",
+          "other": "Pedidos de descontos"
+        },
+        "discount_label": "Código de desconto",
+        "discount_not_found": "Incapaz de encontrar um desconto válido correspondendo ao código inserido",
+        "discount_placeholder": "Código de desconto",
+        "discount_code_applied": "Código de desconto aplicado",
+        "discount_code_allocations_mismatch": "Seu <strong style=\"text-transform:uppercase\">%{code}</strong> O código de desconto mudou. Revise seu carrinho e tente novamente.",
+        "gift_card_applied": "Cartão -presente aplicado",
+        "enter_shipping_address": "Digite o endereço de entrega",
+        "gift_card_title": "Cartão -presente",
+        "gift_card_label": "Cartão -presente",
+        "gift_card_placeholder": "Cartão -presente",
+        "gift_card_and_discount_title": "Código de desconto ou cartão -presente",
+        "gift_card_and_discount_label": "Código de desconto ou cartão -presente",
+        "gift_card_and_discount_placeholder": "Código de desconto ou cartão -presente",
+        "remove_gift_card_label": "Claro cartão -presente",
+        "remove_discount_label": "Remova o desconto",
+        "return_restocking_fee_label": "Taxa de reabastecimento",
+        "return_shipping_fee_label": "Retorno de envio",
+        "free_shipping_discount_label": "Frete grátis",
+        "applied_free_shipping_discount_label": "Aplicado",
+        "apply_discount_button_label": "Aplicar",
+        "applied_discount_message": "%{amount} Off Off Ordem Preço",
+        "discount_has_been_applied": "O desconto foi aplicado",
+        "discount_has_been_removed": "O desconto foi removido",
+        "gift_card_has_been_applied": "Cartão -presente foi aplicado",
+        "gift_card_has_been_removed": "Cartão de presente foi removido",
+        "gift_card_subscriptions_notice": "Cartões -presente só serão aplicados ao seu primeiro pagamento",
+        "discount_already_applied": "Um desconto foi aplicado a este pedido. Você não pode adicionar outro desconto.",
+        "cart_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> O código de desconto não é válido para os itens em seu carrinho",
+        "discount_requires_customer_notice": "Digite suas informações de envio para aplicar o <strong style=\"text-transform:uppercase\">%{code}</strong> Código de desconto",
+        "customer_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> O código de desconto não está disponível para você agora",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> O código de desconto requer cliente elegível",
+        "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> O código de desconto não está disponível para o seu endereço de entrega",
+        "customer_already_used_once_per_customer_discount_notice": "O <strong style=\"text-transform:uppercase\">%{code}</strong> O código de desconto já foi usado",
+        "subtotal_label": "Subtotal",
+        "subtotal_label_with_quantity": {
+          "one": "Subtotal · %{count} item",
+          "other": "Subtotal · %{count} Unid"
+        },
+        "shipping_label": "Envio",
+        "pickup_label": "Pickup na loja",
+        "no_pickup_location": "Não há locais de coleta disponíveis.",
+        "pickup_unavailable_banner_title": {
+          "one": "Sem lojas disponíveis com seu item",
+          "other": "Sem lojas disponíveis com seus itens"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Envio para resolver",
+          "ship_to_address_instead_html": "%{link} em vez de"
+        },
+        "tip_label": "Dica",
+        "unconfirmed_label": "Não confirmado",
+        "calculating_shipping": "Calculando…",
+        "calculating": "Calculando…",
+        "shipping_default_value": "Calculado na próxima etapa",
+        "shipping_discount_title": "Desconto de envio",
+        "shipping_pending_value": "—",
+        "shipping_pending_message": "Ainda não está disponível",
+        "shipping_policy_link": "Custos de envio",
+        "taxes_label": "Impostos",
+        "estimated_taxes_label": "Impostos estimados",
+        "information_estimated_taxes_label": "Impostos (estimados)",
+        "estimated_taxes_finalization_tooltip_content": "O imposto final e o total serão confirmados por e -mail ou texto depois de fazer seu pedido.",
+        "order_total_label": "Pedido total",
+        "price_before_discount_aria_text": "Preço original",
+        "price_after_discount_aria_text": "Preço com desconto",
+        "discount_code_aria_text": "Código de desconto",
+        "total_savings": "Economia total",
+        "total_label": "Total",
+        "total_due_label": "Total devido",
+        "total_paid_label": "Total pago",
+        "total_price_label": "Preço total",
+        "total_outstanding_label": "Valor a pagar",
+        "deposit_label": "Depósito",
+        "total_due_today_label": "Total devido hoje",
+        "total_due_later_label": "Total devido mais tarde",
+        "partial_total_label": "Total",
+        "free_total_label": "Livre",
+        "free_shipping_total_label": "Livre",
+        "paid_label": "Pago",
+        "payment_due_label": "Pagamento devido",
+        "vat_label_html": "Incluindo %{amount} em impostos",
+        "duties_included_label": "O total inclui impostos e taxas. Não há cobranças extras na entrega."
       }
     }
   }
