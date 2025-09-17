@@ -3196,7 +3196,85 @@
       "error": "Houve um problema em carregar seus resultados de pesquisa. Atualize a página ou tente novamente mais tarde.",
       "sorting": {
         "relevance": "Relevância",
-        "price_ascending": "Preço, baixo para alto"
+        "price_ascending": "Preço, baixo para alto",
+        "price_descending": "Preço, alto para baixo"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Erro - %{title}",
+      "products": "Produtos",
+      "shopping_cart": "Seu carrinho de compras",
+      "account": "Conta",
+      "create_account": "Criar uma conta",
+      "reset_account": "Redefinir conta",
+      "addresses": "Endereços",
+      "order": "Ordem %{name}",
+      "search": "Procurar",
+      "search_results": {
+        "one": "Procurar: %{count} resultado encontrado para \"%{terms}\"",
+        "other": "Procurar: %{count} Resultados encontrados para \"%{terms}\""
+      },
+      "collections": "Coleções",
+      "not_found": "404 não encontrado",
+      "challenge": "Desafio",
+      "checkpoint": "Ponto de verificação"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} Descontos foram aplicados"
+    },
+    "challenge": {
+      "message": "Para continuar, informe -nos que você não é um robô.",
+      "error": "Sua resposta não estava correta, tente novamente.",
+      "submit_button_text": "Enviar"
+    },
+    "checkpoint": {
+      "message": "Resolva Captcha para continuar",
+      "error": "A validação do captcha falhou",
+      "submit_button_text": "Enviar"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Geralmente pronto em 1 hora",
+        "two_hours": "Geralmente pronto em 2 horas",
+        "four_hours": "Geralmente pronto em 4 horas",
+        "twenty_four_hours": "Geralmente pronto em 24 horas",
+        "two_to_four_days": "Geralmente pronto em 2-4 dias",
+        "five_or_more_days": "Geralmente pronto em mais de 5 dias",
+        "zero_to_two_hours": "Geralmente pronto em 2 horas",
+        "two_to_four_hours": "Geralmente pronto em 4 horas",
+        "immediately": "Pronto para a coleta agora",
+        "next_day": "Pronto para a coleta no dia seguinte"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Este item é uma compra recorrente ou diferida. Ao continuar, eu concordo com o %{cancellationPolicyLink} e autorizá -lo a cobrar meu método de pagamento aos preços, frequência e datas listadas nesta página até que meu pedido seja cumprido ou eu cancelei, se permitido.",
+      "buyer_consent_cart": "Um ou mais dos itens do seu carrinho é uma compra recorrente ou diferida. Ao continuar, eu concordo com o %{cancellationPolicyLink} e autorizá -lo a cobrar meu método de pagamento aos preços, frequência e datas listadas nesta página até que meu pedido seja cumprido ou eu cancelei, se permitido.",
+      "cancellation_policy": "Política de cancelamento"
+    }
+  },
+  "customer_accounts": {
+    "date": {
+      "range": "{{startDate}}–{{endDate}}",
+      "humanize": {
+        "lessThanOneYearAgo": "{{date}} no {{time}}",
+        "lessThanOneHourAgo": {
+          "one": "{{count}} minuto atrás",
+          "other": "{{count}} minutos atrás"
+        },
+        "lessThanOneMinuteAgo": "Agora mesmo",
+        "lessThanOneWeekAgo": "{{weekday}} no {{time}}",
+        "yesterday": "Ontem em {{time}}",
+        "today": "Hoje em {{time}}",
+        "tomorrow": "Amanhã em {{time}}",
+        "lessThanOneWeekAway": "{{weekday}} no {{time}}",
+        "lessThanOneYearAway": "{{date}} no {{time}}"
+      }
+    },
+    "enable_javascript": "Para visualizar sua conta, ative o JavaScript nas configurações do navegador ou faça login com outro navegador.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Ocultar o menu da conta",
+        "label": "Conta"
       }
     }
   }
