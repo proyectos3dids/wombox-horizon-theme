@@ -1985,7 +1985,75 @@
         "complete_your_purchase_title": "Complétez votre achat",
         "continue_to_payment_gateway_notice": "Continuez à payer pour ajouter vos informations de paiement.",
         "continue_to_payment_gateway_button_label": "Continuez à payer",
-        "complete_your_purchase_title_error": "Corrigez vos informations de paiement"
+        "complete_your_purchase_title_error": "Corrigez vos informations de paiement",
+        "continue_to_payment_gateway_notice_error": "Vos informations de paiement n'ont pas pu être vérifiées.",
+        "continue_to_payment_gateway_button_label_error": "Mettre à jour les informations de paiement",
+        "page_title": "Commande de traitement",
+        "title": "Commande de traitement",
+        "your_order_has_been_received_title": "Merci pour votre commande",
+        "you_will_receive_confirmation": "Nous recevons beaucoup de commandes en ce moment. Vous devriez recevoir une confirmation par e-mail ou par SMS bientôt. Si vous ne le recevez pas à l'heure suivante, faites-le nous savoir.",
+        "you_will_not_be_charged": "Vous ne serez pas encore facturé",
+        "wait": {
+          "short": "Votre commande est traitée.",
+          "medium": {
+            "one": "Votre commande est traitée. Le temps d'attente estimé est %{count} minute.",
+            "other": "Votre commande est traitée. Le temps d'attente estimé est %{count} minutes."
+          },
+          "long": "Vous recevrez un e-mail dès que votre commande est traitée. Il y a actuellement un volume élevé de commandes.",
+          "no_auto_refresh_html": "Si vous n'êtes pas automatiquement redirigé, %{link}.",
+          "refresh_this_page": "actualiser cette page"
+        },
+        "remote_shops_payments_processing": "Traitement des paiements",
+        "action_required": "Action requise",
+        "modal_notice": "Nous contactons {{paymentMethod}}",
+        "remote_checkout_count": "%{current} de %{total}"
+      },
+      "payment_challenge_modal": {
+        "instructions": "Complétez votre achat en utilisant votre {{paymentMethod}} code",
+        "timer_message": "Tu as {{timeLeft}} payer",
+        "copy_text": "Copie {{paymentMethod}} code",
+        "open_app_text": "Ouvrir {{paymentMethod}} appliquer",
+        "header": "Payer avec {{paymentMethod}}",
+        "qr_code": {
+          "instructions": "Complétez votre achat en utilisant votre {{paymentMethod}} code"
+        },
+        "external": {
+          "instructions": "Confirmez le paiement sur votre application pour terminer cet achat"
+        },
+        "close": "Fermez le défi"
+      },
+      "failed_payment": {
+        "page_title": "Le paiement n'a pas pu être traité",
+        "title": "Le paiement n'a pas pu être traité",
+        "payment_not_processed_title": "Votre paiement n'a pas pu être traité",
+        "payment_not_processed_text": "Vous n'avez pas été inculpé. Retournez dans votre panier pour terminer votre achat.",
+        "return_to_cart_button_label": "Retour au chariot"
+      },
+      "payment_gateway": {
+        "credit_card_label": "Carte de crédit",
+        "bank_deposit_label": "Dépôt bancaire",
+        "cash_on_delivery_label": "Caisse à la livraison (COD)",
+        "money_order_label": "Mandat postal",
+        "debit_card_label": "Carte de débit",
+        "deferred_payment_label": "Choisissez le mode de paiement plus tard",
+        "fixed_payment_label": "Votre paiement sera dû {{dueDate}}.",
+        "generic_payment_terms": "Tu es sur {{translatedName}} termes. Votre paiement sera dû {{dueDate}}.",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} à un compte avec accès à cet emplacement pour ajouter ou utiliser des méthodes de paiement enregistrées.",
+            "link": "Se connecter"
+          }
+        },
+        "direct_payment_terms": "Tu es sur {{translatedName}} termes. Votre carte sera facturée {{dueDate}}.",
+        "fixed_direct_payment_terms": "Votre carte sera facturée {{dueDate}}.",
+        "order_due_on_fulfillment_choose_later": "Votre paiement sera dû une fois votre commande remplie.",
+        "order_due_on_fulfillment_payment": "Votre carte sera facturée une fois votre commande remplie.",
+        "order_due_on_receipt_choose_later": "Votre paiement sera dû à la réception.",
+        "order_deposit_due_now": "{{depositAmount}} est dû aujourd'hui. L'équilibre est sur {{translatedName}} termes et est dû sur {{dueDate}}.",
+        "order_deposit_due_on_fulfillment": "{{depositAmount}} est dû aujourd'hui. Le solde sera dû une fois votre commande remplie.",
+        "order_deposit_due_on_receipt": "{{depositAmount}} est dû aujourd'hui. Le solde sera dû plus tard.",
+        "order_deposit_due_on_fixed_date": "{{depositAmount}} est dû aujourd'hui. Le solde sera dû {{dueDate}}.",
+        "draft_order_payment_due_later_no_terms": "Votre paiement sera dû une fois votre commande confirmée."
       }
     }
   }
