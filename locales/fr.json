@@ -3980,7 +3980,79 @@
         "search": "Emplacements de recherche",
         "search_location_title": "Sélectionnez un emplacement",
         "selection_cancel_button": "Annuler",
-        "selection_confirmation_button": "Choisir l'emplacement"
+        "selection_confirmation_button": "Choisir l'emplacement",
+        "selection_continue_button": "Continuer",
+        "title": "Pour quel emplacement achetez-vous?",
+        "title_choose_location": "Choisissez un emplacement",
+        "clear_search": "Recherche claire",
+        "try_new_search": "Essayez une nouvelle recherche"
+      },
+      "addresses": {
+        "add_billing_address_button": "Ajouter l'adresse de facturation",
+        "add_billing_address_section_accessibility_label": "Ajouter l'adresse de facturation",
+        "add_shipping_address_button": "Ajouter l'adresse d'expédition",
+        "add_shipping_address_section_accessibility_label": "Ajouter l'adresse d'expédition",
+        "billing_address_card_title": "Adresse de facturation",
+        "cancel_adding_billing_address_accessibility_label": "Annuler l'ajout d'adresse de facturation",
+        "cancel_adding_shipping_address_accessibility_label": "Annuler l'ajout d'adresse d'expédition",
+        "save_new_billing_address_accessibility_label": "Sauver l'adresse de facturation",
+        "save_new_shipping_address_accessibility_label": "Enregistrer l'adresse d'expédition",
+        "shipping_address_card_title": "Adresse de livraison"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Cacher tout",
+          "show_all": "Tout montrer",
+          "hide_all_accessibility_label": "Cacher toutes les commandes en revue",
+          "show_all_accessibility_label": "Afficher toutes les commandes en revue",
+          "show_all_orders_in_review": "Afficher toutes les commandes en revue",
+          "show_less_orders_in_review": "Montrer moins de commandes en revue",
+          "title": "En attente",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Vous n'avez pas de commandes en attente",
+            "pending_orders": {
+              "one": "Tu as {{count}} commande en attente",
+              "other": "Tu as {{count}} ordres en attente"
+            },
+            "more_than_pagination_length": "Tu as plus de {{count}} ordres en attente"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}}+",
+          "pagination": {
+            "nav_accessibility_label": "Commandes en revue boutons de navigation"
+          }
+        },
+        "order_list_column_headers_location": "Emplacement",
+        "order_list_column_headers_contact": "Contact",
+        "order_list_column_headers_status": "Statut",
+        "removed_company_contact_tooltip": "Supprimé de l'entreprise"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Confirmé {{date}} de l'ordre {{draftOrderName}}",
+        "loading": "Détails de la commande de chargement",
+        "loading_finished_accessibility_message": "Les détails de la commande ont été chargés",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "Votre paiement est {{count}} jour en retard",
+              "other": "Votre paiement est {{count}} jours en retard"
+            },
+            "banner_due": {
+              "one": "Votre paiement est dû {{count}} jour",
+              "other": "Votre paiement est dû {{count}} jours"
+            },
+            "banner_due_today": "Votre paiement est dû aujourd'hui",
+            "title": "Paiement dû",
+            "title_with_date": "Paiement dû {{date}}",
+            "title_due_on_receipt": "Paiement non encore dû",
+            "title_due_on_fulfillment": "Paiement dû sur la réalisation",
+            "description_overdue": "Votre paiement est en retard.",
+            "description_partially_paid": "Cette commande a été partiellement payée. Vous avez un équilibre restant.",
+            "description_authorized": "Votre mode de paiement sera facturé à la date d'échéance, ou vous pouvez payer maintenant.",
+            "description_waiting_for_manual_payment": "Cette commande a un paiement en attente. Le solde sera mis à jour lorsque le paiement sera reçu.",
+            "description_due_on_receipt": "Vous recevrez une facture lorsque le paiement sera dû.",
+            "description_due_on_receipt_partially_paid": "Cette commande a été partiellement payée. Vous avez un équilibre restant. Vous recevrez une facture lorsque le paiement sera dû."
+          }
+        }
       }
     }
   }
