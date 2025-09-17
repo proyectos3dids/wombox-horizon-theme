@@ -3097,8 +3097,70 @@
       "line_item": {
         "item_status": {
           "add_variant": "Ajouté %{delta}",
-          "increment_item": "Ajouté %{delta}"
+          "increment_item": "Ajouté %{delta}",
+          "decrement_item": "Supprimé %{delta} de %{total}",
+          "decrement_fulfilled_line_item": "Retourné %{delta} de %{total}",
+          "decrement_return_line_item": "Supprimé %{delta} De retour"
         }
+      },
+      "order": {
+        "not_available": "Cette commande n'est pas disponible",
+        "financial_status": {
+          "authorized": "Autorisé",
+          "pending": "En attente",
+          "paid": "Payé",
+          "unpaid": "Non rémunéré",
+          "voided": "Vide",
+          "partially_paid": "Partiellement payé",
+          "partially_refunded": "Partiellement remboursé",
+          "refunded": "Remboursé",
+          "expired": "Expiré"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Réalisé",
+          "complete": "Complet",
+          "partial": "Partiel",
+          "unfulfilled": "Insatisfait",
+          "restocked": "Réapprovisionné"
+        },
+        "transaction_status": {
+          "success": "Succès",
+          "pending": "En attente",
+          "failure": "Échec",
+          "error": "Erreur"
+        },
+        "cancel_reason": {
+          "declined": "Le paiement refusé",
+          "inventory": "Articles indisponibles",
+          "fraud": "Ordonnance frauduleuse",
+          "customer": "Commande modifiée / annulée du client",
+          "staff": "Erreur du personnel",
+          "other": "Autre"
+        },
+        "cash_on_delivery": "Caisse à la livraison (COD)"
+      },
+      "cart": {
+        "only_n_items_available": "Vous ne pouvez ajouter que %{count} %{name} au chariot.",
+        "too_many_items_in_cart": "Vous ne pouvez pas en ajouter plus %{name} au chariot.",
+        "only_one_added_to_cart": "Un seul article a été ajouté à votre panier en raison de la disponibilité.",
+        "only_n_added_to_cart": "Seulement %{quantity} Des articles ont été ajoutés à votre panier en raison de la disponibilité.",
+        "maximum_available_quantity_reached": "La quantité maximale de cet article est déjà dans votre panier.",
+        "less_than_minimum": "Cet article a un minimum de %{min}.",
+        "more_than_maximum": "Cet article a un maximum de %{max}.",
+        "not_respect_step": "Vous ne pouvez ajouter cet élément que par incréments de %{step}.",
+        "all_items_in_cart": "Tous %{count} %{name} sont dans votre panier.",
+        "empty_update": "Impossible de mettre à jour le panier vide",
+        "missing_parameters": "Aucun ID valide ou paramètre de ligne",
+        "generic_error": "Erreur de panier",
+        "invalid_input": "%{parameter} Le paramètre n'est pas valide.",
+        "product_not_available": "Le produit n'est pas disponible",
+        "too_many_line_items_error": "Votre panier ne peut pas contenir plus que %{max} articles.",
+        "link_expired": "Lien expiré",
+        "link_no_longer_exists": "Le lien n'existe plus.",
+        "stock_problems_html": "Un ou plusieurs articles ne sont plus disponibles. Nous avons fourni un <a href='%{link}'>chariot mis à jour</a>.",
+        "changed": "Chariot changé",
+        "items_changed": "Un ou plusieurs articles ont changé.",
+        "product_sold_out": "Le produit '%{name}«est déjà épuisé."
       }
     }
   }
