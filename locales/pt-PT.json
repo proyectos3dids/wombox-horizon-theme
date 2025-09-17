@@ -1625,9 +1625,77 @@
             "default": "Definido como padrão",
             "card_number": "Número do cartão",
             "expiry": "Data de validade",
-            "security_code": "Código de segurança"
+            "security_code": "Código de segurança",
+            "name": "Nome no cartão",
+            "billing": "projeto de lei para"
           }
-        }
+        },
+        "expired_cards_info": {
+          "one": "Há %{count} Cartão expirado, que você pode visualizar e editar em sua conta.",
+          "other": "Há %{count} cartões expirados, que você pode visualizar e editar em sua conta."
+        },
+        "local_payment_method_receiver_notice": "Depois de fazer seu pedido, você receberá detalhes de pagamento. Faça o pagamento em um caixa eletrônico ou online dentro {{dueDays}} dias.",
+        "order_edit_banner_title": "Pagamento de {{amount_owed}} é necessário",
+        "order_edit_banner_subtitle": "Seu pedido {{order_number}} foi atualizado. Revise essas alterações e pague para confirmar seu pedido.",
+        "order_edit_banner_items_added": {
+          "one": "Adicionado",
+          "other": "Adicionado %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Removido",
+          "with_quantities": "Removido {{delta}} de {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Retornou {{quantity}}",
+          "with_quantities": "Retornou {{delta}} de {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Removido do retorno",
+          "with_quantities": "Removido {{delta}} do retorno"
+        },
+        "order_edit_banner_single_item_added": "Adicionado",
+        "order_edit_banner_multiple_items_added": "Adicionado {{amount}}",
+        "order_edit_banner_single_item_removed": "Removido",
+        "order_edit_banner_multiple_items_removed": "Removido {{amount}}",
+        "order_edit_banner_single_item_returned": "Retornou",
+        "order_edit_banner_multiple_items_returned": "Retornou {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "Removido do retorno",
+        "order_edit_banner_multiple_items_return_line_item_removed": "Removido {{amount}} do retorno",
+        "order_edit_banner_updated_order_label": "Pedido atualizado",
+        "gift_card_wrapper": {
+          "heading": "Cartão -presente",
+          "apply_gift_card_label": "Aplique um cartão -presente",
+          "apply_another_gift_card_label": "Aplique outro cartão -presente",
+          "gift_card_label": "Cartão -presente %{identifier}",
+          "payment_tag": "Cartão -presente",
+          "add_label": "Adicione um cartão -presente",
+          "manage_label": "Gerencie cartões -presente"
+        },
+        "gift_card_store_credit": {
+          "add_label": "Adicione um cartão -presente ou crédito da loja",
+          "manage_label": "Gerencie cartões -presente ou crédito de loja"
+        },
+        "gift_card_checkbox_label": "Aplique cartão -presente",
+        "custom_onsite_payment_method_modal": {
+          "title": "Confirmação de pagamento personalizada no local"
+        },
+        "markets_pro_disclaimer_label": "Ao clicar abaixo e concluir seu pedido, você concorda em comprar seus itens da Global-E como comerciante de registro para esta transação, no Global-E's %{markets_pro_terms} e %{privacy_policy}. Global-E é um provedor de serviços de atendimento internacional para %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Termos e Condições",
+        "markets_pro_disclaimer_privacy_policy": "política de Privacidade",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Comerciante de termos e condições de registro",
+        "markets_pro_disclaimer_privacy_policy_title": "Mercante da Política de Privacidade de Registro",
+        "purchase_order_number": {
+          "title": "PO Número",
+          "label": "Número PO (opcional)"
+        },
+        "alternative_payment_currency_total_notice": "Nota: você será cobrado %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Nota: Total convertido é %{amount_due}.",
+        "waiting_on_taxes_message": "Se seus impostos não calcularem nos próximos segundos, atualize a página.",
+        "waiting_on_taxes_notice": "Cálculo de impostos",
+        "payment_method": "Método de pagamento",
+        "payment_method_rollup_accessibility_label": "Opções do método de pagamento",
+        "expired_payment_method": "O método de pagamento selecionado expirou",
+        "payment_method_update_failed": "A atualização do método de pagamento falhou."
       }
     }
   }
