@@ -864,9 +864,129 @@
       "deliverability": {
         "not_deliverable": {
           "title": {
-            "one": "Keine Lieferung zur Verfügung %{count} Artikel"
-          }
+            "one": "Keine Lieferung zur Verfügung %{count} Artikel",
+            "other": "Keine Lieferung zur Verfügung %{count} Artikel"
+          },
+          "message": {
+            "one": "Dieser Artikel wird aus Ihrem Warenkorb entfernt, da für Ihre Adresse keine Liefermethoden verfügbar sind.",
+            "other": "Diese Artikel werden aus Ihrem Warenkorb entfernt, da für Ihre Adresse keine Liefermethoden verfügbar sind."
+          },
+          "label": "Keine Lieferung"
         }
+      },
+      "order_summary": {
+        "title": "Auftragszusammenfassung",
+        "group_title_label": "Teil von \"%{group_title}\"",
+        "for_add_on": "Für: %{group_title}",
+        "from_shop_heading": "Aus %{shop_name}",
+        "from_other_stores_heading": "Aus anderen Geschäften",
+        "number_items": {
+          "one": "%{count} Artikel",
+          "other": "%{count} Artikel"
+        },
+        "view_all_items": {
+          "one": "Sicht %{count} Artikel",
+          "other": "Alle anzeigen %{count} Artikel"
+        },
+        "more_items_modal": {
+          "search_item": "Suchen",
+          "clear_search": "Klare Suche",
+          "empty_results": "Keine Ergebnisse für \"gefunden\"%{searchText}\"Überprüfen Sie die Schreibweise oder verwenden Sie ein anderes Wort oder eine andere Phrase.",
+          "number_items_shown": "%{shownNumber} von %{totalNumber} Artikel"
+        },
+        "order_name_label": "Befehl %{name}",
+        "shopping_cart_label": "Einkaufswagen",
+        "discount_title": "Rabatt",
+        "discount_title_stacking": {
+          "one": "Rabatt",
+          "other": "Rabatte"
+        },
+        "discount_order_stacking": {
+          "one": "Rabatt bestellen",
+          "other": "Rabatte bestellen"
+        },
+        "discount_label": "Rabattcode",
+        "discount_not_found": "Es kann keinen gültigen Rabatt finden, der dem eingegebenen Code entspricht",
+        "discount_placeholder": "Rabattcode",
+        "discount_code_applied": "Rabattcode angewendet",
+        "discount_code_allocations_mismatch": "Dein <strong style=\"text-transform:uppercase\">%{code}</strong> Rabattcode hat sich geändert. Überprüfen Sie Ihren Warenkorb und versuchen Sie es erneut.",
+        "gift_card_applied": "Geschenkkarte angewendet",
+        "enter_shipping_address": "Geben Sie die Versandadresse ein",
+        "gift_card_title": "Geschenkkarte",
+        "gift_card_label": "Geschenkkarte",
+        "gift_card_placeholder": "Geschenkkarte",
+        "gift_card_and_discount_title": "Rabattcode oder Geschenkkarte",
+        "gift_card_and_discount_label": "Rabattcode oder Geschenkkarte",
+        "gift_card_and_discount_placeholder": "Rabattcode oder Geschenkkarte",
+        "remove_gift_card_label": "Klare Geschenkkarte",
+        "remove_discount_label": "Rabatt entfernen",
+        "return_restocking_fee_label": "Wiederauffüllungsgebühr",
+        "return_shipping_fee_label": "Rückgabeversand",
+        "free_shipping_discount_label": "Kostenloser Versand",
+        "applied_free_shipping_discount_label": "Angewandt",
+        "apply_discount_button_label": "Anwenden",
+        "applied_discount_message": "%{amount} Off -Gesamtbestellpreis",
+        "discount_has_been_applied": "Rabatt wurde angewendet",
+        "discount_has_been_removed": "Rabatt wurde entfernt",
+        "gift_card_has_been_applied": "Geschenkkarte wurde angewendet",
+        "gift_card_has_been_removed": "Geschenkkarte wurde entfernt",
+        "gift_card_subscriptions_notice": "Geschenkkarten gelten nur für Ihre erste Zahlung",
+        "discount_already_applied": "Auf diese Bestellung wurde ein Rabatt angewendet. Sie können keinen weiteren Rabatt hinzufügen.",
+        "cart_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Der Rabattcode gilt nicht für die Artikel in Ihrem Karren",
+        "discount_requires_customer_notice": "Geben Sie Ihre Versandinformationen ein, um die anzuwenden <strong style=\"text-transform:uppercase\">%{code}</strong> Rabattcode",
+        "customer_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Der Rabattcode steht Ihnen momentan nicht zur Verfügung",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Rabattcode erfordert einen berechtigten Kunden",
+        "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Rabattcode ist für Ihre Versandadresse nicht verfügbar",
+        "customer_already_used_once_per_customer_discount_notice": "Der <strong style=\"text-transform:uppercase\">%{code}</strong> Rabattcode wurde bereits verwendet",
+        "subtotal_label": "Zwischensumme",
+        "subtotal_label_with_quantity": {
+          "one": "Subtotal · %{count} Artikel",
+          "other": "Subtotal · %{count} Artikel"
+        },
+        "shipping_label": "Versand",
+        "pickup_label": "Abholung im Laden",
+        "no_pickup_location": "Es sind keine Abholorte verfügbar.",
+        "pickup_unavailable_banner_title": {
+          "one": "Keine Geschäfte mit Ihrem Artikel verfügbar",
+          "other": "Keine Geschäfte mit Ihren Artikeln verfügbar"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Schiff zur Adresse",
+          "ship_to_address_instead_html": "%{link} stattdessen"
+        },
+        "tip_label": "Tipp",
+        "unconfirmed_label": "Unbestätigt",
+        "calculating_shipping": "Berechnung…",
+        "calculating": "Berechnung…",
+        "shipping_default_value": "Bei dem nächsten Schritt berechnet",
+        "shipping_discount_title": "Versandrabatt",
+        "shipping_pending_value": "—",
+        "shipping_pending_message": "Noch nicht verfügbar",
+        "shipping_policy_link": "Versandkosten",
+        "taxes_label": "Steuern",
+        "estimated_taxes_label": "Geschätzte Steuern",
+        "information_estimated_taxes_label": "Steuern (geschätzt)",
+        "estimated_taxes_finalization_tooltip_content": "Die endgültige Steuer und die Gesamtsteuer werden per E -Mail oder Text bestätigt, nachdem Sie Ihre Bestellung aufgegeben haben.",
+        "order_total_label": "Bestellen Sie insgesamt",
+        "price_before_discount_aria_text": "Originalpreis",
+        "price_after_discount_aria_text": "Ermäßigter Preis",
+        "discount_code_aria_text": "Rabattcode",
+        "total_savings": "Gesamteinsparungen",
+        "total_label": "Gesamt",
+        "total_due_label": "Total fällig",
+        "total_paid_label": "Total bezahlt",
+        "total_price_label": "Gesamtpreis",
+        "total_outstanding_label": "Zu zahlen",
+        "deposit_label": "Kaution",
+        "total_due_today_label": "Summe heute fällig",
+        "total_due_later_label": "Insgesamt später fällig",
+        "partial_total_label": "Gesamt",
+        "free_total_label": "Frei",
+        "free_shipping_total_label": "Frei",
+        "paid_label": "Bezahlt",
+        "payment_due_label": "Zahlung fällig",
+        "vat_label_html": "Einschließlich %{amount} in Steuern",
+        "duties_included_label": "Insgesamt beinhaltet Steuern und Pflichten. Keine zusätzlichen Gebühren bei der Lieferung."
       }
     }
   }
