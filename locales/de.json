@@ -3921,7 +3921,65 @@
     "addresses": {
       "add_button": "Adresse hinzufügen",
       "add_button_text": "Hinzufügen",
-      "add_button_accessibility_label": "Adresse hinzufügen"
+      "add_button_accessibility_label": "Adresse hinzufügen",
+      "back_button": "Zurück",
+      "back_button_accessibility_label": "Zurück zur Bearbeitungsadresse {{address}}",
+      "add_address_banner": "Fügen Sie Adressen hinzu, die Sie an der Kasse verwenden sollen",
+      "no_addresses_banner": "Keine Adressen hinzugefügt",
+      "address_deleted_notification": "Adresse gelöscht",
+      "cancel_adding_address_accessibility_label": "Abbrechen Additionsadresse",
+      "cancel_deletion_button": "Stornieren",
+      "cancel_deletion_button_accessibility_label": "Löschen abbrechen {{address}}",
+      "default_address": {
+        "title": "Standardadresse",
+        "title_accessibility_label": "Standardadresse: {{address}}"
+      },
+      "delete_button": "Löschen",
+      "delete_button_accessibility_label": "Löschen {{address}}",
+      "delete_confirmation_button": "Adresse löschen",
+      "delete_confirmation_button_accessibility_label": "Löschen {{address}}",
+      "delete_confirmation_message": "Adresse löschen? Bestehende Bestellungen sind nicht betroffen.",
+      "delete_confirmation_title": "Adresse löschen?",
+      "delete_confirmation_description": "Bestehende Bestellungen sind nicht betroffen.",
+      "edit_button": "Bearbeiten",
+      "edit_button_accessibility_label": "Bearbeiten {{address}}",
+      "edit_section_accessibility_label": "Bearbeiten {{address}}",
+      "edit_modal_title": {
+        "default": "Adresse bearbeiten",
+        "billing": "Abrechnungsadresse bearbeiten",
+        "shipping": "Versandadresse bearbeiten"
+      },
+      "loading_accessibility_message": "Ladenadresse",
+      "loading_addresses_accessibility_message": "Laden von Adressen",
+      "loading_billing_accessibility_message": "Lade -Abrechnungsadresse",
+      "loading_finished_accessibility_message": "Neue Adressseite hat geladen",
+      "loading_shipping_accessibility_message": "Versandadresse laden",
+      "pagination": {
+        "load_more": "Laden mehr",
+        "load_more_accessibility_label": "Laden Sie mehr Adressen"
+      },
+      "save_new_address_accessibility_label": "Adresse speichern",
+      "title": "Adressen",
+      "billing_address_dropdown_placeholder": "Abrechnungsadresse"
+    },
+    "address_form": {
+      "attention": "Aufmerksamkeit",
+      "attention_company": "Unternehmen/Aufmerksamkeit",
+      "attention_help_text": "Der Name einer Person oder Abteilung",
+      "auto_complete_close_accessibility_label": "Vorschläge schließen",
+      "auto_complete_title": "Vorschläge",
+      "billing_address": "Verwenden Sie als Abrechnungsadresse",
+      "cancel": "Stornieren",
+      "cancel_accessibility_label": "Bearbeitungsadresse abbrechen {{address}}",
+      "creation_success_notification": "Adresse hinzugefügt",
+      "default_address": "Dies ist meine Standardadresse",
+      "default_address_creation_success_notification": "Standardadresse hinzugefügt",
+      "default_address_update_success_notification": "Standardadresse aktualisiert",
+      "loading_add_form_accessibility_message": "Laden neuer Adressformular",
+      "loading_edit_form_accessibility_message": "Laden des Bearbeitungsadressenformulars",
+      "loading_form_accessibility_message": "Laden des Adressformulars",
+      "loading_finished_accessibility_message": "Das Adressformular hat geladen",
+      "save": "Speichern"
     }
   }
 }
