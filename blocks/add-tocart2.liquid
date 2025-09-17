@@ -219,7 +219,7 @@ Es personalizable en el editor de temas.
       scrollToAddToCart() {
         const addToCartButton = document.querySelector('[name="add"], .product-form__cart-button, .btn--add-to-cart, .add-to-cart-button, .product-form__add-button');
         if (addToCartButton) {
-          const y = addToCartButton.getBoundingClientRect().top + window.pageYOffset - 730; // 100px por encima del botón
+          const y = addToCartButton.getBoundingClientRect().top + window.pageYOffset - 630; // 100px por encima del botón
           window.scrollTo({ top: y, behavior: 'smooth' });
           setTimeout(() => { try { addToCartButton.focus(); } catch(e){} }, 500);
         }
@@ -230,7 +230,7 @@ Es personalizable en el editor de temas.
 
   document.addEventListener('DOMContentLoaded', function() {
     const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
-    const scrollThreshold = 950; // punto de aparición
+    const scrollThreshold = 1150; // punto de aparición
 
     if (stickyBar) {
       function handleScroll() {
