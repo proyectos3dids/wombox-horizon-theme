@@ -1132,8 +1132,84 @@
           "prepaid_order_one_cycle": {
             "one": "%{shipping_price} per %{count} più consegna",
             "other": "%{shipping_price} per %{count} più consegne (%{per_delivery_cost})"
+          },
+          "prepaid_order_one_cycle_delivery_not_included": {
+            "one": "%{shipping_price} per %{count} consegna",
+            "other": "%{shipping_price} per %{count} consegne (%{per_delivery_cost})"
+          },
+          "prepaid_order_no_cycle": {
+            "one": "%{shipping_price} per %{count} più consegna, seguita da %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} per %{count} più consegne (%{per_delivery_cost}), seguito da %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_no_cycle_delivery_not_included": {
+            "one": "%{shipping_price} per %{count} Consegna, seguita da %{recurring_order_shipping_price}",
+            "other": "%{shipping_price} per %{count} consegne (%{per_delivery_cost}), seguito da %{recurring_order_shipping_price}"
+          },
+          "subscription_free_with_frequency_label": "Spedizione gratuita %{delivery_frequency}",
+          "prepaid_delivery_frequency": {
+            "one": "per %{count} consegna",
+            "other": "per %{count} consegne"
+          },
+          "subscription_delivery_frequency": {
+            "day": {
+              "one": "ogni giorno",
+              "other": "ogni %{count} giorni"
+            },
+            "week": {
+              "one": "Ogni settimana",
+              "other": "ogni %{count} settimane"
+            },
+            "month": {
+              "one": "ogni mese",
+              "other": "ogni %{count} mesi"
+            },
+            "year": {
+              "one": "Ogni anno",
+              "other": "ogni %{count} anni"
+            }
+          },
+          "multiple_subscriptions_shipping_price_label": "%{shipping_price} per consegna",
+          "prepaid_shipping_price_label": "%{shipping_price} per consegna x %{delivery_interval_count}",
+          "initial_order_discounted": "Primo costo di spedizione %{discounted_shipping_cost}, Poi %{frequency_description}",
+          "prepaid_initial_order_discounted": "Primo costo di spedizione %{discounted_shipping_price} %{prepaid_delivery_frequency}",
+          "prepaid_initial_order_discounted_with_per_delivery_price": "Primo costo di spedizione %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery})",
+          "prepaid_initial_order_discounted_with_renewal": "Primo costo di spedizione %{discounted_shipping_price} %{prepaid_delivery_frequency}, Poi %{shipping_price} %{billing_cycle}",
+          "prepaid_initial_order_discounted_with_per_delivery_price_and_renewal": "Primo costo di spedizione %{discounted_shipping_price} %{prepaid_delivery_frequency} (%{discounted_cost_per_delivery}), Poi %{shipping_price} %{billing_cycle}",
+          "shipping_price_included": "Incluso",
+          "recurring_order_shipping_price": "seguito da %{recurring_order_shipping_price}",
+          "first_order_shipping_price_included": "Primo ordine incluso, seguito da %{recurring_order_shipping_price}",
+          "first_order_different_shipping_price": "%{first_order_shipping_price} (%{per_delivery_price} per consegna), seguito da %{recurring_order_shipping_price}",
+          "first_n_order_free": {
+            "one": "Primo ordine gratuito",
+            "other": "Primo %{count} ordini gratuiti"
+          },
+          "free_for_first_n_order": {
+            "one": "Per il primo ordine",
+            "other": "Per il primo %{count} ordini"
           }
-        }
+        },
+        "one_time_purchase_shipping": "Spedizione una tantum",
+        "duties_and_taxes_title": "Doveri e tasse",
+        "shipping_information_required_notice": "Sono richieste informazioni di spedizione. {{link}}.",
+        "shipping_information_redirect_link": "Inserisci le tue informazioni qui",
+        "loading_progressive_rates": "Alla ricerca di più tariffe ...",
+        "no_other_methods_available": "Nessun altro metodo disponibile",
+        "duties_and_taxes_options": {
+          "ddu_title": "Paga alla consegna",
+          "ddu_caption": "Possono essere applicati tasse aggiuntive",
+          "ddp_title": "Paga ora",
+          "ddp_caption": "Nessun costo aggiuntivo alla consegna"
+        },
+        "shipping_method_combinations": {
+          "without_separator": "%{firstMethod}, %{secondMethod}",
+          "with_separator": "%{rest}, %{current},",
+          "combination": "%{rest} E %{current}"
+        },
+        "shipping_used_as_billing_notice": "Questo verrà utilizzato anche come indirizzo di fatturazione per questo ordine.",
+        "address_update": "Indirizzo di aggiornamento",
+        "shipping_address_title": "Spedire a",
+        "shipping_address_rollup_accessibility_label": "Spedizione per affrontare le opzioni",
+        "add_address": "Usa un indirizzo diverso"
       }
     }
   }
