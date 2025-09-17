@@ -58,7 +58,22 @@
         "id": "colorcart",
         "label": "Color del botón",
         "default": "#C67461"
-      }
+    }
+    ,
+    {
+      "type": "text",
+      "id": "cart_currency_text",
+      "label": "Texto selector de moneda",
+      "default": "Selecciona moneda",
+      "info": "Este texto aparecerá junto al selector de moneda en el cart drawer."
+    },
+    {
+      "type": "text",
+      "id": "cart_country_text",
+      "label": "Texto selector de país",
+      "default": "Selecciona país",
+      "info": "Este texto aparecerá junto al selector de país en el cart drawer."
+    }
 
   ]
 }
