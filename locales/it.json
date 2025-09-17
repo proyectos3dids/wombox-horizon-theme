@@ -3925,7 +3925,139 @@
       "loading_edit_form_accessibility_message": "Caricamento del modulo Indirizzo di modifica",
       "loading_form_accessibility_message": "Modulo di indirizzo di caricamento",
       "loading_finished_accessibility_message": "Il modulo di indirizzo è stato caricato",
-      "save": "Salva"
+      "save": "Salva",
+      "save_accessibility_label": "Salva indirizzo {{address}}",
+      "section_title_accessibility_label": "Aggiungi indirizzo",
+      "update_success_notification": "Indirizzo aggiornato"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Nome azienda",
+        "company_card_section_accessibility_label": "Azienda"
+      },
+      "locations": {
+        "contact_email": "E-mail",
+        "contact_list_title": "Persone",
+        "contact_name": "Nome",
+        "contact_permissions": "Autorizzazioni",
+        "contact_phone_number": "Numero di telefono",
+        "location_picker_label": "Nome della posizione",
+        "location_picker_accessibility_label": "Nome della posizione: {{locationName}}",
+        "net_payment_terms_description": "{{name}}: pagamenti dovuti all'interno {{numberOfDays}} giorni",
+        "deposit_percentage": "{{percentage}} depositare",
+        "own_role_contact_name": "Voi",
+        "pagination": {
+          "load_more": "Carica di più",
+          "load_more_accessibility_label": "Carica più posizioni"
+        },
+        "payment_details_title": "Dettagli di pagamento",
+        "payment_terms": "Termini di pagamento",
+        "permissions_label": "Le tue autorizzazioni",
+        "permissions_title": "Autorizzazioni",
+        "section_title": "Posizione",
+        "shipping_address_required": "Aggiungi un indirizzo di spedizione a questa posizione per iniziare a effettuare gli ordini.",
+        "staff_and_permissions_title": "Personale e autorizzazioni",
+        "tax_details_title": "Dettagli fiscali",
+        "tax_id": "ID fiscale",
+        "tax_exemptions": "Esenzioni fiscali",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} Di più",
+        "multiple_tax_exemptions_and": "E",
+        "tax_exemptions_modal_close": "Vicino",
+        "taxes_none": "Nessuno",
+        "tax_exemption_not_applicable": "N / A",
+        "tax_exemptions_modal_button_accessibility_label": "Visualizza tutte le esenzioni fiscali"
+      },
+      "location_selection": {
+        "continue_to_store": "Continua a conservare",
+        "description": "Se hai già oggetti nel tuo carrello, cambiare posizione potrebbe influire sui prezzi e le quantità del carrello.",
+        "description_switch_later": "Puoi sempre cambiare più tardi",
+        "list_accessibility_label": "Elenco delle posizioni",
+        "list_item_accessibility_label": "{{name}}: {{address}}",
+        "list_item_without_address_accessibility_label": "{{name}}: Nessun indirizzo",
+        "list_loading_accessibility_message": "Elenco di caricamento delle posizioni",
+        "list_loading_address_accessibility_message": "Indirizzo di caricamento per {{locationName}}",
+        "list_loading_finished_accessibility_message": "L'elenco delle posizioni è stato caricato",
+        "loading_store_accessibility_message": "Andare al negozio",
+        "no_location_title": "Solo ordini personali",
+        "no_location_description": "Non hai più il permesso di effettuare gli ordini {{company}}. Puoi ancora effettuare ordini personali.",
+        "no_locations_found": "Nessuna posizione trovata",
+        "search": "Posizioni di ricerca",
+        "search_location_title": "Seleziona una posizione",
+        "selection_cancel_button": "Cancellare",
+        "selection_confirmation_button": "Scegli la posizione",
+        "selection_continue_button": "Continuare",
+        "title": "Per quale posizione stai acquistando?",
+        "title_choose_location": "Scegli una posizione",
+        "clear_search": "Ricerca chiara",
+        "try_new_search": "Prova una nuova ricerca"
+      },
+      "addresses": {
+        "add_billing_address_button": "Aggiungi indirizzo di fatturazione",
+        "add_billing_address_section_accessibility_label": "Aggiungi indirizzo di fatturazione",
+        "add_shipping_address_button": "Aggiungi indirizzo di spedizione",
+        "add_shipping_address_section_accessibility_label": "Aggiungi indirizzo di spedizione",
+        "billing_address_card_title": "Indirizzo di fatturazione",
+        "cancel_adding_billing_address_accessibility_label": "Annulla l'aggiunta dell'indirizzo di fatturazione",
+        "cancel_adding_shipping_address_accessibility_label": "Annulla l'aggiunta dell'indirizzo di spedizione",
+        "save_new_billing_address_accessibility_label": "Salva indirizzo di fatturazione",
+        "save_new_shipping_address_accessibility_label": "Salva indirizzo di spedizione",
+        "shipping_address_card_title": "Indirizzo di spedizione"
+      },
+      "orders": {
+        "draft_order_list": {
+          "hide_all": "Nascondi tutto",
+          "show_all": "Mostra tutto",
+          "hide_all_accessibility_label": "Nascondi tutti gli ordini in revisione",
+          "show_all_accessibility_label": "Mostra tutti gli ordini in revisione",
+          "show_all_orders_in_review": "Mostra tutti gli ordini in revisione",
+          "show_less_orders_in_review": "Mostra meno ordini in revisione",
+          "title": "In attesa di",
+          "pending_tab_accessibility_label": {
+            "no_pending_orders": "Non hai ordini in sospeso",
+            "pending_orders": {
+              "one": "Hai {{count}} Ordine in sospeso",
+              "other": "Hai {{count}} in attesa di ordini"
+            },
+            "more_than_pagination_length": "Hai più di {{count}} in attesa di ordini"
+          },
+          "pending_orders_count_more_than_pagination_length": "{{count}}+",
+          "pagination": {
+            "nav_accessibility_label": "Ordini nei pulsanti di navigazione di revisione"
+          }
+        },
+        "order_list_column_headers_location": "Posizione",
+        "order_list_column_headers_contact": "Contatto",
+        "order_list_column_headers_status": "Stato",
+        "removed_company_contact_tooltip": "Rimosso dall'azienda"
+      },
+      "draft_order_details": {
+        "draft_order_subtitle": "Confermato {{date}} dall'ordine {{draftOrderName}}",
+        "loading": "Caricamento dei dettagli dell'ordine",
+        "loading_finished_accessibility_message": "I dettagli dell'ordine sono stati caricati",
+        "payment_status": {
+          "pending": {
+            "banner_overdue": {
+              "one": "Il tuo pagamento è {{count}} giorno in ritardo",
+              "other": "Il tuo pagamento è {{count}} giorni in ritardo"
+            },
+            "banner_due": {
+              "one": "Il tuo pagamento è dovuto in {{count}} giorno",
+              "other": "Il tuo pagamento è dovuto in {{count}} giorni"
+            },
+            "banner_due_today": "Il tuo pagamento è dovuto oggi",
+            "title": "Pagamento dovuto",
+            "title_with_date": "Pagamento dovuto {{date}}",
+            "title_due_on_receipt": "Pagamento non ancora dovuto",
+            "title_due_on_fulfillment": "Pagamento dovuto all'adempimento",
+            "description_overdue": "Il tuo pagamento è in ritardo.",
+            "description_partially_paid": "Questo ordine è stato parzialmente pagato. Hai un equilibrio rimanente.",
+            "description_authorized": "Il tuo metodo di pagamento verrà addebitato alla data di scadenza o puoi pagare ora.",
+            "description_waiting_for_manual_payment": "Questo ordine ha un pagamento in sospeso. Il saldo verrà aggiornato quando il pagamento viene ricevuto.",
+            "description_due_on_receipt": "Riceverai una fattura quando il pagamento è dovuto.",
+            "description_due_on_receipt_partially_paid": "Questo ordine è stato parzialmente pagato. Hai un equilibrio rimanente. Riceverai una fattura quando il pagamento è dovuto."
+          }
+        }
+      }
     }
   }
 }
