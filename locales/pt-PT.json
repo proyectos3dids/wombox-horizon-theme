@@ -2764,10 +2764,158 @@
         "errors": {
           "unavailable": {
             "title": "{{walletName}} não disponível",
-            "description": "{{walletName}} não estava disponível. Use um método de pagamento diferente ou tente novamente mais tarde."
+            "description": "{{walletName}} não estava disponível. Use um método de pagamento diferente ou tente novamente mais tarde.",
+            "instructions": "Houve um problema com {{walletName}}. Volte à loja para tentar novamente ou confira uma maneira diferente.",
+            "unavailable_for_country": "{{walletName}} não está disponível em {{countryName}}. Selecione um método de pagamento diferente para concluir sua compra"
+          },
+          "unavailable_terminal": {
+            "instructions": "{{walletName}} Atualmente, não está disponível para o seu pedido. Para continuar sua compra, escolha outro método de checkout."
+          },
+          "generic": "Houve um problema com {{walletName}}. Tente novamente ou use um método de pagamento diferente.",
+          "discount_code": "Não é possível aplicar este código de desconto. Revise seu código e tente novamente.",
+          "terminal": "Houve um problema com {{walletName}}. Por favor, use um método de pagamento diferente.",
+          "detour": {
+            "stock_problems": "Alguns itens não estão mais disponíveis. Fechar {{walletName}} e tente novamente.",
+            "price_change": "Alguns preços dos itens mudaram. Fechar {{walletName}} Para revisar seu pedido e tentar novamente.",
+            "queue": "Você foi colocado em uma fila para fazer o checkout. Fechar {{walletName}} para continuar.",
+            "currency_change": "Você não pode usar um endereço diferente com {{walletName}}. Use o endereço original ou tente um método de pagamento diferente."
+          },
+          "unsupported": {
+            "address": "O comerciante não pode entregar neste endereço",
+            "wallet_is_unavailable": "{{walletName}} não pode ser usado com este endereço. Selecione um endereço diferente ou feche {{walletName}} Para completar sua compra",
+            "postal_code": "Este local não é suportado"
+          },
+          "outdated": {
+            "shipping_method": "As opções de envio foram alteradas para o seu pedido. Revise sua seleção.",
+            "payment_terms": "As condições de pagamento foram alteradas. Por favor, revise seu pedido"
+          },
+          "invalid": {
+            "shipping_address": "Insira um endereço de entrega válido",
+            "billing_address": "Insira um endereço de cobrança válido",
+            "shipping_option": "Escolha uma opção de envio válida",
+            "email": "Digite um e -mail válido",
+            "zone": "Digite um estado / província válido",
+            "billing_zone": "Digite um estado de cobrança válido Estado / Província",
+            "emirate": "Digite um emirado válido",
+            "postal_code": "Digite um código postal válido",
+            "phone": "Insira um número de telefone válido",
+            "billing_phone": "Digite um número de telefone de endereço de cobrança válido",
+            "reduction_code": "Digite um código de desconto válido ou cartão -presente",
+            "billing_must_match_shipping": "Deve corresponder ao endereço de entrega",
+            "billing_zip": "Digite um endereço de cobrança válido / código postal"
+          },
+          "missing": {
+            "first_name": "Digite um primeiro nome",
+            "billing_first_name": "Digite um nome de cobrança primeiro nome",
+            "last_name": "Digite um sobrenome",
+            "address1": "Insira um endereço",
+            "billing_address1": "Digite um endereço de cobrança",
+            "address2": "Entre em um apartamento, suíte, etc.",
+            "billing_address2": "Digite um apartamento de endereço de cobrança, suíte, etc.",
+            "city": "Entrar em uma cidade",
+            "billing_city": "Digite um endereço de cobrança City",
+            "province": "Selecione um estado / província",
+            "billing_province": "Selecione um estado de cobrança Estado / Província",
+            "country": "Selecione um país/região",
+            "zip": "Digite um código postal ZIP /",
+            "billing_zip": "Digite um código postal de endereço de cobrança / código postal",
+            "phone": "Digite um número de telefone",
+            "contact_info": "Insira informações de contato"
+          },
+          "formatting": {
+            "name_contains_emojis": "Exclua emoji do seu nome",
+            "postal_code_contains_emoji": "Exclua emoji do seu código postal",
+            "first_name_too_long": "O primeiro nome contém muitas letras",
+            "last_name_too_long": "O sobrenome contém muitas letras",
+            "address_too_long": "A linha de endereço é muito longa"
+          },
+          "select_different_shipping_address_to_resolve_errors": "Seu endereço de envio é inválido. Selecione um endereço diferente ou use um novo."
+        },
+        "scrim": {
+          "continue_purchase_in_window": "Continue sua compra no {{walletName}} janela",
+          "and_return_to_checkout": "e volte para o checkout",
+          "cancel": "Cancelar"
+        }
+      },
+      "note": {
+        "length_exceeds_maximum": "Reduza o tamanho da nota para 5000 ou menos caracteres."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "O preço do cartão -presente deve ser maior que 0.",
+            "gift_card_price_must_not_exceed_limit": "O preço do cartão -presente não deve exceder %{gift_card_limit}.",
+            "subtotal_limit_reached": "O valor máximo dos itens de linha foi atingido.",
+            "signature_mismatch": "Indatibilidade de assinatura de mercadorias para a linha %{stable_id}."
           }
         }
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "O checkout contém apenas mercadorias remotas. É necessário um redirecionamento para a loja remota para concluir a finalização da compra."
+        }
+      },
+      "units": {
+        "milligram": "mg",
+        "gram": "g",
+        "kilogram": "kg",
+        "milliliter": "ml",
+        "centiliter": "Cl",
+        "liter": "L",
+        "cubic_meter": "m³",
+        "millimeter": "mm",
+        "centimeter": "cm",
+        "meter": "m",
+        "square_meter": "m²",
+        "ounce": "oz",
+        "pound": "Libra",
+        "fluid_ounce": "fl oz",
+        "pint": "Pt",
+        "quart": "Qt",
+        "gallon": "Gal",
+        "inch": "em",
+        "foot": "ft",
+        "yard": "yd",
+        "square_foot": "ft²",
+        "item": "item"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "O endereço não é suportado para a associação atual.",
+        "items_split_across_locations_unsupported": "A entrega principal não está disponível para o seu pedido. Suas opções de envio foram atualizadas."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Navegue para a loja online"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Mais informações sobre %{context}",
+        "additional_payment_methods": "Métodos de pagamento adicionais"
       }
+    },
+    "pagination": {
+      "previous": "Anterior",
+      "next": "Próximo"
+    },
+    "links": {
+      "powered_by_shopify": "Alimentado pelo Shopify",
+      "learn_more": "Saber mais"
+    },
+    "feed": {
+      "more": "Mais"
+    },
+    "attributes": {
+      "email": "e-mail",
+      "password": "senha",
+      "password_confirmation": "A confirmação da senha",
+      "first_name": "primeiro nome",
+      "last_name": "sobrenome",
+      "body": "corpo",
+      "signature": "Endereço"
+    },
+    "addresses": {
+      "zip_code": "CEP",
+      "postal_code": "Código postal"
     }
   }
 }
