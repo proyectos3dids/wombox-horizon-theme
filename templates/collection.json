@@ -255,7 +255,7 @@
             "title_margin_bottom": 20,
             "mobile_heading_scale": 0.8,
             "full_width_text": true,
-            "text_max_width": 800,
+            "text_max_width": 1000,
             "text_size": 16,
             "text_color": "#c67461",
             "text_margin_bottom": 0,
