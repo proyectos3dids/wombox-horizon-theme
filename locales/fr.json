@@ -3521,7 +3521,85 @@
         "complete_label": "Complet",
         "delivered_label": "Livré",
         "delivered_description_gift_card": {
-          "one": "La carte-cadeau a été envoyée par e-mail."
+          "one": "La carte-cadeau a été envoyée par e-mail.",
+          "other": "Les cartes-cadeaux ont été envoyées par e-mail."
+        },
+        "delivered_description_gift_card_text": {
+          "one": "La carte-cadeau a été envoyée par SMS.",
+          "other": "Les cartes-cadeaux ont été envoyées par SMS."
+        },
+        "gift_card_label": {
+          "one": "Carte-cadeau",
+          "other": "Cartes-cadeaux"
+        },
+        "gift_card_resend_button": {
+          "one": "Rendez-vous la carte-cadeau",
+          "other": "Render les cartes-cadeaux"
+        },
+        "gift_resend_success": {
+          "one": "Carte-cadeau Ressentiment",
+          "other": "Cartes-cadeaux Ressentiment"
+        },
+        "gift_resend_failure": {
+          "one": "Il y avait un problème à résoudre votre carte-cadeau. Réessayez ou contactez-nous.",
+          "other": "Il y avait un problème à résoudre vos cartes-cadeaux. Réessayez ou contactez-nous."
+        },
+        "confirmed_gift_card_additional_description": {
+          "one": "La carte-cadeau sera envoyée dans un e-mail séparé.",
+          "other": "Chaque carte-cadeau sera envoyée dans un e-mail séparé."
+        },
+        "confirmed_gift_card_additional_description_text": {
+          "one": "La carte-cadeau sera envoyée dans un texte séparé.",
+          "other": "Chaque carte-cadeau sera envoyée dans un texte séparé."
+        },
+        "status_timestamp": "Mis à jour {{date}}",
+        "estimated_delivery": "Attendu {{date}}",
+        "expected_by": "Attendu par {{date}}",
+        "was_expected_by": "Était attendu par {{date}}",
+        "delivered": "Arrivé {{date}}",
+        "buy_with_prime_logo_accessibility_label": "Amazon Acheter avec le logo Prime",
+        "in_review_label": "En revue",
+        "in_review_title": "Votre commande est en cours d'examen",
+        "last_updated": "Dernière mise à jour {{date}}",
+        "multiple_shipments_label": "Expéditions multiples",
+        "multiple_statuses_label": "Statuts de commande multiples",
+        "no_tracking_number": "Il n'y a pas de numéro de suivi pour cette expédition.",
+        "tracking_number": {
+          "one": "Numéro de suivi",
+          "other": "Numéros de suivi"
+        },
+        "on_its_way_label": "Sur son chemin",
+        "out_for_delivery_label": "OUT pour livraison",
+        "resume_tracking": "Suivi de curriculum vitae",
+        "submitted_label": "Soumis",
+        "submitted_description": "Détails de commande et de paiement d'examen.",
+        "there_was_a_problem_label": "Il y avait un problème",
+        "track_shipment": "Expédition de piste",
+        "request_return": "Demander un retour",
+        "view_order_for_details": "Afficher la commande pour les détails",
+        "external_promise_manage_button_label": {
+          "buy_with_prime": "Gérer sur Amazon"
+        },
+        "amazon_buy_with_prime": {
+          "order_tracking_link": {
+            "text": "Gérer avec Amazon",
+            "new_window_disclaimer": "(ouvre une nouvelle fenêtre)"
+          }
+        },
+        "delivery_promise_v2": {
+          "promise_line": {
+            "shop_promise_brand_label": "Livraison garantie par",
+            "external_promise_brand_label": "Livraison par",
+            "not_delivered_by_label": "Livré après {{date}}",
+            "delivery_guarantee_expired_label": "Garantie de livraison expirée",
+            "modal_accessibility_button_label": "Détails de la promesse de livraison",
+            "download_shop_app_button_label": "Télécharger la boutique pour suivre",
+            "track_with_shop_button_label": "Suivre avec boutique",
+            "claim_shop_cash_button_label": "Réclamer en espèces"
+          },
+          "details_modal": {
+            "title": "Garantie de livraison"
+          }
         }
       }
     }
