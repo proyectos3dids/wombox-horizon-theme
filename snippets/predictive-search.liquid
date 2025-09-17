@@ -20,11 +20,12 @@
 .predictive-search .resource-card__title{
   color: {{ settings.search_title_color }} !important;
 }
-
 .predictive-search .resource-card__subtext{
   color: {{ settings.search_title_color }} !important;
 }
-
+.predictive-search .predictive-search-results__card{
+border-radius: {{ settings.search_image_radius }}px !important;
+}
 .predictive-search .predictive-search-results__card .price{
   color: {{ settings.search_title_color }};
 }
@@ -34,21 +35,15 @@
 .predictive-search .predictive-search-results__title {
   color: {{ settings.search_title_color }};
 }
-
 .predictive-search .resource-card__image {
   border-radius: {{ settings.search_image_radius }}px;
 }
-
 .predictive-search .resource-card__link{
   border-radius: {{ settings.search_image_radius }}px;
 }
 .predictive-search .resource-card{
   border-radius: {{ settings.search_image_radius }}px;
 }
-.predictive-search .predictive-search-results__card{
-border-radius: {{ settings.search_image_radius }}px !important;
-}
-
 </style>
 
 <predictive-search-component
