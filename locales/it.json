@@ -3669,7 +3669,75 @@
       "order_details": "Dettagli dell'ordine",
       "order_details_skeleton_accessibility_label": "Accedi per visualizzare tutti i dettagli dell'ordine.",
       "billing_address": "Indirizzo di fatturazione",
-      "card_ending_with": "terminare con {{lastDigits}}"
+      "card_ending_with": "terminare con {{lastDigits}}",
+      "contact": "Contatto",
+      "contact_information": "Informazioni sui contatti",
+      "company": "Azienda",
+      "company_and_location": "Azienda e posizione",
+      "fully_refunded_label": "Rimborsato",
+      "group_title_label": "Parte di: {{groupTitle}}",
+      "group_title_label_with_parent": "Per: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "Galleria",
+        "list": "Lista"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "Spettacolo {{count}} elementi",
+        "collapse_line_items": "Nascondere {{count}} elementi",
+        "line_item_summary": "{{refundableQuantity}} X {{productTitle}}",
+        "line_item_summary_accessibility_label": "{{productTitle}}, Quantità: {{refundableQuantity}}",
+        "line_item_summary_list_accessibility_label": "Articoli in {{productTitle}} fascio"
+      },
+      "discount": "Sconto",
+      "hide_items": "Nascondi gli oggetti",
+      "loading": "Caricamento dei dettagli dell'ordine",
+      "loading_finished_accessibility_message": "I dettagli dell'ordine sono stati caricati",
+      "location": "Posizione",
+      "image_gallery": {
+        "product_name_and_quantity": "{{productName}} quantità {{quantity}}",
+        "next": "Mostra gli articoli successivi",
+        "previous": "Mostra articoli precedenti",
+        "load_more_items": {
+          "one": "Carico {{count}} più articoli",
+          "other": "Carico {{count}} più articoli"
+        }
+      },
+      "mobile_summary_toggle_button": {
+        "open": "Mostra il riepilogo dell'ordine",
+        "closed": "Nascondere il riepilogo dell'ordine"
+      },
+      "no_data": "Nessuno",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} è vuoto",
+      "not_applicable": "N / A",
+      "paid_amount": "Pagato",
+      "partially_refunded_label": "Parzialmente rimborsato",
+      "payment": {
+        "status_in_review": "Pagamento dovuto dopo la revisione",
+        "status_unpaid": "Pagamento dovuto {{date}}",
+        "title": "Pagamento",
+        "card_payment_short_details": "{{paymentTypeLabel}} •••• {{lastDigits}}",
+        "payment_type": {
+          "gift_card": "Carta regalo",
+          "store_credit": "Credito del negozio",
+          "money_order": "Vaglia",
+          "cash_on_delivery": "Consegna in contanti (COD)",
+          "bank_deposit": "Deposito bancario",
+          "manual": "Manuale"
+        },
+        "card_payment_details": "terminare con {{lastDigits}} - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "terminare con {{lastDigits}} - {{formattedTransactionAmount}}",
+        "store_credit_payment_details": "Credito del negozio - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Pagato con rate di pagamento del negozio",
+          "view_schedule": "Visualizza il programma"
+        },
+        "manual_payment_methods": {
+          "money_order": "Ordine di denaro - {{formattedTransactionAmount}}",
+          "cash_on_delivery": "Consegna in contanti (COD) - {{formattedTransactionAmount}}",
+          "bank_deposit": "Deposito bancario - {{formattedTransactionAmount}}"
+        }
+      }
     }
   }
 }
