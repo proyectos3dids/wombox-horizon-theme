@@ -1,3 +1,4 @@
+
 {% comment %}
 Este código crea una barra flotante de producto con un selector de cantidad.
 La barra se adhiere a la parte inferior de la pantalla en las páginas de producto.
@@ -30,8 +31,8 @@ Es personalizable en el editor de temas.
   }
 
   .ai-sticky-bar-{{ ai_gen_id }}.is-visible {
-    opacity: 1;
-    visibility: visible;
+    opacity: 1 !important;
+    visibility: visible !important;
   }
 
   .ai-sticky-bar-image-{{ ai_gen_id }} {
@@ -374,8 +375,8 @@ Es personalizable en el editor de temas.
       function handleScroll() {
         if (!shownOnce && window.scrollY > scrollThreshold) {
           stickyBar.classList.add('is-visible');
-          shownOnce = true; // 👉 ya apareció, no se vuelve a ocultar
-          window.removeEventListener('scroll', handleScroll); // quitamos el listener
+          shownOnce = true; // 👉 ya apareció, no se vuelve a ocultar nunca
+          window.removeEventListener('scroll', handleScroll);
         }
       }
       window.addEventListener('scroll', handleScroll);
