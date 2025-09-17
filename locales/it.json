@@ -3803,7 +3803,71 @@
       "show_order_summary": "Mostra il riepilogo dell'ordine",
       "hide_order_summary": "Nascondere il riepilogo dell'ordine",
       "subtitle": "Confermato {{date}}",
-      "subtotal": "Subtotale"
+      "subtotal": "Subtotale",
+      "summary_list_title_accessibility_label": "Ordina articoli",
+      "summary_title": "Riepilogo dell'ordine",
+      "summary_totals_title_accessibility_label": "Totali dell'ordine",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Scarica negozio per tracciare il pacchetto",
+        "track_order_with_shop": "Traccia l'ordine con negozio",
+        "title_header": "Scansiona con il tuo telefono",
+        "real_time_delivery_updates": "Il negozio ti invierà aggiornamenti di consegna in tempo reale una volta spedito l'ordine."
+      },
+      "edit_summary": {
+        "added": "Aggiunto",
+        "added_with_quantity": "Aggiunto {{quantity}}",
+        "removed": "RIMOSSO",
+        "removed_with_quantity": "RIMOSSO {{quantity}}",
+        "updated_at": "Il tuo ordine è stato aggiornato su {{date}}",
+        "returned": "Restituito",
+        "returned_with_quantities": "Restituito {{delta}} Di {{total}}",
+        "removed_with_quantities": "RIMOSSO {{delta}} Di {{total}}",
+        "return_line_item_removed": "Rimosso dal ritorno",
+        "return_line_item_removed_with_quantities": "RIMOSSO {{delta}} dal ritorno"
+      },
+      "shop_pay": {
+        "order_completed_with": "Ordine completato con",
+        "learn_more": "Saperne di più"
+      },
+      "taxes": "Tasse",
+      "taxes_included": "Tra cui {{amount}} in tasse",
+      "duties_and_taxes_included": "Il totale include doveri e tasse. Nessun addebiti extra alla consegna.",
+      "duties": "Doveri",
+      "ok_duties_tooltip": "Questo ordine viene spedito da un altro paese, quindi sono stati aggiunti doveri al totale dell'ordine.",
+      "error_duties_tooltip": "Questo ordine viene spedito da un altro paese, quindi i doveri e le tasse possono essere addebitati alla consegna.",
+      "zero_duties_tooltip": "Questo ordine viene spedito da un altro paese. I doveri non vengono addebitati su ordini di questo valore.",
+      "tip": "Mancia",
+      "title": "Ordine {{name}}",
+      "total": "Totale",
+      "unit_price": "{{price}}/ea",
+      "pagination": {
+        "load_more": "Carica di più",
+        "load_more_accessibility_label": "Carica più elementi",
+        "loading_accessibility_label": "Caricamento di elementi"
+      },
+      "login_to_view_all_order_details": "Accedi per visualizzare tutti i dettagli dell'ordine.",
+      "log_in": "Registrazione",
+      "logged_in_account_no_permission_to_order": "Sei firmato come {{email}}. Questo account non ha l'autorizzazione per gestire questo ordine.",
+      "log_in_to_a_different_account": "Accedi a un altro account",
+      "fees": {
+        "restocking_fee": "Commissione di rifornimento",
+        "return_shipping_fee": "Restituzione della spedizione"
+      },
+      "vat_invoices": {
+        "title": "Fatture IVA"
+      },
+      "link_sent": "Link inviato",
+      "cash_rounding": "Arrotondamento in contanti",
+      "adjusted_payment": "Pagamento rettificato",
+      "adjusted_total": "Totale adeguato",
+      "due_on_date": "Dovuto {{date}}",
+      "due_on_fulfillment": "A causa dell'adempimento",
+      "due_on_receipt": "Dovuto al ricevimento"
+    },
+    "addresses": {
+      "add_button": "Aggiungi indirizzo",
+      "add_button_text": "Aggiungere",
+      "add_button_accessibility_label": "Aggiungi indirizzo"
     }
   }
 }
