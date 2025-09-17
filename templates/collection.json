@@ -238,7 +238,7 @@
             "description": "{{ closest.collection.description }}",
             "preview_lines": 1,
             "read_more_text": "Read more",
-            "read_less_text": "",
+            "read_less_text": "Read more",
             "full_width": true,
             "max_width": 1200,
             "text_alignment": "center",
