@@ -1119,7 +1119,81 @@
         "subscription_pickup": "Captação de assinatura",
         "waiting_on_rate_notice": "Obtendo as taxas de envio disponíveis…",
         "waiting_on_pickup_location_notice": "Recebendo os locais de coleta disponível…",
-        "no_rates_for_cart_or_destination_notice": "Não há métodos de envio disponíveis para o seu carrinho ou endereço"
+        "no_rates_for_cart_or_destination_notice": "Não há métodos de envio disponíveis para o seu carrinho ou endereço",
+        "no_pickup_location_notice": "Pelo menos um de seus produtos não está disponível para pegar",
+        "no_rates_for_country_notice": "Nenhuma taxa de envio encontrada para este endereço.",
+        "no_rates_contact_notice": "Entre em contato conosco para obter mais informações",
+        "free_rate_label": "Livre",
+        "cheapest_rate_label": "Mais barato",
+        "please_enter_your_shipping_information_notice": "Por favor, insira suas informações de envio.",
+        "estimated_delivery_date": {
+          "one": "%{count} dia útil",
+          "other": "%{count} dias úteis"
+        },
+        "estimated_delivery_date_range": "%{minimum} para %{maximum} dias úteis",
+        "delivery_date_range": "%{min_time}–%{max_time}",
+        "estimated_delivery_time": "Entrega estimada %{time}",
+        "estimated_delivery_time_range": "Entrega estimada %{min_time}–%{max_time}",
+        "delivery_today": "Entrega no mesmo dia %{time}",
+        "delivery_tomorrow": "Entrega no dia seguinte %{time}",
+        "two_day_delivery": "Entrega de 2 dias %{time}",
+        "delivery": "Entrega %{time}",
+        "arrives_time": "Chega %{time}",
+        "arrives_time_range": "Chega %{min_time}–%{max_time}",
+        "estimated_time": "Estimado %{time}",
+        "estimated_time_range": "Estimado %{min_time}–%{max_time}",
+        "default_description": "Navios em 1 dia útil",
+        "unbranded_default_description": "Pronto para enviar",
+        "shipping_line_phone_label": "Número de telefone celular (necessário)",
+        "shipping_line_phone": "Seu correio pode usar esse número para entrar em contato com você.",
+        "shipping_line_delivery_phone_label": "Número do telefone celular",
+        "shipping_line_delivery_phone": "Você pode ser contatado com atualizações em sua entrega.",
+        "optional_shipping_line_delivery_instructions_label": "Instruções de entrega (opcional)",
+        "shipping_line_delivery_instructions": "Digite as informações necessárias, como códigos de porta ou instruções de entrega.",
+        "other_method": {
+          "zero": "Nenhum outro método disponível",
+          "one": "%{count} outro método disponível em",
+          "other": "%{count} Outros métodos disponíveis a partir de"
+        },
+        "shipping_rate_discounted_amount": "Era: %{original_amount}. Agora: %{amount}",
+        "local_delivery": "Entrega local",
+        "prime_not_available": {
+          "default": "A entrega principal não está disponível para o seu pedido. Suas opções de envio foram atualizadas."
+        },
+        "subscription_delivery_description": {
+          "free_shipping_cycles": {
+            "one": "Frete grátis para %{count} Mais entrega",
+            "other": "Frete grátis para %{count} Mais entregas"
+          },
+          "free_shipping_cycles_delivery_not_included": {
+            "one": "Frete grátis para %{count} entrega",
+            "other": "Frete grátis para %{count} entregas"
+          },
+          "first_n_order_free_with_cycle": {
+            "one": "Frete grátis para %{count} Mais entrega, então %{recurring_order_shipping_price}",
+            "other": "Frete grátis para %{count} Mais entregas, então %{recurring_order_shipping_price}"
+          },
+          "first_n_order_free_with_cycle_delivery_not_included": {
+            "one": "Frete grátis para %{count} entrega, então %{recurring_order_shipping_price}",
+            "other": "Frete grátis para %{count} entregas, então %{recurring_order_shipping_price}"
+          },
+          "max_cycles_base_shipping": {
+            "one": "%{count} mais entrega para %{shipping_price}",
+            "other": "%{count} mais entregas para %{shipping_price} cada"
+          },
+          "max_cycles_base_shipping_delivery_not_included": {
+            "one": "%{count} entrega para %{shipping_price}",
+            "other": "%{count} mais entregas para %{shipping_price} cada"
+          },
+          "prepaid_free_shipping_with_cycles": {
+            "one": "Frete grátis para o primeiro %{cycle}, seguido pela %{recurring_order_shipping_price}",
+            "other": "Frete grátis para o primeiro %{cycle}, seguido pela %{recurring_order_shipping_price}"
+          },
+          "prepaid_order_one_cycle": {
+            "one": "%{shipping_price} para %{count} Mais entrega",
+            "other": "%{shipping_price} para %{count} Mais entregas (%{per_delivery_cost})"
+          }
+        }
       }
     }
   }
