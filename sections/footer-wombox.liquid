@@ -185,7 +185,7 @@
 <br>
 
 <!-- Idioma/Moneda MÓVIL -->
-<div style="{% if localization.available_countries and localization.available_countries.size > 1 %}20%{% else %}40%{% endif %};" class="wbf__flags-mobile">
+<div style="margin-left:{% if localization.available_countries and localization.available_countries.size > 1 %}20%{% else %}40%{% endif %};" class="wbf__flags-mobile">
   {% render 'footer-wombox-sidiomaymoneda',
     flag_de: section.settings.flag_de,
     flag_at: section.settings.flag_at,
