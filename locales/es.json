@@ -312,6 +312,11 @@
       },
       "billing": {
         "billing_address_rollup_accessibility_label": "Bill a las opciones"
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "El pago solo contiene mercancías remotas. Se requiere una redirección a la tienda remota para completar el pago."
+        }
       }
     }
   }
