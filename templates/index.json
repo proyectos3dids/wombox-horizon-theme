@@ -1403,7 +1403,7 @@
                 "input_focus_border_color": "#c67461",
                 "button_background_color": "#d4a697",
                 "button_text_color": "#ffffff",
-                "button_hover_background_color": "#000000",
+                "button_hover_background_color": "#333333",
                 "checkbox_color": "#c67461",
                 "link_color": "#c67461",
                 "link_hover_color": "#000000cf",
