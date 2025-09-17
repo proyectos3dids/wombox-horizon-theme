@@ -3813,7 +3813,71 @@
       "show_order_summary": "Mostrar resumo da ordem",
       "hide_order_summary": "Ocultar o resumo da ordem",
       "subtitle": "Confirmado {{date}}",
-      "subtotal": "Subtotal"
+      "subtotal": "Subtotal",
+      "summary_list_title_accessibility_label": "Itens de pedido",
+      "summary_title": "Resumo do pedido",
+      "summary_totals_title_accessibility_label": "Total de pedido",
+      "shop_order_tracking": {
+        "download_shop_to_track": "Baixe a loja para rastrear o pacote",
+        "track_order_with_shop": "Pedido de trilha com a loja",
+        "title_header": "Digitalize com seu telefone",
+        "real_time_delivery_updates": "A loja enviará atualizações de entrega em tempo real assim que seu pedido for enviado."
+      },
+      "edit_summary": {
+        "added": "Adicionado",
+        "added_with_quantity": "Adicionado {{quantity}}",
+        "removed": "Removido",
+        "removed_with_quantity": "Removido {{quantity}}",
+        "updated_at": "Seu pedido foi atualizado sobre {{date}}",
+        "returned": "Retornou",
+        "returned_with_quantities": "Retornou {{delta}} de {{total}}",
+        "removed_with_quantities": "Removido {{delta}} de {{total}}",
+        "return_line_item_removed": "Removido do retorno",
+        "return_line_item_removed_with_quantities": "Removido {{delta}} do retorno"
+      },
+      "shop_pay": {
+        "order_completed_with": "Pedido concluído com",
+        "learn_more": "Saber mais"
+      },
+      "taxes": "Impostos",
+      "taxes_included": "Incluindo {{amount}} em impostos",
+      "duties_and_taxes_included": "O total inclui tarefas e impostos. Não há cobranças extras na entrega.",
+      "duties": "Obrigações",
+      "ok_duties_tooltip": "Este pedido está sendo enviado de outro país, portanto, os deveres foram adicionados ao seu pedido total.",
+      "error_duties_tooltip": "Este pedido está sendo enviado de outro país, para que os deveres e impostos possam ser cobrados na entrega.",
+      "zero_duties_tooltip": "Esta ordem está sendo enviada de outro país. Os deveres não são cobrados por ordens desse valor.",
+      "tip": "Dica",
+      "title": "Ordem {{name}}",
+      "total": "Total",
+      "unit_price": "{{price}}/ea",
+      "pagination": {
+        "load_more": "Carregar mais",
+        "load_more_accessibility_label": "Carregue mais itens",
+        "loading_accessibility_label": "Carregando itens"
+      },
+      "login_to_view_all_order_details": "Faça login para visualizar todos os detalhes do pedido.",
+      "log_in": "Entrar",
+      "logged_in_account_no_permission_to_order": "Você está assinado como {{email}}. Esta conta não tem permissão para gerenciar esse pedido.",
+      "log_in_to_a_different_account": "Faça login em uma conta diferente",
+      "fees": {
+        "restocking_fee": "Taxa de reabastecimento",
+        "return_shipping_fee": "Retorno de envio"
+      },
+      "vat_invoices": {
+        "title": "Faturas de IVA"
+      },
+      "link_sent": "Link enviado",
+      "cash_rounding": "Arredondamento de dinheiro",
+      "adjusted_payment": "Pagamento ajustado",
+      "adjusted_total": "Total ajustado",
+      "due_on_date": "Devido {{date}}",
+      "due_on_fulfillment": "Devido ao cumprimento",
+      "due_on_receipt": "Devido no recebimento"
+    },
+    "addresses": {
+      "add_button": "Adicione endereço",
+      "add_button_text": "Adicionar",
+      "add_button_accessibility_label": "Adicione endereço"
     }
   }
 }
