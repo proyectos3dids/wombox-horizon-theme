@@ -2336,7 +2336,76 @@
         },
         "manage_order_label": "Gérez votre commande",
         "gift_card_confirmation_by_text_typ": {
-          "one": "Vous recevrez un SMS avec votre carte-cadeau en quelques minutes."
+          "one": "Vous recevrez un SMS avec votre carte-cadeau en quelques minutes.",
+          "other": "Vous recevrez un SMS avec vos cartes-cadeaux en quelques minutes."
+        },
+        "gift_card_confirmation_by_email_typ": {
+          "one": "Vous recevrez un e-mail avec votre carte-cadeau en quelques minutes.",
+          "other": "Vous recevrez un e-mail avec vos cartes-cadeaux en quelques minutes."
+        },
+        "gift_card_email_title": {
+          "one": "La carte-cadeau a été envoyée par e-mail",
+          "other": "Les cartes-cadeaux ont été envoyées par e-mail"
+        },
+        "gift_card_text_title": {
+          "one": "La carte-cadeau a été envoyée par SMS",
+          "other": "Les cartes-cadeaux ont été envoyées par SMS"
+        },
+        "resend_gift_cards_by_email": "Revoir le courrier électronique",
+        "resend_gift_cards_by_text": "Renvoyer un message texte",
+        "gift_card_resent_confirmation": {
+          "one": "La carte-cadeau était ressentie.",
+          "other": "Les cartes-cadeaux étaient ressenties."
+        },
+        "gift_card_resend_failure": {
+          "one": "Il y avait un problème à résoudre votre carte-cadeau. Réessayez ou contactez-nous.",
+          "other": "Il y avait un problème à résoudre vos cartes-cadeaux. Réessayez ou contactez-nous."
+        },
+        "vat_invoices": {
+          "title": "Factures de la cuve"
+        },
+        "verify_shop_account_title": "Vérifiez votre compte de boutique",
+        "verify_shop_account_message": "Vos informations ont été enregistrées avec la boutique, vérifiez votre compte pour les utiliser automatiquement sur des millions de magasins.",
+        "verify_shop_account_cta": "Vérifiez votre compte",
+        "verify_shop_account_confirmation": "Détails de paiement enregistrés",
+        "announcement": {
+          "close": "Fermer",
+          "expand": "Développer",
+          "collapse": "Effondrement"
+        }
+      },
+      "vaulted": {
+        "change_button": "Changement"
+      },
+      "review": {
+        "title": "Revoir",
+        "review_title": "Complétez votre commande",
+        "review_and_confirm_title": "Examiner et confirmer",
+        "checkout_as_guest": "Découvrez en tant qu'invité",
+        "account_more_actions": "Plus d'actions pour ce compte",
+        "checkout_a_different_way": "Découvrez une autre manière",
+        "blocks": {
+          "contact_method_title": "Contact",
+          "billing_address_title": "Facturation",
+          "shipping_address_title": "Envoyez à",
+          "shipping_method_title": "Méthode d'expédition",
+          "payment_method_title": "Mode de paiement",
+          "change_link_label": "Changement",
+          "change_contact_method_link_label": "Modifier les coordonnées",
+          "change_billing_address_link_label": "Modifier l'adresse de facturation",
+          "change_shipping_address_link_label": "Modifier l'adresse d'expédition",
+          "change_shipping_method_link_label": "Modifier la méthode d'expédition",
+          "change_payment_method_link_label": "Modifier le mode de paiement",
+          "pick_up_in_store_shipping_method_html": "Ramassage en magasin · %{location_name}",
+          "purchase_order_number_title": "Numéro de commande",
+          "change_purchase_order_number_label": "Changer le numéro de PO",
+          "change_delivery_method_link_label": "Modifier la méthode de livraison",
+          "no_address": "(Pas d'adresse)",
+          "no_purchase_order_number": "(Pas de numéro de commande)",
+          "due_after_order_reviewed_html": "Dû après l'examen de la commande",
+          "review_title_free_order": "Examiner et terminer votre commande",
+          "payment_method_saved_company_location": "Enregistrer la carte pour cet emplacement",
+          "company_location": "Emplacement de l'entreprise"
         }
       }
     }
