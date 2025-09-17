@@ -751,47 +751,7 @@
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
-          "blocks": {
-            "add_tocart_hFVHCB": {
-              "type": "add-tocart",
-              "name": "Sticky product bar",
-              "settings": {
-                "button_text": "Add to cart",
-                "fallback_title": "Product name",
-                "show_price": true,
-                "show_quantity_selector": true,
-                "bar_width": 85,
-                "max_width": 700,
-                "min_width": 350,
-                "mobile_bar_width": 90,
-                "mobile_max_width": 400,
-                "mobile_min_width": 300,
-                "bottom_margin": 20,
-                "padding": 12,
-                "mobile_padding": 10,
-                "image_size": 60,
-                "mobile_image_size": 50,
-                "title_size": 16,
-                "mobile_title_size": 14,
-                "price_size": 14,
-                "mobile_price_size": 12,
-                "button_text_size": 14,
-                "mobile_button_text_size": 12,
-                "button_padding": 12,
-                "mobile_button_padding": 10,
-                "background_color": "#ffffff",
-                "text_color": "#000000",
-                "price_color": "#666666",
-                "button_color": "#d4a697",
-                "button_hover_color": "#000000",
-                "button_text_color": "#ffffff"
-              },
-              "blocks": {}
-            }
-          },
-          "block_order": [
-            "add_tocart_hFVHCB"
-          ]
+          "blocks": {}
         },
         "text_cbcgyb": {
           "type": "text",
