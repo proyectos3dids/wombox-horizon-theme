@@ -3867,7 +3867,65 @@
     "addresses": {
       "add_button": "Aggiungi indirizzo",
       "add_button_text": "Aggiungere",
-      "add_button_accessibility_label": "Aggiungi indirizzo"
+      "add_button_accessibility_label": "Aggiungi indirizzo",
+      "back_button": "Indietro",
+      "back_button_accessibility_label": "Torna all'indirizzo di modifica {{address}}",
+      "add_address_banner": "Aggiungi indirizzi da utilizzare al momento del pagamento",
+      "no_addresses_banner": "Nessun indirizzo aggiunto",
+      "address_deleted_notification": "Indirizzo eliminato",
+      "cancel_adding_address_accessibility_label": "Annulla l'indirizzo di aggiunta",
+      "cancel_deletion_button": "Cancellare",
+      "cancel_deletion_button_accessibility_label": "Annullare l'eliminazione {{address}}",
+      "default_address": {
+        "title": "Indirizzo predefinito",
+        "title_accessibility_label": "Indirizzo predefinito: {{address}}"
+      },
+      "delete_button": "Eliminare",
+      "delete_button_accessibility_label": "Eliminare {{address}}",
+      "delete_confirmation_button": "Elimina indirizzo",
+      "delete_confirmation_button_accessibility_label": "Eliminare {{address}}",
+      "delete_confirmation_message": "Eliminare l'indirizzo? Gli ordini esistenti non sono interessati.",
+      "delete_confirmation_title": "Eliminare l'indirizzo?",
+      "delete_confirmation_description": "Gli ordini esistenti non sono interessati.",
+      "edit_button": "Modificare",
+      "edit_button_accessibility_label": "Modificare {{address}}",
+      "edit_section_accessibility_label": "Modificare {{address}}",
+      "edit_modal_title": {
+        "default": "Modifica indirizzo",
+        "billing": "Modificare l'indirizzo di fatturazione",
+        "shipping": "Modificare l'indirizzo di spedizione"
+      },
+      "loading_accessibility_message": "Indirizzo di caricamento",
+      "loading_addresses_accessibility_message": "Indirizzo di caricamento",
+      "loading_billing_accessibility_message": "Caricamento dell'indirizzo di fatturazione",
+      "loading_finished_accessibility_message": "È stata caricata la nuova pagina di indirizzi",
+      "loading_shipping_accessibility_message": "Caricamento dell'indirizzo di spedizione",
+      "pagination": {
+        "load_more": "Carica di più",
+        "load_more_accessibility_label": "Carica più indirizzi"
+      },
+      "save_new_address_accessibility_label": "Salva indirizzo",
+      "title": "Indirizzi",
+      "billing_address_dropdown_placeholder": "Indirizzo di fatturazione"
+    },
+    "address_form": {
+      "attention": "Attenzione",
+      "attention_company": "Azienda/attenzione",
+      "attention_help_text": "Il nome di una persona o di un dipartimento",
+      "auto_complete_close_accessibility_label": "Suggerimenti stretti",
+      "auto_complete_title": "Suggerimenti",
+      "billing_address": "Utilizzare come indirizzo di fatturazione",
+      "cancel": "Cancellare",
+      "cancel_accessibility_label": "Annulla l'indirizzo di modifica {{address}}",
+      "creation_success_notification": "Indirizzo aggiunto",
+      "default_address": "Questo è il mio indirizzo predefinito",
+      "default_address_creation_success_notification": "Indirizzo predefinito aggiunto",
+      "default_address_update_success_notification": "Indirizzo predefinito aggiornato",
+      "loading_add_form_accessibility_message": "Caricamento del nuovo modulo di indirizzo",
+      "loading_edit_form_accessibility_message": "Caricamento del modulo Indirizzo di modifica",
+      "loading_form_accessibility_message": "Modulo di indirizzo di caricamento",
+      "loading_finished_accessibility_message": "Il modulo di indirizzo è stato caricato",
+      "save": "Salva"
     }
   }
 }
