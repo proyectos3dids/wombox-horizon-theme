@@ -131,8 +131,8 @@
     "discount": "Sconto",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Doveri e tasse inclusi. Sconti e <a href=\"{{ link }}\">spedizione</a> calcolato al momento del pagamento.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Doveri e tasse inclusi. Sconti e spese di spedizione calcolate al momento del pagamento.",
-    "taxes_included_shipping_at_checkout_with_policy_html": "Imposte incluse. Sconti e <a href=\"{{ link }}\">spedizione</a> calcolati al check-out.",
-    "taxes_included_shipping_at_checkout_without_policy": "Imposte incluse. Sconti e spedizione calcolati al check-out.",
+    "taxes_included_shipping_at_checkout_with_policy_html": "Tasse incluse. Sconti e <a href=\"{{ link }}\">spedizione</a> calcolato al momento del pagamento.",
+    "taxes_included_shipping_at_checkout_without_policy": "Tasse incluse. Sconti e spese di spedizione calcolate al momento del pagamento.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Doveri inclusi. Tasse, sconti e <a href=\"{{ link }}\">spedizione</a> calcolato al momento del pagamento.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Doveri inclusi. Tasse, sconti e spedizione calcolati al momento del pagamento.",
     "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Tasse, sconti e <a href=\"{{ link }}\">spedizione</a> calcolato al momento del pagamento.",
@@ -146,7 +146,7 @@
     "duties_and_taxes_included": "Doveri e tasse inclusi.",
     "duties_included": "Doveri inclusi.",
     "shipping_policy_html": "<a href=\"{{ link }}\">Spedizione</a> calcolato al momento del pagamento.",
-    "taxes_included": "Imposte incluse.",
+    "taxes_included": "Tasse incluse.",
     "product_badge_sold_out": "Esaurito",
     "product_badge_sale": "Vendita",
     "search_input_label": "Ricerca",
@@ -176,7 +176,7 @@
     "collection_placeholder": "Titolo della raccolta",
     "product_card_placeholder": "Titolo del prodotto",
     "recently_viewed_products": "Recentemente visto",
-    "product_count": "Conteggio prodotti",
+    "product_count": "Conteggio dei prodotti",
     "item_count": {
       "one": "{{ count }} articolo",
       "other": "{{ count }} elementi",
@@ -188,7 +188,7 @@
     "featured_products": "Prodotti in primo piano",
     "no_products_found": "Nessun prodotto trovato.",
     "price_from": "Da {{ price }}",
-    "use_fewer_filters_html": "Prova a usare meno filtri oppure <a class=\"{{ class }}\" href=\"{{ link }}\">cancella tutti i filtri</a>.",
+    "use_fewer_filters_html": "Prova a usare meno filtri, o <a class=\"{{ class }}\" href=\"{{ link }}\">Cancella tutti i filtri</a>.",
     "filters": "Filtri",
     "price_filter_html": "Il prezzo più alto è {{ price }}",
     "blog_details_separator": "|",
@@ -208,10 +208,10 @@
     "pickup_ready_in": "{{ pickup_time }}",
     "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Tasse e <a href=\"{{ link }}\">spedizione</a> calcolato al momento del pagamento.",
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Tasse e spedizioni calcolate al momento del pagamento.",
-    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Imposte incluse. Le spese di spedizione vengono calcolate al check-out.",
-    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Imposte incluse. Le spese di spedizione vengono calcolate al check-out.",
-    "wrong_password": "Password errata",
-    "view_more_details": "Visualizza più dettagli",
+    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Tasse incluse. La spedizione è calcolata al momento del pagamento.",
+    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Tasse incluse. La spedizione è calcolata al momento del pagamento.",
+    "wrong_password": "Password sbagliata",
+    "view_more_details": "Visualizza maggiori dettagli",
     "inventory_low_stock": "Stock basso",
     "inventory_in_stock": "In magazzino",
     "inventory_out_of_stock": "Esaurito",
@@ -231,27 +231,27 @@
     "recipient_form_send_to": "Invia a",
     "recipient_form_email_label": "Email del destinatario",
     "recipient_form_email_label_my_email": "La mia email",
-    "recipient_form_email_address": "Indirizzo email del destinatario",
-    "recipient_form_name_label": "Nome destinatario (facoltativo)",
+    "recipient_form_email_address": "Indirizzo e -mail del destinatario",
+    "recipient_form_name_label": "Nome del destinatario (opzionale)",
     "recipient_form_message": "Messaggio (facoltativo)",
-    "recipient_form_characters_used": "{{ used_chars }}/{{ max_chars }} caratteri utilizzati",
-    "recipient_form_send_on": "GG/MM/AAAA",
-    "recipient_form_send_on_label": "Spedisci il giorno (opzionale)",
+    "recipient_form_characters_used": "{{ used_chars }}/{{ max_chars }} caratteri usati",
+    "recipient_form_send_on": "YYYY-MM-DD",
+    "recipient_form_send_on_label": "Invia (facoltativo)",
     "recipient_form_fields_visible": "I campi del modulo destinatario sono ora visibili",
     "recipient_form_fields_hidden": "I campi del modulo destinatario sono ora nascosti",
-    "recipient_form_error": "Si è verificato un errore durante l'invio del modulo",
-    "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caratteri utilizzati"
+    "recipient_form_error": "Si è verificato un errore con la presentazione del modulo",
+    "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caratteri usati"
   },
   "gift_cards": {
     "issued": {
-      "how_to_use_gift_card": "Utilizza il codice del buono regalo online o il codice QR in negozio",
-      "title": "Ecco il saldo del tuo buono regalo dal valore di {{ value }} per {{ shop }}!",
-      "subtext": "Il tuo buono regalo",
+      "how_to_use_gift_card": "Utilizzare il codice della carta regalo online o QR Codice in negozio",
+      "title": "Ecco il tuo {{ value }} Bilancio delle carte regalo per {{ shop }}!",
+      "subtext": "La tua carta regalo",
       "shop_link": "Visita il negozio online",
-      "add_to_apple_wallet": "Aggiungi a Apple Wallet",
-      "qr_image_alt": "Codice QR — scansiona per riscattare il buono regalo",
-      "copy_code": "Copia codice del buono regalo",
-      "expiration_date": "Scade il giorno {{ expires_on }}",
+      "add_to_apple_wallet": "Aggiungi al portafoglio Apple",
+      "qr_image_alt": "Codice QR - Scansione per riscattare la carta regalo",
+      "copy_code": "Copia codice regalo",
+      "expiration_date": "Scade {{ expires_on }}",
       "copy_code_success": "Codice copiato correttamente",
       "expired": "Scaduto"
     }
@@ -260,20 +260,20 @@
     "password": "Password",
     "search": "Ricerca",
     "product_title": "Titolo del prodotto",
-    "collection_title": "Titolo della collezione"
+    "collection_title": "Titolo della raccolta"
   },
   "products": {
     "product": {
       "add_to_cart": "Aggiungi al carrello",
       "added_to_cart": "Aggiunto al carrello",
-      "adding_to_cart": "Aggiunta in corso...",
-      "add_to_cart_error": "Errore durante l'aggiunta al carrello",
+      "adding_to_cart": "Aggiunta ...",
+      "add_to_cart_error": "Errore che aggiunge al carrello",
       "sold_out": "Esaurito",
       "unavailable": "Non disponibile"
     }
   },
   "fields": {
-    "separator": "a"
+    "separator": "A"
   },
   "blogs": {
     "article": {
