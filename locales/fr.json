@@ -2406,7 +2406,82 @@
           "review_title_free_order": "Examiner et terminer votre commande",
           "payment_method_saved_company_location": "Enregistrer la carte pour cet emplacement",
           "company_location": "Emplacement de l'entreprise"
+        },
+        "block_title": "Passez en revue vos informations",
+        "item_header": {
+          "change_value": "Modification de la valeur",
+          "section": "Section",
+          "value": "Valeur"
         }
+      },
+      "marketing": {
+        "accept_marketing_checkbox_label": "Envoyez-moi un courriel avec des nouvelles et des offres",
+        "post_accept_marketing_checkbox_label": "Vous êtes abonné pour recevoir des nouvelles et des offres par e-mail",
+        "pending_accept_marketing_checkbox_label": "Vérifiez votre e-mail pour confirmer votre abonnement aux actualités et aux offres",
+        "accept_sms_checkbox_label": "Envoyez-moi un texto avec des nouvelles et des offres",
+        "disclaimer": {
+          "privacy_policy": "politique de confidentialité",
+          "terms_of_service": "Conditions de service"
+        },
+        "sms": {
+          "disclaimer": {
+            "privacy_policy": "politique de confidentialité",
+            "terms_of_service": "Conditions de service",
+            "description_html": "En vous inscrivant par SMS, vous acceptez de recevoir des messages marketing automatisés récurrents, y compris des rappels de panier, au numéro de téléphone fourni. Le consentement n'est pas une condition d'achat. Répondre Arrêtez-vous pour vous désabonner. Répondre Aide à l'aide. La fréquence des messages varie. MSG et les débits de données peuvent s'appliquer. Voir notre %{privacy_policy_link} et %{terms_of_service_link}.",
+            "description_transactional_html": "Vous pouvez recevoir des SMS liés aux mises à jour de confirmation de commande et d'expédition. Répondre Arrêtez-vous pour vous désabonner. Répondre Aide à l'aide. La fréquence des messages varie. MSG et les débits de données peuvent s'appliquer. Voir notre %{privacy_policy_modal_link} et %{terms_of_service_modal_link}."
+          },
+          "mobile_phone_number": "Numéro de téléphone portable",
+          "get_offers_by_text": "Obtenir des offres par texte"
+        },
+        "unsubscribe": {
+          "title": "Vous vous êtes désabonné",
+          "description": "Vous ne recevrez plus de rappels de panier de notre part."
+        },
+        "accept_shop_pay_marketing_checkbox_label": "Inscrivez-moi pour les nouvelles et les offres de ce magasin"
+      },
+      "shop_policies": {
+        "policy_label": "Politique",
+        "policies_label": "Politiques",
+        "select_policy_label": "Sélectionnez une politique",
+        "refund_policy": "Politique de remboursement",
+        "privacy_policy": "Politique de confidentialité",
+        "terms_of_service": "Conditions de service",
+        "legal_notice": "Avis juridique",
+        "shipping_policy": "Expédition",
+        "terms_of_sale": "Conditions de vente",
+        "subscription_policy": "Annulations",
+        "purchase_options_policy": "Politique d'options d'achat",
+        "contact_information": "Contact",
+        "purchase_options_cancellation_policy": "Annulations",
+        "cookie_preferences": "Cookies"
+      },
+      "mor_policies": {
+        "terms_and_conditions": "Marchand des termes et conditions records",
+        "privacy_policy": "Marchand de politique de confidentialité enregistrée"
+      },
+      "markets": {
+        "invalid_market_manager_error": "Passez en revue vos coordonnées avant de terminer le paiement"
+      },
+      "notifications": {
+        "title": "Notifications"
+      },
+      "order_payment_collection": {
+        "custom_line_item_description": "Montant à payer pour la commande %{order_name}",
+        "changes_summary": {
+          "added": {
+            "one": "Ajouté",
+            "other": "Ajouté %{count}"
+          },
+          "removed": "Supprimé",
+          "subtracted": "Supprimé %{count}",
+          "returned": "Retourné %{count}",
+          "return_line_item_removed": "Supprimé %{count} De retour"
+        },
+        "additional_payment_requested": "Paiement de %{total_outstanding} est nécessaire",
+        "checkout_review_and_pay": "Votre commande %{order_name} a été mis à jour. Passez en revue ces modifications, puis payez pour confirmer votre commande.",
+        "order_updated_on": "Votre commande a été mise à jour sur %{last_edited_at}.",
+        "order_review_and_pay": "Votre commande a été mise à jour. Examiner et payer pour confirmer votre commande.",
+        "pay_now": "Payer maintenant"
       }
     }
   }
