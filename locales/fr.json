@@ -3160,7 +3160,93 @@
         "stock_problems_html": "Un ou plusieurs articles ne sont plus disponibles. Nous avons fourni un <a href='%{link}'>chariot mis à jour</a>.",
         "changed": "Chariot changé",
         "items_changed": "Un ou plusieurs articles ont changé.",
-        "product_sold_out": "Le produit '%{name}«est déjà épuisé."
+        "product_sold_out": "Le produit '%{name}«est déjà épuisé.",
+        "variant_not_found": "Impossible de trouver la variante",
+        "variant_requires_selling_plan": "La variante ne peut être achetée qu'avec un plan de vente.",
+        "selling_plan_not_available_for_company_locations": "Un seul achat à un temps est disponible pour les commandes B2B",
+        "digital_product_not_available_for_company_locations": "Cet article ne peut pas être ajouté à une commande B2B",
+        "buyer_cannot_purchase_for_company_locations": "Vous ne pouvez pas acheter pour cet emplacement",
+        "selling_plan_not_applicable": "Impossible d'appliquer le plan de vente à la variante",
+        "shipping_address_not_required": "Ce chariot ne nécessite pas d'expédition",
+        "shipping_address_invalid": "Il y avait un problème à calculer vos tarifs d'expédition. Continuez à vérifier pour choisir un tarif d'expédition avant de terminer votre commande.",
+        "bundle_requires_components": "Le produit du bundle '%{name}«Ne peut pas être ajouté au chariot.",
+        "gift_card_with_components_not_supported": "Le produit du bundle '%{name}«Ne peut pas être ajouté au chariot.",
+        "gift_card_price_must_be_greater_than_zero": "Le produit du bundle '%{name}«Ne peut pas être ajouté au chariot.",
+        "gift_card_recipient_validation_error": "Le destinataire de la carte-cadeau spécifiée n'est pas valide",
+        "view_lines_limit_reached": "Les lignes doivent être inférieures à %{limit}",
+        "cart_too_large": "Le panier est trop grand.",
+        "cart_attributes_error": "Les attributs CART contiennent des données non valides.",
+        "merchandise_line_transformers": {
+          "run_error": "Une erreur s'est produite dans votre panier."
+        },
+        "merchandise_not_applicable": "L'article ne peut pas être acheté comme configuré."
+      },
+      "storefront": {
+        "invalid_password": "Mot de passe incorrect, veuillez réessayer."
+      },
+      "tags": {
+        "add_articles": "Recherche étroite aux articles ayant également une balise %{tag}",
+        "add_products": "Sélection étroite aux produits Matching Tag %{tag}",
+        "remove_articles": "Élargir la recherche vers des articles qui ne sont pas tagués %{tag}",
+        "remove_products": "Supprimer la balise %{tag}"
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Merci de vous abonner à notre liste de diffusion.",
+        "disclaimer": "Vous pouvez vous désinscrire à tout moment.",
+        "unsubscribe": "Se désabonner"
+      },
+      "unsubscribed": {
+        "confirmation": "Vous vous êtes désabonné de notre liste de diffusion.",
+        "disclaimer": "Vous ne recevrez plus de mises à jour marketing de notre part. Vous pouvez vous abonner à tout moment.",
+        "preview": "Vous apercevez ce que les clients verront lorsqu'ils se désinscrire."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Vous avez choisi de envoyer un e-mail à un suivi ouvert.</b>",
+          "visibility": "Les taux d'ouverture par e-mail seront signalés de manière anonyme. Nous ne verrons que si vous avez ouvert un e-mail dans le cadre d'un taux d'ouverture par e-mail agrégé.",
+          "opt_out_html": "Tu peux <a style='text-decoration:underline;' href='%{link}'>se désengager</a> du suivi ouverte par e-mail si vous ne souhaitez pas partager ces informations.",
+          "preview_bar": "Vous apercevez ce que les clients verront lorsqu'ils se renseignent pour envoyer un e-mail à un suivi ouvert."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Vous vous êtes retiré du suivi ouvert par e-mail.</b>",
+          "visibility": "Nous ne verrons pas si vous avez ouvert nos e-mails.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Adopter</a> Pour envoyer un e-mail à un suivi ouvert.",
+          "preview_bar": "Vous prévisualisez ce que les clients verront lorsqu'ils se retirent par e-mail un suivi ouvert."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Nous ne suivons plus d'ouverture par e-mail.</b>",
+          "privacy_policy": "Après l'envoi de cet e-mail, nous avons mis à jour notre politique de confidentialité et nous n'ouvrons plus d'ouverture."
+        },
+        "track": {
+          "status_html": "<b>Un suivi ouvert par e-mail est signalé.</b>",
+          "visibility": "Nous ne verrons que si vous avez ouvert l'e-mail, dans le cadre du taux d'ouverture par e-mail total."
+        },
+        "updated_policy": {
+          "status_html": "<b>Un suivi ouvert par e-mail est signalé.</b>",
+          "visibility": "Nous avons mis à jour notre politique et le suivi des e-mails ouverts. Les taux d'ouverture par e-mail seront signalés de manière anonyme. Nous ne verrons que si vous avez ouvert un e-mail dans le cadre du taux d'ouverture par e-mail total.",
+          "opt_out_html": "Si vous ne souhaitez pas partager ces informations, vous pouvez <a style='text-decoration:underline;' href='%{link}'>se désinscrire.</a>"
+        }
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "En stock",
+          "out_of_stock": "En rupture de stock"
+        }
+      },
+      "boolean": {
+        "true_label": "Oui",
+        "false_label": "Non"
+      }
+    },
+    "search": {
+      "error": "Il y avait un problème à charger vos résultats de recherche. Veuillez actualiser la page ou réessayer plus tard.",
+      "sorting": {
+        "relevance": "Pertinence",
+        "price_ascending": "Prix, bas à haut"
       }
     }
   }
