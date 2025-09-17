@@ -1925,7 +1925,75 @@
         "complete_your_purchase_title": "Completa il tuo acquisto",
         "continue_to_payment_gateway_notice": "Continua al pagamento per aggiungere le informazioni di pagamento.",
         "continue_to_payment_gateway_button_label": "Continua al pagamento",
-        "complete_your_purchase_title_error": "Correggi le informazioni di pagamento"
+        "complete_your_purchase_title_error": "Correggi le informazioni di pagamento",
+        "continue_to_payment_gateway_notice_error": "Le informazioni di pagamento non potrebbero essere verificate.",
+        "continue_to_payment_gateway_button_label_error": "Aggiorna le informazioni di pagamento",
+        "page_title": "Ordine di elaborazione",
+        "title": "Ordine di elaborazione",
+        "your_order_has_been_received_title": "Grazie per il tuo ordine",
+        "you_will_receive_confirmation": "Stiamo ricevendo molti ordini in questo momento. Dovresti ricevere presto la conferma via e -mail o SMS. Se non lo ricevi nella prossima ora, faccelo sapere.",
+        "you_will_not_be_charged": "Non ti verrà ancora accusato",
+        "wait": {
+          "short": "Il tuo ordine viene elaborato.",
+          "medium": {
+            "one": "Il tuo ordine viene elaborato. Il tempo di attesa stimato è %{count} minuto.",
+            "other": "Il tuo ordine viene elaborato. Il tempo di attesa stimato è %{count} minuti."
+          },
+          "long": "Riceverai un'e -mail non appena il tuo ordine è elaborato. Attualmente c'è un alto volume di ordini.",
+          "no_auto_refresh_html": "Se non sei automaticamente reindirizzato, %{link}.",
+          "refresh_this_page": "Aggiorna questa pagina"
+        },
+        "remote_shops_payments_processing": "Pagamenti di elaborazione",
+        "action_required": "Azione richiesta",
+        "modal_notice": "Stiamo contattando {{paymentMethod}}",
+        "remote_checkout_count": "%{current} Di %{total}"
+      },
+      "payment_challenge_modal": {
+        "instructions": "Completa il tuo acquisto utilizzando il tuo {{paymentMethod}} codice",
+        "timer_message": "Hai {{timeLeft}} pagare",
+        "copy_text": "Copia {{paymentMethod}} codice",
+        "open_app_text": "Aprire {{paymentMethod}} app",
+        "header": "Pagare con {{paymentMethod}}",
+        "qr_code": {
+          "instructions": "Completa il tuo acquisto utilizzando il tuo {{paymentMethod}} codice"
+        },
+        "external": {
+          "instructions": "Conferma il pagamento sulla tua app per completare questo acquisto"
+        },
+        "close": "Chiudi la sfida"
+      },
+      "failed_payment": {
+        "page_title": "Il pagamento non poteva essere elaborato",
+        "title": "Il pagamento non poteva essere elaborato",
+        "payment_not_processed_title": "Il tuo pagamento non potrebbe essere elaborato",
+        "payment_not_processed_text": "Non ti è stato accusato. Torna al tuo carrello per completare l'acquisto.",
+        "return_to_cart_button_label": "Torna al carrello"
+      },
+      "payment_gateway": {
+        "credit_card_label": "Carta di credito",
+        "bank_deposit_label": "Deposito bancario",
+        "cash_on_delivery_label": "Consegna in contanti (COD)",
+        "money_order_label": "Vaglia",
+        "debit_card_label": "Carta di debito",
+        "deferred_payment_label": "Scegli il metodo di pagamento più tardi",
+        "fixed_payment_label": "Il tuo pagamento sarà dovuto {{dueDate}}.",
+        "generic_payment_terms": "Sei acceso {{translatedName}} termini. Il tuo pagamento sarà dovuto {{dueDate}}.",
+        "login_prompt": {
+          "no_access": {
+            "message": "{{logIn}} a un account con accesso a questa posizione per aggiungere o utilizzare i metodi di pagamento salvati.",
+            "link": "Login"
+          }
+        },
+        "direct_payment_terms": "Sei acceso {{translatedName}} termini. La tua carta verrà addebitata {{dueDate}}.",
+        "fixed_direct_payment_terms": "La tua carta verrà addebitata {{dueDate}}.",
+        "order_due_on_fulfillment_choose_later": "Il pagamento sarà dovuto una volta eseguito l'ordine.",
+        "order_due_on_fulfillment_payment": "La tua carta verrà addebitata una volta eseguita l'ordine.",
+        "order_due_on_receipt_choose_later": "Il pagamento sarà dovuto al ricevimento.",
+        "order_deposit_due_now": "{{depositAmount}} è dovuto oggi. L'equilibrio è acceso {{translatedName}} Termini ed è dovuto {{dueDate}}.",
+        "order_deposit_due_on_fulfillment": "{{depositAmount}} è dovuto oggi. Il saldo sarà dovuto una volta eseguito l'ordine.",
+        "order_deposit_due_on_receipt": "{{depositAmount}} è dovuto oggi. Il saldo sarà dovuto più tardi.",
+        "order_deposit_due_on_fixed_date": "{{depositAmount}} è dovuto oggi. Il saldo sarà dovuto {{dueDate}}.",
+        "draft_order_payment_due_later_no_terms": "Il pagamento sarà dovuto una volta confermato l'ordine."
       }
     }
   }
