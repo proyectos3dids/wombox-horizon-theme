@@ -4054,9 +4054,85 @@
             "description_authorized": "Il tuo metodo di pagamento verrà addebitato alla data di scadenza o puoi pagare ora.",
             "description_waiting_for_manual_payment": "Questo ordine ha un pagamento in sospeso. Il saldo verrà aggiornato quando il pagamento viene ricevuto.",
             "description_due_on_receipt": "Riceverai una fattura quando il pagamento è dovuto.",
-            "description_due_on_receipt_partially_paid": "Questo ordine è stato parzialmente pagato. Hai un equilibrio rimanente. Riceverai una fattura quando il pagamento è dovuto."
-          }
+            "description_due_on_receipt_partially_paid": "Questo ordine è stato parzialmente pagato. Hai un equilibrio rimanente. Riceverai una fattura quando il pagamento è dovuto.",
+            "description_due_on_fulfillment": "Il pagamento è dovuto una volta soddisfatti tutti gli articoli in questo ordine.",
+            "description_due_on_fulfillment_partially_paid": "Questo ordine è stato parzialmente pagato. Hai un equilibrio rimanente. Il pagamento è dovuto una volta soddisfatti tutti gli articoli in questo ordine."
+          },
+          "draft": {
+            "description": "I dettagli di pagamento vengono decisi quando l'ordine è confermato.",
+            "title": "Pagamento non ancora dovuto",
+            "in_review": {
+              "description": "I dettagli di pagamento vengono decisi quando l'ordine è confermato.",
+              "title": "Pagamento non ancora dovuto"
+            },
+            "submitted": {
+              "description": "Invia il pagamento per confermare questo ordine.",
+              "title": "Paga per confermare",
+              "deposit": {
+                "title": "Il pagamento è dovuto",
+                "due_later": "L'equilibrio è acceso {{translatedName}} Termini ed è dovuto {{dueDate}}.",
+                "due_on_fulfillment": "L'equilibrio è dovuto una volta che tutti gli articoli in questo ordine sono soddisfatti.",
+                "due_on_receipt": "Riceverai una fattura per il saldo rimanente.",
+                "due_on_date": "L'equilibrio è dovuto {{dueDate}}."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} sarà dovuto quando il tuo ordine sarà confermato. L'equilibrio sarà acceso {{translatedName}} termini.",
+              "due_on_fulfillment": "{{depositAmount}} sarà dovuto quando il tuo ordine sarà confermato. Il saldo sarà dovuto quando l'ordine sarà evaso.",
+              "due_on_receipt": "{{depositAmount}} sarà dovuto quando il tuo ordine sarà confermato. Il saldo sarà dovuto più tardi.",
+              "due_on_date": "{{depositAmount}} sarà dovuto quando il tuo ordine sarà confermato. Il saldo sarà dovuto {{dueDate}}."
+            }
+          },
+          "paid": {
+            "title": "Pagato",
+            "title_with_date": "Pagato {{date}}",
+            "description": "Il tuo ordine è completamente pagato."
+          },
+          "refund": {
+            "title": "Rimborsato",
+            "title_with_date": "Rimborsato {{date}}",
+            "description_full_refund": "Hai ricevuto un rimborso completo per questo ordine.",
+            "description_single_refund": "Hai ricevuto un rimborso parziale per questo ordine.",
+            "description_multiple_refunds": "Hai ricevuto rimborsi parziali per questo ordine."
+          },
+          "canceled": {
+            "title": "Pagamento annullato",
+            "description": "Non sei stato accusato."
+          },
+          "pay_now": "Paga ora",
+          "pay_now_accessibility_label": "Paga ora per l'ordine {{orderName}}",
+          "title": "Stato di pagamento"
+        },
+        "order_timeline": {
+          "expand_events_label": "Mostra i dettagli",
+          "expand_events_accessibility_label": "Mostra i dettagli dell'ordine di bozza",
+          "hide_events_label": "Nascondere i dettagli",
+          "hide_events_accessibility_label": "Nascondere i dettagli dell'ordine"
+        },
+        "subtitle": "Presentato {{date}}",
+        "title": "Ordine {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Questo metodo di pagamento non sarà più disponibile per gli acquisti futuri da questa posizione.",
+          "description_with_replacement": "L'eliminazione di questo metodo di pagamento influirà sui pagamenti preautorizzati per questa posizione. Sostituirlo con un metodo di pagamento alternativo per continuare a ricevere ordini imminenti."
+        },
+        "payment_details": {
+          "order_label": "Ordine {{name}}",
+          "draft_label": "Draft Order {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Aggiungi il numero di po",
+        "add_modal_title": "Aggiungi il numero di po",
+        "cancel": "Cancellare",
+        "close_modal_accessibility_label": "Chiudi il numero di po modale",
+        "discard": "Scartare",
+        "discard_changes_modal_title": "Scartare i cambiamenti?",
+        "edit_accessibility_label": "Modifica il numero PO",
+        "edit_modal_title": "Modifica il numero PO",
+        "empty_state": "Nessun numero PO",
+        "modal_po_number_input_label": "Numero PO"
       }
     }
   }
