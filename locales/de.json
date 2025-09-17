@@ -1549,6 +1549,78 @@
           "manage_label": "Geschäftskredit verwalten",
           "buying_gift_card": "Sie können kein Geschäft mit einem Geschäft verwenden, um eine Geschenkkarte zu kaufen",
           "no_fixed_selling_plans": "Sie können Store -Guthaben mit aufgeschobenen Kaufoptionen nicht verwenden"
+        },
+        "clear": "Klar",
+        "billing_must_match_shipping_notice": "Die Abrechnungsadresse Ihrer Zahlungsmethode muss mit der Versandadresse übereinstimmen.",
+        "same_billing_address_checkbox_label": "Verwenden Sie die Versandadresse als Rechnungsadresse",
+        "location_billing_address_label": "Standortrechnungsadresse",
+        "fact_billing_address_label": "Abrechnungsadresse",
+        "location_shipping_address_label": "Standortversandadresse",
+        "use_order_billing_address_label": "Verwenden Sie die Bestellungsanschrift",
+        "use_location_billing_address_label": "Verwenden Sie Standort -Abrechnungsadresse",
+        "use_location_shipping_address_label": "Verwenden Sie den Standort Versandadresse",
+        "no_working_method_error": "Dieser Geschäft kann momentan keine Zahlungen akzeptieren. Aktualisieren Sie diese Seite oder kommen Sie später zurück.",
+        "brand_not_available": "Dieser Laden akzeptiert nicht {{brand}}. Bitte verwenden Sie eine andere Karte, um zu bezahlen.",
+        "shipping_rate_updated": "Die verfügbaren Versandmethoden wurden aktualisiert. Bestätigen Sie Ihre Wahl, bevor Sie sich auschecken.",
+        "billing_address_invalid_phone": "Aktualisieren Sie die Telefonnummer in Ihrer Abrechnungsadresse für {{label}} {{last_digits}} weitermachen.",
+        "billing_address_invalid_phone_no_card": "Aktualisieren Sie die Telefonnummer in Ihrer Abrechnungsadresse, um fortzufahren.",
+        "preview_not_available": {
+          "title": "Vorschau nicht verfügbar",
+          "content": "Machen Sie sich keine Sorgen, diese Express -Kasse funktioniert für Ihre Kunden.",
+          "button": "OK"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Geben Sie ein gültiges Ausgabedatum ein",
+              "issue_number": "Geben Sie eine gültige Ausgabennummer ein"
+            },
+            "invalid": {
+              "verification_value": "Geben Sie einen gültigen CVV- oder Sicherheitscode ein"
+            }
+          }
+        },
+        "simulated_checkout": "Vorschau kommt bald",
+        "simulated_express_checkout": "Brieftaschen sind in der Editor -Vorschau aufgrund Ihrer Region oder Ihres Browsers nicht verfügbar",
+        "vaulting_agreement_label": "Speichern Sie meine Zahlungsinformationen mit %{company} für eine schnellere Kasse.",
+        "business_customer_vaulting_payment_label": "Speichern Sie diese Karte an der Kasse und autorisieren Sie %{company} Um es für zukünftige Einkäufe für diesen Standort zu berechnen. Alle an diesem Ort zugewiesenen Kontakte können die Karte verwenden.",
+        "purchase_options_and_vaulting_agreement_label": "Ein oder mehrere Artikel in Ihrem Karren sind ein aufgeschobener oder Abonnementkauf. Wenn Sie Ihre Zahlung fortsetzen, erklären Sie sich damit einverstanden, dass Ihre Zahlungsmethode automatisch zum Preis und zur Frequenz berechnet wird, die auf dieser Seite aufgeführt sind, bis sie endet oder Sie stornieren. Alle Stornierungen unterliegen der %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "Stornierungsrichtlinie",
+        "use_different_credit_card_label": "Verwenden Sie eine andere Karte",
+        "saved_credit_card": "Ihre gespeicherte Kreditkarte",
+        "saved_credit_card_info": "Letzte vier Ziffern",
+        "saved_credit_card_cvv_verification": "Für Überprüfungszwecke geben Sie bitte den Sicherheitscode Ihrer Karte ein.",
+        "saved_credit_card_actions": {
+          "edit": "Bearbeiten",
+          "delete": "Löschen"
+        },
+        "saved_credit_cards_modal": {
+          "view_all_label": "Alle gespeicherten Karten anzeigen",
+          "done": "Erledigt",
+          "cancel": "Stornieren"
+        },
+        "add_credit_card_modal": {
+          "title": "Karte hinzufügen",
+          "save": "Speichern",
+          "cancel": "Stornieren"
+        },
+        "delete_credit_card_modal": {
+          "title": "Karte löschen",
+          "confirmation": "Sind Sie sicher, dass Sie die löschen möchten {{brandName}} Ende in {{lastDigits}}?",
+          "cancel": "Stornieren",
+          "delete": "Löschen"
+        },
+        "edit_credit_card_modal": {
+          "title": "Karte bearbeiten",
+          "done": "Erledigt",
+          "cancel": "Stornieren",
+          "description": "Sie können die Abrechnungsadresse Ihrer Karte nur ändern.",
+          "fields": {
+            "default": "Standardmäßig festgelegt",
+            "card_number": "Kartennummer",
+            "expiry": "Verfallsdatum",
+            "security_code": "Sicherheitscode"
+          }
         }
       }
     }
