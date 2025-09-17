@@ -1067,6 +1067,87 @@
     "section_aV84KB": {
       "type": "section",
       "blocks": {
+        "group_deGwyd": {
+          "type": "group",
+          "name": "t:names.group",
+          "settings": {
+            "link": "",
+            "open_in_new_tab": false,
+            "content_direction": "column",
+            "vertical_on_mobile": true,
+            "horizontal_alignment": "flex-start",
+            "vertical_alignment": "center",
+            "align_baseline": false,
+            "horizontal_alignment_flex_direction_column": "flex-start",
+            "vertical_alignment_flex_direction_column": "center",
+            "gap": 12,
+            "width": "fill",
+            "custom_width": 100,
+            "width_mobile": "fill",
+            "custom_width_mobile": 100,
+            "height": "fit",
+            "custom_height": 100,
+            "inherit_color_scheme": true,
+            "color_scheme": "",
+            "background_media": "none",
+            "video_position": "cover",
+            "background_image_position": "cover",
+            "border": "none",
+            "border_width": 1,
+            "border_opacity": 100,
+            "border_radius": 0,
+            "placeholder": "",
+            "toggle_overlay": false,
+            "overlay_color": "#00000026",
+            "overlay_style": "solid",
+            "gradient_direction": "to top",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {
+            "add_tocart_9eheJT": {
+              "type": "add-tocart",
+              "name": "Sticky product bar",
+              "settings": {
+                "button_text": "Add to cart",
+                "fallback_title": "Product name",
+                "show_price": true,
+                "show_quantity_selector": false,
+                "bar_width": 85,
+                "max_width": 700,
+                "min_width": 350,
+                "mobile_bar_width": 90,
+                "mobile_max_width": 400,
+                "mobile_min_width": 300,
+                "bottom_margin": 20,
+                "padding": 12,
+                "mobile_padding": 10,
+                "image_size": 60,
+                "mobile_image_size": 50,
+                "title_size": 16,
+                "mobile_title_size": 14,
+                "price_size": 14,
+                "mobile_price_size": 12,
+                "button_text_size": 14,
+                "mobile_button_text_size": 12,
+                "button_padding": 12,
+                "mobile_button_padding": 10,
+                "background_color": "#ffffff",
+                "text_color": "#000000",
+                "price_color": "#666666",
+                "button_color": "#000f9f",
+                "button_hover_color": "#000000",
+                "button_text_color": "#ffffff"
+              },
+              "blocks": {}
+            }
+          },
+          "block_order": [
+            "add_tocart_9eheJT"
+          ]
+        },
         "group_jbywNV": {
           "type": "group",
           "name": "t:names.group",
@@ -1162,6 +1243,7 @@
         }
       },
       "block_order": [
+        "group_deGwyd",
         "group_jbywNV"
       ],
       "name": "NEWSLETTER V2",
