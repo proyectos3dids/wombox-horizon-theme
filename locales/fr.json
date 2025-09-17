@@ -3863,7 +3863,65 @@
     "addresses": {
       "add_button": "Ajouter l'adresse",
       "add_button_text": "Ajouter",
-      "add_button_accessibility_label": "Ajouter l'adresse"
+      "add_button_accessibility_label": "Ajouter l'adresse",
+      "back_button": "Dos",
+      "back_button_accessibility_label": "Retour à l'adresse d'édition {{address}}",
+      "add_address_banner": "Ajouter des adresses à utiliser à la caisse",
+      "no_addresses_banner": "Aucune adresse ajoutée",
+      "address_deleted_notification": "Adresse supprimée",
+      "cancel_adding_address_accessibility_label": "Annuler l'adresse d'ajout",
+      "cancel_deletion_button": "Annuler",
+      "cancel_deletion_button_accessibility_label": "Annuler la suppression {{address}}",
+      "default_address": {
+        "title": "Adresse par défaut",
+        "title_accessibility_label": "Adresse par défaut: {{address}}"
+      },
+      "delete_button": "Supprimer",
+      "delete_button_accessibility_label": "Supprimer {{address}}",
+      "delete_confirmation_button": "Supprimer l'adresse",
+      "delete_confirmation_button_accessibility_label": "Supprimer {{address}}",
+      "delete_confirmation_message": "Supprimer l'adresse? Les commandes existantes ne sont pas affectées.",
+      "delete_confirmation_title": "Supprimer l'adresse?",
+      "delete_confirmation_description": "Les commandes existantes ne sont pas affectées.",
+      "edit_button": "Modifier",
+      "edit_button_accessibility_label": "Modifier {{address}}",
+      "edit_section_accessibility_label": "Modifier {{address}}",
+      "edit_modal_title": {
+        "default": "Modifier l'adresse",
+        "billing": "Modifier l'adresse de facturation",
+        "shipping": "Modifier l'adresse d'expédition"
+      },
+      "loading_accessibility_message": "Adresse de chargement",
+      "loading_addresses_accessibility_message": "Adresses de chargement",
+      "loading_billing_accessibility_message": "Adresse de facturation de chargement",
+      "loading_finished_accessibility_message": "Une nouvelle page d'adresses a chargé",
+      "loading_shipping_accessibility_message": "Adresse de chargement de chargement",
+      "pagination": {
+        "load_more": "Chargez plus",
+        "load_more_accessibility_label": "Chargez plus d'adresses"
+      },
+      "save_new_address_accessibility_label": "ARRESSION SAVE",
+      "title": "Adresses",
+      "billing_address_dropdown_placeholder": "Adresse de facturation"
+    },
+    "address_form": {
+      "attention": "Attention",
+      "attention_company": "Entreprise / attention",
+      "attention_help_text": "Le nom d'une personne ou d'un département",
+      "auto_complete_close_accessibility_label": "Fermer des suggestions",
+      "auto_complete_title": "Suggestions",
+      "billing_address": "Utiliser comme adresse de facturation",
+      "cancel": "Annuler",
+      "cancel_accessibility_label": "Annuler l'adresse d'édition {{address}}",
+      "creation_success_notification": "Adresse ajoutée",
+      "default_address": "Ceci est mon adresse par défaut",
+      "default_address_creation_success_notification": "Adresse par défaut ajoutée",
+      "default_address_update_success_notification": "Adresse par défaut mise à jour",
+      "loading_add_form_accessibility_message": "Chargement du nouveau formulaire d'adresse",
+      "loading_edit_form_accessibility_message": "Chargement du formulaire d'adresse d'édition",
+      "loading_form_accessibility_message": "Formulaire d'adresse de chargement",
+      "loading_finished_accessibility_message": "Le formulaire d'adresse a chargé",
+      "save": "Sauvegarder"
     }
   }
 }
