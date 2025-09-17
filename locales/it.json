@@ -1377,7 +1377,63 @@
             "web_component_error": "C'è stato un problema a caricare questa pagina"
           }
         },
-        "saved_by_payment_method": "Salvato da %{payment_method}"
+        "saved_by_payment_method": "Salvato da %{payment_method}",
+        "pay_with_payment_method": "Pagare con %{payment_method}",
+        "different_credit_card_label": "Usa una carta di credito diversa",
+        "same_billing_address_label": "Come l'indirizzo di spedizione",
+        "different_billing_address_label": "Usa un indirizzo di fatturazione diverso",
+        "billing_address_associated_with_mandate": "Usa l'indirizzo associato al metodo di pagamento",
+        "billing_address_associated_with_mandate_info": "Se desideri modificare il tuo indirizzo di fatturazione, rimuovi e rientri i dettagli della tua carta di credito",
+        "free_order_notice_html": "Il tuo ordine è <strong>gratuito</strong>. Non è richiesto alcun pagamento.",
+        "express_checkout_free_order": "Non ti verrà addebitato per un ordine gratuito",
+        "order_covered_by_gift_cards_notice": {
+          "one": "Il tuo ordine è coperto dalla tua carta regalo.",
+          "other": "Il tuo ordine è coperto dalle tue carte regalo."
+        },
+        "offsite_gateway_redirect_hint": "Dopo aver fatto clic \"%{button_label}\", Verrai reindirizzato a %{gateway_label} Per completare il tuo acquisto in modo sicuro.",
+        "offsite_gateway_review_page_redirect_hint": "Dopo aver esaminato il tuo ordine, verrai reindirizzato a %{gateway_label} Per completare il tuo acquisto in modo sicuro.",
+        "offsite_gateway_redirect_hint_multi_currency_html": "%{gateway_label} totale %{total_shop_price}",
+        "offsite_gateway_redirect_hint_no_button_label": "Dopo aver continuato, verrai reindirizzato a %{gateway_label} Per completare il tuo acquisto in modo sicuro.",
+        "receiver_payment_experience_hint": "Dopo aver effettuato l'ordine, riceverai dettagli di pagamento. Effettuare il pagamento a multibanco o online all'interno %{due_days} giorni.",
+        "billing_address_title": "Indirizzo di fatturazione",
+        "billing_address_rollup_accessibility_label": "Opzioni dell'indirizzo di fatturazione",
+        "billing_address_description": "Seleziona l'indirizzo che corrisponde alla tua carta o al metodo di pagamento.",
+        "billing_address_description_no_shipping_address": "Immettere l'indirizzo che corrisponde alla tua carta o al metodo di pagamento.",
+        "no_js_credit_card_fields_redirect_hint": "Verrai reindirizzato per aggiungere le informazioni di pagamento.",
+        "card_fields_container_prefix": "Container di campo per:",
+        "card_fields_unavailable_html": {
+          "one": "I pagamenti con carta di credito e debito non sono disponibili in questo momento.<br><a href=\"%{current_url}\">Aggiorna questa pagina</a> o riprovare più tardi.",
+          "other": "I pagamenti con carta di credito e debito non sono disponibili in questo momento.<br><a href=\"%{current_url}\">Aggiorna questa pagina</a> o provare un metodo di pagamento diverso."
+        },
+        "card_fields_processing_error": "C'è stato un problema elaborando il pagamento. Prova a rinfrescare questa pagina o controlla la tua connessione Internet.",
+        "technical_error": "I pagamenti non possono essere elaborati in questo momento a causa di un problema tecnico. Riprova in pochi minuti.",
+        "no_method_error": "This store can’t accept payments right now.",
+        "not_configured_error": "This store can’t accept payments right now.",
+        "missing_credit_card_error": "Inserisci i dettagli della tua carta per completare il pagamento",
+        "shop_pay_ideal_unavailable_error": "L'ideale non è disponibile per questo ordine. Scegli un altro metodo di pagamento.",
+        "payment_method_not_available_for_shipping_address_error": "Metodo di pagamento non disponibile per l'indirizzo di spedizione selezionato. Scegli un altro metodo di pagamento.",
+        "billing_address_not_supported_for_payment_method_error": "Questo metodo di pagamento non è disponibile per l'indirizzo di fatturazione e la valuta. Prova un metodo di pagamento diverso.",
+        "generic_incorrect_card_info": "I tuoi dettagli di pagamento non potrebbero essere verificati. Controlla i dettagli della tua carta e riprova.",
+        "sofort_label": "BERSITÀ DI BANCA SOFORT",
+        "paypal_label": "Paypal",
+        "paypal_wallet_label": "Portafoglio PayPal",
+        "shop_pay_installments_label": "Acquista rate paga",
+        "paypal_modal": {
+          "order_contains_subscriptions": "Sottoscrizione",
+          "order_contains_fixed_selling_plans": "Il totale potrebbe non includere tasse, spedizioni, spese differite e alcuni sconti. Continua a fare il checkout per l'importo dovuto oggi."
+        },
+        "klarna_label": "Klarna",
+        "klarna_pay_later_label": "Paga più tardi con Klarna",
+        "klarna_pay_now_label": "Paga ora con Klarna",
+        "bancontact_label": "Bantatto",
+        "giropay_label": "Giropay",
+        "multibanco_label": "Multibanco",
+        "eps_label": "EPS-Uüberweisung",
+        "klarna_slice_it_label": "Finanza con Klarna",
+        "ideal_label": "ideale",
+        "bank_picker_label": "Banca",
+        "afterpay_label": "Afterpay",
+        "cashapppay_label": "Paga in contanti"
       }
     }
   }
