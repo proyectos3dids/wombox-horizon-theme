@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "blocks": {
     "load_video": "Carica il video: {{ description }}",
@@ -285,6 +294,74 @@
       "post": "Pubblica commento",
       "success_moderated": "Commento pubblicato, in attesa di moderazione",
       "success": "Commento pubblicato"
+    }
+  },
+  "shopify": {
+    "sentence": {
+      "words_connector": ", ",
+      "two_words_connector": " E ",
+      "last_word_connector": ", E "
+    },
+    "checkout": {
+      "address_management": {
+        "confirm_address_deletion": "Sei sicuro di voler eliminare l'indirizzo {{address}}?"
+      },
+      "general": {
+        "page_title": "Guardare",
+        "error_page_title": "Errore",
+        "skip_to_content": "Salta al contenuto",
+        "breadcrumb": "Pane",
+        "continue_button_label": "Continuare",
+        "complete_purchase_button_label": "Ordine completo",
+        "pay_now_button_label": "Paga ora",
+        "authenticate_purchase_button_label": "Autentica il pagamento",
+        "edit_link_label": "Modificare",
+        "all_rights_reserved": "Tutti i diritti riservati %{shop_name}",
+        "print_policies_link_label": "Stampa",
+        "cart": "Carrello",
+        "close_modal_label": "Vicino",
+        "close_notice_label": "Vicino",
+        "expand_notice_label": "Visualizza di più",
+        "continue_to_shipping_method": "Continua a spedire",
+        "continue_to_payment_method": "Continua al pagamento",
+        "continue_to_review": "Ordine di revisione",
+        "back_to_cart": "Torna al carrello",
+        "back_to_contact_information": "Tornare alle informazioni",
+        "back_to_shipping_method": "Torna alla spedizione",
+        "back_to_payment_method": "Ritorno al pagamento",
+        "choose_shipping_method": "Scegli un metodo di spedizione",
+        "choose_payment_method": "Scegli un metodo di pagamento",
+        "choose_billing_address": "Scegli un indirizzo di fatturazione",
+        "contact_us_html": "Contattaci per ulteriori informazioni",
+        "autocomplete_title": "Suggerimenti",
+        "autocomplete_single_item": "1 articolo disponibile",
+        "autocomplete_multi_item": "{{number}} articoli disponibili",
+        "autocomplete_selection": "{{number}} Di {{total}}",
+        "autocomplete_close": "Suggerimenti stretti",
+        "forwarding_indicator": {
+          "new_window": "Si apre in una nuova finestra.",
+          "external": "Apre un sito Web esterno.",
+          "external_and_new_window": "Apre un sito Web esterno in una nuova finestra."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - Guardare"
+        },
+        "tooltip_accessibility_label": "Maggiori informazioni",
+        "qr_code": "Codice QR",
+        "errors": {
+          "only_empty_terms_accepted": "Questa politica accetta solo termini vuoti.",
+          "session_identifier_not_unique_error": "Qualcosa è andato storto con il tuo ordine, per favore prova a controllare di nuovo.",
+          "line_item_limit_reached": "È stato raggiunto il numero massimo di elementi di linea.",
+          "session_is_already_finished": "Questa sessione di checkout è già stata finalizzata.",
+          "merchandise": {
+            "only_value_constraint": "Sono consentiti solo valori esatti nell'input della merce.",
+            "merchandise_not_found": "Prodotto non trovato.",
+            "merchandise_variant_not_found": "Variante del prodotto non trovata.",
+            "merchandise_not_applicable": "La variante del prodotto non può essere acquistata.",
+            "mixed_currencies": "Il checkout contiene elementi di linea con valute diverse."
+          }
+        }
+      }
     }
   }
 }
