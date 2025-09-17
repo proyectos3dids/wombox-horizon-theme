@@ -24,6 +24,14 @@ Es personalizable en el editor de temas.
     align-items: center;
     gap: 12px;
     backdrop-filter: blur(10px);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+
+  .ai-sticky-bar-{{ ai_gen_id }}.is-visible {
+    opacity: 1;
+    visibility: visible;
   }
 
   .ai-sticky-bar-image-{{ ai_gen_id }} {
@@ -187,20 +195,8 @@ Es personalizable en el editor de temas.
       font-size: {{ block.settings.mobile_price_size }}px;
     }
   }
-
-
-  .ai-sticky-bar-{{ ai_gen_id }} {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-
-
 {% endstyle %}
 
-{% comment %}
-  Determina qué producto mostrar: el producto de la página actual o un producto seleccionado en la configuración.
-{% endcomment %}
 {% assign display_product = product %}
 {% if block.settings.featured_product != blank %}
   {% assign display_product = block.settings.featured_product %}
@@ -292,7 +288,6 @@ Es personalizable en el editor de temas.
         if (this.selectOptions) {
           this.button.addEventListener('click', this.scrollToAddToCart.bind(this));
         } else {
-          // Add the event listener for form submission
           this.form.addEventListener('submit', this.handleFormSubmit.bind(this));
         }
       }
@@ -332,8 +327,7 @@ Es personalizable en el editor de temas.
       }
       
       async handleFormSubmit(event) {
-        event.preventDefault(); // Stop the default form submission (page reload)
-
+        event.preventDefault();
         this.button.disabled = true;
         this.button.textContent = 'Añadiendo...';
 
@@ -344,7 +338,6 @@ Es personalizable en el editor de temas.
         };
 
         try {
-          // Use the Shopify AJAX API to add the item to the cart
           const response = await fetch('/cart/add.js', {
             method: 'POST',
             headers: {
@@ -355,10 +348,8 @@ Es personalizable en el editor de temas.
           });
           
           if (response.ok) {
-            // Product added successfully, now reload the page with a special parameter
             window.location.href = window.location.pathname + '?open-cart=true';
           } else {
-            console.error('Failed to add item to cart');
             this.button.textContent = 'Error';
           }
         } catch (error) {
@@ -381,11 +372,9 @@ Es personalizable en el editor de temas.
     if (stickyBar) {
       function handleScroll() {
         if (window.scrollY > scrollThreshold) {
-          stickyBar.style.opacity = '1';
-          stickyBar.style.visibility = 'visible';
+          stickyBar.classList.add('is-visible');
         } else {
-          stickyBar.style.opacity = '0';
-          stickyBar.style.visibility = 'hidden';
+          stickyBar.classList.remove('is-visible');
         }
       }
       window.addEventListener('scroll', handleScroll);
@@ -399,7 +388,6 @@ Es personalizable en el editor de temas.
         const cartDrawerButton = document.querySelector('cart-drawer-component > button');
         if (cartDrawerButton) {
           cartDrawerButton.click();
-          // Remove the parameter from the URL to avoid opening the cart on future reloads
           history.replaceState({}, '', window.location.pathname);
         }
       }
