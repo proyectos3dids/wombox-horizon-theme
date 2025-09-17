@@ -2874,8 +2874,92 @@
             "address_too_long": "Die Adresslinie ist zu lang"
           },
           "select_different_shipping_address_to_resolve_errors": "Ihre Versandadresse ist ungültig. Wählen Sie eine andere Adresse oder verwenden Sie eine neue."
+        },
+        "scrim": {
+          "continue_purchase_in_window": "Setzen Sie Ihren Kauf in der {{walletName}} Fenster",
+          "and_return_to_checkout": "und zur Kasse zurückkehren",
+          "cancel": "Stornieren"
         }
+      },
+      "note": {
+        "length_exceeds_maximum": "Reduzieren Sie die Größe der Note auf 5000 oder weniger Zeichen."
+      },
+      "one": {
+        "errors": {
+          "merchandise": {
+            "gift_card_price_must_be_greater_than_zero": "Der Geschenkkartenpreis muss größer als 0 sein.",
+            "gift_card_price_must_not_exceed_limit": "Der Geschenkkartenpreis darf nicht überschreiten %{gift_card_limit}.",
+            "subtotal_limit_reached": "Der maximale Wert der Werbebuchungen wurde erreicht.",
+            "signature_mismatch": "Waren -Signature -Nichtübereinstimmung für die Linie %{stable_id}."
+          }
+        }
+      },
+      "remote": {
+        "errors": {
+          "only_remote_merchandise_lines": "Die Kasse enthält nur Remote -Waren. Eine Weiterleitung in den Remote -Shop ist erforderlich, um die Kasse abzuschließen."
+        }
+      },
+      "units": {
+        "milligram": "mg",
+        "gram": "G",
+        "kilogram": "kg",
+        "milliliter": "ml",
+        "centiliter": "Cl",
+        "liter": "L",
+        "cubic_meter": "m³",
+        "millimeter": "mm",
+        "centimeter": "cm",
+        "meter": "M",
+        "square_meter": "m²",
+        "ounce": "oz",
+        "pound": "lb",
+        "fluid_ounce": "fl oz",
+        "pint": "pt",
+        "quart": "Qt",
+        "gallon": "Mädchen",
+        "inch": "In",
+        "foot": "ft",
+        "yard": "yd",
+        "square_foot": "ft²",
+        "item": "Artikel"
+      },
+      "memberships": {
+        "delivery_promise_unfulfillable": "Die Adresse wird für die aktuelle Mitgliedschaft nicht unterstützt.",
+        "items_split_across_locations_unsupported": "Für Ihre Bestellung ist die Prime -Lieferung nicht verfügbar. Ihre Versandoptionen wurden aktualisiert."
+      },
+      "editor": {
+        "navigation": {
+          "store_logo_accessibility_label": "Navigieren Sie zum Online -Shop"
+        }
+      },
+      "tooltip": {
+        "accessibility_label_context": "Weitere Informationen zu %{context}",
+        "additional_payment_methods": "Zusätzliche Zahlungsmethoden"
       }
+    },
+    "pagination": {
+      "previous": "Vorherige",
+      "next": "Nächste"
+    },
+    "links": {
+      "powered_by_shopify": "Angetrieben von Shopify",
+      "learn_more": "Erfahren Sie mehr"
+    },
+    "feed": {
+      "more": "Mehr"
+    },
+    "attributes": {
+      "email": "E-Mail",
+      "password": "Passwort",
+      "password_confirmation": "Die Passwortbestätigung",
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "body": "Körper",
+      "signature": "Adresse"
+    },
+    "addresses": {
+      "zip_code": "PLZ",
+      "postal_code": "Postleitzahl"
     }
   }
 }
