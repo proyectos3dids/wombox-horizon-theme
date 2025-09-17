@@ -9,22 +9,22 @@
  */
 {
   "blocks": {
-    "load_video": "Carica il video: {{ description }}",
+    "load_video": "Carica video: {{ description }}",
     "sold_out": "Esaurito",
     "email_signup": {
-      "label": "Email",
-      "placeholder": "Indirizzo email",
-      "success": "Grazie per l'iscrizione!"
+      "label": "E-mail",
+      "placeholder": "Indirizzo e-mail",
+      "success": "Grazie per essersi iscritto!"
     },
     "filter": "Filtro",
     "payment_methods": "Metodi di pagamento",
     "contact_form": {
       "name": "Nome",
-      "email": "Email",
+      "email": "E-mail",
       "phone": "Telefono",
       "comment": "Commento",
-      "post_success": "Grazie per averci contattato. Risponderemo il prima possibile.",
-      "error_heading": "Correggi gli errori seguenti:"
+      "post_success": "Grazie per averci contattato. Ti torneremo il prima possibile.",
+      "error_heading": "Regola quanto segue:"
     }
   },
   "accessibility": {
@@ -76,41 +76,41 @@
   "actions": {
     "add_to_cart": "Aggiungi al carrello",
     "clear_all": "Cancella tutto",
-    "remove": "Rimuovi",
+    "remove": "Rimuovere",
     "view_in_your_space": "Visualizza nel tuo spazio",
     "show_filters": "Filtro",
-    "clear": "Cancella",
-    "continue_shopping": "Continua lo shopping",
-    "log_in_html": "Hai un account? <a href=\"{{ link }}\">Accedi</a> per un check-out più veloce.",
+    "clear": "Chiaro",
+    "continue_shopping": "Continua a fare shopping",
+    "log_in_html": "Hai un account? <a href=\"{{ link }}\">Login</a> Per controllare più velocemente.",
     "see_items": {
-      "one": "Vedi {{ count }} articolo",
-      "other": "Vedi {{ count }} articoli",
+      "one": "Vedere {{ count }} articolo",
+      "other": "Vedere {{ count }} elementi",
       "many": "Vedi {{ count }} articoli"
     },
     "view_all": "Visualizza tutto",
     "add": "Aggiungere",
-    "choose": "Scegli",
+    "choose": "Scegliere",
     "added": "Aggiunto",
     "show_less": "Mostra meno",
     "show_more": "Mostra di più",
-    "close": "Chiudi",
-    "more": "Altro",
-    "reset": "Ripristina",
+    "close": "Vicino",
+    "more": "Di più",
+    "reset": "Reset",
     "zoom": "Zoom",
-    "close_dialog": "Chiudi finestra di dialogo",
+    "close_dialog": "Chiudere dialogo",
     "back": "Indietro",
-    "log_in": "Accedi",
-    "log_out": "Esci",
-    "remove_discount": "Rimuovi sconto {{ code }}",
-    "enter_using_password": "Accedi utilizzando la password",
+    "log_in": "Registrazione",
+    "log_out": "Disconnettersi",
+    "remove_discount": "Rimuovere lo sconto {{ code }}",
+    "enter_using_password": "Immettere utilizzando la password",
     "submit": "Invia",
-    "enter_password": "Inserisci password",
-    "view_store_information": "Visualizza i dettagli del negozio",
-    "apply": "Applica",
-    "sign_in_options": "Altre opzioni di accesso",
-    "sign_up": "Iscriviti",
-    "open_image_in_full_screen": "Apri immagine a schermo intero",
-    "sort": "Ordina",
+    "enter_password": "Immettere la password",
+    "view_store_information": "Visualizza le informazioni sull'archivio",
+    "apply": "Fare domanda a",
+    "sign_in_options": "Altri opzioni di accesso",
+    "sign_up": "Iscrizione",
+    "open_image_in_full_screen": "Apri l'immagine a schermo intero",
+    "sort": "Ordinare",
     "show_all_options": "Mostra tutte le opzioni"
   },
   "content": {
