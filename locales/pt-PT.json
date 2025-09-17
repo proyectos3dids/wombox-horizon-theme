@@ -3877,7 +3877,65 @@
     "addresses": {
       "add_button": "Adicione endereço",
       "add_button_text": "Adicionar",
-      "add_button_accessibility_label": "Adicione endereço"
+      "add_button_accessibility_label": "Adicione endereço",
+      "back_button": "Voltar",
+      "back_button_accessibility_label": "Voltar ao endereço de edição {{address}}",
+      "add_address_banner": "Adicionar endereços para uso na finalização da compra",
+      "no_addresses_banner": "Nenhum endereço adicionado",
+      "address_deleted_notification": "Endereço excluído",
+      "cancel_adding_address_accessibility_label": "Cancelar Adicionar endereço",
+      "cancel_deletion_button": "Cancelar",
+      "cancel_deletion_button_accessibility_label": "Cancelar a exclusão {{address}}",
+      "default_address": {
+        "title": "Endereço padrão",
+        "title_accessibility_label": "Endereço padrão: {{address}}"
+      },
+      "delete_button": "Excluir",
+      "delete_button_accessibility_label": "Excluir {{address}}",
+      "delete_confirmation_button": "Excluir endereço",
+      "delete_confirmation_button_accessibility_label": "Excluir {{address}}",
+      "delete_confirmation_message": "Excluir endereço? As ordens existentes não são afetadas.",
+      "delete_confirmation_title": "Excluir endereço?",
+      "delete_confirmation_description": "As ordens existentes não são afetadas.",
+      "edit_button": "Editar",
+      "edit_button_accessibility_label": "Editar {{address}}",
+      "edit_section_accessibility_label": "Editar {{address}}",
+      "edit_modal_title": {
+        "default": "Endereço de edição",
+        "billing": "Editar endereço de cobrança",
+        "shipping": "Editar endereço de entrega"
+      },
+      "loading_accessibility_message": "Endereço de carregamento",
+      "loading_addresses_accessibility_message": "Endereços de carregamento",
+      "loading_billing_accessibility_message": "Endereço de cobrança de carregamento",
+      "loading_finished_accessibility_message": "Nova página de endereços carregou",
+      "loading_shipping_accessibility_message": "Carregando endereço de entrega",
+      "pagination": {
+        "load_more": "Carregar mais",
+        "load_more_accessibility_label": "Carregue mais endereços"
+      },
+      "save_new_address_accessibility_label": "Salvar endereço",
+      "title": "Endereços",
+      "billing_address_dropdown_placeholder": "Endereço de Cobrança"
+    },
+    "address_form": {
+      "attention": "Atenção",
+      "attention_company": "Empresa/atenção",
+      "attention_help_text": "O nome de uma pessoa ou departamento",
+      "auto_complete_close_accessibility_label": "Sugestões estreitas",
+      "auto_complete_title": "Sugestões",
+      "billing_address": "Use como endereço de cobrança",
+      "cancel": "Cancelar",
+      "cancel_accessibility_label": "Cancelar endereço de edição {{address}}",
+      "creation_success_notification": "Endereço adicionado",
+      "default_address": "Este é o meu endereço padrão",
+      "default_address_creation_success_notification": "Endereço padrão adicionado",
+      "default_address_update_success_notification": "Endereço padrão atualizado",
+      "loading_add_form_accessibility_message": "Carregando um novo formulário de endereço",
+      "loading_edit_form_accessibility_message": "Formulário de endereço de edição de carregamento",
+      "loading_form_accessibility_message": "Formulário de endereço de carregamento",
+      "loading_finished_accessibility_message": "O formulário de endereço carregou",
+      "save": "Salvar"
     }
   }
 }
