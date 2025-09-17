@@ -271,7 +271,9 @@
       "block_order": [
         "ai_gen_block_7a9924b_NqKbLJ"
       ],
-      "custom_css": [],
+      "custom_css": [
+        ".esp-ext {overflow-x: hidden;}"
+      ],
       "name": "Texto SEO custom",
       "settings": {
         "espaciado_grupo": 20,
