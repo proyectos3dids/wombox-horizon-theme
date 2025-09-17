@@ -1487,7 +1487,69 @@
         "ideal_label": "Ideal",
         "bank_picker_label": "Bank",
         "afterpay_label": "Afterpay",
-        "cashapppay_label": "Bargeld App Bezahlung"
+        "cashapppay_label": "Bargeld App Bezahlung",
+        "przelewy24_label": "Przelewy24",
+        "blik_label": "Blik",
+        "twint_label": "Twint",
+        "mobilepay_label": "Mobilepay",
+        "swish_label": "Schwült",
+        "vipps_label": "Vipps",
+        "grabpay_label": "Grabpay",
+        "kcp_creditcard_label": "KCP -Kreditkarte",
+        "usdc_label": "USDC",
+        "usdc_cashback_title": "1% Cashback",
+        "usdc_cashback_additional_info": "Holen Sie sich 1% in USDC direkt in Ihrer Brieftasche.",
+        "usdc_cashback_terms": "Begriffe gelten",
+        "purchase_options_card_update_agreement_label_html": "Durch Aktualisierung Ihrer Zahlungsmethode autorisieren Sie Zahlungen für einen wiederkehrenden oder aufgeschobenen Kauf gemäß dem Geschäft dieses Geschäfts <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{cancellation_policy}\" href=\"%{policy_href}\">Stornierungsrichtlinie</a>.",
+        "subscription_card_update_agreement_label": "Durch Ändern der Zahlungsmethode werden Ihr Abonnement und die zukünftigen wiederkehrenden Zahlungen aktualisiert.",
+        "subscription_agreement_label": "Ein oder mehrere Artikel in Ihrem Karren sind ein aufgeschobener oder Abonnementkauf. Wenn Sie Ihre Zahlung fortsetzen, erklären Sie sich damit einverstanden, dass Ihre Zahlungsmethode automatisch zum Preis und zur Frequenz berechnet wird, die auf dieser Seite aufgeführt sind, bis sie endet oder Sie stornieren. Alle Stornierungen unterliegen der %{cancelled}.",
+        "subscription_agreement_cancelled": "Stornierungsrichtlinie",
+        "subscription_heading": "Abonnementvertrag",
+        "subscription_agreement_label_html": "Ich verstehe, dass ich einem Abonnement einverstanden bin. Es wird zum Preis und zur Frequenz verlängert, bis es endet oder ist\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">abgesagt</a>.\n",
+        "purchase_options_agreement_label": "Ein oder mehrere Artikel in Ihrem Karren sind ein aufgeschobener oder wiederkehrender Kauf. Wenn Sie Ihre Zahlung fortsetzen, erklären Sie sich damit einverstanden, dass Ihre Zahlungsmethode automatisch zum Preis und zur Frequenz berechnet wird, die auf dieser Seite aufgeführt sind, bis sie endet oder Sie stornieren. Alle Stornierungen unterliegen der  %{cancellation_policy_label}.",
+        "purchase_options_agreement_label_html": "Ich verstehe, dass ein oder mehrere Artikel in meinem Karren ein aufgeschobener oder wiederkehrender Kauf sind. Durch Fortsetzung stimme ich dem zu\n<a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{subscription_policy}\" href=\"%{policy_href}\">Stornierungsrichtlinie</a>\nund ermächtigen Sie, meine Zahlungsmethode zu den Preisen, der Häufigkeit und den Daten auf dieser Seite zu berechnen, bis ich auf dieser Seite aufgeführt ist\nDie Bestellung wird erfüllt oder ich storniere, falls erlaubt.\n",
+        "purchase_options_agreement_label_wallets": "Durch Fortsetzung Ihrer Zahlung stimmen Sie den auf dieser Seite aufgeführten zukünftigen Gebühren und den Stornierungsrichtlinien zu.",
+        "change_currency_section_description": "Wählen Sie eine Währungsoption aus",
+        "no_real_orders_dev_store": "Dieser Laden kann keine echten Bestellungen oder echten Zahlungen akzeptieren.",
+        "waiting_on_payment_methods": "Verfügbare Zahlungsmethoden erhalten ...",
+        "apple_pay_payment_error": "Ihre Zahlung könnte nicht abgeschlossen werden. Versuchen Sie es erneut oder verwenden Sie eine andere Zahlungsmethode.",
+        "taxes_not_included": "Steuern nicht enthalten",
+        "no_taxes_banner_content": "Steuern werden nicht in dieser Bestellung belastet. Sobald Sie die Zahlung erhoben haben, können Steuern nicht mehr hinzugefügt werden.",
+        "paypal": {
+          "connect": "Klicken Sie hier, um Ihr PayPal -Konto zu verbinden"
+        },
+        "apple": {
+          "connect": "Klicken Sie hier, um Ihr Apple Pay -Konto zu verbinden",
+          "not_available": "Apple Pay ist in diesem Browser nicht verfügbar. Um Ihr Apple Pay -Konto zu verbinden, müssen Sie Safari auf einem Apple -Gerät verwenden."
+        },
+        "google": {
+          "connect": "Klicken Sie hier, um eine Verbindung mit Ihrem Google Pay -Konto herzustellen",
+          "error_authorizing": "Fehler autorisieren"
+        },
+        "account_connected": "Konto angeschlossen.",
+        "mor_disclaimer_html": "Wenn Sie unten klicken und Ihre Bestellung abschließen, erklären Sie sich damit einverstanden, Ihre Artikel bei Global-E als Händler des Datensatzes zu kaufen\nfür diese Transaktion auf global-e's <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{mor_terms}\" href=\"%{terms_href}\">Geschäftsbedingungen</a>\nUnd <a class=\"link--small\" data-modal=\"true\" data-title-text=\"%{privacy_policy}\" href=\"%{policy_href}\">Datenschutzrichtlinie</a>. Global-e ist ein international\nFulfillment -Dienstleister an %{shop_name}\n",
+        "pending_payment": {
+          "due_notice": "Ihre Zahlung von %{amount_due} ist fällig %{due_date}.",
+          "multibanco": {
+            "buyer_action_info": "Ihre Zahlung von %{amount_due} ist fällig.",
+            "instruction_html": "Nehmen Sie Ihre Zahlung bei Multibanco oder online mit den folgenden Details. Für Fragen oder um Zahlungsdetails zu aktualisieren, %{contact_us}.",
+            "entity": "Juristische Person",
+            "reference": "Referenz",
+            "amount": "Menge",
+            "find_nearest_atm": "Finden Sie den nächsten Geldautomaten"
+          }
+        },
+        "update_payment_method": "Zahlungsmethode aktualisieren",
+        "order_covered_by_store_credit_notice": "Ihre Bestellung ist von Ihrem Ladenguthaben abgedeckt.",
+        "order_covered_by_redeemables_notice": "Ihre Bestellung ist abgedeckt.",
+        "store_credit": {
+          "label": "Kredite speichern",
+          "apply_label": "Laden Sie den Laden zu",
+          "add_label": "Fügen Sie Store Credit hinzu",
+          "manage_label": "Geschäftskredit verwalten",
+          "buying_gift_card": "Sie können kein Geschäft mit einem Geschäft verwenden, um eine Geschenkkarte zu kaufen",
+          "no_fixed_selling_plans": "Sie können Store -Guthaben mit aufgeschobenen Kaufoptionen nicht verwenden"
+        }
       }
     }
   }
