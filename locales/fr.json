@@ -2814,8 +2814,72 @@
         "errors": {
           "unavailable": {
             "title": "{{walletName}} pas disponible",
-            "description": "{{walletName}} n'était pas disponible. Utilisez un mode de paiement différent ou réessayez plus tard."
-          }
+            "description": "{{walletName}} n'était pas disponible. Utilisez un mode de paiement différent ou réessayez plus tard.",
+            "instructions": "Il y avait un problème avec {{walletName}}. Revenez au stockage pour réessayer ou consultez une autre manière.",
+            "unavailable_for_country": "{{walletName}} n'est pas disponible en {{countryName}}. Sélectionnez un autre mode de paiement pour terminer votre achat"
+          },
+          "unavailable_terminal": {
+            "instructions": "{{walletName}} est actuellement indisponible pour votre commande. Pour continuer votre achat, choisissez une autre méthode de paiement."
+          },
+          "generic": "Il y avait un problème avec {{walletName}}. Réessayez ou utilisez un mode de paiement différent.",
+          "discount_code": "Impossible d'appliquer ce code de réduction. Veuillez consulter votre code et réessayer.",
+          "terminal": "Il y avait un problème avec {{walletName}}. Veuillez utiliser un mode de paiement différent.",
+          "detour": {
+            "stock_problems": "Certains articles ne sont plus disponibles. Fermer {{walletName}} Et réessayez.",
+            "price_change": "Certains prix des articles ont changé. Fermer {{walletName}} pour revoir votre commande et réessayer.",
+            "queue": "Vous avez été placé dans une file d'attente pour vérifier. Fermer {{walletName}} continuer.",
+            "currency_change": "Vous ne pouvez pas utiliser une adresse différente avec {{walletName}}. Utilisez l'adresse d'origine ou essayez un mode de paiement différent."
+          },
+          "unsupported": {
+            "address": "Le marchand ne peut pas livrer à cette adresse",
+            "wallet_is_unavailable": "{{walletName}} ne peut pas être utilisé avec cette adresse. Sélectionnez une autre adresse ou fermez {{walletName}} Pour terminer votre achat",
+            "postal_code": "Cet emplacement n'est pas pris en charge"
+          },
+          "outdated": {
+            "shipping_method": "Les options d'expédition ont changé pour votre commande. Passez en revue votre sélection.",
+            "payment_terms": "Les conditions de paiement ont changé. Veuillez consulter votre commande"
+          },
+          "invalid": {
+            "shipping_address": "Entrez une adresse d'expédition valide",
+            "billing_address": "Entrez une adresse de facturation valide",
+            "shipping_option": "Choisissez une option d'expédition valide",
+            "email": "Entrez un e-mail valide",
+            "zone": "Entrez dans un état / province valide",
+            "billing_zone": "Entrez une adresse de facturation valide État / province",
+            "emirate": "Entrez un émirat valide",
+            "postal_code": "Entrez un code postal / postal valide",
+            "phone": "Entrez un numéro de téléphone valide",
+            "billing_phone": "Entrez un numéro de téléphone d'adresse de facturation valide",
+            "reduction_code": "Entrez un code de réduction valide ou une carte-cadeau",
+            "billing_must_match_shipping": "Doit correspondre à l'adresse d'expédition",
+            "billing_zip": "Entrez une adresse de facturation valide Code zip / postal"
+          },
+          "missing": {
+            "first_name": "Entrez un prénom",
+            "billing_first_name": "Entrez un prénom d'adresse de facturation",
+            "last_name": "Entrez un nom de famille",
+            "address1": "Entrez une adresse",
+            "billing_address1": "Entrez une adresse de facturation",
+            "address2": "Entrez dans un appartement, une suite, etc.",
+            "billing_address2": "Entrez un appartement de facturation, une suite, etc.",
+            "city": "Entrer dans une ville",
+            "billing_city": "Entrez une ville d'adresse de facturation",
+            "province": "Sélectionnez un état / province",
+            "billing_province": "Sélectionnez une adresse de facturation État / province",
+            "country": "Sélectionnez un pays / région",
+            "zip": "Entrez un code zip / postal",
+            "billing_zip": "Entrez une adresse de facturation zip / code postal",
+            "phone": "Entrez un numéro de téléphone",
+            "contact_info": "Entrez les coordonnées"
+          },
+          "formatting": {
+            "name_contains_emojis": "Supprimer les emoji de votre nom",
+            "postal_code_contains_emoji": "Supprimer les emoji de votre code postal",
+            "first_name_too_long": "Le prénom contient trop de lettres",
+            "last_name_too_long": "Le nom de famille contient trop de lettres",
+            "address_too_long": "La ligne d'adresse est trop longue"
+          },
+          "select_different_shipping_address_to_resolve_errors": "Votre adresse d'expédition n'est pas valide. Sélectionnez une adresse différente ou utilisez une nouvelle."
         }
       }
     }
