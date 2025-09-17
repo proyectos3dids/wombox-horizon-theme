@@ -3047,8 +3047,70 @@
       "line_item": {
         "item_status": {
           "add_variant": "Adicionado %{delta}",
-          "increment_item": "Adicionado %{delta}"
+          "increment_item": "Adicionado %{delta}",
+          "decrement_item": "Removido %{delta} de %{total}",
+          "decrement_fulfilled_line_item": "Retornou %{delta} de %{total}",
+          "decrement_return_line_item": "Removido %{delta} do retorno"
         }
+      },
+      "order": {
+        "not_available": "Este pedido não está disponível",
+        "financial_status": {
+          "authorized": "Autorizado",
+          "pending": "Pendente",
+          "paid": "Pago",
+          "unpaid": "Não remunerado",
+          "voided": "Anulado",
+          "partially_paid": "Parcialmente pago",
+          "partially_refunded": "Parcialmente reembolsado",
+          "refunded": "Reembolsado",
+          "expired": "Expirado"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Cumprido",
+          "complete": "Completo",
+          "partial": "Parcial",
+          "unfulfilled": "Não realizado",
+          "restocked": "Reabastecido"
+        },
+        "transaction_status": {
+          "success": "Sucesso",
+          "pending": "Pendente",
+          "failure": "Falha",
+          "error": "Erro"
+        },
+        "cancel_reason": {
+          "declined": "O pagamento diminuiu",
+          "inventory": "Itens indisponíveis",
+          "fraud": "Ordem fraudulenta",
+          "customer": "O pedido alterou/cancelado do cliente",
+          "staff": "Erro do pessoal",
+          "other": "Outro"
+        },
+        "cash_on_delivery": "Dinheiro na entrega (COD)"
+      },
+      "cart": {
+        "only_n_items_available": "Você só pode adicionar %{count} %{name} para o carrinho.",
+        "too_many_items_in_cart": "Você não pode adicionar mais %{name} para o carrinho.",
+        "only_one_added_to_cart": "Apenas 1 item foi adicionado ao seu carrinho devido à disponibilidade.",
+        "only_n_added_to_cart": "Apenas %{quantity} Os itens foram adicionados ao seu carrinho devido à disponibilidade.",
+        "maximum_available_quantity_reached": "A quantidade máxima deste item já está no seu carrinho.",
+        "less_than_minimum": "Este item tem um mínimo de %{min}.",
+        "more_than_maximum": "Este item tem um máximo de %{max}.",
+        "not_respect_step": "Você só pode adicionar este item em incrementos de %{step}.",
+        "all_items_in_cart": "Todos %{count} %{name} estão no seu carrinho.",
+        "empty_update": "Não é possível atualizar o carrinho vazio",
+        "missing_parameters": "Nenhum parâmetro de identificação ou linha válido",
+        "generic_error": "Erro de carrinho",
+        "invalid_input": "%{parameter} O parâmetro é inválido.",
+        "product_not_available": "O produto não está disponível",
+        "too_many_line_items_error": "Seu carrinho não pode conter mais do que %{max} Unid.",
+        "link_expired": "Link expirado",
+        "link_no_longer_exists": "Link não existe mais.",
+        "stock_problems_html": "Um ou mais itens não estão mais disponíveis. Nós fornecemos um <a href='%{link}'>Carrinho atualizado</a>.",
+        "changed": "O carrinho mudou",
+        "items_changed": "Um ou mais itens mudaram.",
+        "product_sold_out": "O produto '%{name}'já está esgotado."
       }
     }
   }
