@@ -4368,8 +4368,72 @@
           "with_pending_orders_and_subscriptions": "A exclusão deste método de pagamento afetará os pagamentos pré -autorizados. A menos que você selecione um método de pagamento alternativo, esse método de pagamento ainda será cobrado por quaisquer saldos pendentes nos pedidos existentes. A seleção de um método de pagamento alternativo permitirá que você receba os próximos pedidos de assinatura sem interrupção.",
           "with_pending_orders": "A exclusão deste método de pagamento o removerá da sua conta e não estará mais disponível para futuras compras. A menos que você selecione um método de pagamento alternativo, ele ainda será cobrado por quaisquer saldos pendentes nos pedidos existentes.",
           "with_subscriptions": "A exclusão deste método de pagamento afetará os pagamentos pré -autorizados. Substitua -o por um método de pagamento alternativo para continuar recebendo os próximos pedidos."
+        },
+        "warning_message_without_replacement": {
+          "with_pending_orders_and_subscriptions": "A exclusão deste método de pagamento afetará os pagamentos pré -autorizados. Esse método de pagamento ainda será cobrado por quaisquer saldos pendentes nos pedidos existentes, mas você não receberá as próximas ordens de assinatura. Adicione um método de pagamento alternativo para continuar recebendo ordens de assinatura.",
+          "with_pending_orders": "A exclusão deste método de pagamento o removerá da sua conta e não estará mais disponível para futuras compras. Ainda será cobrado por quaisquer saldos pendentes em ordens existentes.",
+          "with_subscriptions": "A exclusão deste método de pagamento afetará os pagamentos pré -autorizados. Adicione um método de pagamento alternativo para continuar recebendo os próximos pedidos."
+        },
+        "payment_method_selector_placeholder": "Selecione um método de pagamento de substituição (opcional)",
+        "payment_method_selector_no_alternative_payment": "Sem método de substituição",
+        "replace_method_with_new_method_description": "Seu {{currentPaymentMethodName}} será excluído e substituído por seu {{newPaymentMethodName}}.",
+        "error_when_deleting": "Pedimos desculpas, mas algo deu errado e não conseguimos excluir esse método de pagamento. Tente novamente mais tarde ou atualize a página.",
+        "delete_and_replace_button": "Exclua e substitua",
+        "delete_and_replace_button_accessibility_label": "Excluir {{currentPaymentMethodName}} e substitua por {{newPaymentMethodName}}.",
+        "deleted_successfully": "Método de pagamento excluído com sucesso.",
+        "loading_available_payment_methods_accessibility_label": "Carregando métodos de pagamento disponíveis"
+      },
+      "add_payment_method": {
+        "title": "Adicionar método de pagamento",
+        "payment_method_added_confirmation": "Método de pagamento adicionado",
+        "replace_mode_warning": "A exclusão deste método de pagamento afetará assinaturas ou pré-encomendas. Substitua -o por um método de pagamento alternativo para continuar recebendo os próximos pedidos.",
+        "choose_from_list": "Escolha na lista",
+        "add_new_button": "Adicione novo",
+        "billing_address": {
+          "title": "Endereço de Cobrança",
+          "add_billing_address_button": "Adicione novo",
+          "add_billing_address_button_accessibility_label": "Adicionar novo endereço de cobrança",
+          "choose_billing_address_from_list_button": "Escolha na lista",
+          "choose_billing_address_from_list_button_accessibility_label": "Escolha um endereço de cobrança na lista",
+          "missing_billing_address_error_message": "Especifique um endereço de cobrança",
+          "default_checkbox": "Definido como método de pagamento padrão"
         }
+      },
+      "three_d_secure": {
+        "title": "3D seguro"
       }
+    },
+    "payment_method_brands": {
+      "visa": "Visa",
+      "mastercard": "MasterCard",
+      "americanexpress": "American Express",
+      "discover": "Descobrir",
+      "dinersclub": "Clube de Diners",
+      "jcb": "JCB",
+      "elo": "Elo",
+      "visaelectron": "VISA ELECTRON",
+      "maestro": "Maestro",
+      "forbrugsforeningen": "Forbrugsforeningen",
+      "dankort": "Dankort",
+      "hipercard": "Hipercard",
+      "unionpay": "UnionPay",
+      "laser": "Laser",
+      "shoppay": "Pagamento da loja",
+      "applepay": "Apple Pay",
+      "googlepay": "Google Pay",
+      "paypal": "PayPal",
+      "storecredit": "Crédito da loja",
+      "bogus": "Falso"
+    },
+    "privacy_banner": {
+      "cookie_preferences_link": "Preferências de biscoitos"
+    },
+    "ui_components": {
+      "clear": "Claro",
+      "clipboardCopied": "Copiado",
+      "clipboardFailedToCopy": "Falha ao copiar",
+      "closeNotification": "Fechar",
+      "expandNotification": "Veja mais"
     }
   }
 }
