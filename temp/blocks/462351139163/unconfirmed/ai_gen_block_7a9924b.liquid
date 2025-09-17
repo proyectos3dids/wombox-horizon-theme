@@ -1,6 +1,529 @@
+{% doc %}
+  @prompt
+    Generate a section exactly the same than "collection heading" but add the functionality that only shows H1 and 2 lines of text and then an accordeon with "read more". But may be readeable to Google this all complete text, I want you to add the configuration to be able to choose fullwidth width and the section's margins and padding.
+    
+    Add these options also for the text. Add the read less button but may be functional, when I push the read less, all the content opened must be hiden
+
+{% enddoc %}
+{% assign ai_gen_id = block.id | replace: '_', '' | downcase %}
+
+{% style %}
+  .ai-collection-heading-{{ ai_gen_id }} {
+    {% if block.settings.full_width %}
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);{% endif %}
+    margin-top: {{ block.settings.margin_top }}px;
+    margin-bottom: {{ block.settings.margin_bottom }}px;
+    padding: {{ block.settings.padding_top }}px {{ block.settings.padding_horizontal }}px {{ block.settings.padding_bottom }}px;
+    text-align: {{ block.settings.text_alignment }};
+  }
+
+  .ai-collection-heading__container-{{ ai_gen_id }} {
+    {% unless block.settings.full_width %}
+      max-width: {{ block.settings.max_width }}px;
+      margin: 0 auto;
+    {% endunless %}
+  }
+
+  .ai-collection-heading__title-{{ ai_gen_id }} {
+    margin: 0 0 {{ block.settings.title_margin_bottom }}px;
+    font-size: {{ block.settings.heading_size }}px;
+    color: {{ block.settings.heading_color }};
+  }
+
+  .ai-collection-heading__description-{{ ai_gen_id }} {
+    {% unless block.settings.full_width_text %}
+      max-width: {{ block.settings.text_max_width }}px;
+      margin-left: auto;
+      margin-right: auto;
+    {% endunless %}
+    font-size: {{ block.settings.text_size }}px;
+    color: {{ block.settings.text_color }};
+    line-height: 1.6;
+    margin-bottom: {{ block.settings.text_margin_bottom }}px;
+  }
+
+  .ai-collection-heading__preview-{{ ai_gen_id }} {
+    display: -webkit-box;
+    -webkit-line-clamp: {{ block.settings.preview_lines }};
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 16px;
+  }
+
+  .ai-collection-heading__full-text-{{ ai_gen_id }} {
+    display: none;
+    margin-bottom: 16px;
+  }
+
+  .ai-collection-heading__full-text-{{ ai_gen_id }}.active {
+    display: block;
+  }
+
+  .ai-collection-heading__toggle-{{ ai_gen_id }} {
+    background: none;
+    border: none;
+    color: {{ block.settings.button_color }};
+    cursor: pointer;
+    font-size: {{ block.settings.button_text_size }}px;
+    text-decoration: underline;
+    padding: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: {{ block.settings.button_margin_top }}px;
+  }
+
+  .ai-collection-heading__toggle-{{ ai_gen_id }}:hover {
+    color: {{ block.settings.button_hover_color }};
+  }
+
+  .ai-collection-heading__icon-{{ ai_gen_id }} {
+    width: 16px;
+    height: 16px;
+    transition: transform 0.3s ease;
+  }
+
+  .ai-collection-heading__toggle-{{ ai_gen_id }}.expanded .ai-collection-heading__icon-{{ ai_gen_id }} {
+    transform: rotate(180deg);
+  }
+
+  .ai-collection-heading__seo-text-{{ ai_gen_id }} {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  @media screen and (max-width: 749px) {
+    .ai-collection-heading-{{ ai_gen_id }} {
+      padding: {{ block.settings.mobile_padding_top }}px {{ block.settings.mobile_padding_horizontal }}px {{ block.settings.mobile_padding_bottom }}px;
+    }
+
+    .ai-collection-heading__title-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.heading_size }}px * {{ block.settings.mobile_heading_scale }});
+    }
+
+    .ai-collection-heading__description-{{ ai_gen_id }} {
+      font-size: calc({{ block.settings.text_size }}px * {{ block.settings.mobile_text_scale }});
+    }
+
+    .ai-collection-heading__container-{{ ai_gen_id }} {
+      {% unless block.settings.full_width %}
+        max-width: 100%;
+        padding: 0 20px;
+      {% endunless %}
+    }
+  }
+{% endstyle %}
+
+<collection-heading-{{ ai_gen_id }}
+  class="ai-collection-heading-{{ ai_gen_id }}"
+  {{ block.shopify_attributes }}
+>
+  <div class="ai-collection-heading__container-{{ ai_gen_id }}">
+    {% if block.settings.heading != blank %}
+      <h1 class="ai-collection-heading__title-{{ ai_gen_id }}">
+        {{ block.settings.heading }}
+      </h1>
+    {% endif %}
+
+    {% if block.settings.description != blank %}
+      <div class="ai-collection-heading__description-{{ ai_gen_id }}">
+        <div class="ai-collection-heading__preview-{{ ai_gen_id }}">
+          {{ block.settings.description }}
+        </div>
+
+        <div class="ai-collection-heading__full-text-{{ ai_gen_id }}">
+          {{ block.settings.description }}
+        </div><div class="ai-collection-heading__seo-text-{{ ai_gen_id }}">
+          {{ block.settings.description }}
+        </div>
+
+        <button
+          class="ai-collection-heading__toggle-{{ ai_gen_id }}"
+          aria-expanded="false"
+          data-toggle-text-more="{{ block.settings.read_more_text }}"
+          data-toggle-text-less="{{ block.settings.read_less_text }}"
+        >
+          <span class="ai-collection-heading__toggle-text-{{ ai_gen_id }}">
+            {{ block.settings.read_more_text }}
+          </span>
+          <svg
+            class="ai-collection-heading__icon-{{ ai_gen_id }}"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <polyline points="6,9 12,15 18,9"></polyline>
+          </svg>
+        </button>
+      </div>
+    {% endif %}
+  </div>
+</collection-heading-{{ ai_gen_id }}>
+
+<script>
+  (function() {
+    class CollectionHeading{{ ai_gen_id }} extends HTMLElement {
+      constructor() {
+        super();
+      }
+
+      connectedCallback() {
+        this.toggleButton = this.querySelector('.ai-collection-heading__toggle-{{ ai_gen_id }}');
+        this.previewText = this.querySelector('.ai-collection-heading__preview-{{ ai_gen_id }}');
+        this.fullText = this.querySelector('.ai-collection-heading__full-text-{{ ai_gen_id }}');
+        this.toggleText = this.querySelector('.ai-collection-heading__toggle-text-{{ ai_gen_id }}');
+
+        if (this.toggleButton) {
+          this.setupToggle();
+        }
+      }
+
+      setupToggle() {
+        this.toggleButton.addEventListener('click', () => {
+          const isExpanded = this.toggleButton.getAttribute('aria-expanded') === 'true';
+          
+          if (isExpanded) {
+            this.collapseText();
+          } else {
+            this.expandText();
+          }
+        });
+      }
+
+      expandText() {
+        this.previewText.style.display = 'none';
+        this.fullText.classList.add('active');
+        this.toggleButton.classList.add('expanded');
+        this.toggleButton.setAttribute('aria-expanded', 'true');
+        this.toggleText.textContent = this.toggleButton.dataset.toggleTextLess;
+      }
+
+      collapseText() {
+        this.previewText.style.display = 'block';
+        this.fullText.classList.remove('active');
+        this.toggleButton.classList.remove('expanded');
+        this.toggleButton.setAttribute('aria-expanded', 'false');
+        this.toggleText.textContent = this.toggleButton.dataset.toggleTextMore;
+      }
+    }
+
+    customElements.define('collection-heading-{{ ai_gen_id }}', CollectionHeading{{ ai_gen_id }});
+  })();
+</script>
+
 {% schema %}
- {
-   "name": "AI_Block",
-   "tag": "shopify-ai-generated-block"
- }
+{
+  "name": "Collection heading",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Collection name"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Description",
+      "default": "<p>This is a detailed description of the collection that will be truncated to two lines initially. Users can click to read more and see the full content. This text remains fully accessible to search engines for SEO purposes.</p>"
+    },
+    {
+      "type": "range",
+      "id": "preview_lines",
+      "label": "Preview lines",
+      "min": 1,
+      "max": 5,
+      "step": 1,
+      "default": 2
+    },
+    {
+      "type": "text",
+      "id": "read_more_text",
+      "label": "Read more text",
+      "default": "Read more"
+    },
+    {
+      "type": "text",
+      "id": "read_less_text",
+      "label": "Read less text",
+      "default": "Read less"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width section",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Maximum width",
+      "min": 600,
+      "max": 1400,
+      "step": 50,
+      "unit": "px",
+      "default": 1200
+    },
+    {
+      "type": "select",
+      "id": "text_alignment",
+      "label": "Text alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center"
+    },
+    {
+      "type": "header",
+      "content": "Section spacing"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom margin",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "label": "Top padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "label": "Bottom padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_horizontal",
+      "label": "Horizontal padding",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Mobile spacing"
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_top",
+      "label": "Mobile top padding",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_bottom",
+      "label": "Mobile bottom padding",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_padding_horizontal",
+      "label": "Mobile horizontal padding",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "header",
+      "content": "Heading style"
+    },
+    {
+      "type": "range",
+      "id": "heading_size",
+      "label": "Heading size",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "default": 36
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "title_margin_bottom",
+      "label": "Heading bottom margin",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "mobile_heading_scale",
+      "label": "Mobile heading scale",
+      "min": 0.5,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.8
+    },
+    {
+      "type": "header",
+      "content": "Text style"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width_text",
+      "label": "Full width text",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "label": "Text maximum width",
+      "min": 400,
+      "max": 1000,
+      "step": 50,
+      "unit": "px",
+      "default": 800
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "label": "Text size",
+      "min": 12,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text color",
+      "default": "#666666"
+    },
+    {
+      "type": "range",
+      "id": "text_margin_bottom",
+      "label": "Text bottom margin",
+      "min": 0,
+      "max": 50,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    },
+    {
+      "type": "range",
+      "id": "mobile_text_scale",
+      "label": "Mobile text scale",
+      "min": 0.5,
+      "max": 1,
+      "step": 0.1,
+      "default": 0.9
+    },
+    {
+      "type": "header",
+      "content": "Button style"
+    },
+    {
+      "type": "range",
+      "id": "button_text_size",
+      "label": "Button text size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "default": 16
+    },
+    {
+      "type": "color",
+      "id": "button_color",
+      "label": "Button color",
+      "default": "#000f9f"
+    },
+    {
+      "type": "color",
+      "id": "button_hover_color",
+      "label": "Button hover color",
+      "default": "#000000"
+    },
+    {
+      "type": "range",
+      "id": "button_margin_top",
+      "label": "Button top margin",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "default": 0
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection heading"
+    }
+  ],
+  "tag": null
+}
 {% endschema %}
