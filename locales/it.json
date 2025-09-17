@@ -2594,8 +2594,85 @@
           }
         },
         "number_of_pickup_points_near_location": {
-          "one": "%{count} Punto di raccolta vicino alla tua posizione"
+          "one": "%{count} Punto di raccolta vicino alla tua posizione",
+          "other": "%{count} Punti di raccolta vicino alla tua posizione"
+        },
+        "change": "Cambia posizione",
+        "waiting_on_pickup_point_location_notice": "Alla ricerca di punti di raccolta ...",
+        "geolocation": {
+          "shared_location_button": "Usa la mia posizione",
+          "errors": {
+            "unsuported_by_browser": "Ottenere la geolocalizzazione non è supportato dal browser. Riprova o usa un browser diverso.",
+            "permission_not_allowed": "Consenti di condividere la tua posizione.",
+            "permission_denied": "Non sono riuscito a ottenere la tua posizione. Riprova."
+          }
         }
+      },
+      "error_page": {
+        "terminal": {
+          "title": "C'era un problema con il nostro checkout",
+          "message": "Aggiorna questa pagina o riprova in pochi minuti",
+          "action": {
+            "cta": "Pagina di aggiornamento"
+          },
+          "request_id": "ID richiesta: {{requestId}}"
+        }
+      },
+      "notice_banner": {
+        "return_to_cart_link_text": "Torna al carrello",
+        "return_to_cart_to_update_quantities": "%{return_to_cart_link_text} Per aggiornare le quantità",
+        "subscription_changed": "Uno dei tuoi abbonamenti è cambiato.",
+        "company_location_changed": "Il tuo carrello è stato aggiornato. Rivedi il tuo ordine prima di inviarlo.",
+        "company_location_changed_product_removed": "Il carrello è stato aggiornato perché alcuni prodotti non sono disponibili in questa posizione. Rivedi il tuo ordine prima di inviarlo.",
+        "violations_title": "{{violation}} è mancante o non valido",
+        "individual_violations_title": {
+          "DeliveryViolations": "Indirizzo di spedizione",
+          "PaymentViolations": "Indirizzo di fatturazione",
+          "OtherViolations": "Informazioni sull'ordine",
+          "UnhandledViolations": "Informazioni sull'ordine"
+        },
+        "all_violations_content": "Chiamare o {{emailLink}} Per aggiornare queste informazioni e completare il tuo ordine:",
+        "all_violations_email_link": "e-mail",
+        "editable_shipping_address_violations_message_title": "Aggiungi queste informazioni per completare il tuo ordine:",
+        "editable_shipping_address_violations_message_footer": "Per aggiornare permanentemente l'indirizzo per questa posizione, {{emailLink}}.",
+        "editable_shipping_address_violations_email_link": "contattaci",
+        "shipping_address_incomplete_title": "L'indirizzo di spedizione è incompleto",
+        "calculating_shipping": "La spedizione è ancora in fase di calcolo. Riprova in pochi secondi. Non ti è stato accusato.",
+        "calculating_taxes": "Le tasse sono ancora in fase di calcolo. Riprova in pochi secondi. Non ti è stato accusato.",
+        "generic_processing_error": {
+          "title": "C'è stato un problema a elaborare il tuo ordine",
+          "body": "Non ti è stato accusato. Riprova o usa un metodo di pagamento diverso."
+        },
+        "payment_method_not_available_with_payment_terms": "Il metodo di pagamento selezionato non è più disponibile perché il pagamento per questo ordine è ora acceso {{paymentTerms}} termini",
+        "payment_method_not_available_with_fulfillment_terms": "Il metodo di pagamento selezionato non è più disponibile perché il pagamento per questo ordine è ora dovuto all'adempimento",
+        "payment_method_not_available_with_fixed_terms": "Il metodo di pagamento selezionato non è più disponibile perché il pagamento per questo ordine è dovuto in seguito",
+        "payment_method_not_available_with_review_requirement": "Il metodo di pagamento selezionato non è più disponibile perché il pagamento sarà dovuto una volta confermato l'ordine.",
+        "contact_information": {
+          "title": "Le informazioni di contatto non sono valide",
+          "header": "Per aggiornare le tue informazioni, {{emailLink}}.",
+          "email_link": "contattaci"
+        }
+      },
+      "review_address_modal": {
+        "title": "Indirizzo di revisione",
+        "subtitle": {
+          "one": "Questo ordine verrà spedito all'indirizzo fornito da {{merchant}}.",
+          "other": "Questo ordine verrà spedito a un indirizzo fornito da {{merchant}}. Seleziona un indirizzo di spedizione."
+        },
+        "subtitle_no_match": "Questo indirizzo non corrisponde a nessuno dei tuoi indirizzi salvati.",
+        "subtitle_must_use": "Il tuo ordine verrà spedito a questo indirizzo.",
+        "continue": "Continua con questo indirizzo",
+        "use_saved_address": "Usa un indirizzo diverso",
+        "return_to_cart": "Torna al carrello"
+      },
+      "marketplaces": {
+        "legal_notice": {
+          "legal_text": "Revisione",
+          "link_label": "{{partnerDisplayName}} Termini e Condizioni"
+        }
+      },
+      "online_store_chat": {
+        "title": "Domande? Chatta con noi"
       }
     }
   }
