@@ -326,6 +326,11 @@
       "bank_account": {
         "loading_accessibility_message": "El botón de la cuenta bancaria se está cargando",
         "iframe_title_accessibility_label": "Configuración de la cuenta bancaria"
+      },
+      "add_payment_method": {
+        "replace_mode_warning": "Eliminar este método de pago afectará suscripciones o pedidos anticipados. Reemplácelo con un método de pago alternativo para continuar recibiendo los próximos pedidos.",
+        "choose_from_list": "Elija entre la lista",
+        "add_new_button": "Agregar nuevo"
       }
     }
   }
