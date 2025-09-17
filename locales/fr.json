@@ -3731,9 +3731,75 @@
         "manual_payment_methods": {
           "money_order": "Mandat - {{formattedTransactionAmount}}",
           "cash_on_delivery": "Cash à la livraison (COD) - {{formattedTransactionAmount}}",
-          "bank_deposit": "Dépôt bancaire - {{formattedTransactionAmount}}"
+          "bank_deposit": "Dépôt bancaire - {{formattedTransactionAmount}}",
+          "manual": "Manuel - {{formattedTransactionAmount}}"
+        },
+        "transactions": {
+          "show_all": "Tout montrer",
+          "show_less": "Montrer moins",
+          "details": "Détails",
+          "payment_details": "Détails de paiement"
+        },
+        "emv_details": {
+          "auth": "Auth:",
+          "aid": "AIDE:",
+          "source": "SOURCE:"
         }
-      }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Payé avec les versements de paiement de la boutique",
+        "description": "Restez au courant de votre calendrier de paiement avec des rappels dans l'application de boutique.",
+        "payment_reminders_button": "Obtenir des rappels de paiement",
+        "desktop_qr_code_content": {
+          "title": "SCAR pour les rappels",
+          "description": "Obtenez des rappels de vos versements avec Shop."
+        }
+      },
+      "refunded_amount": "Remboursé",
+      "request_return_failed": "Il y a eu un problème de traitement de votre demande. Veuillez réessayer.",
+      "login_card": {
+        "resend_link_and_login": "Pour afficher les détails de votre commande, connectez-vous ou envoyez un nouveau lien vers l'e-mail ou le numéro de téléphone utilisé à la caisse.",
+        "resend_link_only": "Pour afficher les détails de votre commande, envoyez un nouveau lien vers l'e-mail ou le numéro de téléphone utilisé à la caisse.",
+        "log_in": "Se connecter",
+        "resend_link": "Envoyer un nouveau lien",
+        "link_expired": "Lien expiré"
+      },
+      "remaining_amount": "Restant",
+      "marketing_section_title": "Nouvelles et offres",
+      "marketing_description": "Vous recevrez des e-mails marketing. Vous pouvez vous désinscrire à tout moment.",
+      "marketing_checkbox_label": "Envoyez-moi un courriel avec des nouvelles et des offres",
+      "marketing_checkmark_label": "Vous êtes abonné pour recevoir des nouvelles et des offres par e-mail",
+      "returns": {
+        "expand_events_label": "Montrer les détails",
+        "hide_events_label": "Masquer les détails",
+        "ineligible_return_message": "Aucun élément de cet ordre n'est éligible au retour.",
+        "ineligible_return_message_when_returned": "Aucun élément supplémentaire dans cet ordre n'est éligible au retour.",
+        "print_shipping_label": "Étiquette d'expédition imprimée",
+        "return_and_refund_modal_header": "Politique de remboursement",
+        "tracking_number": "Numéro de suivi:",
+        "exchange_header": "Échanges",
+        "exchange_subheader": "Des éléments d'échange seront ajoutés à la commande une fois le retour terminé."
+      },
+      "shipping": {
+        "address": "Adresse de livraison",
+        "address_map_marker": "Adresse de livraison",
+        "method": "Méthode d'expédition",
+        "summary": "Expédition",
+        "free": "Gratuit",
+        "free_shipping_discount": "Livraison gratuite",
+        "one_time": "Expédition unique",
+        "subscription": "Expédition d'abonnement"
+      },
+      "pickup": {
+        "pickup": "Ramasser",
+        "pickup_location": "Emplacement de ramassage",
+        "pickup_point": "Point de ramassage"
+      },
+      "show_items": "Montrer des articles",
+      "show_order_summary": "Résumé de la commande de montre",
+      "hide_order_summary": "Résumé de la commande de cachette",
+      "subtitle": "Confirmé {{date}}",
+      "subtotal": "Total"
     }
   }
 }
