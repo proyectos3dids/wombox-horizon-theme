@@ -15,7 +15,7 @@ if (!customElements.get('cajas-selector')) {
 
     setupEventListeners() {
       // Escuchar cambios en los radio buttons
-      const radioButtons = this.querySelectorAll('input[type="radio"][name="caja-selection"]');
+      const radioButtons = this.querySelectorAll('input[type="radio"][name="box-selection"]');
       radioButtons.forEach(radio => {
         radio.addEventListener('change', this.handleSelectionChange.bind(this));
       });
