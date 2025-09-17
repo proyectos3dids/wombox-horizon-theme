@@ -107,6 +107,19 @@
       "unit": "px",
       "info": "Controla el radio de las esquinas de la imagen en los resultados de búsqueda."
     }
+    ,
+     {
+      "type": "color",
+      "id": "search_pill_bg",
+      "label": "Color de fondo de las pills",
+      "default": "#ff0000"
+    },
+    {
+      "type": "color",
+      "id": "search_pill_text",
+      "label": "Color del texto de las pills",
+      "default": "#00ff00"
+    }
   ]
 }
 ,
