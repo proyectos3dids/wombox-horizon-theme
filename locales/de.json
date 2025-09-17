@@ -28,48 +28,48 @@
     }
   },
   "accessibility": {
-    "play_model": "3D-Modell abspielen",
+    "play_model": "Spielen Sie ein 3D -Modell",
     "play_video": "Video abspielen",
-    "unit_price": "Grundpreis",
-    "country_results_count": "{{ count }} Ergebnisse",
-    "slideshow_pause": "Slideshow pausieren",
-    "slideshow_play": "Slideshow abspielen",
-    "remove_item": "Entferne {{ title}}",
-    "skip_to_text": "Direkt zum Inhalt",
-    "skip_to_product_info": "Zu Produktinformationen springen",
-    "skip_to_results_list": "Zur Ergebnisliste springen",
-    "new_window": "Wird in einem neuen Fenster geöffnet.",
+    "unit_price": "Stückpreis",
+    "country_results_count": "{{ count }} Ergebnisse",
+    "slideshow_pause": "Pause Diashow",
+    "slideshow_play": "Diashow spielen",
+    "remove_item": "Entfernen {{ title}}",
+    "skip_to_text": "Überspringen Sie zu Inhalten",
+    "skip_to_product_info": "Überspringen Sie Produktinformationen",
+    "skip_to_results_list": "Überspringen Sie zur Ergebnisliste",
+    "new_window": "Öffnet sich in einem neuen Fenster.",
     "slideshow_next": "Nächste Folie",
     "slideshow_previous": "Vorherige Folie",
-    "close_dialog": "Dialogfeld schließen",
+    "close_dialog": "Dialog schließen",
     "reset_search": "Suche zurücksetzen",
-    "search_results_count": "{{ count }} Suchergebnisse für „{{ query }}“ gefunden",
-    "search_results_no_results": "Keine Ergebnisse für „{{ query }}“ gefunden",
+    "search_results_count": "{{ count }} Suchergebnisse für \"gefunden\"{{ query }}\"",
+    "search_results_no_results": "Keine Ergebnisse für \"gefunden\"{{ query }}\"",
     "filters": "Filter",
-    "account": "Kontomenü öffnen",
-    "cart": "Warenkorb",
-    "cart_count": "Artikel im Warenkorb insgesamt",
+    "account": "Das Konto öffnen",
+    "cart": "Wagen",
+    "cart_count": "Gesamtartikel im Karren",
     "filter_count": {
-      "one": "{{ count }} Filter angewandt",
-      "other": "{{ count }} Filter angewandt"
+      "one": "{{ count }} Filter angewendet",
+      "other": "{{ count }} Filter angewendet"
     },
-    "menu": "Menü",
+    "menu": "Speisekarte",
     "country_region": "Land/Region",
-    "slide_status": "Folie {{ index }} von {{ length }}",
-    "scroll_to": "Zu {{ title }} scrollen",
-    "discount": "Rabattcode anwenden",
-    "loading_product_recommendations": "Produktempfehlungen werden geladen",
-    "discount_applied": "Angewendeter Rabattcode: {{ code }}",
-    "open_cart_drawer": "Warenkorb öffnen",
-    "inventory_status": "Inventarstatus",
-    "pause_video": "Video pausieren",
+    "slide_status": "Gleiten {{ index }} von {{ length }}",
+    "scroll_to": "Scrollen zu {{ title }}",
+    "discount": "Wenden Sie einen Rabattcode an",
+    "loading_product_recommendations": "Ladeproduktempfehlungen",
+    "discount_applied": "Angewandter Rabattcode: {{ code }}",
+    "open_cart_drawer": "Offener Wagen",
+    "inventory_status": "Bestandsstatus",
+    "pause_video": "Pause Video",
     "find_country": "Land finden",
-    "localization_region_and_language": "Region- und Sprachauswahl öffnen",
-    "open_search_modal": "Suche öffnen",
-    "decrease_quantity": "Menge verringern",
-    "increase_quantity": "Menge erhöhen",
-    "quantity": "Anzahl",
-    "rating": "Die Bewertung für dieses Produkts lautet {{ rating }} von 5 Sternen",
+    "localization_region_and_language": "Offene Region und Sprachauswahl",
+    "open_search_modal": "Offene Suche",
+    "decrease_quantity": "Abnahme der Menge",
+    "increase_quantity": "Größe erhöhen",
+    "quantity": "Menge",
+    "rating": "Die Bewertung dieses Produkts ist {{ rating }} Von 5",
     "nested_product": "{{ product_title }} für {{ parent_title }}"
   },
   "actions": {
@@ -4478,6 +4478,22 @@
       "clipboardFailedToCopy": "Nicht kopieren",
       "closeNotification": "Schließen",
       "expandNotification": "Mehr anzeigen"
+    },
+    "sign_in": {
+      "step_two": {
+        "page_title": "Code eingeben - %{shop_name}",
+        "heading": "Code eingeben",
+        "subheading": "Geschickt an %{email}",
+        "restart_link": "Melden Sie sich mit einer anderen E -Mail an",
+        "input_field_label": "6-stelliger Code",
+        "button": "Einreichen"
+      },
+      "error": {
+        "invalid": {
+          "invalid_email": "Geben Sie eine gültige E -Mail -Adresse ein",
+          "invalid_code": "Geben Sie den richtigen 6-stelligen Code ein"
+        }
+      }
     }
   }
 }
