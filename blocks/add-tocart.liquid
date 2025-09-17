@@ -368,18 +368,15 @@ Es personalizable en el editor de temas.
     // --- Visibility control based on scroll position ---
     const stickyBar = document.querySelector('.ai-sticky-bar-{{ ai_gen_id }}');
     const scrollThreshold = 100;
+    let shownOnce = false;
 
     if (stickyBar) {
       function handleScroll() {
-        const scrolledDown = window.scrollY > scrollThreshold;
-        const nearBottom = (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 50);
-
-        if (scrolledDown && !nearBottom) {
+        if (!shownOnce && window.scrollY > scrollThreshold) {
           stickyBar.classList.add('is-visible');
-        } else if (!scrolledDown) {
-          stickyBar.classList.remove('is-visible');
+          shownOnce = true; // 👉 ya apareció, no se vuelve a ocultar
+          window.removeEventListener('scroll', handleScroll); // quitamos el listener
         }
-        // 👉 Si estás en el footer, la barra se queda visible
       }
       window.addEventListener('scroll', handleScroll);
       handleScroll();
