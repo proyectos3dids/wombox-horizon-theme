@@ -3745,9 +3745,75 @@
         "manual_payment_methods": {
           "money_order": "Ordem de pagamento - {{formattedTransactionAmount}}",
           "cash_on_delivery": "Dinheiro na entrega (COD) - {{formattedTransactionAmount}}",
-          "bank_deposit": "Depósito bancário - {{formattedTransactionAmount}}"
+          "bank_deposit": "Depósito bancário - {{formattedTransactionAmount}}",
+          "manual": "Manual - {{formattedTransactionAmount}}"
+        },
+        "transactions": {
+          "show_all": "Mostre tudo",
+          "show_less": "Mostre menos",
+          "details": "Detalhes",
+          "payment_details": "Detalhes de pagamento"
+        },
+        "emv_details": {
+          "auth": "Auth:",
+          "aid": "AJUDA:",
+          "source": "FONTE:"
         }
-      }
+      },
+      "paid_with_shop_pay_installments_card": {
+        "paid_with_shop_pay_installments": "Pago com parcelas salariais de loja",
+        "description": "Mantenha -se no topo do seu cronograma de pagamento com lembretes no aplicativo da loja.",
+        "payment_reminders_button": "Obtenha lembretes de pagamento",
+        "desktop_qr_code_content": {
+          "title": "Digitalize lembretes",
+          "description": "Obtenha lembretes de suas parcelas com a loja."
+        }
+      },
+      "refunded_amount": "Reembolsado",
+      "request_return_failed": "Houve um problema processando sua solicitação. Por favor, tente novamente.",
+      "login_card": {
+        "resend_link_and_login": "Para visualizar os detalhes do seu pedido, faça login ou envie um novo link para o email ou número de telefone usado na finalização da compra.",
+        "resend_link_only": "Para visualizar os detalhes do seu pedido, envie um novo link para o email ou número de telefone usado na finalização da compra.",
+        "log_in": "Entrar",
+        "resend_link": "Envie um novo link",
+        "link_expired": "Link expirado"
+      },
+      "remaining_amount": "Restante",
+      "marketing_section_title": "Notícias e ofertas",
+      "marketing_description": "Você receberá e -mails de marketing. Você pode cancelar a inscrição a qualquer momento.",
+      "marketing_checkbox_label": "Envie -me um e -mail com notícias e ofertas",
+      "marketing_checkmark_label": "Você está inscrito para receber notícias e ofertas por e -mail",
+      "returns": {
+        "expand_events_label": "Mostre detalhes",
+        "hide_events_label": "Ocultar detalhes",
+        "ineligible_return_message": "Nenhum itens nesta ordem é elegível para devolução.",
+        "ineligible_return_message_when_returned": "Nenhum itens adicionais nesta ordem são elegíveis para devolução.",
+        "print_shipping_label": "Rótulo de remessa de impressão",
+        "return_and_refund_modal_header": "Política de reembolso",
+        "tracking_number": "Número de rastreamento:",
+        "exchange_header": "Trocar itens",
+        "exchange_subheader": "Os itens de troca serão adicionados ao pedido assim que a devolução for concluída."
+      },
+      "shipping": {
+        "address": "Endereço para envio",
+        "address_map_marker": "Endereço para envio",
+        "method": "Método de envio",
+        "summary": "Envio",
+        "free": "Livre",
+        "free_shipping_discount": "Frete grátis",
+        "one_time": "Envio único",
+        "subscription": "Envio de assinatura"
+      },
+      "pickup": {
+        "pickup": "Escolher",
+        "pickup_location": "Localização de coleta",
+        "pickup_point": "Ponto de coleta"
+      },
+      "show_items": "Mostre itens",
+      "show_order_summary": "Mostrar resumo da ordem",
+      "hide_order_summary": "Ocultar o resumo da ordem",
+      "subtitle": "Confirmado {{date}}",
+      "subtotal": "Subtotal"
     }
   }
 }
