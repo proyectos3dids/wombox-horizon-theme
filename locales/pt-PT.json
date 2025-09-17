@@ -3612,8 +3612,140 @@
             "claim_shop_cash_button_label": "Caixa da loja de reivindicações"
           },
           "details_modal": {
-            "title": "Garantia de entrega"
+            "title": "Garantia de entrega",
+            "active_delivery_guarantee_label": "Entrega por {{date}}",
+            "expired_delivery_guarantee_description": "A garantia de promessa de 30 dias desta ordem expirou.",
+            "expired_badge_label": "Expirado",
+            "order_includes_guarantees_label": "Seu pedido inclui {{deliveryAgreementsCount}} garantias",
+            "order_includes_guarantees_description": "A promessa da loja garante entrega rápida e confiável. Reivindicar dinheiro em dinheiro se o seu pedido chegar depois {{date}}.",
+            "delivered_after_label": "Entregue depois {{date}}",
+            "delivered_after_description": "Porque seu pedido chegou tarde, você é elegível para reivindicar {{amount}} Compre dinheiro.",
+            "claimed_shop_cash_description": "Porque esse pedido chegou tarde, você reivindicou {{amount}} Compre dinheiro.",
+            "eligible_to_claim_shop_cash_description": "Porque seu pedido chegou tarde, você é elegível para reivindicar {{amount}} Compre dinheiro.",
+            "learn_more_button_label": "Saber mais",
+            "claim_shop_cash_button_label": "Caixa da loja de reivindicações",
+            "view_balance_in_shop_button_label": "Veja o equilíbrio na loja",
+            "scan_to_claim_shop_cash_label": "Digitalizar a reivindicar {{amount}} Compre dinheiro"
           }
+        },
+        "delivery_promise": {
+          "promise_line": {
+            "single_brand_label": "Entrega apoiada por",
+            "mixed_brands_label": "Entrega garantida",
+            "not_delivered_by_label": "Não entregue por {{date}}",
+            "modal_accessibility_button_label": "Detalhes da promessa de entrega"
+          },
+          "claim_shop_cash_cta": {
+            "has_shop_app_label": "Reivindique o dinheiro da sua loja",
+            "no_shop_app_label": "{{appDownloadLink}} Para reivindicar dinheiro da loja",
+            "download_shop_app_label": "Download da loja"
+          },
+          "details_modal": {
+            "title": "Entrega apoiada por",
+            "modal_accessiblity_label": "Detalhes da promessa de entrega",
+            "delivery_guarantee_label": "Garantia de entrega",
+            "delivery_by_label": "Entrega por {{date}}",
+            "delivery_guaranteed_by_label": "Entrega garantida por {{date}}",
+            "shop_cash_claim": {
+              "may_be_eligible_label": "A promessa da loja garante entrega rápida e confiável. Reivindicar o dinheiro da loja se o seu pedido chegar atrasado.",
+              "may_be_eligible_not_authorized_label": "Você pode ser elegível para reivindicar dinheiro da loja porque esse pedido chegou tarde. Faça login para visualizar detalhes.",
+              "redeemed_label": "Você já reivindicou o dinheiro da loja porque esse pedido chegou tarde.",
+              "expired_label": "Este pedido não é elegível para uma reivindicação de entrega tardia porque a garantia de 30 dias expirou.",
+              "no_shop_cash_label": "Este pedido não é elegível para uma reivindicação de entrega tardia, porque não foi paga com o salário da loja.",
+              "no_longer_guaranteed_label": "Esses itens não são mais apoiados por uma garantia de entrega.",
+              "claim_shop_cash_title": "Digitalizar a reivindicar {{amount}} em dinheiro da loja",
+              "claim_shop_cash_description": "Você pode usar sua loja em dinheiro em compras futuras no aplicativo da loja."
+            }
+          }
+        }
+      },
+      "status_mark_as_delivered": "Mark conforme entregue",
+      "fulfillment_status_title": "Status do cumprimento: {{status}}",
+      "buy_again": "Compre novamente",
+      "buy_again_accessibility_label": "Compre novamente para o pedido {{orderId}}",
+      "manage": "Gerenciar",
+      "manage_accessiblity_label": "Gerenciar pedidos {{orderId}}",
+      "group_title_label": "Parte de: {{groupTitle}}",
+      "group_title_label_with_parent": "Para: {{groupTitle}}"
+    },
+    "order_details": {
+      "shipment_timeline": {
+        "expand_events_label": "Mostre detalhes",
+        "expand_events_accessibility_label": "Mostrar detalhes de remessa de pedidos",
+        "hide_events_label": "Ocultar detalhes",
+        "hide_events_accessibility_label": "Ocultar detalhes de remessa de pedidos"
+      },
+      "addresses_section_title": "Cobrança e envio",
+      "order_details": "Detalhes do pedido",
+      "order_details_skeleton_accessibility_label": "Faça login para visualizar todos os detalhes do pedido.",
+      "billing_address": "Endereço de Cobrança",
+      "card_ending_with": "terminando com {{lastDigits}}",
+      "contact": "Contato",
+      "contact_information": "Informações de contato",
+      "company": "Empresa",
+      "company_and_location": "Empresa e localização",
+      "fully_refunded_label": "REEMBOLSADO",
+      "group_title_label": "Parte de: {{groupTitle}}",
+      "group_title_label_with_parent": "Para: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "Galeria",
+        "list": "Lista"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "Mostrar {{count}} Unid",
+        "collapse_line_items": "Esconder {{count}} Unid",
+        "line_item_summary": "{{refundableQuantity}} x {{productTitle}}",
+        "line_item_summary_accessibility_label": "{{productTitle}}, Quantidade: {{refundableQuantity}}",
+        "line_item_summary_list_accessibility_label": "Itens em {{productTitle}} pacote"
+      },
+      "discount": "Desconto",
+      "hide_items": "Ocultar itens",
+      "loading": "Detalhes do pedido de carregamento",
+      "loading_finished_accessibility_message": "Os detalhes do pedido foram carregados",
+      "location": "Localização",
+      "image_gallery": {
+        "product_name_and_quantity": "{{productName}} quantidade {{quantity}}",
+        "next": "Mostre os próximos itens",
+        "previous": "Mostre itens anteriores",
+        "load_more_items": {
+          "one": "Carregar {{count}} mais itens",
+          "other": "Carregar {{count}} mais itens"
+        }
+      },
+      "mobile_summary_toggle_button": {
+        "open": "Mostrar resumo da ordem",
+        "closed": "Ocultar o resumo da ordem"
+      },
+      "no_data": "Nenhum",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} está vazio",
+      "not_applicable": "N / D",
+      "paid_amount": "Pago",
+      "partially_refunded_label": "Parcialmente reembolsado",
+      "payment": {
+        "status_in_review": "Pagamento devido após a revisão",
+        "status_unpaid": "Pagamento devido {{date}}",
+        "title": "Pagamento",
+        "card_payment_short_details": "{{paymentTypeLabel}} •••• {{lastDigits}}",
+        "payment_type": {
+          "gift_card": "Cartão -presente",
+          "store_credit": "Crédito da loja",
+          "money_order": "Ordem de pagamento",
+          "cash_on_delivery": "Dinheiro na entrega (COD)",
+          "bank_deposit": "Depósito bancário",
+          "manual": "Manual"
+        },
+        "card_payment_details": "terminando com {{lastDigits}} - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "terminando com {{lastDigits}} - {{formattedTransactionAmount}}",
+        "store_credit_payment_details": "Crédito da loja - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Pago com parcelas salariais de loja",
+          "view_schedule": "Ver cronograma"
+        },
+        "manual_payment_methods": {
+          "money_order": "Ordem de pagamento - {{formattedTransactionAmount}}",
+          "cash_on_delivery": "Dinheiro na entrega (COD) - {{formattedTransactionAmount}}",
+          "bank_deposit": "Depósito bancário - {{formattedTransactionAmount}}"
         }
       }
     }
