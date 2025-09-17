@@ -532,7 +532,71 @@
             "metadata_mismatch": "Fornecem o provedor e o tipo CAPTCHA não correspondem aos valores esperados.",
             "token_missing": "Um token CAPTCHA deve ser fornecido para concluir este checkout.",
             "job_enqueue_failed": "O trabalho de validação de Captcha não foi inserido.",
-            "job_already_queued": "A validação de Captcha já foi filmada para este token Captcha."
+            "job_already_queued": "A validação de Captcha já foi filmada para este token Captcha.",
+            "token_expired": "O token Captcha fornecido expirou. Complete um novo Captcha para continuar a compra.",
+            "token_invalid": "O token de captcha fornecido era inválido. Complete um novo Captcha para continuar a compra.",
+            "token_not_valid_for_session": "O captcha fornecido não pode ser usado com este checkout."
+          },
+          "fx_reconciliation_override": {
+            "shop_currency_mismatch": "O valor recebido deve estar na moeda da loja."
+          },
+          "checkout_source": {
+            "revoked": "Esta finalização da compra não está mais disponível."
+          }
+        },
+        "full_price": "Preço total:",
+        "title": "Confira - {{shopName}}",
+        "full_title": "{{pageTitle}} - {{shopName}} - Confira",
+        "loading": "Carregando…",
+        "loading_title": "Confira - {{shopName}}",
+        "display_name": "{{firstName}} {{lastName}}",
+        "google_map_title": "Mapa do Google",
+        "confirm_order_button_label": "Confirme o pedido",
+        "submit_order_button_label": "Enviar Ordem",
+        "submit_for_review_button_label": "Envie para revisão",
+        "submit_for_review_notice_label": "O pagamento não será devido até que seu pedido seja revisado",
+        "continue_to_payment_plans_button_label": "Continue para Planos de Pagamento",
+        "back_button_label": "Retornar",
+        "choose_delivery_strategy": "Escolha um método de entrega",
+        "autocomplete_zero_item": "Sem itens disponíveis",
+        "autocomplete_powered_by_google": "Distribuído por {{brandName}}",
+        "submit": "Enviar",
+        "processing": "Processamento…",
+        "stepper": {
+          "increase": "Aumentar {{type}}",
+          "decrease": "Diminuir {{type}}",
+          "minimum_reached": "Mínimo de {{value}} alcançado",
+          "maximum_reached": "Máximo de {{value}} alcançado"
+        },
+        "remove_chip": "Remova o item",
+        "remove_item": "Remover %{label}",
+        "remove_tag": "Remova a tag",
+        "dates": {
+          "weekdays": {
+            "monday": "Segunda-feira",
+            "tuesday": "Terça-feira",
+            "wednesday": "Quarta-feira",
+            "thursday": "Quinta-feira",
+            "friday": "Sexta-feira",
+            "saturday": "Sábado",
+            "sunday": "Domingo"
+          },
+          "weekdays_abbreviation": {
+            "monday": "MO",
+            "tuesday": "Tu",
+            "wednesday": "Nós",
+            "thursday": "Th",
+            "friday": "Fr",
+            "saturday": "SA",
+            "sunday": "Su"
+          },
+          "months": {
+            "january": "Janeiro",
+            "february": "Fevereiro",
+            "march": "Marchar",
+            "april": "abril",
+            "may": "Poderia",
+            "june": "Junho"
           }
         }
       }
