@@ -3508,8 +3508,78 @@
             "paid": "Bezahlt",
             "due_without_date": "Fällig",
             "due_on_fulfillment": "Auf Erfüllung",
-            "pay_to_confirm": "Bezahlen, um zu bestätigen"
+            "pay_to_confirm": "Bezahlen, um zu bestätigen",
+            "payment_not_due": "Noch nicht fällig"
           }
+        },
+        "sort_by": "Sortieren durch: {{option}}",
+        "sort_hide_options_accessibility_label": "Sortieroptionen für bestätigte Bestellungen ausblenden.",
+        "sort_show_options_accessibility_label": "Sortieroptionen für bestätigte Bestellungen anzeigen.",
+        "sort_currently_sorted_by_accessibility_label": "Derzeit sortiert nach: {{option}}",
+        "sort_title": "Sortieren",
+        "sort": {
+          "date": {
+            "newest": "Neuester bis ältester",
+            "oldest": "Älteste bis neueste"
+          },
+          "location": {
+            "ascending": "Ort (A-Z)",
+            "descending": "Ort (Z-A)"
+          },
+          "order_number": {
+            "ascending": "Bestellnummer (niedrig bis hoch)",
+            "descending": "Bestellnummer (hoch bis niedrig)"
+          },
+          "order_total": {
+            "ascending": "Bestellen Sie insgesamt (niedrig bis hoch)",
+            "descending": "Summe bestellen (hoch bis niedrig)"
+          }
+        },
+        "location_filter_picker": {
+          "all_location": "Alle Standorte",
+          "current_location": "Aktueller Standort",
+          "switch_view": "Switch -Ansicht"
+        },
+        "filter_title": "Filter",
+        "filter": {
+          "clear_section": "Klarer Abschnitt",
+          "clear_all": "Alle klar",
+          "apply": "Anwenden",
+          "date": {
+            "start_date": "Startdatum",
+            "end_date": "Enddatum",
+            "title": "Bestelldatum",
+            "today": "Heute",
+            "last_7_days": "Letzten 7 Tage",
+            "last_30_days": "Letzte 30 Tage",
+            "last_90_days": "Letzten 90 Tage",
+            "last_365_days": "Letzte 12 Monate",
+            "custom": "Brauch"
+          }
+        },
+        "show_order_actions_accessibility_label": "Auftragsaktionen für Ordnung anzeigen {{name}}"
+      },
+      "order_status": {
+        "attempted_delivery_label": "Versuch Lieferung",
+        "attempted_to_deliver_label": "Versuch zu liefern",
+        "preparing_for_shipping_label": "Vorbereitung auf den Versand",
+        "ready_for_pickup_label": "Bereit für die Abholung",
+        "ready_for_pickup_description": "Diese Artikel sind für die Abholung bereit. Bitte bringen Sie Ihre Bestellbestätigung mit, wenn Sie Ihre Bestellung abholen.",
+        "ready_for_pickup_location": "Ihre Bestellung ist zur Abholung am Standort bereit",
+        "picked_up_label": "Abgeholt",
+        "canceled_label": "Abgesagt",
+        "canceled_title": "Ihre Bestellung wurde storniert",
+        "come_back": "Kehren Sie zu dieser Seite zurück, um Updates zu Ihrem Sendungsstatus zu erhalten.",
+        "company_tracking_number": "{{company}} Tracking-Nummer:",
+        "confirmed_label": "Bestätigt",
+        "confirmed_title": "Ihre Bestellung ist bestätigt",
+        "confirmed_description_pickup": "Sie erhalten eine E -Mail, wenn Ihre Bestellung für die Abholung bereit ist.",
+        "confirmed_description_digital": "Sie erhalten eine E -Mail, wenn Ihre Bestellung fertig ist.",
+        "confirmed_description_gift_card_text": "Sie erhalten einen Text, wenn Ihre Bestellung fertig ist.",
+        "complete_label": "Vollständig",
+        "delivered_label": "Geliefert",
+        "delivered_description_gift_card": {
+          "one": "Geschenkkarte wurde per E -Mail gesendet."
         }
       }
     }
