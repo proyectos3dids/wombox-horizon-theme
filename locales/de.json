@@ -3723,7 +3723,75 @@
       "order_details": "Bestelldetails",
       "order_details_skeleton_accessibility_label": "Melden Sie sich an, um alle Bestelldetails anzuzeigen.",
       "billing_address": "Abrechnungsadresse",
-      "card_ending_with": "enden mit {{lastDigits}}"
+      "card_ending_with": "enden mit {{lastDigits}}",
+      "contact": "Kontakt",
+      "contact_information": "Kontaktinformationen",
+      "company": "Unternehmen",
+      "company_and_location": "Firma und Standort",
+      "fully_refunded_label": "Erstattet",
+      "group_title_label": "Teil von: {{groupTitle}}",
+      "group_title_label_with_parent": "Für: {{groupTitle}}",
+      "view_controls": {
+        "gallery": "Galerie",
+        "list": "Liste"
+      },
+      "grouped_view_components": {
+        "expand_line_items": "Zeigen {{count}} Artikel",
+        "collapse_line_items": "Verstecken {{count}} Artikel",
+        "line_item_summary": "{{refundableQuantity}} X {{productTitle}}",
+        "line_item_summary_accessibility_label": "{{productTitle}}, Menge: {{refundableQuantity}}",
+        "line_item_summary_list_accessibility_label": "Artikel in {{productTitle}} bündeln"
+      },
+      "discount": "Rabatt",
+      "hide_items": "Gegenstände verbergen",
+      "loading": "Auftragsdetails laden",
+      "loading_finished_accessibility_message": "Bestelldetails wurden geladen",
+      "location": "Standort",
+      "image_gallery": {
+        "product_name_and_quantity": "{{productName}} Menge {{quantity}}",
+        "next": "Zeigen Sie die nächsten Artikel",
+        "previous": "Vorherige Elemente anzeigen",
+        "load_more_items": {
+          "one": "Laden {{count}} Weitere Artikel",
+          "other": "Laden {{count}} Weitere Artikel"
+        }
+      },
+      "mobile_summary_toggle_button": {
+        "open": "Auftragszusammenfassung anzeigen",
+        "closed": "Auftragszusammenfassung ausblenden"
+      },
+      "no_data": "Keiner",
+      "no_data_provided": "-",
+      "no_data_provided_accessibility_label": "{{fieldName}} ist leer",
+      "not_applicable": "N / A",
+      "paid_amount": "Bezahlt",
+      "partially_refunded_label": "Teilweise erstattet",
+      "payment": {
+        "status_in_review": "Zahlung nach Überprüfung fällig",
+        "status_unpaid": "Zahlung fällig auf {{date}}",
+        "title": "Zahlung",
+        "card_payment_short_details": "{{paymentTypeLabel}} •••• {{lastDigits}}",
+        "payment_type": {
+          "gift_card": "Geschenkkarte",
+          "store_credit": "Kredite speichern",
+          "money_order": "Zahlungsanweisung",
+          "cash_on_delivery": "Bargeld bei Lieferung (Kabeljau)",
+          "bank_deposit": "Bankeinzahlung",
+          "manual": "Handbuch"
+        },
+        "card_payment_details": "enden mit {{lastDigits}} - {{formattedTransactionAmount}}",
+        "gift_card_payment_details": "enden mit {{lastDigits}} - {{formattedTransactionAmount}}",
+        "store_credit_payment_details": "Kredite speichern - {{formattedTransactionAmount}}",
+        "shop_pay_installments": {
+          "paid_in_installments": "Bezahlt mit Ladenbezahlungsausrichtungen",
+          "view_schedule": "Zeitplan anzeigen"
+        },
+        "manual_payment_methods": {
+          "money_order": "Zahlungsanweisung - {{formattedTransactionAmount}}",
+          "cash_on_delivery": "Bargeld für Lieferung (Kabeljau) - {{formattedTransactionAmount}}",
+          "bank_deposit": "Bankeinzahlung - {{formattedTransactionAmount}}"
+        }
+      }
     }
   }
 }
