@@ -3091,8 +3091,70 @@
       "line_item": {
         "item_status": {
           "add_variant": "Hinzugefügt %{delta}",
-          "increment_item": "Hinzugefügt %{delta}"
+          "increment_item": "Hinzugefügt %{delta}",
+          "decrement_item": "ENTFERNT %{delta} von %{total}",
+          "decrement_fulfilled_line_item": "Zurückgekehrt %{delta} von %{total}",
+          "decrement_return_line_item": "ENTFERNT %{delta} von der Rückkehr"
         }
+      },
+      "order": {
+        "not_available": "Diese Bestellung ist nicht verfügbar",
+        "financial_status": {
+          "authorized": "Autorisiert",
+          "pending": "Ausstehend",
+          "paid": "Bezahlt",
+          "unpaid": "Unbezahlt",
+          "voided": "VOSIDDE",
+          "partially_paid": "Teilweise bezahlt",
+          "partially_refunded": "Teilweise erstattet",
+          "refunded": "Erstattet",
+          "expired": "Abgelaufen"
+        },
+        "fulfillment_status": {
+          "fulfilled": "Erfüllt",
+          "complete": "Vollständig",
+          "partial": "Teilweise",
+          "unfulfilled": "Unerfüllt",
+          "restocked": "Wiedergegeben"
+        },
+        "transaction_status": {
+          "success": "Erfolg",
+          "pending": "Ausstehend",
+          "failure": "Versagen",
+          "error": "Fehler"
+        },
+        "cancel_reason": {
+          "declined": "Zahlung abgenommen",
+          "inventory": "Artikel nicht verfügbar",
+          "fraud": "Betrügerische Ordnung",
+          "customer": "Kunde geändert/stornierte die Bestellung",
+          "staff": "Personalfehler",
+          "other": "Andere"
+        },
+        "cash_on_delivery": "Bargeld bei Lieferung (Kabeljau)"
+      },
+      "cart": {
+        "only_n_items_available": "Sie können nur hinzufügen %{count} %{name} zum Wagen.",
+        "too_many_items_in_cart": "Sie können nicht mehr hinzufügen %{name} zum Wagen.",
+        "only_one_added_to_cart": "Aufgrund der Verfügbarkeit wurde nur 1 Artikel in Ihren Warenkorb hinzugefügt.",
+        "only_n_added_to_cart": "Nur %{quantity} Artikel wurden aufgrund der Verfügbarkeit zu Ihrem Wagen hinzugefügt.",
+        "maximum_available_quantity_reached": "Die maximale Menge dieses Artikels befindet sich bereits in Ihrem Warenkorb.",
+        "less_than_minimum": "Dieser Artikel hat ein Minimum von %{min}.",
+        "more_than_maximum": "Dieser Artikel hat maximal von %{max}.",
+        "not_respect_step": "Sie können dieses Element nur in Schritten von hinzufügen %{step}.",
+        "all_items_in_cart": "Alle %{count} %{name} sind in deinem Karren.",
+        "empty_update": "Leere Wagen kann nicht aktualisieren",
+        "missing_parameters": "Kein gültiger ID oder Zeilenparameter",
+        "generic_error": "Wagenfehler",
+        "invalid_input": "%{parameter} Parameter ist ungültig.",
+        "product_not_available": "Produkt ist nicht verfügbar",
+        "too_many_line_items_error": "Ihr Wagen kann nicht mehr als enthalten %{max} Artikel.",
+        "link_expired": "Link abgelaufen",
+        "link_no_longer_exists": "Link existiert nicht mehr.",
+        "stock_problems_html": "Ein oder mehrere Artikel sind nicht mehr verfügbar. Wir haben eine bereitgestellt <a href='%{link}'>CART aktualisiert</a>.",
+        "changed": "Wagen änderte sich",
+        "items_changed": "Ein oder mehrere Artikel haben sich geändert.",
+        "product_sold_out": "Das Produkt '%{name}'ist bereits ausverkauft."
       }
     }
   }
