@@ -1055,8 +1055,71 @@
           "due_on_fulfillment_title": "Équilibre {{amount_due}} est dû à la réalisation"
         },
         "payment_terms_totals": {
-          "due_today": "Total dû aujourd'hui"
-        }
+          "due_today": "Total dû aujourd'hui",
+          "due_today_next": "Dû aujourd'hui",
+          "due_later": "Totalé %{due_at}",
+          "due_on_fulfillment": "Total dû sur la réalisation",
+          "due_on_fulfillment_next": "Dû sur la réalisation",
+          "due_on_receipt": "Total dû à la réception",
+          "due_later_checkout_to_draft": "Total dû plus tard",
+          "total_paid": "Total payé"
+        },
+        "maximum_discount_code_limit_reached": "Vous avez atteint le nombre maximum de codes de réduction. Supprimer un code existant à utiliser <strong style=\"text-transform:uppercase\">%{code}</strong>.",
+        "discount_code_application_failed": "<strong style=\"text-transform:uppercase\">%{code}</strong> ne fonctionne pas pour le moment. Contactez-nous pour obtenir de l'aide.",
+        "due_on_fulfillment": "Dû sur la réalisation",
+        "gift_card_masked": "•••• %{last_characters}",
+        "subscriptions": "Abonnements",
+        "duties_label": "Devoirs",
+        "duties_and_taxes_label": "Droits et taxes",
+        "error_duties_tooltip": "Cette commande est expédiée d'un autre pays, de sorte que les droits et les taxes peuvent être facturés à la livraison.",
+        "may_be_charged_on_delivery": "Peut être facturé à la livraison",
+        "total_updated_label_with_price": "Prix ​​total mis à jour: %{totalPrice}",
+        "updated_shipping_method": "Méthode d'expédition mise à jour: %{shipping_method}",
+        "recurring_payments": "Paiements récurrents",
+        "recurring_total_multiple_label": "Cette commande a une charge récurrente pour plusieurs articles.",
+        "deferred_total_due_date_label": "Totalé {{date}}",
+        "deferred_total_due_date_label_next": "Exigible %{date}",
+        "full_price": "Prix ​​complet: %{price}",
+        "custom_discount": "Rabais personnalisé",
+        "expand_component_information": {
+          "one": "Montrer %{count} article",
+          "other": "Montrer %{count} articles"
+        },
+        "collapse_component_information": {
+          "one": "Cacher %{count} article",
+          "other": "Cacher %{count} articles"
+        },
+        "component_quantity_title": "%{quantity} × %{product_title}",
+        "discount_discovery": {
+          "add_code": "Ajouter une remise",
+          "merchandise_quantity_label": {
+            "one": "%{count} article",
+            "other": "%{count} articles"
+          }
+        },
+        "alternative_payment_currency_total": "Facturé comme %{amount_due}"
+      },
+      "shipping": {
+        "title": "Expédition",
+        "delivery_title": "Livraison",
+        "shipping_method_title": "Méthode d'expédition",
+        "shipping_method_rollup_accessibility_label": "Options de méthode d'expédition",
+        "shipping_method_one_time_purchase_group_title": "Achat unique",
+        "shipping_method_first_shipment_group_title": {
+          "one": "Première expédition",
+          "other": "Premières expéditions"
+        },
+        "shipping_method_subscription_group_title": "Abonnement",
+        "shipping_method_recurring_shipments_group_title": {
+          "one": "Expédition récurrente",
+          "other": "Expéditions récurrentes"
+        },
+        "subscription_shipping": "Expédition d'abonnement",
+        "subscription_local_delivery": "Abonnement local livraison",
+        "subscription_pickup": "Ramassage d'abonnement",
+        "waiting_on_rate_notice": "Obtenir des tarifs d'expédition disponibles…",
+        "waiting_on_pickup_location_notice": "Obtenir des emplacements de ramassage disponibles…",
+        "no_rates_for_cart_or_destination_notice": "Il n'y a pas de méthodes d'expédition disponibles pour votre panier ou votre adresse"
       }
     }
   }
