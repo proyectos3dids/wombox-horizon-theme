@@ -3240,7 +3240,85 @@
       "error": "Es gab ein Problem beim Laden Ihrer Suchergebnisse. Bitte aktualisieren Sie die Seite oder versuchen Sie es später erneut.",
       "sorting": {
         "relevance": "Relevanz",
-        "price_ascending": "Preis, niedrig bis hoch"
+        "price_ascending": "Preis, niedrig bis hoch",
+        "price_descending": "Preis, hoch bis niedrig"
+      }
+    },
+    "page_titles": {
+      "blog_or_article_with_error": "Fehler - %{title}",
+      "products": "Produkte",
+      "shopping_cart": "Ihr Einkaufswagen",
+      "account": "Konto",
+      "create_account": "Benutzerkonto erstellen",
+      "reset_account": "Konto zurücksetzen",
+      "addresses": "Adressen",
+      "order": "Befehl %{name}",
+      "search": "Suchen",
+      "search_results": {
+        "one": "Suchen: %{count} Ergebnis für \"gefunden\"%{terms}\"",
+        "other": "Suchen: %{count} Ergebnisse für \"gefunden\"%{terms}\""
+      },
+      "collections": "Sammlungen",
+      "not_found": "404 nicht gefunden",
+      "challenge": "Herausforderung",
+      "checkpoint": "Kontrollpunkt"
+    },
+    "cart": {
+      "discounts_with_count": "%{count} Rabatte wurden angewendet"
+    },
+    "challenge": {
+      "message": "Lassen Sie uns wissen, dass Sie kein Roboter sind.",
+      "error": "Ihre Antwort war nicht korrekt, bitte versuchen Sie es erneut.",
+      "submit_button_text": "Einreichen"
+    },
+    "checkpoint": {
+      "message": "Lösen Sie Captcha, um fortzufahren",
+      "error": "Captcha -Validierung ist fehlgeschlagen",
+      "submit_button_text": "Einreichen"
+    },
+    "store_availability": {
+      "pick_up_time": {
+        "one_hour": "Normalerweise in 1 Stunde fertig",
+        "two_hours": "Normalerweise in 2 Stunden fertig",
+        "four_hours": "Normalerweise in 4 Stunden fertig",
+        "twenty_four_hours": "Normalerweise in 24 Stunden fertig",
+        "two_to_four_days": "Normalerweise in 2-4 Tagen fertig",
+        "five_or_more_days": "Normalerweise in 5+ Tagen fertig",
+        "zero_to_two_hours": "Normalerweise in 2 Stunden fertig",
+        "two_to_four_hours": "Normalerweise in 4 Stunden fertig",
+        "immediately": "Jetzt bereit für die Abholung",
+        "next_day": "Bereit für die Abholung am nächsten Tag"
+      }
+    },
+    "subscriptions": {
+      "buyer_consent_product": "Dieser Artikel ist ein wiederkehrender oder aufgeschobener Kauf. Durch Fortsetzung stimme ich dem zu %{cancellationPolicyLink} und ermächtigen Sie, meine Zahlungsmethode zu den auf dieser Seite aufgeführten Preisen, Häufigkeit und Daten zu berechnen, bis meine Bestellung erfüllt ist oder ich storniere, falls dies zulässig ist.",
+      "buyer_consent_cart": "Ein oder mehrere der Artikel in Ihrem Karren ist ein wiederkehrender oder verzögerter Kauf. Durch Fortsetzung stimme ich dem zu %{cancellationPolicyLink} und ermächtigen Sie, meine Zahlungsmethode zu den auf dieser Seite aufgeführten Preisen, Häufigkeit und Daten zu berechnen, bis meine Bestellung erfüllt ist oder ich storniere, falls dies zulässig ist.",
+      "cancellation_policy": "Stornierungsrichtlinie"
+    }
+  },
+  "customer_accounts": {
+    "date": {
+      "range": "{{startDate}}–{{endDate}}",
+      "humanize": {
+        "lessThanOneYearAgo": "{{date}} bei {{time}}",
+        "lessThanOneHourAgo": {
+          "one": "{{count}} vor Minute",
+          "other": "{{count}} vor Minuten"
+        },
+        "lessThanOneMinuteAgo": "Soeben",
+        "lessThanOneWeekAgo": "{{weekday}} bei {{time}}",
+        "yesterday": "Gestern bei {{time}}",
+        "today": "Heute bei {{time}}",
+        "tomorrow": "Morgen um {{time}}",
+        "lessThanOneWeekAway": "{{weekday}} bei {{time}}",
+        "lessThanOneYearAway": "{{date}} bei {{time}}"
+      }
+    },
+    "enable_javascript": "Aktivieren Sie JavaScript in Ihren Browsereinstellungen oder melden Sie sich mit einem anderen Browser an.",
+    "navigation_and_structure": {
+      "account_menu": {
+        "hide_accessibility_label": "Kontenmenü ausblenden",
+        "label": "Konto"
       }
     }
   }
