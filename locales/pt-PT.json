@@ -3274,7 +3274,65 @@
     "navigation_and_structure": {
       "account_menu": {
         "hide_accessibility_label": "Ocultar o menu da conta",
-        "label": "Conta"
+        "label": "Conta",
+        "show_accessibility_label": "Mostrar menu de conta",
+        "nav_accessibility_label": "Navegação da conta",
+        "open_menu_accessibility_label": "Navegação de conta aberta",
+        "close_menu_accessibility_label": "Fechar a navegação da conta",
+        "loading_message": "Carregando a navegação da conta"
+      },
+      "action_menu_accessibility_label": "Mais ações",
+      "close_menu_accessibility_label": "Fechar a navegação principal",
+      "contact_email_subject": "Contato de {{shopName}} loja online",
+      "contact_link": "Informações de contato",
+      "delete_confirmation": {
+        "cancel": "Cancelar",
+        "delete": "Excluir"
+      },
+      "dismiss_toast": "Liberar",
+      "document_title": "{{sectionName}} - {{shopName}} - Conta",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "go_to_store_link": "Vá para a loja",
+      "loading_message": "Carregando",
+      "loading_policy_content_accessibility_label": "Carregando o conteúdo da política",
+      "log_out_link": "sair",
+      "logout_overlay_label": "Saltando ...",
+      "nav_label_accessibility_label": "Navegação principal",
+      "navigation_accessibility_message": "Você navegou para {{sectionName}}",
+      "open_menu_accessibility_label": "Aberta de navegação principal",
+      "orders_link_label": "Ordens",
+      "shop_logo_accessibility_label": "{{shopName}} logotipo",
+      "subscriptions_link_label": "Assinaturas",
+      "settings_link": "Configurações",
+      "country_switcher_toast_message": "O país mudou para {{countryName}}",
+      "switch_country": "Mudar de país",
+      "no_countries_found": "Nenhum países encontrou",
+      "location_switcher_toast_message": "Localização mudou para {{locationName}}",
+      "switch_location": "Localização da mudança",
+      "no_locations_found": "Nenhum local encontrado",
+      "try_new_search": "Experimente uma nova pesquisa",
+      "view_details": "Ver detalhes",
+      "company_location": "Localização da empresa",
+      "search": "Procurar",
+      "skip_to_content": "Pule para o conteúdo"
+    },
+    "announcement_bar": {
+      "expand_label": "Expanda a barra de anúncio",
+      "collapse_label": "Barra de anúncio de colapso",
+      "close_label": "Barra de anúncio fechado"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Carregando informações da conta",
+      "loading_finished_accessibility_message": "As informações da conta carregaram",
+      "profile_card": {
+        "cancel": "Cancelar",
+        "cancel_accessibility_label": "Cancelar perfil de edição",
+        "edit": "Editar",
+        "edit_accessibility_label": "Editar perfil",
+        "email_help_text": "O email não pode ser editado",
+        "first_name": "Primeiro nome",
+        "last_name": "Sobrenome",
+        "email": "E-mail"
       }
     }
   }
