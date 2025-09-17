@@ -4108,9 +4108,85 @@
             "description_authorized": "Ihre Zahlungsmethode wird am Fälligkeitsdatum berechnet oder Sie können jetzt bezahlen.",
             "description_waiting_for_manual_payment": "Diese Bestellung hat eine ausstehende Zahlung. Der Guthaben wird aktualisiert, wenn die Zahlung eingegangen ist.",
             "description_due_on_receipt": "Sie erhalten eine Rechnung, wenn die Zahlung fällig ist.",
-            "description_due_on_receipt_partially_paid": "Diese Bestellung wurde teilweise bezahlt. Sie haben ein verbleibendes Gleichgewicht. Sie erhalten eine Rechnung, wenn die Zahlung fällig ist."
-          }
+            "description_due_on_receipt_partially_paid": "Diese Bestellung wurde teilweise bezahlt. Sie haben ein verbleibendes Gleichgewicht. Sie erhalten eine Rechnung, wenn die Zahlung fällig ist.",
+            "description_due_on_fulfillment": "Die Zahlung ist fällig, sobald alle Artikel in dieser Reihenfolge erfüllt sind.",
+            "description_due_on_fulfillment_partially_paid": "Diese Bestellung wurde teilweise bezahlt. Sie haben ein verbleibendes Gleichgewicht. Die Zahlung ist fällig, sobald alle Artikel in dieser Reihenfolge erfüllt sind."
+          },
+          "draft": {
+            "description": "Zahlungsdetails werden festgelegt, wenn die Bestellung bestätigt wird.",
+            "title": "Zahlung noch nicht fällig",
+            "in_review": {
+              "description": "Zahlungsdetails werden festgelegt, wenn die Bestellung bestätigt wird.",
+              "title": "Zahlung noch nicht fällig"
+            },
+            "submitted": {
+              "description": "Zahlen Sie die Zahlung ein, um diese Bestellung zu bestätigen.",
+              "title": "Bezahlen, um zu bestätigen",
+              "deposit": {
+                "title": "Die Zahlung ist fällig",
+                "due_later": "Der Restbetrag ist auf {{translatedName}} Bedingungen und ist fällig {{dueDate}}.",
+                "due_on_fulfillment": "Der Restbetrag ist fällig, sobald alle Elemente in dieser Reihenfolge erfüllt sind.",
+                "due_on_receipt": "Sie erhalten eine Rechnung für den verbleibenden Restbetrag.",
+                "due_on_date": "Der Restbetrag ist fällig {{dueDate}}."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} wird fällig, wenn Ihre Bestellung bestätigt wird. Das Gleichgewicht wird eingeschaltet sein {{translatedName}} Bedingungen.",
+              "due_on_fulfillment": "{{depositAmount}} wird fällig, wenn Ihre Bestellung bestätigt wird. Der Restbetrag wird fällig, wenn die Bestellung erfüllt ist.",
+              "due_on_receipt": "{{depositAmount}} wird fällig, wenn Ihre Bestellung bestätigt wird. Der Restbetrag wird später fällig sein.",
+              "due_on_date": "{{depositAmount}} wird fällig, wenn Ihre Bestellung bestätigt wird. Der Restbetrag wird fällig sein {{dueDate}}."
+            }
+          },
+          "paid": {
+            "title": "Bezahlt",
+            "title_with_date": "Bezahlt {{date}}",
+            "description": "Ihre Bestellung ist voll bezahlt."
+          },
+          "refund": {
+            "title": "Erstattet",
+            "title_with_date": "Erstattet {{date}}",
+            "description_full_refund": "Sie haben eine vollständige Rückerstattung für diese Bestellung erhalten.",
+            "description_single_refund": "Sie haben eine teilweise Rückerstattung für diese Bestellung erhalten.",
+            "description_multiple_refunds": "Sie haben teilweise Rückerstattungen für diese Bestellung erhalten."
+          },
+          "canceled": {
+            "title": "Zahlung storniert",
+            "description": "Sie wurden nicht angeklagt."
+          },
+          "pay_now": "Jetzt bezahlen",
+          "pay_now_accessibility_label": "Zahlen Sie jetzt für die Bestellung {{orderName}}",
+          "title": "Zahlungsstatus"
+        },
+        "order_timeline": {
+          "expand_events_label": "Details anzeigen",
+          "expand_events_accessibility_label": "Entwurfsbestelldetails anzeigen",
+          "hide_events_label": "Details verbergen",
+          "hide_events_accessibility_label": "Entwurfsbestelldetails verbergen"
+        },
+        "subtitle": "Eingereicht {{date}}",
+        "title": "Befehl {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Diese Zahlungsmethode wird für zukünftige Einkäufe von diesem Standort nicht mehr verfügbar sein.",
+          "description_with_replacement": "Durch das Löschen dieser Zahlungsmethode wirkt sich die vorautorisierten Zahlungen für diesen Standort aus. Ersetzen Sie es durch eine alternative Zahlungsmethode, um weiterhin bevorstehende Bestellungen zu erhalten."
+        },
+        "payment_details": {
+          "order_label": "Befehl {{name}}",
+          "draft_label": "Entwurfsbestellung {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "PO -Nummer hinzufügen",
+        "add_modal_title": "PO -Nummer hinzufügen",
+        "cancel": "Stornieren",
+        "close_modal_accessibility_label": "PO -Nummer Modal schließen",
+        "discard": "Verwerfen",
+        "discard_changes_modal_title": "Änderungen abwerfen?",
+        "edit_accessibility_label": "PO -Nummer bearbeiten",
+        "edit_modal_title": "PO -Nummer bearbeiten",
+        "empty_state": "Keine PO -Nummer",
+        "modal_po_number_input_label": "PO -Nummer"
       }
     }
   }
