@@ -3318,7 +3318,65 @@
     "navigation_and_structure": {
       "account_menu": {
         "hide_accessibility_label": "Kontenmenü ausblenden",
-        "label": "Konto"
+        "label": "Konto",
+        "show_accessibility_label": "Kontomenü anzeigen",
+        "nav_accessibility_label": "Kontonavigation",
+        "open_menu_accessibility_label": "Offene Kontonavigation",
+        "close_menu_accessibility_label": "Kontonavigation schließen",
+        "loading_message": "Ladekonto -Navigation"
+      },
+      "action_menu_accessibility_label": "Weitere Aktionen",
+      "close_menu_accessibility_label": "Hauptnavigation schließen",
+      "contact_email_subject": "Kontakt von {{shopName}} Online -Shop",
+      "contact_link": "Kontaktinformationen",
+      "delete_confirmation": {
+        "cancel": "Stornieren",
+        "delete": "Löschen"
+      },
+      "dismiss_toast": "Zurückweisen",
+      "document_title": "{{sectionName}} - {{shopName}} - Konto",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "go_to_store_link": "Gehen Sie in den Laden",
+      "loading_message": "Laden",
+      "loading_policy_content_accessibility_label": "Inhalte für Richtlinien beladen",
+      "log_out_link": "Abmelden",
+      "logout_overlay_label": "Melden Sie sich an ...",
+      "nav_label_accessibility_label": "Hauptnavigation",
+      "navigation_accessibility_message": "Sie navigierten zu {{sectionName}}",
+      "open_menu_accessibility_label": "Hauptnavigation offen",
+      "orders_link_label": "Bestellungen",
+      "shop_logo_accessibility_label": "{{shopName}} Logo",
+      "subscriptions_link_label": "Abonnements",
+      "settings_link": "Einstellungen",
+      "country_switcher_toast_message": "Land wechselte zu {{countryName}}",
+      "switch_country": "Land wechseln",
+      "no_countries_found": "Keine Länder gefunden",
+      "location_switcher_toast_message": "Standort umgeschaltet auf {{locationName}}",
+      "switch_location": "Standortwechsel",
+      "no_locations_found": "Keine Standorte gefunden",
+      "try_new_search": "Probieren Sie eine neue Suche aus",
+      "view_details": "Details anzeigen",
+      "company_location": "Firmenstandort",
+      "search": "Suchen",
+      "skip_to_content": "Überspringen Sie zu Inhalten"
+    },
+    "announcement_bar": {
+      "expand_label": "Ankündigungsleiste erweitern",
+      "collapse_label": "Kollaps -Ankündigung Bar",
+      "close_label": "Schließende Ankündigungsleiste"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Ladekontoinformationen",
+      "loading_finished_accessibility_message": "Kontoinformationen haben geladen",
+      "profile_card": {
+        "cancel": "Stornieren",
+        "cancel_accessibility_label": "Bearbeitungsprofil abbrechen",
+        "edit": "Bearbeiten",
+        "edit_accessibility_label": "Profil bearbeiten",
+        "email_help_text": "E -Mail kann nicht bearbeitet werden",
+        "first_name": "Vorname",
+        "last_name": "Nachname",
+        "email": "E-Mail"
       }
     }
   }
