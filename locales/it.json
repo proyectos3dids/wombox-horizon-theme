@@ -1861,7 +1861,71 @@
         "call_issuer": "La tua carta è stata rifiutata. Utilizzare un metodo di pagamento diverso o contattare la banca per ulteriori informazioni.",
         "test_mode_live_card": "Questo negozio non può accettare ordini reali o pagamenti reali.",
         "transient_error": "C'è stato un problema a elaborare il pagamento. Prova a rinfrescare questa pagina o controlla la tua connessione Internet.",
-        "missing_shipping_address": "Il pagamento non potrebbe essere elaborato perché manca il tuo indirizzo di spedizione. Aggiungi un indirizzo di spedizione e riprova."
+        "missing_shipping_address": "Il pagamento non potrebbe essere elaborato perché manca il tuo indirizzo di spedizione. Aggiungi un indirizzo di spedizione e riprova.",
+        "invalid_shipping_address": "Il tuo pagamento non potrebbe essere elaborato perché non siamo riusciti a trovare il tuo indirizzo di spedizione. Controlla il tuo indirizzo di spedizione e riprova.",
+        "successful_offsite_with_gift_card_error": "C'è stato un problema per l'elaborazione del pagamento della tua carta regalo. Riprova o usa un metodo di pagamento diverso.",
+        "development_store_order_limit_reached": "Hai raggiunto il limite per gli ordini del negozio di sviluppo con questo processore di pagamento. Per effettuare un altro ordine, dovrai utilizzare un gateway di pagamento del test. Ulteriori informazioni %{development_store_order_testing_docs_link}.",
+        "development_store_with_order_limit": "Per effettuare un ordine di test, dovrai utilizzare un gateway di pagamento del test. Ulteriori informazioni %{development_store_order_testing_docs_link}.",
+        "development_store_order_testing_docs_link": "Testare gli ordini nei negozi di sviluppo",
+        "payment_above_threshold": "L'importo del pagamento è al di sopra del limite monetario per questa regione. Riduci il totale e riprova",
+        "risky": "C'è stato un problema che elabora il pagamento. Riprova o usa un metodo di pagamento diverso.",
+        "expired_buyer_action": "Il metodo di pagamento è scaduto. Per favore riprova.",
+        "name_mismatch": "Si prega di controllare i dettagli della tua carta. Il nome sulla tua carta e l'indirizzo di fatturazione non corrispondono.",
+        "shop_pay_wallet_not_available": "Shop Pay non è disponibile per questo checkout.",
+        "market_manager_blocks_wallet_payments": "Il metodo di pagamento non è supportato nel tuo paese.",
+        "paypal_over_capture": "Il totale dell'ordine è stato aggiornato. Pagare con {{walletName}} per completare il tuo ordine."
+      },
+      "shipping_errors": {
+        "shipping_method": "Le opzioni di spedizione sono cambiate per il tuo ordine. Si prega di rivedere la tua selezione.",
+        "shipping_method_not_available": "Il carrello è stato aggiornato e gli elementi aggiunti non possono essere spediti al tuo indirizzo. Rimuovi gli articoli per completare l'ordine.",
+        "shipping_method_not_available_generic": {
+          "one": "Il tuo ordine non può essere spedito all'indirizzo selezionato. Rivedi il tuo indirizzo per assicurarti che sia corretto e riprova o seleziona un indirizzo diverso.",
+          "other": "Alcuni articoli nel tuo carrello non possono essere spediti all'indirizzo che hai inserito. Rivedi il tuo indirizzo per assicurarti che sia corretto e riprova o seleziona un indirizzo diverso."
+        },
+        "shipping_method_not_available_due_to_unsatisfied_conditions": "Gli articoli nel carrello non soddisfano i requisiti di prezzo o peso per qualificarsi per la spedizione. Aggiorna il tuo carrello e riprova.",
+        "shipping_method_not_available_updated": {
+          "one": "L'articolo che hai aggiunto non è spedito nella tua posizione. Rimuovilo per controllare o contattare il negozio.",
+          "other": "Uno o più articoli che hai aggiunto non spedire nella tua posizione. Rimuovili per controllare o contattare il negozio."
+        },
+        "payment_method_not_supported": "Non puoi utilizzare questo metodo di pagamento per %{country}. Si prega di utilizzare un metodo di pagamento diverso per spedire in questo paese.",
+        "empty_state": "Inserisci il tuo indirizzo di spedizione per visualizzare i metodi di spedizione disponibili.",
+        "title": "Spedizione non disponibile",
+        "invalid_selected_address": "L'indirizzo di spedizione selezionato non è valido",
+        "invalid_selected_address_with_update_link": "L'indirizzo di spedizione selezionato non è valido. %{update_address_link} o selezionare un indirizzo diverso",
+        "unavailable_addresses_only_countries": "Il tuo ordine può essere spedito solo a {{countriesList}}. Aggiungi un nuovo indirizzo per continuare.",
+        "unavailable_selected_address": "Spedizione non disponibile per l'indirizzo selezionato",
+        "unavailable_selected_address_for_region": "La spedizione non è disponibile per {{region}}. Seleziona un indirizzo diverso per continuare"
+      },
+      "alternative_payment_method_banner": {
+        "express_checkout": "Checkout espresso",
+        "or": "O",
+        "or_pay_another_way": "O pagare in un altro modo",
+        "or_check_out_another_way": "O dai un'occhiata in un altro modo",
+        "or_pay_with_credit_card": "O pagare con la carta di credito",
+        "show_more_options": "Mostra più opzioni",
+        "hide_more_options": "Nascondi più opzioni"
+      },
+      "post_purchase": {
+        "page_title": "Post-acquisto",
+        "title": "Post-acquisto",
+        "escape_confirmation": "Hai pagato per il tuo ordine.",
+        "escape_action": "Visualizza la conferma dell'ordine ›",
+        "components": {
+          "close": "Vicino",
+          "expand": "Visualizza di più",
+          "processing": "Elaborazione ...",
+          "submit": "Invia"
+        }
+      },
+      "processing": {
+        "redirecting_page_title": "Reindirizzamento ...",
+        "redirecting_title": "Reindirizzamento ...",
+        "redirecting_notice": "Aspetta mentre ti reindirizziamo.",
+        "redirecting_to_bank": "Reindirizzamento a {{bank}}",
+        "complete_your_purchase_title": "Completa il tuo acquisto",
+        "continue_to_payment_gateway_notice": "Continua al pagamento per aggiungere le informazioni di pagamento.",
+        "continue_to_payment_gateway_button_label": "Continua al pagamento",
+        "complete_your_purchase_title_error": "Correggi le informazioni di pagamento"
       }
     }
   }
