@@ -299,7 +299,11 @@
   "shopify": {
     "checkout": {
       "contact": {
-        "email_rollup_accessibility_label": "Opciones de correo electrónico"
+        "email_rollup_accessibility_label": "Opciones de correo electrónico",
+        "phone_rollup_accessibility_label": "Opciones telefónicas"
+      },
+      "customer_account": {
+        "rollup_accessibility_label": "Opciones de cuenta"
       }
     }
   }
