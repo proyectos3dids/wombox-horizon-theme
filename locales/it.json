@@ -876,7 +876,127 @@
         "discount_has_been_removed": "Lo sconto è stato rimosso",
         "gift_card_has_been_applied": "La carta regalo è stata applicata",
         "gift_card_has_been_removed": "La carta regalo è stata rimossa",
-        "gift_card_subscriptions_notice": "Le carte regalo si applicheranno solo al tuo primo pagamento"
+        "gift_card_subscriptions_notice": "Le carte regalo si applicheranno solo al tuo primo pagamento",
+        "discount_already_applied": "È stato applicato uno sconto a questo ordine. Non puoi aggiungere un altro sconto.",
+        "cart_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Il codice di sconto non è valido per gli articoli nel carrello",
+        "discount_requires_customer_notice": "Inserisci le tue informazioni di spedizione per applicare il <strong style=\"text-transform:uppercase\">%{code}</strong> Codice sconto",
+        "customer_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Il codice sconto non è disponibile per te in questo momento",
+        "eligible_customer_missing_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Il codice di sconto richiede il cliente idoneo",
+        "shipping_information_does_not_meet_discount_requirements_notice": "<strong style=\"text-transform:uppercase\">%{code}</strong> Il codice sconto non è disponibile per il tuo indirizzo di spedizione",
+        "customer_already_used_once_per_customer_discount_notice": "IL <strong style=\"text-transform:uppercase\">%{code}</strong> Il codice di sconto è già stato utilizzato",
+        "subtotal_label": "Subtotale",
+        "subtotal_label_with_quantity": {
+          "one": "Subtotale · %{count} articolo",
+          "other": "Subtotale · %{count} elementi"
+        },
+        "shipping_label": "Spedizione",
+        "pickup_label": "Pickup in negozio",
+        "no_pickup_location": "Non ci sono posizioni di raccolta disponibili.",
+        "pickup_unavailable_banner_title": {
+          "one": "Nessun negozio disponibile con il tuo articolo",
+          "other": "Nessun negozio disponibile con i tuoi articoli"
+        },
+        "pickup_unavailable_banner_body": {
+          "ship_to_address": "Spedizione da affrontare",
+          "ship_to_address_instead_html": "%{link} Invece"
+        },
+        "tip_label": "Mancia",
+        "unconfirmed_label": "Non confermato",
+        "calculating_shipping": "Calcolo ...",
+        "calculating": "Calcolo ...",
+        "shipping_default_value": "Calcolato al passaggio successivo",
+        "shipping_discount_title": "Sconto di spedizione",
+        "shipping_pending_value": "—",
+        "shipping_pending_message": "Non ancora disponibile",
+        "shipping_policy_link": "Spese di spedizione",
+        "taxes_label": "Tasse",
+        "estimated_taxes_label": "Tasse stimate",
+        "information_estimated_taxes_label": "Tasse (stimate)",
+        "estimated_taxes_finalization_tooltip_content": "L'imposta finale e il totale saranno confermate via e -mail o testo dopo aver effettuato l'ordine.",
+        "order_total_label": "Totale ordine",
+        "price_before_discount_aria_text": "Prezzo originale",
+        "price_after_discount_aria_text": "Prezzo scontato",
+        "discount_code_aria_text": "Codice sconto",
+        "total_savings": "Risparmio totale",
+        "total_label": "Totale",
+        "total_due_label": "Totale dovuto",
+        "total_paid_label": "Totale pagato",
+        "total_price_label": "Prezzo totale",
+        "total_outstanding_label": "Importo da pagare",
+        "deposit_label": "Depositare",
+        "total_due_today_label": "Totale dovuto oggi",
+        "total_due_later_label": "Totale dovuto più tardi",
+        "partial_total_label": "Totale",
+        "free_total_label": "Gratuito",
+        "free_shipping_total_label": "Gratuito",
+        "paid_label": "Pagato",
+        "payment_due_label": "Pagamento dovuto",
+        "vat_label_html": "Tra cui %{amount} in tasse",
+        "duties_included_label": "Il totale include tasse e doveri. Nessun addebiti extra alla consegna.",
+        "discount_and_gift_card_savings_notice": "Dopo %{discount_amount} in sconti e %{gift_card_amount} nelle carte regalo",
+        "discount_savings_notice": "Dopo %{discount_amount} in sconti",
+        "gift_card_savings_notice": "Dopo %{gift_card_amount} nelle carte regalo",
+        "cost_table_title": "Riepilogo dei costi",
+        "cost_table_item_column_header": "Articolo",
+        "cost_table_value_column_header": "Valore",
+        "description_label": "Descrizione",
+        "price_label": "Prezzo",
+        "price_per_item": {
+          "accessibility_label": "%{price} per articolo",
+          "label": "%{price}/ea"
+        },
+        "quantity_label": "Quantità",
+        "product_change_label": "Modifica",
+        "product_image_label": "Immagine del prodotto",
+        "product_image_quantity_label": "Quantità",
+        "scroll_order_summary": "Scorri per altri articoli",
+        "expand_order_summary_short": "Spettacolo",
+        "collapse_order_summary_short": "Nascondere",
+        "expand_order_summary": "Mostra il riepilogo dell'ordine",
+        "collapse_order_summary": "Nascondere il riepilogo dell'ordine",
+        "original_price": "Prezzo originale",
+        "sale_price": "Prezzo di vendita",
+        "total_updated_label": "Prezzo totale aggiornato:",
+        "order_total_updated_label": "Totale aggiornato",
+        "total_already_paid_label": "Pagato",
+        "unit_price": {
+          "accessible_separator": "per",
+          "content_html": "%{price}%{accessible_separator}%{per_unit}",
+          "per_item": {
+            "single": "%{price} ogni",
+            "one": "%{price} per %{count} articolo",
+            "other": "%{price} per %{count} elementi"
+          },
+          "per_unit": {
+            "single": "%{price}/%{unit}",
+            "plural": "%{price}/%{count}%{unit}"
+          }
+        },
+        "gift_card_ending": "Carta regalo che termina con %{last_characters}",
+        "estimated_tax_label": "Imposta stimata",
+        "multiple_shipping_lines_label": "Totale di spedizione",
+        "recurring_subtotal_label": "Subtotale ricorrente",
+        "recurring_total_label": "Totale ricorrente",
+        "recurring_total_tooltip": "Non include spedizione, tasse, compiti o eventuali sconti applicabili.",
+        "confirmation_number_label": "Conferma #%{confirmation_number}",
+        "higher_value_discount_applied": "<strong style=\"text-transform:uppercase\">%{code}</strong> Non potrebbe essere usato con i tuoi sconti esistenti.",
+        "percent_off_shipping": "%{percent}% di sconto sulla spedizione",
+        "amount_off_shipping": "%{amount} Off Shipping",
+        "deferred_payment_info": {
+          "title": "Pagamento di %{amount_due} è dovuto %{due_at}",
+          "description_html": "Per domande sul tuo ordine, %{contact_us}.",
+          "paid_today": "Totale pagato oggi",
+          "paid_today_next": "Pagato oggi",
+          "due_on_fulfillment_title": "Pagamento di %{amount_due} è dovuto all'adempimento",
+          "due_on_receipt_title": "Pagamento di %{amount_due} è dovuto al ricevimento"
+        },
+        "deferred_balance_info": {
+          "title": "Equilibrio di {{amount_due}} è dovuto {{due_at}}",
+          "due_on_fulfillment_title": "Equilibrio di {{amount_due}} è dovuto all'adempimento"
+        },
+        "payment_terms_totals": {
+          "due_today": "Totale dovuto oggi"
+        }
       }
     }
   }
