@@ -2959,7 +2959,63 @@
     },
     "addresses": {
       "zip_code": "PLZ",
-      "postal_code": "Postleitzahl"
+      "postal_code": "Postleitzahl",
+      "postcode": "Postleitzahl",
+      "pincode": "Pincode",
+      "region": "Region",
+      "prefecture": "Präfektur",
+      "province": "Provinz",
+      "state": "Zustand",
+      "state_and_territory": "Staat/Territorium",
+      "county": "County",
+      "emirate": "Emirat",
+      "governorate": "Gouverneur",
+      "confirm": "Sind Sie sicher, dass Sie diese Adresse löschen möchten?"
+    },
+    "collections": {
+      "sorting": {
+        "manual": "Vorgestellt",
+        "best_selling": "Bestverkauf",
+        "az": "Alphabetisch, a-z",
+        "za": "Alphabetisch, Z-A",
+        "price_ascending": "Preis, niedrig bis hoch",
+        "price_descending": "Preis, hoch bis niedrig",
+        "date_ascending": "Datum, alt bis neu",
+        "date_descending": "Datum, neu zu alt"
+      }
+    },
+    "errors": {
+      "blank": "kann nicht leer sein",
+      "blocked_address": "Dieser Ort wird nicht unterstützt",
+      "credit_card_session_expired": "Die Autorisierung der Kreditkarten ist abgelaufen. Bitte geben Sie Ihre Zahlungsinformationen erneut ein. Ihre Karte wurde nicht berechnet.",
+      "empty": "kann nicht leer sein",
+      "invalid_email": "Muss eine gültige E -Mail -Adresse sein",
+      "discount_disabled": "Dieser Rabatt wurde deaktiviert",
+      "discount_expired": "Dieser Rabatt ist nicht mehr gültig",
+      "discount_limit_reached": "Dieser Rabatt hat seine Nutzungsgrenze erreicht",
+      "discount_not_found": "Es kann keinen gültigen Rabatt finden, der dem eingegebenen Code entspricht",
+      "customer_already_used_once_per_customer_discount_notice": "Dieser Rabatt hat seine Nutzungsgrenze erreicht",
+      "gift_card_already_applied": "Der Code wurde bereits an Ihre Kasse angewendet",
+      "gift_card_code_invalid": "Code ist ungültig",
+      "gift_card_currency_mismatch": "Ihre Geschenkkarte ist in %{gift_card_currency}. Kontaktieren Sie uns, um es neu aufzugeben %{checkout_currency}.",
+      "gift_card_depleted": "Auf dieser Geschenkkarte gibt es keine Mittel",
+      "gift_card_disabled": "Geschenkkarte ist deaktiviert",
+      "gift_card_expired": "Geschenkkarte ist abgelaufen",
+      "invalid": "ist ungültig",
+      "bad_domain": "enthält einen ungültigen Domänennamen",
+      "taken": "wurde bereits genommen",
+      "contains_html_tags": "HTML -Tags können keine HTML -Tags enthalten",
+      "too_short": "ist zu kurz (Minimum ist %{count} Zeichen)",
+      "too_long": "ist zu lang (maximal ist %{count} Zeichen)",
+      "password_mismatch": "Muss mit dem angegebenen Passwort übereinstimmen",
+      "contains_spaces": "beginnt oder endet mit Räumen.",
+      "email_domain_invalid": "Anbieter wird nicht unterstützt",
+      "invalid_for_country": "ist nicht gültig für %{country}",
+      "invalid_for_country_and_province": "ist nicht gültig für %{province} Und %{country}",
+      "invalid_province_in_country": "ist keine gültige Provinz in %{country}",
+      "invalid_state_in_country": "ist kein gültiger Zustand in %{country}",
+      "invalid_region_in_country": "ist keine gültige Region in %{country}",
+      "less_than_or_equal_to": "muss geringer sein als oder gleich %{count}"
     }
   }
 }
