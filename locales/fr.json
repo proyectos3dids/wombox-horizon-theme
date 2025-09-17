@@ -3921,7 +3921,67 @@
       "loading_edit_form_accessibility_message": "Chargement du formulaire d'adresse d'édition",
       "loading_form_accessibility_message": "Formulaire d'adresse de chargement",
       "loading_finished_accessibility_message": "Le formulaire d'adresse a chargé",
-      "save": "Sauvegarder"
+      "save": "Sauvegarder",
+      "save_accessibility_label": "ARRESSION SAVE {{address}}",
+      "section_title_accessibility_label": "Ajouter l'adresse",
+      "update_success_notification": "Adresse mise à jour"
+    },
+    "B2B": {
+      "account_information": {
+        "company_card_name_label": "Nom de l'entreprise",
+        "company_card_section_accessibility_label": "Entreprise"
+      },
+      "locations": {
+        "contact_email": "E-mail",
+        "contact_list_title": "Personnes",
+        "contact_name": "Nom",
+        "contact_permissions": "Autorisation",
+        "contact_phone_number": "Numéro de téléphone",
+        "location_picker_label": "Nom de lieu",
+        "location_picker_accessibility_label": "Nom de l'emplacement: {{locationName}}",
+        "net_payment_terms_description": "{{name}}: paiements dus à l'intérieur {{numberOfDays}} jours",
+        "deposit_percentage": "{{percentage}} dépôt",
+        "own_role_contact_name": "Toi",
+        "pagination": {
+          "load_more": "Chargez plus",
+          "load_more_accessibility_label": "Chargez plus d'emplacements"
+        },
+        "payment_details_title": "Détails de paiement",
+        "payment_terms": "Conditions de paiement",
+        "permissions_label": "Vos autorisations",
+        "permissions_title": "Autorisation",
+        "section_title": "Emplacement",
+        "shipping_address_required": "Ajoutez une adresse d'expédition à cet emplacement pour commencer à passer des commandes.",
+        "staff_and_permissions_title": "Personnel et autorisation",
+        "tax_details_title": "Coordonnées fiscales",
+        "tax_id": "Carte d'identité d'impôt",
+        "tax_exemptions": "Exonérations fiscales",
+        "multiple_tax_exemptions": "{{taxExemptionsCount}} plus",
+        "multiple_tax_exemptions_and": "et",
+        "tax_exemptions_modal_close": "Fermer",
+        "taxes_none": "Aucun",
+        "tax_exemption_not_applicable": "N / A",
+        "tax_exemptions_modal_button_accessibility_label": "Afficher toutes les exonérations fiscales"
+      },
+      "location_selection": {
+        "continue_to_store": "Continuer à stocker",
+        "description": "Si vous avez déjà des articles dans votre panier, l'évolution des emplacements peut affecter les prix et les quantités des paniers.",
+        "description_switch_later": "Vous pouvez toujours changer plus tard",
+        "list_accessibility_label": "Liste des emplacements",
+        "list_item_accessibility_label": "{{name}}: {{address}}",
+        "list_item_without_address_accessibility_label": "{{name}}: Aucune adresse",
+        "list_loading_accessibility_message": "Ligne de chargement des emplacements",
+        "list_loading_address_accessibility_message": "Adresse de chargement pour {{locationName}}",
+        "list_loading_finished_accessibility_message": "La liste des emplacements a chargé",
+        "loading_store_accessibility_message": "Aller à stocker",
+        "no_location_title": "Commandes personnelles uniquement",
+        "no_location_description": "Vous n'avez plus la permission de passer des commandes pour {{company}}. Vous pouvez toujours passer des commandes personnelles.",
+        "no_locations_found": "Aucun emplacement trouvé",
+        "search": "Emplacements de recherche",
+        "search_location_title": "Sélectionnez un emplacement",
+        "selection_cancel_button": "Annuler",
+        "selection_confirmation_button": "Choisir l'emplacement"
+      }
     }
   }
 }
