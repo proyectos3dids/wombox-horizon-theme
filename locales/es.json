@@ -319,5 +319,14 @@
         }
       }
     }
+  },
+  "customer_accounts": {
+    "payment_methods": {
+      "replacement_payment_method_title": "Método de pago de reemplazo",
+      "bank_account": {
+        "loading_accessibility_message": "El botón de la cuenta bancaria se está cargando",
+        "iframe_title_accessibility_label": "Configuración de la cuenta bancaria"
+      }
+    }
   }
 }
