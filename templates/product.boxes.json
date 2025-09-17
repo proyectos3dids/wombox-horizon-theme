@@ -932,7 +932,7 @@
             "padding-inline-end": 0
           },
           "blocks": {
-            "ai_gen_block_00a4e89_wcfAat": {
+            "ai_gen_block_00a4e89_kYUbAn": {
               "type": "ai_gen_block_00a4e89",
               "settings": {
                 "heading": "SUBSCRIBE TO OUR NEWSLETTER",
@@ -942,7 +942,7 @@
                 "success_message": "Thank you for subscribing to our newsletter!",
                 "show_privacy_checkbox": true,
                 "privacy_text": "I've read and accept the <a href=\"/policies/privacy-policy\">Privacy Policy</a>",
-                "heading_font_style": "h3",
+                "heading_font_style": "h4",
                 "heading_font_weight": "600",
                 "heading_line_height": 1,
                 "description_font_style": "paragraph",
@@ -964,9 +964,9 @@
                 "input_text_color": "#000000cf",
                 "input_border_color": "#d4a697",
                 "input_focus_border_color": "#c67461",
-                "button_background_color": "#c67461",
+                "button_background_color": "#d4a697",
                 "button_text_color": "#ffffff",
-                "button_hover_background_color": "#d4a697",
+                "button_hover_background_color": "#333333",
                 "checkbox_color": "#c67461",
                 "link_color": "#c67461",
                 "link_hover_color": "#000000cf",
@@ -982,7 +982,7 @@
             }
           },
           "block_order": [
-            "ai_gen_block_00a4e89_wcfAat"
+            "ai_gen_block_00a4e89_kYUbAn"
           ]
         }
       },
