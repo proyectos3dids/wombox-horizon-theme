@@ -1695,7 +1695,71 @@
         "payment_method": "Mode de paiement",
         "payment_method_rollup_accessibility_label": "Options de méthode de paiement",
         "expired_payment_method": "Le mode de paiement sélectionné a expiré",
-        "payment_method_update_failed": "La mise à jour du mode de paiement a échoué."
+        "payment_method_update_failed": "La mise à jour du mode de paiement a échoué.",
+        "payment_method_incompatible_with_payment_terms": "Le mode de paiement est incompatible avec les conditions de paiement.",
+        "proposed_gateway_unavailable": "La passerelle de paiement proposée n'est pas disponible",
+        "pay_in_installments_split_pay_short": "4 paiements de %{amount}",
+        "gift_cards_unavailable": "Votre carte-cadeau ne peut plus être appliquée à cette commande et a été supprimée",
+        "payment_flexibility_terms_id_mismatch": "Paiement Flexibilité Conditions d'identité",
+        "payment_option": {
+          "accessibility_label": "Choisissez une option de paiement"
+        },
+        "bank_account_type": {
+          "checking": "Vérification",
+          "savings": "Économies"
+        },
+        "bank_account_choose": "Choisissez un compte pour compléter en toute sécurité votre achat",
+        "bank_account_connect_another": "Connectez un autre compte bancaire",
+        "bank_account_connect": "Connecter le compte bancaire",
+        "bank_account_missing": "Le compte bancaire doit être connecté"
+      },
+      "billing": {
+        "billing_address_title": "Facturer à",
+        "billing_address_rollup_accessibility_label": "Facturer les options",
+        "same_as_shipping": "Identique à l'adresse d'expédition",
+        "add_address": "Utilisez une adresse différente",
+        "edit": "Modifier",
+        "delete": "Supprimer",
+        "address_more": "Plus d'actions pour cette adresse",
+        "address_edit": "Modifier l'adresse",
+        "address_delete": "Supprimer l'adresse",
+        "address_confirm": "Êtes-vous sûr de vouloir supprimer cette adresse de votre compte?",
+        "address_form": {
+          "add_address": "Ajouter l'adresse",
+          "save": "Sauvegarder",
+          "cancel": "Annuler"
+        }
+      },
+      "company_location": {
+        "location_title": "Emplacement de l'entreprise",
+        "location_rollup_accessibility_label": "Options de localisation de l'entreprise"
+      },
+      "payment_summary": {
+        "gift_card_current_balance_notice": "Solde actuel %{amount}",
+        "credit_card_expires_on_notice": "Expire %{month}/%{year}",
+        "express_payment_gateway_label": "Exprimer",
+        "manual_payment_gateway_label": "Manuel",
+        "billing_address_title": "Adresse de facturation",
+        "free_label": "Gratuit"
+      },
+      "field_errors": {
+        "handle_phone_invalid": "Entrez un numéro de téléphone valide",
+        "handle_email_invalid": "Entrez un e-mail valide",
+        "email_invalid": "Entrez un e-mail valide",
+        "email_or_phone_blank": "Entrez un e-mail ou un numéro de téléphone",
+        "email_or_phone_invalid": "Entrez un e-mail valide ou un numéro de téléphone portable",
+        "address_first_name_blank": "Entrez un prénom",
+        "address_first_name_too_long": "Le prénom est trop long (maximum est de 255 caractères)",
+        "address_first_name_contains_emojis": "Le prénom ne peut pas contenir les emojis",
+        "address_first_name_contains_html_tags": "Le prénom ne peut pas contenir des balises HTML.",
+        "address_first_name_contains_url": "Le prénom ne peut pas contenir une URL",
+        "address_first_name_contains_mathematical_symbols": "Le prénom ne peut pas contenir des symboles mathématiques",
+        "address_last_name_blank": "Entrez un nom de famille",
+        "address_last_name_too_long": "Le nom de famille est trop long (maximum est de 255 caractères)",
+        "address_last_name_contains_emojis": "Le nom de famille ne peut pas contenir les emojis",
+        "address_last_name_contains_html_tags": "Le nom de famille ne peut pas contenir des balises HTML.",
+        "address_last_name_contains_url": "Le nom de famille ne peut pas contenir une URL",
+        "address_last_name_contains_mathematical_symbols": "Le nom de famille ne peut pas contenir de symboles mathématiques"
       }
     }
   }
