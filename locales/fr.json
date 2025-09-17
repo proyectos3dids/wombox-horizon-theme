@@ -4050,9 +4050,85 @@
             "description_authorized": "Votre mode de paiement sera facturé à la date d'échéance, ou vous pouvez payer maintenant.",
             "description_waiting_for_manual_payment": "Cette commande a un paiement en attente. Le solde sera mis à jour lorsque le paiement sera reçu.",
             "description_due_on_receipt": "Vous recevrez une facture lorsque le paiement sera dû.",
-            "description_due_on_receipt_partially_paid": "Cette commande a été partiellement payée. Vous avez un équilibre restant. Vous recevrez une facture lorsque le paiement sera dû."
-          }
+            "description_due_on_receipt_partially_paid": "Cette commande a été partiellement payée. Vous avez un équilibre restant. Vous recevrez une facture lorsque le paiement sera dû.",
+            "description_due_on_fulfillment": "Le paiement est dû une fois que tous les articles de cette commande sont remplis.",
+            "description_due_on_fulfillment_partially_paid": "Cette commande a été partiellement payée. Vous avez un équilibre restant. Le paiement est dû une fois que tous les articles de cette commande sont remplis."
+          },
+          "draft": {
+            "description": "Les détails du paiement sont décidés lorsque la commande est confirmée.",
+            "title": "Paiement non encore dû",
+            "in_review": {
+              "description": "Les détails du paiement sont décidés lorsque la commande est confirmée.",
+              "title": "Paiement non encore dû"
+            },
+            "submitted": {
+              "description": "Soumettre le paiement pour confirmer cette commande.",
+              "title": "Payer pour confirmer",
+              "deposit": {
+                "title": "Le paiement est dû",
+                "due_later": "L'équilibre est sur {{translatedName}} termes et est dû sur {{dueDate}}.",
+                "due_on_fulfillment": "Le solde est dû une fois que tous les éléments de cet ordre sont remplis.",
+                "due_on_receipt": "Vous recevrez une facture pour le solde restant.",
+                "due_on_date": "Le solde est dû {{dueDate}}."
+              }
+            },
+            "deposit": {
+              "due_later": "{{depositAmount}} sera dû lorsque votre commande sera confirmée. Le solde sera sur {{translatedName}} termes.",
+              "due_on_fulfillment": "{{depositAmount}} sera dû lorsque votre commande sera confirmée. Le solde sera dû lorsque la commande sera remplie.",
+              "due_on_receipt": "{{depositAmount}} sera dû lorsque votre commande sera confirmée. Le solde sera dû plus tard.",
+              "due_on_date": "{{depositAmount}} sera dû lorsque votre commande sera confirmée. Le solde sera dû {{dueDate}}."
+            }
+          },
+          "paid": {
+            "title": "Payé",
+            "title_with_date": "Payé {{date}}",
+            "description": "Votre commande est entièrement payée."
+          },
+          "refund": {
+            "title": "Remboursé",
+            "title_with_date": "Remboursé {{date}}",
+            "description_full_refund": "Vous avez reçu un remboursement complet pour cette commande.",
+            "description_single_refund": "Vous avez reçu un remboursement partiel pour cette commande.",
+            "description_multiple_refunds": "Vous avez reçu des remboursements partiels pour cette commande."
+          },
+          "canceled": {
+            "title": "Paiement annulé",
+            "description": "Vous n'étiez pas inculpé."
+          },
+          "pay_now": "Payer maintenant",
+          "pay_now_accessibility_label": "Payer maintenant pour la commande {{orderName}}",
+          "title": "Statut de paiement"
+        },
+        "order_timeline": {
+          "expand_events_label": "Montrer les détails",
+          "expand_events_accessibility_label": "Afficher le projet de détails de commande",
+          "hide_events_label": "Masquer les détails",
+          "hide_events_accessibility_label": "Masquer le projet de détails de commande"
+        },
+        "subtitle": "Soumis {{date}}",
+        "title": "Commande {{name}}"
+      },
+      "payment_methods": {
+        "payment_delete": {
+          "description_without_replacement": "Ce mode de paiement ne sera plus disponible pour les achats futurs de cet emplacement.",
+          "description_with_replacement": "La suppression de ce mode de paiement affectera les paiements préautorisés pour cet emplacement. Remplacez-le par un autre mode de paiement pour continuer à recevoir des commandes à venir."
+        },
+        "payment_details": {
+          "order_label": "Commande {{name}}",
+          "draft_label": "Projet de commande {{name}}"
         }
+      },
+      "purchase_order_number": {
+        "add_accessibility_label": "Ajouter le numéro PO",
+        "add_modal_title": "Ajouter le numéro PO",
+        "cancel": "Annuler",
+        "close_modal_accessibility_label": "Fermer le numéro de PO modal",
+        "discard": "Jeter",
+        "discard_changes_modal_title": "Jeter les changements?",
+        "edit_accessibility_label": "Modifier le numéro PO",
+        "edit_modal_title": "Modifier le numéro PO",
+        "empty_state": "Pas de numéro de PO",
+        "modal_po_number_input_label": "Numéro de commande"
       }
     }
   }
