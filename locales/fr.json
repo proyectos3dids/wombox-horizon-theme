@@ -1555,7 +1555,147 @@
           "manage_label": "Gérer le crédit en magasin",
           "buying_gift_card": "Vous ne pouvez pas utiliser le crédit en magasin pour acheter une carte-cadeau",
           "no_fixed_selling_plans": "Vous ne pouvez pas utiliser le crédit en magasin avec des options d'achat différé"
-        }
+        },
+        "clear": "Clair",
+        "billing_must_match_shipping_notice": "L'adresse de facturation de votre mode de paiement doit correspondre à l'adresse d'expédition.",
+        "same_billing_address_checkbox_label": "Utiliser l'adresse de livraison comme adresse de facturation",
+        "location_billing_address_label": "Adresse de facturation de l'emplacement",
+        "fact_billing_address_label": "Adresse de facturation",
+        "location_shipping_address_label": "Adresse d'expédition de l'emplacement",
+        "use_order_billing_address_label": "Utiliser l'adresse de facturation de la commande",
+        "use_location_billing_address_label": "Utiliser l'adresse de facturation de l'emplacement",
+        "use_location_shipping_address_label": "Utiliser l'adresse d'expédition de l'emplacement",
+        "no_working_method_error": "Ce magasin ne peut pas accepter les paiements pour le moment. Actualiser cette page ou revenir plus tard.",
+        "brand_not_available": "Ce magasin n'accepte pas {{brand}}. Veuillez utiliser une autre carte pour payer.",
+        "shipping_rate_updated": "Les méthodes d'expédition disponibles ont été mises à jour. Confirmez votre choix avant de vérifier.",
+        "billing_address_invalid_phone": "Mettez à jour le numéro de téléphone dans votre adresse de facturation pour {{label}} {{last_digits}} continuer.",
+        "billing_address_invalid_phone_no_card": "Mettez à jour le numéro de téléphone dans votre adresse de facturation pour continuer.",
+        "preview_not_available": {
+          "title": "Aperçu non disponible",
+          "content": "Ne vous inquiétez pas, ce paiement express fonctionne pour vos clients.",
+          "button": "D'accord"
+        },
+        "card_fields": {
+          "errors": {
+            "required": {
+              "issue_date": "Entrez une date d'émission valide",
+              "issue_number": "Entrez un numéro de problème valide"
+            },
+            "invalid": {
+              "verification_value": "Entrez un CVV valide ou un code de sécurité"
+            }
+          }
+        },
+        "simulated_checkout": "Aperçu à venir bientôt",
+        "simulated_express_checkout": "Les portefeuilles ne sont pas disponibles dans l'aperçu de l'éditeur en raison de votre région ou de votre navigateur",
+        "vaulting_agreement_label": "Économisez mes informations de paiement avec %{company} Pour un paiement plus rapide.",
+        "business_customer_vaulting_payment_label": "Enregistrez cette carte à la caisse et autorisez %{company} pour le facturer pour les achats futurs pour cet emplacement. Tous les contacts attribués à cet emplacement peuvent utiliser la carte.",
+        "purchase_options_and_vaulting_agreement_label": "Un ou plusieurs articles dans votre panier sont un achat différé ou d'abonnement. En poursuivant votre paiement, vous acceptez que votre mode de paiement sera automatiquement facturé au prix et à la fréquence indiqués sur cette page jusqu'à la fin ou à vous annuler. Toutes les annulations sont soumises à %{cancellation_policy_label}.",
+        "purchase_options_cancellation_policy_label": "politique d'annulation",
+        "use_different_credit_card_label": "Utilisez une carte différente",
+        "saved_credit_card": "Votre carte de crédit enregistrée",
+        "saved_credit_card_info": "Quatre derniers chiffres",
+        "saved_credit_card_cvv_verification": "À des fins de vérification, veuillez saisir le code de sécurité de votre carte.",
+        "saved_credit_card_actions": {
+          "edit": "Modifier",
+          "delete": "Supprimer"
+        },
+        "saved_credit_cards_modal": {
+          "view_all_label": "Afficher toutes les cartes enregistrées",
+          "done": "Fait",
+          "cancel": "Annuler"
+        },
+        "add_credit_card_modal": {
+          "title": "Ajouter une carte",
+          "save": "Sauvegarder",
+          "cancel": "Annuler"
+        },
+        "delete_credit_card_modal": {
+          "title": "Supprimer la carte",
+          "confirmation": "Êtes-vous sûr de vouloir supprimer le {{brandName}} se terminer dans {{lastDigits}}?",
+          "cancel": "Annuler",
+          "delete": "Supprimer"
+        },
+        "edit_credit_card_modal": {
+          "title": "Modifier la carte",
+          "done": "Fait",
+          "cancel": "Annuler",
+          "description": "Vous ne pouvez modifier que l'adresse de facturation de votre carte.",
+          "fields": {
+            "default": "Définir par défaut",
+            "card_number": "Numéro de carte",
+            "expiry": "Date d'expiration",
+            "security_code": "Code de sécurité",
+            "name": "Nom sur la carte",
+            "billing": "Facturer à"
+          }
+        },
+        "expired_cards_info": {
+          "one": "Il y a %{count} Carte expirée, que vous pouvez afficher et modifier dans votre compte.",
+          "other": "Il y a %{count} Cartes expirées, que vous pouvez afficher et modifier dans votre compte."
+        },
+        "local_payment_method_receiver_notice": "Après avoir passé votre commande, vous recevrez des détails de paiement. Effectuer le paiement à un guichet automatique ou en ligne {{dueDays}} jours.",
+        "order_edit_banner_title": "Paiement de {{amount_owed}} est nécessaire",
+        "order_edit_banner_subtitle": "Votre commande {{order_number}} a été mis à jour. Passez en revue ces modifications, puis payez pour confirmer votre commande.",
+        "order_edit_banner_items_added": {
+          "one": "Ajouté",
+          "other": "Ajouté %{count}"
+        },
+        "order_edit_banner_items_removed": {
+          "in_full": "Supprimé",
+          "with_quantities": "Supprimé {{delta}} de {{quantity}}"
+        },
+        "order_edit_banner_items_returned": {
+          "in_full": "Retourné {{quantity}}",
+          "with_quantities": "Retourné {{delta}} de {{quantity}}"
+        },
+        "order_edit_banner_items_return_line_item_removed": {
+          "in_full": "Supprimé du retour",
+          "with_quantities": "Supprimé {{delta}} De retour"
+        },
+        "order_edit_banner_single_item_added": "Ajouté",
+        "order_edit_banner_multiple_items_added": "Ajouté {{amount}}",
+        "order_edit_banner_single_item_removed": "Supprimé",
+        "order_edit_banner_multiple_items_removed": "Supprimé {{amount}}",
+        "order_edit_banner_single_item_returned": "Retourné",
+        "order_edit_banner_multiple_items_returned": "Retourné {{amount}}",
+        "order_edit_banner_single_item_return_line_item_removed": "Supprimé du retour",
+        "order_edit_banner_multiple_items_return_line_item_removed": "Supprimé {{amount}} De retour",
+        "order_edit_banner_updated_order_label": "Commande mise à jour",
+        "gift_card_wrapper": {
+          "heading": "Carte-cadeau",
+          "apply_gift_card_label": "Appliquer une carte-cadeau",
+          "apply_another_gift_card_label": "Appliquer une autre carte-cadeau",
+          "gift_card_label": "Carte-cadeau %{identifier}",
+          "payment_tag": "Carte-cadeau",
+          "add_label": "Ajouter une carte-cadeau",
+          "manage_label": "Gérer les cartes-cadeaux"
+        },
+        "gift_card_store_credit": {
+          "add_label": "Ajouter une carte-cadeau ou un crédit de magasin",
+          "manage_label": "Gérer les cartes-cadeaux ou le crédit de magasin"
+        },
+        "gift_card_checkbox_label": "Appliquer une carte-cadeau",
+        "custom_onsite_payment_method_modal": {
+          "title": "Confirmation de paiement sur place personnalisée"
+        },
+        "markets_pro_disclaimer_label": "En cliquant ci-dessous et en terminant votre commande, vous acceptez d'acheter vos articles auprès de Global-E en tant que marchand de dossiers pour cette transaction, sur Global-E's %{markets_pro_terms} et %{privacy_policy}. Global-E est un fournisseur de services de réalisation internationale pour %{shop_name}.",
+        "markets_pro_disclaimer_terms_and_conditions": "Termes et conditions",
+        "markets_pro_disclaimer_privacy_policy": "politique de confidentialité",
+        "markets_pro_disclaimer_terms_and_conditions_title": "Marchand des termes et conditions records",
+        "markets_pro_disclaimer_privacy_policy_title": "Marchand de politique de confidentialité enregistrée",
+        "purchase_order_number": {
+          "title": "Numéro de commande",
+          "label": "Numéro de PO (facultatif)"
+        },
+        "alternative_payment_currency_total_notice": "Remarque: vous serez facturé %{amount_due}.",
+        "alternative_payment_currency_total_manual_payment_notice": "Remarque: le total converti est %{amount_due}.",
+        "waiting_on_taxes_message": "Si vos taxes ne calculent pas dans les prochaines secondes, actualisez la page.",
+        "waiting_on_taxes_notice": "Calcul des taxes",
+        "payment_method": "Mode de paiement",
+        "payment_method_rollup_accessibility_label": "Options de méthode de paiement",
+        "expired_payment_method": "Le mode de paiement sélectionné a expiré",
+        "payment_method_update_failed": "La mise à jour du mode de paiement a échoué."
       }
     }
   }
