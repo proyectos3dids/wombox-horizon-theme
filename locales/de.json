@@ -14,17 +14,17 @@
     "email_signup": {
       "label": "E-Mail",
       "placeholder": "E-Mail-Adresse",
-      "success": "Danke für deine Anmeldung!"
+      "success": "Danke fürs Abonnieren!"
     },
-    "filter": "Filtern",
+    "filter": "Filter",
     "payment_methods": "Zahlungsmethoden",
     "contact_form": {
       "name": "Name",
-      "email": "E-Mail-Adresse",
-      "phone": "Telefonnummer",
+      "email": "E-Mail",
+      "phone": "Telefon",
       "comment": "Kommentar",
-      "post_success": "Danke, dass du uns kontaktiert hast. Wir werden uns so schnell wie möglich bei dir melden.",
-      "error_heading": "Bitte passe Folgendes an:"
+      "post_success": "Danke, dass du uns kontaktiert hast. Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      "error_heading": "Bitte passen Sie Folgendes an:"
     }
   },
   "accessibility": {
@@ -74,42 +74,42 @@
   },
   "actions": {
     "add_to_cart": "In den Warenkorb legen",
-    "clear_all": "Alles löschen",
+    "clear_all": "Alle klar",
     "remove": "Entfernen",
-    "view_in_your_space": "In deinem Bereich anzeigen",
-    "show_filters": "Filtern",
-    "clear": "Löschen",
+    "view_in_your_space": "Blick auf Ihren Raum",
+    "show_filters": "Filter",
+    "clear": "Klar",
     "continue_shopping": "Weiter einkaufen",
-    "log_in_html": "Hast du ein Konto? <a href=\"{{ link }}\">Logge dich ein</a>, damit es beim Checkout schneller geht.",
+    "log_in_html": "Einen Konto haben? <a href=\"{{ link }}\">Einloggen</a> schneller aussehen.",
     "see_items": {
-      "one": "{{ count }} Artikel anzeigen",
-      "other": "{{ count }} Artikel anzeigen"
+      "one": "Sehen {{ count }} Artikel",
+      "other": "Sehen {{ count }} Artikel"
     },
     "view_all": "Alle anzeigen",
     "add": "Hinzufügen",
-    "choose": "Auswählen",
+    "choose": "Wählen",
     "added": "Hinzugefügt",
-    "show_less": "Weniger anzeigen",
-    "show_more": "Mehr anzeigen",
+    "show_less": "Weniger zeigen",
+    "show_more": "Zeigen Sie mehr",
     "close": "Schließen",
     "more": "Mehr",
     "reset": "Zurücksetzen",
-    "zoom": "Zoomen",
-    "close_dialog": "Dialogfeld schließen",
+    "zoom": "Zoom",
+    "close_dialog": "Dialog schließen",
     "back": "Zurück",
-    "log_in": "Anmelden",
-    "log_out": "Abmelden",
-    "remove_discount": "Rabatt {{ code }} entfernen",
-    "enter_using_password": "Mit Passwort anmelden",
-    "submit": "Senden",
-    "enter_password": "Passwort eingeben",
-    "view_store_information": "Shop-Informationen anzeigen",
+    "log_in": "anmelden",
+    "log_out": "Melden Sie sich aus",
+    "remove_discount": "Rabatt entfernen {{ code }}",
+    "enter_using_password": "Geben Sie das Passwort ein",
+    "submit": "Einreichen",
+    "enter_password": "Kennwort eingeben",
+    "view_store_information": "Storeinformationen anzeigen",
     "apply": "Anwenden",
-    "sign_in_options": "Andere Anmeldeoptionen",
-    "sign_up": "Registrieren",
-    "open_image_in_full_screen": "Bild im Vollbildmodus öffnen",
+    "sign_in_options": "Andere Anzeichen für Optionen",
+    "sign_up": "Melden Sie sich an",
+    "open_image_in_full_screen": "Öffnen Sie das Bild im Vollbildmodus",
     "sort": "Sortieren",
-    "show_all_options": "Alle Optionen anzeigen"
+    "show_all_options": "Zeigen Sie alle Optionen"
   },
   "content": {
     "reviews": "Reviews",
@@ -274,8 +274,8 @@
     "article": {
       "comment_author_separator": "•",
       "comments_heading": {
-        "one": "{{ count }} Kommentar",
-        "other": "{{ count }} Kommentare"
+        "one": "{{ count }} Kommentar",
+        "other": "{{ count }} Kommentare"
       }
     },
     "comment_form": {
