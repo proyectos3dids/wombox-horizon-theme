@@ -4128,8 +4128,100 @@
         "edit_accessibility_label": "Modifier le numéro PO",
         "edit_modal_title": "Modifier le numéro PO",
         "empty_state": "Pas de numéro de PO",
-        "modal_po_number_input_label": "Numéro de commande"
+        "modal_po_number_input_label": "Numéro de commande",
+        "modal_po_number_input_max_length_error": "Les numéros de PO ont un maximum de {{maxLength}} personnages.",
+        "save": "Sauvegarder",
+        "title": "Po #{{poNumber}}"
       }
+    },
+    "errors": {
+      "address_deletion_error": {
+        "description": "Il y avait un problème à supprimer cette adresse. Réessayez ou actualisez la page."
+      },
+      "addresses_loading_issue": {
+        "description": "Erreur de connexion. Vérifiez votre connexion Internet et réessayez."
+      },
+      "banner_title": {
+        "one": "Il y a {{count}} erreur",
+        "other": "Il y a {{count}} erreurs"
+      },
+      "failed_address_creation": {
+        "description": "Il y avait un problème à créer votre adresse. Essayez de rafraîchir cette page ou consultez votre connexion Internet."
+      },
+      "failed_address_update": {
+        "description": "Il y avait un problème à mettre à jour votre adresse. Essayez de rafraîchir cette page ou consultez votre connexion Internet."
+      },
+      "load_orders_error": {
+        "title": "Impossible de charger les commandes",
+        "description": "Réessayer ou revenir plus tard.",
+        "retry_button": "Réessayer"
+      },
+      "load_paypal_error": {
+        "description": "Il y a un problème de chargement PayPal. Veuillez réessayer."
+      },
+      "logout_everywhere": {
+        "description": "Quelque chose s'est mal passé pendant la déconnexion. Veuillez réessayer."
+      },
+      "no_access_to_locations": {
+        "description": "Vous n'avez accès à aucun endroit"
+      },
+      "not_found": {
+        "description": "Vérifiez l'URL ou réessayez dans quelques minutes.",
+        "title": "Il y a un problème à charger cette page"
+      },
+      "order_not_found": {
+        "description": "Cette commande n'existe pas ou vous n'avez pas la permission de le voir.",
+        "title": "Ordre non trouvé"
+      },
+      "profile_update_error": {
+        "description": "Il y avait un problème à mettre à jour votre profil. Essayez de rafraîchir cette page ou consultez votre connexion Internet."
+      },
+      "profile_name_update_error": {
+        "description": "Il y avait un problème à mettre à jour votre nom. Essayez de rafraîchir cette page ou consultez votre connexion Internet."
+      },
+      "retry_action_label": "Réessayer",
+      "resend_link": {
+        "too_many_requests": "Trop de demandes. Réessayez plus tard.",
+        "generic": "Demande d'échec"
+      },
+      "load_extension_error": {
+        "title": "Erreur",
+        "description": "Actualisez cette page ou réessayez dans quelques minutes.",
+        "refresh_button": "Page de rafraîchissement"
+      }
+    },
+    "throttle": {
+      "too_many_attempts": {
+        "message": "Trop de tentatives",
+        "description": "Veuillez réessayer dans quelques minutes"
+      }
+    },
+    "payment_methods": {
+      "replacement_payment_method_title": "Méthode de paiement de remplacement",
+      "title": "Méthodes de paiement",
+      "add_payment_method_button": "Ajouter le mode de paiement",
+      "add_payment_method_dropdown": {
+        "credit_or_debit_card": "Carte de crédit ou de débit",
+        "bank_account": "Compte bancaire"
+      },
+      "bank_account": {
+        "loading_accessibility_message": "Le bouton du compte bancaire charge",
+        "iframe_title_accessibility_label": "Configuration du compte bancaire"
+      },
+      "add_payment_method_banner": "Ajouter un mode de paiement pour un paiement plus rapide ou des services pré-autorisés",
+      "no_payment_methods_banner": "Aucune méthode de paiement ajoutée",
+      "edit_payment_method_button_accessibility_label": "Modifier {{paymentMethodName}} se terminer dans {{lastDigits}}",
+      "edit_payment_method_brand_button_accessibility_label": "Modifier {{paymentMethodName}}",
+      "delete_payment_method_button": "Supprimer",
+      "delete_payment_method_button_accessibility_label": "Supprimer {{paymentMethodName}}",
+      "back_button": "Dos",
+      "back_button_accessibility_label": "Revenir à {{paymentMethodStepTitle}}",
+      "default": "Défaut",
+      "generic_card": "Carte",
+      "expiration_warning_button_accessibility_label": "Montrer un avertissement d'expiration pour {{paymentMethodName}} se terminer dans {{lastDigits}}",
+      "expires_soon": "Cette carte expire bientôt",
+      "expired": "Cette carte est arrivée à expiration",
+      "card_update_consent": "Ce mode de paiement sera enregistré pour les achats futurs."
     }
   }
 }
