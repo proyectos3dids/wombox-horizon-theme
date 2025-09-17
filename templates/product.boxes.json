@@ -188,8 +188,8 @@
             "custom_boxes_ABC123": {
               "type": "custom-boxes",
               "settings": {
-                "title": "Selecciona tu caja",
-                "description": "Elige el tipo de caja que prefieras para tu pedido",
+                "title": "Select your box",
+                "description": "Choose the type of box you prefer for your order",
                 "expand_hint_text": "Click to expand",
                 "selected_box_text": "Selected Box",
                 "max_products": 6,
