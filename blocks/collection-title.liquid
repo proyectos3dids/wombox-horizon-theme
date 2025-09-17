@@ -9,6 +9,13 @@
   {% render 'text', fallback_text: collection_title, block: block %}
 {% endif %}
 
+{% if block.settings.colorcartX %}
+<style>
+.text-block--background p{
+  color:{{ block.settings.colorcartX }};
+}
+</style>
+{% endif %}
 {% schema %}
 {
   "name": "t:names.collection_title",
@@ -333,7 +340,16 @@
       "alpha": true,
       "default": "#00000026",
       "visible_if": "{{ block.settings.background }}"
-    },
+    }
+    ,
+    {
+      "type": "color",
+      "id": "colorcartX",
+      "label": "Color del botón"
+      
+    }
+    ,
+
     {
       "type": "range",
       "id": "corner_radius",
