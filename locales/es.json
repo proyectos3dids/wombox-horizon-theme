@@ -304,6 +304,11 @@
       },
       "customer_account": {
         "rollup_accessibility_label": "Opciones de cuenta"
+      },
+      "payment": {
+        "usdc_cashback_title": "1% de reembolso",
+        "usdc_cashback_additional_info": "Obtenga 1% de vuelta en USDC directamente en su billetera.",
+        "usdc_cashback_terms": "Se aplican términos"
       }
     }
   }
