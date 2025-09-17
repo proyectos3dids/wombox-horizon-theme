@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "blocks": {
     "load_video": "Video laden: {{ description }}",
@@ -279,6 +288,74 @@
       "post": "Kommentar posten",
       "success_moderated": "Kommentar gepostet, Moderation ausstehend",
       "success": "Kommentar gepostet"
+    }
+  },
+  "shopify": {
+    "sentence": {
+      "words_connector": ", ",
+      "two_words_connector": " Und ",
+      "last_word_connector": ", Und "
+    },
+    "checkout": {
+      "address_management": {
+        "confirm_address_deletion": "Sind Sie sicher, dass Sie die Adresse löschen möchten? {{address}}?"
+      },
+      "general": {
+        "page_title": "Kasse",
+        "error_page_title": "Fehler",
+        "skip_to_content": "Überspringen Sie zu Inhalten",
+        "breadcrumb": "Breadcrumb",
+        "continue_button_label": "Weitermachen",
+        "complete_purchase_button_label": "Vollständige Bestellung",
+        "pay_now_button_label": "Jetzt bezahlen",
+        "authenticate_purchase_button_label": "Authentifizierung der Zahlung",
+        "edit_link_label": "Bearbeiten",
+        "all_rights_reserved": "Alle Rechte vorbehalten %{shop_name}",
+        "print_policies_link_label": "Drucken",
+        "cart": "Wagen",
+        "close_modal_label": "Schließen",
+        "close_notice_label": "Schließen",
+        "expand_notice_label": "Mehr anzeigen",
+        "continue_to_shipping_method": "Weiter zum Versand",
+        "continue_to_payment_method": "Fahren weiter zur Zahlung",
+        "continue_to_review": "Überprüfungsreihenfolge",
+        "back_to_cart": "Kehre zum Warenkorb zurück",
+        "back_to_contact_information": "Kehren Sie zu Informationen zurück",
+        "back_to_shipping_method": "Rückkehr zum Versand",
+        "back_to_payment_method": "Rückgabe zur Zahlung",
+        "choose_shipping_method": "Wählen Sie eine Versandmethode",
+        "choose_payment_method": "Wählen Sie eine Zahlungsmethode",
+        "choose_billing_address": "Wählen Sie eine Abrechnungsadresse",
+        "contact_us_html": "Kontaktieren Sie uns für weitere Informationen",
+        "autocomplete_title": "Vorschläge",
+        "autocomplete_single_item": "1 Artikel verfügbar",
+        "autocomplete_multi_item": "{{number}} Artikel verfügbar",
+        "autocomplete_selection": "{{number}} von {{total}}",
+        "autocomplete_close": "Vorschläge schließen",
+        "forwarding_indicator": {
+          "new_window": "Öffnet sich in einem neuen Fenster.",
+          "external": "Öffnet die externe Website.",
+          "external_and_new_window": "Öffnet die externe Website in einem neuen Fenster."
+        },
+        "checkout_context": {
+          "step_one": "%{shop_name} - Kasse"
+        },
+        "tooltip_accessibility_label": "Weitere Informationen",
+        "qr_code": "QR -Code",
+        "errors": {
+          "only_empty_terms_accepted": "Diese Richtlinie akzeptiert nur leere Begriffe.",
+          "session_identifier_not_unique_error": "Bei Ihrer Bestellung ist etwas schief gelaufen. Bitte versuchen Sie es erneut.",
+          "line_item_limit_reached": "Die maximale Anzahl von Werbebuchungen wurde erreicht.",
+          "session_is_already_finished": "Diese Checkout -Sitzung wurde bereits abgeschlossen.",
+          "merchandise": {
+            "only_value_constraint": "In der Wareneingabe sind nur genaue Werte zulässig.",
+            "merchandise_not_found": "Produkt nicht gefunden.",
+            "merchandise_variant_not_found": "Produktvariante nicht gefunden.",
+            "merchandise_not_applicable": "Produktvariante kann nicht gekauft werden.",
+            "mixed_currencies": "Kasse enthält Werbebuchungen mit unterschiedlichen Währungen."
+          }
+        }
+      }
     }
   }
 }
