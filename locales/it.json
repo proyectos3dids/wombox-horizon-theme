@@ -810,9 +810,73 @@
       "deliverability": {
         "not_deliverable": {
           "title": {
-            "one": "Nessuna consegna disponibile per %{count} articolo"
-          }
+            "one": "Nessuna consegna disponibile per %{count} articolo",
+            "other": "Nessuna consegna disponibile per %{count} elementi"
+          },
+          "message": {
+            "one": "Questo articolo verrà rimosso dal carrello perché non ci sono metodi di consegna disponibili per il tuo indirizzo.",
+            "other": "Questi articoli verranno rimossi dal carrello perché non ci sono metodi di consegna disponibili per il tuo indirizzo."
+          },
+          "label": "Nessuna consegna"
         }
+      },
+      "order_summary": {
+        "title": "Riepilogo dell'ordine",
+        "group_title_label": "Parte di \"%{group_title}\"",
+        "for_add_on": "Per: %{group_title}",
+        "from_shop_heading": "Da %{shop_name}",
+        "from_other_stores_heading": "Da altri negozi",
+        "number_items": {
+          "one": "%{count} articolo",
+          "other": "%{count} elementi"
+        },
+        "view_all_items": {
+          "one": "Visualizzazione %{count} articolo",
+          "other": "Visualizza tutto %{count} elementi"
+        },
+        "more_items_modal": {
+          "search_item": "Ricerca",
+          "clear_search": "Ricerca chiara",
+          "empty_results": "Nessun risultato trovato per \"%{searchText}\". Controlla l'ortografia o usa una parola o una frase diversa.",
+          "number_items_shown": "%{shownNumber} Di %{totalNumber} elementi"
+        },
+        "order_name_label": "Ordine %{name}",
+        "shopping_cart_label": "Carrello della spesa",
+        "discount_title": "Sconto",
+        "discount_title_stacking": {
+          "one": "Sconto",
+          "other": "Sconti"
+        },
+        "discount_order_stacking": {
+          "one": "Sconto dell'ordine",
+          "other": "Sconti d'ordine"
+        },
+        "discount_label": "Codice sconto",
+        "discount_not_found": "Impossibile trovare uno sconto valido corrispondente al codice inserito",
+        "discount_placeholder": "Codice sconto",
+        "discount_code_applied": "Codice di sconto applicato",
+        "discount_code_allocations_mismatch": "Tuo <strong style=\"text-transform:uppercase\">%{code}</strong> Il codice di sconto è cambiato. Rivedi il tuo carrello e riprova.",
+        "gift_card_applied": "Carta regalo applicata",
+        "enter_shipping_address": "Immettere l'indirizzo di spedizione",
+        "gift_card_title": "Carta regalo",
+        "gift_card_label": "Carta regalo",
+        "gift_card_placeholder": "Carta regalo",
+        "gift_card_and_discount_title": "Codice di sconto o carta regalo",
+        "gift_card_and_discount_label": "Codice di sconto o carta regalo",
+        "gift_card_and_discount_placeholder": "Codice di sconto o carta regalo",
+        "remove_gift_card_label": "Carta regalo chiara",
+        "remove_discount_label": "Rimuovere lo sconto",
+        "return_restocking_fee_label": "Commissione di rifornimento",
+        "return_shipping_fee_label": "Restituzione della spedizione",
+        "free_shipping_discount_label": "Spedizione gratuita",
+        "applied_free_shipping_discount_label": "Applicato",
+        "apply_discount_button_label": "Fare domanda a",
+        "applied_discount_message": "%{amount} fuori dal prezzo totale dell'ordine",
+        "discount_has_been_applied": "È stato applicato lo sconto",
+        "discount_has_been_removed": "Lo sconto è stato rimosso",
+        "gift_card_has_been_applied": "La carta regalo è stata applicata",
+        "gift_card_has_been_removed": "La carta regalo è stata rimossa",
+        "gift_card_subscriptions_notice": "Le carte regalo si applicheranno solo al tuo primo pagamento"
       }
     }
   }
