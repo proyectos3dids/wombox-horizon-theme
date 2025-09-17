@@ -1726,7 +1726,7 @@
   <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
 {% endif %}
 
-<script>
+{% comment %} <script>
 
   function loadSwiper(callback) {
     if (window.Swiper) {
@@ -2199,6 +2199,532 @@
     {% if lazy %}
       var lazyLoadInstance = new LazyLoad();
 
+      window.addEventListener(
+        "LazyLoad::Initialized",
+        function (event) {
+          window.lazyLoadInstance = event.detail.instance;
+        },
+        false
+      );
+    {% endif %}
+  }
+
+  function initializeAllShoppableVideoSections() {
+    const sections = document.querySelectorAll('[id^="shopify-section-"]');
+    sections.forEach(section => {
+      if (section.querySelector('.video-{{ section.id }}')) {
+        const sectionId = section.id.replace('shopify-section-', '');
+        loadSwiper(() => initShoppableVideo(sectionId));
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeAllShoppableVideoSections);
+  } else {
+    initializeAllShoppableVideoSections();
+  }
+
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:load', (event) => {
+      const sectionId = event.detail.sectionId;
+      if (event.target.querySelector('.video-{{ section.id }}')) {
+        loadSwiper(() => initShoppableVideo(sectionId));
+      }
+    });
+  }
+</script> {% endcomment %}
+
+
+<script>
+  function loadSwiper(callback) {
+    if (window.Swiper) {
+      callback();
+    } else {
+      const script = document.createElement('script');
+      script.src = "https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js";
+      script.onload = callback;
+      document.head.appendChild(script);
+    }
+  }
+
+  // --- Helper para abrir el cart-drawer de Horizon tras recargar ---
+  function openHorizonCartDrawer() {
+    // 1) método del web component (si existe)
+    const drawerComp = document.querySelector('cart-drawer-component');
+    if (drawerComp && typeof drawerComp.open === 'function') {
+      try { drawerComp.open(); return; } catch(e) {}
+    }
+
+    // 2) clickear el botón con on:click="/open"
+    const openBtn =
+      drawerComp?.querySelector('button[on\\:click="/open"]') ||
+      document.querySelector('button[on\\:click="/open"]') ||
+      document.querySelector('[data-testid="cart-icon"]') ||
+      document.querySelector('.header-actions__action.button-unstyled');
+
+    if (openBtn) {
+      openBtn.click();
+      return;
+    }
+
+    // 3) abrir el <dialog> como último recurso
+    const dialog =
+      drawerComp?.querySelector('dialog.cart-drawer__dialog') ||
+      document.querySelector('dialog.cart-drawer__dialog');
+
+    if (dialog && typeof dialog.showModal === 'function') {
+      dialog.showModal();
+    }
+  }
+
+  (function bootCartDrawerOpener() {
+    if (sessionStorage.getItem('open_cart_drawer') === '1') {
+      sessionStorage.removeItem('open_cart_drawer');
+      window.addEventListener('DOMContentLoaded', () => {
+        setTimeout(openHorizonCartDrawer, 200);
+      });
+    }
+  })();
+  // --- Fin helper cart-drawer ---
+
+  var formayMoneyForBuyItWith = function(cents, format) {
+    if (typeof cents == 'string') { cents = cents.replace('.',''); }
+    var value = '';
+    var placeholderRegex = /\{\{\s*(\w+)\s*\}\}/;
+    var formatString = (format || this.money_format);
+  
+    function defaultOption(opt, def) {
+       return (typeof opt == 'undefined' ? def : opt);
+    }
+  
+    function formatWithDelimiters(number, precision, thousands, decimal) {
+      precision = defaultOption(precision, 2);
+      thousands = defaultOption(thousands, ',');
+      decimal   = defaultOption(decimal, '.');
+  
+      if (isNaN(number) || number == null) { return 0; }
+  
+      number = (number/100.0).toFixed(precision);
+  
+      var parts   = number.split('.'),
+          dollars = parts[0].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, '$1' + thousands),
+          cents   = parts[1] ? (decimal + parts[1]) : '';
+  
+      return dollars + cents;
+    }
+  
+    switch(formatString.match(placeholderRegex)[1]) {
+      case 'amount':
+        value = formatWithDelimiters(cents, 2);
+        break;
+      case 'amount_no_decimals':
+        value = formatWithDelimiters(cents, 0);
+        break;
+      case 'amount_with_comma_separator':
+        value = formatWithDelimiters(cents, 2, '.', ',');
+        break;
+      case 'amount_no_decimals_with_comma_separator':
+        value = formatWithDelimiters(cents, 0, '.', ',');
+        break;
+    }
+  
+    return formatString.replace(placeholderRegex, value);
+  };
+  
+  function initShoppableVideo(sectionId) {
+    document.querySelector(`.video-slider-${sectionId}`).classList.remove('preview');
+    
+    const slider = new Swiper(`.video-slider-${sectionId}`, {
+      speed: 300,
+      navigation: {
+        nextEl: `.video-btn-next-${sectionId}`,
+        prevEl: `.video-btn-prev-${sectionId}`
+      },
+      pagination: {
+        el: `.video-pagination-${sectionId}`,
+        draggable: true,
+        clickable: true
+      },
+      breakpoints: {
+        320: {
+          spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gapMobile || 0),
+          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.viewMobile),
+        },
+        768: {
+          spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gapMobile || 0),
+          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.viewMobile),
+        },
+        1024: {
+          spaceBetween: parseInt(document.querySelector(`.video-slider-${sectionId}`).dataset.gap || 0),
+          slidesPerView: parseFloat(document.querySelector(`.video-slider-${sectionId}`).dataset.view ),
+        }
+      }
+    });
+
+    const slider2 = new Swiper(`.video-modal-slider-${sectionId}`, {
+      speed: 300,
+      slidesPerView: 1,
+      spaceBetween: 20,
+      allowTouchMove: false,
+      navigation: {
+        nextEl: `.video-modal-next-${sectionId}`,
+        prevEl: `.video-modal-prev-${sectionId}`
+      },
+      on: {
+        slideChange: function () {
+          const slides = this.slides;
+          for (let i = 0; i < slides.length; i++) {
+            let video = slides[i].querySelector('video');
+            let frame = slides[i].querySelector('iframe');
+            let btn = slides[i].querySelector(`.video-modal-action-${sectionId}`);
+            let src1, src2;
+            if(frame) {
+              // Corregido: usar data-src1/data-src2 como en el markup
+              src1 = frame.getAttribute('data-src1');
+              src2 = frame.getAttribute('data-src2');
+            }
+    
+            if (i === this.activeIndex) {
+              if (video) {
+                video.play();
+                video.muted = false;
+              }
+              if(frame && src2) { frame.src = src2; }
+              if(btn) { btn.classList.add('active'); }
+            } else {
+              if (video) { video.pause(); }
+              if(frame && src1) { frame.src = src1; }
+            }
+          }
+        },
+      },
+    });
+
+    document.querySelectorAll(`.video-slide-${sectionId}`).forEach(el => {
+      let arrowToggle = el.querySelector(`.video-arrow-${sectionId}`);
+      let variangsContainer = el.querySelector(`.video-variants-${sectionId}`);
+      if(arrowToggle) { 
+        arrowToggle.addEventListener('click', () => {
+          variangsContainer.classList.toggle('active');
+        })
+      }
+    })
+
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+
+        let product{{ forloop.index }} = {{ all_products[block.settings.product] | json }};
+        let selects{{ block.id | replace: '-', '' }} = document.querySelectorAll('[data-shoppable-select--{{ block.id | replace: '-', '' }}]');
+        let input{{ forloop.index }} = document.querySelector('[data-shoppable-input--{{ forloop.index }}]');
+        let image{{ forloop.index }} = document.querySelector('[data-shoppable-image--{{ forloop.index }}]');
+        let priceElement{{ forloop.index }} = document.querySelector('[data-shoppable-price--{{ forloop.index }}]');
+        let optionPrice{{ forloop.index }} = document.querySelector('[data-shoppable-option-price--{{ forloop.index }}]');
+        let button{{ forloop.index }} = document.querySelector('[data-shoppable-button--{{ forloop.index }}]');
+        let form{{ block.id | replace: '-', '' }} = document.querySelector('#product-form-{{ block.id }}');
+
+        let modalSelects{{ block.id | replace: '-', '' }} = document.querySelectorAll('[data-shoppable-modal-select--{{ block.id | replace: '-', '' }}]');
+        let modalInput{{ forloop.index }} = document.querySelector('[data-shoppable-modal-input--{{ forloop.index }}]');
+        let modalImage{{ forloop.index }} = document.querySelector('[data-shoppable-modal-image--{{ forloop.index }}]');
+        let modalPriceElement{{ forloop.index }} = document.querySelector('[data-shoppable-modal-price--{{ forloop.index }}]');
+        let modalButton{{ forloop.index }} = document.querySelector('[data-shoppable-modal-button--{{ forloop.index }}]');
+        let modalForm{{ block.id | replace: '-', '' }} = document.querySelector('#product-modal-form-{{ block.id }}');
+
+        if(selects{{ block.id | replace: '-', '' }}) {
+          selects{{ block.id | replace: '-', '' }}.forEach(el => {
+            el.addEventListener('change', () => {
+              var selectedOptions = [];
+              selects{{ block.id | replace: '-', '' }}.forEach(element => {
+                selectedOptions.push(element.value);
+              })
+  
+              var matchedVariant = product{{ forloop.index }}.variants.find(variant => {
+                var pass = true;
+                for( var i = 0; i < selectedOptions.length; i++ ) {
+                  if(selectedOptions.indexOf(variant.options[i]) === -1) {
+                    pass = false;
+                    break;
+                  }
+                }
+                return pass;
+              })
+              
+              let price{{ forloop.index }} = matchedVariant.price;
+              priceElement{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
+              optionPrice{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
+              
+              input{{ forloop.index }}.value = matchedVariant.id;
+  
+              if (matchedVariant.featured_image) {
+                image{{ forloop.index }}.src = matchedVariant.featured_image.src;
+              } else {
+                image{{ forloop.index }}.src = product{{ forloop.index }}.featured_image;
+              }
+  
+              if (!matchedVariant.available) {
+                button{{ forloop.index }}.setAttribute('disabled', "");
+                button{{ forloop.index }}.innerText = `{{ button_soldout }}`;
+                button{{ forloop.index }}.style.cursor = "not-allowed";
+              } else {
+                button{{ forloop.index }}.removeAttribute('disabled');
+                button{{ forloop.index }}.innerText = `{{ button }}`;
+                button{{ forloop.index }}.style.cursor = "pointer";
+              }
+            })
+          })
+        }
+
+        {% if reload_after_adding %}
+          // --- Con recarga + apertura del drawer ---
+          if(form{{ block.id | replace: '-', '' }}) {
+            form{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              await fetch('/cart/add', {
+                method: 'post',
+                body: new FormData(form{{ block.id | replace: '-', '' }})
+              });
+              sessionStorage.setItem('open_cart_drawer', '1');
+              window.location.reload();
+            });
+          }
+        {% else %}
+          // --- Sin recarga: comportamiento AJAX actual ---
+          if(form{{ block.id | replace: '-', '' }}) {
+            form{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
+              console.log(form{{ block.id | replace: '-', '' }});
+              e.preventDefault();
+              await fetch('/cart/add', {
+                method: 'post',
+                body: new FormData(form{{ block.id | replace: '-', '' }})
+              });
+              const res{{ forloop.index }} = await fetch("/cart.json");
+              const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
+    
+              const headerCartCount{{ forloop.index }} = document.querySelector('.cart-count-bubble span');
+              if(headerCartCount{{ forloop.index }}) {
+                headerCartCount{{ forloop.index }}.textContent = cart{{ forloop.index }}.item_count;
+              } else {
+                const headerCart{{ forloop.index }} = document.querySelector('#cart-icon-bubble');
+                const isCartIconValid = headerCart{{ forloop.index }} &&
+                  headerCart{{ forloop.index }}.childElementCount === 2 &&
+                  headerCart{{ forloop.index }}.querySelector('svg') &&
+                  headerCart{{ forloop.index }}.querySelector('span.visually-hidden');
+                
+                if (isCartIconValid) {
+                  const cartCountBubble = document.createElement('div');
+                  cartCountBubble.className = 'cart-count-bubble';
+                  if(cart{{ forloop.index }}.item_count == "1") {
+                    cartCountBubble.innerHTML = `<span aria-hidden="true">${cart{{ forloop.index }}.item_count}</span><span class="visually-hidden">${cart{{ forloop.index }}.item_count} item</span>`;
+                  } else {
+                    cartCountBubble.innerHTML = `<span aria-hidden="true">${cart{{ forloop.index }}.item_count}</span><span class="visually-hidden">${cart{{ forloop.index }}.item_count} items</span>`;
+                  }
+                  headerCart{{ forloop.index }}.appendChild(cartCountBubble);
+                }
+              }
+              setTimeout(function() {
+                button{{ forloop.index }}.innerText = "Added";
+              }, 300);
+              {% if redirect_after_adding %}
+              setTimeout(function() {
+                window.location.href = "{{ shop.url }}/cart";
+              }, 500);
+              {% endif %}
+              setTimeout(function() {
+                button{{ forloop.index }}.innerText = `{{ button }}`;
+              }, 2000);
+            })         
+          }
+        {% endif %}
+
+        if(modalSelects{{ block.id | replace: '-', '' }}) {
+          modalSelects{{ block.id | replace: '-', '' }}.forEach(el => {
+            el.addEventListener('change', () => {
+              var selectedOptions = [];
+              modalSelects{{ block.id | replace: '-', '' }}.forEach(element => {
+                selectedOptions.push(element.value);
+              })
+  
+              var matchedVariant = product{{ forloop.index }}.variants.find(variant => {
+                var pass = true;
+                for( var i = 0; i < selectedOptions.length; i++ ) {
+                  if(selectedOptions.indexOf(variant.options[i]) === -1) {
+                    pass = false;
+                    break;
+                  }
+                }
+                return pass;
+              })
+              
+              let price{{ forloop.index }} = matchedVariant.price;
+              modalPriceElement{{ forloop.index }}.innerHTML = formayMoneyForBuyItWith(price{{ forloop.index }}, '{{ shop.money_format }}');
+              modalInput{{ forloop.index }}.value = matchedVariant.id;
+  
+              if (matchedVariant.featured_image) {
+                modalImage{{ forloop.index }}.src = matchedVariant.featured_image.src;
+              } else {
+                modalImage{{ forloop.index }}.src = product{{ forloop.index }}.featured_image;
+              }
+  
+              if (!matchedVariant.available) {
+                modalButton{{ forloop.index }}.setAttribute('disabled', "");
+                modalButton{{ forloop.index }}.innerText = `{{ modal_button_soldout }}`;
+                modalButton{{ forloop.index }}.style.cursor = "not-allowed";
+              } else {
+                modalButton{{ forloop.index }}.removeAttribute('disabled');
+                modalButton{{ forloop.index }}.innerText = `{{ modal_button }}`;
+                modalButton{{ forloop.index }}.style.cursor = "pointer";
+              }
+            })
+          })
+        }
+
+        {% if reload_after_adding %}
+          // --- Modal con recarga + apertura del drawer ---
+          if(modalForm{{ block.id | replace: '-', '' }}) {
+            modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              await fetch('/cart/add', {
+                method: 'post',
+                body: new FormData(modalForm{{ block.id | replace: '-', '' }})
+              });
+              sessionStorage.setItem('open_cart_drawer', '1');
+              window.location.reload();
+            })         
+          }
+        {% else %}
+          // --- Modal sin recarga: comportamiento AJAX actual ---
+          if(modalForm{{ block.id | replace: '-', '' }}) {
+            modalForm{{ block.id | replace: '-', '' }}.addEventListener('submit', async (e) => {
+              e.preventDefault();
+              await fetch('/cart/add', {
+                method: 'post',
+                body: new FormData(modalForm{{ block.id | replace: '-', '' }})
+              });
+              const res{{ forloop.index }} = await fetch("/cart.json");
+              const cart{{ forloop.index }} = await res{{ forloop.index }}.json();
+    
+              const headerCartCount{{ forloop.index }} = document.querySelector('.cart-count-bubble span');
+              if(headerCartCount{{ forloop.index }}) {
+                headerCartCount{{ forloop.index }}.textContent = cart{{ forloop.index }}.item_count;
+              }
+              setTimeout(function() {
+                modalButton{{ forloop.index }}.innerText = "Added";
+              }, 300);
+              setTimeout(function() {
+                modalButton{{ forloop.index }}.innerText = `{{ button }}`;
+              }, 2000);
+            })         
+          }
+        {% endif %}
+    
+      {% endfor %}
+    {% endif %}
+
+    const toggles = document.querySelectorAll(`.video-top-${sectionId}`);
+    const modal = document.querySelector(`.video-modal-${sectionId}`);
+    const close = document.querySelector(`.video-modal-close-${sectionId}`);
+    let activeSlideIndex = 0;
+    
+    toggles.forEach((el, index) => {
+      el.addEventListener('click', (e) => {
+        if(e.target.id == `${sectionId}`) {
+          slider2.slideTo(index);
+          activeSlideIndex = index;
+          const activeSlide = slider2.slides[activeSlideIndex];
+          const video = activeSlide.querySelector('video');
+          const frame = activeSlide.querySelector('iframe');
+          let src2;
+          if(frame) {
+            // usamos el preparado para autoplay sin mute
+            src2 = frame.getAttribute('data-src2');
+          }
+          const btn = activeSlide.querySelector(`.video-modal-action-${sectionId}`);
+          setTimeout(() => {
+            document.body.style.overflow = 'hidden';
+            modal.classList.add('active');
+            if (video) {
+              video.play();
+              video.muted = false;
+            }
+            if(btn) { btn.classList.add('active'); }
+            if(frame && src2) { frame.src = src2; }
+          }, 200); 
+        }
+      });
+    });
+    
+    close.addEventListener('click', () => {
+      document.body.style.overflow = '';
+      modal.classList.remove('active');
+      let frames = modal.querySelectorAll('iframe');
+      let videos = modal.querySelectorAll('video');
+      if(frames){
+        frames.forEach(el => {
+          let src1 = el.getAttribute('data-src1');
+          if (src1) el.src = src1;
+        });
+      }
+      if(videos){
+        videos.forEach(el => { el.pause(); });
+      }
+    });
+    
+    document.addEventListener('click', (e) => {
+      if (e.target == modal) {
+        document.body.style.overflow = '';
+        modal.classList.remove('active');
+        let frames = modal.querySelectorAll('iframe');
+        let videos = modal.querySelectorAll('video');
+        if(frames){
+          frames.forEach(el => {
+            let src1 = el.getAttribute('data-src1');
+            if (src1) el.src = src1;
+          });
+        }
+        if(videos){
+          videos.forEach(el => { el.pause(); });
+        }
+      }
+    });
+
+    document.querySelectorAll(`.video-modal-slide-${sectionId}`).forEach(el => {
+      let btn = el.querySelector(`.video-modal-action-${sectionId}`);
+      let frame = el.querySelector('iframe');
+      let src;
+      if(frame) {
+        src = frame.getAttribute("data-src2");
+      }
+      let video = el.querySelector('video');
+      if(btn) {
+        btn.addEventListener('click', () => {
+          btn.classList.toggle('active');
+          if(btn.classList.contains('active')) {
+            if(frame && src) {
+              frame.src = src;
+            }
+            if(video) {
+              video.muted = false;
+              video.setAttribute("mute", "false"); 
+            }
+          } else {
+            if(frame) {
+              frame.src += "&mute=1&muted=1";
+            }
+            if(video) {
+              video.muted = true;
+              video.setAttribute("mute", "true"); 
+            }
+          }
+        }) 
+      }
+    })
+    
+    slider2.on('slideChange', () => {
+      activeSlideIndex = slider2.realIndex !== undefined ? slider2.realIndex : slider2.activeIndex;
+    });
+
+    {% if lazy %}
+      var lazyLoadInstance = new LazyLoad();
       window.addEventListener(
         "LazyLoad::Initialized",
         function (event) {
