@@ -3154,7 +3154,93 @@
         "stock_problems_html": "Ein oder mehrere Artikel sind nicht mehr verfügbar. Wir haben eine bereitgestellt <a href='%{link}'>CART aktualisiert</a>.",
         "changed": "Wagen änderte sich",
         "items_changed": "Ein oder mehrere Artikel haben sich geändert.",
-        "product_sold_out": "Das Produkt '%{name}'ist bereits ausverkauft."
+        "product_sold_out": "Das Produkt '%{name}'ist bereits ausverkauft.",
+        "variant_not_found": "Kann keine Variante finden",
+        "variant_requires_selling_plan": "Die Variante kann nur mit einem Verkaufsplan gekauft werden.",
+        "selling_plan_not_available_for_company_locations": "Für B2B-Bestellungen ist nur ein einmaliger Kauf erhältlich",
+        "digital_product_not_available_for_company_locations": "Dieser Artikel kann nicht zu einer B2B -Bestellung hinzugefügt werden",
+        "buyer_cannot_purchase_for_company_locations": "Sie können für diesen Standort nicht kaufen",
+        "selling_plan_not_applicable": "Der Verkaufsplan kann nicht auf Variante angewendet werden",
+        "shipping_address_not_required": "Dieser Wagen erfordert keinen Versand",
+        "shipping_address_invalid": "Es gab ein Problem, Ihre Versandraten zu berechnen. Fahren Sie mit dem Auschecken fort, um einen Versandkurs auszuwählen, bevor Sie Ihre Bestellung abschließen.",
+        "bundle_requires_components": "Das Bündelprodukt '%{name}'kann nicht in den Wagen hinzugefügt werden.",
+        "gift_card_with_components_not_supported": "Das Bündelprodukt '%{name}'kann nicht in den Wagen hinzugefügt werden.",
+        "gift_card_price_must_be_greater_than_zero": "Das Bündelprodukt '%{name}'kann nicht in den Wagen hinzugefügt werden.",
+        "gift_card_recipient_validation_error": "Der angegebene Geschenkkartenempfänger ist ungültig",
+        "view_lines_limit_reached": "Linien müssen weniger sein als %{limit}",
+        "cart_too_large": "Wagen ist zu groß.",
+        "cart_attributes_error": "Cart -Attribute enthalten ungültige Daten.",
+        "merchandise_line_transformers": {
+          "run_error": "In Ihrem Warenkorb ist ein Fehler aufgetreten."
+        },
+        "merchandise_not_applicable": "Artikel kann nicht wie konfiguriert gekauft werden."
+      },
+      "storefront": {
+        "invalid_password": "Passwort Falsch, bitte versuchen Sie es erneut."
+      },
+      "tags": {
+        "add_articles": "Enge Suche nach Artikeln, die auch Tag mit Tag haben %{tag}",
+        "add_products": "Enge Auswahl zu Produkten Matching -Tag %{tag}",
+        "remove_articles": "Die Suche nach Artikeln erweitern, die nicht markiert sind %{tag}",
+        "remove_products": "Tag entfernen %{tag}"
+      }
+    },
+    "email_marketing": {
+      "subscribed": {
+        "confirmation": "Vielen Dank, dass Sie unsere Mailingliste abonniert haben.",
+        "disclaimer": "Sie können sich jederzeit abmelden.",
+        "unsubscribe": "Abbestellen"
+      },
+      "unsubscribed": {
+        "confirmation": "Sie haben sich von unserer Mailingliste abgemeldet.",
+        "disclaimer": "Sie erhalten keine weiteren Marketing -Updates von uns. Sie können jederzeit erneut abonnieren.",
+        "preview": "Sie sehen sich vor, was Kunden sehen werden, wenn sie sich abmelden."
+      },
+      "open_tracking": {
+        "opt_in": {
+          "opted_in_html": "<b>Sie haben sich für eine E -Mail -Open -Tracking entschieden.</b>",
+          "visibility": "E -Mail -Open -Preise werden anonym gemeldet. Wir werden nur sehen, ob Sie eine E -Mail im Rahmen eines aggregierten E -Mail -Open -Tarifs geöffnet haben.",
+          "opt_out_html": "Du kannst <a style='text-decoration:underline;' href='%{link}'>Opt-out</a> von E -Mail Open Tracking Wenn Sie diese Informationen nicht weitergeben möchten.",
+          "preview_bar": "Sie sehen sich vor, was Kunden sehen werden, wenn sie sich für eine E -Mail -Open -Tracking entscheiden."
+        },
+        "opt_out": {
+          "opted_out_html": "<b>Sie haben sich von der E -Mail -Open -Tracking abgemeldet.</b>",
+          "visibility": "Wir werden nicht sehen, ob Sie unsere E -Mails geöffnet haben.",
+          "opt_in_html": "<a style='text-decoration:underline;' href='%{link}'>Telefonieren</a> zum Open Tracking E -Mail.",
+          "preview_bar": "Sie sehen sich vor, was Kunden sehen werden, wenn sie sich von der E -Mail -Open -Tracking abmelden."
+        },
+        "no_longer_track": {
+          "status_html": "<b>Wir verfolgen keine E -Mail -Open mehr.</b>",
+          "privacy_policy": "Nachdem diese E -Mail gesendet wurde, haben wir unsere Datenschutzrichtlinien aktualisiert und verfolgen keine Öffnungen mehr."
+        },
+        "track": {
+          "status_html": "<b>E -Mail -Open -Tracking wird gemeldet.</b>",
+          "visibility": "Wir werden nur sehen, ob Sie die E -Mail im Rahmen des gesamten E -Mail -Open -Tarifs geöffnet haben."
+        },
+        "updated_policy": {
+          "status_html": "<b>E -Mail -Open -Tracking wird gemeldet.</b>",
+          "visibility": "Wir haben unsere Richtlinien aktualisiert und nun E -Mails eröffnen. E -Mail -Open -Preise werden anonym gemeldet. Wir werden nur sehen, ob Sie eine E -Mail im Rahmen des gesamten E -Mail -Open -Tarifs geöffnet haben.",
+          "opt_out_html": "Wenn Sie diese Informationen nicht weitergeben möchten, können Sie <a style='text-decoration:underline;' href='%{link}'>abbestellen.</a>"
+        }
+      }
+    },
+    "filters": {
+      "availability": {
+        "value": {
+          "in_stock": "Auf Lager",
+          "out_of_stock": "Aus dem Bestand"
+        }
+      },
+      "boolean": {
+        "true_label": "Ja",
+        "false_label": "NEIN"
+      }
+    },
+    "search": {
+      "error": "Es gab ein Problem beim Laden Ihrer Suchergebnisse. Bitte aktualisieren Sie die Seite oder versuchen Sie es später erneut.",
+      "sorting": {
+        "relevance": "Relevanz",
+        "price_ascending": "Preis, niedrig bis hoch"
       }
     }
   }
