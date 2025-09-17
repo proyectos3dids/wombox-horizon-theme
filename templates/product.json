@@ -201,6 +201,32 @@
                 "price_tVjtKg"
               ]
             },
+            "text_aEtTtq": {
+              "type": "text",
+              "name": "Product description",
+              "settings": {
+                "text": "{{ closest.product.description }}",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "rte",
+                "font": "var(--font-primary--family)",
+                "font_size": "",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "color": "",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding-block-start": 0,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
+            },
             "custom_liquid_yzgmTL": {
               "type": "custom-liquid",
               "name": "Ver mas/ver menos",
@@ -291,43 +317,17 @@
                 }
               },
               "block_order": []
-            },
-            "text_aEtTtq": {
-              "type": "text",
-              "name": "Product description",
-              "settings": {
-                "text": "{{ closest.product.description }}",
-                "width": "100%",
-                "max_width": "normal",
-                "alignment": "left",
-                "type_preset": "rte",
-                "font": "var(--font-primary--family)",
-                "font_size": "",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "wrap": "pretty",
-                "color": "",
-                "background": false,
-                "background_color": "#00000026",
-                "corner_radius": 0,
-                "padding-block-start": 0,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
-              },
-              "blocks": {}
             }
           },
           "block_order": [
             "group_4yVLcB",
             "group_icgrde",
+            "text_aEtTtq",
             "custom_liquid_yzgmTL",
             "divider_VJhene",
             "variant_picker_R3rGDr",
             "custom_boxes_selector",
-            "buy_buttons_eYQEYi",
-            "text_aEtTtq"
+            "buy_buttons_eYQEYi"
           ]
         }
       },
@@ -666,10 +666,10 @@
         "image_border_color": "#121212",
         "button_color": "#ffffff",
         "button_hover_color": "#ffffff",
-        "button_bg_color": "#c67461",
-        "button_bg_hover_color": "#d4a697",
+        "button_bg_color": "#d4a697",
+        "button_bg_hover_color": "#333333",
         "arrow_icon_color": "#ffffff",
-        "arrow_bg_color": "#c67461",
+        "arrow_bg_color": "#d4a697",
         "arrow_border_color": "#ffffff",
         "option_color": "#121212",
         "variants_price_color": "#121212",
