@@ -3324,7 +3324,65 @@
     "navigation_and_structure": {
       "account_menu": {
         "hide_accessibility_label": "Menu de compte",
-        "label": "Compte"
+        "label": "Compte",
+        "show_accessibility_label": "Afficher le menu du compte",
+        "nav_accessibility_label": "Navigation du compte",
+        "open_menu_accessibility_label": "Navigation de compte ouvert",
+        "close_menu_accessibility_label": "Fermer la navigation du compte",
+        "loading_message": "Chargement du compte Navigation"
+      },
+      "action_menu_accessibility_label": "Plus d'actions",
+      "close_menu_accessibility_label": "Fermer la navigation principale",
+      "contact_email_subject": "Contacter de {{shopName}} boutique en ligne",
+      "contact_link": "Coordonnées",
+      "delete_confirmation": {
+        "cancel": "Annuler",
+        "delete": "Supprimer"
+      },
+      "dismiss_toast": "Rejeter",
+      "document_title": "{{sectionName}} - {{shopName}} - Compte",
+      "generic_accessibility_label": "{{label}}: {{value}}",
+      "go_to_store_link": "Aller au magasin",
+      "loading_message": "Chargement",
+      "loading_policy_content_accessibility_label": "Chargement du contenu de la politique",
+      "log_out_link": "se déconnecter",
+      "logout_overlay_label": "Signature ...",
+      "nav_label_accessibility_label": "Navigation principale",
+      "navigation_accessibility_message": "Vous avez navigué vers {{sectionName}}",
+      "open_menu_accessibility_label": "Open Navigation principale",
+      "orders_link_label": "Ordres",
+      "shop_logo_accessibility_label": "{{shopName}} logo",
+      "subscriptions_link_label": "Abonnements",
+      "settings_link": "Paramètres",
+      "country_switcher_toast_message": "Le pays est passé à {{countryName}}",
+      "switch_country": "Commanger le pays",
+      "no_countries_found": "Aucun pays trouvé",
+      "location_switcher_toast_message": "L'emplacement est passé à {{locationName}}",
+      "switch_location": "Emplacement de commutation",
+      "no_locations_found": "Aucun emplacement trouvé",
+      "try_new_search": "Essayez une nouvelle recherche",
+      "view_details": "Afficher les détails",
+      "company_location": "Emplacement de l'entreprise",
+      "search": "Recherche",
+      "skip_to_content": "Passer au contenu"
+    },
+    "announcement_bar": {
+      "expand_label": "Développer la barre d'annonce",
+      "collapse_label": "Barre d'effondrement",
+      "close_label": "Barre de proximité"
+    },
+    "account_information": {
+      "loading_accessibility_message": "Informations sur le compte de chargement",
+      "loading_finished_accessibility_message": "Les informations du compte ont été chargées",
+      "profile_card": {
+        "cancel": "Annuler",
+        "cancel_accessibility_label": "Annuler le profil d'édition",
+        "edit": "Modifier",
+        "edit_accessibility_label": "Modifier le profil",
+        "email_help_text": "Le courrier électronique ne peut pas être modifié",
+        "first_name": "Prénom",
+        "last_name": "Nom de famille",
+        "email": "E-mail"
       }
     }
   }
