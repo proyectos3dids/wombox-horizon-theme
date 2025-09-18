@@ -1157,26 +1157,58 @@
   }
 {% endstylesheet %}
 
-<style>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const isMobile = () => window.matchMedia('(max-width: 749px)').matches;
 
+  // Contenedor del drawer (el <details> grande)
+  const drawerDetails = document.getElementById('Details-menu-drawer-container');
 
-  
-@media (max-width: 749px){
+  // Ul principal de grupos (tu <ul class="menu-drawer__menu has-submenu">)
+  function getAccordionRoot(root=document){
+    return root.querySelector('.menu-drawer__menu.has-submenu');
+  }
 
-        details > .details-content { display: none; }
-        details[open] > .details-content { display: block; }
+  function forceFirstOpen(root=document){
+    if (!isMobile()) return;
+    const accRoot = getAccordionRoot(root);
+    if (!accRoot) return;
 
-        
-        .menu-drawer__menu.has-submenu:not(:has(details[open])) > li:first-child details > .details-content {
-          display: block;
+    const groups = accRoot.querySelectorAll('li details');
+    if (!groups.length) return;
+
+    // Cerrar todos
+    groups.forEach(d => d.removeAttribute('open'));
+
+    // Abrir SIEMPRE el primero
+    groups[0].setAttribute('open','');
+
+    // (Opcional) comportamiento acordeón: si el user abre otro, cerramos el resto
+    groups.forEach(d => {
+      d.addEventListener('toggle', () => {
+        if (isMobile() && d.open) {
+          groups.forEach(o => { if (o !== d) o.removeAttribute('open'); });
         }
+      });
+    });
+  }
 
-       
-        .menu-drawer__menu.has-submenu:not(:has(details[open])) > li:first-child summary.menu-drawer__menu-item {
-          font-weight: 600;
-        }
+  // 1) Al cargar
+  forceFirstOpen();
 
-}
+  // 2) Cada vez que se ABRE el drawer, garantizamos primero abierto
+  if (drawerDetails) {
+    drawerDetails.addEventListener('toggle', () => {
+      if (drawerDetails.open) forceFirstOpen(drawerDetails);
+    });
+  }
 
-
-</style>
+  // 3) Al pasar a móvil (resize desde desktop)
+  let wasMobile = isMobile();
+  window.addEventListener('resize', () => {
+    const nowMobile = isMobile();
+    if (!wasMobile && nowMobile) forceFirstOpen();
+    wasMobile = nowMobile;
+  });
+});
+</script>
