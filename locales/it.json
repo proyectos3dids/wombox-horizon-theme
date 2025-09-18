@@ -4497,5 +4497,8 @@
         }
       }
     }
+  },
+  "custom_boxes": {
+    "title": "Seleziona la tua casella"
   }
 }
