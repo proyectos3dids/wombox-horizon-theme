@@ -335,6 +335,19 @@
         "choose_from_list": "Elija entre la lista",
         "add_new_button": "Agregar nuevo"
       }
+    },
+    "subscriptions": {
+      "update_payment_instrument": {
+        "title": "Reemplazar el método de pago",
+        "loading": "Métodos de pago de carga",
+        "no_payment_methods_available": "No hay métodos de pago disponibles",
+        "select_new_payment_method": "Seleccione un nuevo método de pago",
+        "current_method": "Actual",
+        "cancel": "Cancelar",
+        "save": "Ahorrar",
+        "success": "Método de pago actualizado",
+        "use_new_payment_method": "+ Utilice un nuevo método de pago"
+      }
     }
   },
   "custom_boxes": {
