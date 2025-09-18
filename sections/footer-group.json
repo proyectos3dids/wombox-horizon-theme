@@ -87,21 +87,21 @@
         "payment_icon_8A3LyJ": {
           "type": "payment_icon",
           "settings": {
-            "icon_image": "shopify://shop_images/Vector_17.svg",
+            "icon_image": "shopify://shop_images/mastercard.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_gfigBN": {
           "type": "payment_icon",
           "settings": {
-            "icon_image": "shopify://shop_images/Vector_18.svg",
+            "icon_image": "shopify://shop_images/visa.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_8bhHzF": {
           "type": "payment_icon",
           "settings": {
-            "icon_image": "shopify://shop_images/Vector_21.svg",
+            "icon_image": "shopify://shop_images/applepay.svg",
             "icon_alt": ""
           }
         },
@@ -109,21 +109,22 @@
           "type": "payment_icon",
           "disabled": true,
           "settings": {
-            "icon_image": "shopify://shop_images/Vector_19.svg",
+            "icon_image": "shopify://shop_images/klarna.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_cqmHJE": {
           "type": "payment_icon",
+          "disabled": true,
           "settings": {
-            "icon_image": "shopify://shop_images/Vector_20.svg",
+            "icon_image": "shopify://shop_images/applepay.svg",
             "icon_alt": ""
           }
         },
         "payment_icon_AeqUNx": {
           "type": "payment_icon",
           "settings": {
-            "icon_image": "shopify://shop_images/GooglePay.svg",
+            "icon_image": "shopify://shop_images/googlepay_2191d033-e889-45e0-bd58-4fd6735654a0.svg",
             "icon_alt": ""
           }
         },
@@ -166,6 +167,10 @@
         "menu_column_UrYGgM",
         "menu_column_DdGpKM"
       ],
+      "custom_css": [
+        ".wombox-footer {background: #d2a796;}",
+        ".wbf__cta {background: #fff; color: #d2a796; }"
+      ],
       "name": "Footer WOMBOX",
       "settings": {
         "flag_de": "shopify://shop_images/Image_12_sept_2025_10_26_16_a.m..png",
@@ -197,7 +202,7 @@
         "flag_ch": "shopify://shop_images/Image_12_sept_2025_10_26_16_a.m..png",
         "cta_text": "DISCOVER OUR BOXES",
         "cta_link": "shopify://collections/gift-box",
-        "strip_image": "shopify://shop_images/Capa_1.png",
+        "strip_image": "shopify://shop_images/logo-footer-white.svg",
         "strip_height": 120,
         "strip_speed": 60,
         "strip_gap": 45,
@@ -836,7 +841,7 @@
         "gap": 48,
         "section_width": "page-width",
         "section_height": "",
-        "color_scheme": "scheme-1",
+        "color_scheme": "scheme-3369ec01-b4af-482e-8727-13a17ad4559c",
         "background_media": "none",
         "video_position": "cover",
         "background_image_position": "cover",
