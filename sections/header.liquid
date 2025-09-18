@@ -1064,3 +1064,47 @@
   "presets": []
 }
 {% endschema %}
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const isMobile = () => window.matchMedia('(max-width: 749px)').matches;
+  const drawerDetails = document.getElementById('Details-menu-drawer-container');
+
+  function getAccordionRoot(root=document){
+    return root.querySelector('.menu-drawer__menu.has-submenu');
+  }
+
+  function forceFirstOpen(root=document){
+    if (!isMobile()) return;
+    const accRoot = getAccordionRoot(root);
+    if (!accRoot) return;
+    const groups = accRoot.querySelectorAll('li details');
+    if (!groups.length) return;
+    groups.forEach(d => d.removeAttribute('open'));
+    groups[0].setAttribute('open','');
+    groups.forEach(d => {
+      d.addEventListener('toggle', () => {
+        if (isMobile() && d.open) {
+          groups.forEach(o => { if (o !== d) o.removeAttribute('open'); });
+        }
+      });
+    });
+  }
+
+  forceFirstOpen();
+
+  if (drawerDetails) {
+    drawerDetails.addEventListener('toggle', () => {
+      if (drawerDetails.open) forceFirstOpen(drawerDetails);
+    });
+  }
+
+  let wasMobile = isMobile();
+  window.addEventListener('resize', () => {
+    const nowMobile = isMobile();
+    if (!wasMobile && nowMobile) forceFirstOpen();
+    wasMobile = nowMobile;
+  });
+});
+</script>
