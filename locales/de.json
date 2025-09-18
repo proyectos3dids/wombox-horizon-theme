@@ -117,7 +117,7 @@
     "localization_region_and_language": "Region und Sprache",
     "no_results_found": "Keine Ergebnisse gefunden",
     "cart_total": "CART Total",
-    "your_cart_is_empty": "Dein Warenkorb ist leer",
+    "your_cart_is_empty": "Ihr Wagen ist leer",
     "product_image": "Produktbild",
     "product_information": "Produktinformationen",
     "quantity": "Anzahl",
@@ -129,8 +129,8 @@
     "discount": "Rabatt",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Aufgaben und Steuern enthalten. Rabatte und <a href=\"{{ link }}\">Versand</a> an der Kasse berechnet.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Aufgaben und Steuern enthalten. Rabatte und Versand an der Kasse berechnet.",
-    "taxes_included_shipping_at_checkout_with_policy_html": "Inkl. Steuern. Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
-    "taxes_included_shipping_at_checkout_without_policy": "Inkl. Steuern. Rabatte und Versand werden beim Checkout berechnet.",
+    "taxes_included_shipping_at_checkout_with_policy_html": "Steuern enthalten. Rabatte und <a href=\"{{ link }}\">Versand</a> an der Kasse berechnet.",
+    "taxes_included_shipping_at_checkout_without_policy": "Steuern enthalten. Rabatte und Versand an der Kasse berechnet.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Aufgaben enthalten. Steuern, Rabatte und <a href=\"{{ link }}\">Versand</a> an der Kasse berechnet.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Aufgaben enthalten. Steuern, Rabatte und Versand an der Kasse berechnet.",
     "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Steuern, Rabatte und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
@@ -144,7 +144,7 @@
     "duties_and_taxes_included": "Aufgaben und Steuern enthalten.",
     "duties_included": "Aufgaben enthalten.",
     "shipping_policy_html": "<a href=\"{{ link }}\">Versand</a> wird beim Checkout berechnet.",
-    "taxes_included": "Inkl. Steuern.",
+    "taxes_included": "Steuern enthalten.",
     "product_badge_sold_out": "Ausverkauft",
     "product_badge_sale": "Sale",
     "search_input_label": "Suchen",
@@ -173,7 +173,7 @@
     "unavailable": "Nicht verfügbar",
     "collection_placeholder": "Sammlungstitel",
     "product_card_placeholder": "Produkttitel",
-    "product_count": "Produktanzahl",
+    "product_count": "Produktzahl",
     "item_count": {
       "one": "{{ count }} Artikel",
       "other": "{{ count }} Artikel"
@@ -186,7 +186,7 @@
     "filters": "Filter",
     "no_products_found": "Keine Produkte gefunden.",
     "price_filter_html": "Der höchste Preis ist {{ price }}",
-    "use_fewer_filters_html": "Versuche, weniger Filter zu verwenden oder <a class=\"{{ class }}\" href=\"{{ link }}\">alle Filter zu löschen</a>.",
+    "use_fewer_filters_html": "Versuchen Sie, weniger Filter zu verwenden, oder <a class=\"{{ class }}\" href=\"{{ link }}\">Alle Filter löschen</a>.",
     "account_title": "Konto",
     "account_title_personalized": "Hallo {{ first_name }}",
     "account_orders": "Bestellungen",
@@ -204,8 +204,8 @@
     "read_more": "Mehr lesen …",
     "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Steuern und <a href=\"{{ link }}\">Versand</a> werden beim Checkout berechnet.",
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Steuern und Versand werden beim Checkout berechnet.",
-    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Inkl. Steuern. Versand wird beim Checkout berechnet.",
-    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Inkl. Steuern. Versand wird beim Checkout berechnet.",
+    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Steuern enthalten. Der Versand wird an der Kasse berechnet.",
+    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Steuern enthalten. Der Versand wird an der Kasse berechnet.",
     "wrong_password": "Falsches Passwort",
     "view_more_details": "Weitere Details anzeigen",
     "inventory_low_stock": "Niedriger Bestand",
@@ -224,29 +224,29 @@
     "shipping_discount_error": "Versandrabatte werden nach dem Hinzufügen einer Adresse an der Kasse angezeigt",
     "discount_code_error": "Rabattcode kann nicht auf Ihren Warenkorb angewendet werden",
     "recipient_form_send_to": "Senden an",
-    "recipient_form_email_label": "E-Mail-Adresse des Empfängers",
-    "recipient_form_email_label_my_email": "Meine E-Mail-Adresse",
-    "recipient_form_email_address": "Empfänger-E-Mail-Adresse",
-    "recipient_form_name_label": "Name des Empfängers (optional)",
+    "recipient_form_email_label": "E -Mail des Empfängers",
+    "recipient_form_email_label_my_email": "Meine E -Mail",
+    "recipient_form_email_address": "Empfänger -E -Mail -Adresse",
+    "recipient_form_name_label": "Empfängername (optional)",
     "recipient_form_message": "Nachricht (optional)",
     "recipient_form_characters_used": "{{ used_chars }}/{{ max_chars }} Zeichen verwendet",
-    "recipient_form_send_on": "JJJJ-MM-TT",
-    "recipient_form_send_on_label": "Senden am (optional)",
-    "recipient_form_fields_visible": "Empfängerformularfelder sind jetzt sichtbar.",
-    "recipient_form_fields_hidden": "Empfängerformularfelder sind jetzt ausgeblendet.",
-    "recipient_form_error": "Beim Absenden des Formulars ist ein Fehler aufgetreten.",
+    "recipient_form_send_on": "Yjyy-mm-dd",
+    "recipient_form_send_on_label": "Einsenden (optional)",
+    "recipient_form_fields_visible": "Empfängerformfelder sind jetzt sichtbar",
+    "recipient_form_fields_hidden": "Empfängerformfelder sind jetzt versteckt",
+    "recipient_form_error": "Es gab einen Fehler bei der Einreichung der Form",
     "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} Zeichen verwendet"
   },
   "gift_cards": {
     "issued": {
-      "how_to_use_gift_card": "Verwende diesen Geschenkgutscheincode online oder verwende den QR-Code im Shop",
-      "title": "Hier ist dein {{ value }}-Gutschein für {{ shop }}!",
-      "subtext": "Dein Gutschein",
-      "shop_link": "Onlineshop besuchen",
-      "add_to_apple_wallet": "Zu Apple Wallet hinzufügen",
-      "qr_image_alt": "QR-Code – Scannen, um Gutschein einzulösen",
-      "copy_code": "Geschenkgutscheincode kopieren",
-      "expiration_date": "Gültig bis {{ expires_on }}",
+      "how_to_use_gift_card": "Verwenden Sie den Geschenkkartencode online oder QR-Code im Laden",
+      "title": "Hier ist dein {{ value }} Geschenkkartenbalance für {{ shop }}!",
+      "subtext": "Ihre Geschenkkarte",
+      "shop_link": "Besuchen Sie den Online -Shop",
+      "add_to_apple_wallet": "Zu Apfelbrieftasche hinzufügen",
+      "qr_image_alt": "QR -Code - Scannen Sie die Geschenkkarte ein",
+      "copy_code": "Geschenkkartencode kopieren",
+      "expiration_date": "Läuft ab {{ expires_on }}",
       "copy_code_success": "Code erfolgreich kopiert",
       "expired": "Abgelaufen"
     }
@@ -255,20 +255,20 @@
     "password": "Passwort",
     "search": "Suchen",
     "product_title": "Produkttitel",
-    "collection_title": "Kollektionstitel"
+    "collection_title": "Sammlungstitel"
   },
   "products": {
     "product": {
       "add_to_cart": "In den Warenkorb legen",
-      "added_to_cart": "Zum Warenkorb hinzugefügt",
-      "adding_to_cart": "Wird hinzugefügt...",
-      "add_to_cart_error": "Fehler beim Hinzufügen zum Warenkorb",
+      "added_to_cart": "Hinzufügen zum Warenkorb",
+      "adding_to_cart": "Hinzufügen ...",
+      "add_to_cart_error": "Fehler hinzufügen zum Warenkorb",
       "sold_out": "Ausverkauft",
       "unavailable": "Nicht verfügbar"
     }
   },
   "fields": {
-    "separator": "bis"
+    "separator": "Zu"
   },
   "blogs": {
     "article": {
@@ -1705,7 +1705,10 @@
         "bank_account_choose": "Wählen Sie ein Konto, um Ihren Kauf sicher abzuschließen",
         "bank_account_connect_another": "Verbinden Sie ein anderes Bankkonto",
         "bank_account_connect": "Bankkonto verbinden",
-        "bank_account_missing": "Bankkonto muss in Verbindung gebracht werden"
+        "bank_account_missing": "Bankkonto muss in Verbindung gebracht werden",
+        "markets_pro_disclaimer_label_express_checkout": "Durch den Kauf stimmen Sie dem zu %{markets_pro_terms} Und %{privacy_policy} von Global-E, unserem internationalen Dienstleister",
+        "markets_pro_disclaimer_express_terms_and_conditions": "Bedingungen",
+        "markets_pro_disclaimer_express_privacy_policy": "Datenschutzrichtlinie"
       },
       "billing": {
         "billing_address_title": "Gesetzesentwurf für",
