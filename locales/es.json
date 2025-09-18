@@ -308,7 +308,10 @@
       "payment": {
         "usdc_cashback_title": "1% de reembolso",
         "usdc_cashback_additional_info": "Obtenga 1% de vuelta en USDC directamente en su billetera.",
-        "usdc_cashback_terms": "Se aplican términos"
+        "usdc_cashback_terms": "Se aplican términos",
+        "markets_pro_disclaimer_label_express_checkout": "Al comprar, usted acepta el %{markets_pro_terms} y %{privacy_policy} de Global-E, nuestro proveedor de servicios internacionales",
+        "markets_pro_disclaimer_express_terms_and_conditions": "términos",
+        "markets_pro_disclaimer_express_privacy_policy": "política de privacidad"
       },
       "billing": {
         "billing_address_rollup_accessibility_label": "Bill a las opciones"
