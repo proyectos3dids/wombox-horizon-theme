@@ -356,7 +356,7 @@
                 "color": "var(--color-foreground-heading)",
                 "background": true,
                 "background_color": "#d4a697",
-                "corner_radius": 0,
+                "corner_radius": 15,
                 "padding-block-start": 4,
                 "padding-block-end": 4,
                 "padding-inline-start": 8,
@@ -457,7 +457,7 @@
               "type": "_product-list-text",
               "name": "t:names.collection_title",
               "settings": {
-                "text": "<h3>Our selection</h3>",
+                "text": "<h3>Find your WOMBOX</h3>",
                 "width": "fit-content",
                 "max_width": "normal",
                 "alignment": "left",
@@ -482,7 +482,6 @@
             "product_list_button_wPhEM8": {
               "type": "_product-list-button",
               "name": "t:names.product_list_button",
-              "disabled": true,
               "settings": {
                 "label": "View all",
                 "open_in_new_tab": false,
@@ -1275,7 +1274,7 @@
             "video": "shopify://files/videos/wombox_02_banyo_sin_filtos.mp4",
             "video_url": "",
             "autoplay": true,
-            "product": "extra-beauty-box-azure-strasbourg",
+            "product": "complete-beauty-box-aurora-glow-florence",
             "use_variants": true,
             "modal_heading": "<h4>Modal heading</h4>",
             "modal_text": "<p>Modal text</p>"
