@@ -119,7 +119,7 @@
     "localization_region_and_language": "Região e idioma",
     "no_results_found": "Nenhum resultado encontrado",
     "cart_total": "Carrinho total",
-    "your_cart_is_empty": "O seu carrinho está vazio",
+    "your_cart_is_empty": "Seu carrinho está vazio",
     "product_image": "Imagem do produto",
     "product_information": "Informações do produto",
     "quantity": "Quantidade",
@@ -131,7 +131,7 @@
     "discount": "Desconto",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Deveres e impostos incluídos. Descontos e <a href=\"{{ link }}\">envio</a> calculado na finalização da compra.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Deveres e impostos incluídos. Descontos e envio calculados na finalização da compra.",
-    "taxes_included_shipping_at_checkout_with_policy_html": "Impostos incluídos. Descontos e <a href=\"{{ link }}\">envio</a> calculados na finalização da compra.",
+    "taxes_included_shipping_at_checkout_with_policy_html": "Impostos incluídos. Descontos e <a href=\"{{ link }}\">envio</a> calculado na finalização da compra.",
     "taxes_included_shipping_at_checkout_without_policy": "Impostos incluídos. Descontos e envio calculados na finalização da compra.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Deveres incluídos. Impostos, descontos e <a href=\"{{ link }}\">envio</a> calculado na finalização da compra.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Deveres incluídos. Impostos, descontos e remessa calculados na finalização da compra.",
@@ -176,7 +176,7 @@
     "collection_placeholder": "Título da coleção",
     "product_card_placeholder": "Título do produto",
     "recently_viewed_products": "Visualizado recentemente",
-    "product_count": "Número de produtos",
+    "product_count": "Contagem de produtos",
     "item_count": {
       "one": "{{ count }} item",
       "other": "{{ count }} Unid",
@@ -190,7 +190,7 @@
     "filters": "Filtros",
     "no_products_found": "Nenhum produto encontrado.",
     "price_filter_html": "O preço mais alto é {{ price }}",
-    "use_fewer_filters_html": "Experimente utilizar menos filtros ou <a class=\"{{ class }}\" href=\"{{ link }}\">limpar todos os filtros</a>.",
+    "use_fewer_filters_html": "Tente usar menos filtros, ou <a class=\"{{ class }}\" href=\"{{ link }}\">limpe todos os filtros</a>.",
     "blog_details_separator": "|",
     "account_title": "Conta",
     "account_title_personalized": "Oi {{ first_name }}",
@@ -208,10 +208,10 @@
     "read_more": "Leia mais ...",
     "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Impostos e <a href=\"{{ link }}\">envio</a> calculado na finalização da compra.",
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Impostos e remessas calculadas na finalização da compra.",
-    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Impostos incluídos. Os portes são calculados na finalização da compra.",
-    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Impostos incluídos. Os portes são calculados na finalização da compra.",
-    "wrong_password": "Palavra-passe incorreta",
-    "view_more_details": "Ver mais informações",
+    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Impostos incluídos. O envio é calculado na finalização da compra.",
+    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Impostos incluídos. O envio é calculado na finalização da compra.",
+    "wrong_password": "Senha errada",
+    "view_more_details": "Veja mais detalhes",
     "page_placeholder_title": "Título da página",
     "page_placeholder_content": "Selecione uma página para exibir seu conteúdo.",
     "powered_by": "Esta loja será alimentada por",
@@ -229,36 +229,36 @@
       "many": "{{ count }} restante(s)"
     },
     "recipient_form_send_to": "Enviar para",
-    "recipient_form_email_label": "E-mail do destinatário",
-    "recipient_form_email_label_my_email": "O meu e-mail",
-    "recipient_form_email_address": "Endereço de e-mail do destinatário",
+    "recipient_form_email_label": "Email do destinatário",
+    "recipient_form_email_label_my_email": "Meu e -mail",
+    "recipient_form_email_address": "Endereço de e -mail do destinatário",
     "recipient_form_name_label": "Nome do destinatário (opcional)",
     "recipient_form_message": "Mensagem (opcional)",
     "recipient_form_characters_used": "{{ used_chars }}/{{ max_chars }} caracteres usados",
     "recipient_form_send_on": "AAAA-MM-DD",
-    "recipient_form_send_on_label": "Enviar em (opcional)",
-    "recipient_form_fields_visible": "Os campos do formulário de destinatário estão agora visíveis",
-    "recipient_form_fields_hidden": "Os campos do formulário de destinatário estão agora ocultos",
-    "recipient_form_error": "Ocorreu um erro na submissão do formulário",
-    "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caracteres utilizados"
+    "recipient_form_send_on_label": "Enviar (opcional)",
+    "recipient_form_fields_visible": "Os campos de formulário do destinatário agora estão visíveis",
+    "recipient_form_fields_hidden": "Os campos de formulário de destinatários agora estão ocultos",
+    "recipient_form_error": "Houve um erro com o envio do formulário",
+    "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caracteres usados"
   },
   "gift_cards": {
     "issued": {
-      "how_to_use_gift_card": "Utilize o código do cartão de oferta online ou o código QR na loja",
-      "title": "Aqui está o seu saldo do cartão de oferta de {{ value }} para {{ shop }}!",
-      "subtext": "O seu cartão de oferta",
+      "how_to_use_gift_card": "Use o código do cartão-presente online ou o código QR na loja",
+      "title": "Aqui está o seu {{ value }} Balance de cartão -presente para {{ shop }}!",
+      "subtext": "Seu cartão -presente",
       "shop_link": "Visite a loja online",
-      "add_to_apple_wallet": "Adicionar a Apple Wallet",
-      "qr_image_alt": "Código QR — digitalizar para resgatar cartão de oferta",
-      "copy_code": "Copiar código de cartão-de oferta",
-      "expiration_date": "Expira em {{ expires_on }}",
+      "add_to_apple_wallet": "Adicionar à carteira de maçã",
+      "qr_image_alt": "Código QR - Digitalize para resgatar cartão -presente",
+      "copy_code": "Copie o código do cartão -presente",
+      "expiration_date": "Expira {{ expires_on }}",
       "copy_code_success": "Código copiado com sucesso",
       "expired": "Expirado"
     }
   },
   "placeholders": {
-    "password": "Palavra-passe",
-    "search": "Pesquisar",
+    "password": "Senha",
+    "search": "Procurar",
     "product_title": "Título do produto",
     "collection_title": "Título da coleção"
   },
@@ -266,14 +266,14 @@
     "product": {
       "add_to_cart": "Adicionar ao carrinho",
       "added_to_cart": "Adicionado ao carrinho",
-      "adding_to_cart": "A adicionar...",
-      "add_to_cart_error": "Erro ao adicionar ao carrinho",
-      "sold_out": "Esgotado",
+      "adding_to_cart": "Adicionando ...",
+      "add_to_cart_error": "Erro adicionando ao carrinho",
+      "sold_out": "Vendido",
       "unavailable": "Indisponível"
     }
   },
   "fields": {
-    "separator": "a"
+    "separator": "para"
   },
   "blogs": {
     "article": {
@@ -4507,5 +4507,9 @@
         }
       }
     }
+  },
+  "custom_boxes": {
+    "title": "Selecione sua caixa",
+    "description": "Escolha o tipo de caixa que você prefere para o seu pedido"
   }
 }
