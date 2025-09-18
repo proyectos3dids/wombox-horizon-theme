@@ -130,8 +130,8 @@
     "discounts": "Remises",
     "duties_and_taxes_included_shipping_at_checkout_with_policy_html": "Duts et taxes incluses. Remises et <a href=\"{{ link }}\">expédition</a> calculé à la caisse.",
     "duties_and_taxes_included_shipping_at_checkout_without_policy": "Duts et taxes incluses. Remises et expédition calculées à la caisse.",
-    "taxes_included_shipping_at_checkout_with_policy_html": "Taxes incluses. Réductions et <a href=\"{{ link }}\">frais d’expédition</a> calculés à l’étape du paiement.",
-    "taxes_included_shipping_at_checkout_without_policy": "Taxes incluses. Réductions et frais d’expédition calculés à l’étape du paiement.",
+    "taxes_included_shipping_at_checkout_with_policy_html": "Taxes incluses. Remises et <a href=\"{{ link }}\">expédition</a> calculé à la caisse.",
+    "taxes_included_shipping_at_checkout_without_policy": "Taxes incluses. Remises et expédition calculées à la caisse.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_with_policy_html": "Tâches incluses. Taxes, remises et <a href=\"{{ link }}\">expédition</a> calculé à la caisse.",
     "duties_included_taxes_at_checkout_shipping_at_checkout_without_policy": "Tâches incluses. Taxes, remises et expédition calculées à la caisse.",
     "taxes_at_checkout_shipping_at_checkout_with_policy_html": "Taxes, remises et <a href=\"{{ link }}\">expédition</a> calculé à la caisse.",
@@ -186,13 +186,13 @@
     "search": "Recherche",
     "search_results_no_results_check_spelling": "Aucun résultat trouvé pour \"{{ terms }}\". Vérifiez l'orthographe ou utilisez un mot ou une phrase différent.",
     "no_products_found": "Aucun produit trouvé.",
-    "use_fewer_filters_html": "Essayez d’utiliser moins de filtres, ou <a class=\"{{ class }}\" href=\"{{ link }}\">effacez tous les filtres</a>.",
+    "use_fewer_filters_html": "Essayez d'utiliser moins de filtres, ou <a class=\"{{ class }}\" href=\"{{ link }}\">Effacer tous les filtres</a>.",
     "featured_products": "Produits en vedette",
     "filters": "Filtres",
     "price_filter_html": "Le prix le plus élevé est {{ price }}",
     "blog_details_separator": "|",
     "read_more": "En savoir plus...",
-    "wrong_password": "Mot de passe incorrect",
+    "wrong_password": "Mauvais mot de passe",
     "account_title": "Compte",
     "account_title_personalized": "Salut {{ first_name }}",
     "account_orders": "Ordres",
@@ -208,8 +208,8 @@
     "pickup_ready_in": "{{ pickup_time }}",
     "taxes_at_checkout_shipping_at_checkout_with_policy_without_discounts_html": "Taxes et <a href=\"{{ link }}\">expédition</a> calculé à la caisse.",
     "taxes_at_checkout_shipping_at_checkout_without_policy_without_discounts": "Taxes et expédition calculées à la caisse.",
-    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Taxes incluses. L’expédition est calculée lors du paiement.",
-    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Taxes incluses. L’expédition est calculée lors du paiement.",
+    "taxes_included_shipping_at_checkout_with_policy_without_discounts_html": "Taxes incluses. L'expédition est calculée à la caisse.",
+    "taxes_included_shipping_at_checkout_without_policy_without_discounts": "Taxes incluses. L'expédition est calculée à la caisse.",
     "view_more_details": "Afficher plus de détails",
     "page_placeholder_title": "Titre de la page",
     "page_placeholder_content": "Sélectionnez une page pour afficher son contenu.",
@@ -234,42 +234,42 @@
     "recipient_form_email_address": "Adresse e-mail du destinataire",
     "recipient_form_name_label": "Nom du destinataire (facultatif)",
     "recipient_form_message": "Message (facultatif)",
-    "recipient_form_characters_used": "{{ used_chars }}/{{ max_chars }} caractères utilisés",
-    "recipient_form_send_on": "JJ-MM-AAAA",
-    "recipient_form_send_on_label": "Envoyer le (facultatif)",
-    "recipient_form_fields_visible": "Les champs du formulaire de destinataire sont désormais visibles",
-    "recipient_form_fields_hidden": "Les champs du formulaire de destinataire sont désormais masqués",
-    "recipient_form_error": "La soumission du formulaire présentait une erreur",
-    "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caractères utilisés"
+    "recipient_form_characters_used": "{{ used_chars }}/{{ max_chars }} caractères utilisés",
+    "recipient_form_send_on": "Yyyy-mm-dd",
+    "recipient_form_send_on_label": "Envoyer (facultatif)",
+    "recipient_form_fields_visible": "Les champs de formulaire de receveur sont désormais visibles",
+    "recipient_form_fields_hidden": "Les champs de formulaire de receveur sont maintenant cachés",
+    "recipient_form_error": "Il y a eu une erreur avec la soumission du formulaire",
+    "product_custom_property_character_count": "{{ used_chars }}/{{ max_chars }} caractères utilisés"
   },
   "gift_cards": {
     "issued": {
-      "how_to_use_gift_card": "Utiliser le code de la carte‑cadeau en ligne ou le code QR en boutique",
-      "title": "Voici le solde de votre carte‑cadeau {{ shop }} d'une valeur de {{ value }} !",
-      "subtext": "Votre carte‑cadeau",
-      "shop_link": "Visiter la boutique en ligne",
-      "add_to_apple_wallet": "Ajouter à Apple Wallet",
-      "qr_image_alt": "Code QR : scannez‑le pour utiliser votre carte‑cadeau",
-      "copy_code": "Copier le code de la carte‑cadeau",
-      "expiration_date": "Expire le {{ expires_on }}",
-      "copy_code_success": "Le code a bien été copié",
-      "expired": "Expirée"
+      "how_to_use_gift_card": "Utilisez le code de carte-cadeau en ligne ou le code QR en magasin",
+      "title": "Voici votre {{ value }} solde de la carte-cadeau pour {{ shop }}!",
+      "subtext": "Votre carte-cadeau",
+      "shop_link": "Visitez la boutique en ligne",
+      "add_to_apple_wallet": "Ajouter au portefeuille Apple",
+      "qr_image_alt": "CODE QR - SCAY pour échanger la carte-cadeau",
+      "copy_code": "Copier le code de carte-cadeau",
+      "expiration_date": "Expire {{ expires_on }}",
+      "copy_code_success": "Code copié avec succès",
+      "expired": "Expiré"
     }
   },
   "placeholders": {
     "password": "Mot de passe",
-    "search": "Rechercher",
+    "search": "Recherche",
     "product_title": "Titre de produit",
-    "collection_title": "Titre de la collection"
+    "collection_title": "Titre de collection"
   },
   "products": {
     "product": {
       "add_to_cart": "Ajouter au panier",
       "added_to_cart": "Ajouté au panier",
-      "adding_to_cart": "Ajout...",
-      "add_to_cart_error": "Erreur lors de l’ajout au panier",
+      "adding_to_cart": "Ajout ...",
+      "add_to_cart_error": "Erreur ajoutant au panier",
       "sold_out": "Épuisé",
-      "unavailable": "Non disponible(s)"
+      "unavailable": "Indisponible"
     }
   },
   "fields": {
@@ -4493,5 +4493,9 @@
         }
       }
     }
+  },
+  "custom_boxes": {
+    "title": "Sélectionnez votre boîte",
+    "description": "Choisissez le type de boîte que vous préférez pour votre commande"
   }
 }
