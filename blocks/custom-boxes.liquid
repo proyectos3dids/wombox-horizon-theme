@@ -10,11 +10,15 @@
   {{ 'cajas-styles.css' | asset_url | stylesheet_tag }}
   <script src="{{ 'cajas-selector.js' | asset_url }}" defer></script>
   
-  <div class="product-form__block product-form__cajas" {{ block.shopify_attributes }} data-selected-box-text="{{ block.settings.selected_box_text | default: 'Selected Box' }}" style="{% render 'spacing-style', settings: block.settings %}">
+  <div class="product-form__block product-form__cajas" {{ block.shopify_attributes }} data-selected-box-text="{{ block.settings.selected_box_text | default: 'Selected Box' }}" style="--cajas-accent-color: {{ block.settings.accent_color | default: '#d4a697' }}; {% render 'spacing-style', settings: block.settings %}">
     <cajas-selector class="cajas-selector">
-      <h4 class="cajas-title">{{ block.settings.title | default: 'Selecciona tu caja' }}</h4>
-      {%- if block.settings.description != blank -%}
+      <h4 class="cajas-title">{{ block.settings.title | default: 'custom_boxes.title' | t }}</h4>
+      {%- if block.settings.description == "Choose the type of box you prefer for your order" -%}
+        <p class="cajas-description">{{ 'custom_boxes.description' | t }}</p>
+      {%- elsif block.settings.description != blank -%}
         <p class="cajas-description">{{ block.settings.description }}</p>
+      {%- else -%}
+        <p class="cajas-description">{{ 'custom_boxes.description' | t }}</p>
       {%- endif -%}
       <div class="cajas-options">
         {%- for caja in cajas -%}
@@ -59,12 +63,14 @@
       "type": "text",
       "id": "title",
       "label": "Título del selector",
-      "default": "Selecciona tu caja personalizada"
+      "default": "Select your box",
+      "info": "Deja vacío para usar la traducción automática"
     },
     {"type": "textarea",
       "id": "description",
       "label": "Descripción",
-      "default": "Personaliza tu caja seleccionando los productos que deseas incluir."
+      "default": "Choose the type of box you prefer for your order",
+      "info": "El texto se traducirá automáticamente según el idioma de la tienda"
     },
     {
       "type": "header",
@@ -141,6 +147,13 @@
       "id": "text_color",
       "label": "Color del texto",
       "default": "#000000"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Color de acento",
+      "default": "#d4a697",
+      "info": "Color utilizado para el título, bordes de selección y iconos"
     },
     {
       "type": "header",

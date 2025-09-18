@@ -4,12 +4,11 @@
 }
 
 .cajas-title {
-  color: var(--WB---PURPLE, #3C2C81);
+  color: var(--cajas-accent-color, #d4a697);
   font-family: "Archivo", serif;
   font-size: 18px !important;
   font-weight: 700;
   margin-bottom: 8px;
-  text-transform: uppercase;
 }
 
 .cajas-description {
@@ -59,7 +58,7 @@
 
 .cajas-option-input:checked + .cajas-option-label,
 .cajas-option-label.selected {
-  border: 3px solid var(--WB---PURPLE, #3C2C81);
+  border: 3px solid var(--cajas-accent-color, #d4a697);
 }
 
 .cajas-option-image {
@@ -94,7 +93,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--WB---PURPLE, #3C2C81);
+  color: var(--cajas-accent-color, #d4a697);
   backdrop-filter: blur(4px);
   transition: all 0.3s ease;
   cursor: pointer;

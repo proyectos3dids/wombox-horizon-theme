@@ -333,5 +333,9 @@
         "add_new_button": "Agregar nuevo"
       }
     }
+  },
+  "custom_boxes": {
+    "title": "Selecciona tu caja",
+    "description": "Elige el tipo de caja que prefieres para tu pedido"
   }
 }

@@ -290,6 +290,10 @@
       "unavailable": "Unavailable"
     }
   },
+  "custom_boxes": {
+    "title": "Select your box",
+    "description": "Choose the type of box you prefer for your order"
+  },
   "shopify": {
     "checkout": {
       "throttle": {
