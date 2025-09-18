@@ -172,7 +172,7 @@ if (!customElements.get('cajas-selector')) {
           display: none;
           align-items: center;
           justify-content: center;
-          z-index: 9999;
+          z-index: 99999;
         }
         @media (max-width: 768px) {
           .modal-overlay {
