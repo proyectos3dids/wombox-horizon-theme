@@ -1156,3 +1156,29 @@
     }
   }
 {% endstylesheet %}
+
+<style>
+/* ===== Fallback móvil: dejar el primer panel abierto por defecto ===== */
+@media (max-width: 749px){
+  /* Si hay un panel activo, muestra solo ese */
+  .menu-drawer__tab-panels:has(.menu-drawer__tab-panel.is-active) > .menu-drawer__tab-panel{
+    display: none;
+  }
+  .menu-drawer__tab-panels:has(.menu-drawer__tab-panel.is-active) > .menu-drawer__tab-panel.is-active{
+    display: block;
+  }
+
+  /* Si NO hay activo aún (carga inicial), muestra el primero */
+  .menu-drawer__tab-panels:not(:has(.menu-drawer__tab-panel.is-active)) > .menu-drawer__tab-panel:first-child{
+    display: block;
+  }
+
+  /* Estilo visual del primer tab como "activo" si aún no hay activo */
+  .menu-drawer__quick-tabs--mobile:not(:has(.menu-drawer__quick-tab.is-active)) 
+  .menu-drawer__quick-tabs-item:first-child .menu-drawer__quick-tab{
+    font-weight: 600;
+    border-bottom-color: var(--drawer-hover-underline-color);
+  }
+}
+
+</style>
