@@ -4498,5 +4498,8 @@
         }
       }
     }
+  },
+  "custom_boxes": {
+    "title": "Wählen Sie Ihr Feld"
   }
 }
