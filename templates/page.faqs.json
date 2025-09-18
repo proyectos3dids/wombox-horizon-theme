@@ -353,6 +353,7 @@
         "heading",
         "page-content"
       ],
+      "disabled": true,
       "settings": {
         "content_direction": "column",
         "gap": 32,
@@ -367,64 +368,92 @@
         "faq_t6R3Ax": {
           "type": "faq",
           "settings": {
-            "question": "¿Qué es WOMBOX?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "What is WOMBOX?",
+            "answer": "<p>WOMBOX is a lifestyle brand that curates everyday beauty essentials and fashion hair accessories like combs, hair clips, and hairbrushes, along with stylish toiletry bags and custom gift boxes. Whether it's a personalized gift set for someone special or a little treat for yourself, our goal is to add a touch of joy and style to your day.</p>"
           }
         },
         "faq_cXTxJ6": {
           "type": "faq",
           "settings": {
-            "question": "¿Qué tipos de cajas temáticas ofrecemos?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "What types of themed gift boxes do you offer?",
+            "answer": "<p>We currently offer classic hair accessory gift boxes filled with hand-picked hair clips, hairbrushes, and beauty essentials. Every WOMBOX is wrapped in our signature packaging — perfect for gifting or treating yourself. In the future, look out for seasonal hair accessory collections and limited-edition lifestyle gift boxes for holidays and special occasions.</p>"
           }
         },
         "faq_rTadhG": {
           "type": "faq",
           "settings": {
-            "question": "¿Cómo se eligen los productos dentro de cada caja?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "How are the products inside each box selected?",
+            "answer": "<p>Choose from our pre-curated hair accessory gift sets, featuring trendy clawclips, hairbrushes, and beauty must-haves. No matter which you choose, each WOMBOX comes in elegant, Instagram-worthy packaging.</p>"
           }
         },
         "faq_gjkcxd": {
           "type": "faq",
           "settings": {
-            "question": "¿Puedo personalizar el contenido de mi caja?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "Are the gift boxes available year-round?",
+            "answer": "<p>Our signature boxes are here to stay all year long — and from time to time, we sprinkle in limited seasonal editions that won’t be around for long!</p>"
           }
         },
         "faq_TDTyCT": {
           "type": "faq",
           "settings": {
-            "question": "¿Las cajas están disponibles todo el año?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "Can I track my order?",
+            "answer": "<p>Absolutely! After your order leaves our warehouse, we’ll send you a confirmation email with your tracking number and a direct link to follow your WOMBOX delivery every step of the way.</p>"
           }
         },
         "faq_mJ6fbd": {
           "type": "faq",
           "settings": {
-            "question": "¿Cuánto cuesta una caja Wombox?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "Can I return or exchange items in my box?",
+            "answer": "<p>Yes, we accept returns of unopened and unused items within 14 days of delivery. If your hair accessories or beauty products arrive damaged, please contact us within 48 hours with your order number and a clear photo of the item. For hygiene and safety reasons, used or opened hair accessories and beauty items are non-returnable.</p>"
           }
         },
         "faq_bxpnbn": {
           "type": "faq",
           "settings": {
-            "question": "¿Realizan envíos a nivel nacional o internacional?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "How long will it take to receive my refund?",
+            "answer": "<p>Once we receive your return, your refund will be processed within 5–10 business days. The exact timing may vary depending on your payment method or bank.</p>"
           }
         },
         "faq_hPHNRV": {
           "type": "faq",
           "settings": {
-            "question": "¿Hay suscripciones mensuales para recibir cajas temáticas?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "Where do we ship and how long does delivery take?",
+            "answer": "<p>We currently ship across Europe only. Delivery times vary depending on your location:</p><p>Spain & nearby EU countries: usually 3–7 business days</p><p>Other European destinations: typically 5–10 business days</p><p>All orders are carefully packed to protect your hair accessories, combs, and gift boxes during transit.</p>"
           }
         },
         "faq_CidJkx": {
           "type": "faq",
           "settings": {
-            "question": "¿Las cajas Wombox son ideales para regalar?",
-            "answer": "<p>WOMBOX es nuestra propuesta de cajas temáticas con productos seleccionados para sorprender y disfrutar.</p>"
+            "question": "Do we offer international shipping for boxes?",
+            "answer": "<p>Not yet — WOMBOX ships within Europe only. We’re exploring worldwide shipping options to bring our eco-friendly hair accessory gift boxes to more countries soon.</p>"
+          }
+        },
+        "faq_pfgkrJ": {
+          "type": "faq",
+          "settings": {
+            "question": "What materials are our hair clips and combs made of?",
+            "answer": "<p>Our hair clips, hairbrushes, and hair combs are crafted from eco-friendly cellulose acetate, a plant-based, biodegradable material that is lightweight, durable, and naturally glossy.</p><p></p><p>Combs and hairbrushes feature sustainable bamboo with acetate inlays, combining natural elegance with modern design.</p><p></p><p></p><p>Hair clips and barrettes are pure acetate, offering a luxurious, eco-conscious finish that is gentle on your hair and kind to the planet.</p><p></p><p>By choosing WOMBOX, you are embracing sustainable hair accessories that combine style with environmental responsibility.</p>"
+          }
+        },
+        "faq_KYgdjP": {
+          "type": "faq",
+          "settings": {
+            "question": "Need help with your order?",
+            "answer": "<p>You can contact our support team at info@womboxstore.com. We strive to reply within 24 hours during business days.</p>"
+          }
+        },
+        "faq_NfBWNy": {
+          "type": "faq",
+          "settings": {
+            "question": "Where can I see more WOMBOX inspiration?",
+            "answer": "<p>Follow us on Instagram and TikTok to discover how others style their hair accessories and gift boxes. Get exclusive sneak peeks of new collections, styling tips, and be part of our vibrant community of beauty lovers and sustainable fashion enthusiasts.</p>"
+          }
+        },
+        "faq_FfyGQP": {
+          "type": "faq",
+          "settings": {
+            "question": "Can I include a gift message with my order?",
+            "answer": "<p>Absolutely! You can add a personalized note at checkout — we’ll print it on a beautifully designed card and include it inside your WOMBOX</p>"
           }
         }
       },
@@ -437,13 +466,16 @@
         "faq_mJ6fbd",
         "faq_bxpnbn",
         "faq_hPHNRV",
-        "faq_CidJkx"
+        "faq_CidJkx",
+        "faq_pfgkrJ",
+        "faq_KYgdjP",
+        "faq_NfBWNy",
+        "faq_FfyGQP"
       ],
-      "disabled": true,
       "name": "FAQ / Accordion (Wombox)",
       "settings": {
-        "title": "¿TIENES DUDAS?",
-        "subtitle": "<p>Encuentra respuestas a tus preguntas en las cuestiones que más se repiten.</p>",
+        "title": "Do you have doubts?",
+        "subtitle": "<p>Find answers to the most frequently asked questions.</p>",
         "max_width": 1040,
         "align": "center",
         "bg_color": "#ffffff",
