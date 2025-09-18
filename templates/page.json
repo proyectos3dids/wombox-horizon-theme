@@ -353,7 +353,6 @@
         "heading",
         "page-content"
       ],
-      "disabled": true,
       "settings": {
         "content_direction": "column",
         "gap": 32,
@@ -440,6 +439,7 @@
         "faq_hPHNRV",
         "faq_CidJkx"
       ],
+      "disabled": true,
       "name": "FAQ / Accordion (Wombox)",
       "settings": {
         "title": "¿TIENES DUDAS?",
